@@ -1,0 +1,3110 @@
+{
+  "submission": {
+    "anon_id": null,
+    "model": "assessment-submission",
+    "courseTitleId": "aptitude-teacher2",
+    "object_id": "66b74bb87f809db010095237",
+    "assessmentId": "66b74bb87f809db010095236",
+    "snapshotId": "66d6fe0bfb4caaf6bb047f2b",
+    "questions": {
+      "section66b74bb79cadc": [
+        "mc66b74bb79cae9",
+        "mc66b74bb79cc1c",
+        "mc66b74bb79cd53",
+        "mc66b74bb79ce9c",
+        "mc66b74bb79cfe8",
+        "mc66b74bb79d122",
+        "mc66b74bb79d24e",
+        "mc66b74bb79d39b",
+        "mc66b74bb79d4d7",
+        "mc66b74bb79d615"
+      ]
+    },
+    "certificateAnswers": [],
+    "certificateId": null,
+    "questionData": {
+      "mc66b74bb79cae9": {
+        "deliveredOnTimestamp": 1786440563.882531,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74bb79cc1c": {
+        "deliveredOnTimestamp": 1786440563.882552,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74bb79cd53": {
+        "deliveredOnTimestamp": 1786440563.882564,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74bb79ce9c": {
+        "deliveredOnTimestamp": 1786440563.882575,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74bb79cfe8": {
+        "deliveredOnTimestamp": 1786440563.882586,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74bb79d122": {
+        "deliveredOnTimestamp": 1786440563.882596,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74bb79d24e": {
+        "deliveredOnTimestamp": 1786440563.882606,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74bb79d39b": {
+        "deliveredOnTimestamp": 1786440563.882616,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74bb79d4d7": {
+        "deliveredOnTimestamp": 1786440563.882626,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74bb79d615": {
+        "deliveredOnTimestamp": 1786440563.882636,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      }
+    },
+    "answers": [
+      {
+        "blockId": "mc66b74bb79cae9",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74bb79cc1c",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74bb79cd53",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74bb79ce9c",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74bb79cfe8",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74bb79d122",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74bb79d24e",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74bb79d39b",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74bb79d4d7",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74bb79d615",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      }
+    ],
+    "submittedTimestamp": 1786440564.110329,
+    "status": "submitted",
+    "grading_status": "grading_status_graded",
+    "access": "public",
+    "actual_score": null,
+    "score": {
+      "maxScore": 10,
+      "value": 0,
+      "pass": false,
+      "passGrade": 50,
+      "points": 0
+    },
+    "source": {
+      "type": "unit"
+    },
+    "isDefining": true,
+    "isAdminAutoGradedSubmission": null,
+    "listOfNonConsentedBlocks": [],
+    "created": 1786440563.889567,
+    "modified": 1786440564.242017,
+    "id": "6a7aeb73c7b9521b1705a641",
+    "passed": false
+  },
+  "assessment": {
+    "title": "Practice Test Paper (Medium)",
+    "access": "public",
+    "type": "assessment",
+    "model": "assessmentSnapshot",
+    "description": "Intermediate practice test paper containing 10 conceptual problems designed to evaluate speed and accuracy.",
+    "isTimed": false,
+    "timerFor": "assessmentTimed",
+    "onTimerExpiration": "autoSubmit",
+    "assessmentTimeLimitInSeconds": 600,
+    "questionTimeLimitInSeconds": 60,
+    "standaloneShareEnabled": null,
+    "customUrl": null,
+    "usesCustomUrl": null,
+    "allowAnonymous": true,
+    "randomizeQuestionOptions": false,
+    "disallowPartialSubmissions": false,
+    "submissionDueDateEnabled": false,
+    "submissionDueDate": 1626257823,
+    "makeFeedbackAvailableAfterDateEnabled": false,
+    "makeFeedbackAvailableAfterDate": 0,
+    "customStylesEnabled": true,
+    "customStyles": {
+      "assessmentPage": {
+        "background": {
+          "type": "color",
+          "colorData": {
+            "code": "",
+            "class": "lw-body-bg"
+          }
+        },
+        "dividers": {
+          "top": {
+            "orientation": "top",
+            "divider": "none"
+          },
+          "bottom": {
+            "orientation": "bottom",
+            "divider": "none"
+          }
+        }
+      },
+      "option": {
+        "radioEffect": "scribble",
+        "checkboxEffect": "scribble",
+        "size": "small"
+      },
+      "assessment": {
+        "transition": "none",
+        "background": {
+          "type": "color",
+          "colorData": {
+            "code": "",
+            "class": ""
+          }
+        },
+        "width": "normal",
+        "timerTemplate": "rectangle"
+      },
+      "linearRating": {
+        "labels": {
+          "size": "small"
+        }
+      },
+      "question": {
+        "description": {
+          "background": {
+            "type": "color",
+            "colorData": {
+              "code": "",
+              "class": ""
+            }
+          },
+          "type": "p",
+          "size": "small"
+        },
+        "answers": {
+          "background": {
+            "type": "color",
+            "colorData": {
+              "code": "",
+              "class": ""
+            }
+          }
+        },
+        "requiredAsterisk": {
+          "colorData": {
+            "code": "#ff0000",
+            "class": ""
+          }
+        },
+        "errorMessages": {
+          "size": "verySmall",
+          "colorData": {
+            "code": "#ff0000",
+            "class": ""
+          }
+        }
+      },
+      "input": {
+        "size": "small",
+        "type": "solidDark"
+      },
+      "textarea": {
+        "size": "small",
+        "type": "solidDark"
+      },
+      "dropdown": {
+        "size": "small",
+        "type": "solidDark"
+      }
+    },
+    "submissionMode": "all",
+    "startingDate": 1626765704,
+    "startingDateEnabled": false,
+    "showOnlyFailedQuestionsOnRetry": false,
+    "retryEnabled": true,
+    "retryOnFailOnly": false,
+    "gradingMethod": null,
+    "maxTries": null,
+    "onlyWrongOnRetake": null,
+    "isAmendable": false,
+    "feedbackShowOnScreen": true,
+    "feedbackDownloadPDF": false,
+    "feedbackShowInline": null,
+    "feedbackQuestionList": "all-questions",
+    "feedbackShowQuestionScore": true,
+    "feedbackShowFeedback": true,
+    "feedbackShowNumbering": false,
+    "feedbackShowSectionTitles": false,
+    "feedbackShowUserAnswers": true,
+    "feedbackShowCorrectAnswers": true,
+    "feedbackShowAnswerCorrectness": true,
+    "displayInlineFeedbackEnabled": null,
+    "displayBackButtonWhenSubmissionPerBlock": null,
+    "feedbackShowSectionResultSummary": false,
+    "askConfirmationBeforeSubmit": true,
+    "hasCustomConfirmationBeforeSubmitText": false,
+    "customConfirmationBeforeSubmitText": "Are you sure you want to submit the questionnaire?",
+    "customConfirmationBeforeSubmitTexts": {
+      "title": "Submit Assessment?",
+      "baseConfirmationMessage": "Are you sure you want to submit the questionnaire?",
+      "unansweredNotice": "You have not answered {X} questions."
+    },
+    "amendResubmissionMinutes": 30,
+    "passingGrade": null,
+    "navigationMode": "per-block",
+    "conditionalBlocks": {
+      "introContent": {
+        "id": "content66b74bb79c9af",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66b74bb79c9c6",
+              "type": "text",
+              "insertedAsWidget": true,
+              "properties": {
+                "html": "Puzzles - Ordering PAPER LEVEL-2",
+                "alignment": "center",
+                "customStyle": true,
+                "type": "h2",
+                "size": "normal"
+              }
+            },
+            {
+              "id": "text66b74bb79c9e2",
+              "type": "text",
+              "properties": {
+                "html": "Self-assess your knowledge. Express yourself and get feedback from our instructors.",
+                "customStyle": true,
+                "alignment": "center"
+              }
+            },
+            {
+              "id": "spacer66b74bb79c9f4",
+              "type": "spacer",
+              "properties": {
+                "height": 20,
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            },
+            {
+              "id": "button66b74bb79ca09",
+              "type": "button",
+              "properties": {
+                "buttonLabel": "<span>Ready to start</span>",
+                "buttonSize": "normal",
+                "buttonType": "solidBrand",
+                "alignment": "center",
+                "linkData": {
+                  "linkType": "goToFirst"
+                },
+                "iconColorData": {
+                  "code": "",
+                  "class": ""
+                },
+                "iconDisplay": false,
+                "iconSize": 26,
+                "iconClassName": " fas fa-angle-right",
+                "iconPosition": "right"
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "variables": {
+            "conditionalBlocks_introContent_blockData_widgets_0": [],
+            "conditionalBlocks_introContent_blockData_widgets_1": []
+          }
+        }
+      },
+      "submissionStartingDate": {
+        "id": "content66b74bb79ca4d",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66b74bb79ca54",
+              "type": "text",
+              "properties": {
+                "html": "Sorry but this assessment hasn't started yet."
+              }
+            },
+            {
+              "id": "date66b74bb79ca60",
+              "type": "date",
+              "properties": {
+                "value": ""
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "displayConditions": ["startingDate"]
+        }
+      },
+      "submissionDueDate": {
+        "id": "content66b74bb79ca74",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66b74bb79ca7b",
+              "type": "text",
+              "properties": {
+                "html": "Sorry but this assessment date is due."
+              }
+            },
+            {
+              "id": "date66b74bb79ca86",
+              "type": "date",
+              "properties": {
+                "value": ""
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "displayConditions": ["dateIsDue"]
+        }
+      },
+      "outroContent": {
+        "id": "content66b74bb79ca9a",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "userResults66b74bb79caa1",
+              "type": "userResults",
+              "properties": {
+                "layout": "template2",
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            },
+            {
+              "id": "feedback66b74bb79cab5",
+              "type": "feedback",
+              "properties": []
+            },
+            {
+              "id": "outroActions66b74bb79cac0",
+              "type": "outroActions",
+              "properties": {
+                "layout": "",
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true
+        }
+      }
+    },
+    "systemSections": null,
+    "sections": [
+      {
+        "id": "section66b74bb79cadc",
+        "title": "",
+        "type": "section",
+        "navigationMode": "per-block",
+        "blocks": [
+          {
+            "id": "mc66b74bb79cae9",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bb79caf1",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong> \n</p><p style=\"text-align: justify;\">In the stack, eleven boxes from A to K are stacked one on top of the other, with the bottom box being numbered 1 and the top box being numbered 11. Not necessarily every box is in the exact alphabetical order. \n</p><p style=\"text-align: justify;\">Box E is maintained at an even number. Three boxes above box E is, where box K is housed. Between Box K and Box B, which is stored beneath Box K, there is just one box. Box B is maintained at a prime numbered position. Between Box B and Box G, which is not kept above Box E, there are only two boxes. Box H’s position is twice the number denoting position of box J. Box D is stored beneath Box J, although not directly below. Between box H and box I, only three boxes are there. Box A is stored beneath Box C. One of the spaces below box I is retained for box F. Box F is not placed at third from the top.\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">Which box is at the topmost position?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74bb79cb10",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74bb79cb1c",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74bb79cb29",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74bb79cb6e",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb79cb7a",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>I</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb79cb94",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb79cba0",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>A</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb79cbba",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb79cbc5",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>C</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb79cbde",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb79cbe9",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>K</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74bb79cc1c",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bb79cc24",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong> \n</p><p style=\"text-align: justify;\">In the stack, eleven boxes from A to K are stacked one on top of the other, with the bottom box being numbered 1 and the top box being numbered 11. Not necessarily every box is in the exact alphabetical order. \n</p><p style=\"text-align: justify;\">Box E is maintained at an even number. Three boxes above box E is, where box K is housed. Between Box K and Box B, which is stored beneath Box K, there is just one box. Box B is maintained at a prime numbered position. Between Box B and Box G, which is not kept above Box E, there are only two boxes. Box H’s position is twice the number denoting position of box J. Box D is stored beneath Box J, although not directly below. Between box H and box I, only three boxes are there. Box A is stored beneath Box C. One of the spaces below box I is retained for box F. Box F is not placed at third from the top.\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">How many boxes are there in between F and B?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74bb79cc43",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74bb79cc4e",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74bb79cc5b",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74bb79cc92",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb79cc9e",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>1</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb79ccb8",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb79ccc4",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>2</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb79ccde",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb79ccea",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>3</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb79cd04",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb79cd10",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>4</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_1": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74bb79cd53",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bb79cd5b",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong> \n</p><p style=\"text-align: justify;\">In the stack, eleven boxes from A to K are stacked one on top of the other, with the bottom box being numbered 1 and the top box being numbered 11. Not necessarily every box is in the exact alphabetical order. \n</p><p style=\"text-align: justify;\">Box E is maintained at an even number. Three boxes above box E is, where box K is housed. Between Box K and Box B, which is stored beneath Box K, there is just one box. Box B is maintained at a prime numbered position. Between Box B and Box G, which is not kept above Box E, there are only two boxes. Box H’s position is twice the number denoting position of box J. Box D is stored beneath Box J, although not directly below. Between box H and box I, only three boxes are there. Box A is stored beneath Box C. One of the spaces below box I is retained for box F. Box F is not placed at third from the top.\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">Which box is maintained at two positions above of box J?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74bb79cd7a",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74bb79cd86",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74bb79cd93",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74bb79cdc9",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb79cdd5",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>B</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb79cdfe",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb79ce09",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>E</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb79ce23",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb79ce2f",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>H</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb79ce49",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb79ce55",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>K</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_2": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74bb79ce9c",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bb79cea4",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong> \n</p><p style=\"text-align: justify;\">In the stack, eleven boxes from A to K are stacked one on top of the other, with the bottom box being numbered 1 and the top box being numbered 11. Not necessarily every box is in the exact alphabetical order. \n</p><p style=\"text-align: justify;\">Box E is maintained at an even number. Three boxes above box E is, where box K is housed. Between Box K and Box B, which is stored beneath Box K, there is just one box. Box B is maintained at a prime numbered position. Between Box B and Box G, which is not kept above Box E, there are only two boxes. Box H’s position is twice the number denoting position of box J. Box D is stored beneath Box J, although not directly below. Between box H and box I, only three boxes are there. Box A is stored beneath Box C. One of the spaces below box I is retained for box F. Box F is not placed at third from the top.\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">Which box is exactly in between J and k?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74bb79cec3",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74bb79cece",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74bb79cedb",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74bb79cf12",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb79cf1e",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>E</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb79cf38",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb79cf55",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>H</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb79cf6f",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb79cf7b",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>G</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb79cf95",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb79cfa1",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>B</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74bb79cfe8",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bb79cff0",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong> \n</p><p style=\"text-align: justify;\">In the stack, eleven boxes from A to K are stacked one on top of the other, with the bottom box being numbered 1 and the top box being numbered 11. Not necessarily every box is in the exact alphabetical order. \n</p><p style=\"text-align: justify;\">Box E is maintained at an even number. Three boxes above box E is, where box K is housed. Between Box K and Box B, which is stored beneath Box K, there is just one box. Box B is maintained at a prime numbered position. Between Box B and Box G, which is not kept above Box E, there are only two boxes. Box H’s position is twice the number denoting position of box J. Box D is stored beneath Box J, although not directly below. Between box H and box I, only three boxes are there. Box A is stored beneath Box C. One of the spaces below box I is retained for box F. Box F is not placed at third from the top.\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">Which of the following box occupied an odd numbered position?&nbsp;</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74bb79d00f",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74bb79d01b",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74bb79d028",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74bb79d05e",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb79d06a",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>I</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb79d084",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb79d090",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>J</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb79d0aa",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb79d0b6",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>H</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb79d0d0",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb79d0dc",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>F</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74bb79d122",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bb79d12b",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong>\n</p><p style=\"text-align: justify;\">Seven individuals, L, M, N, O, P, Q, and R, will take separate exams in seven distinct months (of the same year), namely January, February, April, May, July, September, and December, however they may not appear in that sequence. They all enjoy diverse TV show genres, such as Family, Action, Comedy, Reality, Animated, History, and Thriller, though not always in that order.\n</p><p style=\"text-align: justify;\">&nbsp;O will take exam in a month, which consists of 30 days. Between the person who like animated shows and O, there will only be one person. The person who enjoys action will show up for the exam right before the person who enjoys animated shows. That person who enjoys thrillers will not take exam during either 30- or 31-day months. Between the person who likes Thriller and Q, there will only be two candidates for the exam. M dislikes action shows and will appear in the exam just after Q. P likes History shows and will take exam in December. R will take exam right before N. The person who enjoys family shows will take exam in a month with thirty-one days. Comedy shows are not O's thing.\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">Who likes Family based TV shows?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74bb79d149",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74bb79d155",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74bb79d161",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74bb79d198",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb79d1a3",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>N</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb79d1be",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb79d1c9",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>L</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb79d1e4",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb79d1ef",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>R</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb79d209",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb79d215",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>O</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_5_blockData_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74bb79d24e",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bb79d256",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong>\n</p><p style=\"text-align: justify;\">Seven individuals, L, M, N, O, P, Q, and R, will take separate exams in seven distinct months (of the same year), namely January, February, April, May, July, September, and December, however they may not appear in that sequence. They all enjoy diverse TV show genres, such as Family, Action, Comedy, Reality, Animated, History, and Thriller, though not always in that order.\n</p><p style=\"text-align: justify;\">&nbsp;O will take exam in a month, which consists of 30 days. Between the person who like animated shows and O, there will only be one person. The person who enjoys action will show up for the exam right before the person who enjoys animated shows. That person who enjoys thrillers will not take exam during either 30- or 31-day months. Between the person who likes Thriller and Q, there will only be two candidates for the exam. M dislikes action shows and will appear in the exam just after Q. P likes History shows and will take exam in December. R will take exam right before N. The person who enjoys family shows will take exam in a month with thirty-one days. Comedy shows are not O's thing.\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">Who takes exam just before Q and just after O?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74bb79d275",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74bb79d281",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74bb79d28e",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74bb79d2c4",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb79d2d0",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>L</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb79d2ea",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb79d2f6",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>M</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb79d310",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb79d31b",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>P</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb79d345",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb79d352",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>R</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_5_blockData_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5": [],
+                "sections_0_blocks_6_blockData_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_6": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74bb79d39b",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bb79d3a3",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong>\n</p><p style=\"text-align: justify;\">Seven individuals, L, M, N, O, P, Q, and R, will take separate exams in seven distinct months (of the same year), namely January, February, April, May, July, September, and December, however they may not appear in that sequence. They all enjoy diverse TV show genres, such as Family, Action, Comedy, Reality, Animated, History, and Thriller, though not always in that order.\n</p><p style=\"text-align: justify;\">&nbsp;O will take exam in a month, which consists of 30 days. Between the person who like animated shows and O, there will only be one person. The person who enjoys action will show up for the exam right before the person who enjoys animated shows. That person who enjoys thrillers will not take exam during either 30- or 31-day months. Between the person who likes Thriller and Q, there will only be two candidates for the exam. M dislikes action shows and will appear in the exam just after Q. P likes History shows and will take exam in December. R will take exam right before N. The person who enjoys family shows will take exam in a month with thirty-one days. Comedy shows are not O's thing.\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">In which month, the person who likes action shows, takes exam?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74bb79d3c2",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74bb79d3cd",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74bb79d3da",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74bb79d410",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb79d41c",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>January</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb79d436",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb79d442",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>May<strong></strong></span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb79d45b",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb79d467",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>April</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb79d481",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb79d48d",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>September</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_5_blockData_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5": [],
+                "sections_0_blocks_7_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_7": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74bb79d4d7",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bb79d4df",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong>\n</p><p style=\"text-align: justify;\">Seven individuals, L, M, N, O, P, Q, and R, will take separate exams in seven distinct months (of the same year), namely January, February, April, May, July, September, and December, however they may not appear in that sequence. They all enjoy diverse TV show genres, such as Family, Action, Comedy, Reality, Animated, History, and Thriller, though not always in that order.\n</p><p style=\"text-align: justify;\">&nbsp;O will take exam in a month, which consists of 30 days. Between the person who like animated shows and O, there will only be one person. The person who enjoys action will show up for the exam right before the person who enjoys animated shows. That person who enjoys thrillers will not take exam during either 30- or 31-day months. Between the person who likes Thriller and Q, there will only be two candidates for the exam. M dislikes action shows and will appear in the exam just after Q. P likes History shows and will take exam in December. R will take exam right before N. The person who enjoys family shows will take exam in a month with thirty-one days. Comedy shows are not O's thing.\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">How many persons are there in between the person who likes thriller shown and the person who takes exam in September?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74bb79d4fd",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74bb79d508",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74bb79d515",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74bb79d54b",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb79d557",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>2</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb79d571",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb79d57d",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>3</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb79d597",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb79d5a3",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>4</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb79d5bd",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb79d5c9",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>1</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_5_blockData_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5": [],
+                "sections_0_blocks_8_blockData_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_8": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74bb79d615",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bb79d61d",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong>\n</p><p style=\"text-align: justify;\">Seven individuals, L, M, N, O, P, Q, and R, will take separate exams in seven distinct months (of the same year), namely January, February, April, May, July, September, and December, however they may not appear in that sequence. They all enjoy diverse TV show genres, such as Family, Action, Comedy, Reality, Animated, History, and Thriller, though not always in that order.\n</p><p style=\"text-align: justify;\">&nbsp;O will take exam in a month, which consists of 30 days. Between the person who like animated shows and O, there will only be one person. The person who enjoys action will show up for the exam right before the person who enjoys animated shows. That person who enjoys thrillers will not take exam during either 30- or 31-day months. Between the person who likes Thriller and Q, there will only be two candidates for the exam. M dislikes action shows and will appear in the exam just after Q. P likes History shows and will take exam in December. R will take exam right before N. The person who enjoys family shows will take exam in a month with thirty-one days. Comedy shows are not O's thing.\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">The person who likes comedy shows gives exam after which person and what is that person’s favourite genre?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74bb79d63c",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74bb79d647",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74bb79d654",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74bb79d68a",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb79d696",
+                        "type": "text",
+                        "properties": {
+                          "html": "O, Thriller"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb79d6b0",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb79d6bc",
+                        "type": "text",
+                        "properties": {
+                          "html": "L, Family"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb79d6d6",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb79d6e2",
+                        "type": "text",
+                        "properties": {
+                          "html": "P, History"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb79d6fc",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb79d708",
+                        "type": "text",
+                        "properties": {
+                          "html": "Q, Animated"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_5_blockData_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5": [],
+                "sections_0_blocks_9_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_9": []
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "availabilityStatus": null,
+    "autoNavigationEnabled": false,
+    "displayBackButtonWhenNavigationPerBlock": true,
+    "saveAndResumeLaterEnabled": null,
+    "tagsAddedOnCompletion": [],
+    "tagsAddedOnPass": [],
+    "sendAnonymousSubmissionsToEmailLeads": false,
+    "afterSubmitActionEnabled": null,
+    "afterSubmitActionProperties": null,
+    "showWizardOnNextEdit": false,
+    "revisitAfterSubmissionAction": null,
+    "navigationTemplate": "HorizontalSpacedBetweenNavigationTemplate",
+    "learnerSearchBarEnabled": true,
+    "learnerUnansweredQuestionsEnabled": true,
+    "learnerFavouriteQuestionEnabled": true,
+    "learnerCompletionProgressEnabled": true,
+    "learnerShowIndexOfQuestionsEnabled": false,
+    "learnerTimeNotificationsEnabled": false,
+    "learnerAllowInterruptionsEnabled": true,
+    "learnerAllowInterruptionsTimeoutInMinutes": 30,
+    "learnerReclaimTryOnInterruptionTimeoutEnabled": false,
+    "learnerAskBeforeContinueToSaved": true,
+    "learnerAutoSaveEnabled": null,
+    "spellcheckDisabled": null,
+    "showPartialScoreOnSubmission": true,
+    "deliverableQuestionsSubsetType": "all",
+    "questionRandomizationType": "none",
+    "serveQuestionsBasedOnPreviousSubmission": null,
+    "scoringDisabled": false,
+    "isSelfAssessment": false,
+    "useDefaultCertificateTemplate": null,
+    "certificateTemplate": null,
+    "certificateSocialShare": null,
+    "migrationData": null,
+    "useAssessmentPassingGradeForOpenEndedCorrectness": true,
+    "openEndedCorrectnessPassingGrade": null,
+    "showScorePercentage": null,
+    "showScorePoints": null,
+    "showScoreCorrectAnswers": null,
+    "editorBehaviorSettings": null,
+    "manualReviewEnabled": null,
+    "resultsSummary": {
+      "enabled": true,
+      "showStatusIcon": true,
+      "showStatusText": true,
+      "showScorePercentage": true,
+      "showScorePoints": true,
+      "showScoreCorrectAnswers": false,
+      "showTimeTakenToComplete": true,
+      "showDateSubmitted": true,
+      "showAttemptCount": true
+    },
+    "meta": null,
+    "submissionsCount": 657,
+    "fromMarketplace": null,
+    "aiFeedbackEnabled": null,
+    "numberOfFeedbackQuestions": null,
+    "created": 1723288504.087326,
+    "modified": 1725365771.853012,
+    "contentHash": "ae7bbda92feb9e961d3d6895c69b9ebb51703d62331e5f1cb4eec5ad6decc2bb",
+    "id": "66b74bb87f809db010095236",
+    "objectType": "assessment",
+    "isEditBlockedDueToSync": false,
+    "variables": {
+      "submission": {
+        "self": {
+          "score": 0,
+          "points": 0,
+          "total_points": 10,
+          "correct_answers": 0,
+          "total_questions": 10,
+          "time_spent": "00:00:01",
+          "date_submitted": "11/08/26",
+          "attempt_count": 3,
+          "max_tries": null,
+          "pass_grade": 50,
+          "time_spent_seconds": 1,
+          "raw_start_date": 1786440563.889567
+        }
+      },
+      "school": {
+        "name": "Apna College",
+        "url": "www.apnacollege.in",
+        "description": "The most loved coding community of India ❤️"
+      },
+      "user": {
+        "username": "ram",
+        "email": "p4542639@gmail.com",
+        "cf_phonenumber": "7666690798"
+      }
+    }
+  },
+  "reclaimedTry": false,
+  "feedback": [
+    {
+      "title": "",
+      "id": "section66b74bb79cadc",
+      "blocks": [
+        {
+          "id": "mc66b74bb79cae9",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions : In the stack, eleven boxes from A to K are stacked one on top of the other, with the bottom box being numbered 1 and the top box being numbered 11. Not necessarily every box is in the exact alphabetical order. Box E is maintained at an even number. Three boxes above box E is, where box K is housed. Between Box K and Box B, which is stored beneath Box K, there is just one box. Box B is maintained at a prime numbered position. Between Box B and Box G, which is not kept above Box E, there are only two boxes. Box H’s position is twice the number denoting position of box J. Box D is stored beneath Box J, although not directly below. Between box H and box I, only three boxes are there. Box A is stored beneath Box C. One of the spaces below box I is retained for box F. Box F is not placed at third from the top. Which box is at the topmost position?",
+            "widgets": [
+              {
+                "id": "text66b74bb79caf1",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong> \n</p><p style=\"text-align: justify;\">In the stack, eleven boxes from A to K are stacked one on top of the other, with the bottom box being numbered 1 and the top box being numbered 11. Not necessarily every box is in the exact alphabetical order. \n</p><p style=\"text-align: justify;\">Box E is maintained at an even number. Three boxes above box E is, where box K is housed. Between Box K and Box B, which is stored beneath Box K, there is just one box. Box B is maintained at a prime numbered position. Between Box B and Box G, which is not kept above Box E, there are only two boxes. Box H’s position is twice the number denoting position of box J. Box D is stored beneath Box J, although not directly below. Between box H and box I, only three boxes are there. Box A is stored beneath Box C. One of the spaces below box I is retained for box F. Box F is not placed at third from the top.\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">Which box is at the topmost position?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74bb79cb6e",
+              "description": {
+                "text": "I",
+                "widgets": [
+                  {
+                    "id": "text66b74bb79cb7a",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>I</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb79cb94",
+              "description": {
+                "text": "A",
+                "widgets": [
+                  {
+                    "id": "text66b74bb79cba0",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>A</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb79cbba",
+              "description": {
+                "text": "C",
+                "widgets": [
+                  {
+                    "id": "text66b74bb79cbc5",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>C</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb79cbde",
+              "description": {
+                "text": "K",
+                "widgets": [
+                  {
+                    "id": "text66b74bb79cbe9",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>K</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74bb79cbba",
+              "text": "C",
+              "widgets": [
+                {
+                  "id": "text66b74bb79cbc5",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>C</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>According to\nthe clues in the question, <br>Box E is maintained at an even numbered position. <br>Box K is at three boxes above box E. <br>Only one box is there between box K and box B, which\nis kept below box K. <br>Box B is maintained at a prime numbered position. <br>Only two boxes are kept between B and G, which cannot\nbe kept above box E. <br>So,\nwe get two possibilities-<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/feec518f612b9ce828df0da7d8aa360f.png\" style=\"width: 200px; height: 362px;\"><br>Now we have, <br>The numerical position of box H is twice the number\ndenoting position of box J. \nBox\nD is below box J but cannot be kept immediately below.<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/d1627e480a01bca78ff2b522a73b383c.png\" style=\"width: 180px; height: 351px;\"><br>Again, <br>Only three boxes are there in between box H and box I.\n\nBox A is\nmaintained below box C.<br>Box\nwhich 3rd from the top, is not box F. Box F is in one of the positions below\nbox I.<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/cad1e3dc5be7777dd0e596bca521f963.png\" style=\"width: 180px; height: 359px;\"></p><p><span>Case-I is ruled out as there is no space left for box\nI. </span><span style=\"font-family: Helvetica, sans-serif, Arial; font-size: 14px;\">Therefore,\nfinal arrangement is –<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/76cfe2e5c8102ae387f1d6b55df7a21f.png\" style=\"width: 130px; height: 337px;\"><br>So, correct answers are –<br>Option(C) – Box C. </span></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74bb79cc1c",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions : In the stack, eleven boxes from A to K are stacked one on top of the other, with the bottom box being numbered 1 and the top box being numbered 11. Not necessarily every box is in the exact alphabetical order. Box E is maintained at an even number. Three boxes above box E is, where box K is housed. Between Box K and Box B, which is stored beneath Box K, there is just one box. Box B is maintained at a prime numbered position. Between Box B and Box G, which is not kept above Box E, there are only two boxes. Box H’s position is twice the number denoting position of box J. Box D is stored beneath Box J, although not directly below. Between box H and box I, only three boxes are there. Box A is stored beneath Box C. One of the spaces below box I is retained for box F. Box F is not placed at third from the top. How many boxes are there in between F and B?",
+            "widgets": [
+              {
+                "id": "text66b74bb79cc24",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong> \n</p><p style=\"text-align: justify;\">In the stack, eleven boxes from A to K are stacked one on top of the other, with the bottom box being numbered 1 and the top box being numbered 11. Not necessarily every box is in the exact alphabetical order. \n</p><p style=\"text-align: justify;\">Box E is maintained at an even number. Three boxes above box E is, where box K is housed. Between Box K and Box B, which is stored beneath Box K, there is just one box. Box B is maintained at a prime numbered position. Between Box B and Box G, which is not kept above Box E, there are only two boxes. Box H’s position is twice the number denoting position of box J. Box D is stored beneath Box J, although not directly below. Between box H and box I, only three boxes are there. Box A is stored beneath Box C. One of the spaces below box I is retained for box F. Box F is not placed at third from the top.\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">How many boxes are there in between F and B?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74bb79cc92",
+              "description": {
+                "text": "1",
+                "widgets": [
+                  {
+                    "id": "text66b74bb79cc9e",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>1</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb79ccb8",
+              "description": {
+                "text": "2",
+                "widgets": [
+                  {
+                    "id": "text66b74bb79ccc4",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>2</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb79ccde",
+              "description": {
+                "text": "3",
+                "widgets": [
+                  {
+                    "id": "text66b74bb79ccea",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>3</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb79cd04",
+              "description": {
+                "text": "4",
+                "widgets": [
+                  {
+                    "id": "text66b74bb79cd10",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>4</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74bb79ccb8",
+              "text": "2",
+              "widgets": [
+                {
+                  "id": "text66b74bb79ccc4",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>2</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>According to\nthe clues in the question, <br>Box E is maintained at an even numbered position. <br>Box K is at three boxes above box E. <br>Only one box is there between box K and box B, which\nis kept below box K. <br>Box B is maintained at a prime numbered position. <br>Only two boxes are kept between B and G, which cannot\nbe kept above box E. <br>So,\nwe get two possibilities-<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/feec518f612b9ce828df0da7d8aa360f.png\" style=\"width: 200px; height: 362px;\"><br>Now we have, <br>The numerical position of box H is twice the number\ndenoting position of box J. \nBox\nD is below box J but cannot be kept immediately below.<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/d1627e480a01bca78ff2b522a73b383c.png\" style=\"width: 180px; height: 351px;\"><br>Again, <br>Only three boxes are there in between box H and box I.\n\nBox A is\nmaintained below box C.<br>Box\nwhich 3rd from the top, is not box F. Box F is in one of the positions below\nbox I.<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/cad1e3dc5be7777dd0e596bca521f963.png\" style=\"width: 180px; height: 359px;\"></p><p><span>Case-I is ruled out as there is no space left for box\nI. </span><span style=\"font-family: Helvetica, sans-serif, Arial; font-size: 14px;\">Therefore,\nfinal arrangement is –<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/76cfe2e5c8102ae387f1d6b55df7a21f.png\" style=\"width: 130px; height: 337px;\"><br>So, correct answers are – </span></p><p>Option( B ) – 2 boxes<br></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74bb79cd53",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions : In the stack, eleven boxes from A to K are stacked one on top of the other, with the bottom box being numbered 1 and the top box being numbered 11. Not necessarily every box is in the exact alphabetical order. Box E is maintained at an even number. Three boxes above box E is, where box K is housed. Between Box K and Box B, which is stored beneath Box K, there is just one box. Box B is maintained at a prime numbered position. Between Box B and Box G, which is not kept above Box E, there are only two boxes. Box H’s position is twice the number denoting position of box J. Box D is stored beneath Box J, although not directly below. Between box H and box I, only three boxes are there. Box A is stored beneath Box C. One of the spaces below box I is retained for box F. Box F is not placed at third from the top. Which box is maintained at two positions above of box J?",
+            "widgets": [
+              {
+                "id": "text66b74bb79cd5b",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong> \n</p><p style=\"text-align: justify;\">In the stack, eleven boxes from A to K are stacked one on top of the other, with the bottom box being numbered 1 and the top box being numbered 11. Not necessarily every box is in the exact alphabetical order. \n</p><p style=\"text-align: justify;\">Box E is maintained at an even number. Three boxes above box E is, where box K is housed. Between Box K and Box B, which is stored beneath Box K, there is just one box. Box B is maintained at a prime numbered position. Between Box B and Box G, which is not kept above Box E, there are only two boxes. Box H’s position is twice the number denoting position of box J. Box D is stored beneath Box J, although not directly below. Between box H and box I, only three boxes are there. Box A is stored beneath Box C. One of the spaces below box I is retained for box F. Box F is not placed at third from the top.\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">Which box is maintained at two positions above of box J?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74bb79cdc9",
+              "description": {
+                "text": "B",
+                "widgets": [
+                  {
+                    "id": "text66b74bb79cdd5",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>B</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb79cdfe",
+              "description": {
+                "text": "E",
+                "widgets": [
+                  {
+                    "id": "text66b74bb79ce09",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>E</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb79ce23",
+              "description": {
+                "text": "H",
+                "widgets": [
+                  {
+                    "id": "text66b74bb79ce2f",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>H</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb79ce49",
+              "description": {
+                "text": "K",
+                "widgets": [
+                  {
+                    "id": "text66b74bb79ce55",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>K</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74bb79cdc9",
+              "text": "B",
+              "widgets": [
+                {
+                  "id": "text66b74bb79cdd5",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>B</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>According to\nthe clues in the question, <br>Box E is maintained at an even numbered position. <br>Box K is at three boxes above box E. <br>Only one box is there between box K and box B, which\nis kept below box K. <br>Box B is maintained at a prime numbered position. <br>Only two boxes are kept between B and G, which cannot\nbe kept above box E. <br>So,\nwe get two possibilities-<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/feec518f612b9ce828df0da7d8aa360f.png\" style=\"width: 200px; height: 362px;\"><br>Now we have, <br>The numerical position of box H is twice the number\ndenoting position of box J. \nBox\nD is below box J but cannot be kept immediately below.<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/d1627e480a01bca78ff2b522a73b383c.png\" style=\"width: 180px; height: 351px;\"><br>Again, <br>Only three boxes are there in between box H and box I.\n\nBox A is\nmaintained below box C.<br>Box\nwhich 3rd from the top, is not box F. Box F is in one of the positions below\nbox I.<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/cad1e3dc5be7777dd0e596bca521f963.png\" style=\"width: 180px; height: 359px;\"></p><p><span>Case-I is ruled out as there is no space left for box\nI. </span><span style=\"font-family: Helvetica, sans-serif, Arial; font-size: 14px;\">Therefore,\nfinal arrangement is –<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/76cfe2e5c8102ae387f1d6b55df7a21f.png\" style=\"width: 130px; height: 337px;\"><br>So, correct answers are – </span></p><p>Option( A ) – Box B<br></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74bb79ce9c",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions : In the stack, eleven boxes from A to K are stacked one on top of the other, with the bottom box being numbered 1 and the top box being numbered 11. Not necessarily every box is in the exact alphabetical order. Box E is maintained at an even number. Three boxes above box E is, where box K is housed. Between Box K and Box B, which is stored beneath Box K, there is just one box. Box B is maintained at a prime numbered position. Between Box B and Box G, which is not kept above Box E, there are only two boxes. Box H’s position is twice the number denoting position of box J. Box D is stored beneath Box J, although not directly below. Between box H and box I, only three boxes are there. Box A is stored beneath Box C. One of the spaces below box I is retained for box F. Box F is not placed at third from the top. Which box is exactly in between J and k?",
+            "widgets": [
+              {
+                "id": "text66b74bb79cea4",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong> \n</p><p style=\"text-align: justify;\">In the stack, eleven boxes from A to K are stacked one on top of the other, with the bottom box being numbered 1 and the top box being numbered 11. Not necessarily every box is in the exact alphabetical order. \n</p><p style=\"text-align: justify;\">Box E is maintained at an even number. Three boxes above box E is, where box K is housed. Between Box K and Box B, which is stored beneath Box K, there is just one box. Box B is maintained at a prime numbered position. Between Box B and Box G, which is not kept above Box E, there are only two boxes. Box H’s position is twice the number denoting position of box J. Box D is stored beneath Box J, although not directly below. Between box H and box I, only three boxes are there. Box A is stored beneath Box C. One of the spaces below box I is retained for box F. Box F is not placed at third from the top.\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">Which box is exactly in between J and k?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74bb79cf12",
+              "description": {
+                "text": "E",
+                "widgets": [
+                  {
+                    "id": "text66b74bb79cf1e",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>E</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb79cf38",
+              "description": {
+                "text": "H",
+                "widgets": [
+                  {
+                    "id": "text66b74bb79cf55",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>H</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb79cf6f",
+              "description": {
+                "text": "G",
+                "widgets": [
+                  {
+                    "id": "text66b74bb79cf7b",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>G</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb79cf95",
+              "description": {
+                "text": "B",
+                "widgets": [
+                  {
+                    "id": "text66b74bb79cfa1",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>B</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74bb79cf95",
+              "text": "B",
+              "widgets": [
+                {
+                  "id": "text66b74bb79cfa1",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>B</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>According to\nthe clues in the question, <br>Box E is maintained at an even numbered position. <br>Box K is at three boxes above box E. <br>Only one box is there between box K and box B, which\nis kept below box K. <br>Box B is maintained at a prime numbered position. <br>Only two boxes are kept between B and G, which cannot\nbe kept above box E. <br>So,\nwe get two possibilities-<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/feec518f612b9ce828df0da7d8aa360f.png\" style=\"width: 200px; height: 362px;\"><br>Now we have, <br>The numerical position of box H is twice the number\ndenoting position of box J. \nBox\nD is below box J but cannot be kept immediately below.<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/d1627e480a01bca78ff2b522a73b383c.png\" style=\"width: 180px; height: 351px;\"><br>Again, <br>Only three boxes are there in between box H and box I.\n\nBox A is\nmaintained below box C.<br>Box\nwhich 3rd from the top, is not box F. Box F is in one of the positions below\nbox I.<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/cad1e3dc5be7777dd0e596bca521f963.png\" style=\"width: 180px; height: 359px;\"></p><p><span>Case-I is ruled out as there is no space left for box\nI. </span><span style=\"font-family: Helvetica, sans-serif, Arial; font-size: 14px;\">Therefore,\nfinal arrangement is –<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/76cfe2e5c8102ae387f1d6b55df7a21f.png\" style=\"width: 130px; height: 337px;\"><br>So, correct answers are – </span></p><p>Option( D ) – Box B<br></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74bb79cfe8",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions : In the stack, eleven boxes from A to K are stacked one on top of the other, with the bottom box being numbered 1 and the top box being numbered 11. Not necessarily every box is in the exact alphabetical order. Box E is maintained at an even number. Three boxes above box E is, where box K is housed. Between Box K and Box B, which is stored beneath Box K, there is just one box. Box B is maintained at a prime numbered position. Between Box B and Box G, which is not kept above Box E, there are only two boxes. Box H’s position is twice the number denoting position of box J. Box D is stored beneath Box J, although not directly below. Between box H and box I, only three boxes are there. Box A is stored beneath Box C. One of the spaces below box I is retained for box F. Box F is not placed at third from the top. Which of the following box occupied an odd numbered position?",
+            "widgets": [
+              {
+                "id": "text66b74bb79cff0",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong> \n</p><p style=\"text-align: justify;\">In the stack, eleven boxes from A to K are stacked one on top of the other, with the bottom box being numbered 1 and the top box being numbered 11. Not necessarily every box is in the exact alphabetical order. \n</p><p style=\"text-align: justify;\">Box E is maintained at an even number. Three boxes above box E is, where box K is housed. Between Box K and Box B, which is stored beneath Box K, there is just one box. Box B is maintained at a prime numbered position. Between Box B and Box G, which is not kept above Box E, there are only two boxes. Box H’s position is twice the number denoting position of box J. Box D is stored beneath Box J, although not directly below. Between box H and box I, only three boxes are there. Box A is stored beneath Box C. One of the spaces below box I is retained for box F. Box F is not placed at third from the top.\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">Which of the following box occupied an odd numbered position?&nbsp;</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74bb79d05e",
+              "description": {
+                "text": "I",
+                "widgets": [
+                  {
+                    "id": "text66b74bb79d06a",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>I</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb79d084",
+              "description": {
+                "text": "J",
+                "widgets": [
+                  {
+                    "id": "text66b74bb79d090",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>J</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb79d0aa",
+              "description": {
+                "text": "H",
+                "widgets": [
+                  {
+                    "id": "text66b74bb79d0b6",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>H</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb79d0d0",
+              "description": {
+                "text": "F",
+                "widgets": [
+                  {
+                    "id": "text66b74bb79d0dc",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>F</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74bb79d084",
+              "text": "J",
+              "widgets": [
+                {
+                  "id": "text66b74bb79d090",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>J</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>According to\nthe clues in the question, <br>Box E is maintained at an even numbered position. <br>Box K is at three boxes above box E. <br>Only one box is there between box K and box B, which\nis kept below box K. <br>Box B is maintained at a prime numbered position. <br>Only two boxes are kept between B and G, which cannot\nbe kept above box E. <br>So,\nwe get two possibilities-<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/feec518f612b9ce828df0da7d8aa360f.png\" style=\"width: 200px; height: 362px;\"><br>Now we have, <br>The numerical position of box H is twice the number\ndenoting position of box J. \nBox\nD is below box J but cannot be kept immediately below.<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/d1627e480a01bca78ff2b522a73b383c.png\" style=\"width: 180px; height: 351px;\"><br>Again, <br>Only three boxes are there in between box H and box I.\n\nBox A is\nmaintained below box C.<br>Box\nwhich 3rd from the top, is not box F. Box F is in one of the positions below\nbox I.<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/cad1e3dc5be7777dd0e596bca521f963.png\" style=\"width: 180px; height: 359px;\"></p><p><span>Case-I is ruled out as there is no space left for box\nI. </span><span style=\"font-family: Helvetica, sans-serif, Arial; font-size: 14px;\">Therefore,\nfinal arrangement is –<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/76cfe2e5c8102ae387f1d6b55df7a21f.png\" style=\"width: 130px; height: 337px;\"><br>So, correct answers are – </span></p><p>Option( B ) – Box J<br></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74bb79d122",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions : Seven individuals, L, M, N, O, P, Q, and R, will take separate exams in seven distinct months (of the same year), namely January, February, April, May, July, September, and December, however they may not appear in that sequence. They all enjoy diverse TV show genres, such as Family, Action, Comedy, Reality, Animated, History, and Thriller, though not always in that order. O will take exam in a month, which consists of 30 days. Between the person who like animated shows and O, there will only be one person. The person who enjoys action will show up for the exam right before the person who enjoys animated shows. That person who enjoys thrillers will not take exam during either 30- or 31-day months. Between the person who likes Thriller and Q, there will only be two candidates for the exam. M dislikes action shows and will appear in the exam just after Q. P likes History shows and will take exam in December. R will take exam right before N. The person who enjoys family shows will take exam in a month with thirty-one days. Comedy shows are not O's thing. Who likes Family based TV shows?",
+            "widgets": [
+              {
+                "id": "text66b74bb79d12b",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong>\n</p><p style=\"text-align: justify;\">Seven individuals, L, M, N, O, P, Q, and R, will take separate exams in seven distinct months (of the same year), namely January, February, April, May, July, September, and December, however they may not appear in that sequence. They all enjoy diverse TV show genres, such as Family, Action, Comedy, Reality, Animated, History, and Thriller, though not always in that order.\n</p><p style=\"text-align: justify;\">&nbsp;O will take exam in a month, which consists of 30 days. Between the person who like animated shows and O, there will only be one person. The person who enjoys action will show up for the exam right before the person who enjoys animated shows. That person who enjoys thrillers will not take exam during either 30- or 31-day months. Between the person who likes Thriller and Q, there will only be two candidates for the exam. M dislikes action shows and will appear in the exam just after Q. P likes History shows and will take exam in December. R will take exam right before N. The person who enjoys family shows will take exam in a month with thirty-one days. Comedy shows are not O's thing.\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">Who likes Family based TV shows?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74bb79d198",
+              "description": {
+                "text": "N",
+                "widgets": [
+                  {
+                    "id": "text66b74bb79d1a3",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>N</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb79d1be",
+              "description": {
+                "text": "L",
+                "widgets": [
+                  {
+                    "id": "text66b74bb79d1c9",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>L</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb79d1e4",
+              "description": {
+                "text": "R",
+                "widgets": [
+                  {
+                    "id": "text66b74bb79d1ef",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>R</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb79d209",
+              "description": {
+                "text": "O",
+                "widgets": [
+                  {
+                    "id": "text66b74bb79d215",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>O</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74bb79d1e4",
+              "text": "R",
+              "widgets": [
+                {
+                  "id": "text66b74bb79d1ef",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>R</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>1. O\ncan take exam either in April or in September\n<br>2. P\ntakes exam in December and likes History shows\n3. There\nis only 1 person in between O and the person who likes animated shows.\n<br>We get two possibilities –<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/bfe0174b4877efdf67d65aae316958b7.png\"><br>Now, <br>4. The person who likes Action shows,\ntakes exam just before the person who likes animated shows.<br>5. The person who likes Thriller shows\ntakes exam in February.\n<br>6. O\ndoesn’t like comedy shows, while M doesn’t like action shows.\n<br>7. There are only two individuals in between the\nperson who likes thriller shows and Q. M takes exam just after Q.<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/fdf88ef1b1aabf2ecf47972571b81c78.png\"><br>Now,\n<br>Case\n– II gets eliminated, as there is no space left for M.\n<br>8. R takes exam just before N.\n<br>9. The person who likes family\nshows can take exam in January, May or July.\n<br>So, \nFinal arrangement is –<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/1a2ac5570bc40c27bc570b5bbd653004.png\" style=\"width: 300px; height: 254px;\"><br>Therefore, correct answers are –<br>Option(C ) – R  </p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74bb79d24e",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions : Seven individuals, L, M, N, O, P, Q, and R, will take separate exams in seven distinct months (of the same year), namely January, February, April, May, July, September, and December, however they may not appear in that sequence. They all enjoy diverse TV show genres, such as Family, Action, Comedy, Reality, Animated, History, and Thriller, though not always in that order. O will take exam in a month, which consists of 30 days. Between the person who like animated shows and O, there will only be one person. The person who enjoys action will show up for the exam right before the person who enjoys animated shows. That person who enjoys thrillers will not take exam during either 30- or 31-day months. Between the person who likes Thriller and Q, there will only be two candidates for the exam. M dislikes action shows and will appear in the exam just after Q. P likes History shows and will take exam in December. R will take exam right before N. The person who enjoys family shows will take exam in a month with thirty-one days. Comedy shows are not O's thing. Who takes exam just before Q and just after O?",
+            "widgets": [
+              {
+                "id": "text66b74bb79d256",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong>\n</p><p style=\"text-align: justify;\">Seven individuals, L, M, N, O, P, Q, and R, will take separate exams in seven distinct months (of the same year), namely January, February, April, May, July, September, and December, however they may not appear in that sequence. They all enjoy diverse TV show genres, such as Family, Action, Comedy, Reality, Animated, History, and Thriller, though not always in that order.\n</p><p style=\"text-align: justify;\">&nbsp;O will take exam in a month, which consists of 30 days. Between the person who like animated shows and O, there will only be one person. The person who enjoys action will show up for the exam right before the person who enjoys animated shows. That person who enjoys thrillers will not take exam during either 30- or 31-day months. Between the person who likes Thriller and Q, there will only be two candidates for the exam. M dislikes action shows and will appear in the exam just after Q. P likes History shows and will take exam in December. R will take exam right before N. The person who enjoys family shows will take exam in a month with thirty-one days. Comedy shows are not O's thing.\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">Who takes exam just before Q and just after O?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74bb79d2c4",
+              "description": {
+                "text": "L",
+                "widgets": [
+                  {
+                    "id": "text66b74bb79d2d0",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>L</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb79d2ea",
+              "description": {
+                "text": "M",
+                "widgets": [
+                  {
+                    "id": "text66b74bb79d2f6",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>M</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb79d310",
+              "description": {
+                "text": "P",
+                "widgets": [
+                  {
+                    "id": "text66b74bb79d31b",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>P</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb79d345",
+              "description": {
+                "text": "R",
+                "widgets": [
+                  {
+                    "id": "text66b74bb79d352",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>R</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74bb79d2c4",
+              "text": "L",
+              "widgets": [
+                {
+                  "id": "text66b74bb79d2d0",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>L</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>1. O\ncan take exam either in April or in September\n<br>2. P\ntakes exam in December and likes History shows\n3. There\nis only 1 person in between O and the person who likes animated shows.\n<br>We get two possibilities –<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/bfe0174b4877efdf67d65aae316958b7.png\"><br>Now, <br>4. The person who likes Action shows,\ntakes exam just before the person who likes animated shows.<br>5. The person who likes Thriller shows\ntakes exam in February.\n<br>6. O\ndoesn’t like comedy shows, while M doesn’t like action shows.\n<br>7. There are only two individuals in between the\nperson who likes thriller shows and Q. M takes exam just after Q.<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/fdf88ef1b1aabf2ecf47972571b81c78.png\"><br>Now,\n<br>Case\n– II gets eliminated, as there is no space left for M.\n<br>8. R takes exam just before N.\n<br>9. The person who likes family\nshows can take exam in January, May or July.\n<br>So, \nFinal arrangement is –<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/1a2ac5570bc40c27bc570b5bbd653004.png\" style=\"width: 300px; height: 254px;\"><br>Therefore, correct answers are –<br>Option(A) – L  </p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74bb79d39b",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions : Seven individuals, L, M, N, O, P, Q, and R, will take separate exams in seven distinct months (of the same year), namely January, February, April, May, July, September, and December, however they may not appear in that sequence. They all enjoy diverse TV show genres, such as Family, Action, Comedy, Reality, Animated, History, and Thriller, though not always in that order. O will take exam in a month, which consists of 30 days. Between the person who like animated shows and O, there will only be one person. The person who enjoys action will show up for the exam right before the person who enjoys animated shows. That person who enjoys thrillers will not take exam during either 30- or 31-day months. Between the person who likes Thriller and Q, there will only be two candidates for the exam. M dislikes action shows and will appear in the exam just after Q. P likes History shows and will take exam in December. R will take exam right before N. The person who enjoys family shows will take exam in a month with thirty-one days. Comedy shows are not O's thing. In which month, the person who likes action shows, takes exam?",
+            "widgets": [
+              {
+                "id": "text66b74bb79d3a3",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong>\n</p><p style=\"text-align: justify;\">Seven individuals, L, M, N, O, P, Q, and R, will take separate exams in seven distinct months (of the same year), namely January, February, April, May, July, September, and December, however they may not appear in that sequence. They all enjoy diverse TV show genres, such as Family, Action, Comedy, Reality, Animated, History, and Thriller, though not always in that order.\n</p><p style=\"text-align: justify;\">&nbsp;O will take exam in a month, which consists of 30 days. Between the person who like animated shows and O, there will only be one person. The person who enjoys action will show up for the exam right before the person who enjoys animated shows. That person who enjoys thrillers will not take exam during either 30- or 31-day months. Between the person who likes Thriller and Q, there will only be two candidates for the exam. M dislikes action shows and will appear in the exam just after Q. P likes History shows and will take exam in December. R will take exam right before N. The person who enjoys family shows will take exam in a month with thirty-one days. Comedy shows are not O's thing.\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">In which month, the person who likes action shows, takes exam?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74bb79d410",
+              "description": {
+                "text": "January",
+                "widgets": [
+                  {
+                    "id": "text66b74bb79d41c",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>January</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb79d436",
+              "description": {
+                "text": "May",
+                "widgets": [
+                  {
+                    "id": "text66b74bb79d442",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>May<strong></strong></span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb79d45b",
+              "description": {
+                "text": "April",
+                "widgets": [
+                  {
+                    "id": "text66b74bb79d467",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>April</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb79d481",
+              "description": {
+                "text": "September",
+                "widgets": [
+                  {
+                    "id": "text66b74bb79d48d",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>September</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74bb79d436",
+              "text": "May",
+              "widgets": [
+                {
+                  "id": "text66b74bb79d442",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>May<strong></strong></span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>1. O\ncan take exam either in April or in September\n<br>2. P\ntakes exam in December and likes History shows\n3. There\nis only 1 person in between O and the person who likes animated shows.\n<br>We get two possibilities –<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/bfe0174b4877efdf67d65aae316958b7.png\"><br>Now, <br>4. The person who likes Action shows,\ntakes exam just before the person who likes animated shows.<br>5. The person who likes Thriller shows\ntakes exam in February.\n<br>6. O\ndoesn’t like comedy shows, while M doesn’t like action shows.\n<br>7. There are only two individuals in between the\nperson who likes thriller shows and Q. M takes exam just after Q.<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/fdf88ef1b1aabf2ecf47972571b81c78.png\"><br>Now,\n<br>Case\n– II gets eliminated, as there is no space left for M.\n<br>8. R takes exam just before N.\n<br>9. The person who likes family\nshows can take exam in January, May or July.\n<br>So, \nFinal arrangement is –<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/1a2ac5570bc40c27bc570b5bbd653004.png\" style=\"width: 300px; height: 254px;\"><br>Therefore, correct answers are –<br>Option(B ) – May  </p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74bb79d4d7",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions : Seven individuals, L, M, N, O, P, Q, and R, will take separate exams in seven distinct months (of the same year), namely January, February, April, May, July, September, and December, however they may not appear in that sequence. They all enjoy diverse TV show genres, such as Family, Action, Comedy, Reality, Animated, History, and Thriller, though not always in that order. O will take exam in a month, which consists of 30 days. Between the person who like animated shows and O, there will only be one person. The person who enjoys action will show up for the exam right before the person who enjoys animated shows. That person who enjoys thrillers will not take exam during either 30- or 31-day months. Between the person who likes Thriller and Q, there will only be two candidates for the exam. M dislikes action shows and will appear in the exam just after Q. P likes History shows and will take exam in December. R will take exam right before N. The person who enjoys family shows will take exam in a month with thirty-one days. Comedy shows are not O's thing. How many persons are there in between the person who likes thriller shown and the person who takes exam in September?",
+            "widgets": [
+              {
+                "id": "text66b74bb79d4df",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong>\n</p><p style=\"text-align: justify;\">Seven individuals, L, M, N, O, P, Q, and R, will take separate exams in seven distinct months (of the same year), namely January, February, April, May, July, September, and December, however they may not appear in that sequence. They all enjoy diverse TV show genres, such as Family, Action, Comedy, Reality, Animated, History, and Thriller, though not always in that order.\n</p><p style=\"text-align: justify;\">&nbsp;O will take exam in a month, which consists of 30 days. Between the person who like animated shows and O, there will only be one person. The person who enjoys action will show up for the exam right before the person who enjoys animated shows. That person who enjoys thrillers will not take exam during either 30- or 31-day months. Between the person who likes Thriller and Q, there will only be two candidates for the exam. M dislikes action shows and will appear in the exam just after Q. P likes History shows and will take exam in December. R will take exam right before N. The person who enjoys family shows will take exam in a month with thirty-one days. Comedy shows are not O's thing.\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">How many persons are there in between the person who likes thriller shown and the person who takes exam in September?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74bb79d54b",
+              "description": {
+                "text": "2",
+                "widgets": [
+                  {
+                    "id": "text66b74bb79d557",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>2</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb79d571",
+              "description": {
+                "text": "3",
+                "widgets": [
+                  {
+                    "id": "text66b74bb79d57d",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>3</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb79d597",
+              "description": {
+                "text": "4",
+                "widgets": [
+                  {
+                    "id": "text66b74bb79d5a3",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>4</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb79d5bd",
+              "description": {
+                "text": "1",
+                "widgets": [
+                  {
+                    "id": "text66b74bb79d5c9",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>1</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74bb79d571",
+              "text": "3",
+              "widgets": [
+                {
+                  "id": "text66b74bb79d57d",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>3</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>1. O\ncan take exam either in April or in September\n<br>2. P\ntakes exam in December and likes History shows\n3. There\nis only 1 person in between O and the person who likes animated shows.\n<br>We get two possibilities –<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/bfe0174b4877efdf67d65aae316958b7.png\"><br>Now, <br>4. The person who likes Action shows,\ntakes exam just before the person who likes animated shows.<br>5. The person who likes Thriller shows\ntakes exam in February.\n<br>6. O\ndoesn’t like comedy shows, while M doesn’t like action shows.\n<br>7. There are only two individuals in between the\nperson who likes thriller shows and Q. M takes exam just after Q.<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/fdf88ef1b1aabf2ecf47972571b81c78.png\"><br>Now,\n<br>Case\n– II gets eliminated, as there is no space left for M.\n<br>8. R takes exam just before N.\n<br>9. The person who likes family\nshows can take exam in January, May or July.\n<br>So, \nFinal arrangement is –<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/1a2ac5570bc40c27bc570b5bbd653004.png\" style=\"width: 300px; height: 254px;\"><br>Therefore, correct answers are –<br>Option(B) – 3  </p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74bb79d615",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions : Seven individuals, L, M, N, O, P, Q, and R, will take separate exams in seven distinct months (of the same year), namely January, February, April, May, July, September, and December, however they may not appear in that sequence. They all enjoy diverse TV show genres, such as Family, Action, Comedy, Reality, Animated, History, and Thriller, though not always in that order. O will take exam in a month, which consists of 30 days. Between the person who like animated shows and O, there will only be one person. The person who enjoys action will show up for the exam right before the person who enjoys animated shows. That person who enjoys thrillers will not take exam during either 30- or 31-day months. Between the person who likes Thriller and Q, there will only be two candidates for the exam. M dislikes action shows and will appear in the exam just after Q. P likes History shows and will take exam in December. R will take exam right before N. The person who enjoys family shows will take exam in a month with thirty-one days. Comedy shows are not O's thing. The person who likes comedy shows gives exam after which person and what is that person’s favourite genre?",
+            "widgets": [
+              {
+                "id": "text66b74bb79d61d",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong>\n</p><p style=\"text-align: justify;\">Seven individuals, L, M, N, O, P, Q, and R, will take separate exams in seven distinct months (of the same year), namely January, February, April, May, July, September, and December, however they may not appear in that sequence. They all enjoy diverse TV show genres, such as Family, Action, Comedy, Reality, Animated, History, and Thriller, though not always in that order.\n</p><p style=\"text-align: justify;\">&nbsp;O will take exam in a month, which consists of 30 days. Between the person who like animated shows and O, there will only be one person. The person who enjoys action will show up for the exam right before the person who enjoys animated shows. That person who enjoys thrillers will not take exam during either 30- or 31-day months. Between the person who likes Thriller and Q, there will only be two candidates for the exam. M dislikes action shows and will appear in the exam just after Q. P likes History shows and will take exam in December. R will take exam right before N. The person who enjoys family shows will take exam in a month with thirty-one days. Comedy shows are not O's thing.\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">The person who likes comedy shows gives exam after which person and what is that person’s favourite genre?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74bb79d68a",
+              "description": {
+                "text": "O, Thriller",
+                "widgets": [
+                  {
+                    "id": "text66b74bb79d696",
+                    "type": "text",
+                    "properties": {
+                      "html": "O, Thriller"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb79d6b0",
+              "description": {
+                "text": "L, Family",
+                "widgets": [
+                  {
+                    "id": "text66b74bb79d6bc",
+                    "type": "text",
+                    "properties": {
+                      "html": "L, Family"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb79d6d6",
+              "description": {
+                "text": "P, History",
+                "widgets": [
+                  {
+                    "id": "text66b74bb79d6e2",
+                    "type": "text",
+                    "properties": {
+                      "html": "P, History"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb79d6fc",
+              "description": {
+                "text": "Q, Animated",
+                "widgets": [
+                  {
+                    "id": "text66b74bb79d708",
+                    "type": "text",
+                    "properties": {
+                      "html": "Q, Animated"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74bb79d6fc",
+              "text": "Q, Animated",
+              "widgets": [
+                {
+                  "id": "text66b74bb79d708",
+                  "type": "text",
+                  "properties": {
+                    "html": "Q, Animated"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>1. O\ncan take exam either in April or in September\n<br>2. P\ntakes exam in December and likes History shows\n3. There\nis only 1 person in between O and the person who likes animated shows.\n<br>We get two possibilities –<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/bfe0174b4877efdf67d65aae316958b7.png\"><br>Now, <br>4. The person who likes Action shows,\ntakes exam just before the person who likes animated shows.<br>5. The person who likes Thriller shows\ntakes exam in February.\n<br>6. O\ndoesn’t like comedy shows, while M doesn’t like action shows.\n<br>7. There are only two individuals in between the\nperson who likes thriller shows and Q. M takes exam just after Q.<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/fdf88ef1b1aabf2ecf47972571b81c78.png\"><br>Now,\n<br>Case\n– II gets eliminated, as there is no space left for M.\n<br>8. R takes exam just before N.\n<br>9. The person who likes family\nshows can take exam in January, May or July.\n<br>So, \nFinal arrangement is –<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/1a2ac5570bc40c27bc570b5bbd653004.png\" style=\"width: 300px; height: 254px;\"><br>Therefore, correct answers are –<br>Option(D) – Q, Animated  </p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        }
+      ]
+    }
+  ],
+  "submitted": true,
+  "updated": true,
+  "retryCount": 3,
+  "inlineFeedback": [],
+  "errors": [],
+  "success": true
+}

@@ -1,0 +1,3403 @@
+{
+  "submission": {
+    "anon_id": null,
+    "model": "assessment-submission",
+    "courseTitleId": "aptitude-teacher2",
+    "object_id": "66b74ba57f809db0100951ec",
+    "assessmentId": "66b74ba57f809db0100951eb",
+    "snapshotId": "66c071cee3bddd8fa30633f8",
+    "questions": {
+      "section66b74ba52ab52": [
+        "mc66b74ba52ab59",
+        "mc66b74ba52ac3b",
+        "mc66b74ba52ad23",
+        "mc66b74ba52ae02",
+        "mc66b74ba52aee1",
+        "mc66b74ba52afcf",
+        "mc66b74ba52b0b1",
+        "mc66b74ba52b194",
+        "mc66b74ba52b27d",
+        "mc66b74ba52b36c"
+      ]
+    },
+    "certificateAnswers": [],
+    "certificateId": null,
+    "questionData": {
+      "mc66b74ba52ab59": {
+        "deliveredOnTimestamp": 1786440534.121765,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74ba52ac3b": {
+        "deliveredOnTimestamp": 1786440534.121804,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74ba52ad23": {
+        "deliveredOnTimestamp": 1786440534.121826,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74ba52ae02": {
+        "deliveredOnTimestamp": 1786440534.121844,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74ba52aee1": {
+        "deliveredOnTimestamp": 1786440534.121861,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74ba52afcf": {
+        "deliveredOnTimestamp": 1786440534.121878,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74ba52b0b1": {
+        "deliveredOnTimestamp": 1786440534.121893,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74ba52b194": {
+        "deliveredOnTimestamp": 1786440534.121918,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74ba52b27d": {
+        "deliveredOnTimestamp": 1786440534.121934,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74ba52b36c": {
+        "deliveredOnTimestamp": 1786440534.121951,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      }
+    },
+    "answers": [
+      {
+        "blockId": "mc66b74ba52ab59",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74ba52ac3b",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74ba52ad23",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74ba52ae02",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74ba52aee1",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74ba52afcf",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74ba52b0b1",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74ba52b194",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74ba52b27d",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74ba52b36c",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      }
+    ],
+    "submittedTimestamp": 1786440534.402143,
+    "status": "submitted",
+    "grading_status": "grading_status_graded",
+    "access": "public",
+    "actual_score": null,
+    "score": {
+      "maxScore": 10,
+      "value": 0,
+      "pass": false,
+      "passGrade": 50,
+      "points": 0
+    },
+    "source": {
+      "type": "unit"
+    },
+    "isDefining": true,
+    "isAdminAutoGradedSubmission": null,
+    "listOfNonConsentedBlocks": [],
+    "created": 1786440534.129355,
+    "modified": 1786440534.535667,
+    "id": "6a7aeb561813cef5e40912a0",
+    "passed": false
+  },
+  "assessment": {
+    "title": "Practice Test Paper (Medium)",
+    "access": "public",
+    "type": "assessment",
+    "model": "assessmentSnapshot",
+    "description": "Intermediate practice test paper containing 10 assessment questions covering Percentages, Ratios & Proportions.",
+    "isTimed": false,
+    "timerFor": "assessmentTimed",
+    "onTimerExpiration": "autoSubmit",
+    "assessmentTimeLimitInSeconds": 600,
+    "questionTimeLimitInSeconds": 60,
+    "standaloneShareEnabled": null,
+    "customUrl": null,
+    "usesCustomUrl": null,
+    "allowAnonymous": true,
+    "randomizeQuestionOptions": false,
+    "disallowPartialSubmissions": false,
+    "submissionDueDateEnabled": false,
+    "submissionDueDate": 1626257823,
+    "makeFeedbackAvailableAfterDateEnabled": false,
+    "makeFeedbackAvailableAfterDate": 0,
+    "customStylesEnabled": true,
+    "customStyles": {
+      "assessmentPage": {
+        "background": {
+          "type": "color",
+          "colorData": {
+            "code": "",
+            "class": "lw-body-bg"
+          }
+        },
+        "dividers": {
+          "top": {
+            "orientation": "top",
+            "divider": "none"
+          },
+          "bottom": {
+            "orientation": "bottom",
+            "divider": "none"
+          }
+        }
+      },
+      "option": {
+        "radioEffect": "scribble",
+        "checkboxEffect": "scribble",
+        "size": "small"
+      },
+      "assessment": {
+        "transition": "none",
+        "background": {
+          "type": "color",
+          "colorData": {
+            "code": "",
+            "class": ""
+          }
+        },
+        "width": "normal",
+        "timerTemplate": "rectangle"
+      },
+      "linearRating": {
+        "labels": {
+          "size": "small"
+        }
+      },
+      "question": {
+        "description": {
+          "background": {
+            "type": "color",
+            "colorData": {
+              "code": "",
+              "class": ""
+            }
+          },
+          "type": "p",
+          "size": "small"
+        },
+        "answers": {
+          "background": {
+            "type": "color",
+            "colorData": {
+              "code": "",
+              "class": ""
+            }
+          }
+        },
+        "requiredAsterisk": {
+          "colorData": {
+            "code": "#ff0000",
+            "class": ""
+          }
+        },
+        "errorMessages": {
+          "size": "verySmall",
+          "colorData": {
+            "code": "#ff0000",
+            "class": ""
+          }
+        }
+      },
+      "input": {
+        "size": "small",
+        "type": "solidDark"
+      },
+      "textarea": {
+        "size": "small",
+        "type": "solidDark"
+      },
+      "dropdown": {
+        "size": "small",
+        "type": "solidDark"
+      }
+    },
+    "submissionMode": "all",
+    "startingDate": 1626765704,
+    "startingDateEnabled": false,
+    "showOnlyFailedQuestionsOnRetry": false,
+    "retryEnabled": true,
+    "retryOnFailOnly": false,
+    "gradingMethod": null,
+    "maxTries": null,
+    "onlyWrongOnRetake": null,
+    "isAmendable": false,
+    "feedbackShowOnScreen": true,
+    "feedbackDownloadPDF": false,
+    "feedbackShowInline": null,
+    "feedbackQuestionList": "all-questions",
+    "feedbackShowQuestionScore": true,
+    "feedbackShowFeedback": true,
+    "feedbackShowNumbering": false,
+    "feedbackShowSectionTitles": false,
+    "feedbackShowUserAnswers": true,
+    "feedbackShowCorrectAnswers": true,
+    "feedbackShowAnswerCorrectness": true,
+    "displayInlineFeedbackEnabled": null,
+    "displayBackButtonWhenSubmissionPerBlock": null,
+    "feedbackShowSectionResultSummary": false,
+    "askConfirmationBeforeSubmit": true,
+    "hasCustomConfirmationBeforeSubmitText": false,
+    "customConfirmationBeforeSubmitText": "Are you sure you want to submit the questionnaire?",
+    "customConfirmationBeforeSubmitTexts": {
+      "title": "Submit Assessment?",
+      "baseConfirmationMessage": "Are you sure you want to submit the questionnaire?",
+      "unansweredNotice": "You have not answered {X} questions."
+    },
+    "amendResubmissionMinutes": 30,
+    "passingGrade": null,
+    "navigationMode": "per-block",
+    "conditionalBlocks": {
+      "introContent": {
+        "id": "content66b74ba52aa8d",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66b74ba52aa9d",
+              "type": "text",
+              "insertedAsWidget": true,
+              "properties": {
+                "html": "Pie Chart PAPER LEVEL-2",
+                "alignment": "center",
+                "customStyle": true,
+                "type": "h2",
+                "size": "normal"
+              }
+            },
+            {
+              "id": "text66b74ba52aaae",
+              "type": "text",
+              "properties": {
+                "html": "Self-assess your knowledge. Express yourself and get feedback from our instructors.",
+                "customStyle": true,
+                "alignment": "center"
+              }
+            },
+            {
+              "id": "spacer66b74ba52aab8",
+              "type": "spacer",
+              "properties": {
+                "height": 20,
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            },
+            {
+              "id": "button66b74ba52aac4",
+              "type": "button",
+              "properties": {
+                "buttonLabel": "<span>Ready to start</span>",
+                "buttonSize": "normal",
+                "buttonType": "solidBrand",
+                "alignment": "center",
+                "linkData": {
+                  "linkType": "goToFirst"
+                },
+                "iconColorData": {
+                  "code": "",
+                  "class": ""
+                },
+                "iconDisplay": false,
+                "iconSize": 26,
+                "iconClassName": " fas fa-angle-right",
+                "iconPosition": "right"
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "variables": {
+            "conditionalBlocks_introContent_blockData_widgets_0": [],
+            "conditionalBlocks_introContent_blockData_widgets_1": []
+          }
+        }
+      },
+      "submissionStartingDate": {
+        "id": "content66b74ba52aae5",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66b74ba52aaea",
+              "type": "text",
+              "properties": {
+                "html": "Sorry but this assessment hasn't started yet."
+              }
+            },
+            {
+              "id": "date66b74ba52aaf0",
+              "type": "date",
+              "properties": {
+                "value": ""
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "displayConditions": ["startingDate"]
+        }
+      },
+      "submissionDueDate": {
+        "id": "content66b74ba52aafc",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66b74ba52ab01",
+              "type": "text",
+              "properties": {
+                "html": "Sorry but this assessment date is due."
+              }
+            },
+            {
+              "id": "date66b74ba52ab07",
+              "type": "date",
+              "properties": {
+                "value": ""
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "displayConditions": ["dateIsDue"]
+        }
+      },
+      "outroContent": {
+        "id": "content66b74ba52ab13",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "userResults66b74ba52ab17",
+              "type": "userResults",
+              "properties": {
+                "layout": "template2",
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            },
+            {
+              "id": "feedback66b74ba52ab3a",
+              "type": "feedback",
+              "properties": []
+            },
+            {
+              "id": "outroActions66b74ba52ab41",
+              "type": "outroActions",
+              "properties": {
+                "layout": "",
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true
+        }
+      }
+    },
+    "systemSections": null,
+    "sections": [
+      {
+        "id": "section66b74ba52ab52",
+        "title": "",
+        "type": "section",
+        "navigationMode": "per-block",
+        "blocks": [
+          {
+            "id": "mc66b74ba52ab59",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74ba52ab5f",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for Question:</strong></p><p style=\"text-align: justify;\">Given pie chart represents the distribution of different types of investments in a portfolio:</p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/fd797c1543397b819018fc938371ff6c.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 350px;\"></p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">If the total value of the portfolio is Rs.1,000,000, what is the combined value of the Stocks and Bonds?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74ba52ab71",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74ba52ab78",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74ba52ab7f",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74ba52aba0",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74ba52aba7",
+                        "type": "text",
+                        "properties": {
+                          "html": "Rs.500,000"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74ba52abb6",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74ba52abbd",
+                        "type": "text",
+                        "properties": {
+                          "html": "Rs.600,000"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74ba52abcb",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74ba52abd2",
+                        "type": "text",
+                        "properties": {
+                          "html": "Rs.700,000"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74ba52abe1",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74ba52abe7",
+                        "type": "text",
+                        "properties": {
+                          "html": "Rs.800,000"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_3_description_widgets_0": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74ba52ac3b",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74ba52ac40",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for Question:</strong></p><p style=\"text-align: justify;\">Given pie chart represents the distribution of different types of investments in a portfolio:</p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/fd797c1543397b819018fc938371ff6c.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 350px;\"></p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">What is the ratio of the value of Real Estate to the value of Mutual Funds in the portfolio?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74ba52ac51",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74ba52ac58",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74ba52ac5f",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74ba52ac7e",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74ba52ac85",
+                        "type": "text",
+                        "properties": {
+                          "html": "1:1"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74ba52ac94",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74ba52ac9b",
+                        "type": "text",
+                        "properties": {
+                          "html": "1.5:1"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74ba52acaa",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74ba52acb0",
+                        "type": "text",
+                        "properties": {
+                          "html": "2:1"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74ba52acbf",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74ba52acc6",
+                        "type": "text",
+                        "properties": {
+                          "html": "2.5:1"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_1": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74ba52ad23",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74ba52ad28",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for Question:</strong></p><p style=\"text-align: justify;\">Given pie chart represents the distribution of different types of investments in a portfolio:</p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/fd797c1543397b819018fc938371ff6c.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 350px;\"></p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">If the value of the Stocks in the portfolio decreases by 10%, what percentage of the total portfolio will it constitute, assuming the total portfolio value remains the same?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74ba52ad3a",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74ba52ad41",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74ba52ad48",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74ba52ad66",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74ba52ad6d",
+                        "type": "text",
+                        "properties": {
+                          "html": "40%"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74ba52ad7c",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74ba52ad82",
+                        "type": "text",
+                        "properties": {
+                          "html": "45%"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74ba52ad91",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74ba52ad98",
+                        "type": "text",
+                        "properties": {
+                          "html": "50%"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74ba52ada6",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74ba52adad",
+                        "type": "text",
+                        "properties": {
+                          "html": "55%"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_2": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74ba52ae02",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74ba52ae07",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for Question:</strong></p><p style=\"text-align: justify;\">Given pie chart represents the distribution of different types of investments in a portfolio:</p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/fd797c1543397b819018fc938371ff6c.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 350px;\"></p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">What is the difference between the percentages of Stocks and Mutual Funds in the portfolio?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74ba52ae1c",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74ba52ae22",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74ba52ae29",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74ba52ae48",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74ba52ae4e",
+                        "type": "text",
+                        "properties": {
+                          "html": "30%"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74ba52ae5d",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74ba52ae64",
+                        "type": "text",
+                        "properties": {
+                          "html": "35%"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74ba52ae72",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74ba52ae79",
+                        "type": "text",
+                        "properties": {
+                          "html": "40%"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74ba52ae87",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74ba52ae8e",
+                        "type": "text",
+                        "properties": {
+                          "html": "45%"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74ba52aee1",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74ba52aee6",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for Question:</strong></p><p style=\"text-align: justify;\">Given pie chart represents the distribution of different types of investments in a portfolio:</p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/fd797c1543397b819018fc938371ff6c.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 350px;\"></p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">If the portfolio wants to keep the total value the same but increase the Bonds to 25% of the total value, which other category(s) should decrease (assuming all others stay the same), and by how much?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74ba52aef7",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74ba52aefe",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74ba52af10",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74ba52af2e",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74ba52af35",
+                        "type": "text",
+                        "properties": {
+                          "html": "Decrease Stocks by 5%"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74ba52af44",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74ba52af4b",
+                        "type": "text",
+                        "properties": {
+                          "html": "Decrease Real Estate by 5%"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74ba52af59",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74ba52af60",
+                        "type": "text",
+                        "properties": {
+                          "html": "Decrease Mutual Funds by 5%"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74ba52af6f",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74ba52af75",
+                        "type": "text",
+                        "properties": {
+                          "html": "Decrease Other by 5%"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_4": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74ba52afcf",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74ba52afd3",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for Question:</strong></p><p style=\"text-align: justify;\">A pie chart that represents the distribution of different types of energy production in a country is given below:</p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/f56c4399cfa7b191da82615317e7cb90.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 400px;\"></p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">If the total energy production of the country is 200,000 GWh, what is the combined production of Coal and Natural Gas?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74ba52afe4",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74ba52afeb",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74ba52aff2",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74ba52b010",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74ba52b016",
+                        "type": "text",
+                        "properties": {
+                          "html": "90,000 GWh"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74ba52b025",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74ba52b02c",
+                        "type": "text",
+                        "properties": {
+                          "html": "100,000 GWh"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74ba52b03a",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74ba52b041",
+                        "type": "text",
+                        "properties": {
+                          "html": "110,000 GWh"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74ba52b04f",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74ba52b056",
+                        "type": "text",
+                        "properties": {
+                          "html": "120,000 GWh"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_5": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74ba52b0b1",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74ba52b0b5",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for Question:</strong></p><p style=\"text-align: justify;\">A pie chart that represents the distribution of different types of energy production in a country is given below:</p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/f56c4399cfa7b191da82615317e7cb90.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 400px;\"></p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">What is the ratio of the energy production from Nuclear to that from Wind?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74ba52b0c6",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74ba52b0cd",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74ba52b0d4",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74ba52b0f2",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74ba52b0f9",
+                        "type": "text",
+                        "properties": {
+                          "html": "2:1"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74ba52b107",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74ba52b10e",
+                        "type": "text",
+                        "properties": {
+                          "html": "3:1"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74ba52b11d",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74ba52b124",
+                        "type": "text",
+                        "properties": {
+                          "html": "5:1"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74ba52b132",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74ba52b139",
+                        "type": "text",
+                        "properties": {
+                          "html": "4:1"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_6": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74ba52b194",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74ba52b198",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for Question:</strong></p><p style=\"text-align: justify;\">A pie chart that represents the distribution of different types of energy production in a country is given below:</p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/f56c4399cfa7b191da82615317e7cb90.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 400px;\"></p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">If the energy production from Solar increases by 100%, what percentage of the total energy production will it constitute, assuming the total energy production remains the same?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74ba52b1ad",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74ba52b1b4",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74ba52b1bb",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74ba52b1d9",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74ba52b1e0",
+                        "type": "text",
+                        "properties": {
+                          "html": "7%"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74ba52b1ee",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74ba52b1f8",
+                        "type": "text",
+                        "properties": {
+                          "html": "8%"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74ba52b207",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74ba52b20d",
+                        "type": "text",
+                        "properties": {
+                          "html": "9%"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74ba52b21c",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74ba52b223",
+                        "type": "text",
+                        "properties": {
+                          "html": "10%"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_7": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74ba52b27d",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74ba52b282",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for Question:</strong></p><p style=\"text-align: justify;\">A pie chart that represents the distribution of different types of energy production in a country is given below:</p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/f56c4399cfa7b191da82615317e7cb90.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 400px;\"></p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">What is the difference between the percentages of energy production from Coal and Hydroelectric?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74ba52b293",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74ba52b29a",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74ba52b2a1",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74ba52b2bf",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74ba52b2c6",
+                        "type": "text",
+                        "properties": {
+                          "html": "10%"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74ba52b2d5",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74ba52b2dc",
+                        "type": "text",
+                        "properties": {
+                          "html": "15%"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74ba52b2ea",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74ba52b2fb",
+                        "type": "text",
+                        "properties": {
+                          "html": "20%"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74ba52b30a",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74ba52b311",
+                        "type": "text",
+                        "properties": {
+                          "html": "25%"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_8": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74ba52b36c",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74ba52b371",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for Question:</strong></p><p style=\"text-align: justify;\">A pie chart that represents the distribution of different types of energy production in a country is given below:</p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/f56c4399cfa7b191da82615317e7cb90.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 400px;\"></p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">If the country wants to keep the total energy production the same but increase the Hydroelectric production to 20% of the total production, which other category(s) should decrease (assuming all others stay the same), and by how much?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74ba52b382",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74ba52b389",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74ba52b390",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74ba52b3ae",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74ba52b3b4",
+                        "type": "text",
+                        "properties": {
+                          "html": "Decrease Coal by 5%"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74ba52b3c3",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74ba52b3c9",
+                        "type": "text",
+                        "properties": {
+                          "html": "Decrease Natural Gas by 5%"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74ba52b3d8",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74ba52b3de",
+                        "type": "text",
+                        "properties": {
+                          "html": "Decrease Nuclear by 5%"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74ba52b3ed",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74ba52b3f3",
+                        "type": "text",
+                        "properties": {
+                          "html": "Decrease Wind by 5%"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_9": []
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "availabilityStatus": null,
+    "autoNavigationEnabled": false,
+    "displayBackButtonWhenNavigationPerBlock": true,
+    "saveAndResumeLaterEnabled": null,
+    "tagsAddedOnCompletion": [],
+    "tagsAddedOnPass": [],
+    "sendAnonymousSubmissionsToEmailLeads": false,
+    "afterSubmitActionEnabled": null,
+    "afterSubmitActionProperties": null,
+    "showWizardOnNextEdit": false,
+    "revisitAfterSubmissionAction": null,
+    "navigationTemplate": "HorizontalSpacedBetweenNavigationTemplate",
+    "learnerSearchBarEnabled": true,
+    "learnerUnansweredQuestionsEnabled": true,
+    "learnerFavouriteQuestionEnabled": true,
+    "learnerCompletionProgressEnabled": true,
+    "learnerShowIndexOfQuestionsEnabled": false,
+    "learnerTimeNotificationsEnabled": false,
+    "learnerAllowInterruptionsEnabled": true,
+    "learnerAllowInterruptionsTimeoutInMinutes": 30,
+    "learnerReclaimTryOnInterruptionTimeoutEnabled": false,
+    "learnerAskBeforeContinueToSaved": true,
+    "learnerAutoSaveEnabled": null,
+    "spellcheckDisabled": null,
+    "showPartialScoreOnSubmission": true,
+    "deliverableQuestionsSubsetType": "all",
+    "questionRandomizationType": "none",
+    "serveQuestionsBasedOnPreviousSubmission": null,
+    "scoringDisabled": false,
+    "isSelfAssessment": false,
+    "useDefaultCertificateTemplate": null,
+    "certificateTemplate": null,
+    "certificateSocialShare": null,
+    "migrationData": null,
+    "useAssessmentPassingGradeForOpenEndedCorrectness": true,
+    "openEndedCorrectnessPassingGrade": null,
+    "showScorePercentage": null,
+    "showScorePoints": null,
+    "showScoreCorrectAnswers": null,
+    "editorBehaviorSettings": null,
+    "manualReviewEnabled": null,
+    "resultsSummary": {
+      "enabled": true,
+      "showStatusIcon": true,
+      "showStatusText": true,
+      "showScorePercentage": true,
+      "showScorePoints": true,
+      "showScoreCorrectAnswers": false,
+      "showTimeTakenToComplete": true,
+      "showDateSubmitted": true,
+      "showAttemptCount": true
+    },
+    "meta": null,
+    "submissionsCount": 618,
+    "fromMarketplace": null,
+    "aiFeedbackEnabled": null,
+    "numberOfFeedbackQuestions": null,
+    "created": 1723288485.621639,
+    "modified": 1723888078.012807,
+    "contentHash": "1f1b592af6d5559f1374168c0f2622d82147173d38b4deece2e5591e3be7c4b1",
+    "id": "66b74ba57f809db0100951eb",
+    "objectType": "assessment",
+    "isEditBlockedDueToSync": false,
+    "variables": {
+      "submission": {
+        "self": {
+          "score": 0,
+          "points": 0,
+          "total_points": 10,
+          "correct_answers": 0,
+          "total_questions": 10,
+          "time_spent": "00:00:00",
+          "date_submitted": "11/08/26",
+          "attempt_count": 4,
+          "max_tries": null,
+          "pass_grade": 50,
+          "time_spent_seconds": 0,
+          "raw_start_date": 1786440534.129355
+        }
+      },
+      "school": {
+        "name": "Apna College",
+        "url": "www.apnacollege.in",
+        "description": "The most loved coding community of India ❤️"
+      },
+      "user": {
+        "username": "ram",
+        "email": "p4542639@gmail.com",
+        "cf_phonenumber": "7666690798"
+      }
+    }
+  },
+  "reclaimedTry": false,
+  "feedback": [
+    {
+      "title": "",
+      "id": "section66b74ba52ab52",
+      "blocks": [
+        {
+          "id": "mc66b74ba52ab59",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for Question:Given pie chart represents the distribution of different types of investments in a portfolio:If the total value of the portfolio is Rs.1,000,000, what is the combined value of the Stocks and Bonds?",
+            "widgets": [
+              {
+                "id": "text66b74ba52ab5f",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for Question:</strong></p><p style=\"text-align: justify;\">Given pie chart represents the distribution of different types of investments in a portfolio:</p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/fd797c1543397b819018fc938371ff6c.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 350px;\"></p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">If the total value of the portfolio is Rs.1,000,000, what is the combined value of the Stocks and Bonds?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74ba52aba0",
+              "description": {
+                "text": "Rs.500,000",
+                "widgets": [
+                  {
+                    "id": "text66b74ba52aba7",
+                    "type": "text",
+                    "properties": {
+                      "html": "Rs.500,000"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74ba52abb6",
+              "description": {
+                "text": "Rs.600,000",
+                "widgets": [
+                  {
+                    "id": "text66b74ba52abbd",
+                    "type": "text",
+                    "properties": {
+                      "html": "Rs.600,000"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74ba52abcb",
+              "description": {
+                "text": "Rs.700,000",
+                "widgets": [
+                  {
+                    "id": "text66b74ba52abd2",
+                    "type": "text",
+                    "properties": {
+                      "html": "Rs.700,000"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74ba52abe1",
+              "description": {
+                "text": "Rs.800,000",
+                "widgets": [
+                  {
+                    "id": "text66b74ba52abe7",
+                    "type": "text",
+                    "properties": {
+                      "html": "Rs.800,000"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74ba52abcb",
+              "text": "Rs.700,000",
+              "widgets": [
+                {
+                  "id": "text66b74ba52abd2",
+                  "type": "text",
+                  "properties": {
+                    "html": "Rs.700,000"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\"><span>The portfolio has 50% in Stocks and 20% in Bonds. So, the combined\nvalue is <span> </span>(50%+20%)*Rs.1,000,000 = 70%* Rs.1,000,000 =\nRs.700,000. </span></p><p style=\"text-align: justify;\">\n<span>So, the correct answer is\nC) Rs.700,000.</span></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74ba52ac3b",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for Question:Given pie chart represents the distribution of different types of investments in a portfolio:What is the ratio of the value of Real Estate to the value of Mutual Funds in the portfolio?",
+            "widgets": [
+              {
+                "id": "text66b74ba52ac40",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for Question:</strong></p><p style=\"text-align: justify;\">Given pie chart represents the distribution of different types of investments in a portfolio:</p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/fd797c1543397b819018fc938371ff6c.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 350px;\"></p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">What is the ratio of the value of Real Estate to the value of Mutual Funds in the portfolio?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74ba52ac7e",
+              "description": {
+                "text": "1:1",
+                "widgets": [
+                  {
+                    "id": "text66b74ba52ac85",
+                    "type": "text",
+                    "properties": {
+                      "html": "1:1"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74ba52ac94",
+              "description": {
+                "text": "1.5:1",
+                "widgets": [
+                  {
+                    "id": "text66b74ba52ac9b",
+                    "type": "text",
+                    "properties": {
+                      "html": "1.5:1"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74ba52acaa",
+              "description": {
+                "text": "2:1",
+                "widgets": [
+                  {
+                    "id": "text66b74ba52acb0",
+                    "type": "text",
+                    "properties": {
+                      "html": "2:1"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74ba52acbf",
+              "description": {
+                "text": "2.5:1",
+                "widgets": [
+                  {
+                    "id": "text66b74ba52acc6",
+                    "type": "text",
+                    "properties": {
+                      "html": "2.5:1"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74ba52ac94",
+              "text": "1.5:1",
+              "widgets": [
+                {
+                  "id": "text66b74ba52ac9b",
+                  "type": "text",
+                  "properties": {
+                    "html": "1.5:1"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:</p><p style=\"text-align: justify;\"><br></p><p><span>The portfolio has 15% in Real Estate and 10% in Mutual Funds. So,\nthe ratio is 15:10, which simplifies to 1.5:1. </span></p>\n<span>So, the correct answer is\nB) 1.5:1.</span>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74ba52ad23",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for Question:Given pie chart represents the distribution of different types of investments in a portfolio:If the value of the Stocks in the portfolio decreases by 10%, what percentage of the total portfolio will it constitute, assuming the total portfolio value remains the same?",
+            "widgets": [
+              {
+                "id": "text66b74ba52ad28",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for Question:</strong></p><p style=\"text-align: justify;\">Given pie chart represents the distribution of different types of investments in a portfolio:</p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/fd797c1543397b819018fc938371ff6c.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 350px;\"></p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">If the value of the Stocks in the portfolio decreases by 10%, what percentage of the total portfolio will it constitute, assuming the total portfolio value remains the same?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74ba52ad66",
+              "description": {
+                "text": "40%",
+                "widgets": [
+                  {
+                    "id": "text66b74ba52ad6d",
+                    "type": "text",
+                    "properties": {
+                      "html": "40%"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74ba52ad7c",
+              "description": {
+                "text": "45%",
+                "widgets": [
+                  {
+                    "id": "text66b74ba52ad82",
+                    "type": "text",
+                    "properties": {
+                      "html": "45%"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74ba52ad91",
+              "description": {
+                "text": "50%",
+                "widgets": [
+                  {
+                    "id": "text66b74ba52ad98",
+                    "type": "text",
+                    "properties": {
+                      "html": "50%"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74ba52ada6",
+              "description": {
+                "text": "55%",
+                "widgets": [
+                  {
+                    "id": "text66b74ba52adad",
+                    "type": "text",
+                    "properties": {
+                      "html": "55%"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74ba52ad7c",
+              "text": "45%",
+              "widgets": [
+                {
+                  "id": "text66b74ba52ad82",
+                  "type": "text",
+                  "properties": {
+                    "html": "45%"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:</p><p style=\"text-align: justify;\"><br><span>If\nthe value of Stocks decreases by 10%, it becomes 50% - 10% = 40% of the total\nportfolio. So, the correct answer is B) 45%.</span><br></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74ba52ae02",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for Question:Given pie chart represents the distribution of different types of investments in a portfolio:What is the difference between the percentages of Stocks and Mutual Funds in the portfolio?",
+            "widgets": [
+              {
+                "id": "text66b74ba52ae07",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for Question:</strong></p><p style=\"text-align: justify;\">Given pie chart represents the distribution of different types of investments in a portfolio:</p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/fd797c1543397b819018fc938371ff6c.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 350px;\"></p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">What is the difference between the percentages of Stocks and Mutual Funds in the portfolio?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74ba52ae48",
+              "description": {
+                "text": "30%",
+                "widgets": [
+                  {
+                    "id": "text66b74ba52ae4e",
+                    "type": "text",
+                    "properties": {
+                      "html": "30%"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74ba52ae5d",
+              "description": {
+                "text": "35%",
+                "widgets": [
+                  {
+                    "id": "text66b74ba52ae64",
+                    "type": "text",
+                    "properties": {
+                      "html": "35%"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74ba52ae72",
+              "description": {
+                "text": "40%",
+                "widgets": [
+                  {
+                    "id": "text66b74ba52ae79",
+                    "type": "text",
+                    "properties": {
+                      "html": "40%"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74ba52ae87",
+              "description": {
+                "text": "45%",
+                "widgets": [
+                  {
+                    "id": "text66b74ba52ae8e",
+                    "type": "text",
+                    "properties": {
+                      "html": "45%"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74ba52ae72",
+              "text": "40%",
+              "widgets": [
+                {
+                  "id": "text66b74ba52ae79",
+                  "type": "text",
+                  "properties": {
+                    "html": "40%"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:</p><p style=\"text-align: justify;\"><br></p><p><span>The portfolio has 50% in Stocks and 10% in Mutual Funds. So, the\ndifference is 50% - 10% = 40%. </span></p>\n<span>So, the correct answer is\nC) 40%.</span>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74ba52aee1",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for Question:Given pie chart represents the distribution of different types of investments in a portfolio:If the portfolio wants to keep the total value the same but increase the Bonds to 25% of the total value, which other category(s) should decrease (assuming all others stay the same), and by how much?",
+            "widgets": [
+              {
+                "id": "text66b74ba52aee6",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for Question:</strong></p><p style=\"text-align: justify;\">Given pie chart represents the distribution of different types of investments in a portfolio:</p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/fd797c1543397b819018fc938371ff6c.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 350px;\"></p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">If the portfolio wants to keep the total value the same but increase the Bonds to 25% of the total value, which other category(s) should decrease (assuming all others stay the same), and by how much?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74ba52af2e",
+              "description": {
+                "text": "Decrease Stocks by 5%",
+                "widgets": [
+                  {
+                    "id": "text66b74ba52af35",
+                    "type": "text",
+                    "properties": {
+                      "html": "Decrease Stocks by 5%"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74ba52af44",
+              "description": {
+                "text": "Decrease Real Estate by 5%",
+                "widgets": [
+                  {
+                    "id": "text66b74ba52af4b",
+                    "type": "text",
+                    "properties": {
+                      "html": "Decrease Real Estate by 5%"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74ba52af59",
+              "description": {
+                "text": "Decrease Mutual Funds by 5%",
+                "widgets": [
+                  {
+                    "id": "text66b74ba52af60",
+                    "type": "text",
+                    "properties": {
+                      "html": "Decrease Mutual Funds by 5%"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74ba52af6f",
+              "description": {
+                "text": "Decrease Other by 5%",
+                "widgets": [
+                  {
+                    "id": "text66b74ba52af75",
+                    "type": "text",
+                    "properties": {
+                      "html": "Decrease Other by 5%"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74ba52af2e",
+              "text": "Decrease Stocks by 5%",
+              "widgets": [
+                {
+                  "id": "text66b74ba52af35",
+                  "type": "text",
+                  "properties": {
+                    "html": "Decrease Stocks by 5%"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:</p><p style=\"text-align: justify;\"><br><span>If\nthe Bonds are increased to 25%, that increases the total percentage to 105%. To\nkeep the total at 100%, another category must decrease. In this case, let's say\nStocks decrease from 50% to 45%. So, the correct answer is A) Decrease Stocks\nby 5%.</span><br></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74ba52afcf",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for Question:A pie chart that represents the distribution of different types of energy production in a country is given below:If the total energy production of the country is 200,000 GWh, what is the combined production of Coal and Natural Gas?",
+            "widgets": [
+              {
+                "id": "text66b74ba52afd3",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for Question:</strong></p><p style=\"text-align: justify;\">A pie chart that represents the distribution of different types of energy production in a country is given below:</p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/f56c4399cfa7b191da82615317e7cb90.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 400px;\"></p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">If the total energy production of the country is 200,000 GWh, what is the combined production of Coal and Natural Gas?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74ba52b010",
+              "description": {
+                "text": "90,000 GWh",
+                "widgets": [
+                  {
+                    "id": "text66b74ba52b016",
+                    "type": "text",
+                    "properties": {
+                      "html": "90,000 GWh"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74ba52b025",
+              "description": {
+                "text": "100,000 GWh",
+                "widgets": [
+                  {
+                    "id": "text66b74ba52b02c",
+                    "type": "text",
+                    "properties": {
+                      "html": "100,000 GWh"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74ba52b03a",
+              "description": {
+                "text": "110,000 GWh",
+                "widgets": [
+                  {
+                    "id": "text66b74ba52b041",
+                    "type": "text",
+                    "properties": {
+                      "html": "110,000 GWh"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74ba52b04f",
+              "description": {
+                "text": "120,000 GWh",
+                "widgets": [
+                  {
+                    "id": "text66b74ba52b056",
+                    "type": "text",
+                    "properties": {
+                      "html": "120,000 GWh"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74ba52b03a",
+              "text": "110,000 GWh",
+              "widgets": [
+                {
+                  "id": "text66b74ba52b041",
+                  "type": "text",
+                  "properties": {
+                    "html": "110,000 GWh"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\"><span>The portfolio has 30% in Coal and 25% in Natural Gas. So, the\ncombined production is (30%+25%) * 200,000 GWh = 55% * 200,000 GWh = 110,000 GWh. </span></p><p style=\"text-align: justify;\">\n<span>So, the correct answer is\nC) 110,000 GWh.</span></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74ba52b0b1",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for Question:A pie chart that represents the distribution of different types of energy production in a country is given below:What is the ratio of the energy production from Nuclear to that from Wind?",
+            "widgets": [
+              {
+                "id": "text66b74ba52b0b5",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for Question:</strong></p><p style=\"text-align: justify;\">A pie chart that represents the distribution of different types of energy production in a country is given below:</p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/f56c4399cfa7b191da82615317e7cb90.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 400px;\"></p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">What is the ratio of the energy production from Nuclear to that from Wind?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74ba52b0f2",
+              "description": {
+                "text": "2:1",
+                "widgets": [
+                  {
+                    "id": "text66b74ba52b0f9",
+                    "type": "text",
+                    "properties": {
+                      "html": "2:1"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74ba52b107",
+              "description": {
+                "text": "3:1",
+                "widgets": [
+                  {
+                    "id": "text66b74ba52b10e",
+                    "type": "text",
+                    "properties": {
+                      "html": "3:1"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74ba52b11d",
+              "description": {
+                "text": "5:1",
+                "widgets": [
+                  {
+                    "id": "text66b74ba52b124",
+                    "type": "text",
+                    "properties": {
+                      "html": "5:1"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74ba52b132",
+              "description": {
+                "text": "4:1",
+                "widgets": [
+                  {
+                    "id": "text66b74ba52b139",
+                    "type": "text",
+                    "properties": {
+                      "html": "4:1"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74ba52b132",
+              "text": "4:1",
+              "widgets": [
+                {
+                  "id": "text66b74ba52b139",
+                  "type": "text",
+                  "properties": {
+                    "html": "4:1"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:</p><p style=\"text-align: justify;\"><br></p><p><span>The portfolio has 20% in Nuclear and 5% in Wind. So, the ratio is\n20:5, which simplifies to 4:1. </span></p>\n<span>So, the correct answer is\nD) 4:1.</span>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74ba52b194",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for Question:A pie chart that represents the distribution of different types of energy production in a country is given below:If the energy production from Solar increases by 100%, what percentage of the total energy production will it constitute, assuming the total energy production remains the same?",
+            "widgets": [
+              {
+                "id": "text66b74ba52b198",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for Question:</strong></p><p style=\"text-align: justify;\">A pie chart that represents the distribution of different types of energy production in a country is given below:</p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/f56c4399cfa7b191da82615317e7cb90.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 400px;\"></p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">If the energy production from Solar increases by 100%, what percentage of the total energy production will it constitute, assuming the total energy production remains the same?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74ba52b1d9",
+              "description": {
+                "text": "7%",
+                "widgets": [
+                  {
+                    "id": "text66b74ba52b1e0",
+                    "type": "text",
+                    "properties": {
+                      "html": "7%"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74ba52b1ee",
+              "description": {
+                "text": "8%",
+                "widgets": [
+                  {
+                    "id": "text66b74ba52b1f8",
+                    "type": "text",
+                    "properties": {
+                      "html": "8%"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74ba52b207",
+              "description": {
+                "text": "9%",
+                "widgets": [
+                  {
+                    "id": "text66b74ba52b20d",
+                    "type": "text",
+                    "properties": {
+                      "html": "9%"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74ba52b21c",
+              "description": {
+                "text": "10%",
+                "widgets": [
+                  {
+                    "id": "text66b74ba52b223",
+                    "type": "text",
+                    "properties": {
+                      "html": "10%"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74ba52b21c",
+              "text": "10%",
+              "widgets": [
+                {
+                  "id": "text66b74ba52b223",
+                  "type": "text",
+                  "properties": {
+                    "html": "10%"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\"><span>If the value of Solar increases by 100%, it becomes 5% + 5% = 10% of\nthe total energy production. </span></p><p style=\"text-align: justify;\">\n<span>So, the correct answer is\nD) 10%.</span></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74ba52b27d",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for Question:A pie chart that represents the distribution of different types of energy production in a country is given below:What is the difference between the percentages of energy production from Coal and Hydroelectric?",
+            "widgets": [
+              {
+                "id": "text66b74ba52b282",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for Question:</strong></p><p style=\"text-align: justify;\">A pie chart that represents the distribution of different types of energy production in a country is given below:</p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/f56c4399cfa7b191da82615317e7cb90.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 400px;\"></p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">What is the difference between the percentages of energy production from Coal and Hydroelectric?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74ba52b2bf",
+              "description": {
+                "text": "10%",
+                "widgets": [
+                  {
+                    "id": "text66b74ba52b2c6",
+                    "type": "text",
+                    "properties": {
+                      "html": "10%"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74ba52b2d5",
+              "description": {
+                "text": "15%",
+                "widgets": [
+                  {
+                    "id": "text66b74ba52b2dc",
+                    "type": "text",
+                    "properties": {
+                      "html": "15%"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74ba52b2ea",
+              "description": {
+                "text": "20%",
+                "widgets": [
+                  {
+                    "id": "text66b74ba52b2fb",
+                    "type": "text",
+                    "properties": {
+                      "html": "20%"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74ba52b30a",
+              "description": {
+                "text": "25%",
+                "widgets": [
+                  {
+                    "id": "text66b74ba52b311",
+                    "type": "text",
+                    "properties": {
+                      "html": "25%"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74ba52b2d5",
+              "text": "15%",
+              "widgets": [
+                {
+                  "id": "text66b74ba52b2dc",
+                  "type": "text",
+                  "properties": {
+                    "html": "15%"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:</p><p style=\"text-align: justify;\"><br><span>The\nportfolio has 30% in Coal and 15% in Hydroelectric. So, the difference is 30% -\n15% = 15%. So, the correct answer is B) 15%.</span><br></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74ba52b36c",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for Question:A pie chart that represents the distribution of different types of energy production in a country is given below:If the country wants to keep the total energy production the same but increase the Hydroelectric production to 20% of the total production, which other category(s) should decrease (assuming all others stay the same), and by how much?",
+            "widgets": [
+              {
+                "id": "text66b74ba52b371",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for Question:</strong></p><p style=\"text-align: justify;\">A pie chart that represents the distribution of different types of energy production in a country is given below:</p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/f56c4399cfa7b191da82615317e7cb90.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 400px;\"></p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">If the country wants to keep the total energy production the same but increase the Hydroelectric production to 20% of the total production, which other category(s) should decrease (assuming all others stay the same), and by how much?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74ba52b3ae",
+              "description": {
+                "text": "Decrease Coal by 5%",
+                "widgets": [
+                  {
+                    "id": "text66b74ba52b3b4",
+                    "type": "text",
+                    "properties": {
+                      "html": "Decrease Coal by 5%"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74ba52b3c3",
+              "description": {
+                "text": "Decrease Natural Gas by 5%",
+                "widgets": [
+                  {
+                    "id": "text66b74ba52b3c9",
+                    "type": "text",
+                    "properties": {
+                      "html": "Decrease Natural Gas by 5%"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74ba52b3d8",
+              "description": {
+                "text": "Decrease Nuclear by 5%",
+                "widgets": [
+                  {
+                    "id": "text66b74ba52b3de",
+                    "type": "text",
+                    "properties": {
+                      "html": "Decrease Nuclear by 5%"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74ba52b3ed",
+              "description": {
+                "text": "Decrease Wind by 5%",
+                "widgets": [
+                  {
+                    "id": "text66b74ba52b3f3",
+                    "type": "text",
+                    "properties": {
+                      "html": "Decrease Wind by 5%"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74ba52b3ae",
+              "text": "Decrease Coal by 5%",
+              "widgets": [
+                {
+                  "id": "text66b74ba52b3b4",
+                  "type": "text",
+                  "properties": {
+                    "html": "Decrease Coal by 5%"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\"><span>If the Government Bonds are increased to 25%, that increases the\ntotal percentage to 105%. To keep the total at 100%, another category must\ndecrease. In this case, let's say Coal decreases from 30% to 25%. </span></p><p style=\"text-align: justify;\">\n<span>So, the correct answer is\nA) Decrease Coal by 5%.</span></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        }
+      ]
+    }
+  ],
+  "submitted": true,
+  "updated": true,
+  "retryCount": 4,
+  "inlineFeedback": [],
+  "errors": [],
+  "success": true
+}

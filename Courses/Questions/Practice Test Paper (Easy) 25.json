@@ -1,0 +1,3081 @@
+{
+  "submission": {
+    "anon_id": null,
+    "model": "assessment-submission",
+    "courseTitleId": "aptitude-qs-library",
+    "object_id": "66a1cb66454997f9e607b286",
+    "assessmentId": "66a1cb66454997f9e607b285",
+    "snapshotId": "66bd0df1f6b1a6f8810a6c76",
+    "questions": {
+      "section66a1cb65da4e5": [
+        "mc1721926816126_280",
+        "mc1721927530852_289",
+        "mc1721929871002_298",
+        "mc1721930157775_323",
+        "mc1721930427281_325",
+        "mc1721930744735_339",
+        "mc1721930827318_354",
+        "mc1721930916446_368",
+        "mc1721931007542_385",
+        "mc1721931084959_396"
+      ]
+    },
+    "certificateAnswers": [],
+    "certificateId": null,
+    "questionData": {
+      "mc1721926816126_280": {
+        "deliveredOnTimestamp": 1786440409.619219,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721927530852_289": {
+        "deliveredOnTimestamp": 1786440409.61924,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721929871002_298": {
+        "deliveredOnTimestamp": 1786440409.619253,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721930157775_323": {
+        "deliveredOnTimestamp": 1786440409.619264,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721930427281_325": {
+        "deliveredOnTimestamp": 1786440409.619274,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721930744735_339": {
+        "deliveredOnTimestamp": 1786440409.619284,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721930827318_354": {
+        "deliveredOnTimestamp": 1786440409.619294,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721930916446_368": {
+        "deliveredOnTimestamp": 1786440409.619305,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721931007542_385": {
+        "deliveredOnTimestamp": 1786440409.619315,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721931084959_396": {
+        "deliveredOnTimestamp": 1786440409.619325,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      }
+    },
+    "answers": [
+      {
+        "blockId": "mc1721926816126_280",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721927530852_289",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721929871002_298",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721930157775_323",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721930427281_325",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721930744735_339",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721930827318_354",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721930916446_368",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721931007542_385",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721931084959_396",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      }
+    ],
+    "submittedTimestamp": 1786440409.844818,
+    "status": "submitted",
+    "grading_status": "grading_status_no_grade",
+    "access": "public",
+    "actual_score": null,
+    "score": [],
+    "source": {
+      "type": "unit"
+    },
+    "isDefining": true,
+    "isAdminAutoGradedSubmission": null,
+    "listOfNonConsentedBlocks": [],
+    "created": 1786440409.624559,
+    "modified": 1786440409.941198,
+    "id": "6a7aead9c7b9521b1705a63d",
+    "passed": null
+  },
+  "assessment": {
+    "title": "Practice Test Paper (Easy)",
+    "access": "public",
+    "type": "assessment",
+    "model": "assessmentSnapshot",
+    "description": "Foundational practice test paper containing 10 assessment questions covering Blood Relations.",
+    "isTimed": false,
+    "timerFor": "assessmentTimed",
+    "onTimerExpiration": "autoSubmit",
+    "assessmentTimeLimitInSeconds": 600,
+    "questionTimeLimitInSeconds": 60,
+    "standaloneShareEnabled": null,
+    "customUrl": null,
+    "usesCustomUrl": null,
+    "allowAnonymous": true,
+    "randomizeQuestionOptions": false,
+    "disallowPartialSubmissions": false,
+    "submissionDueDateEnabled": false,
+    "submissionDueDate": 1626257823,
+    "makeFeedbackAvailableAfterDateEnabled": false,
+    "makeFeedbackAvailableAfterDate": 0,
+    "customStylesEnabled": true,
+    "customStyles": {
+      "assessmentPage": {
+        "background": {
+          "type": "color",
+          "colorData": {
+            "code": "",
+            "class": "lw-body-bg"
+          }
+        },
+        "dividers": {
+          "top": {
+            "orientation": "top",
+            "divider": "none"
+          },
+          "bottom": {
+            "orientation": "bottom",
+            "divider": "none"
+          }
+        }
+      },
+      "option": {
+        "radioEffect": "scribble",
+        "checkboxEffect": "scribble",
+        "size": "small"
+      },
+      "assessment": {
+        "transition": "none",
+        "background": {
+          "type": "color",
+          "colorData": {
+            "code": "",
+            "class": ""
+          }
+        },
+        "width": "normal",
+        "timerTemplate": "rectangle"
+      },
+      "linearRating": {
+        "labels": {
+          "size": "small"
+        }
+      },
+      "question": {
+        "description": {
+          "background": {
+            "type": "color",
+            "colorData": {
+              "code": "",
+              "class": ""
+            }
+          },
+          "type": "p",
+          "size": "small"
+        },
+        "answers": {
+          "background": {
+            "type": "color",
+            "colorData": {
+              "code": "",
+              "class": ""
+            }
+          }
+        },
+        "requiredAsterisk": {
+          "colorData": {
+            "code": "#ff0000",
+            "class": ""
+          }
+        },
+        "errorMessages": {
+          "size": "verySmall",
+          "colorData": {
+            "code": "#ff0000",
+            "class": ""
+          }
+        }
+      },
+      "input": {
+        "size": "small",
+        "type": "solidDark"
+      },
+      "textarea": {
+        "size": "small",
+        "type": "solidDark"
+      },
+      "dropdown": {
+        "size": "small",
+        "type": "solidDark"
+      }
+    },
+    "submissionMode": "all",
+    "startingDate": 1626765704,
+    "startingDateEnabled": false,
+    "showOnlyFailedQuestionsOnRetry": false,
+    "retryEnabled": true,
+    "retryOnFailOnly": false,
+    "gradingMethod": null,
+    "maxTries": null,
+    "onlyWrongOnRetake": null,
+    "isAmendable": false,
+    "feedbackShowOnScreen": false,
+    "feedbackDownloadPDF": false,
+    "feedbackShowInline": true,
+    "feedbackQuestionList": "all-questions",
+    "feedbackShowQuestionScore": false,
+    "feedbackShowFeedback": true,
+    "feedbackShowNumbering": false,
+    "feedbackShowSectionTitles": false,
+    "feedbackShowUserAnswers": true,
+    "feedbackShowCorrectAnswers": true,
+    "feedbackShowAnswerCorrectness": true,
+    "displayInlineFeedbackEnabled": true,
+    "displayBackButtonWhenSubmissionPerBlock": true,
+    "feedbackShowSectionResultSummary": false,
+    "askConfirmationBeforeSubmit": false,
+    "hasCustomConfirmationBeforeSubmitText": false,
+    "customConfirmationBeforeSubmitText": "Are you sure you want to submit the questionnaire?",
+    "customConfirmationBeforeSubmitTexts": {
+      "title": "Submit Assessment?",
+      "baseConfirmationMessage": "Are you sure you want to submit the questionnaire?",
+      "unansweredNotice": "You have not answered {X} questions."
+    },
+    "amendResubmissionMinutes": 30,
+    "passingGrade": null,
+    "navigationMode": "per-block",
+    "conditionalBlocks": {
+      "introContent": {
+        "id": "content66a1cb65da416",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66a1cb65da422",
+              "type": "text",
+              "insertedAsWidget": true,
+              "properties": {
+                "html": "Blood Relations PAPER LEVEL-1",
+                "alignment": "center",
+                "customStyle": true,
+                "type": "h2",
+                "size": "normal"
+              }
+            },
+            {
+              "id": "text66a1cb65da437",
+              "type": "text",
+              "properties": {
+                "html": "<div><span style=\"font-size: 1.7rem; letter-spacing: 0rem;\">Self-assess your knowledge. Express yourself and get feedback from our instructors.</span><br></div>",
+                "customStyle": true,
+                "alignment": "center"
+              }
+            },
+            {
+              "id": "spacer66a1cb65da444",
+              "type": "spacer",
+              "properties": {
+                "height": 25,
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            },
+            {
+              "id": "button66a1cb65da453",
+              "type": "button",
+              "properties": {
+                "buttonLabel": "<span>Ready to start</span>",
+                "buttonSize": "normal",
+                "buttonType": "solidBrand",
+                "alignment": "center",
+                "linkData": {
+                  "linkType": "goToFirst"
+                },
+                "iconColorData": {
+                  "code": "",
+                  "class": ""
+                },
+                "iconDisplay": false,
+                "iconSize": 26,
+                "iconClassName": " fas fa-angle-right",
+                "iconPosition": "right"
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "variables": {
+            "conditionalBlocks_introContent_blockData_widgets_0": []
+          }
+        }
+      },
+      "submissionStartingDate": {
+        "id": "content66a1cb65da47b",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66a1cb65da481",
+              "type": "text",
+              "properties": {
+                "html": "Sorry but this assessment hasn't started yet."
+              }
+            },
+            {
+              "id": "date66a1cb65da489",
+              "type": "date",
+              "properties": {
+                "value": ""
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "displayConditions": ["startingDate"]
+        }
+      },
+      "submissionDueDate": {
+        "id": "content66a1cb65da498",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66a1cb65da49d",
+              "type": "text",
+              "properties": {
+                "html": "Sorry but this assessment date is due."
+              }
+            },
+            {
+              "id": "date66a1cb65da4a5",
+              "type": "date",
+              "properties": {
+                "value": ""
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "displayConditions": ["dateIsDue"]
+        }
+      },
+      "outroContent": {
+        "id": "content66a1cb65da4b4",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "userResults66a1cb65da4b9",
+              "type": "userResults",
+              "properties": {
+                "layout": "template2",
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            },
+            {
+              "id": "feedback66a1cb65da4c8",
+              "type": "feedback",
+              "properties": []
+            },
+            {
+              "id": "outroActions66a1cb65da4d0",
+              "type": "outroActions",
+              "properties": {
+                "layout": "",
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true
+        }
+      }
+    },
+    "systemSections": null,
+    "sections": [
+      {
+        "id": "section66a1cb65da4e5",
+        "title": "",
+        "type": "section",
+        "navigationMode": "per-block",
+        "blocks": [
+          {
+            "id": "mc1721926816126_280",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721926816126_279",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">Pointing at a photograph, Rohit tells Mohit that the person in the photograph is your father’s brother’s mother’s only daughter’s husband and is my father. How is Mohit’s father related to Rohit?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721926816126_271",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721926816126_277",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721926816126_281",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721926816126_278",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721926816126_272",
+                        "type": "text",
+                        "properties": {
+                          "html": "Paternal Uncle"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721926816126_273",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721926816126_274",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Cousin</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721926816126_270",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721926816126_276",
+                        "type": "text",
+                        "properties": {
+                          "html": "Matenal Uncle"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721926816126_282",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721926816126_275",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Grandfather</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_0": []
+              }
+            }
+          },
+          {
+            "id": "mc1721927530852_289",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721927530852_294",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">P is R’s husband, Q is R’s mother - in - law. P is M’s child. L is R’s son. Then how is M related to L?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721927530852_293",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721927530852_287",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721927530852_284",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721927530852_285",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721927530852_292",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Father</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721927530852_291",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721927530852_286",
+                        "type": "text",
+                        "properties": {
+                          "html": "Grand Father"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721927530852_283",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721927530852_290",
+                        "type": "text",
+                        "properties": {
+                          "html": "Uncle"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721927530852_295",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721927530852_288",
+                        "type": "text",
+                        "properties": {
+                          "html": "Son"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_1_blockData_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_1": []
+              }
+            }
+          },
+          {
+            "id": "mc1721929871002_298",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721929871002_302",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">If A @ B means A is father of B, \n</p><div style=\"text-align: justify;\">A % B means A is the husband of B, \n</div><div style=\"text-align: justify;\">A $ B means A is the sister of B, \n</div><div style=\"text-align: justify;\">A £ B means A is mother B, \n</div><div style=\"text-align: justify;\">A * B means A is the brother of B, \n</div><div style=\"text-align: justify;\">then which of the following expressions, denotes that T is the niece of P?</div>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721929871002_307",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721929871002_305",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721929871002_303",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721929871002_304",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721929871002_299",
+                        "type": "text",
+                        "properties": {
+                          "html": "Q £ S @ P $ M*T"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721929871002_296",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721929871002_297",
+                        "type": "text",
+                        "properties": {
+                          "html": "P $ Q £ M*T $ S"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721929871002_308",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721929871002_306",
+                        "type": "text",
+                        "properties": {
+                          "html": "T $ S*M $ P"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721929871002_301",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721929871002_300",
+                        "type": "text",
+                        "properties": {
+                          "html": "P £ Q $ M*T $ S"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721929983800_310",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc-option1721929983800_309",
+                        "type": "text",
+                        "properties": {
+                          "html": "None of these"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_2_blockData_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_4_description_widgets_0": [],
+                "sections_0_blocks_2": []
+              }
+            }
+          },
+          {
+            "id": "mc1721930157775_323",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721930157775_315",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">Ayushi’s mother’s sister’s only child is Soham’s brother’s brother - in - law. How could Soham’s brother’s sister’s husband be related to Ayushi?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721930157775_317",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721930157775_319",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721930157775_316",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721930157775_322",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721930157775_314",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Mother</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721930157775_313",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721930157775_320",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Father</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721930157775_312",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721930157775_311",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Cousin</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721930157775_321",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721930157775_318",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Brother</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_3_blockData_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3": []
+              }
+            }
+          },
+          {
+            "id": "mc1721930427281_325",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721930427281_328",
+                    "type": "text",
+                    "properties": {
+                      "html": "This question is based on the following equations. Study it carefully and answer the question.\n<div>A + B means A is the daughter of B\n</div><div>A× B means A is the son of B\n</div><div>A - B means A is the wife of B.\n</div><div>If T-S× B-M, which of the following is not true?</div>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721930427281_326",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721930427281_324",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721930427281_334",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721930427281_333",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721930427281_331",
+                        "type": "text",
+                        "properties": {
+                          "html": "B is mother of S"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721930427281_329",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721930427281_336",
+                        "type": "text",
+                        "properties": {
+                          "html": "M is father of S"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721930427281_330",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721930427281_332",
+                        "type": "text",
+                        "properties": {
+                          "html": "T is daughter of B"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721930427281_327",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721930427281_335",
+                        "type": "text",
+                        "properties": {
+                          "html": "T is daughter - in - law of M."
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_4_blockData_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4": []
+              }
+            }
+          },
+          {
+            "id": "mc1721930744735_339",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721930744735_342",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">In a family of six persons, B is the father of C and E. D is the wife of C. E is the mother of A and F is the daughter of A. How many persons are older than A?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721930744735_345",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721930744735_337",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721930744735_340",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721930744735_341",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721930744735_344",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Five</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721930744735_349",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721930744735_346",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Four</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721930744735_343",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721930744735_338",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Three</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721930744735_347",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721930744735_348",
+                        "type": "text",
+                        "properties": {
+                          "html": "Cannot be determined"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_5_blockData_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5": []
+              }
+            }
+          },
+          {
+            "id": "mc1721930827318_354",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721930827318_355",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">A family consists of 7 members – A, B, C, D, E, F and G. D and E have been married into the family. On Christmas, D gifts her niece G a new bicycle whereas E gifts his nephew F a new football and his father - in - law a new walking stick. How is C related to F?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721930827318_358",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721930827318_356",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721930827318_361",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721930827318_351",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721930827318_357",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Father</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721930827318_359",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721930827318_360",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Uncle</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721930827318_352",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721930827318_362",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Aunt</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721930827318_350",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721930827318_353",
+                        "type": "text",
+                        "properties": {
+                          "html": "Father or Aunt"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_6_blockData_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_6": []
+              }
+            }
+          },
+          {
+            "id": "mc1721930916446_368",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721930916446_369",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">A family has exactly 2 fathers, 2 mothers, 1 brother, 1 daughter in law, 1 sister, 1 daughter, 2 unmarried members and 2 sons.\n</p><div style=\"text-align: justify;\">What is the minimum number of members that the family can have?</div>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721930916446_370",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721930916446_375",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721930916446_365",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721930916446_374",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721930916446_363",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>4</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721930916446_366",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721930916446_367",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>5</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721930916446_364",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721930916446_373",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>6</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721930916446_371",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721930916446_372",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>7</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_7_blockData_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_7": []
+              }
+            }
+          },
+          {
+            "id": "mc1721931007542_385",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721931007542_381",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">There are 7 members in a family. A is the mother of T. C is the husband of P, who is the mother of F. G is the mother of A, who is the wife of F. R is the brother of T. How A is related to R?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721931007542_377",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721931007542_382",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721931007542_383",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721931007542_384",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721931007542_380",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Grandmother</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721931007542_387",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721931007542_386",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Aunt</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721931007542_376",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721931007542_378",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Mother</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721931007542_379",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721931007542_388",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Sister</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_8_blockData_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_8": []
+              }
+            }
+          },
+          {
+            "id": "mc1721931084959_396",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721931084959_393",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">A and B are brothers; C is the sister of A; D is the brother of E; E is the daughter of B. If C is the  daughter of F, then who is F?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721931084959_395",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721931084959_400",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721931084959_398",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721931084959_389",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721931084959_391",
+                        "type": "text",
+                        "properties": {
+                          "html": "Uncle of B&nbsp;"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721931084959_394",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721931084959_397",
+                        "type": "text",
+                        "properties": {
+                          "html": "Father of D"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721931084959_390",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721931084959_401",
+                        "type": "text",
+                        "properties": {
+                          "html": "Father of E"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721931084959_399",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721931084959_392",
+                        "type": "text",
+                        "properties": {
+                          "html": "Grandfather of D"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_9_blockData_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_9": []
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "availabilityStatus": null,
+    "autoNavigationEnabled": false,
+    "displayBackButtonWhenNavigationPerBlock": true,
+    "saveAndResumeLaterEnabled": null,
+    "tagsAddedOnCompletion": [],
+    "tagsAddedOnPass": [],
+    "sendAnonymousSubmissionsToEmailLeads": false,
+    "afterSubmitActionEnabled": null,
+    "afterSubmitActionProperties": null,
+    "showWizardOnNextEdit": false,
+    "revisitAfterSubmissionAction": null,
+    "navigationTemplate": "HorizontalSpacedBetweenNavigationTemplate",
+    "learnerSearchBarEnabled": true,
+    "learnerUnansweredQuestionsEnabled": true,
+    "learnerFavouriteQuestionEnabled": true,
+    "learnerCompletionProgressEnabled": true,
+    "learnerShowIndexOfQuestionsEnabled": false,
+    "learnerTimeNotificationsEnabled": false,
+    "learnerAllowInterruptionsEnabled": true,
+    "learnerAllowInterruptionsTimeoutInMinutes": 30,
+    "learnerReclaimTryOnInterruptionTimeoutEnabled": false,
+    "learnerAskBeforeContinueToSaved": true,
+    "learnerAutoSaveEnabled": null,
+    "spellcheckDisabled": null,
+    "showPartialScoreOnSubmission": true,
+    "deliverableQuestionsSubsetType": "all",
+    "questionRandomizationType": "none",
+    "serveQuestionsBasedOnPreviousSubmission": null,
+    "scoringDisabled": true,
+    "isSelfAssessment": true,
+    "useDefaultCertificateTemplate": null,
+    "certificateTemplate": null,
+    "certificateSocialShare": null,
+    "migrationData": null,
+    "useAssessmentPassingGradeForOpenEndedCorrectness": true,
+    "openEndedCorrectnessPassingGrade": null,
+    "showScorePercentage": null,
+    "showScorePoints": null,
+    "showScoreCorrectAnswers": null,
+    "editorBehaviorSettings": null,
+    "manualReviewEnabled": false,
+    "resultsSummary": {
+      "enabled": true,
+      "showStatusIcon": true,
+      "showStatusText": true,
+      "showScorePercentage": true,
+      "showScorePoints": true,
+      "showScoreCorrectAnswers": true,
+      "showTimeTakenToComplete": true,
+      "showDateSubmitted": true,
+      "showAttemptCount": true
+    },
+    "meta": null,
+    "submissionsCount": 677,
+    "fromMarketplace": null,
+    "aiFeedbackEnabled": null,
+    "numberOfFeedbackQuestions": null,
+    "created": 1721879398.29609,
+    "modified": 1723665905.499873,
+    "contentHash": "8932fa1645860e1b145c116a4a74f4f2f06a41c9fc0726edb025484a71314b12",
+    "id": "66a1cb66454997f9e607b285",
+    "objectType": "assessment",
+    "isEditBlockedDueToSync": false,
+    "variables": {
+      "submission": {
+        "self": {
+          "score": null,
+          "points": null,
+          "total_points": null,
+          "correct_answers": null,
+          "total_questions": 10,
+          "time_spent": "00:00:00",
+          "date_submitted": "11/08/26",
+          "attempt_count": 3,
+          "max_tries": null,
+          "pass_grade": null,
+          "time_spent_seconds": 0,
+          "raw_start_date": 1786440409.624559
+        }
+      },
+      "school": {
+        "name": "Apna College",
+        "url": "www.apnacollege.in",
+        "description": "The most loved coding community of India ❤️"
+      },
+      "user": {
+        "username": "ram",
+        "email": "p4542639@gmail.com",
+        "cf_phonenumber": "7666690798"
+      }
+    }
+  },
+  "reclaimedTry": false,
+  "feedback": [
+    {
+      "title": "",
+      "id": "section66a1cb65da4e5",
+      "blocks": [
+        {
+          "id": "mc1721926816126_280",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Pointing at a photograph, Rohit tells Mohit that the person in the photograph is your father’s brother’s mother’s only daughter’s husband and is my father. How is Mohit’s father related to Rohit?",
+            "widgets": [
+              {
+                "id": "mc1721926816126_279",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">Pointing at a photograph, Rohit tells Mohit that the person in the photograph is your father’s brother’s mother’s only daughter’s husband and is my father. How is Mohit’s father related to Rohit?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721926816126_278",
+              "description": {
+                "text": "Paternal Uncle",
+                "widgets": [
+                  {
+                    "id": "mc1721926816126_272",
+                    "type": "text",
+                    "properties": {
+                      "html": "Paternal Uncle"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721926816126_273",
+              "description": {
+                "text": "Cousin",
+                "widgets": [
+                  {
+                    "id": "mc1721926816126_274",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Cousin</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721926816126_270",
+              "description": {
+                "text": "Matenal Uncle",
+                "widgets": [
+                  {
+                    "id": "mc1721926816126_276",
+                    "type": "text",
+                    "properties": {
+                      "html": "Matenal Uncle"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721926816126_282",
+              "description": {
+                "text": "Grandfather",
+                "widgets": [
+                  {
+                    "id": "mc1721926816126_275",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Grandfather</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721926816126_270",
+              "text": "Matenal Uncle",
+              "widgets": [
+                {
+                  "id": "mc1721926816126_276",
+                  "type": "text",
+                  "properties": {
+                    "html": "Matenal Uncle"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/63c0f28d7a5880797783e7df03ff4907.jpg\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721927530852_289",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "P is R’s husband, Q is R’s mother - in - law. P is M’s child. L is R’s son. Then how is M related to L?",
+            "widgets": [
+              {
+                "id": "mc1721927530852_294",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">P is R’s husband, Q is R’s mother - in - law. P is M’s child. L is R’s son. Then how is M related to L?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721927530852_285",
+              "description": {
+                "text": "Father",
+                "widgets": [
+                  {
+                    "id": "mc1721927530852_292",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Father</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721927530852_291",
+              "description": {
+                "text": "Grand Father",
+                "widgets": [
+                  {
+                    "id": "mc1721927530852_286",
+                    "type": "text",
+                    "properties": {
+                      "html": "Grand Father"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721927530852_283",
+              "description": {
+                "text": "Uncle",
+                "widgets": [
+                  {
+                    "id": "mc1721927530852_290",
+                    "type": "text",
+                    "properties": {
+                      "html": "Uncle"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721927530852_295",
+              "description": {
+                "text": "Son",
+                "widgets": [
+                  {
+                    "id": "mc1721927530852_288",
+                    "type": "text",
+                    "properties": {
+                      "html": "Son"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721927530852_291",
+              "text": "Grand Father",
+              "widgets": [
+                {
+                  "id": "mc1721927530852_286",
+                  "type": "text",
+                  "properties": {
+                    "html": "Grand Father"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/212f3aef7c3726061a66de0b6b1ab8fd.jpg\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721929871002_298",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "If A @ B means A is father of B, A % B means A is the husband of B, A $ B means A is the sister of B, A £ B means A is mother B, A * B means A is the brother of B, then which of the following expressions, denotes that T is the niece of P?",
+            "widgets": [
+              {
+                "id": "mc1721929871002_302",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">If A @ B means A is father of B, \n</p><div style=\"text-align: justify;\">A % B means A is the husband of B, \n</div><div style=\"text-align: justify;\">A $ B means A is the sister of B, \n</div><div style=\"text-align: justify;\">A £ B means A is mother B, \n</div><div style=\"text-align: justify;\">A * B means A is the brother of B, \n</div><div style=\"text-align: justify;\">then which of the following expressions, denotes that T is the niece of P?</div>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721929871002_304",
+              "description": {
+                "text": "Q £ S @ P $ M*T",
+                "widgets": [
+                  {
+                    "id": "mc1721929871002_299",
+                    "type": "text",
+                    "properties": {
+                      "html": "Q £ S @ P $ M*T"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721929871002_296",
+              "description": {
+                "text": "P $ Q £ M*T $ S",
+                "widgets": [
+                  {
+                    "id": "mc1721929871002_297",
+                    "type": "text",
+                    "properties": {
+                      "html": "P $ Q £ M*T $ S"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721929871002_308",
+              "description": {
+                "text": "T $ S*M $ P",
+                "widgets": [
+                  {
+                    "id": "mc1721929871002_306",
+                    "type": "text",
+                    "properties": {
+                      "html": "T $ S*M $ P"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721929871002_301",
+              "description": {
+                "text": "P £ Q $ M*T $ S",
+                "widgets": [
+                  {
+                    "id": "mc1721929871002_300",
+                    "type": "text",
+                    "properties": {
+                      "html": "P £ Q $ M*T $ S"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721929983800_310",
+              "description": {
+                "text": "None of these",
+                "widgets": [
+                  {
+                    "id": "mc-option1721929983800_309",
+                    "type": "text",
+                    "properties": {
+                      "html": "None of these"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721929871002_296",
+              "text": "P $ Q £ M*T $ S",
+              "widgets": [
+                {
+                  "id": "mc1721929871002_297",
+                  "type": "text",
+                  "properties": {
+                    "html": "P $ Q £ M*T $ S"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/c4f32262c00d54037ddcf7cf78468d24.jpg\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721930157775_323",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Ayushi’s mother’s sister’s only child is Soham’s brother’s brother - in - law. How could Soham’s brother’s sister’s husband be related to Ayushi?",
+            "widgets": [
+              {
+                "id": "mc1721930157775_315",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">Ayushi’s mother’s sister’s only child is Soham’s brother’s brother - in - law. How could Soham’s brother’s sister’s husband be related to Ayushi?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721930157775_322",
+              "description": {
+                "text": "Mother",
+                "widgets": [
+                  {
+                    "id": "mc1721930157775_314",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Mother</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721930157775_313",
+              "description": {
+                "text": "Father",
+                "widgets": [
+                  {
+                    "id": "mc1721930157775_320",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Father</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721930157775_312",
+              "description": {
+                "text": "Cousin",
+                "widgets": [
+                  {
+                    "id": "mc1721930157775_311",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Cousin</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721930157775_321",
+              "description": {
+                "text": "Brother",
+                "widgets": [
+                  {
+                    "id": "mc1721930157775_318",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Brother</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721930157775_312",
+              "text": "Cousin",
+              "widgets": [
+                {
+                  "id": "mc1721930157775_311",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>Cousin</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>Soham's brother's sister is Soham's sister too and Soham's sister's husband is Soham's brother-in-law.\n∴ Ayushi's mother's sister's son is Soham's sister's husband.\n<br>∴ Soham's brother-in-law is Ayushi's cousin brother.</p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721930427281_325",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "This question is based on the following equations. Study it carefully and answer the question. A + B means A is the daughter of B A× B means A is the son of B A - B means A is the wife of B. If T-S× B-M, which of the following is not true?",
+            "widgets": [
+              {
+                "id": "mc1721930427281_328",
+                "type": "text",
+                "properties": {
+                  "html": "This question is based on the following equations. Study it carefully and answer the question.\n<div>A + B means A is the daughter of B\n</div><div>A× B means A is the son of B\n</div><div>A - B means A is the wife of B.\n</div><div>If T-S× B-M, which of the following is not true?</div>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721930427281_333",
+              "description": {
+                "text": "B is mother of S",
+                "widgets": [
+                  {
+                    "id": "mc1721930427281_331",
+                    "type": "text",
+                    "properties": {
+                      "html": "B is mother of S"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721930427281_329",
+              "description": {
+                "text": "M is father of S",
+                "widgets": [
+                  {
+                    "id": "mc1721930427281_336",
+                    "type": "text",
+                    "properties": {
+                      "html": "M is father of S"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721930427281_330",
+              "description": {
+                "text": "T is daughter of B",
+                "widgets": [
+                  {
+                    "id": "mc1721930427281_332",
+                    "type": "text",
+                    "properties": {
+                      "html": "T is daughter of B"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721930427281_327",
+              "description": {
+                "text": "T is daughter - in - law of M.",
+                "widgets": [
+                  {
+                    "id": "mc1721930427281_335",
+                    "type": "text",
+                    "properties": {
+                      "html": "T is daughter - in - law of M."
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721930427281_330",
+              "text": "T is daughter of B",
+              "widgets": [
+                {
+                  "id": "mc1721930427281_332",
+                  "type": "text",
+                  "properties": {
+                    "html": "T is daughter of B"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/9b136ffb8684b79fcb859143a34de211.jpg\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721930744735_339",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "In a family of six persons, B is the father of C and E. D is the wife of C. E is the mother of A and F is the daughter of A. How many persons are older than A?",
+            "widgets": [
+              {
+                "id": "mc1721930744735_342",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">In a family of six persons, B is the father of C and E. D is the wife of C. E is the mother of A and F is the daughter of A. How many persons are older than A?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721930744735_341",
+              "description": {
+                "text": "Five",
+                "widgets": [
+                  {
+                    "id": "mc1721930744735_344",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Five</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721930744735_349",
+              "description": {
+                "text": "Four",
+                "widgets": [
+                  {
+                    "id": "mc1721930744735_346",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Four</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721930744735_343",
+              "description": {
+                "text": "Three",
+                "widgets": [
+                  {
+                    "id": "mc1721930744735_338",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Three</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721930744735_347",
+              "description": {
+                "text": "Cannot be determined",
+                "widgets": [
+                  {
+                    "id": "mc1721930744735_348",
+                    "type": "text",
+                    "properties": {
+                      "html": "Cannot be determined"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721930744735_343",
+              "text": "Three",
+              "widgets": [
+                {
+                  "id": "mc1721930744735_338",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>Three</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/9ff6825bcf6926d8ef2f7183d8c98659.jpg\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721930827318_354",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "A family consists of 7 members – A, B, C, D, E, F and G. D and E have been married into the family. On Christmas, D gifts her niece G a new bicycle whereas E gifts his nephew F a new football and his father - in - law a new walking stick. How is C related to F?",
+            "widgets": [
+              {
+                "id": "mc1721930827318_355",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">A family consists of 7 members – A, B, C, D, E, F and G. D and E have been married into the family. On Christmas, D gifts her niece G a new bicycle whereas E gifts his nephew F a new football and his father - in - law a new walking stick. How is C related to F?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721930827318_351",
+              "description": {
+                "text": "Father",
+                "widgets": [
+                  {
+                    "id": "mc1721930827318_357",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Father</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721930827318_359",
+              "description": {
+                "text": "Uncle",
+                "widgets": [
+                  {
+                    "id": "mc1721930827318_360",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Uncle</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721930827318_352",
+              "description": {
+                "text": "Aunt",
+                "widgets": [
+                  {
+                    "id": "mc1721930827318_362",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Aunt</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721930827318_350",
+              "description": {
+                "text": "Father or Aunt",
+                "widgets": [
+                  {
+                    "id": "mc1721930827318_353",
+                    "type": "text",
+                    "properties": {
+                      "html": "Father or Aunt"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721930827318_350",
+              "text": "Father or Aunt",
+              "widgets": [
+                {
+                  "id": "mc1721930827318_353",
+                  "type": "text",
+                  "properties": {
+                    "html": "Father or Aunt"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/d1e6df2c75d47092a753fe3ce47cc9fb.jpg\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721930916446_368",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "A family has exactly 2 fathers, 2 mothers, 1 brother, 1 daughter in law, 1 sister, 1 daughter, 2 unmarried members and 2 sons. What is the minimum number of members that the family can have?",
+            "widgets": [
+              {
+                "id": "mc1721930916446_369",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">A family has exactly 2 fathers, 2 mothers, 1 brother, 1 daughter in law, 1 sister, 1 daughter, 2 unmarried members and 2 sons.\n</p><div style=\"text-align: justify;\">What is the minimum number of members that the family can have?</div>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721930916446_374",
+              "description": {
+                "text": "4",
+                "widgets": [
+                  {
+                    "id": "mc1721930916446_363",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>4</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721930916446_366",
+              "description": {
+                "text": "5",
+                "widgets": [
+                  {
+                    "id": "mc1721930916446_367",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>5</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721930916446_364",
+              "description": {
+                "text": "6",
+                "widgets": [
+                  {
+                    "id": "mc1721930916446_373",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>6</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721930916446_371",
+              "description": {
+                "text": "7",
+                "widgets": [
+                  {
+                    "id": "mc1721930916446_372",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>7</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721930916446_364",
+              "text": "6",
+              "widgets": [
+                {
+                  "id": "mc1721930916446_373",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>6</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/56aaa4136aae9da37ff71f61e7979599.jpg\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721931007542_385",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "There are 7 members in a family. A is the mother of T. C is the husband of P, who is the mother of F. G is the mother of A, who is the wife of F. R is the brother of T. How A is related to R?",
+            "widgets": [
+              {
+                "id": "mc1721931007542_381",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">There are 7 members in a family. A is the mother of T. C is the husband of P, who is the mother of F. G is the mother of A, who is the wife of F. R is the brother of T. How A is related to R?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721931007542_384",
+              "description": {
+                "text": "Grandmother",
+                "widgets": [
+                  {
+                    "id": "mc1721931007542_380",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Grandmother</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721931007542_387",
+              "description": {
+                "text": "Aunt",
+                "widgets": [
+                  {
+                    "id": "mc1721931007542_386",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Aunt</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721931007542_376",
+              "description": {
+                "text": "Mother",
+                "widgets": [
+                  {
+                    "id": "mc1721931007542_378",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Mother</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721931007542_379",
+              "description": {
+                "text": "Sister",
+                "widgets": [
+                  {
+                    "id": "mc1721931007542_388",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Sister</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721931007542_376",
+              "text": "Mother",
+              "widgets": [
+                {
+                  "id": "mc1721931007542_378",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>Mother</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/33cf2942f02abe98e84899db38ae73aa.jpg\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721931084959_396",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "A and B are brothers; C is the sister of A; D is the brother of E; E is the daughter of B. If C is the daughter of F, then who is F?",
+            "widgets": [
+              {
+                "id": "mc1721931084959_393",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">A and B are brothers; C is the sister of A; D is the brother of E; E is the daughter of B. If C is the  daughter of F, then who is F?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721931084959_389",
+              "description": {
+                "text": "Uncle of B",
+                "widgets": [
+                  {
+                    "id": "mc1721931084959_391",
+                    "type": "text",
+                    "properties": {
+                      "html": "Uncle of B&nbsp;"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721931084959_394",
+              "description": {
+                "text": "Father of D",
+                "widgets": [
+                  {
+                    "id": "mc1721931084959_397",
+                    "type": "text",
+                    "properties": {
+                      "html": "Father of D"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721931084959_390",
+              "description": {
+                "text": "Father of E",
+                "widgets": [
+                  {
+                    "id": "mc1721931084959_401",
+                    "type": "text",
+                    "properties": {
+                      "html": "Father of E"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721931084959_399",
+              "description": {
+                "text": "Grandfather of D",
+                "widgets": [
+                  {
+                    "id": "mc1721931084959_392",
+                    "type": "text",
+                    "properties": {
+                      "html": "Grandfather of D"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721931084959_399",
+              "text": "Grandfather of D",
+              "widgets": [
+                {
+                  "id": "mc1721931084959_392",
+                  "type": "text",
+                  "properties": {
+                    "html": "Grandfather of D"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/2405a4982b27fd1c024bdc8bb09c052c.jpg\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        }
+      ]
+    }
+  ],
+  "submitted": true,
+  "updated": true,
+  "retryCount": 3,
+  "inlineFeedback": [],
+  "errors": [],
+  "success": true
+}

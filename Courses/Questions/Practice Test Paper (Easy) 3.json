@@ -1,0 +1,3199 @@
+{
+  "submission": {
+    "anon_id": null,
+    "model": "assessment-submission",
+    "courseTitleId": "aptitude-qs-library",
+    "object_id": "66a0a94583ccbb8b8b02d4d6",
+    "assessmentId": "66a0a94583ccbb8b8b02d4d5",
+    "snapshotId": "66bcd6b26cc5677b370b60c5",
+    "questions": {
+      "section66a0a94496f37": [
+        "mc1721831956669_271",
+        "mc1721832070870_285",
+        "mc1721832141973_307",
+        "mc1721832275790_314",
+        "mcImage1721832497797_347",
+        "mc1721832819396_355",
+        "mc1721832992997_367",
+        "mc1721833108293_384",
+        "mc1721833192485_400",
+        "mc1721833290517_407"
+      ]
+    },
+    "certificateAnswers": [],
+    "certificateId": null,
+    "questionData": {
+      "mc1721831956669_271": {
+        "deliveredOnTimestamp": 1786440368.047326,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721832070870_285": {
+        "deliveredOnTimestamp": 1786440368.047355,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721832141973_307": {
+        "deliveredOnTimestamp": 1786440368.047374,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721832275790_314": {
+        "deliveredOnTimestamp": 1786440368.047404,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mcImage1721832497797_347": {
+        "deliveredOnTimestamp": 1786440368.04742,
+        "blockType": "mcImage",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721832819396_355": {
+        "deliveredOnTimestamp": 1786440368.047435,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721832992997_367": {
+        "deliveredOnTimestamp": 1786440368.047451,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721833108293_384": {
+        "deliveredOnTimestamp": 1786440368.047466,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721833192485_400": {
+        "deliveredOnTimestamp": 1786440368.047481,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721833290517_407": {
+        "deliveredOnTimestamp": 1786440368.047496,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      }
+    },
+    "answers": [
+      {
+        "blockId": "mc1721831956669_271",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721832070870_285",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721832141973_307",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721832275790_314",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mcImage1721832497797_347",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721832819396_355",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721832992997_367",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721833108293_384",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721833192485_400",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721833290517_407",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      }
+    ],
+    "submittedTimestamp": 1786440368.27207,
+    "status": "submitted",
+    "grading_status": "grading_status_no_grade",
+    "access": "public",
+    "actual_score": null,
+    "score": [],
+    "source": {
+      "type": "unit"
+    },
+    "isDefining": true,
+    "isAdminAutoGradedSubmission": null,
+    "listOfNonConsentedBlocks": [],
+    "created": 1786440368.053118,
+    "modified": 1786440368.363203,
+    "id": "6a7aeab028538283f304f5a4",
+    "passed": null
+  },
+  "assessment": {
+    "title": "Practice Test Paper (Easy)",
+    "access": "public",
+    "type": "assessment",
+    "model": "assessmentSnapshot",
+    "description": "Foundational practice test paper containing 10 assessment questions covering Percentages, Profit, Loss & Discounts, Ratios & Proportions.",
+    "isTimed": false,
+    "timerFor": "assessmentTimed",
+    "onTimerExpiration": "autoSubmit",
+    "assessmentTimeLimitInSeconds": 600,
+    "questionTimeLimitInSeconds": 60,
+    "standaloneShareEnabled": null,
+    "customUrl": null,
+    "usesCustomUrl": null,
+    "allowAnonymous": true,
+    "randomizeQuestionOptions": false,
+    "disallowPartialSubmissions": false,
+    "submissionDueDateEnabled": false,
+    "submissionDueDate": 1626257823,
+    "makeFeedbackAvailableAfterDateEnabled": false,
+    "makeFeedbackAvailableAfterDate": 0,
+    "customStylesEnabled": true,
+    "customStyles": {
+      "assessmentPage": {
+        "background": {
+          "type": "color",
+          "colorData": {
+            "code": "",
+            "class": "lw-body-bg"
+          }
+        },
+        "dividers": {
+          "top": {
+            "orientation": "top",
+            "divider": "none"
+          },
+          "bottom": {
+            "orientation": "bottom",
+            "divider": "none"
+          }
+        }
+      },
+      "option": {
+        "radioEffect": "scribble",
+        "checkboxEffect": "scribble",
+        "size": "small"
+      },
+      "assessment": {
+        "transition": "none",
+        "background": {
+          "type": "color",
+          "colorData": {
+            "code": "",
+            "class": ""
+          }
+        },
+        "width": "normal",
+        "timerTemplate": "rectangle"
+      },
+      "linearRating": {
+        "labels": {
+          "size": "small"
+        }
+      },
+      "question": {
+        "description": {
+          "background": {
+            "type": "color",
+            "colorData": {
+              "code": "",
+              "class": ""
+            }
+          },
+          "type": "p",
+          "size": "small"
+        },
+        "answers": {
+          "background": {
+            "type": "color",
+            "colorData": {
+              "code": "",
+              "class": ""
+            }
+          }
+        },
+        "requiredAsterisk": {
+          "colorData": {
+            "code": "#ff0000",
+            "class": ""
+          }
+        },
+        "errorMessages": {
+          "size": "verySmall",
+          "colorData": {
+            "code": "#ff0000",
+            "class": ""
+          }
+        }
+      },
+      "input": {
+        "size": "small",
+        "type": "solidDark"
+      },
+      "textarea": {
+        "size": "small",
+        "type": "solidDark"
+      },
+      "dropdown": {
+        "size": "small",
+        "type": "solidDark"
+      }
+    },
+    "submissionMode": "all",
+    "startingDate": 1626765704,
+    "startingDateEnabled": false,
+    "showOnlyFailedQuestionsOnRetry": false,
+    "retryEnabled": true,
+    "retryOnFailOnly": false,
+    "gradingMethod": null,
+    "maxTries": null,
+    "onlyWrongOnRetake": null,
+    "isAmendable": false,
+    "feedbackShowOnScreen": false,
+    "feedbackDownloadPDF": false,
+    "feedbackShowInline": true,
+    "feedbackQuestionList": "all-questions",
+    "feedbackShowQuestionScore": false,
+    "feedbackShowFeedback": true,
+    "feedbackShowNumbering": false,
+    "feedbackShowSectionTitles": false,
+    "feedbackShowUserAnswers": true,
+    "feedbackShowCorrectAnswers": true,
+    "feedbackShowAnswerCorrectness": true,
+    "displayInlineFeedbackEnabled": true,
+    "displayBackButtonWhenSubmissionPerBlock": true,
+    "feedbackShowSectionResultSummary": false,
+    "askConfirmationBeforeSubmit": false,
+    "hasCustomConfirmationBeforeSubmitText": false,
+    "customConfirmationBeforeSubmitText": "Are you sure you want to submit the questionnaire?",
+    "customConfirmationBeforeSubmitTexts": {
+      "title": "Submit Assessment?",
+      "baseConfirmationMessage": "Are you sure you want to submit the questionnaire?",
+      "unansweredNotice": "You have not answered {X} questions."
+    },
+    "amendResubmissionMinutes": 30,
+    "passingGrade": null,
+    "navigationMode": "per-block",
+    "conditionalBlocks": {
+      "introContent": {
+        "id": "content66a0a94496e1e",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66a0a94496e2d",
+              "type": "text",
+              "insertedAsWidget": true,
+              "properties": {
+                "html": "Profit and Loss PAPER LEVEL-1",
+                "alignment": "center",
+                "customStyle": true,
+                "type": "h2",
+                "size": "normal"
+              }
+            },
+            {
+              "id": "text66a0a94496e49",
+              "type": "text",
+              "properties": {
+                "html": "<div><span style=\"font-size: 1.7rem; letter-spacing: 0rem;\">Self-assess your knowledge. Express yourself and get feedback from our instructors.</span><br></div>",
+                "customStyle": true,
+                "alignment": "center"
+              }
+            },
+            {
+              "id": "spacer66a0a94496e5b",
+              "type": "spacer",
+              "properties": {
+                "height": 25,
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            },
+            {
+              "id": "button66a0a94496e70",
+              "type": "button",
+              "properties": {
+                "buttonLabel": "<span>Ready to start</span>",
+                "buttonSize": "normal",
+                "buttonType": "solidBrand",
+                "alignment": "center",
+                "linkData": {
+                  "linkType": "goToFirst"
+                },
+                "iconColorData": {
+                  "code": "",
+                  "class": ""
+                },
+                "iconDisplay": false,
+                "iconSize": 26,
+                "iconClassName": " fas fa-angle-right",
+                "iconPosition": "right"
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "variables": {
+            "conditionalBlocks_introContent_blockData_widgets_0": []
+          }
+        }
+      },
+      "submissionStartingDate": {
+        "id": "content66a0a94496ea5",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66a0a94496ead",
+              "type": "text",
+              "properties": {
+                "html": "Sorry but this assessment hasn't started yet."
+              }
+            },
+            {
+              "id": "date66a0a94496eb9",
+              "type": "date",
+              "properties": {
+                "value": ""
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "displayConditions": ["startingDate"]
+        }
+      },
+      "submissionDueDate": {
+        "id": "content66a0a94496ecd",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66a0a94496ed4",
+              "type": "text",
+              "properties": {
+                "html": "Sorry but this assessment date is due."
+              }
+            },
+            {
+              "id": "date66a0a94496edf",
+              "type": "date",
+              "properties": {
+                "value": ""
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "displayConditions": ["dateIsDue"]
+        }
+      },
+      "outroContent": {
+        "id": "content66a0a94496ef4",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "userResults66a0a94496efb",
+              "type": "userResults",
+              "properties": {
+                "layout": "template2",
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            },
+            {
+              "id": "feedback66a0a94496f10",
+              "type": "feedback",
+              "properties": []
+            },
+            {
+              "id": "outroActions66a0a94496f1b",
+              "type": "outroActions",
+              "properties": {
+                "layout": "",
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true
+        }
+      }
+    },
+    "systemSections": null,
+    "sections": [
+      {
+        "id": "section66a0a94496f37",
+        "title": "",
+        "type": "section",
+        "navigationMode": "per-block",
+        "blocks": [
+          {
+            "id": "mc1721831956669_271",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721831956669_278",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">A merchant bought some clay sculptures for ₹10000. He sold half of the goods at a profit of 10%. At what percent profit should be sell the remaining goods so as to earn an overall profit of 20% ?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721831956669_282",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721831956669_281",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721831956669_270",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721831956669_273",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721831956669_276",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>20%</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721831956669_275",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721831956669_272",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>30%</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721831956669_279",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721831956669_280",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>40%</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721831956669_277",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721831956669_274",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>35%</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_0": []
+              }
+            }
+          },
+          {
+            "id": "mc1721832070870_285",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721832070870_288",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">A shopkeeper sells an item for Rs 50 and incurred loss of 20%. At what price (in Rs) should he sell it to gain a profit of 20% ?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721832070870_286",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721832070870_293",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721832070870_283",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721832070870_292",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721832070870_287",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>62.5</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721832070870_290",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721832070870_284",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>60</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721832070870_294",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721832070870_289",
+                        "type": "text",
+                        "properties": {
+                          "html": "75&nbsp;"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721832070870_291",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721832070870_295",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>72⋅5</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_1_blockData_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_1": []
+              }
+            }
+          },
+          {
+            "id": "mc1721832141973_307",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721832141973_297",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">The cost price of 12 drones is equal to the selling price of 20 bikes and the cost price of 12 bikes is equal to the selling price of 2 drones. The profit percent on the selling of 1 drone and one bike together is equal to 50%. Find the profit percent on selling 1 bike.</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721832141973_298",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721832141973_306",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721832141973_301",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721832141973_308",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721832141973_302",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>140%</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721832141973_296",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721832141973_299",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>200%</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721832141973_305",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721832141973_300",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>220%</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721832141973_303",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721832141973_304",
+                        "type": "text",
+                        "properties": {
+                          "html": "None of these"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_2_blockData_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_2": []
+              }
+            }
+          },
+          {
+            "id": "mc1721832275790_314",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721832275790_319",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">A vegetable vendor uses an 1100gm scale to purchase 1 kg of vegetable and uses a 900gm scale to sell off 1 kg of vegetable. If he decides to give 10% cash discount, then find the overall profit percentage?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721832275790_312",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721832275790_311",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721832275790_317",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721832275790_321",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721832275790_313",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>10%</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721832275790_318",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721832275790_320",
+                        "type": "text",
+                        "properties": {
+                          "html": "&nbsp;12%"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721832275790_315",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721832275790_310",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>15%</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721832275790_309",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721832275790_316",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>18%</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_3_blockData_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3": []
+              }
+            }
+          },
+          {
+            "id": "mcImage1721832497797_347",
+            "type": "mcImage",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mcImage1721832497797_335",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">A seller uses 750gm in place of one kg to sell his goods. Find his actual percentage profit when he sells his goals on 5% gain on cost price.</p>"
+                    }
+                  }
+                ]
+              },
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-image-option1721832497797_348",
+                  "type": "mc-image-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mcImage1721832497797_345",
+                        "type": "image",
+                        "properties": {
+                          "hasLightbox": false,
+                          "imageData": {
+                            "title": "Screenshot_2024-07-25_170323-removebg-preview",
+                            "tags": [],
+                            "width": 138,
+                            "height": 59,
+                            "size": 5,
+                            "name": "/67250362c540d449238451c7894b7014.png",
+                            "access": "public",
+                            "created": 1721907239.8434,
+                            "modified": 1721907239.8434,
+                            "user": {
+                              "username": "Bappa AK Team"
+                            },
+                            "id": "66a23827875ecabf450e4115",
+                            "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/67250362c540d449238451c7894b7014.png",
+                            "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/67250362c540d449238451c7894b7014.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                            "modifiedF": "2024-07-25 14:33:59"
+                          },
+                          "height": 16,
+                          "width": 38
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-image-option1721832497797_342",
+                  "type": "mc-image-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mcImage1721832497797_338",
+                        "type": "image",
+                        "properties": {
+                          "hasLightbox": false,
+                          "imageData": {
+                            "title": "Screenshot 2024-07-25 170053",
+                            "tags": [],
+                            "width": 64,
+                            "height": 32,
+                            "size": 2,
+                            "name": "/bee025cdabe7888a3a78fb56e116e5cb.png",
+                            "access": "public",
+                            "created": 1721907066.989659,
+                            "modified": 1721907066.989659,
+                            "user": {
+                              "username": "Bappa AK Team"
+                            },
+                            "id": "66a2377a48ebe1f5ee0d5d67",
+                            "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/bee025cdabe7888a3a78fb56e116e5cb.png",
+                            "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/bee025cdabe7888a3a78fb56e116e5cb.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                            "modifiedF": "2024-07-25 14:31:06"
+                          },
+                          "height": 18,
+                          "width": 36,
+                          "alt": ""
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-image-option1721832497797_344",
+                  "type": "mc-image-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mcImage1721832497797_341",
+                        "type": "image",
+                        "properties": {
+                          "hasLightbox": false,
+                          "imageData": {
+                            "title": "Screenshot 2024-07-25 165932",
+                            "tags": [],
+                            "width": 106,
+                            "height": 47,
+                            "size": 2,
+                            "name": "/a06bbb3b5fc1dd33682cf0bdf897fae5.png",
+                            "access": "public",
+                            "created": 1721906982.862205,
+                            "modified": 1721906982.862205,
+                            "user": {
+                              "username": "Bappa AK Team"
+                            },
+                            "id": "66a237267e53b4818f0704e6",
+                            "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/a06bbb3b5fc1dd33682cf0bdf897fae5.png",
+                            "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/a06bbb3b5fc1dd33682cf0bdf897fae5.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                            "modifiedF": "2024-07-25 14:29:42"
+                          },
+                          "height": 28,
+                          "width": 65
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-image-option1721832497797_339",
+                  "type": "mc-image-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mcImage1721832497797_336",
+                        "type": "image",
+                        "properties": {
+                          "hasLightbox": false,
+                          "imageData": {
+                            "title": "Screenshot 2024-07-25 165754",
+                            "tags": [],
+                            "width": 91,
+                            "height": 46,
+                            "size": 2,
+                            "name": "/58a4fdbb83780d701fe71faea0d51679.png",
+                            "access": "public",
+                            "created": 1721906952.846503,
+                            "modified": 1721906952.846503,
+                            "user": {
+                              "username": "Bappa AK Team"
+                            },
+                            "id": "66a237084660a8c92705dd2b",
+                            "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/58a4fdbb83780d701fe71faea0d51679.png",
+                            "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/58a4fdbb83780d701fe71faea0d51679.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                            "modifiedF": "2024-07-25 14:29:12"
+                          },
+                          "height": 28,
+                          "width": 56
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "optionNumbering": "none",
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_4_blockData_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_0_description_widgets_1": [],
+                "sections_0_blocks_4_blockData_options_1_description_widgets_1": [],
+                "sections_0_blocks_4_blockData_options_2_description_widgets_1": [],
+                "sections_0_blocks_4_blockData_options_3_description_widgets_1": [],
+                "sections_0_blocks_4": []
+              }
+            }
+          },
+          {
+            "id": "mc1721832819396_355",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721832819396_363",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">A trader gives a discount of 50% and sells it at the cost price. By how much % did he mark up the cost price of the article?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721832819396_357",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721832819396_354",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721832819396_362",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721832819396_356",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721832819396_365",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>50%</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721832819396_364",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721832819396_358",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>100%</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721832819396_353",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721832819396_361",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>75%</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721832819396_359",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721832819396_360",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>CND</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_5_blockData_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5": []
+              }
+            }
+          },
+          {
+            "id": "mc1721832992997_367",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721832992997_376",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">'Ankit' bought an article for Rs 350 and sold it to 'Bhumika' at a profit of 24%, 'Bhumika' sold the article to 'chari' at a profit of 25%. If ' C ' sold the article to 'Deepak' at a loss of Rs 22.5 , then find the price at which 'Deepak' bought the article.</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721832992997_366",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721832992997_377",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721832992997_375",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721832992997_369",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721832992997_370",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Rs⁡. 525.5</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721832992997_378",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721832992997_368",
+                        "type": "text",
+                        "properties": {
+                          "html": "Rs. 624"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721832992997_372",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721832992997_373",
+                        "type": "text",
+                        "properties": {
+                          "html": "Rs 490"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721832992997_371",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721832992997_374",
+                        "type": "text",
+                        "properties": {
+                          "html": "Rs. 520"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_6_blockData_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_6": []
+              }
+            }
+          },
+          {
+            "id": "mc1721833108293_384",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721833108293_380",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">A shopkeeper sells toffees at 40 toffees for ₹ 10 and make a profit of 40%. How many toffees did he buy for ₹10?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721833108293_390",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721833108293_389",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721833108293_391",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721833108293_381",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721833108293_382",
+                        "type": "text",
+                        "properties": {
+                          "html": "24"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721833108293_383",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721833108293_388",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>36</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721833108293_387",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721833108293_386",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>48</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721833108293_385",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721833108293_379",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>56</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_7_blockData_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_7": []
+              }
+            }
+          },
+          {
+            "id": "mc1721833192485_400",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721833192485_392",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">A contractor thinks by doing a work he will earn rupees 8400. In the earning there is 5.% profit, labouring and raw material are included. The ratio between raw material and labouring is 3:7. When he starts working he finds that the cost of raw material and labouring is increased by 10% and 15% respectively. Now find his loss %&nbsp;</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721833192485_401",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721833192485_399",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721833192485_395",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721833192485_397",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721833192485_393",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>6.5%</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721833192485_394",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721833192485_403",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>7%</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721833192485_396",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721833192485_402",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>7.49%</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721833192485_398",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721833192485_404",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>8.3%</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_8_blockData_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_8": []
+              }
+            }
+          },
+          {
+            "id": "mc1721833290517_407",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721833290517_412",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">Single copy of a book costs $16, but purchasers of 20 copies or more pay only $13 per copy. How many values of 'n' (0&lt;n&gt;20) exist for which one could buy 20 copies at a cost Which is lower than the cost in which one should could buy exactly 'n' copies of that book?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721833290517_411",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721833290517_408",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721833290517_416",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721833290517_414",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721833290517_417",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>3</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721833290517_415",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721833290517_409",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>4</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721833290517_413",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721833290517_410",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>2</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721833290517_405",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721833290517_406",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>5</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_9_blockData_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_9": []
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "availabilityStatus": null,
+    "autoNavigationEnabled": false,
+    "displayBackButtonWhenNavigationPerBlock": true,
+    "saveAndResumeLaterEnabled": null,
+    "tagsAddedOnCompletion": [],
+    "tagsAddedOnPass": [],
+    "sendAnonymousSubmissionsToEmailLeads": false,
+    "afterSubmitActionEnabled": null,
+    "afterSubmitActionProperties": null,
+    "showWizardOnNextEdit": false,
+    "revisitAfterSubmissionAction": null,
+    "navigationTemplate": "HorizontalSpacedBetweenNavigationTemplate",
+    "learnerSearchBarEnabled": true,
+    "learnerUnansweredQuestionsEnabled": true,
+    "learnerFavouriteQuestionEnabled": true,
+    "learnerCompletionProgressEnabled": true,
+    "learnerShowIndexOfQuestionsEnabled": false,
+    "learnerTimeNotificationsEnabled": false,
+    "learnerAllowInterruptionsEnabled": true,
+    "learnerAllowInterruptionsTimeoutInMinutes": 30,
+    "learnerReclaimTryOnInterruptionTimeoutEnabled": false,
+    "learnerAskBeforeContinueToSaved": true,
+    "learnerAutoSaveEnabled": null,
+    "spellcheckDisabled": null,
+    "showPartialScoreOnSubmission": true,
+    "deliverableQuestionsSubsetType": "all",
+    "questionRandomizationType": "none",
+    "serveQuestionsBasedOnPreviousSubmission": null,
+    "scoringDisabled": true,
+    "isSelfAssessment": true,
+    "useDefaultCertificateTemplate": null,
+    "certificateTemplate": null,
+    "certificateSocialShare": null,
+    "migrationData": null,
+    "useAssessmentPassingGradeForOpenEndedCorrectness": true,
+    "openEndedCorrectnessPassingGrade": null,
+    "showScorePercentage": null,
+    "showScorePoints": null,
+    "showScoreCorrectAnswers": null,
+    "editorBehaviorSettings": null,
+    "manualReviewEnabled": false,
+    "resultsSummary": {
+      "enabled": true,
+      "showStatusIcon": true,
+      "showStatusText": true,
+      "showScorePercentage": true,
+      "showScorePoints": true,
+      "showScoreCorrectAnswers": true,
+      "showTimeTakenToComplete": true,
+      "showDateSubmitted": true,
+      "showAttemptCount": true
+    },
+    "meta": null,
+    "submissionsCount": 839,
+    "fromMarketplace": null,
+    "aiFeedbackEnabled": null,
+    "numberOfFeedbackQuestions": null,
+    "created": 1721805125.005739,
+    "modified": 1723651762.114266,
+    "contentHash": "b2306adefbec9a0164a388f75ae3b49afaed2ea12e12c7691c9ec9690f76a65b",
+    "id": "66a0a94583ccbb8b8b02d4d5",
+    "objectType": "assessment",
+    "isEditBlockedDueToSync": false,
+    "variables": {
+      "submission": {
+        "self": {
+          "score": null,
+          "points": null,
+          "total_points": null,
+          "correct_answers": null,
+          "total_questions": 10,
+          "time_spent": "00:00:00",
+          "date_submitted": "11/08/26",
+          "attempt_count": 3,
+          "max_tries": null,
+          "pass_grade": null,
+          "time_spent_seconds": 0,
+          "raw_start_date": 1786440368.053118
+        }
+      },
+      "school": {
+        "name": "Apna College",
+        "url": "www.apnacollege.in",
+        "description": "The most loved coding community of India ❤️"
+      },
+      "user": {
+        "username": "ram",
+        "email": "p4542639@gmail.com",
+        "cf_phonenumber": "7666690798"
+      }
+    }
+  },
+  "reclaimedTry": false,
+  "feedback": [
+    {
+      "title": "",
+      "id": "section66a0a94496f37",
+      "blocks": [
+        {
+          "id": "mc1721831956669_271",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "A merchant bought some clay sculptures for ₹10000. He sold half of the goods at a profit of 10%. At what percent profit should be sell the remaining goods so as to earn an overall profit of 20% ?",
+            "widgets": [
+              {
+                "id": "mc1721831956669_278",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">A merchant bought some clay sculptures for ₹10000. He sold half of the goods at a profit of 10%. At what percent profit should be sell the remaining goods so as to earn an overall profit of 20% ?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721831956669_273",
+              "description": {
+                "text": "20%",
+                "widgets": [
+                  {
+                    "id": "mc1721831956669_276",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>20%</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721831956669_275",
+              "description": {
+                "text": "30%",
+                "widgets": [
+                  {
+                    "id": "mc1721831956669_272",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>30%</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721831956669_279",
+              "description": {
+                "text": "40%",
+                "widgets": [
+                  {
+                    "id": "mc1721831956669_280",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>40%</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721831956669_277",
+              "description": {
+                "text": "35%",
+                "widgets": [
+                  {
+                    "id": "mc1721831956669_274",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>35%</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721831956669_275",
+              "text": "30%",
+              "widgets": [
+                {
+                  "id": "mc1721831956669_272",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>30%</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/33ea7256655fc56226e0e5573fc9a909.jpg\"><br>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721832070870_285",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "A shopkeeper sells an item for Rs 50 and incurred loss of 20%. At what price (in Rs) should he sell it to gain a profit of 20% ?",
+            "widgets": [
+              {
+                "id": "mc1721832070870_288",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">A shopkeeper sells an item for Rs 50 and incurred loss of 20%. At what price (in Rs) should he sell it to gain a profit of 20% ?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721832070870_292",
+              "description": {
+                "text": "62.5",
+                "widgets": [
+                  {
+                    "id": "mc1721832070870_287",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>62.5</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721832070870_290",
+              "description": {
+                "text": "60",
+                "widgets": [
+                  {
+                    "id": "mc1721832070870_284",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>60</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721832070870_294",
+              "description": {
+                "text": "75",
+                "widgets": [
+                  {
+                    "id": "mc1721832070870_289",
+                    "type": "text",
+                    "properties": {
+                      "html": "75&nbsp;"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721832070870_291",
+              "description": {
+                "text": "72⋅5",
+                "widgets": [
+                  {
+                    "id": "mc1721832070870_295",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>72⋅5</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721832070870_294",
+              "text": "75",
+              "widgets": [
+                {
+                  "id": "mc1721832070870_289",
+                  "type": "text",
+                  "properties": {
+                    "html": "75&nbsp;"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/caf7fe9f537320b2d84fc3bec078a5ff.jpg\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721832141973_307",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "The cost price of 12 drones is equal to the selling price of 20 bikes and the cost price of 12 bikes is equal to the selling price of 2 drones. The profit percent on the selling of 1 drone and one bike together is equal to 50%. Find the profit percent on selling 1 bike.",
+            "widgets": [
+              {
+                "id": "mc1721832141973_297",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">The cost price of 12 drones is equal to the selling price of 20 bikes and the cost price of 12 bikes is equal to the selling price of 2 drones. The profit percent on the selling of 1 drone and one bike together is equal to 50%. Find the profit percent on selling 1 bike.</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721832141973_308",
+              "description": {
+                "text": "140%",
+                "widgets": [
+                  {
+                    "id": "mc1721832141973_302",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>140%</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721832141973_296",
+              "description": {
+                "text": "200%",
+                "widgets": [
+                  {
+                    "id": "mc1721832141973_299",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>200%</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721832141973_305",
+              "description": {
+                "text": "220%",
+                "widgets": [
+                  {
+                    "id": "mc1721832141973_300",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>220%</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721832141973_303",
+              "description": {
+                "text": "None of these",
+                "widgets": [
+                  {
+                    "id": "mc1721832141973_304",
+                    "type": "text",
+                    "properties": {
+                      "html": "None of these"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721832141973_296",
+              "text": "200%",
+              "widgets": [
+                {
+                  "id": "mc1721832141973_299",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>200%</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/f4f20a29cc60b3b4817799eea3fadcb5.jpg\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721832275790_314",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "A vegetable vendor uses an 1100gm scale to purchase 1 kg of vegetable and uses a 900gm scale to sell off 1 kg of vegetable. If he decides to give 10% cash discount, then find the overall profit percentage?",
+            "widgets": [
+              {
+                "id": "mc1721832275790_319",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">A vegetable vendor uses an 1100gm scale to purchase 1 kg of vegetable and uses a 900gm scale to sell off 1 kg of vegetable. If he decides to give 10% cash discount, then find the overall profit percentage?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721832275790_321",
+              "description": {
+                "text": "10%",
+                "widgets": [
+                  {
+                    "id": "mc1721832275790_313",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>10%</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721832275790_318",
+              "description": {
+                "text": "12%",
+                "widgets": [
+                  {
+                    "id": "mc1721832275790_320",
+                    "type": "text",
+                    "properties": {
+                      "html": "&nbsp;12%"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721832275790_315",
+              "description": {
+                "text": "15%",
+                "widgets": [
+                  {
+                    "id": "mc1721832275790_310",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>15%</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721832275790_309",
+              "description": {
+                "text": "18%",
+                "widgets": [
+                  {
+                    "id": "mc1721832275790_316",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>18%</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721832275790_321",
+              "text": "10%",
+              "widgets": [
+                {
+                  "id": "mc1721832275790_313",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>10%</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/09a3f7adc9f3e4288e47d9a0bb94ea5d.jpg\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mcImage1721832497797_347",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mcImage",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "A seller uses 750gm in place of one kg to sell his goods. Find his actual percentage profit when he sells his goals on 5% gain on cost price.",
+            "widgets": [
+              {
+                "id": "mcImage1721832497797_335",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">A seller uses 750gm in place of one kg to sell his goods. Find his actual percentage profit when he sells his goals on 5% gain on cost price.</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-image-option1721832497797_348",
+              "description": {
+                "text": "(Image)",
+                "widgets": [
+                  {
+                    "id": "mcImage1721832497797_345",
+                    "type": "image",
+                    "properties": {
+                      "hasLightbox": false,
+                      "imageData": {
+                        "title": "Screenshot_2024-07-25_170323-removebg-preview",
+                        "tags": [],
+                        "width": 138,
+                        "height": 59,
+                        "size": 5,
+                        "name": "/67250362c540d449238451c7894b7014.png",
+                        "access": "public",
+                        "created": 1721907239.8434,
+                        "modified": 1721907239.8434,
+                        "user": {
+                          "username": "Bappa AK Team"
+                        },
+                        "id": "66a23827875ecabf450e4115",
+                        "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/67250362c540d449238451c7894b7014.png",
+                        "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/67250362c540d449238451c7894b7014.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                        "modifiedF": "2024-07-25 14:33:59"
+                      },
+                      "height": 16,
+                      "width": 38
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-image-option1721832497797_342",
+              "description": {
+                "text": "(Image)",
+                "widgets": [
+                  {
+                    "id": "mcImage1721832497797_338",
+                    "type": "image",
+                    "properties": {
+                      "hasLightbox": false,
+                      "imageData": {
+                        "title": "Screenshot 2024-07-25 170053",
+                        "tags": [],
+                        "width": 64,
+                        "height": 32,
+                        "size": 2,
+                        "name": "/bee025cdabe7888a3a78fb56e116e5cb.png",
+                        "access": "public",
+                        "created": 1721907066.989659,
+                        "modified": 1721907066.989659,
+                        "user": {
+                          "username": "Bappa AK Team"
+                        },
+                        "id": "66a2377a48ebe1f5ee0d5d67",
+                        "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/bee025cdabe7888a3a78fb56e116e5cb.png",
+                        "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/bee025cdabe7888a3a78fb56e116e5cb.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                        "modifiedF": "2024-07-25 14:31:06"
+                      },
+                      "height": 18,
+                      "width": 36,
+                      "alt": ""
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-image-option1721832497797_344",
+              "description": {
+                "text": "(Image)",
+                "widgets": [
+                  {
+                    "id": "mcImage1721832497797_341",
+                    "type": "image",
+                    "properties": {
+                      "hasLightbox": false,
+                      "imageData": {
+                        "title": "Screenshot 2024-07-25 165932",
+                        "tags": [],
+                        "width": 106,
+                        "height": 47,
+                        "size": 2,
+                        "name": "/a06bbb3b5fc1dd33682cf0bdf897fae5.png",
+                        "access": "public",
+                        "created": 1721906982.862205,
+                        "modified": 1721906982.862205,
+                        "user": {
+                          "username": "Bappa AK Team"
+                        },
+                        "id": "66a237267e53b4818f0704e6",
+                        "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/a06bbb3b5fc1dd33682cf0bdf897fae5.png",
+                        "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/a06bbb3b5fc1dd33682cf0bdf897fae5.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                        "modifiedF": "2024-07-25 14:29:42"
+                      },
+                      "height": 28,
+                      "width": 65
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-image-option1721832497797_339",
+              "description": {
+                "text": "(Image)",
+                "widgets": [
+                  {
+                    "id": "mcImage1721832497797_336",
+                    "type": "image",
+                    "properties": {
+                      "hasLightbox": false,
+                      "imageData": {
+                        "title": "Screenshot 2024-07-25 165754",
+                        "tags": [],
+                        "width": 91,
+                        "height": 46,
+                        "size": 2,
+                        "name": "/58a4fdbb83780d701fe71faea0d51679.png",
+                        "access": "public",
+                        "created": 1721906952.846503,
+                        "modified": 1721906952.846503,
+                        "user": {
+                          "username": "Bappa AK Team"
+                        },
+                        "id": "66a237084660a8c92705dd2b",
+                        "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/58a4fdbb83780d701fe71faea0d51679.png",
+                        "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/58a4fdbb83780d701fe71faea0d51679.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                        "modifiedF": "2024-07-25 14:29:12"
+                      },
+                      "height": 28,
+                      "width": 56
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-image-option1721832497797_348",
+              "text": "(Image)",
+              "widgets": [
+                {
+                  "id": "mcImage1721832497797_345",
+                  "type": "image",
+                  "properties": {
+                    "hasLightbox": false,
+                    "imageData": {
+                      "title": "Screenshot_2024-07-25_170323-removebg-preview",
+                      "tags": [],
+                      "width": 138,
+                      "height": 59,
+                      "size": 5,
+                      "name": "/67250362c540d449238451c7894b7014.png",
+                      "access": "public",
+                      "created": 1721907239.8434,
+                      "modified": 1721907239.8434,
+                      "user": {
+                        "username": "Bappa AK Team"
+                      },
+                      "id": "66a23827875ecabf450e4115",
+                      "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/67250362c540d449238451c7894b7014.png",
+                      "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/67250362c540d449238451c7894b7014.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                      "modifiedF": "2024-07-25 14:33:59"
+                    },
+                    "height": 16,
+                    "width": 38
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/5504c6698a4c2c16f055cbb776324925.jpg\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721832819396_355",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "A trader gives a discount of 50% and sells it at the cost price. By how much % did he mark up the cost price of the article?",
+            "widgets": [
+              {
+                "id": "mc1721832819396_363",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">A trader gives a discount of 50% and sells it at the cost price. By how much % did he mark up the cost price of the article?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721832819396_356",
+              "description": {
+                "text": "50%",
+                "widgets": [
+                  {
+                    "id": "mc1721832819396_365",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>50%</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721832819396_364",
+              "description": {
+                "text": "100%",
+                "widgets": [
+                  {
+                    "id": "mc1721832819396_358",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>100%</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721832819396_353",
+              "description": {
+                "text": "75%",
+                "widgets": [
+                  {
+                    "id": "mc1721832819396_361",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>75%</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721832819396_359",
+              "description": {
+                "text": "CND",
+                "widgets": [
+                  {
+                    "id": "mc1721832819396_360",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>CND</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721832819396_364",
+              "text": "100%",
+              "widgets": [
+                {
+                  "id": "mc1721832819396_358",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>100%</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<div><strong><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/42c6d09d6baaa7437f4188d22abd259f.jpg\"><br></strong></div>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721832992997_367",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "'Ankit' bought an article for Rs 350 and sold it to 'Bhumika' at a profit of 24%, 'Bhumika' sold the article to 'chari' at a profit of 25%. If ' C ' sold the article to 'Deepak' at a loss of Rs 22.5 , then find the price at which 'Deepak' bought the article.",
+            "widgets": [
+              {
+                "id": "mc1721832992997_376",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">'Ankit' bought an article for Rs 350 and sold it to 'Bhumika' at a profit of 24%, 'Bhumika' sold the article to 'chari' at a profit of 25%. If ' C ' sold the article to 'Deepak' at a loss of Rs 22.5 , then find the price at which 'Deepak' bought the article.</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721832992997_369",
+              "description": {
+                "text": "Rs⁡. 525.5",
+                "widgets": [
+                  {
+                    "id": "mc1721832992997_370",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Rs⁡. 525.5</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721832992997_378",
+              "description": {
+                "text": "Rs. 624",
+                "widgets": [
+                  {
+                    "id": "mc1721832992997_368",
+                    "type": "text",
+                    "properties": {
+                      "html": "Rs. 624"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721832992997_372",
+              "description": {
+                "text": "Rs 490",
+                "widgets": [
+                  {
+                    "id": "mc1721832992997_373",
+                    "type": "text",
+                    "properties": {
+                      "html": "Rs 490"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721832992997_371",
+              "description": {
+                "text": "Rs. 520",
+                "widgets": [
+                  {
+                    "id": "mc1721832992997_374",
+                    "type": "text",
+                    "properties": {
+                      "html": "Rs. 520"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721832992997_371",
+              "text": "Rs. 520",
+              "widgets": [
+                {
+                  "id": "mc1721832992997_374",
+                  "type": "text",
+                  "properties": {
+                    "html": "Rs. 520"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/c2940904b6aa52b9b09d421296cae8a8.jpg\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721833108293_384",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "A shopkeeper sells toffees at 40 toffees for ₹ 10 and make a profit of 40%. How many toffees did he buy for ₹10?",
+            "widgets": [
+              {
+                "id": "mc1721833108293_380",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">A shopkeeper sells toffees at 40 toffees for ₹ 10 and make a profit of 40%. How many toffees did he buy for ₹10?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721833108293_381",
+              "description": {
+                "text": "24",
+                "widgets": [
+                  {
+                    "id": "mc1721833108293_382",
+                    "type": "text",
+                    "properties": {
+                      "html": "24"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721833108293_383",
+              "description": {
+                "text": "36",
+                "widgets": [
+                  {
+                    "id": "mc1721833108293_388",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>36</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721833108293_387",
+              "description": {
+                "text": "48",
+                "widgets": [
+                  {
+                    "id": "mc1721833108293_386",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>48</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721833108293_385",
+              "description": {
+                "text": "56",
+                "widgets": [
+                  {
+                    "id": "mc1721833108293_379",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>56</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721833108293_385",
+              "text": "56",
+              "widgets": [
+                {
+                  "id": "mc1721833108293_379",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>56</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/373e295ec110199bc768eaca9cd422ba.jpg\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721833192485_400",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "A contractor thinks by doing a work he will earn rupees 8400. In the earning there is 5.% profit, labouring and raw material are included. The ratio between raw material and labouring is 3:7. When he starts working he finds that the cost of raw material and labouring is increased by 10% and 15% respectively. Now find his loss %",
+            "widgets": [
+              {
+                "id": "mc1721833192485_392",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">A contractor thinks by doing a work he will earn rupees 8400. In the earning there is 5.% profit, labouring and raw material are included. The ratio between raw material and labouring is 3:7. When he starts working he finds that the cost of raw material and labouring is increased by 10% and 15% respectively. Now find his loss %&nbsp;</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721833192485_397",
+              "description": {
+                "text": "6.5%",
+                "widgets": [
+                  {
+                    "id": "mc1721833192485_393",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>6.5%</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721833192485_394",
+              "description": {
+                "text": "7%",
+                "widgets": [
+                  {
+                    "id": "mc1721833192485_403",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>7%</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721833192485_396",
+              "description": {
+                "text": "7.49%",
+                "widgets": [
+                  {
+                    "id": "mc1721833192485_402",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>7.49%</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721833192485_398",
+              "description": {
+                "text": "8.3%",
+                "widgets": [
+                  {
+                    "id": "mc1721833192485_404",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>8.3%</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721833192485_396",
+              "text": "7.49%",
+              "widgets": [
+                {
+                  "id": "mc1721833192485_402",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>7.49%</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/24bc451e487ae14e2cfd9c97a6986110.jpg\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721833290517_407",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Single copy of a book costs $16, but purchasers of 20 copies or more pay only $13 per copy. How many values of 'n' (0&lt;n&gt;20) exist for which one could buy 20 copies at a cost Which is lower than the cost in which one should could buy exactly 'n' copies of that book?",
+            "widgets": [
+              {
+                "id": "mc1721833290517_412",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">Single copy of a book costs $16, but purchasers of 20 copies or more pay only $13 per copy. How many values of 'n' (0&lt;n&gt;20) exist for which one could buy 20 copies at a cost Which is lower than the cost in which one should could buy exactly 'n' copies of that book?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721833290517_414",
+              "description": {
+                "text": "3",
+                "widgets": [
+                  {
+                    "id": "mc1721833290517_417",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>3</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721833290517_415",
+              "description": {
+                "text": "4",
+                "widgets": [
+                  {
+                    "id": "mc1721833290517_409",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>4</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721833290517_413",
+              "description": {
+                "text": "2",
+                "widgets": [
+                  {
+                    "id": "mc1721833290517_410",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>2</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721833290517_405",
+              "description": {
+                "text": "5",
+                "widgets": [
+                  {
+                    "id": "mc1721833290517_406",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>5</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721833290517_414",
+              "text": "3",
+              "widgets": [
+                {
+                  "id": "mc1721833290517_417",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>3</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/85b7f0eb1e9400d427f0044f079ca2cb.jpg\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        }
+      ]
+    }
+  ],
+  "submitted": true,
+  "updated": true,
+  "retryCount": 3,
+  "inlineFeedback": [],
+  "errors": [],
+  "success": true
+}

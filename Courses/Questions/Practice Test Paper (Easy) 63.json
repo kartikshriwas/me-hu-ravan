@@ -1,0 +1,3487 @@
+{
+  "submission": {
+    "anon_id": null,
+    "model": "assessment-submission",
+    "courseTitleId": "aptitude-teacher2",
+    "object_id": "66b74ba67f809db0100951ef",
+    "assessmentId": "66b74ba67f809db0100951ee",
+    "snapshotId": "66bd5edecca52bdb5304d125",
+    "questions": {
+      "section66b74ba5c24fe": [
+        "mc66b74ba5c2505",
+        "mc66b74ba5c25e4",
+        "mc66b74ba5c26c2",
+        "mc66b74ba5c27a3",
+        "mc66b74ba5c2887",
+        "mc66b74ba5c2979",
+        "mc66b74ba5c2a79",
+        "mc66b74ba5c2b64",
+        "mc66b74ba5c2c53",
+        "mc66b74ba5c2d60"
+      ]
+    },
+    "certificateAnswers": [],
+    "certificateId": null,
+    "questionData": {
+      "mc66b74ba5c2505": {
+        "deliveredOnTimestamp": 1786440535.135805,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74ba5c25e4": {
+        "deliveredOnTimestamp": 1786440535.135836,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74ba5c26c2": {
+        "deliveredOnTimestamp": 1786440535.135857,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74ba5c27a3": {
+        "deliveredOnTimestamp": 1786440535.135874,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74ba5c2887": {
+        "deliveredOnTimestamp": 1786440535.135891,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74ba5c2979": {
+        "deliveredOnTimestamp": 1786440535.135908,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74ba5c2a79": {
+        "deliveredOnTimestamp": 1786440535.135923,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74ba5c2b64": {
+        "deliveredOnTimestamp": 1786440535.135939,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74ba5c2c53": {
+        "deliveredOnTimestamp": 1786440535.135955,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74ba5c2d60": {
+        "deliveredOnTimestamp": 1786440535.13597,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      }
+    },
+    "answers": [
+      {
+        "blockId": "mc66b74ba5c2505",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74ba5c25e4",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74ba5c26c2",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74ba5c27a3",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74ba5c2887",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74ba5c2979",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74ba5c2a79",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74ba5c2b64",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74ba5c2c53",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74ba5c2d60",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      }
+    ],
+    "submittedTimestamp": 1786440535.366347,
+    "status": "submitted",
+    "grading_status": "grading_status_graded",
+    "access": "public",
+    "actual_score": null,
+    "score": {
+      "maxScore": 10,
+      "value": 0,
+      "pass": false,
+      "passGrade": 50,
+      "points": 0
+    },
+    "source": {
+      "type": "unit"
+    },
+    "isDefining": true,
+    "isAdminAutoGradedSubmission": null,
+    "listOfNonConsentedBlocks": [],
+    "created": 1786440535.141563,
+    "modified": 1786440535.484785,
+    "id": "6a7aeb5798bba00ab70569b0",
+    "passed": false
+  },
+  "assessment": {
+    "title": "Practice Test Paper (Easy)",
+    "access": "public",
+    "type": "assessment",
+    "model": "assessmentSnapshot",
+    "description": "Foundational practice test paper containing 10 assessment questions covering Profit, Loss & Discounts, Ratios & Proportions.",
+    "isTimed": false,
+    "timerFor": "assessmentTimed",
+    "onTimerExpiration": "autoSubmit",
+    "assessmentTimeLimitInSeconds": 600,
+    "questionTimeLimitInSeconds": 60,
+    "standaloneShareEnabled": null,
+    "customUrl": null,
+    "usesCustomUrl": null,
+    "allowAnonymous": true,
+    "randomizeQuestionOptions": false,
+    "disallowPartialSubmissions": false,
+    "submissionDueDateEnabled": false,
+    "submissionDueDate": 1626257823,
+    "makeFeedbackAvailableAfterDateEnabled": false,
+    "makeFeedbackAvailableAfterDate": 0,
+    "customStylesEnabled": true,
+    "customStyles": {
+      "assessmentPage": {
+        "background": {
+          "type": "color",
+          "colorData": {
+            "code": "",
+            "class": "lw-body-bg"
+          }
+        },
+        "dividers": {
+          "top": {
+            "orientation": "top",
+            "divider": "none"
+          },
+          "bottom": {
+            "orientation": "bottom",
+            "divider": "none"
+          }
+        }
+      },
+      "option": {
+        "radioEffect": "scribble",
+        "checkboxEffect": "scribble",
+        "size": "small"
+      },
+      "assessment": {
+        "transition": "none",
+        "background": {
+          "type": "color",
+          "colorData": {
+            "code": "",
+            "class": ""
+          }
+        },
+        "width": "normal",
+        "timerTemplate": "rectangle"
+      },
+      "linearRating": {
+        "labels": {
+          "size": "small"
+        }
+      },
+      "question": {
+        "description": {
+          "background": {
+            "type": "color",
+            "colorData": {
+              "code": "",
+              "class": ""
+            }
+          },
+          "type": "p",
+          "size": "small"
+        },
+        "answers": {
+          "background": {
+            "type": "color",
+            "colorData": {
+              "code": "",
+              "class": ""
+            }
+          }
+        },
+        "requiredAsterisk": {
+          "colorData": {
+            "code": "#ff0000",
+            "class": ""
+          }
+        },
+        "errorMessages": {
+          "size": "verySmall",
+          "colorData": {
+            "code": "#ff0000",
+            "class": ""
+          }
+        }
+      },
+      "input": {
+        "size": "small",
+        "type": "solidDark"
+      },
+      "textarea": {
+        "size": "small",
+        "type": "solidDark"
+      },
+      "dropdown": {
+        "size": "small",
+        "type": "solidDark"
+      }
+    },
+    "submissionMode": "all",
+    "startingDate": 1626765704,
+    "startingDateEnabled": false,
+    "showOnlyFailedQuestionsOnRetry": false,
+    "retryEnabled": true,
+    "retryOnFailOnly": false,
+    "gradingMethod": null,
+    "maxTries": null,
+    "onlyWrongOnRetake": null,
+    "isAmendable": false,
+    "feedbackShowOnScreen": true,
+    "feedbackDownloadPDF": false,
+    "feedbackShowInline": null,
+    "feedbackQuestionList": "all-questions",
+    "feedbackShowQuestionScore": true,
+    "feedbackShowFeedback": true,
+    "feedbackShowNumbering": false,
+    "feedbackShowSectionTitles": false,
+    "feedbackShowUserAnswers": true,
+    "feedbackShowCorrectAnswers": true,
+    "feedbackShowAnswerCorrectness": true,
+    "displayInlineFeedbackEnabled": null,
+    "displayBackButtonWhenSubmissionPerBlock": null,
+    "feedbackShowSectionResultSummary": false,
+    "askConfirmationBeforeSubmit": true,
+    "hasCustomConfirmationBeforeSubmitText": false,
+    "customConfirmationBeforeSubmitText": "Are you sure you want to submit the questionnaire?",
+    "customConfirmationBeforeSubmitTexts": {
+      "title": "Submit Assessment?",
+      "baseConfirmationMessage": "Are you sure you want to submit the questionnaire?",
+      "unansweredNotice": "You have not answered {X} questions."
+    },
+    "amendResubmissionMinutes": 30,
+    "passingGrade": null,
+    "navigationMode": "per-block",
+    "conditionalBlocks": {
+      "introContent": {
+        "id": "content66b74ba5c2445",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66b74ba5c2454",
+              "type": "text",
+              "insertedAsWidget": true,
+              "properties": {
+                "html": "Mixed Charts PAPER LEVEL-1",
+                "alignment": "center",
+                "customStyle": true,
+                "type": "h2",
+                "size": "normal"
+              }
+            },
+            {
+              "id": "text66b74ba5c2465",
+              "type": "text",
+              "properties": {
+                "html": "Self-assess your knowledge. Express yourself and get feedback from our instructors.",
+                "customStyle": true,
+                "alignment": "center"
+              }
+            },
+            {
+              "id": "spacer66b74ba5c2470",
+              "type": "spacer",
+              "properties": {
+                "height": 20,
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            },
+            {
+              "id": "button66b74ba5c247c",
+              "type": "button",
+              "properties": {
+                "buttonLabel": "<span>Ready to start</span>",
+                "buttonSize": "normal",
+                "buttonType": "solidBrand",
+                "alignment": "center",
+                "linkData": {
+                  "linkType": "goToFirst"
+                },
+                "iconColorData": {
+                  "code": "",
+                  "class": ""
+                },
+                "iconDisplay": false,
+                "iconSize": 26,
+                "iconClassName": " fas fa-angle-right",
+                "iconPosition": "right"
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "variables": {
+            "conditionalBlocks_introContent_blockData_widgets_0": [],
+            "conditionalBlocks_introContent_blockData_widgets_1": []
+          }
+        }
+      },
+      "submissionStartingDate": {
+        "id": "content66b74ba5c249d",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66b74ba5c24a2",
+              "type": "text",
+              "properties": {
+                "html": "Sorry but this assessment hasn't started yet."
+              }
+            },
+            {
+              "id": "date66b74ba5c24a9",
+              "type": "date",
+              "properties": {
+                "value": ""
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "displayConditions": ["startingDate"]
+        }
+      },
+      "submissionDueDate": {
+        "id": "content66b74ba5c24b5",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66b74ba5c24b9",
+              "type": "text",
+              "properties": {
+                "html": "Sorry but this assessment date is due."
+              }
+            },
+            {
+              "id": "date66b74ba5c24c0",
+              "type": "date",
+              "properties": {
+                "value": ""
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "displayConditions": ["dateIsDue"]
+        }
+      },
+      "outroContent": {
+        "id": "content66b74ba5c24cb",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "userResults66b74ba5c24d0",
+              "type": "userResults",
+              "properties": {
+                "layout": "template2",
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            },
+            {
+              "id": "feedback66b74ba5c24db",
+              "type": "feedback",
+              "properties": []
+            },
+            {
+              "id": "outroActions66b74ba5c24e2",
+              "type": "outroActions",
+              "properties": {
+                "layout": "",
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true
+        }
+      }
+    },
+    "systemSections": null,
+    "sections": [
+      {
+        "id": "section66b74ba5c24fe",
+        "title": "",
+        "type": "section",
+        "navigationMode": "per-block",
+        "blocks": [
+          {
+            "id": "mc66b74ba5c2505",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74ba5c250a",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for Question:</strong></p><p style=\"text-align: justify;\">The pie chart represents the total revenues of five companies (A, B, C, D, E) in a certain year. The total revenues are Rs. 1800 crores.</p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/b3c74a73a9c8ef11bc31a5e9954d995f.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 400px;\"></p><p style=\"text-align: justify;\"><span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">The bar chart represents the number of employees in each of these companies.</span><br></p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/020168ad1887e72dae1691ec3d5e7ffe.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 350px;\"></p><p style=\"text-align: justify;\"><span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">Based on this information, solve the following questions</span></p><p style=\"text-align: justify;\"><span style=\"font-size: 1.6rem; letter-spacing: 0rem;\"><br></span></p><p style=\"text-align: justify;\"><span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">If Company A made a profit of 10% of its revenue, how much profit did Company A make?</span></p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74ba5c251c",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74ba5c2523",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74ba5c252a",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74ba5c2549",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74ba5c2550",
+                        "type": "text",
+                        "properties": {
+                          "html": "Rs. 54 crores"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74ba5c2560",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74ba5c2566",
+                        "type": "text",
+                        "properties": {
+                          "html": "Rs. 36 crores"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74ba5c2575",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74ba5c257c",
+                        "type": "text",
+                        "properties": {
+                          "html": "Rs. 45 crores"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74ba5c258b",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74ba5c2591",
+                        "type": "text",
+                        "properties": {
+                          "html": "Rs. 60 crores"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_3_description_widgets_0": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74ba5c25e4",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74ba5c25e9",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for Question:</strong></p><p style=\"text-align: justify;\">The pie chart represents the total revenues of five companies (A, B, C, D, E) in a certain year. The total revenues are Rs. 1800 crores.</p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/b3c74a73a9c8ef11bc31a5e9954d995f.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 400px;\"></p><p style=\"text-align: justify;\"><span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">The bar chart represents the number of employees in each of these companies.</span><br></p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/020168ad1887e72dae1691ec3d5e7ffe.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 350px;\"></p><p style=\"text-align: justify;\"><span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">Based on this information, solve the following questions</span></p><p style=\"text-align: justify;\"><span style=\"font-size: 1.6rem; letter-spacing: 0rem;\"><br></span></p><p style=\"text-align: justify;\">If Company B made a profit of Rs. 36 crores, what was the profit margin for company B?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74ba5c25fa",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74ba5c2601",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74ba5c2608",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74ba5c2627",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74ba5c262d",
+                        "type": "text",
+                        "properties": {
+                          "html": "10%"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74ba5c263c",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74ba5c2643",
+                        "type": "text",
+                        "properties": {
+                          "html": "20%"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74ba5c2651",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74ba5c2658",
+                        "type": "text",
+                        "properties": {
+                          "html": "15%"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74ba5c2667",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74ba5c266d",
+                        "type": "text",
+                        "properties": {
+                          "html": "25%"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_1": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74ba5c26c2",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74ba5c26c6",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for Question:</strong></p><p style=\"text-align: justify;\">The pie chart represents the total revenues of five companies (A, B, C, D, E) in a certain year. The total revenues are Rs. 1800 crores.</p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/b3c74a73a9c8ef11bc31a5e9954d995f.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 400px;\"></p><p style=\"text-align: justify;\"><span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">The bar chart represents the number of employees in each of these companies.</span><br></p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/020168ad1887e72dae1691ec3d5e7ffe.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 350px;\"></p><p style=\"text-align: justify;\"><span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">Based on this information, solve the following questions</span></p><p style=\"text-align: justify;\"><span style=\"font-size: 1.6rem; letter-spacing: 0rem;\"><br></span></p><p style=\"text-align: justify;\">If Company E made a profit of 20% of its revenue, how much profit did company E make?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74ba5c26d7",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74ba5c26de",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74ba5c26e5",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74ba5c2704",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74ba5c270b",
+                        "type": "text",
+                        "properties": {
+                          "html": "Rs. 36 Crores"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74ba5c2719",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74ba5c2720",
+                        "type": "text",
+                        "properties": {
+                          "html": "Rs. 18 Crores"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74ba5c272e",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74ba5c2734",
+                        "type": "text",
+                        "properties": {
+                          "html": "Rs. 24 Crores"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74ba5c2743",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74ba5c2749",
+                        "type": "text",
+                        "properties": {
+                          "html": "Rs. 30 Crores"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_description_widgets_0": [],
+                "sections_0_blocks_2": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74ba5c27a3",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74ba5c27a8",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for Question:</strong></p><p style=\"text-align: justify;\">The pie chart represents the total revenues of five companies (A, B, C, D, E) in a certain year. The total revenues are Rs. 1800 crores.</p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/b3c74a73a9c8ef11bc31a5e9954d995f.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 400px;\"></p><p style=\"text-align: justify;\"><span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">The bar chart represents the number of employees in each of these companies.</span><br></p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/020168ad1887e72dae1691ec3d5e7ffe.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 350px;\"></p><p style=\"text-align: justify;\"><span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">Based on this information, solve the following questions</span></p><p style=\"text-align: justify;\"><span style=\"font-size: 1.6rem; letter-spacing: 0rem;\"><br></span></p><p style=\"text-align: justify;\">If Company C had a profit margin of 15%, how much profit did it make?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74ba5c27b9",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74ba5c27c0",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74ba5c27c7",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74ba5c27ea",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74ba5c27f1",
+                        "type": "text",
+                        "properties": {
+                          "html": "Rs. 67.5 crores"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74ba5c2800",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74ba5c2806",
+                        "type": "text",
+                        "properties": {
+                          "html": "Rs. 75 crores"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74ba5c2815",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74ba5c281c",
+                        "type": "text",
+                        "properties": {
+                          "html": "Rs. 60 crores"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74ba5c282a",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74ba5c2831",
+                        "type": "text",
+                        "properties": {
+                          "html": "Rs. 45 crores"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_description_widgets_0": [],
+                "sections_0_blocks_3": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74ba5c2887",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74ba5c288c",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for Question:</strong></p><p style=\"text-align: justify;\">The pie chart represents the total revenues of five companies (A, B, C, D, E) in a certain year. The total revenues are Rs. 1800 crores.</p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/b3c74a73a9c8ef11bc31a5e9954d995f.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 400px;\"></p><p style=\"text-align: justify;\"><span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">The bar chart represents the number of employees in each of these companies.</span><br></p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/020168ad1887e72dae1691ec3d5e7ffe.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 350px;\"></p><p style=\"text-align: justify;\"><span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">Based on this information, solve the following questions</span></p><p style=\"text-align: justify;\"><span style=\"font-size: 1.6rem; letter-spacing: 0rem;\"><br></span></p><p style=\"text-align: justify;\">If the proportion of employees in Company A who are from Delhi is 10% and it is the same as the proportion of employees in Company B who are from Delhi, how many employees in Company B are from Delhi?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74ba5c289d",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74ba5c28a4",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74ba5c28ab",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74ba5c28ca",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74ba5c28db",
+                        "type": "text",
+                        "properties": {
+                          "html": "200"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74ba5c28ea",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74ba5c28f1",
+                        "type": "text",
+                        "properties": {
+                          "html": "220"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74ba5c2900",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74ba5c2906",
+                        "type": "text",
+                        "properties": {
+                          "html": "180"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74ba5c2915",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74ba5c291b",
+                        "type": "text",
+                        "properties": {
+                          "html": "240"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_4": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74ba5c2979",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74ba5c297e",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for Question:</strong></p><p style=\"text-align: justify;\">The line graph represents the total sales (in thousands) of five different products (P1, P2, P3, P4, P5) in the months of June and December.</p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/eb329aae8740e28cf6c868b258751d74.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 400px;\"></p><p style=\"text-align: justify;\">The table represents the cost price of each product.</p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/b50e9f0d405c6fb845b87b323ffcf673.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 300px;\"></p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">Which product had the highest sales in the month of June?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74ba5c298f",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74ba5c2996",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74ba5c299d",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74ba5c29bb",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74ba5c29c2",
+                        "type": "text",
+                        "properties": {
+                          "html": "P1"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74ba5c29d1",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74ba5c29d8",
+                        "type": "text",
+                        "properties": {
+                          "html": "P2"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74ba5c29e6",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74ba5c29ed",
+                        "type": "text",
+                        "properties": {
+                          "html": "P3"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74ba5c29fc",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74ba5c2a02",
+                        "type": "text",
+                        "properties": {
+                          "html": "P4"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74ba5c2a11",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74ba5c2a17",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>P5</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_4_description_widgets_0": [],
+                "sections_0_blocks_5": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74ba5c2a79",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74ba5c2a7d",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for Question:</strong></p><p style=\"text-align: justify;\">The line graph represents the total sales (in thousands) of five different products (P1, P2, P3, P4, P5) in the months of June and December.</p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/eb329aae8740e28cf6c868b258751d74.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 400px;\"></p><p style=\"text-align: justify;\">The table represents the cost price of each product.</p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/b50e9f0d405c6fb845b87b323ffcf673.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 300px;\"></p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">What was the total sales of product P3 in June and December?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74ba5c2a8e",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74ba5c2a95",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74ba5c2a9c",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74ba5c2aba",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74ba5c2ac1",
+                        "type": "text",
+                        "properties": {
+                          "html": "3600 units"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74ba5c2ad0",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74ba5c2ad7",
+                        "type": "text",
+                        "properties": {
+                          "html": "3800 units"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74ba5c2ae5",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74ba5c2aec",
+                        "type": "text",
+                        "properties": {
+                          "html": "4000 units"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74ba5c2afa",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74ba5c2b01",
+                        "type": "text",
+                        "properties": {
+                          "html": "4200 units"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_4_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_description_widgets_0": [],
+                "sections_0_blocks_6": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74ba5c2b64",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74ba5c2b68",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for Question:</strong></p><p style=\"text-align: justify;\">The line graph represents the total sales (in thousands) of five different products (P1, P2, P3, P4, P5) in the months of June and December.</p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/eb329aae8740e28cf6c868b258751d74.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 400px;\"></p><p style=\"text-align: justify;\">The table represents the cost price of each product.</p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/b50e9f0d405c6fb845b87b323ffcf673.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 300px;\"></p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">If the selling price of P4 is twice its cost price, what is the profit for product P4 in June and December?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74ba5c2b7a",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74ba5c2b80",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74ba5c2b87",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74ba5c2ba7",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74ba5c2bad",
+                        "type": "text",
+                        "properties": {
+                          "html": "Rs. 52500"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74ba5c2bc0",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74ba5c2bc7",
+                        "type": "text",
+                        "properties": {
+                          "html": "Rs. 55000"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74ba5c2bd6",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74ba5c2bdd",
+                        "type": "text",
+                        "properties": {
+                          "html": "Rs. 57500"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74ba5c2bec",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74ba5c2bf3",
+                        "type": "text",
+                        "properties": {
+                          "html": "Rs. 60000"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_4_description_widgets_0": [],
+                "sections_0_blocks_7": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74ba5c2c53",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74ba5c2c58",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for Question:</strong></p><p style=\"text-align: justify;\">The line graph represents the total sales (in thousands) of five different products (P1, P2, P3, P4, P5) in the months of June and December.</p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/eb329aae8740e28cf6c868b258751d74.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 400px;\"></p><p style=\"text-align: justify;\">The table represents the cost price of each product.</p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/b50e9f0d405c6fb845b87b323ffcf673.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 300px;\"></p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">Which product had the least sales in the month of December?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74ba5c2c69",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74ba5c2c70",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74ba5c2c77",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74ba5c2c95",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74ba5c2c9c",
+                        "type": "text",
+                        "properties": {
+                          "html": "P1"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74ba5c2cab",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74ba5c2cb2",
+                        "type": "text",
+                        "properties": {
+                          "html": "P2"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74ba5c2cca",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74ba5c2cd1",
+                        "type": "text",
+                        "properties": {
+                          "html": "P3"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74ba5c2ce0",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74ba5c2ce6",
+                        "type": "text",
+                        "properties": {
+                          "html": "P4"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74ba5c2cf5",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74ba5c2cfc",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>P5</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_4_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_4_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_description_widgets_0": [],
+                "sections_0_blocks_8": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74ba5c2d60",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74ba5c2d64",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for Question:</strong></p><p style=\"text-align: justify;\">The line graph represents the total sales (in thousands) of five different products (P1, P2, P3, P4, P5) in the months of June and December.</p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/eb329aae8740e28cf6c868b258751d74.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 400px;\"></p><p style=\"text-align: justify;\">The table represents the cost price of each product.</p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/b50e9f0d405c6fb845b87b323ffcf673.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 300px;\"></p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">If the selling price of P2 is 150% of its cost price, what is the profit for product P2 in June and December?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74ba5c2d75",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74ba5c2d7c",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74ba5c2d83",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74ba5c2da2",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74ba5c2da9",
+                        "type": "text",
+                        "properties": {
+                          "html": "Rs. 27000"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74ba5c2db7",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74ba5c2dbe",
+                        "type": "text",
+                        "properties": {
+                          "html": "Rs. 30000"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74ba5c2dcd",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74ba5c2dd4",
+                        "type": "text",
+                        "properties": {
+                          "html": "Rs. 33000"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74ba5c2de2",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74ba5c2de9",
+                        "type": "text",
+                        "properties": {
+                          "html": "Rs. 36000"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_4_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_9": []
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "availabilityStatus": null,
+    "autoNavigationEnabled": false,
+    "displayBackButtonWhenNavigationPerBlock": true,
+    "saveAndResumeLaterEnabled": null,
+    "tagsAddedOnCompletion": [],
+    "tagsAddedOnPass": [],
+    "sendAnonymousSubmissionsToEmailLeads": false,
+    "afterSubmitActionEnabled": null,
+    "afterSubmitActionProperties": null,
+    "showWizardOnNextEdit": false,
+    "revisitAfterSubmissionAction": null,
+    "navigationTemplate": "HorizontalSpacedBetweenNavigationTemplate",
+    "learnerSearchBarEnabled": true,
+    "learnerUnansweredQuestionsEnabled": true,
+    "learnerFavouriteQuestionEnabled": true,
+    "learnerCompletionProgressEnabled": true,
+    "learnerShowIndexOfQuestionsEnabled": false,
+    "learnerTimeNotificationsEnabled": false,
+    "learnerAllowInterruptionsEnabled": true,
+    "learnerAllowInterruptionsTimeoutInMinutes": 30,
+    "learnerReclaimTryOnInterruptionTimeoutEnabled": false,
+    "learnerAskBeforeContinueToSaved": true,
+    "learnerAutoSaveEnabled": null,
+    "spellcheckDisabled": null,
+    "showPartialScoreOnSubmission": true,
+    "deliverableQuestionsSubsetType": "all",
+    "questionRandomizationType": "none",
+    "serveQuestionsBasedOnPreviousSubmission": null,
+    "scoringDisabled": false,
+    "isSelfAssessment": false,
+    "useDefaultCertificateTemplate": null,
+    "certificateTemplate": null,
+    "certificateSocialShare": null,
+    "migrationData": null,
+    "useAssessmentPassingGradeForOpenEndedCorrectness": true,
+    "openEndedCorrectnessPassingGrade": null,
+    "showScorePercentage": null,
+    "showScorePoints": null,
+    "showScoreCorrectAnswers": null,
+    "editorBehaviorSettings": null,
+    "manualReviewEnabled": null,
+    "resultsSummary": {
+      "enabled": true,
+      "showStatusIcon": true,
+      "showStatusText": true,
+      "showScorePercentage": true,
+      "showScorePoints": true,
+      "showScoreCorrectAnswers": false,
+      "showTimeTakenToComplete": true,
+      "showDateSubmitted": true,
+      "showAttemptCount": true
+    },
+    "meta": null,
+    "submissionsCount": 633,
+    "fromMarketplace": null,
+    "aiFeedbackEnabled": null,
+    "numberOfFeedbackQuestions": null,
+    "created": 1723288486.210849,
+    "modified": 1723686622.087897,
+    "contentHash": "7b200b94c2722be8b5098856ae3648a3654ee871bcd0de0568d55255c0bbebc3",
+    "id": "66b74ba67f809db0100951ee",
+    "objectType": "assessment",
+    "isEditBlockedDueToSync": false,
+    "variables": {
+      "submission": {
+        "self": {
+          "score": 0,
+          "points": 0,
+          "total_points": 10,
+          "correct_answers": 0,
+          "total_questions": 10,
+          "time_spent": "00:00:00",
+          "date_submitted": "11/08/26",
+          "attempt_count": 4,
+          "max_tries": null,
+          "pass_grade": 50,
+          "time_spent_seconds": 0,
+          "raw_start_date": 1786440535.141563
+        }
+      },
+      "school": {
+        "name": "Apna College",
+        "url": "www.apnacollege.in",
+        "description": "The most loved coding community of India ❤️"
+      },
+      "user": {
+        "username": "ram",
+        "email": "p4542639@gmail.com",
+        "cf_phonenumber": "7666690798"
+      }
+    }
+  },
+  "reclaimedTry": false,
+  "feedback": [
+    {
+      "title": "",
+      "id": "section66b74ba5c24fe",
+      "blocks": [
+        {
+          "id": "mc66b74ba5c2505",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for Question:The pie chart represents the total revenues of five companies (A, B, C, D, E) in a certain year. The total revenues are Rs. 1800 crores.The bar chart represents the number of employees in each of these companies.Based on this information, solve the following questionsIf Company A made a profit of 10% of its revenue, how much profit did Company A make?",
+            "widgets": [
+              {
+                "id": "text66b74ba5c250a",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for Question:</strong></p><p style=\"text-align: justify;\">The pie chart represents the total revenues of five companies (A, B, C, D, E) in a certain year. The total revenues are Rs. 1800 crores.</p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/b3c74a73a9c8ef11bc31a5e9954d995f.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 400px;\"></p><p style=\"text-align: justify;\"><span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">The bar chart represents the number of employees in each of these companies.</span><br></p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/020168ad1887e72dae1691ec3d5e7ffe.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 350px;\"></p><p style=\"text-align: justify;\"><span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">Based on this information, solve the following questions</span></p><p style=\"text-align: justify;\"><span style=\"font-size: 1.6rem; letter-spacing: 0rem;\"><br></span></p><p style=\"text-align: justify;\"><span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">If Company A made a profit of 10% of its revenue, how much profit did Company A make?</span></p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74ba5c2549",
+              "description": {
+                "text": "Rs. 54 crores",
+                "widgets": [
+                  {
+                    "id": "text66b74ba5c2550",
+                    "type": "text",
+                    "properties": {
+                      "html": "Rs. 54 crores"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74ba5c2560",
+              "description": {
+                "text": "Rs. 36 crores",
+                "widgets": [
+                  {
+                    "id": "text66b74ba5c2566",
+                    "type": "text",
+                    "properties": {
+                      "html": "Rs. 36 crores"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74ba5c2575",
+              "description": {
+                "text": "Rs. 45 crores",
+                "widgets": [
+                  {
+                    "id": "text66b74ba5c257c",
+                    "type": "text",
+                    "properties": {
+                      "html": "Rs. 45 crores"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74ba5c258b",
+              "description": {
+                "text": "Rs. 60 crores",
+                "widgets": [
+                  {
+                    "id": "text66b74ba5c2591",
+                    "type": "text",
+                    "properties": {
+                      "html": "Rs. 60 crores"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74ba5c2549",
+              "text": "Rs. 54 crores",
+              "widgets": [
+                {
+                  "id": "text66b74ba5c2550",
+                  "type": "text",
+                  "properties": {
+                    "html": "Rs. 54 crores"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br><span>Company A's revenue is 30% of Rs. 1800 crores, which\nis Rs. 540 crores. If the profit is 10% of the revenue, then the profit is 10%\nof Rs. 540 crores, which is Rs. 54 crores. So, the correct answer is A. Rs. 54\ncrores.</span><br></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74ba5c25e4",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for Question:The pie chart represents the total revenues of five companies (A, B, C, D, E) in a certain year. The total revenues are Rs. 1800 crores.The bar chart represents the number of employees in each of these companies.Based on this information, solve the following questionsIf Company B made a profit of Rs. 36 crores, what was the profit margin for company B?",
+            "widgets": [
+              {
+                "id": "text66b74ba5c25e9",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for Question:</strong></p><p style=\"text-align: justify;\">The pie chart represents the total revenues of five companies (A, B, C, D, E) in a certain year. The total revenues are Rs. 1800 crores.</p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/b3c74a73a9c8ef11bc31a5e9954d995f.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 400px;\"></p><p style=\"text-align: justify;\"><span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">The bar chart represents the number of employees in each of these companies.</span><br></p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/020168ad1887e72dae1691ec3d5e7ffe.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 350px;\"></p><p style=\"text-align: justify;\"><span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">Based on this information, solve the following questions</span></p><p style=\"text-align: justify;\"><span style=\"font-size: 1.6rem; letter-spacing: 0rem;\"><br></span></p><p style=\"text-align: justify;\">If Company B made a profit of Rs. 36 crores, what was the profit margin for company B?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74ba5c2627",
+              "description": {
+                "text": "10%",
+                "widgets": [
+                  {
+                    "id": "text66b74ba5c262d",
+                    "type": "text",
+                    "properties": {
+                      "html": "10%"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74ba5c263c",
+              "description": {
+                "text": "20%",
+                "widgets": [
+                  {
+                    "id": "text66b74ba5c2643",
+                    "type": "text",
+                    "properties": {
+                      "html": "20%"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74ba5c2651",
+              "description": {
+                "text": "15%",
+                "widgets": [
+                  {
+                    "id": "text66b74ba5c2658",
+                    "type": "text",
+                    "properties": {
+                      "html": "15%"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74ba5c2667",
+              "description": {
+                "text": "25%",
+                "widgets": [
+                  {
+                    "id": "text66b74ba5c266d",
+                    "type": "text",
+                    "properties": {
+                      "html": "25%"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74ba5c2627",
+              "text": "10%",
+              "widgets": [
+                {
+                  "id": "text66b74ba5c262d",
+                  "type": "text",
+                  "properties": {
+                    "html": "10%"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br><span>Company B's revenue is 20% of Rs. 1800 crores, which\nis Rs. 360 crores. If the profit is Rs. 36 crores, then the profit margin is\n(Profit / Revenue) * 100 = (36/360) * 100 = 10%. So, the correct answer is A.\n10%.</span><br></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74ba5c26c2",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for Question:The pie chart represents the total revenues of five companies (A, B, C, D, E) in a certain year. The total revenues are Rs. 1800 crores.The bar chart represents the number of employees in each of these companies.Based on this information, solve the following questionsIf Company E made a profit of 20% of its revenue, how much profit did company E make?",
+            "widgets": [
+              {
+                "id": "text66b74ba5c26c6",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for Question:</strong></p><p style=\"text-align: justify;\">The pie chart represents the total revenues of five companies (A, B, C, D, E) in a certain year. The total revenues are Rs. 1800 crores.</p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/b3c74a73a9c8ef11bc31a5e9954d995f.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 400px;\"></p><p style=\"text-align: justify;\"><span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">The bar chart represents the number of employees in each of these companies.</span><br></p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/020168ad1887e72dae1691ec3d5e7ffe.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 350px;\"></p><p style=\"text-align: justify;\"><span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">Based on this information, solve the following questions</span></p><p style=\"text-align: justify;\"><span style=\"font-size: 1.6rem; letter-spacing: 0rem;\"><br></span></p><p style=\"text-align: justify;\">If Company E made a profit of 20% of its revenue, how much profit did company E make?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74ba5c2704",
+              "description": {
+                "text": "Rs. 36 Crores",
+                "widgets": [
+                  {
+                    "id": "text66b74ba5c270b",
+                    "type": "text",
+                    "properties": {
+                      "html": "Rs. 36 Crores"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74ba5c2719",
+              "description": {
+                "text": "Rs. 18 Crores",
+                "widgets": [
+                  {
+                    "id": "text66b74ba5c2720",
+                    "type": "text",
+                    "properties": {
+                      "html": "Rs. 18 Crores"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74ba5c272e",
+              "description": {
+                "text": "Rs. 24 Crores",
+                "widgets": [
+                  {
+                    "id": "text66b74ba5c2734",
+                    "type": "text",
+                    "properties": {
+                      "html": "Rs. 24 Crores"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74ba5c2743",
+              "description": {
+                "text": "Rs. 30 Crores",
+                "widgets": [
+                  {
+                    "id": "text66b74ba5c2749",
+                    "type": "text",
+                    "properties": {
+                      "html": "Rs. 30 Crores"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74ba5c2704",
+              "text": "Rs. 36 Crores",
+              "widgets": [
+                {
+                  "id": "text66b74ba5c270b",
+                  "type": "text",
+                  "properties": {
+                    "html": "Rs. 36 Crores"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br><span>Company E's revenue is 10% of Rs. 1800 crores, which\nis Rs. 180 crores. If the profit is 20% of the revenue, then the profit is 20%\nof Rs. 180 crores, which is Rs. 36 crores. So, the correct answer is A. Rs. 36\nCrores.</span><br></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74ba5c27a3",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for Question:The pie chart represents the total revenues of five companies (A, B, C, D, E) in a certain year. The total revenues are Rs. 1800 crores.The bar chart represents the number of employees in each of these companies.Based on this information, solve the following questionsIf Company C had a profit margin of 15%, how much profit did it make?",
+            "widgets": [
+              {
+                "id": "text66b74ba5c27a8",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for Question:</strong></p><p style=\"text-align: justify;\">The pie chart represents the total revenues of five companies (A, B, C, D, E) in a certain year. The total revenues are Rs. 1800 crores.</p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/b3c74a73a9c8ef11bc31a5e9954d995f.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 400px;\"></p><p style=\"text-align: justify;\"><span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">The bar chart represents the number of employees in each of these companies.</span><br></p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/020168ad1887e72dae1691ec3d5e7ffe.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 350px;\"></p><p style=\"text-align: justify;\"><span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">Based on this information, solve the following questions</span></p><p style=\"text-align: justify;\"><span style=\"font-size: 1.6rem; letter-spacing: 0rem;\"><br></span></p><p style=\"text-align: justify;\">If Company C had a profit margin of 15%, how much profit did it make?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74ba5c27ea",
+              "description": {
+                "text": "Rs. 67.5 crores",
+                "widgets": [
+                  {
+                    "id": "text66b74ba5c27f1",
+                    "type": "text",
+                    "properties": {
+                      "html": "Rs. 67.5 crores"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74ba5c2800",
+              "description": {
+                "text": "Rs. 75 crores",
+                "widgets": [
+                  {
+                    "id": "text66b74ba5c2806",
+                    "type": "text",
+                    "properties": {
+                      "html": "Rs. 75 crores"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74ba5c2815",
+              "description": {
+                "text": "Rs. 60 crores",
+                "widgets": [
+                  {
+                    "id": "text66b74ba5c281c",
+                    "type": "text",
+                    "properties": {
+                      "html": "Rs. 60 crores"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74ba5c282a",
+              "description": {
+                "text": "Rs. 45 crores",
+                "widgets": [
+                  {
+                    "id": "text66b74ba5c2831",
+                    "type": "text",
+                    "properties": {
+                      "html": "Rs. 45 crores"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74ba5c27ea",
+              "text": "Rs. 67.5 crores",
+              "widgets": [
+                {
+                  "id": "text66b74ba5c27f1",
+                  "type": "text",
+                  "properties": {
+                    "html": "Rs. 67.5 crores"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br><span>Company C's revenue is 25% of Rs. 1800 crores, which\nis Rs. 450 crores. If the profit margin is 15%, then the profit is 15% of Rs.\n450 crores, which is Rs. 67.5 crores. So, the correct answer is A. Rs. 67.5\ncrores.</span><br></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74ba5c2887",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for Question:The pie chart represents the total revenues of five companies (A, B, C, D, E) in a certain year. The total revenues are Rs. 1800 crores.The bar chart represents the number of employees in each of these companies.Based on this information, solve the following questionsIf the proportion of employees in Company A who are from Delhi is 10% and it is the same as the proportion of employees in Company B who are from Delhi, how many employees in Company B are from Delhi?",
+            "widgets": [
+              {
+                "id": "text66b74ba5c288c",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for Question:</strong></p><p style=\"text-align: justify;\">The pie chart represents the total revenues of five companies (A, B, C, D, E) in a certain year. The total revenues are Rs. 1800 crores.</p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/b3c74a73a9c8ef11bc31a5e9954d995f.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 400px;\"></p><p style=\"text-align: justify;\"><span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">The bar chart represents the number of employees in each of these companies.</span><br></p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/020168ad1887e72dae1691ec3d5e7ffe.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 350px;\"></p><p style=\"text-align: justify;\"><span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">Based on this information, solve the following questions</span></p><p style=\"text-align: justify;\"><span style=\"font-size: 1.6rem; letter-spacing: 0rem;\"><br></span></p><p style=\"text-align: justify;\">If the proportion of employees in Company A who are from Delhi is 10% and it is the same as the proportion of employees in Company B who are from Delhi, how many employees in Company B are from Delhi?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74ba5c28ca",
+              "description": {
+                "text": "200",
+                "widgets": [
+                  {
+                    "id": "text66b74ba5c28db",
+                    "type": "text",
+                    "properties": {
+                      "html": "200"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74ba5c28ea",
+              "description": {
+                "text": "220",
+                "widgets": [
+                  {
+                    "id": "text66b74ba5c28f1",
+                    "type": "text",
+                    "properties": {
+                      "html": "220"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74ba5c2900",
+              "description": {
+                "text": "180",
+                "widgets": [
+                  {
+                    "id": "text66b74ba5c2906",
+                    "type": "text",
+                    "properties": {
+                      "html": "180"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74ba5c2915",
+              "description": {
+                "text": "240",
+                "widgets": [
+                  {
+                    "id": "text66b74ba5c291b",
+                    "type": "text",
+                    "properties": {
+                      "html": "240"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74ba5c28ca",
+              "text": "200",
+              "widgets": [
+                {
+                  "id": "text66b74ba5c28db",
+                  "type": "text",
+                  "properties": {
+                    "html": "200"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br><p><span>If 10% of Company B's employees\nare from Delhi, then the number of employees from Delhi is 10% of 2000, which\nis 200. So, the correct answer is A. 200.</span></p><br></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74ba5c2979",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for Question:The line graph represents the total sales (in thousands) of five different products (P1, P2, P3, P4, P5) in the months of June and December.The table represents the cost price of each product.Which product had the highest sales in the month of June?",
+            "widgets": [
+              {
+                "id": "text66b74ba5c297e",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for Question:</strong></p><p style=\"text-align: justify;\">The line graph represents the total sales (in thousands) of five different products (P1, P2, P3, P4, P5) in the months of June and December.</p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/eb329aae8740e28cf6c868b258751d74.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 400px;\"></p><p style=\"text-align: justify;\">The table represents the cost price of each product.</p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/b50e9f0d405c6fb845b87b323ffcf673.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 300px;\"></p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">Which product had the highest sales in the month of June?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74ba5c29bb",
+              "description": {
+                "text": "P1",
+                "widgets": [
+                  {
+                    "id": "text66b74ba5c29c2",
+                    "type": "text",
+                    "properties": {
+                      "html": "P1"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74ba5c29d1",
+              "description": {
+                "text": "P2",
+                "widgets": [
+                  {
+                    "id": "text66b74ba5c29d8",
+                    "type": "text",
+                    "properties": {
+                      "html": "P2"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74ba5c29e6",
+              "description": {
+                "text": "P3",
+                "widgets": [
+                  {
+                    "id": "text66b74ba5c29ed",
+                    "type": "text",
+                    "properties": {
+                      "html": "P3"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74ba5c29fc",
+              "description": {
+                "text": "P4",
+                "widgets": [
+                  {
+                    "id": "text66b74ba5c2a02",
+                    "type": "text",
+                    "properties": {
+                      "html": "P4"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74ba5c2a11",
+              "description": {
+                "text": "P5",
+                "widgets": [
+                  {
+                    "id": "text66b74ba5c2a17",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>P5</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74ba5c29e6",
+              "text": "P3",
+              "widgets": [
+                {
+                  "id": "text66b74ba5c29ed",
+                  "type": "text",
+                  "properties": {
+                    "html": "P3"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br><span>The product with the highest\nsales in June is P3. So, the correct answer is C. P3.</span><br></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74ba5c2a79",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for Question:The line graph represents the total sales (in thousands) of five different products (P1, P2, P3, P4, P5) in the months of June and December.The table represents the cost price of each product.What was the total sales of product P3 in June and December?",
+            "widgets": [
+              {
+                "id": "text66b74ba5c2a7d",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for Question:</strong></p><p style=\"text-align: justify;\">The line graph represents the total sales (in thousands) of five different products (P1, P2, P3, P4, P5) in the months of June and December.</p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/eb329aae8740e28cf6c868b258751d74.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 400px;\"></p><p style=\"text-align: justify;\">The table represents the cost price of each product.</p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/b50e9f0d405c6fb845b87b323ffcf673.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 300px;\"></p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">What was the total sales of product P3 in June and December?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74ba5c2aba",
+              "description": {
+                "text": "3600 units",
+                "widgets": [
+                  {
+                    "id": "text66b74ba5c2ac1",
+                    "type": "text",
+                    "properties": {
+                      "html": "3600 units"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74ba5c2ad0",
+              "description": {
+                "text": "3800 units",
+                "widgets": [
+                  {
+                    "id": "text66b74ba5c2ad7",
+                    "type": "text",
+                    "properties": {
+                      "html": "3800 units"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74ba5c2ae5",
+              "description": {
+                "text": "4000 units",
+                "widgets": [
+                  {
+                    "id": "text66b74ba5c2aec",
+                    "type": "text",
+                    "properties": {
+                      "html": "4000 units"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74ba5c2afa",
+              "description": {
+                "text": "4200 units",
+                "widgets": [
+                  {
+                    "id": "text66b74ba5c2b01",
+                    "type": "text",
+                    "properties": {
+                      "html": "4200 units"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74ba5c2aba",
+              "text": "3600 units",
+              "widgets": [
+                {
+                  "id": "text66b74ba5c2ac1",
+                  "type": "text",
+                  "properties": {
+                    "html": "3600 units"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br><span>The total sales of P3 in\nJune and December is 2200 + 1400 = 3600 units. So, the correct answer is A.\n3600 units.</span><br></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74ba5c2b64",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for Question:The line graph represents the total sales (in thousands) of five different products (P1, P2, P3, P4, P5) in the months of June and December.The table represents the cost price of each product.If the selling price of P4 is twice its cost price, what is the profit for product P4 in June and December?",
+            "widgets": [
+              {
+                "id": "text66b74ba5c2b68",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for Question:</strong></p><p style=\"text-align: justify;\">The line graph represents the total sales (in thousands) of five different products (P1, P2, P3, P4, P5) in the months of June and December.</p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/eb329aae8740e28cf6c868b258751d74.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 400px;\"></p><p style=\"text-align: justify;\">The table represents the cost price of each product.</p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/b50e9f0d405c6fb845b87b323ffcf673.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 300px;\"></p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">If the selling price of P4 is twice its cost price, what is the profit for product P4 in June and December?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74ba5c2ba7",
+              "description": {
+                "text": "Rs. 52500",
+                "widgets": [
+                  {
+                    "id": "text66b74ba5c2bad",
+                    "type": "text",
+                    "properties": {
+                      "html": "Rs. 52500"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74ba5c2bc0",
+              "description": {
+                "text": "Rs. 55000",
+                "widgets": [
+                  {
+                    "id": "text66b74ba5c2bc7",
+                    "type": "text",
+                    "properties": {
+                      "html": "Rs. 55000"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74ba5c2bd6",
+              "description": {
+                "text": "Rs. 57500",
+                "widgets": [
+                  {
+                    "id": "text66b74ba5c2bdd",
+                    "type": "text",
+                    "properties": {
+                      "html": "Rs. 57500"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74ba5c2bec",
+              "description": {
+                "text": "Rs. 60000",
+                "widgets": [
+                  {
+                    "id": "text66b74ba5c2bf3",
+                    "type": "text",
+                    "properties": {
+                      "html": "Rs. 60000"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74ba5c2bec",
+              "text": "Rs. 60000",
+              "widgets": [
+                {
+                  "id": "text66b74ba5c2bf3",
+                  "type": "text",
+                  "properties": {
+                    "html": "Rs. 60000"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br><span>The\ncost price of </span><span><v:shapetype>\n <v:stroke>\n <v:formulas>\n  <v:f>\n  <v:f>\n  <v:f>\n  <v:f>\n  <v:f>\n  <v:f>\n  <v:f>\n  <v:f>\n  <v:f>\n  <v:f>\n  <v:f>\n  <v:f>\n </v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:formulas>\n <v:path>\n <o:lock>\n</o:lock></v:path></v:stroke></v:shapetype><v:shape>\n <v:imagedata src=\"file:///C:/Users/TEST/AppData/Local/Temp/msohtmlclip1/01/clip_image001.png\">\n</v:imagedata></v:shape></span><span><span> </span>is Rs. 25 per unit. If the selling price is\ntwice the cost price, then the selling price is Rs. 50 per unit. The profit per\nunit is the selling price minus the cost price, which is Rs. 25 per unit. If\nthe total sales in June and December is </span><span><v:shape>\n <v:imagedata src=\"file:///C:/Users/TEST/AppData/Local/Temp/msohtmlclip1/01/clip_image002.png\">\n</v:imagedata></v:shape></span><span><span> </span>units, then the total profit is Rs. </span><span><v:shape>\n <v:imagedata src=\"file:///C:/Users/TEST/AppData/Local/Temp/msohtmlclip1/01/clip_image003.png\">\n</v:imagedata></v:shape></span><span><span> </span>Rs. 85000 . So, the correct answer is D. Rs.\n60000.</span><br></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74ba5c2c53",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for Question:The line graph represents the total sales (in thousands) of five different products (P1, P2, P3, P4, P5) in the months of June and December.The table represents the cost price of each product.Which product had the least sales in the month of December?",
+            "widgets": [
+              {
+                "id": "text66b74ba5c2c58",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for Question:</strong></p><p style=\"text-align: justify;\">The line graph represents the total sales (in thousands) of five different products (P1, P2, P3, P4, P5) in the months of June and December.</p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/eb329aae8740e28cf6c868b258751d74.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 400px;\"></p><p style=\"text-align: justify;\">The table represents the cost price of each product.</p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/b50e9f0d405c6fb845b87b323ffcf673.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 300px;\"></p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">Which product had the least sales in the month of December?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74ba5c2c95",
+              "description": {
+                "text": "P1",
+                "widgets": [
+                  {
+                    "id": "text66b74ba5c2c9c",
+                    "type": "text",
+                    "properties": {
+                      "html": "P1"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74ba5c2cab",
+              "description": {
+                "text": "P2",
+                "widgets": [
+                  {
+                    "id": "text66b74ba5c2cb2",
+                    "type": "text",
+                    "properties": {
+                      "html": "P2"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74ba5c2cca",
+              "description": {
+                "text": "P3",
+                "widgets": [
+                  {
+                    "id": "text66b74ba5c2cd1",
+                    "type": "text",
+                    "properties": {
+                      "html": "P3"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74ba5c2ce0",
+              "description": {
+                "text": "P4",
+                "widgets": [
+                  {
+                    "id": "text66b74ba5c2ce6",
+                    "type": "text",
+                    "properties": {
+                      "html": "P4"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74ba5c2cf5",
+              "description": {
+                "text": "P5",
+                "widgets": [
+                  {
+                    "id": "text66b74ba5c2cfc",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>P5</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74ba5c2cf5",
+              "text": "P5",
+              "widgets": [
+                {
+                  "id": "text66b74ba5c2cfc",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>P5</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br><span>The\nproduct with the least sales in December is P5. So, the correct answer is E.\nP5.</span><br></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74ba5c2d60",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for Question:The line graph represents the total sales (in thousands) of five different products (P1, P2, P3, P4, P5) in the months of June and December.The table represents the cost price of each product.If the selling price of P2 is 150% of its cost price, what is the profit for product P2 in June and December?",
+            "widgets": [
+              {
+                "id": "text66b74ba5c2d64",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for Question:</strong></p><p style=\"text-align: justify;\">The line graph represents the total sales (in thousands) of five different products (P1, P2, P3, P4, P5) in the months of June and December.</p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/eb329aae8740e28cf6c868b258751d74.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 400px;\"></p><p style=\"text-align: justify;\">The table represents the cost price of each product.</p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/b50e9f0d405c6fb845b87b323ffcf673.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 300px;\"></p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">If the selling price of P2 is 150% of its cost price, what is the profit for product P2 in June and December?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74ba5c2da2",
+              "description": {
+                "text": "Rs. 27000",
+                "widgets": [
+                  {
+                    "id": "text66b74ba5c2da9",
+                    "type": "text",
+                    "properties": {
+                      "html": "Rs. 27000"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74ba5c2db7",
+              "description": {
+                "text": "Rs. 30000",
+                "widgets": [
+                  {
+                    "id": "text66b74ba5c2dbe",
+                    "type": "text",
+                    "properties": {
+                      "html": "Rs. 30000"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74ba5c2dcd",
+              "description": {
+                "text": "Rs. 33000",
+                "widgets": [
+                  {
+                    "id": "text66b74ba5c2dd4",
+                    "type": "text",
+                    "properties": {
+                      "html": "Rs. 33000"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74ba5c2de2",
+              "description": {
+                "text": "Rs. 36000",
+                "widgets": [
+                  {
+                    "id": "text66b74ba5c2de9",
+                    "type": "text",
+                    "properties": {
+                      "html": "Rs. 36000"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74ba5c2da2",
+              "text": "Rs. 27000",
+              "widgets": [
+                {
+                  "id": "text66b74ba5c2da9",
+                  "type": "text",
+                  "properties": {
+                    "html": "Rs. 27000"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br><span>The cost price of P2 is Rs.\n15 per unit. If the selling price is 150% of the cost price, then the selling\nprice is Rs. 22.5 per unit. The profit per unit is the selling price minus the\ncost price, which is Rs. 7.5 per unit. If the total sales in June and December\nis 1800 + 1600 = 3400 units, then the total profit is Rs. 7.5 * 3400 = Rs.\n25500. So, the correct answer is A. Rs. 27000.</span><br></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        }
+      ]
+    }
+  ],
+  "submitted": true,
+  "updated": true,
+  "retryCount": 4,
+  "inlineFeedback": [],
+  "errors": [],
+  "success": true
+}

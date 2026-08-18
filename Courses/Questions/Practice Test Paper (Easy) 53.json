@@ -1,0 +1,1769 @@
+{
+  "submission": {
+    "anon_id": null,
+    "model": "assessment-submission",
+    "courseTitleId": "aptitude-teacher2",
+    "object_id": "66b74b997f809db0100951bd",
+    "assessmentId": "66b74b997f809db0100951bc",
+    "snapshotId": "66c0bf7ac44109967a070e95",
+    "questions": {
+      "section66b74b993fe2b": [
+        "mc66b74b993fe32",
+        "mc66b74b993fee8",
+        "mc66b74b993ffa7",
+        "mc66b74b9940050",
+        "mc66b74b99400f9"
+      ]
+    },
+    "certificateAnswers": [],
+    "certificateId": null,
+    "questionData": {
+      "mc66b74b993fe32": {
+        "deliveredOnTimestamp": 1786440515.664165,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74b993fee8": {
+        "deliveredOnTimestamp": 1786440515.664186,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74b993ffa7": {
+        "deliveredOnTimestamp": 1786440515.664199,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74b9940050": {
+        "deliveredOnTimestamp": 1786440515.66421,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74b99400f9": {
+        "deliveredOnTimestamp": 1786440515.66422,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      }
+    },
+    "answers": [
+      {
+        "blockId": "mc66b74b993fe32",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74b993fee8",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74b993ffa7",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74b9940050",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74b99400f9",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      }
+    ],
+    "submittedTimestamp": 1786440515.881972,
+    "status": "submitted",
+    "grading_status": "grading_status_graded",
+    "access": "public",
+    "actual_score": null,
+    "score": {
+      "maxScore": 5,
+      "value": 0,
+      "pass": false,
+      "passGrade": 50,
+      "points": 0
+    },
+    "source": {
+      "type": "unit"
+    },
+    "isDefining": true,
+    "isAdminAutoGradedSubmission": null,
+    "listOfNonConsentedBlocks": [],
+    "created": 1786440515.669048,
+    "modified": 1786440516.004195,
+    "id": "6a7aeb4397423cd11308e2c3",
+    "passed": false
+  },
+  "assessment": {
+    "title": "Practice Test Paper (Easy)",
+    "access": "public",
+    "type": "assessment",
+    "model": "assessmentSnapshot",
+    "description": "Foundational practice test paper featuring 5 fundamental aptitude and reasoning questions for quick revision.",
+    "isTimed": false,
+    "timerFor": "assessmentTimed",
+    "onTimerExpiration": "autoSubmit",
+    "assessmentTimeLimitInSeconds": 600,
+    "questionTimeLimitInSeconds": 60,
+    "standaloneShareEnabled": null,
+    "customUrl": null,
+    "usesCustomUrl": null,
+    "allowAnonymous": true,
+    "randomizeQuestionOptions": false,
+    "disallowPartialSubmissions": false,
+    "submissionDueDateEnabled": false,
+    "submissionDueDate": 1626257823,
+    "makeFeedbackAvailableAfterDateEnabled": false,
+    "makeFeedbackAvailableAfterDate": 0,
+    "customStylesEnabled": true,
+    "customStyles": {
+      "assessmentPage": {
+        "background": {
+          "type": "color",
+          "colorData": {
+            "code": "",
+            "class": "lw-body-bg"
+          }
+        },
+        "dividers": {
+          "top": {
+            "orientation": "top",
+            "divider": "none"
+          },
+          "bottom": {
+            "orientation": "bottom",
+            "divider": "none"
+          }
+        }
+      },
+      "option": {
+        "radioEffect": "scribble",
+        "checkboxEffect": "scribble",
+        "size": "small"
+      },
+      "assessment": {
+        "transition": "none",
+        "background": {
+          "type": "color",
+          "colorData": {
+            "code": "",
+            "class": ""
+          }
+        },
+        "width": "normal",
+        "timerTemplate": "rectangle"
+      },
+      "linearRating": {
+        "labels": {
+          "size": "small"
+        }
+      },
+      "question": {
+        "description": {
+          "background": {
+            "type": "color",
+            "colorData": {
+              "code": "",
+              "class": ""
+            }
+          },
+          "type": "p",
+          "size": "small"
+        },
+        "answers": {
+          "background": {
+            "type": "color",
+            "colorData": {
+              "code": "",
+              "class": ""
+            }
+          }
+        },
+        "requiredAsterisk": {
+          "colorData": {
+            "code": "#ff0000",
+            "class": ""
+          }
+        },
+        "errorMessages": {
+          "size": "verySmall",
+          "colorData": {
+            "code": "#ff0000",
+            "class": ""
+          }
+        }
+      },
+      "input": {
+        "size": "small",
+        "type": "solidDark"
+      },
+      "textarea": {
+        "size": "small",
+        "type": "solidDark"
+      },
+      "dropdown": {
+        "size": "small",
+        "type": "solidDark"
+      }
+    },
+    "submissionMode": "all",
+    "startingDate": 1626765704,
+    "startingDateEnabled": false,
+    "showOnlyFailedQuestionsOnRetry": false,
+    "retryEnabled": true,
+    "retryOnFailOnly": false,
+    "gradingMethod": null,
+    "maxTries": null,
+    "onlyWrongOnRetake": null,
+    "isAmendable": false,
+    "feedbackShowOnScreen": true,
+    "feedbackDownloadPDF": false,
+    "feedbackShowInline": null,
+    "feedbackQuestionList": "all-questions",
+    "feedbackShowQuestionScore": true,
+    "feedbackShowFeedback": true,
+    "feedbackShowNumbering": false,
+    "feedbackShowSectionTitles": false,
+    "feedbackShowUserAnswers": true,
+    "feedbackShowCorrectAnswers": true,
+    "feedbackShowAnswerCorrectness": true,
+    "displayInlineFeedbackEnabled": null,
+    "displayBackButtonWhenSubmissionPerBlock": null,
+    "feedbackShowSectionResultSummary": false,
+    "askConfirmationBeforeSubmit": true,
+    "hasCustomConfirmationBeforeSubmitText": false,
+    "customConfirmationBeforeSubmitText": "Are you sure you want to submit the questionnaire?",
+    "customConfirmationBeforeSubmitTexts": {
+      "title": "Submit Assessment?",
+      "baseConfirmationMessage": "Are you sure you want to submit the questionnaire?",
+      "unansweredNotice": "You have not answered {X} questions."
+    },
+    "amendResubmissionMinutes": 30,
+    "passingGrade": null,
+    "navigationMode": "per-block",
+    "conditionalBlocks": {
+      "introContent": {
+        "id": "content66b74b993fd83",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66b74b993fd8e",
+              "type": "text",
+              "insertedAsWidget": true,
+              "properties": {
+                "html": "Divisibility PAPER LEVEL-1",
+                "alignment": "center",
+                "customStyle": true,
+                "type": "h2",
+                "size": "normal"
+              }
+            },
+            {
+              "id": "text66b74b993fd9f",
+              "type": "text",
+              "properties": {
+                "html": "Self-assess your knowledge. Express yourself and get feedback from our instructors.",
+                "customStyle": true,
+                "alignment": "center"
+              }
+            },
+            {
+              "id": "spacer66b74b993fda9",
+              "type": "spacer",
+              "properties": {
+                "height": 20,
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            },
+            {
+              "id": "button66b74b993fdb5",
+              "type": "button",
+              "properties": {
+                "buttonLabel": "<span>Ready to start</span>",
+                "buttonSize": "normal",
+                "buttonType": "solidBrand",
+                "alignment": "center",
+                "linkData": {
+                  "linkType": "goToFirst"
+                },
+                "iconColorData": {
+                  "code": "",
+                  "class": ""
+                },
+                "iconDisplay": false,
+                "iconSize": 26,
+                "iconClassName": " fas fa-angle-right",
+                "iconPosition": "right"
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "variables": {
+            "conditionalBlocks_introContent_blockData_widgets_0": [],
+            "conditionalBlocks_introContent_blockData_widgets_1": []
+          }
+        }
+      },
+      "submissionStartingDate": {
+        "id": "content66b74b993fdd6",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66b74b993fdda",
+              "type": "text",
+              "properties": {
+                "html": "Sorry but this assessment hasn't started yet."
+              }
+            },
+            {
+              "id": "date66b74b993fde1",
+              "type": "date",
+              "properties": {
+                "value": ""
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "displayConditions": ["startingDate"]
+        }
+      },
+      "submissionDueDate": {
+        "id": "content66b74b993fded",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66b74b993fdf1",
+              "type": "text",
+              "properties": {
+                "html": "Sorry but this assessment date is due."
+              }
+            },
+            {
+              "id": "date66b74b993fdf8",
+              "type": "date",
+              "properties": {
+                "value": ""
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "displayConditions": ["dateIsDue"]
+        }
+      },
+      "outroContent": {
+        "id": "content66b74b993fe04",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "userResults66b74b993fe08",
+              "type": "userResults",
+              "properties": {
+                "layout": "template2",
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            },
+            {
+              "id": "feedback66b74b993fe15",
+              "type": "feedback",
+              "properties": []
+            },
+            {
+              "id": "outroActions66b74b993fe1b",
+              "type": "outroActions",
+              "properties": {
+                "layout": "",
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true
+        }
+      }
+    },
+    "systemSections": null,
+    "sections": [
+      {
+        "id": "section66b74b993fe2b",
+        "title": "",
+        "type": "section",
+        "navigationMode": "per-block",
+        "blocks": [
+          {
+            "id": "mc66b74b993fe32",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74b993fe38",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">What will be the least value of x, such that the number 24672x6 will be divisible by 8?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74b993fe4a",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74b993fe51",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74b993fe58",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74b993fe82",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b993fe89",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>1</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b993fe99",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b993fea0",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>5</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b993feaf",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b993feb5",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>9</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b993fec4",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b993fecb",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>7</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74b993fee8",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74b993feed",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">Which of the following number will be divisible by 13?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74b993ff13",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74b993ff1a",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74b993ff21",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74b993ff40",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b993ff47",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>47205</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b993ff56",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b993ff5d",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>32318</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b993ff6b",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b993ff72",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>35963</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b993ff80",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b993ff87",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>64650</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_1_blockData_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_1": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74b993ffa7",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74b993ffac",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">What will be the value of w, if 94w59 is divisible by 11?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74b993ffbd",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74b993ffc4",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74b993ffcb",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74b993ffea",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b993fff0",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>1</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b993ffff",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b9940006",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>2</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b9940014",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b994001b",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>5</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b994002a",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b9940030",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>8</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_2_blockData_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_2": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74b9940050",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74b9940055",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">Which of the following number is divisible by 36?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74b9940066",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74b994006d",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74b9940074",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74b9940093",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b994009a",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>14459</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b99400a9",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b99400af",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>74420</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b99400be",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b99400c4",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>55935</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b99400d3",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b99400d9",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>28404</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_3_blockData_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74b99400f9",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74b99400fe",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">What will be the possible values of q, such that 10968q will be divisible by 7?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74b994010e",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74b9940115",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74b994011c",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74b994013b",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b9940141",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>5</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b9940150",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b9940157",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>9</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b9940165",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b994016c",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>3</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b994017b",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b9940190",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>6</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_4_blockData_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4": []
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "availabilityStatus": null,
+    "autoNavigationEnabled": false,
+    "displayBackButtonWhenNavigationPerBlock": true,
+    "saveAndResumeLaterEnabled": null,
+    "tagsAddedOnCompletion": [],
+    "tagsAddedOnPass": [],
+    "sendAnonymousSubmissionsToEmailLeads": false,
+    "afterSubmitActionEnabled": null,
+    "afterSubmitActionProperties": null,
+    "showWizardOnNextEdit": false,
+    "revisitAfterSubmissionAction": null,
+    "navigationTemplate": "HorizontalSpacedBetweenNavigationTemplate",
+    "learnerSearchBarEnabled": true,
+    "learnerUnansweredQuestionsEnabled": true,
+    "learnerFavouriteQuestionEnabled": true,
+    "learnerCompletionProgressEnabled": true,
+    "learnerShowIndexOfQuestionsEnabled": false,
+    "learnerTimeNotificationsEnabled": false,
+    "learnerAllowInterruptionsEnabled": true,
+    "learnerAllowInterruptionsTimeoutInMinutes": 30,
+    "learnerReclaimTryOnInterruptionTimeoutEnabled": false,
+    "learnerAskBeforeContinueToSaved": true,
+    "learnerAutoSaveEnabled": null,
+    "spellcheckDisabled": null,
+    "showPartialScoreOnSubmission": true,
+    "deliverableQuestionsSubsetType": "all",
+    "questionRandomizationType": "none",
+    "serveQuestionsBasedOnPreviousSubmission": null,
+    "scoringDisabled": false,
+    "isSelfAssessment": false,
+    "useDefaultCertificateTemplate": null,
+    "certificateTemplate": null,
+    "certificateSocialShare": null,
+    "migrationData": null,
+    "useAssessmentPassingGradeForOpenEndedCorrectness": true,
+    "openEndedCorrectnessPassingGrade": null,
+    "showScorePercentage": null,
+    "showScorePoints": null,
+    "showScoreCorrectAnswers": null,
+    "editorBehaviorSettings": null,
+    "manualReviewEnabled": null,
+    "resultsSummary": {
+      "enabled": true,
+      "showStatusIcon": true,
+      "showStatusText": true,
+      "showScorePercentage": true,
+      "showScorePoints": true,
+      "showScoreCorrectAnswers": false,
+      "showTimeTakenToComplete": true,
+      "showDateSubmitted": true,
+      "showAttemptCount": true
+    },
+    "meta": null,
+    "submissionsCount": 1563,
+    "fromMarketplace": null,
+    "aiFeedbackEnabled": null,
+    "numberOfFeedbackQuestions": null,
+    "created": 1723288473.663481,
+    "modified": 1723907962.681463,
+    "contentHash": "f694a01dc7ec619434257ebe5128437bf93f460d55be29bb4a8014110a9cdcaa",
+    "id": "66b74b997f809db0100951bc",
+    "objectType": "assessment",
+    "isEditBlockedDueToSync": false,
+    "variables": {
+      "submission": {
+        "self": {
+          "score": 0,
+          "points": 0,
+          "total_points": 5,
+          "correct_answers": 0,
+          "total_questions": 5,
+          "time_spent": "00:00:00",
+          "date_submitted": "11/08/26",
+          "attempt_count": 4,
+          "max_tries": null,
+          "pass_grade": 50,
+          "time_spent_seconds": 0,
+          "raw_start_date": 1786440515.669048
+        }
+      },
+      "school": {
+        "name": "Apna College",
+        "url": "www.apnacollege.in",
+        "description": "The most loved coding community of India ❤️"
+      },
+      "user": {
+        "username": "ram",
+        "email": "p4542639@gmail.com",
+        "cf_phonenumber": "7666690798"
+      }
+    }
+  },
+  "reclaimedTry": false,
+  "feedback": [
+    {
+      "title": "",
+      "id": "section66b74b993fe2b",
+      "blocks": [
+        {
+          "id": "mc66b74b993fe32",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "What will be the least value of x, such that the number 24672x6 will be divisible by 8?",
+            "widgets": [
+              {
+                "id": "text66b74b993fe38",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">What will be the least value of x, such that the number 24672x6 will be divisible by 8?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74b993fe82",
+              "description": {
+                "text": "1",
+                "widgets": [
+                  {
+                    "id": "text66b74b993fe89",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>1</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b993fe99",
+              "description": {
+                "text": "5",
+                "widgets": [
+                  {
+                    "id": "text66b74b993fea0",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>5</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b993feaf",
+              "description": {
+                "text": "9",
+                "widgets": [
+                  {
+                    "id": "text66b74b993feb5",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>9</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b993fec4",
+              "description": {
+                "text": "7",
+                "widgets": [
+                  {
+                    "id": "text66b74b993fecb",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>7</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74b993fe82",
+              "text": "1",
+              "widgets": [
+                {
+                  "id": "text66b74b993fe89",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>1</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>Using divisibility rule of 8, last 3 digits of \nthe number= 2x6 <br>Possible values of x, simply by dividing last \n3 digits by 8 – we got <br>X must be = 1,5,9…………..least possible \nvalue is = 1</p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74b993fee8",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Which of the following number will be divisible by 13?",
+            "widgets": [
+              {
+                "id": "text66b74b993feed",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">Which of the following number will be divisible by 13?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74b993ff40",
+              "description": {
+                "text": "47205",
+                "widgets": [
+                  {
+                    "id": "text66b74b993ff47",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>47205</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b993ff56",
+              "description": {
+                "text": "32318",
+                "widgets": [
+                  {
+                    "id": "text66b74b993ff5d",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>32318</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b993ff6b",
+              "description": {
+                "text": "35963",
+                "widgets": [
+                  {
+                    "id": "text66b74b993ff72",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>35963</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b993ff80",
+              "description": {
+                "text": "64650",
+                "widgets": [
+                  {
+                    "id": "text66b74b993ff87",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>64650</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74b993ff56",
+              "text": "32318",
+              "widgets": [
+                {
+                  "id": "text66b74b993ff5d",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>32318</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>Using divisibility rule of 13 i.e making pair \nof 3 digits from the end and taking their \ndifference –\n<br>(A) …….. 205-47 = 158…….. not divisible by 13\n<br>(B) ……...318-32= 286 ……. Divisible by 13, <br>so \nnumber of option (B) i.e. 32318 will be \ndivisible by 13.</p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74b993ffa7",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "What will be the value of w, if 94w59 is divisible by 11?",
+            "widgets": [
+              {
+                "id": "text66b74b993ffac",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">What will be the value of w, if 94w59 is divisible by 11?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74b993ffea",
+              "description": {
+                "text": "1",
+                "widgets": [
+                  {
+                    "id": "text66b74b993fff0",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>1</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b993ffff",
+              "description": {
+                "text": "2",
+                "widgets": [
+                  {
+                    "id": "text66b74b9940006",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>2</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b9940014",
+              "description": {
+                "text": "5",
+                "widgets": [
+                  {
+                    "id": "text66b74b994001b",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>5</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b994002a",
+              "description": {
+                "text": "8",
+                "widgets": [
+                  {
+                    "id": "text66b74b9940030",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>8</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74b993ffff",
+              "text": "2",
+              "widgets": [
+                {
+                  "id": "text66b74b9940006",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>2</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>using the divisibility of 11\n<br>Taking alternate digit’s sum and finally \ntheir difference –\n<br>(9+w+9) ~ (4+5)……… must be divisible \nby 11 or 0\n<br>Here 0 is not possible, so (18+w) ~ (9)= \nmultiple of 11\n<br>If, we put 2, difference will be 11 i.e. \ndivisible by 11\n<br>Therefore, correct answer is Option (B) \n……..2</p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74b9940050",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Which of the following number is divisible by 36?",
+            "widgets": [
+              {
+                "id": "text66b74b9940055",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">Which of the following number is divisible by 36?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74b9940093",
+              "description": {
+                "text": "14459",
+                "widgets": [
+                  {
+                    "id": "text66b74b994009a",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>14459</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b99400a9",
+              "description": {
+                "text": "74420",
+                "widgets": [
+                  {
+                    "id": "text66b74b99400af",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>74420</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b99400be",
+              "description": {
+                "text": "55935",
+                "widgets": [
+                  {
+                    "id": "text66b74b99400c4",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>55935</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b99400d3",
+              "description": {
+                "text": "28404",
+                "widgets": [
+                  {
+                    "id": "text66b74b99400d9",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>28404</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74b99400d3",
+              "text": "28404",
+              "widgets": [
+                {
+                  "id": "text66b74b99400d9",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>28404</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>we can break 36 in 4*9, now we know \ndivisibility rule of 4 and 9 both.\n<br>Option (A) and Option (C) got \neliminated……. As they failed to satisfy divisibility rule of 4 i.e. last two digits of \nthe number should be divisible by 4\n<br>Out of option (B) and option (D), both \nsatisfies divisibility rule of 4, option (B) \ngot eliminated as it fails to satisfy \ndivisibility rule of 9 i.e. digital sum of that \nnumber should be 9 or 0\n<br>So, the correct answer is option (D) \n28404…. Which satisfies both 4 & 9’s \ndivisibility rule.</p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74b99400f9",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "What will be the possible values of q, such that 10968q will be divisible by 7?",
+            "widgets": [
+              {
+                "id": "text66b74b99400fe",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">What will be the possible values of q, such that 10968q will be divisible by 7?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74b994013b",
+              "description": {
+                "text": "5",
+                "widgets": [
+                  {
+                    "id": "text66b74b9940141",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>5</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b9940150",
+              "description": {
+                "text": "9",
+                "widgets": [
+                  {
+                    "id": "text66b74b9940157",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>9</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b9940165",
+              "description": {
+                "text": "3",
+                "widgets": [
+                  {
+                    "id": "text66b74b994016c",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>3</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b994017b",
+              "description": {
+                "text": "6",
+                "widgets": [
+                  {
+                    "id": "text66b74b9940190",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>6</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74b9940165",
+              "text": "3",
+              "widgets": [
+                {
+                  "id": "text66b74b994016c",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>3</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>Using divisibility rule of 7 i.e. making pair \nof 3 digits from the end of the number and \nthen taking difference between them –\n<br>(68q – 109)………… must be divisible by 7.\n<br>Now, just using four options to find the \noptimum value of q, we got <br>Option (C) 3 ……….. (683-109) = 574, \nwhich is divisible by 7\n<br>Therefore, correct answer is option (C) …. 3</p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        }
+      ]
+    }
+  ],
+  "submitted": true,
+  "updated": true,
+  "retryCount": 4,
+  "inlineFeedback": [],
+  "errors": [],
+  "success": true
+}

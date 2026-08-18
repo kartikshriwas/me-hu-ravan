@@ -1,0 +1,1763 @@
+{
+  "submission": {
+    "anon_id": null,
+    "model": "assessment-submission",
+    "courseTitleId": "aptitude-qs-library",
+    "object_id": "66a23e3d3a4cef02da0f4da8",
+    "assessmentId": "66a23e3d3a4cef02da0f4da7",
+    "snapshotId": "66bcf090175cfc65da04b1a3",
+    "questions": {
+      "section66a23e3ca0055": [
+        "mc1721990470774_278",
+        "mc1721990583844_387",
+        "mc1721990583588_366",
+        "mc1721990583356_352",
+        "mc1721990583172_347"
+      ]
+    },
+    "certificateAnswers": [],
+    "certificateId": null,
+    "questionData": {
+      "mc1721990470774_278": {
+        "deliveredOnTimestamp": 1786440420.799172,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721990583844_387": {
+        "deliveredOnTimestamp": 1786440420.799209,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721990583588_366": {
+        "deliveredOnTimestamp": 1786440420.799226,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721990583356_352": {
+        "deliveredOnTimestamp": 1786440420.799239,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721990583172_347": {
+        "deliveredOnTimestamp": 1786440420.799253,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      }
+    },
+    "answers": [
+      {
+        "blockId": "mc1721990470774_278",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721990583844_387",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721990583588_366",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721990583356_352",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721990583172_347",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      }
+    ],
+    "submittedTimestamp": 1786440421.018805,
+    "status": "submitted",
+    "grading_status": "grading_status_no_grade",
+    "access": "public",
+    "actual_score": null,
+    "score": [],
+    "source": {
+      "type": "unit"
+    },
+    "isDefining": true,
+    "isAdminAutoGradedSubmission": null,
+    "listOfNonConsentedBlocks": [],
+    "created": 1786440420.803904,
+    "modified": 1786440421.108533,
+    "id": "6a7aeae4ab06cd11e406cc4d",
+    "passed": null
+  },
+  "assessment": {
+    "title": "Practice Test Paper (Easy)",
+    "access": "public",
+    "type": "assessment",
+    "model": "assessmentSnapshot",
+    "description": "Foundational practice test paper featuring 5 fundamental aptitude and reasoning questions for quick revision.",
+    "isTimed": false,
+    "timerFor": "assessmentTimed",
+    "onTimerExpiration": "autoSubmit",
+    "assessmentTimeLimitInSeconds": 600,
+    "questionTimeLimitInSeconds": 60,
+    "standaloneShareEnabled": null,
+    "customUrl": null,
+    "usesCustomUrl": null,
+    "allowAnonymous": true,
+    "randomizeQuestionOptions": false,
+    "disallowPartialSubmissions": false,
+    "submissionDueDateEnabled": false,
+    "submissionDueDate": 1626257823,
+    "makeFeedbackAvailableAfterDateEnabled": false,
+    "makeFeedbackAvailableAfterDate": 0,
+    "customStylesEnabled": true,
+    "customStyles": {
+      "assessmentPage": {
+        "background": {
+          "type": "color",
+          "colorData": {
+            "code": "",
+            "class": "lw-body-bg"
+          }
+        },
+        "dividers": {
+          "top": {
+            "orientation": "top",
+            "divider": "none"
+          },
+          "bottom": {
+            "orientation": "bottom",
+            "divider": "none"
+          }
+        }
+      },
+      "option": {
+        "radioEffect": "scribble",
+        "checkboxEffect": "scribble",
+        "size": "small"
+      },
+      "assessment": {
+        "transition": "none",
+        "background": {
+          "type": "color",
+          "colorData": {
+            "code": "",
+            "class": ""
+          }
+        },
+        "width": "normal",
+        "timerTemplate": "rectangle"
+      },
+      "linearRating": {
+        "labels": {
+          "size": "small"
+        }
+      },
+      "question": {
+        "description": {
+          "background": {
+            "type": "color",
+            "colorData": {
+              "code": "",
+              "class": ""
+            }
+          },
+          "type": "p",
+          "size": "small"
+        },
+        "answers": {
+          "background": {
+            "type": "color",
+            "colorData": {
+              "code": "",
+              "class": ""
+            }
+          }
+        },
+        "requiredAsterisk": {
+          "colorData": {
+            "code": "#ff0000",
+            "class": ""
+          }
+        },
+        "errorMessages": {
+          "size": "verySmall",
+          "colorData": {
+            "code": "#ff0000",
+            "class": ""
+          }
+        }
+      },
+      "input": {
+        "size": "small",
+        "type": "solidDark"
+      },
+      "textarea": {
+        "size": "small",
+        "type": "solidDark"
+      },
+      "dropdown": {
+        "size": "small",
+        "type": "solidDark"
+      }
+    },
+    "submissionMode": "all",
+    "startingDate": 1626765704,
+    "startingDateEnabled": false,
+    "showOnlyFailedQuestionsOnRetry": false,
+    "retryEnabled": true,
+    "retryOnFailOnly": false,
+    "gradingMethod": null,
+    "maxTries": null,
+    "onlyWrongOnRetake": null,
+    "isAmendable": false,
+    "feedbackShowOnScreen": false,
+    "feedbackDownloadPDF": false,
+    "feedbackShowInline": true,
+    "feedbackQuestionList": "all-questions",
+    "feedbackShowQuestionScore": false,
+    "feedbackShowFeedback": true,
+    "feedbackShowNumbering": false,
+    "feedbackShowSectionTitles": false,
+    "feedbackShowUserAnswers": true,
+    "feedbackShowCorrectAnswers": true,
+    "feedbackShowAnswerCorrectness": true,
+    "displayInlineFeedbackEnabled": true,
+    "displayBackButtonWhenSubmissionPerBlock": true,
+    "feedbackShowSectionResultSummary": false,
+    "askConfirmationBeforeSubmit": false,
+    "hasCustomConfirmationBeforeSubmitText": false,
+    "customConfirmationBeforeSubmitText": "Are you sure you want to submit the questionnaire?",
+    "customConfirmationBeforeSubmitTexts": {
+      "title": "Submit Assessment?",
+      "baseConfirmationMessage": "Are you sure you want to submit the questionnaire?",
+      "unansweredNotice": "You have not answered {X} questions."
+    },
+    "amendResubmissionMinutes": 30,
+    "passingGrade": null,
+    "navigationMode": "per-block",
+    "conditionalBlocks": {
+      "introContent": {
+        "id": "content66a23e3c9ff89",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66a23e3c9ff93",
+              "type": "text",
+              "insertedAsWidget": true,
+              "properties": {
+                "html": "Games PAPER LEVEL-1",
+                "alignment": "center",
+                "customStyle": true,
+                "type": "h2",
+                "size": "normal"
+              }
+            },
+            {
+              "id": "text66a23e3c9ffa9",
+              "type": "text",
+              "properties": {
+                "html": "<div><span style=\"font-size: 1.7rem; letter-spacing: 0rem;\">Self-assess your knowledge. Express yourself and get feedback from our instructors.</span><br></div>",
+                "customStyle": true,
+                "alignment": "center"
+              }
+            },
+            {
+              "id": "spacer66a23e3c9ffb5",
+              "type": "spacer",
+              "properties": {
+                "height": 25,
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            },
+            {
+              "id": "button66a23e3c9ffc4",
+              "type": "button",
+              "properties": {
+                "buttonLabel": "<span>Ready to start</span>",
+                "buttonSize": "normal",
+                "buttonType": "solidBrand",
+                "alignment": "center",
+                "linkData": {
+                  "linkType": "goToFirst"
+                },
+                "iconColorData": {
+                  "code": "",
+                  "class": ""
+                },
+                "iconDisplay": false,
+                "iconSize": 26,
+                "iconClassName": " fas fa-angle-right",
+                "iconPosition": "right"
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "variables": {
+            "conditionalBlocks_introContent_blockData_widgets_0": []
+          }
+        }
+      },
+      "submissionStartingDate": {
+        "id": "content66a23e3c9ffec",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66a23e3c9fff1",
+              "type": "text",
+              "properties": {
+                "html": "Sorry but this assessment hasn't started yet."
+              }
+            },
+            {
+              "id": "date66a23e3c9fff9",
+              "type": "date",
+              "properties": {
+                "value": ""
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "displayConditions": ["startingDate"]
+        }
+      },
+      "submissionDueDate": {
+        "id": "content66a23e3ca0008",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66a23e3ca000d",
+              "type": "text",
+              "properties": {
+                "html": "Sorry but this assessment date is due."
+              }
+            },
+            {
+              "id": "date66a23e3ca0015",
+              "type": "date",
+              "properties": {
+                "value": ""
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "displayConditions": ["dateIsDue"]
+        }
+      },
+      "outroContent": {
+        "id": "content66a23e3ca0024",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "userResults66a23e3ca0029",
+              "type": "userResults",
+              "properties": {
+                "layout": "template2",
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            },
+            {
+              "id": "feedback66a23e3ca0038",
+              "type": "feedback",
+              "properties": []
+            },
+            {
+              "id": "outroActions66a23e3ca0040",
+              "type": "outroActions",
+              "properties": {
+                "layout": "",
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true
+        }
+      }
+    },
+    "systemSections": null,
+    "sections": [
+      {
+        "id": "section66a23e3ca0055",
+        "title": "",
+        "type": "section",
+        "navigationMode": "per-block",
+        "blocks": [
+          {
+            "id": "mc1721990470774_278",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721990470774_281",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">There are some coins kept on a table. Ramesh and Suresh decide to play a game. Each one of them, in turn, can pick up any number of coins between 3 and 7(both included). However, if the number of coins available is less than 3, the last person will have to pick them all. The person who makes the last move loses the game. Both of them play intelligently to maximize their chances of winning.\n</p><div style=\"text-align: justify;\">After Suresh’s turn there are 102 coins left on the table. Then in how many cases the coins picked by Suresh ensures his victory irrespective of Ramesh’s moves?</div>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721990470774_270",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721990470774_280",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721990470774_275",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721990470774_272",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721990470774_273",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>5</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721990470774_274",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721990470774_282",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>4</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721990470774_276",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721990470774_279",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>3</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721990470774_271",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721990470774_277",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>2</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_1": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": []
+              }
+            }
+          },
+          {
+            "id": "mc1721990583844_387",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721990583844_381",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">There are some coins kept on a table. Ramesh and Suresh decide to play a game. Each one of them, in turn, can pick up any number of coins between 3 and 7(both included). However, if the number of coins available is less than 3, the last person will have to pick them all. The person who makes the last move loses the game. Both of them play intelligently to maximize their chances of winning.\n</p><div style=\"text-align: justify;\">&nbsp;If there are ‘‘k’ number of coins on the table (10 &lt; k &lt; 60) and Suresh starts the game, for how many values of ‘‘k’ will Ramesh definitely win irrespective of what Suresh Picks?</div>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721990583844_385",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721990583844_378",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721990583844_383",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721990583844_379",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721990583844_382",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>21</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721990583844_384",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721990583844_376",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>15</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721990583844_386",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721990583844_377",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>20</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721990583844_380",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721990583844_388",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>18</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_1": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_1_blockData_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_1": []
+              }
+            }
+          },
+          {
+            "id": "mc1721990583588_366",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721990583588_373",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">Sportistan, the new country for sportsmen has started a knock-out tournament for all tennis players. The tournament will happen in rounds with initially 128 players participating in the first round. The players are ranked 1 to 128 in descending order of their capabilities with 1 being the best player and 128 being the worst player of the tournament. While scheduling matches “Top meets Bottom” policy is followed. In the first round, Player ranked 1 will play with Player ranked 128 in Match 1, Player Ranked 2 will play with Player ranked 127 in Match 2, Player ranked 3 will play with Player ranked 126 IN Match 3, and so on. The player who loses gets eliminated and the winners move to the 2nd Round. In this round winner of Match 1 and the winner of Match 64 from the first round are paired, the winner of Match 2 and Match 63 from the first round are paired, and so on. This processing continues till only one player emerges as the champion. The round with 8 players and 4 matches is known as the Quarter-Final round and the next two rounds are Semi-Final and Final. If in any match a lower-ranked player defeats a higher-ranked player, that will be known as an “upset”.\n</p><div style=\"text-align: justify;\">If a player ranked 73 reaches Quarter final, which one of the following cannot be his opponent in the Quarter Final match?</div>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721990583588_375",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721990583588_364",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721990583588_371",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721990583588_370",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721990583588_368",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>48</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721990583588_374",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721990583588_372",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>96</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721990583588_367",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721990583588_369",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>113</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721990583588_363",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721990583588_365",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>127</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_1": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_2_blockData_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_2": []
+              }
+            }
+          },
+          {
+            "id": "mc1721990583356_352",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721990583356_359",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">In the college fest, informal events were held in which teams of two were made and they had to answer questions about each other relating to different topics like personal choices, profession-related, etc. There were a total of five rounds. In each round, the lowest-scoring team was eliminated with scores ranging from 2-20. In case of a tie, the team with the lowest cumulative score is eliminated. The final winner is chosen on the basis of the total score from the two teams surviving in the last round. The table shows the scores scored by each team, with some missing entries.</p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/11b98b47b8575e5885ce717afe6d85ee.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 500px;\"></p><p style=\"text-align: justify;\">Which round had a maximum value of the total score of the first four teams?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721990583356_357",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721990583356_354",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721990583356_351",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721990583356_356",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721990583356_362",
+                        "type": "text",
+                        "properties": {
+                          "html": "Round 1"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721990583356_361",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721990583356_350",
+                        "type": "text",
+                        "properties": {
+                          "html": "Round 2"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721990583356_355",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721990583356_353",
+                        "type": "text",
+                        "properties": {
+                          "html": "Round 3"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721990583356_360",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721990583356_358",
+                        "type": "text",
+                        "properties": {
+                          "html": "Cannot be determined"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_1": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_3_blockData_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3": []
+              }
+            }
+          },
+          {
+            "id": "mc1721990583172_347",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721990583172_349",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">40% of the students in a college play basketball, 34% of the students play tennis and the number of students who play both the games is 234. The number of students who play neither basketball nor tennis is 52%. Determine the student population in the college.</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721990583172_345",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721990583172_338",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721990583172_342",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721990583172_348",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721990583172_337",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>800</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721990583172_340",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721990583172_346",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>1050</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721990583172_344",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721990583172_343",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>900</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721990583172_341",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721990583172_339",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>850</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_1": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_4_blockData_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4": []
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "availabilityStatus": null,
+    "autoNavigationEnabled": false,
+    "displayBackButtonWhenNavigationPerBlock": true,
+    "saveAndResumeLaterEnabled": null,
+    "tagsAddedOnCompletion": [],
+    "tagsAddedOnPass": [],
+    "sendAnonymousSubmissionsToEmailLeads": false,
+    "afterSubmitActionEnabled": null,
+    "afterSubmitActionProperties": null,
+    "showWizardOnNextEdit": false,
+    "revisitAfterSubmissionAction": null,
+    "navigationTemplate": "HorizontalSpacedBetweenNavigationTemplate",
+    "learnerSearchBarEnabled": true,
+    "learnerUnansweredQuestionsEnabled": true,
+    "learnerFavouriteQuestionEnabled": true,
+    "learnerCompletionProgressEnabled": true,
+    "learnerShowIndexOfQuestionsEnabled": false,
+    "learnerTimeNotificationsEnabled": false,
+    "learnerAllowInterruptionsEnabled": true,
+    "learnerAllowInterruptionsTimeoutInMinutes": 30,
+    "learnerReclaimTryOnInterruptionTimeoutEnabled": false,
+    "learnerAskBeforeContinueToSaved": true,
+    "learnerAutoSaveEnabled": null,
+    "spellcheckDisabled": null,
+    "showPartialScoreOnSubmission": true,
+    "deliverableQuestionsSubsetType": "all",
+    "questionRandomizationType": "none",
+    "serveQuestionsBasedOnPreviousSubmission": null,
+    "scoringDisabled": true,
+    "isSelfAssessment": true,
+    "useDefaultCertificateTemplate": null,
+    "certificateTemplate": null,
+    "certificateSocialShare": null,
+    "migrationData": null,
+    "useAssessmentPassingGradeForOpenEndedCorrectness": true,
+    "openEndedCorrectnessPassingGrade": null,
+    "showScorePercentage": null,
+    "showScorePoints": null,
+    "showScoreCorrectAnswers": null,
+    "editorBehaviorSettings": null,
+    "manualReviewEnabled": false,
+    "resultsSummary": {
+      "enabled": true,
+      "showStatusIcon": true,
+      "showStatusText": true,
+      "showScorePercentage": true,
+      "showScorePoints": true,
+      "showScoreCorrectAnswers": true,
+      "showTimeTakenToComplete": true,
+      "showDateSubmitted": true,
+      "showAttemptCount": true
+    },
+    "meta": null,
+    "submissionsCount": 151,
+    "fromMarketplace": null,
+    "aiFeedbackEnabled": null,
+    "numberOfFeedbackQuestions": null,
+    "created": 1721908797.068559,
+    "modified": 1723658384.910147,
+    "contentHash": "9c32b34214d04363c6d9f43e5b59d22877c5770e5bdeca0f26fb45fc0918f9db",
+    "id": "66a23e3d3a4cef02da0f4da7",
+    "objectType": "assessment",
+    "isEditBlockedDueToSync": false,
+    "variables": {
+      "submission": {
+        "self": {
+          "score": null,
+          "points": null,
+          "total_points": null,
+          "correct_answers": null,
+          "total_questions": 5,
+          "time_spent": "00:00:01",
+          "date_submitted": "11/08/26",
+          "attempt_count": 3,
+          "max_tries": null,
+          "pass_grade": null,
+          "time_spent_seconds": 1,
+          "raw_start_date": 1786440420.803904
+        }
+      },
+      "school": {
+        "name": "Apna College",
+        "url": "www.apnacollege.in",
+        "description": "The most loved coding community of India ❤️"
+      },
+      "user": {
+        "username": "ram",
+        "email": "p4542639@gmail.com",
+        "cf_phonenumber": "7666690798"
+      }
+    }
+  },
+  "reclaimedTry": false,
+  "feedback": [
+    {
+      "title": "",
+      "id": "section66a23e3ca0055",
+      "blocks": [
+        {
+          "id": "mc1721990470774_278",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "There are some coins kept on a table. Ramesh and Suresh decide to play a game. Each one of them, in turn, can pick up any number of coins between 3 and 7(both included). However, if the number of coins available is less than 3, the last person will have to pick them all. The person who makes the last move loses the game. Both of them play intelligently to maximize their chances of winning. After Suresh’s turn there are 102 coins left on the table. Then in how many cases the coins picked by Suresh ensures his victory irrespective of Ramesh’s moves?",
+            "widgets": [
+              {
+                "id": "mc1721990470774_281",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">There are some coins kept on a table. Ramesh and Suresh decide to play a game. Each one of them, in turn, can pick up any number of coins between 3 and 7(both included). However, if the number of coins available is less than 3, the last person will have to pick them all. The person who makes the last move loses the game. Both of them play intelligently to maximize their chances of winning.\n</p><div style=\"text-align: justify;\">After Suresh’s turn there are 102 coins left on the table. Then in how many cases the coins picked by Suresh ensures his victory irrespective of Ramesh’s moves?</div>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721990470774_272",
+              "description": {
+                "text": "5",
+                "widgets": [
+                  {
+                    "id": "mc1721990470774_273",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>5</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721990470774_274",
+              "description": {
+                "text": "4",
+                "widgets": [
+                  {
+                    "id": "mc1721990470774_282",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>4</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721990470774_276",
+              "description": {
+                "text": "3",
+                "widgets": [
+                  {
+                    "id": "mc1721990470774_279",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>3</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721990470774_271",
+              "description": {
+                "text": "2",
+                "widgets": [
+                  {
+                    "id": "mc1721990470774_277",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>2</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721990470774_272",
+              "text": "5",
+              "widgets": [
+                {
+                  "id": "mc1721990470774_273",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>5</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>The key to\nsolving such questions is that there is a certain sum that the second player\ncan ensure, no matter what the first player picks. Since the minimum coins to\nbe picked is 3 and the maximum is 7, a sum of 10 can always be ensured. For\nexample, if the first player picks 3, the second can pick 7, if the first one\npicks 4, the second one can pick 6 and so on. Here the number of coins is 102\nafter Suresh’s turn.\n            Suresh\ncan always ensure a sum of 10 and he also wants to leave 1/2/3 coins at the\nend. So if the value after he picks up his coin is of form 10n + 1, 10n + 2 or\n10n + 3, Ramesh can win. But leaving the coins in 10n + 1 or 10n + 2 form is\nnot possible as for that, he has to pick 1 and O coins respectively, but the\nminimum he has to pick is 3. So irrespective of what he picks, he will lose the\ngame.\n            <br>So Suresh can pick either 3/4/5/6/7\ncoins and ensure his win.</p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721990583844_387",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "There are some coins kept on a table. Ramesh and Suresh decide to play a game. Each one of them, in turn, can pick up any number of coins between 3 and 7(both included). However, if the number of coins available is less than 3, the last person will have to pick them all. The person who makes the last move loses the game. Both of them play intelligently to maximize their chances of winning. If there are ‘‘k’ number of coins on the table (10 &lt; k &lt; 60) and Suresh starts the game, for how many values of ‘‘k’ will Ramesh definitely win irrespective of what Suresh Picks?",
+            "widgets": [
+              {
+                "id": "mc1721990583844_381",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">There are some coins kept on a table. Ramesh and Suresh decide to play a game. Each one of them, in turn, can pick up any number of coins between 3 and 7(both included). However, if the number of coins available is less than 3, the last person will have to pick them all. The person who makes the last move loses the game. Both of them play intelligently to maximize their chances of winning.\n</p><div style=\"text-align: justify;\">&nbsp;If there are ‘‘k’ number of coins on the table (10 &lt; k &lt; 60) and Suresh starts the game, for how many values of ‘‘k’ will Ramesh definitely win irrespective of what Suresh Picks?</div>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721990583844_379",
+              "description": {
+                "text": "21",
+                "widgets": [
+                  {
+                    "id": "mc1721990583844_382",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>21</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721990583844_384",
+              "description": {
+                "text": "15",
+                "widgets": [
+                  {
+                    "id": "mc1721990583844_376",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>15</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721990583844_386",
+              "description": {
+                "text": "20",
+                "widgets": [
+                  {
+                    "id": "mc1721990583844_377",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>20</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721990583844_380",
+              "description": {
+                "text": "18",
+                "widgets": [
+                  {
+                    "id": "mc1721990583844_388",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>18</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721990583844_384",
+              "text": "15",
+              "widgets": [
+                {
+                  "id": "mc1721990583844_376",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>15</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>Whenever n\nis of the form 10n + 1, 10n + 2, 10n + 3, the person who first picks up the\ncoin, will not be able to win. \n           <br>Here k is between 10 and 60, so ‘n’\ncan range from 1 to 5.\n            <br>Hence, the total possible values for which Suresh\ncannot win are 3 x 5 = 15.<br></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721990583588_366",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Sportistan, the new country for sportsmen has started a knock-out tournament for all tennis players. The tournament will happen in rounds with initially 128 players participating in the first round. The players are ranked 1 to 128 in descending order of their capabilities with 1 being the best player and 128 being the worst player of the tournament. While scheduling matches “Top meets Bottom” policy is followed. In the first round, Player ranked 1 will play with Player ranked 128 in Match 1, Player Ranked 2 will play with Player ranked 127 in Match 2, Player ranked 3 will play with Player ranked 126 IN Match 3, and so on. The player who loses gets eliminated and the winners move to the 2nd Round. In this round winner of Match 1 and the winner of Match 64 from the first round are paired, the winner of Match 2 and Match 63 from the first round are paired, and so on. This processing continues till only one player emerges as the champion. The round with 8 players and 4 matches is known as the Quarter-Final round and the next two rounds are Semi-Final and Final. If in any match a lower-ranked player defeats a higher-ranked player, that will be known as an “upset”. If a player ranked 73 reaches Quarter final, which one of the following cannot be his opponent in the Quarter Final match?",
+            "widgets": [
+              {
+                "id": "mc1721990583588_373",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">Sportistan, the new country for sportsmen has started a knock-out tournament for all tennis players. The tournament will happen in rounds with initially 128 players participating in the first round. The players are ranked 1 to 128 in descending order of their capabilities with 1 being the best player and 128 being the worst player of the tournament. While scheduling matches “Top meets Bottom” policy is followed. In the first round, Player ranked 1 will play with Player ranked 128 in Match 1, Player Ranked 2 will play with Player ranked 127 in Match 2, Player ranked 3 will play with Player ranked 126 IN Match 3, and so on. The player who loses gets eliminated and the winners move to the 2nd Round. In this round winner of Match 1 and the winner of Match 64 from the first round are paired, the winner of Match 2 and Match 63 from the first round are paired, and so on. This processing continues till only one player emerges as the champion. The round with 8 players and 4 matches is known as the Quarter-Final round and the next two rounds are Semi-Final and Final. If in any match a lower-ranked player defeats a higher-ranked player, that will be known as an “upset”.\n</p><div style=\"text-align: justify;\">If a player ranked 73 reaches Quarter final, which one of the following cannot be his opponent in the Quarter Final match?</div>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721990583588_370",
+              "description": {
+                "text": "48",
+                "widgets": [
+                  {
+                    "id": "mc1721990583588_368",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>48</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721990583588_374",
+              "description": {
+                "text": "96",
+                "widgets": [
+                  {
+                    "id": "mc1721990583588_372",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>96</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721990583588_367",
+              "description": {
+                "text": "113",
+                "widgets": [
+                  {
+                    "id": "mc1721990583588_369",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>113</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721990583588_363",
+              "description": {
+                "text": "127",
+                "widgets": [
+                  {
+                    "id": "mc1721990583588_365",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>127</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721990583588_363",
+              "text": "127",
+              "widgets": [
+                {
+                  "id": "mc1721990583588_365",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>127</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>In Round 1\nplayer 73 would have met player 56. So he will be the winner of match 56 of the\nfirst round. So he will face the winner of match 9 of the first round. So he\nwill be the winner of match 9 of the second round and so on. So basically for a\nquarter-final 8 players set up, 73 is equivalent to rank 8. So it will face all\nplayers who are equivalent to players ranked 1.\n            <br>Thus\nits possible opponents are:\n            <br>1, 16, 17, 32, 33, 48, 49, 64, 65,\n80, 81, 96, 97, 112, 113 and 128.</p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721990583356_352",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "In the college fest, informal events were held in which teams of two were made and they had to answer questions about each other relating to different topics like personal choices, profession-related, etc. There were a total of five rounds. In each round, the lowest-scoring team was eliminated with scores ranging from 2-20. In case of a tie, the team with the lowest cumulative score is eliminated. The final winner is chosen on the basis of the total score from the two teams surviving in the last round. The table shows the scores scored by each team, with some missing entries.Which round had a maximum value of the total score of the first four teams?",
+            "widgets": [
+              {
+                "id": "mc1721990583356_359",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">In the college fest, informal events were held in which teams of two were made and they had to answer questions about each other relating to different topics like personal choices, profession-related, etc. There were a total of five rounds. In each round, the lowest-scoring team was eliminated with scores ranging from 2-20. In case of a tie, the team with the lowest cumulative score is eliminated. The final winner is chosen on the basis of the total score from the two teams surviving in the last round. The table shows the scores scored by each team, with some missing entries.</p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/11b98b47b8575e5885ce717afe6d85ee.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 500px;\"></p><p style=\"text-align: justify;\">Which round had a maximum value of the total score of the first four teams?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721990583356_356",
+              "description": {
+                "text": "Round 1",
+                "widgets": [
+                  {
+                    "id": "mc1721990583356_362",
+                    "type": "text",
+                    "properties": {
+                      "html": "Round 1"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721990583356_361",
+              "description": {
+                "text": "Round 2",
+                "widgets": [
+                  {
+                    "id": "mc1721990583356_350",
+                    "type": "text",
+                    "properties": {
+                      "html": "Round 2"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721990583356_355",
+              "description": {
+                "text": "Round 3",
+                "widgets": [
+                  {
+                    "id": "mc1721990583356_353",
+                    "type": "text",
+                    "properties": {
+                      "html": "Round 3"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721990583356_360",
+              "description": {
+                "text": "Cannot be determined",
+                "widgets": [
+                  {
+                    "id": "mc1721990583356_358",
+                    "type": "text",
+                    "properties": {
+                      "html": "Cannot be determined"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721990583356_361",
+              "text": "Round 2",
+              "widgets": [
+                {
+                  "id": "mc1721990583356_350",
+                  "type": "text",
+                  "properties": {
+                    "html": "Round 2"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>Round 1 = 48\n            <br>Round\n2 = (Assuming the maximum score of P and S) 62\n            <br>Round 3 = (S can get a max score of\n12) 60</p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721990583172_347",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "40% of the students in a college play basketball, 34% of the students play tennis and the number of students who play both the games is 234. The number of students who play neither basketball nor tennis is 52%. Determine the student population in the college.",
+            "widgets": [
+              {
+                "id": "mc1721990583172_349",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">40% of the students in a college play basketball, 34% of the students play tennis and the number of students who play both the games is 234. The number of students who play neither basketball nor tennis is 52%. Determine the student population in the college.</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721990583172_348",
+              "description": {
+                "text": "800",
+                "widgets": [
+                  {
+                    "id": "mc1721990583172_337",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>800</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721990583172_340",
+              "description": {
+                "text": "1050",
+                "widgets": [
+                  {
+                    "id": "mc1721990583172_346",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>1050</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721990583172_344",
+              "description": {
+                "text": "900",
+                "widgets": [
+                  {
+                    "id": "mc1721990583172_343",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>900</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721990583172_341",
+              "description": {
+                "text": "850",
+                "widgets": [
+                  {
+                    "id": "mc1721990583172_339",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>850</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721990583172_344",
+              "text": "900",
+              "widgets": [
+                {
+                  "id": "mc1721990583172_343",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>900</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br>Percentage\nof students playing any game = 100 – 52 = 48%\n            <br>Percentage\nof students playing both games\n            <br>404\n+ 34 – 48 = 26%\n            <br>Now, 26% = 234<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/bc5bec30740f7184234affc4447b6c1c.png\" style=\"width: 150px; height: 38px;\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        }
+      ]
+    }
+  ],
+  "submitted": true,
+  "updated": true,
+  "retryCount": 3,
+  "inlineFeedback": [],
+  "errors": [],
+  "success": true
+}

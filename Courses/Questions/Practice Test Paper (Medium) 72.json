@@ -1,0 +1,3074 @@
+{
+  "submission": {
+    "anon_id": null,
+    "model": "assessment-submission",
+    "courseTitleId": "aptitude-teacher2",
+    "object_id": "66b74bb07f809db010095219",
+    "assessmentId": "66b74bb07f809db010095218",
+    "snapshotId": "66bf7a599c9e71c52c032107",
+    "questions": {
+      "section66b74bb01fa7f": [
+        "mc66b74bb01fa86",
+        "mc66b74bb01fb31",
+        "mc66b74bb01fbe6",
+        "mc66b74bb01fc8f",
+        "mc66b74bb01fd38",
+        "mc66b74bb01fde0",
+        "mc66b74bb01fe8d",
+        "mc66b74bb01ff37",
+        "mc66b74bb01ffeb",
+        "mc66b74bb020094"
+      ]
+    },
+    "certificateAnswers": [],
+    "certificateId": null,
+    "questionData": {
+      "mc66b74bb01fa86": {
+        "deliveredOnTimestamp": 1786440552.077685,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74bb01fb31": {
+        "deliveredOnTimestamp": 1786440552.077714,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74bb01fbe6": {
+        "deliveredOnTimestamp": 1786440552.077731,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74bb01fc8f": {
+        "deliveredOnTimestamp": 1786440552.077746,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74bb01fd38": {
+        "deliveredOnTimestamp": 1786440552.077761,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74bb01fde0": {
+        "deliveredOnTimestamp": 1786440552.077775,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74bb01fe8d": {
+        "deliveredOnTimestamp": 1786440552.077788,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74bb01ff37": {
+        "deliveredOnTimestamp": 1786440552.077803,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74bb01ffeb": {
+        "deliveredOnTimestamp": 1786440552.077817,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74bb020094": {
+        "deliveredOnTimestamp": 1786440552.07783,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      }
+    },
+    "answers": [
+      {
+        "blockId": "mc66b74bb01fa86",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74bb01fb31",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74bb01fbe6",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74bb01fc8f",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74bb01fd38",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74bb01fde0",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74bb01fe8d",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74bb01ff37",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74bb01ffeb",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74bb020094",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      }
+    ],
+    "submittedTimestamp": 1786440552.297867,
+    "status": "submitted",
+    "grading_status": "grading_status_graded",
+    "access": "public",
+    "actual_score": null,
+    "score": {
+      "maxScore": 10,
+      "value": 0,
+      "pass": false,
+      "passGrade": 50,
+      "points": 0
+    },
+    "source": {
+      "type": "unit"
+    },
+    "isDefining": true,
+    "isAdminAutoGradedSubmission": null,
+    "listOfNonConsentedBlocks": [],
+    "created": 1786440552.083568,
+    "modified": 1786440552.431524,
+    "id": "6a7aeb68faa333bfe40e3d60",
+    "passed": false
+  },
+  "assessment": {
+    "title": "Practice Test Paper (Medium)",
+    "access": "public",
+    "type": "assessment",
+    "model": "assessmentSnapshot",
+    "description": "Intermediate practice test paper containing 10 conceptual problems designed to evaluate speed and accuracy.",
+    "isTimed": false,
+    "timerFor": "assessmentTimed",
+    "onTimerExpiration": "autoSubmit",
+    "assessmentTimeLimitInSeconds": 600,
+    "questionTimeLimitInSeconds": 60,
+    "standaloneShareEnabled": null,
+    "customUrl": null,
+    "usesCustomUrl": null,
+    "allowAnonymous": true,
+    "randomizeQuestionOptions": false,
+    "disallowPartialSubmissions": false,
+    "submissionDueDateEnabled": false,
+    "submissionDueDate": 1626257823,
+    "makeFeedbackAvailableAfterDateEnabled": false,
+    "makeFeedbackAvailableAfterDate": 0,
+    "customStylesEnabled": true,
+    "customStyles": {
+      "assessmentPage": {
+        "background": {
+          "type": "color",
+          "colorData": {
+            "code": "",
+            "class": "lw-body-bg"
+          }
+        },
+        "dividers": {
+          "top": {
+            "orientation": "top",
+            "divider": "none"
+          },
+          "bottom": {
+            "orientation": "bottom",
+            "divider": "none"
+          }
+        }
+      },
+      "option": {
+        "radioEffect": "scribble",
+        "checkboxEffect": "scribble",
+        "size": "small"
+      },
+      "assessment": {
+        "transition": "none",
+        "background": {
+          "type": "color",
+          "colorData": {
+            "code": "",
+            "class": ""
+          }
+        },
+        "width": "normal",
+        "timerTemplate": "rectangle"
+      },
+      "linearRating": {
+        "labels": {
+          "size": "small"
+        }
+      },
+      "question": {
+        "description": {
+          "background": {
+            "type": "color",
+            "colorData": {
+              "code": "",
+              "class": ""
+            }
+          },
+          "type": "p",
+          "size": "small"
+        },
+        "answers": {
+          "background": {
+            "type": "color",
+            "colorData": {
+              "code": "",
+              "class": ""
+            }
+          }
+        },
+        "requiredAsterisk": {
+          "colorData": {
+            "code": "#ff0000",
+            "class": ""
+          }
+        },
+        "errorMessages": {
+          "size": "verySmall",
+          "colorData": {
+            "code": "#ff0000",
+            "class": ""
+          }
+        }
+      },
+      "input": {
+        "size": "small",
+        "type": "solidDark"
+      },
+      "textarea": {
+        "size": "small",
+        "type": "solidDark"
+      },
+      "dropdown": {
+        "size": "small",
+        "type": "solidDark"
+      }
+    },
+    "submissionMode": "all",
+    "startingDate": 1626765704,
+    "startingDateEnabled": false,
+    "showOnlyFailedQuestionsOnRetry": false,
+    "retryEnabled": true,
+    "retryOnFailOnly": false,
+    "gradingMethod": null,
+    "maxTries": null,
+    "onlyWrongOnRetake": null,
+    "isAmendable": false,
+    "feedbackShowOnScreen": true,
+    "feedbackDownloadPDF": false,
+    "feedbackShowInline": null,
+    "feedbackQuestionList": "all-questions",
+    "feedbackShowQuestionScore": true,
+    "feedbackShowFeedback": true,
+    "feedbackShowNumbering": false,
+    "feedbackShowSectionTitles": false,
+    "feedbackShowUserAnswers": true,
+    "feedbackShowCorrectAnswers": true,
+    "feedbackShowAnswerCorrectness": true,
+    "displayInlineFeedbackEnabled": null,
+    "displayBackButtonWhenSubmissionPerBlock": null,
+    "feedbackShowSectionResultSummary": false,
+    "askConfirmationBeforeSubmit": true,
+    "hasCustomConfirmationBeforeSubmitText": false,
+    "customConfirmationBeforeSubmitText": "Are you sure you want to submit the questionnaire?",
+    "customConfirmationBeforeSubmitTexts": {
+      "title": "Submit Assessment?",
+      "baseConfirmationMessage": "Are you sure you want to submit the questionnaire?",
+      "unansweredNotice": "You have not answered {X} questions."
+    },
+    "amendResubmissionMinutes": 30,
+    "passingGrade": null,
+    "navigationMode": "per-block",
+    "conditionalBlocks": {
+      "introContent": {
+        "id": "content66b74bb01f9c2",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66b74bb01f9d0",
+              "type": "text",
+              "insertedAsWidget": true,
+              "properties": {
+                "html": "Calendars PAPER LEVEL-2",
+                "alignment": "center",
+                "customStyle": true,
+                "type": "h2",
+                "size": "normal"
+              }
+            },
+            {
+              "id": "text66b74bb01f9e1",
+              "type": "text",
+              "properties": {
+                "html": "Self-assess your knowledge. Express yourself and get feedback from our instructors.",
+                "customStyle": true,
+                "alignment": "center"
+              }
+            },
+            {
+              "id": "spacer66b74bb01f9ec",
+              "type": "spacer",
+              "properties": {
+                "height": 20,
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            },
+            {
+              "id": "button66b74bb01f9f8",
+              "type": "button",
+              "properties": {
+                "buttonLabel": "<span>Ready to start</span>",
+                "buttonSize": "normal",
+                "buttonType": "solidBrand",
+                "alignment": "center",
+                "linkData": {
+                  "linkType": "goToFirst"
+                },
+                "iconColorData": {
+                  "code": "",
+                  "class": ""
+                },
+                "iconDisplay": false,
+                "iconSize": 26,
+                "iconClassName": " fas fa-angle-right",
+                "iconPosition": "right"
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "variables": {
+            "conditionalBlocks_introContent_blockData_widgets_0": [],
+            "conditionalBlocks_introContent_blockData_widgets_1": []
+          }
+        }
+      },
+      "submissionStartingDate": {
+        "id": "content66b74bb01fa18",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66b74bb01fa1d",
+              "type": "text",
+              "properties": {
+                "html": "Sorry but this assessment hasn't started yet."
+              }
+            },
+            {
+              "id": "date66b74bb01fa24",
+              "type": "date",
+              "properties": {
+                "value": ""
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "displayConditions": ["startingDate"]
+        }
+      },
+      "submissionDueDate": {
+        "id": "content66b74bb01fa30",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66b74bb01fa35",
+              "type": "text",
+              "properties": {
+                "html": "Sorry but this assessment date is due."
+              }
+            },
+            {
+              "id": "date66b74bb01fa3c",
+              "type": "date",
+              "properties": {
+                "value": ""
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "displayConditions": ["dateIsDue"]
+        }
+      },
+      "outroContent": {
+        "id": "content66b74bb01fa47",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "userResults66b74bb01fa4b",
+              "type": "userResults",
+              "properties": {
+                "layout": "template2",
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            },
+            {
+              "id": "feedback66b74bb01fa68",
+              "type": "feedback",
+              "properties": []
+            },
+            {
+              "id": "outroActions66b74bb01fa6e",
+              "type": "outroActions",
+              "properties": {
+                "layout": "",
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true
+        }
+      }
+    },
+    "systemSections": null,
+    "sections": [
+      {
+        "id": "section66b74bb01fa7f",
+        "title": "",
+        "type": "section",
+        "navigationMode": "per-block",
+        "blocks": [
+          {
+            "id": "mc66b74bb01fa86",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bb01fa8b",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">What is the day of the week on 29<sup>th</sup> May,&nbsp;<span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">2002?</span></p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74bb01fa9d",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74bb01faa4",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74bb01faac",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74bb01facb",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb01fad2",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Tuesday</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb01fae2",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb01fae9",
+                        "type": "text",
+                        "properties": {
+                          "html": "Sunday"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb01faf8",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb01faff",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Saturday</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb01fb0d",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb01fb14",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Wednesday</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74bb01fb31",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bb01fb36",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">If, 5<sup>th</sup> February, 2019 is Sunday, then what will be the day on 23 October, 2021?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74bb01fb48",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74bb01fb4e",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74bb01fb60",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74bb01fb7f",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb01fb86",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Wednesday</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb01fb95",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb01fb9b",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Friday</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb01fbaa",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb01fbb0",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Thursday</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb01fbbf",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb01fbc6",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Sunday</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_1_blockData_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_1": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74bb01fbe6",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bb01fbeb",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">What was the day of the week on 17<sup>th</sup> August, 2018?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74bb01fbfc",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74bb01fc03",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74bb01fc0a",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74bb01fc29",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb01fc30",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Friday</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb01fc3e",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb01fc45",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Wednesday</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb01fc53",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb01fc5a",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Thursday</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb01fc69",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb01fc6f",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Saturday</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_2_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_description_widgets_0": [],
+                "sections_0_blocks_2": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74bb01fc8f",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bb01fc94",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">Sushil was born on 21<sup>st</sup> April, 2011 which is Monday. Rama is 7 weeks older than Sushil and Tina is 1 year, 102 days older than Rama. When was Tina born?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74bb01fca5",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74bb01fcac",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74bb01fcb3",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74bb01fcd1",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb01fcd8",
+                        "type": "text",
+                        "properties": {
+                          "html": "20<sup>th</sup> November,2009"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb01fce7",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb01fced",
+                        "type": "text",
+                        "properties": {
+                          "html": "21<sup>st</sup> November, 2009"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb01fcfc",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb01fd02",
+                        "type": "text",
+                        "properties": {
+                          "html": "22<sup>nd</sup> November,2009"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb01fd11",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb01fd18",
+                        "type": "text",
+                        "properties": {
+                          "html": "23<sup>rd</sup> November,2009"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_3_blockData_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74bb01fd38",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bb01fd3c",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">What was the day of the week on 15<sup>th</sup> March, 2015?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74bb01fd4d",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74bb01fd54",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74bb01fd5b",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74bb01fd7a",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb01fd80",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Monday</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb01fd8f",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb01fd95",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Tuesday</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb01fda4",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb01fdab",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Sunday</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb01fdb9",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb01fdc0",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Friday</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_4_blockData_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74bb01fde0",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bb01fde5",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">Sunil remembers that his joining is after 25<sup>th</sup> December, but Sunil’s wife remembers that his joining is after 23<sup>rd</sup> December but before 27<sup>th</sup> December. What is the joining date of Sunil?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74bb01fdf6",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74bb01fdfc",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74bb01fe03",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74bb01fe22",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb01fe29",
+                        "type": "text",
+                        "properties": {
+                          "html": "26<sup>th</sup> December"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb01fe37",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb01fe42",
+                        "type": "text",
+                        "properties": {
+                          "html": "29<sup>th</sup> December"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb01fe51",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb01fe57",
+                        "type": "text",
+                        "properties": {
+                          "html": "24<sup>th</sup> December"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb01fe66",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb01fe6d",
+                        "type": "text",
+                        "properties": {
+                          "html": "25<sup>th</sup> December"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_5_blockData_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_5": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74bb01fe8d",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bb01fe92",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">If, 25<sup>th</sup> April 1993 was a Saturday, then what was the day of the week on 10<sup>th</sup> August 1985?&nbsp;</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74bb01fea3",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74bb01feaa",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74bb01feb1",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74bb01fed0",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb01fed6",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Monday</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb01fee5",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb01feec",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Tuesday</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb01fefa",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb01ff01",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Friday</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb01ff10",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb01ff16",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Thursday</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_6_blockData_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_6": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74bb01ff37",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bb01ff44",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">If Leap year comes in every second year, instead of every fourth year, then what will be the day of the week on 1<sup>st</sup> January 2051, if 1<sup>st</sup> January 2020 is Saturday?&nbsp;</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74bb01ff55",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74bb01ff5c",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74bb01ff63",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74bb01ff82",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb01ff89",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Thursday</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb01ff98",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb01ff9f",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Friday</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb01ffae",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb01ffb5",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Sunday</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb01ffc3",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb01ffca",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Monday</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_7_blockData_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_7": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74bb01ffeb",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bb01fff0",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">What was the day of the week on 12<sup>th</sup> March, 2009, if 1<sup>st</sup> January, 2008 was Tuesday?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74bb020000",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74bb020007",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74bb02000e",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74bb02002d",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb020034",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Thursday</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb020043",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb02004a",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Wednesday</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb020058",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb02005f",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Sunday</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb02006d",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb020074",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Monday</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_8_blockData_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_8": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74bb020094",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bb020099",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">If a week consists of 8 days, instead of 7 days and the 8<sup>th</sup> day being a new day between Wednesday and Thursday, what will be the day of the week on 1<sup>st</sup> January 2025, if 1<sup>st</sup> January 2018 was Monday?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74bb0200aa",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74bb0200b1",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74bb0200b8",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74bb0200d6",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb0200dd",
+                        "type": "text",
+                        "properties": {
+                          "html": "The new day"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb0200ec",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb0200f2",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Monday</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb020101",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb020107",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Thursday</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb020116",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb02011c",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Friday</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_9_blockData_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_9": []
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "availabilityStatus": null,
+    "autoNavigationEnabled": false,
+    "displayBackButtonWhenNavigationPerBlock": true,
+    "saveAndResumeLaterEnabled": null,
+    "tagsAddedOnCompletion": [],
+    "tagsAddedOnPass": [],
+    "sendAnonymousSubmissionsToEmailLeads": false,
+    "afterSubmitActionEnabled": null,
+    "afterSubmitActionProperties": null,
+    "showWizardOnNextEdit": false,
+    "revisitAfterSubmissionAction": null,
+    "navigationTemplate": "HorizontalSpacedBetweenNavigationTemplate",
+    "learnerSearchBarEnabled": true,
+    "learnerUnansweredQuestionsEnabled": true,
+    "learnerFavouriteQuestionEnabled": true,
+    "learnerCompletionProgressEnabled": true,
+    "learnerShowIndexOfQuestionsEnabled": false,
+    "learnerTimeNotificationsEnabled": false,
+    "learnerAllowInterruptionsEnabled": true,
+    "learnerAllowInterruptionsTimeoutInMinutes": 30,
+    "learnerReclaimTryOnInterruptionTimeoutEnabled": false,
+    "learnerAskBeforeContinueToSaved": true,
+    "learnerAutoSaveEnabled": null,
+    "spellcheckDisabled": null,
+    "showPartialScoreOnSubmission": true,
+    "deliverableQuestionsSubsetType": "all",
+    "questionRandomizationType": "none",
+    "serveQuestionsBasedOnPreviousSubmission": null,
+    "scoringDisabled": false,
+    "isSelfAssessment": false,
+    "useDefaultCertificateTemplate": null,
+    "certificateTemplate": null,
+    "certificateSocialShare": null,
+    "migrationData": null,
+    "useAssessmentPassingGradeForOpenEndedCorrectness": true,
+    "openEndedCorrectnessPassingGrade": null,
+    "showScorePercentage": null,
+    "showScorePoints": null,
+    "showScoreCorrectAnswers": null,
+    "editorBehaviorSettings": null,
+    "manualReviewEnabled": null,
+    "resultsSummary": {
+      "enabled": true,
+      "showStatusIcon": true,
+      "showStatusText": true,
+      "showScorePercentage": true,
+      "showScorePoints": true,
+      "showScoreCorrectAnswers": false,
+      "showTimeTakenToComplete": true,
+      "showDateSubmitted": true,
+      "showAttemptCount": true
+    },
+    "meta": null,
+    "submissionsCount": 1420,
+    "fromMarketplace": null,
+    "aiFeedbackEnabled": null,
+    "numberOfFeedbackQuestions": null,
+    "created": 1723288496.622475,
+    "modified": 1723824729.283646,
+    "contentHash": "42ac5664cd017f1541594499ce045b2d3e5b147fe9c99ab9ba8554f4279ef0a6",
+    "id": "66b74bb07f809db010095218",
+    "objectType": "assessment",
+    "isEditBlockedDueToSync": false,
+    "variables": {
+      "submission": {
+        "self": {
+          "score": 0,
+          "points": 0,
+          "total_points": 10,
+          "correct_answers": 0,
+          "total_questions": 10,
+          "time_spent": "00:00:00",
+          "date_submitted": "11/08/26",
+          "attempt_count": 3,
+          "max_tries": null,
+          "pass_grade": 50,
+          "time_spent_seconds": 0,
+          "raw_start_date": 1786440552.083568
+        }
+      },
+      "school": {
+        "name": "Apna College",
+        "url": "www.apnacollege.in",
+        "description": "The most loved coding community of India ❤️"
+      },
+      "user": {
+        "username": "ram",
+        "email": "p4542639@gmail.com",
+        "cf_phonenumber": "7666690798"
+      }
+    }
+  },
+  "reclaimedTry": false,
+  "feedback": [
+    {
+      "title": "",
+      "id": "section66b74bb01fa7f",
+      "blocks": [
+        {
+          "id": "mc66b74bb01fa86",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "What is the day of the week on 29th May,2002?",
+            "widgets": [
+              {
+                "id": "text66b74bb01fa8b",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">What is the day of the week on 29<sup>th</sup> May,&nbsp;<span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">2002?</span></p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74bb01facb",
+              "description": {
+                "text": "Tuesday",
+                "widgets": [
+                  {
+                    "id": "text66b74bb01fad2",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Tuesday</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb01fae2",
+              "description": {
+                "text": "Sunday",
+                "widgets": [
+                  {
+                    "id": "text66b74bb01fae9",
+                    "type": "text",
+                    "properties": {
+                      "html": "Sunday"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb01faf8",
+              "description": {
+                "text": "Saturday",
+                "widgets": [
+                  {
+                    "id": "text66b74bb01faff",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Saturday</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb01fb0d",
+              "description": {
+                "text": "Wednesday",
+                "widgets": [
+                  {
+                    "id": "text66b74bb01fb14",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Wednesday</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74bb01fb0d",
+              "text": "Wednesday",
+              "widgets": [
+                {
+                  "id": "text66b74bb01fb14",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>Wednesday</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>2000 – century ………… no of odd days\n= 0<br>Extra 2 years ……………..no of odd days \n= 1\n(always considering 1 less)\n<br>Up to 29<sup>th</sup> May from\nJanuary, no of odd days = (3+0+3+2+29) ….. 2<br>Therefore, total odd days = (0+1+2) = 3\n<br>So,\n3<sup>rd</sup> day of the week is 29<sup>th</sup> May, 2002 i.e. Wednesday. </p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74bb01fb31",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "If, 5th February, 2019 is Sunday, then what will be the day on 23 October, 2021?",
+            "widgets": [
+              {
+                "id": "text66b74bb01fb36",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">If, 5<sup>th</sup> February, 2019 is Sunday, then what will be the day on 23 October, 2021?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74bb01fb7f",
+              "description": {
+                "text": "Wednesday",
+                "widgets": [
+                  {
+                    "id": "text66b74bb01fb86",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Wednesday</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb01fb95",
+              "description": {
+                "text": "Friday",
+                "widgets": [
+                  {
+                    "id": "text66b74bb01fb9b",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Friday</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb01fbaa",
+              "description": {
+                "text": "Thursday",
+                "widgets": [
+                  {
+                    "id": "text66b74bb01fbb0",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Thursday</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb01fbbf",
+              "description": {
+                "text": "Sunday",
+                "widgets": [
+                  {
+                    "id": "text66b74bb01fbc6",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Sunday</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74bb01fbaa",
+              "text": "Thursday",
+              "widgets": [
+                {
+                  "id": "text66b74bb01fbb0",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>Thursday</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br>                  Month           Year <br>                  5<sup>th</sup> February, 2019 = Sunday\n<br><u>                23<sup>rd</sup> October, 2021 =                         </u><br>Odd Days - (2+3+2+3+ 2+3+3+2+2)     (2+1)\n<br>                    (+1)                                       (+3)\n<br>Total            (+4) <br>so, answer is \n= Sunday + 4 odd days = Thursday"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74bb01fbe6",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "What was the day of the week on 17th August, 2018?",
+            "widgets": [
+              {
+                "id": "text66b74bb01fbeb",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">What was the day of the week on 17<sup>th</sup> August, 2018?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74bb01fc29",
+              "description": {
+                "text": "Friday",
+                "widgets": [
+                  {
+                    "id": "text66b74bb01fc30",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Friday</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb01fc3e",
+              "description": {
+                "text": "Wednesday",
+                "widgets": [
+                  {
+                    "id": "text66b74bb01fc45",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Wednesday</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb01fc53",
+              "description": {
+                "text": "Thursday",
+                "widgets": [
+                  {
+                    "id": "text66b74bb01fc5a",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Thursday</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb01fc69",
+              "description": {
+                "text": "Saturday",
+                "widgets": [
+                  {
+                    "id": "text66b74bb01fc6f",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Saturday</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74bb01fc29",
+              "text": "Friday",
+              "widgets": [
+                {
+                  "id": "text66b74bb01fc30",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>Friday</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>2000 – century …………… odd days = 0\n<br>Extra 18 years……………….odd days \n= (17+4) = 21 i.e. 0<br>Up to 17th August from January……..Odd \ndays = (3+0+3+2+3+2+3+17) = 5\n<br>Total odd days = (0+0+5) = 5\n<br>So, 17<sup>th</sup> August, 2018 was 5<sup>th</sup> day of the \nweek i.e. Friday.</p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74bb01fc8f",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Sushil was born on 21st April, 2011 which is Monday. Rama is 7 weeks older than Sushil and Tina is 1 year, 102 days older than Rama. When was Tina born?",
+            "widgets": [
+              {
+                "id": "text66b74bb01fc94",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">Sushil was born on 21<sup>st</sup> April, 2011 which is Monday. Rama is 7 weeks older than Sushil and Tina is 1 year, 102 days older than Rama. When was Tina born?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74bb01fcd1",
+              "description": {
+                "text": "20th November,2009",
+                "widgets": [
+                  {
+                    "id": "text66b74bb01fcd8",
+                    "type": "text",
+                    "properties": {
+                      "html": "20<sup>th</sup> November,2009"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb01fce7",
+              "description": {
+                "text": "21st November, 2009",
+                "widgets": [
+                  {
+                    "id": "text66b74bb01fced",
+                    "type": "text",
+                    "properties": {
+                      "html": "21<sup>st</sup> November, 2009"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb01fcfc",
+              "description": {
+                "text": "22nd November,2009",
+                "widgets": [
+                  {
+                    "id": "text66b74bb01fd02",
+                    "type": "text",
+                    "properties": {
+                      "html": "22<sup>nd</sup> November,2009"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb01fd11",
+              "description": {
+                "text": "23rd November,2009",
+                "widgets": [
+                  {
+                    "id": "text66b74bb01fd18",
+                    "type": "text",
+                    "properties": {
+                      "html": "23<sup>rd</sup> November,2009"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74bb01fce7",
+              "text": "21st November, 2009",
+              "widgets": [
+                {
+                  "id": "text66b74bb01fced",
+                  "type": "text",
+                  "properties": {
+                    "html": "21<sup>st</sup> November, 2009"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br>Rama’s birthday = 21<sup>st</sup> April, 2011 – 7 \nweeks or 49 days = 3<sup>rd</sup> March, 2011\n<br>Tina’s birthday = 3<sup>rd</sup> March, 2011 – 1year \n& 102 days = 21<sup>st</sup> November, 2009."
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74bb01fd38",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "What was the day of the week on 15th March, 2015?",
+            "widgets": [
+              {
+                "id": "text66b74bb01fd3c",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">What was the day of the week on 15<sup>th</sup> March, 2015?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74bb01fd7a",
+              "description": {
+                "text": "Monday",
+                "widgets": [
+                  {
+                    "id": "text66b74bb01fd80",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Monday</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb01fd8f",
+              "description": {
+                "text": "Tuesday",
+                "widgets": [
+                  {
+                    "id": "text66b74bb01fd95",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Tuesday</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb01fda4",
+              "description": {
+                "text": "Sunday",
+                "widgets": [
+                  {
+                    "id": "text66b74bb01fdab",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Sunday</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb01fdb9",
+              "description": {
+                "text": "Friday",
+                "widgets": [
+                  {
+                    "id": "text66b74bb01fdc0",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Friday</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74bb01fda4",
+              "text": "Sunday",
+              "widgets": [
+                {
+                  "id": "text66b74bb01fdab",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>Sunday</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br>2000 century……………. No of odd days = 0\n<br>Extra 15 years ………….No of odd days \n= (14 + 3) = 17 or 3\n<br>Up to 15<sup>th</sup> March from January…….no of\nodd days = (3+0+15) = 18 or 4\n<br>Total odd days = ( 0+3+4) = 7 or 0\n<br>So, 15<sup>th</sup> March, 2015 was 7<sup>th</sup> day of the \nweek or the 0<sup>th</sup> day of the week i.e. Sunday."
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74bb01fde0",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Sunil remembers that his joining is after 25th December, but Sunil’s wife remembers that his joining is after 23rd December but before 27th December. What is the joining date of Sunil?",
+            "widgets": [
+              {
+                "id": "text66b74bb01fde5",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">Sunil remembers that his joining is after 25<sup>th</sup> December, but Sunil’s wife remembers that his joining is after 23<sup>rd</sup> December but before 27<sup>th</sup> December. What is the joining date of Sunil?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74bb01fe22",
+              "description": {
+                "text": "26th December",
+                "widgets": [
+                  {
+                    "id": "text66b74bb01fe29",
+                    "type": "text",
+                    "properties": {
+                      "html": "26<sup>th</sup> December"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb01fe37",
+              "description": {
+                "text": "29th December",
+                "widgets": [
+                  {
+                    "id": "text66b74bb01fe42",
+                    "type": "text",
+                    "properties": {
+                      "html": "29<sup>th</sup> December"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb01fe51",
+              "description": {
+                "text": "24th December",
+                "widgets": [
+                  {
+                    "id": "text66b74bb01fe57",
+                    "type": "text",
+                    "properties": {
+                      "html": "24<sup>th</sup> December"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb01fe66",
+              "description": {
+                "text": "25th December",
+                "widgets": [
+                  {
+                    "id": "text66b74bb01fe6d",
+                    "type": "text",
+                    "properties": {
+                      "html": "25<sup>th</sup> December"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74bb01fe22",
+              "text": "26th December",
+              "widgets": [
+                {
+                  "id": "text66b74bb01fe29",
+                  "type": "text",
+                  "properties": {
+                    "html": "26<sup>th</sup> December"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>According to Sunil, joining should be –\nAfter 25<sup>th</sup> December\n<br>According to his wife – after 23<sup>rd</sup>\nDecember but before 27<sup>th </sup>December.\n<br>So, only possible option for his joining is = \n26<sup>th</sup> December.</p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74bb01fe8d",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "If, 25th April 1993 was a Saturday, then what was the day of the week on 10th August 1985?",
+            "widgets": [
+              {
+                "id": "text66b74bb01fe92",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">If, 25<sup>th</sup> April 1993 was a Saturday, then what was the day of the week on 10<sup>th</sup> August 1985?&nbsp;</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74bb01fed0",
+              "description": {
+                "text": "Monday",
+                "widgets": [
+                  {
+                    "id": "text66b74bb01fed6",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Monday</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb01fee5",
+              "description": {
+                "text": "Tuesday",
+                "widgets": [
+                  {
+                    "id": "text66b74bb01feec",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Tuesday</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb01fefa",
+              "description": {
+                "text": "Friday",
+                "widgets": [
+                  {
+                    "id": "text66b74bb01ff01",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Friday</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb01ff10",
+              "description": {
+                "text": "Thursday",
+                "widgets": [
+                  {
+                    "id": "text66b74bb01ff16",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Thursday</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74bb01fefa",
+              "text": "Friday",
+              "widgets": [
+                {
+                  "id": "text66b74bb01ff01",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>Friday</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br>                Month           Year\n<br>                25<sup>th</sup> April,      1993 = Saturday\n<br><u>                10<sup>th</sup> August,  1985                      </u><br>Odd days - (5+3+2+3 +10)  {-(8+2)}\n<br>                      (+2)                    (-3) <br>Total -            (-1) <br>So, 10<sup>th</sup> August, 1985 was = Saturday – 1 \nodd day = Friday."
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74bb01ff37",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "If Leap year comes in every second year, instead of every fourth year, then what will be the day of the week on 1st January 2051, if 1st January 2020 is Saturday?",
+            "widgets": [
+              {
+                "id": "text66b74bb01ff44",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">If Leap year comes in every second year, instead of every fourth year, then what will be the day of the week on 1<sup>st</sup> January 2051, if 1<sup>st</sup> January 2020 is Saturday?&nbsp;</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74bb01ff82",
+              "description": {
+                "text": "Thursday",
+                "widgets": [
+                  {
+                    "id": "text66b74bb01ff89",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Thursday</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb01ff98",
+              "description": {
+                "text": "Friday",
+                "widgets": [
+                  {
+                    "id": "text66b74bb01ff9f",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Friday</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb01ffae",
+              "description": {
+                "text": "Sunday",
+                "widgets": [
+                  {
+                    "id": "text66b74bb01ffb5",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Sunday</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb01ffc3",
+              "description": {
+                "text": "Monday",
+                "widgets": [
+                  {
+                    "id": "text66b74bb01ffca",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Monday</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74bb01ff82",
+              "text": "Thursday",
+              "widgets": [
+                {
+                  "id": "text66b74bb01ff89",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>Thursday</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br>Month <br>1<sup>st</sup> January, 2020 = Saturday\n<br><u>1<sup>st</sup> January, 2051 =                     </u><br> \nHere no of odd days will be = ( 31(for \nnormal years) + 16(for leap years)) = 47 or \n(+5)<br>[here multiple of 2 will be leap year as \ngiven in the question ]\n<br>So, 1<sup>st</sup> January, 2051 will be = Saturday + 5 \nodd days = Thursday."
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74bb01ffeb",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "What was the day of the week on 12th March, 2009, if 1st January, 2008 was Tuesday?",
+            "widgets": [
+              {
+                "id": "text66b74bb01fff0",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">What was the day of the week on 12<sup>th</sup> March, 2009, if 1<sup>st</sup> January, 2008 was Tuesday?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74bb02002d",
+              "description": {
+                "text": "Thursday",
+                "widgets": [
+                  {
+                    "id": "text66b74bb020034",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Thursday</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb020043",
+              "description": {
+                "text": "Wednesday",
+                "widgets": [
+                  {
+                    "id": "text66b74bb02004a",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Wednesday</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb020058",
+              "description": {
+                "text": "Sunday",
+                "widgets": [
+                  {
+                    "id": "text66b74bb02005f",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Sunday</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb02006d",
+              "description": {
+                "text": "Monday",
+                "widgets": [
+                  {
+                    "id": "text66b74bb020074",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Monday</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74bb020043",
+              "text": "Wednesday",
+              "widgets": [
+                {
+                  "id": "text66b74bb02004a",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>Wednesday</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>1<sup>st</sup> January, 2008 = Tuesday; <br>therefore 1<sup>st</sup>\nJanuary, 2009 = Tuesday + 1 odd day = \nWednesday\n<br>Now, from 1<sup>st</sup> January, 2009 to 12<sup>th</sup> March, \n2009 – no of odd days = (2+0+12) = 14 or \n0\n<br>So, 12<sup>th</sup> March, 2009 was = Wednesday + 0 \nodd day = Wednesday. </p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74bb020094",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "If a week consists of 8 days, instead of 7 days and the 8th day being a new day between Wednesday and Thursday, what will be the day of the week on 1st January 2025, if 1st January 2018 was Monday?",
+            "widgets": [
+              {
+                "id": "text66b74bb020099",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">If a week consists of 8 days, instead of 7 days and the 8<sup>th</sup> day being a new day between Wednesday and Thursday, what will be the day of the week on 1<sup>st</sup> January 2025, if 1<sup>st</sup> January 2018 was Monday?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74bb0200d6",
+              "description": {
+                "text": "The new day",
+                "widgets": [
+                  {
+                    "id": "text66b74bb0200dd",
+                    "type": "text",
+                    "properties": {
+                      "html": "The new day"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb0200ec",
+              "description": {
+                "text": "Monday",
+                "widgets": [
+                  {
+                    "id": "text66b74bb0200f2",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Monday</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb020101",
+              "description": {
+                "text": "Thursday",
+                "widgets": [
+                  {
+                    "id": "text66b74bb020107",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Thursday</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb020116",
+              "description": {
+                "text": "Friday",
+                "widgets": [
+                  {
+                    "id": "text66b74bb02011c",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Friday</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74bb020116",
+              "text": "Friday",
+              "widgets": [
+                {
+                  "id": "text66b74bb02011c",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>Friday</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>Now, odd days in a normal year \n= \n365/8\n… … … 5 odd days <br>Odd days in a Leap year \n= \n366/8\n… … … 6 odd days (1 extra odd day)\n<br>1<sup>st</sup> January, 2018 to 1<sup>st</sup> January, 2025……… \nno of odd days ( 7*5 + 2*1) = 37 or \n37/8\n… … … 5 odd days\n<br>So, 1<sup>st</sup> January, 2025 will be = Monday + 5 \nodd days = Friday</p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        }
+      ]
+    }
+  ],
+  "submitted": true,
+  "updated": true,
+  "retryCount": 3,
+  "inlineFeedback": [],
+  "errors": [],
+  "success": true
+}

@@ -1,0 +1,1770 @@
+{
+  "submission": {
+    "anon_id": null,
+    "model": "assessment-submission",
+    "courseTitleId": "aptitude-teacher2",
+    "object_id": "66b74b987f809db0100951b8",
+    "assessmentId": "66b74b987f809db0100951b7",
+    "snapshotId": "66c466bf688ecea3d508cbc4",
+    "questions": {
+      "section66b74b983dd9d": [
+        "mc66b74b983dda5",
+        "mc66b74b983de50",
+        "mc66b74b983df0e",
+        "mc66b74b983dfc7",
+        "mc66b74b983e07c"
+      ]
+    },
+    "certificateAnswers": [],
+    "certificateId": null,
+    "questionData": {
+      "mc66b74b983dda5": {
+        "deliveredOnTimestamp": 1786440513.819627,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74b983de50": {
+        "deliveredOnTimestamp": 1786440513.819655,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74b983df0e": {
+        "deliveredOnTimestamp": 1786440513.819672,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74b983dfc7": {
+        "deliveredOnTimestamp": 1786440513.819687,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74b983e07c": {
+        "deliveredOnTimestamp": 1786440513.819701,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      }
+    },
+    "answers": [
+      {
+        "blockId": "mc66b74b983dda5",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74b983de50",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74b983df0e",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74b983dfc7",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74b983e07c",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      }
+    ],
+    "submittedTimestamp": 1786440514.036996,
+    "status": "submitted",
+    "grading_status": "grading_status_graded",
+    "access": "public",
+    "actual_score": null,
+    "score": {
+      "maxScore": 5,
+      "value": 0,
+      "pass": false,
+      "passGrade": 50,
+      "points": 0
+    },
+    "source": {
+      "type": "unit"
+    },
+    "isDefining": true,
+    "isAdminAutoGradedSubmission": null,
+    "listOfNonConsentedBlocks": [],
+    "created": 1786440513.826056,
+    "modified": 1786440514.159794,
+    "id": "6a7aeb410fac798f8e0d2b5f",
+    "passed": false
+  },
+  "assessment": {
+    "title": "Practice Test Paper (Easy)",
+    "access": "public",
+    "type": "assessment",
+    "model": "assessmentSnapshot",
+    "description": "Foundational practice test paper featuring 4 fundamental aptitude and reasoning questions for quick revision.",
+    "isTimed": false,
+    "timerFor": "assessmentTimed",
+    "onTimerExpiration": "autoSubmit",
+    "assessmentTimeLimitInSeconds": 600,
+    "questionTimeLimitInSeconds": 60,
+    "standaloneShareEnabled": null,
+    "customUrl": null,
+    "usesCustomUrl": null,
+    "allowAnonymous": true,
+    "randomizeQuestionOptions": false,
+    "disallowPartialSubmissions": false,
+    "submissionDueDateEnabled": false,
+    "submissionDueDate": 1626257823,
+    "makeFeedbackAvailableAfterDateEnabled": false,
+    "makeFeedbackAvailableAfterDate": 0,
+    "customStylesEnabled": true,
+    "customStyles": {
+      "assessmentPage": {
+        "background": {
+          "type": "color",
+          "colorData": {
+            "code": "",
+            "class": "lw-body-bg"
+          }
+        },
+        "dividers": {
+          "top": {
+            "orientation": "top",
+            "divider": "none"
+          },
+          "bottom": {
+            "orientation": "bottom",
+            "divider": "none"
+          }
+        }
+      },
+      "option": {
+        "radioEffect": "scribble",
+        "checkboxEffect": "scribble",
+        "size": "small"
+      },
+      "assessment": {
+        "transition": "none",
+        "background": {
+          "type": "color",
+          "colorData": {
+            "code": "",
+            "class": ""
+          }
+        },
+        "width": "normal",
+        "timerTemplate": "rectangle"
+      },
+      "linearRating": {
+        "labels": {
+          "size": "small"
+        }
+      },
+      "question": {
+        "description": {
+          "background": {
+            "type": "color",
+            "colorData": {
+              "code": "",
+              "class": ""
+            }
+          },
+          "type": "p",
+          "size": "small"
+        },
+        "answers": {
+          "background": {
+            "type": "color",
+            "colorData": {
+              "code": "",
+              "class": ""
+            }
+          }
+        },
+        "requiredAsterisk": {
+          "colorData": {
+            "code": "#ff0000",
+            "class": ""
+          }
+        },
+        "errorMessages": {
+          "size": "verySmall",
+          "colorData": {
+            "code": "#ff0000",
+            "class": ""
+          }
+        }
+      },
+      "input": {
+        "size": "small",
+        "type": "solidDark"
+      },
+      "textarea": {
+        "size": "small",
+        "type": "solidDark"
+      },
+      "dropdown": {
+        "size": "small",
+        "type": "solidDark"
+      }
+    },
+    "submissionMode": "all",
+    "startingDate": 1626765704,
+    "startingDateEnabled": false,
+    "showOnlyFailedQuestionsOnRetry": false,
+    "retryEnabled": true,
+    "retryOnFailOnly": false,
+    "gradingMethod": null,
+    "maxTries": null,
+    "onlyWrongOnRetake": null,
+    "isAmendable": false,
+    "feedbackShowOnScreen": true,
+    "feedbackDownloadPDF": false,
+    "feedbackShowInline": null,
+    "feedbackQuestionList": "all-questions",
+    "feedbackShowQuestionScore": true,
+    "feedbackShowFeedback": true,
+    "feedbackShowNumbering": false,
+    "feedbackShowSectionTitles": false,
+    "feedbackShowUserAnswers": true,
+    "feedbackShowCorrectAnswers": true,
+    "feedbackShowAnswerCorrectness": true,
+    "displayInlineFeedbackEnabled": null,
+    "displayBackButtonWhenSubmissionPerBlock": null,
+    "feedbackShowSectionResultSummary": false,
+    "askConfirmationBeforeSubmit": true,
+    "hasCustomConfirmationBeforeSubmitText": false,
+    "customConfirmationBeforeSubmitText": "Are you sure you want to submit the questionnaire?",
+    "customConfirmationBeforeSubmitTexts": {
+      "title": "Submit Assessment?",
+      "baseConfirmationMessage": "Are you sure you want to submit the questionnaire?",
+      "unansweredNotice": "You have not answered {X} questions."
+    },
+    "amendResubmissionMinutes": 30,
+    "passingGrade": null,
+    "navigationMode": "per-block",
+    "conditionalBlocks": {
+      "introContent": {
+        "id": "content66b74b983dce6",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66b74b983dcf3",
+              "type": "text",
+              "insertedAsWidget": true,
+              "properties": {
+                "html": "Cyclicity PAPER LEVEL-1",
+                "alignment": "center",
+                "customStyle": true,
+                "type": "h2",
+                "size": "normal"
+              }
+            },
+            {
+              "id": "text66b74b983dd03",
+              "type": "text",
+              "properties": {
+                "html": "Self-assess your knowledge. Express yourself and get feedback from our instructors.",
+                "customStyle": true,
+                "alignment": "center"
+              }
+            },
+            {
+              "id": "spacer66b74b983dd0e",
+              "type": "spacer",
+              "properties": {
+                "height": 20,
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            },
+            {
+              "id": "button66b74b983dd1a",
+              "type": "button",
+              "properties": {
+                "buttonLabel": "<span>Ready to start</span>",
+                "buttonSize": "normal",
+                "buttonType": "solidBrand",
+                "alignment": "center",
+                "linkData": {
+                  "linkType": "goToFirst"
+                },
+                "iconColorData": {
+                  "code": "",
+                  "class": ""
+                },
+                "iconDisplay": false,
+                "iconSize": 26,
+                "iconClassName": " fas fa-angle-right",
+                "iconPosition": "right"
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "variables": {
+            "conditionalBlocks_introContent_blockData_widgets_0": [],
+            "conditionalBlocks_introContent_blockData_widgets_1": []
+          }
+        }
+      },
+      "submissionStartingDate": {
+        "id": "content66b74b983dd49",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66b74b983dd4e",
+              "type": "text",
+              "properties": {
+                "html": "Sorry but this assessment hasn't started yet."
+              }
+            },
+            {
+              "id": "date66b74b983dd55",
+              "type": "date",
+              "properties": {
+                "value": ""
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "displayConditions": ["startingDate"]
+        }
+      },
+      "submissionDueDate": {
+        "id": "content66b74b983dd60",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66b74b983dd65",
+              "type": "text",
+              "properties": {
+                "html": "Sorry but this assessment date is due."
+              }
+            },
+            {
+              "id": "date66b74b983dd6b",
+              "type": "date",
+              "properties": {
+                "value": ""
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "displayConditions": ["dateIsDue"]
+        }
+      },
+      "outroContent": {
+        "id": "content66b74b983dd77",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "userResults66b74b983dd7b",
+              "type": "userResults",
+              "properties": {
+                "layout": "template2",
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            },
+            {
+              "id": "feedback66b74b983dd87",
+              "type": "feedback",
+              "properties": []
+            },
+            {
+              "id": "outroActions66b74b983dd8d",
+              "type": "outroActions",
+              "properties": {
+                "layout": "",
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true
+        }
+      }
+    },
+    "systemSections": null,
+    "sections": [
+      {
+        "id": "section66b74b983dd9d",
+        "title": "",
+        "type": "section",
+        "navigationMode": "per-block",
+        "blocks": [
+          {
+            "id": "mc66b74b983dda5",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74b983ddaa",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">What is the unit digit of 3<sup>51</sup> ?&nbsp;</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74b983ddbc",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74b983ddc3",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74b983ddca",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74b983dde9",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b983ddf1",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>3</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b983de01",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b983de07",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>9</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b983de17",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b983de1d",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>7</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b983de2c",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b983de32",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>1</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74b983de50",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74b983de55",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">What is the unit digit of sum of first 50 natural numbers?&nbsp;</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74b983de6f",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74b983de77",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74b983de7e",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74b983de9d",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b983dea4",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>5</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b983deb2",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b983dec3",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>3</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b983ded1",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b983ded8",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>4</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b983dee7",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b983deee",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>9</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_1_blockData_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_1": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74b983df0e",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74b983df13",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">What is the rightmost non zero digit of 70<sup>2521</sup>?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74b983df24",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74b983df2b",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74b983df32",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74b983df54",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b983df5b",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>9</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b983df6a",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b983df71",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>7</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b983df7f",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b983df86",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>3</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b983df95",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b983df9b",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>1</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_2_blockData_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_2": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74b983dfc7",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74b983dfcf",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">What is the unit digit of 2<sup>5</sup>  × 3<sup>79</sup>  × 4<sup>56</sup> ?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74b983dfe6",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74b983dfed",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74b983dff4",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74b983e016",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b983e01c",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>4</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b983e02b",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b983e032",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>6</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b983e041",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b983e047",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>7</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b983e056",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b983e05c",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>2</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_3_blockData_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74b983e07c",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74b983e081",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/a9fc8ad2908e8d80664a4ffdca4d11c1.jpg\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto;\"></p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74b983e092",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74b983e099",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74b983e0a0",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74b983e0be",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b983e0c5",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>8</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b983e0d4",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b983e0da",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>4</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b983e0e9",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b983e0ef",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>2</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b983e0fe",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b983e105",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>6</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_4_blockData_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_description_widgets_1": [],
+                "sections_0_blocks_4_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4": []
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "availabilityStatus": null,
+    "autoNavigationEnabled": false,
+    "displayBackButtonWhenNavigationPerBlock": true,
+    "saveAndResumeLaterEnabled": null,
+    "tagsAddedOnCompletion": [],
+    "tagsAddedOnPass": [],
+    "sendAnonymousSubmissionsToEmailLeads": false,
+    "afterSubmitActionEnabled": null,
+    "afterSubmitActionProperties": null,
+    "showWizardOnNextEdit": false,
+    "revisitAfterSubmissionAction": null,
+    "navigationTemplate": "HorizontalSpacedBetweenNavigationTemplate",
+    "learnerSearchBarEnabled": true,
+    "learnerUnansweredQuestionsEnabled": true,
+    "learnerFavouriteQuestionEnabled": true,
+    "learnerCompletionProgressEnabled": true,
+    "learnerShowIndexOfQuestionsEnabled": false,
+    "learnerTimeNotificationsEnabled": false,
+    "learnerAllowInterruptionsEnabled": true,
+    "learnerAllowInterruptionsTimeoutInMinutes": 30,
+    "learnerReclaimTryOnInterruptionTimeoutEnabled": false,
+    "learnerAskBeforeContinueToSaved": true,
+    "learnerAutoSaveEnabled": null,
+    "spellcheckDisabled": null,
+    "showPartialScoreOnSubmission": true,
+    "deliverableQuestionsSubsetType": "all",
+    "questionRandomizationType": "none",
+    "serveQuestionsBasedOnPreviousSubmission": null,
+    "scoringDisabled": false,
+    "isSelfAssessment": false,
+    "useDefaultCertificateTemplate": null,
+    "certificateTemplate": null,
+    "certificateSocialShare": null,
+    "migrationData": null,
+    "useAssessmentPassingGradeForOpenEndedCorrectness": true,
+    "openEndedCorrectnessPassingGrade": null,
+    "showScorePercentage": null,
+    "showScorePoints": null,
+    "showScoreCorrectAnswers": null,
+    "editorBehaviorSettings": null,
+    "manualReviewEnabled": null,
+    "resultsSummary": {
+      "enabled": true,
+      "showStatusIcon": true,
+      "showStatusText": true,
+      "showScorePercentage": true,
+      "showScorePoints": true,
+      "showScoreCorrectAnswers": false,
+      "showTimeTakenToComplete": true,
+      "showDateSubmitted": true,
+      "showAttemptCount": true
+    },
+    "meta": null,
+    "submissionsCount": 1786,
+    "fromMarketplace": null,
+    "aiFeedbackEnabled": null,
+    "numberOfFeedbackQuestions": null,
+    "created": 1723288472.645947,
+    "modified": 1724147391.722498,
+    "contentHash": "981887aabb3b7849889b1c6571ffee6a31cf278ff4b92720e4c955bfd4ae9751",
+    "id": "66b74b987f809db0100951b7",
+    "objectType": "assessment",
+    "isEditBlockedDueToSync": false,
+    "variables": {
+      "submission": {
+        "self": {
+          "score": 0,
+          "points": 0,
+          "total_points": 5,
+          "correct_answers": 0,
+          "total_questions": 5,
+          "time_spent": "00:00:01",
+          "date_submitted": "11/08/26",
+          "attempt_count": 4,
+          "max_tries": null,
+          "pass_grade": 50,
+          "time_spent_seconds": 1,
+          "raw_start_date": 1786440513.826056
+        }
+      },
+      "school": {
+        "name": "Apna College",
+        "url": "www.apnacollege.in",
+        "description": "The most loved coding community of India ❤️"
+      },
+      "user": {
+        "username": "ram",
+        "email": "p4542639@gmail.com",
+        "cf_phonenumber": "7666690798"
+      }
+    }
+  },
+  "reclaimedTry": false,
+  "feedback": [
+    {
+      "title": "",
+      "id": "section66b74b983dd9d",
+      "blocks": [
+        {
+          "id": "mc66b74b983dda5",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "What is the unit digit of 351 ?",
+            "widgets": [
+              {
+                "id": "text66b74b983ddaa",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">What is the unit digit of 3<sup>51</sup> ?&nbsp;</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74b983dde9",
+              "description": {
+                "text": "3",
+                "widgets": [
+                  {
+                    "id": "text66b74b983ddf1",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>3</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b983de01",
+              "description": {
+                "text": "9",
+                "widgets": [
+                  {
+                    "id": "text66b74b983de07",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>9</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b983de17",
+              "description": {
+                "text": "7",
+                "widgets": [
+                  {
+                    "id": "text66b74b983de1d",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>7</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b983de2c",
+              "description": {
+                "text": "1",
+                "widgets": [
+                  {
+                    "id": "text66b74b983de32",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>1</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74b983de17",
+              "text": "7",
+              "widgets": [
+                {
+                  "id": "text66b74b983de1d",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>7</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>As 3 follows cyclicity of 4\n<br>51/4\n… … remainder = 3\n<br>Therefore, unit digit will be = 7</p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74b983de50",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "What is the unit digit of sum of first 50 natural numbers?",
+            "widgets": [
+              {
+                "id": "text66b74b983de55",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">What is the unit digit of sum of first 50 natural numbers?&nbsp;</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74b983de9d",
+              "description": {
+                "text": "5",
+                "widgets": [
+                  {
+                    "id": "text66b74b983dea4",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>5</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b983deb2",
+              "description": {
+                "text": "3",
+                "widgets": [
+                  {
+                    "id": "text66b74b983dec3",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>3</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b983ded1",
+              "description": {
+                "text": "4",
+                "widgets": [
+                  {
+                    "id": "text66b74b983ded8",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>4</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b983dee7",
+              "description": {
+                "text": "9",
+                "widgets": [
+                  {
+                    "id": "text66b74b983deee",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>9</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74b983de9d",
+              "text": "5",
+              "widgets": [
+                {
+                  "id": "text66b74b983dea4",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>5</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>sum of first 50 natural numbers = (50×51)/2\n<br>So, unit digit will be = 5</p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74b983df0e",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "What is the rightmost non zero digit of 702521?",
+            "widgets": [
+              {
+                "id": "text66b74b983df13",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">What is the rightmost non zero digit of 70<sup>2521</sup>?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74b983df54",
+              "description": {
+                "text": "9",
+                "widgets": [
+                  {
+                    "id": "text66b74b983df5b",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>9</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b983df6a",
+              "description": {
+                "text": "7",
+                "widgets": [
+                  {
+                    "id": "text66b74b983df71",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>7</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b983df7f",
+              "description": {
+                "text": "3",
+                "widgets": [
+                  {
+                    "id": "text66b74b983df86",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>3</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b983df95",
+              "description": {
+                "text": "1",
+                "widgets": [
+                  {
+                    "id": "text66b74b983df9b",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>1</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74b983df6a",
+              "text": "7",
+              "widgets": [
+                {
+                  "id": "text66b74b983df71",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>7</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>Here, we have to focus on 7 (only) & 7 follows cyclicity of 4\n<br>2521/4\n… … remainder = 1\n<br>So, right most non zero digit is = 7</p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74b983dfc7",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "What is the unit digit of 25 × 379 × 456 ?",
+            "widgets": [
+              {
+                "id": "text66b74b983dfcf",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">What is the unit digit of 2<sup>5</sup>  × 3<sup>79</sup>  × 4<sup>56</sup> ?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74b983e016",
+              "description": {
+                "text": "4",
+                "widgets": [
+                  {
+                    "id": "text66b74b983e01c",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>4</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b983e02b",
+              "description": {
+                "text": "6",
+                "widgets": [
+                  {
+                    "id": "text66b74b983e032",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>6</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b983e041",
+              "description": {
+                "text": "7",
+                "widgets": [
+                  {
+                    "id": "text66b74b983e047",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>7</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b983e056",
+              "description": {
+                "text": "2",
+                "widgets": [
+                  {
+                    "id": "text66b74b983e05c",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>2</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74b983e016",
+              "text": "4",
+              "widgets": [
+                {
+                  "id": "text66b74b983e01c",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>4</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>just calculating unit digit – (using cyclicity of 2, 3 & 4)\n… 2 × … 7 × … 6 → unit digit is = 4</p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74b983e07c",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "",
+            "widgets": [
+              {
+                "id": "text66b74b983e081",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/a9fc8ad2908e8d80664a4ffdca4d11c1.jpg\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto;\"></p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74b983e0be",
+              "description": {
+                "text": "8",
+                "widgets": [
+                  {
+                    "id": "text66b74b983e0c5",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>8</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b983e0d4",
+              "description": {
+                "text": "4",
+                "widgets": [
+                  {
+                    "id": "text66b74b983e0da",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>4</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b983e0e9",
+              "description": {
+                "text": "2",
+                "widgets": [
+                  {
+                    "id": "text66b74b983e0ef",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>2</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b983e0fe",
+              "description": {
+                "text": "6",
+                "widgets": [
+                  {
+                    "id": "text66b74b983e105",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>6</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74b983e0be",
+              "text": "8",
+              "widgets": [
+                {
+                  "id": "text66b74b983e0c5",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>8</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/12701fad423bf50df669dff5b3c0daf6.jpg\"></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        }
+      ]
+    }
+  ],
+  "submitted": true,
+  "updated": true,
+  "retryCount": 4,
+  "inlineFeedback": [],
+  "errors": [],
+  "success": true
+}

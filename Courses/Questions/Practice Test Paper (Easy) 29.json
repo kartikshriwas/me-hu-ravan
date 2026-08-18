@@ -1,0 +1,3072 @@
+{
+  "submission": {
+    "anon_id": null,
+    "model": "assessment-submission",
+    "courseTitleId": "aptitude-qs-library",
+    "object_id": "66a23d1b68de68b4d50012a9",
+    "assessmentId": "66a23d1b68de68b4d50012a8",
+    "snapshotId": "66be2c5cf47cd602750fdd5b",
+    "questions": {
+      "section66a23d1b0350b": [
+        "mc1721985235769_273",
+        "mc1721985316589_286",
+        "mc1721985341332_301",
+        "mc1721985399376_312",
+        "mc1721985436652_330",
+        "mc1721985495716_343",
+        "mc1721985534660_359",
+        "mc1721985608229_365",
+        "mc1721985637056_382",
+        "mc1721985697160_399"
+      ]
+    },
+    "certificateAnswers": [],
+    "certificateId": null,
+    "questionData": {
+      "mc1721985235769_273": {
+        "deliveredOnTimestamp": 1786440417.012223,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721985316589_286": {
+        "deliveredOnTimestamp": 1786440417.012245,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721985341332_301": {
+        "deliveredOnTimestamp": 1786440417.012257,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721985399376_312": {
+        "deliveredOnTimestamp": 1786440417.012268,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721985436652_330": {
+        "deliveredOnTimestamp": 1786440417.012278,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721985495716_343": {
+        "deliveredOnTimestamp": 1786440417.012289,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721985534660_359": {
+        "deliveredOnTimestamp": 1786440417.012298,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721985608229_365": {
+        "deliveredOnTimestamp": 1786440417.012308,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721985637056_382": {
+        "deliveredOnTimestamp": 1786440417.012318,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721985697160_399": {
+        "deliveredOnTimestamp": 1786440417.012328,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      }
+    },
+    "answers": [
+      {
+        "blockId": "mc1721985235769_273",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721985316589_286",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721985341332_301",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721985399376_312",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721985436652_330",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721985495716_343",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721985534660_359",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721985608229_365",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721985637056_382",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721985697160_399",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      }
+    ],
+    "submittedTimestamp": 1786440417.244981,
+    "status": "submitted",
+    "grading_status": "grading_status_no_grade",
+    "access": "public",
+    "actual_score": null,
+    "score": [],
+    "source": {
+      "type": "unit"
+    },
+    "isDefining": true,
+    "isAdminAutoGradedSubmission": null,
+    "listOfNonConsentedBlocks": [],
+    "created": 1786440417.01731,
+    "modified": 1786440417.350307,
+    "id": "6a7aeae151b72f88b7057b4d",
+    "passed": null
+  },
+  "assessment": {
+    "title": "Practice Test Paper (Easy)",
+    "access": "public",
+    "type": "assessment",
+    "model": "assessmentSnapshot",
+    "description": "Foundational practice test paper containing 10 assessment questions covering Seating Arrangements.",
+    "isTimed": false,
+    "timerFor": "assessmentTimed",
+    "onTimerExpiration": "autoSubmit",
+    "assessmentTimeLimitInSeconds": 600,
+    "questionTimeLimitInSeconds": 60,
+    "standaloneShareEnabled": null,
+    "customUrl": null,
+    "usesCustomUrl": null,
+    "allowAnonymous": true,
+    "randomizeQuestionOptions": false,
+    "disallowPartialSubmissions": false,
+    "submissionDueDateEnabled": false,
+    "submissionDueDate": 1626257823,
+    "makeFeedbackAvailableAfterDateEnabled": false,
+    "makeFeedbackAvailableAfterDate": 0,
+    "customStylesEnabled": true,
+    "customStyles": {
+      "assessmentPage": {
+        "background": {
+          "type": "color",
+          "colorData": {
+            "code": "",
+            "class": "lw-body-bg"
+          }
+        },
+        "dividers": {
+          "top": {
+            "orientation": "top",
+            "divider": "none"
+          },
+          "bottom": {
+            "orientation": "bottom",
+            "divider": "none"
+          }
+        }
+      },
+      "option": {
+        "radioEffect": "scribble",
+        "checkboxEffect": "scribble",
+        "size": "small"
+      },
+      "assessment": {
+        "transition": "none",
+        "background": {
+          "type": "color",
+          "colorData": {
+            "code": "",
+            "class": ""
+          }
+        },
+        "width": "normal",
+        "timerTemplate": "rectangle"
+      },
+      "linearRating": {
+        "labels": {
+          "size": "small"
+        }
+      },
+      "question": {
+        "description": {
+          "background": {
+            "type": "color",
+            "colorData": {
+              "code": "",
+              "class": ""
+            }
+          },
+          "type": "p",
+          "size": "small"
+        },
+        "answers": {
+          "background": {
+            "type": "color",
+            "colorData": {
+              "code": "",
+              "class": ""
+            }
+          }
+        },
+        "requiredAsterisk": {
+          "colorData": {
+            "code": "#ff0000",
+            "class": ""
+          }
+        },
+        "errorMessages": {
+          "size": "verySmall",
+          "colorData": {
+            "code": "#ff0000",
+            "class": ""
+          }
+        }
+      },
+      "input": {
+        "size": "small",
+        "type": "solidDark"
+      },
+      "textarea": {
+        "size": "small",
+        "type": "solidDark"
+      },
+      "dropdown": {
+        "size": "small",
+        "type": "solidDark"
+      }
+    },
+    "submissionMode": "all",
+    "startingDate": 1626765704,
+    "startingDateEnabled": false,
+    "showOnlyFailedQuestionsOnRetry": false,
+    "retryEnabled": true,
+    "retryOnFailOnly": false,
+    "gradingMethod": null,
+    "maxTries": null,
+    "onlyWrongOnRetake": null,
+    "isAmendable": false,
+    "feedbackShowOnScreen": false,
+    "feedbackDownloadPDF": false,
+    "feedbackShowInline": true,
+    "feedbackQuestionList": "all-questions",
+    "feedbackShowQuestionScore": false,
+    "feedbackShowFeedback": true,
+    "feedbackShowNumbering": false,
+    "feedbackShowSectionTitles": false,
+    "feedbackShowUserAnswers": true,
+    "feedbackShowCorrectAnswers": true,
+    "feedbackShowAnswerCorrectness": true,
+    "displayInlineFeedbackEnabled": true,
+    "displayBackButtonWhenSubmissionPerBlock": true,
+    "feedbackShowSectionResultSummary": false,
+    "askConfirmationBeforeSubmit": false,
+    "hasCustomConfirmationBeforeSubmitText": false,
+    "customConfirmationBeforeSubmitText": "Are you sure you want to submit the questionnaire?",
+    "customConfirmationBeforeSubmitTexts": {
+      "title": "Submit Assessment?",
+      "baseConfirmationMessage": "Are you sure you want to submit the questionnaire?",
+      "unansweredNotice": "You have not answered {X} questions."
+    },
+    "amendResubmissionMinutes": 30,
+    "passingGrade": null,
+    "navigationMode": "per-block",
+    "conditionalBlocks": {
+      "introContent": {
+        "id": "content66a23d1b0344c",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66a23d1b03457",
+              "type": "text",
+              "insertedAsWidget": true,
+              "properties": {
+                "html": "Linear Arrangements PAPER LEVEL-1",
+                "alignment": "center",
+                "customStyle": true,
+                "type": "h2",
+                "size": "normal"
+              }
+            },
+            {
+              "id": "text66a23d1b0346a",
+              "type": "text",
+              "properties": {
+                "html": "<div><span style=\"font-size: 1.7rem; letter-spacing: 0rem;\">Self-assess your knowledge. Express yourself and get feedback from our instructors.</span><br></div>",
+                "customStyle": true,
+                "alignment": "center"
+              }
+            },
+            {
+              "id": "spacer66a23d1b03476",
+              "type": "spacer",
+              "properties": {
+                "height": 25,
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            },
+            {
+              "id": "button66a23d1b03485",
+              "type": "button",
+              "properties": {
+                "buttonLabel": "<span>Ready to start</span>",
+                "buttonSize": "normal",
+                "buttonType": "solidBrand",
+                "alignment": "center",
+                "linkData": {
+                  "linkType": "goToFirst"
+                },
+                "iconColorData": {
+                  "code": "",
+                  "class": ""
+                },
+                "iconDisplay": false,
+                "iconSize": 26,
+                "iconClassName": " fas fa-angle-right",
+                "iconPosition": "right"
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "variables": {
+            "conditionalBlocks_introContent_blockData_widgets_0": []
+          }
+        }
+      },
+      "submissionStartingDate": {
+        "id": "content66a23d1b034aa",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66a23d1b034af",
+              "type": "text",
+              "properties": {
+                "html": "Sorry but this assessment hasn't started yet."
+              }
+            },
+            {
+              "id": "date66a23d1b034b6",
+              "type": "date",
+              "properties": {
+                "value": ""
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "displayConditions": ["startingDate"]
+        }
+      },
+      "submissionDueDate": {
+        "id": "content66a23d1b034c4",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66a23d1b034c9",
+              "type": "text",
+              "properties": {
+                "html": "Sorry but this assessment date is due."
+              }
+            },
+            {
+              "id": "date66a23d1b034d0",
+              "type": "date",
+              "properties": {
+                "value": ""
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "displayConditions": ["dateIsDue"]
+        }
+      },
+      "outroContent": {
+        "id": "content66a23d1b034de",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "userResults66a23d1b034e3",
+              "type": "userResults",
+              "properties": {
+                "layout": "template2",
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            },
+            {
+              "id": "feedback66a23d1b034f0",
+              "type": "feedback",
+              "properties": []
+            },
+            {
+              "id": "outroActions66a23d1b034f7",
+              "type": "outroActions",
+              "properties": {
+                "layout": "",
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true
+        }
+      }
+    },
+    "systemSections": null,
+    "sections": [
+      {
+        "id": "section66a23d1b0350b",
+        "title": "",
+        "type": "section",
+        "navigationMode": "per-block",
+        "blocks": [
+          {
+            "id": "mc1721985235769_273",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721985235769_272",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions:</strong>\n</p><div style=\"text-align: justify;\">A gardener arranges Red, Brown, Green, Yellow, Orange, Blue, White, and Pink coloured pots in a row subject to the following conditions:\n</div><div style=\"text-align: justify;\">i.\tThe Red and the Brown pots are not adjacent to each other.\n</div><div style=\"text-align: justify;\">ii.\tThere is one pot each between the Blue and the Red pot and one between the Pink and Orange pot.\n</div><div style=\"text-align: justify;\">iii.\tThe Green pot is between the Orange and the Yellow pot.\n</div><div style=\"text-align: justify;\">iv.\tThe Brown pot is not kept adjacent to the Orange pot.\n</div><div style=\"text-align: justify;\">v.\tThe Red pot is at position one.\n</div><div style=\"text-align: justify;\">vi.\tThe White pot is not at the end. \n</div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">Which pot is kept at position 5?</div>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721985235769_278",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721985235769_270",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721985235769_280",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721985235769_271",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721985235769_275",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>White</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721985235769_281",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721985235769_274",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Orange</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721985235769_277",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721985235769_276",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Green</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721985235769_279",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721985235769_282",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Brown</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_0": []
+              }
+            }
+          },
+          {
+            "id": "mc1721985316589_286",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721985316589_290",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions:</strong>\n</p><div style=\"text-align: justify;\">A gardener arranges Red, Brown, Green, Yellow, Orange, Blue, White, and Pink coloured pots in a row subject to the following conditions:\n</div><div style=\"text-align: justify;\">i.\tThe Red and the Brown pots are not adjacent to each other.\n</div><div style=\"text-align: justify;\">ii.\tThere is one pot each between the Blue and the Red pot and one between the Pink and Orange pot.\n</div><div style=\"text-align: justify;\">iii.\tThe Green pot is between the Orange and the Yellow pot.\n</div><div style=\"text-align: justify;\">iv.\tThe Brown pot is not kept adjacent to the Orange pot.\n</div><div style=\"text-align: justify;\">v.\tThe Red pot is at position one.\n</div><div style=\"text-align: justify;\">vi.\tThe White pot is not at the end. \n</div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">How many arrangements are possible?</div>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721985316589_284",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721985316589_288",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721985316589_291",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721985316589_289",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721985316589_295",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>1</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721985316589_293",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721985316589_283",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>2</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721985316589_294",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721985316589_292",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>3</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721985316589_285",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721985316589_287",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>4</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_1": []
+              }
+            }
+          },
+          {
+            "id": "mc1721985341332_301",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721985341332_303",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions:</strong>\n</p><div style=\"text-align: justify;\">P, Q, R, S, T, U, V are sitting in a row facing north such that:\n</div><div style=\"text-align: justify;\">1)\tU is to the immediate right of T\n</div><div style=\"text-align: justify;\">2)\tT is 4th to the right of V\n</div><div style=\"text-align: justify;\">3)\tR is the neighbor of Q and S\n</div><div style=\"text-align: justify;\">4)\tPerson who is 3rd to the left of S is at one of the ends.</div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">Who is to the immediate right of P?</div>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721985341332_297",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721985341332_306",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721985341332_302",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721985341332_304",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721985341332_298",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>S</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721985341332_296",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721985341332_307",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>T</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721985341332_300",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721985341332_299",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>U</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721985341332_308",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721985341332_305",
+                        "type": "text",
+                        "properties": {
+                          "html": "None of the above"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_2_blockData_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_2": []
+              }
+            }
+          },
+          {
+            "id": "mc1721985399376_312",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721985399376_320",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions:</strong>\n</p><div style=\"text-align: justify;\">P, Q, R, S, T, U, V are sitting in a row facing north such that:\n</div><div style=\"text-align: justify;\">1)\tU is to the immediate right of T\n</div><div style=\"text-align: justify;\">2)\tT is 4th to the right of V\n</div><div style=\"text-align: justify;\">3)\tR is the neighbor of Q and S\n</div><div style=\"text-align: justify;\">4)\tPerson who is 3rd to the left of S is at one of the ends.</div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">Who is 2<sup>nd</sup> to the right of V?</div>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721985399376_313",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721985399376_317",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721985399376_310",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721985399376_311",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721985399376_321",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>R</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721985399376_315",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721985399376_316",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>T</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721985399376_314",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721985399376_319",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>U</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721985399376_318",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721985399376_309",
+                        "type": "text",
+                        "properties": {
+                          "html": "None of the above"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_2_blockData_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_3": []
+              }
+            }
+          },
+          {
+            "id": "mc1721985436652_330",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721985436652_329",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions:</strong>\n</p><div style=\"text-align: justify;\">Seven friends Tiya, Umesh, Villa, Waka, Xavier, Yamuna, and Zoya are sitting in a straight line facing north. Waka sits fifth to the right of Tiya. Waka does not sit at any extreme end. Two people sit between Zoya and Xavier. Yamuna sits third to the left of Umesh. Yamuna sits exactly in the middle. Zoya is not an immediate neighbor of Yamuna.\n</div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">What is Zoya's position with respect to Waka?</div><div>\n</div>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721985436652_326",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721985436652_328",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721985436652_325",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721985436652_327",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721985436652_333",
+                        "type": "text",
+                        "properties": {
+                          "html": "Second to the left"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721985436652_334",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721985436652_323",
+                        "type": "text",
+                        "properties": {
+                          "html": "Third to the right"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721985436652_324",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721985436652_332",
+                        "type": "text",
+                        "properties": {
+                          "html": "Fourth to the left"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721985436652_331",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721985436652_322",
+                        "type": "text",
+                        "properties": {
+                          "html": "Third to the left"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_4_blockData_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4": []
+              }
+            }
+          },
+          {
+            "id": "mc1721985495716_343",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721985495716_342",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions:</strong>\n</p><div style=\"text-align: justify;\">Seven friends Tiya, Umesh, Villa, Waka, Xavier, Yamuna, and Zoya are sitting in a straight line facing north. Waka sits fifth to the right of Tiya. Waka does not sit at any extreme end. Two people sit between Zoya and Xavier. Yamuna sits third to the left of Umesh. Yamuna sits exactly in the middle. Zoya is not an immediate neighbor of Yamuna.\n</div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">Who is second to the right of Tiya?</div><div>\n</div>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721985495716_344",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721985495716_338",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721985495716_335",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721985495716_346",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721985495716_347",
+                        "type": "text",
+                        "properties": {
+                          "html": "Yamuna"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721985495716_337",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721985495716_345",
+                        "type": "text",
+                        "properties": {
+                          "html": "Xavier"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721985495716_340",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721985495716_336",
+                        "type": "text",
+                        "properties": {
+                          "html": "Umesh"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721985495716_341",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721985495716_339",
+                        "type": "text",
+                        "properties": {
+                          "html": "Villa"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_4_blockData_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5": []
+              }
+            }
+          },
+          {
+            "id": "mc1721985534660_359",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721985534660_357",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong>\n</p><div style=\"text-align: justify;\">Five boys A, B, C, D, and E are sitting in a row, not necessarily in the given order. There is only one newspaper that gets circulated from the first to the fifth person, the first person being at the extreme left. One can hand over the newspaper only to a person who is sitting next to him. The following are some of the points known about the group.\t\n</div><div style=\"text-align: justify;\">i.\tB cannot take the paper from C.\n</div><div style=\"text-align: justify;\">ii.\tC sits first in the row.\n</div><div style=\"text-align: justify;\">iii.\tD cannot take the paper from C.\n</div><div style=\"text-align: justify;\">iv.\tA cannot hand over the paper to anybody.\n</div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">At what position is E sitting?</div><div>\n</div>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721985534660_348",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721985534660_354",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721985534660_351",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721985534660_358",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721985534660_353",
+                        "type": "text",
+                        "properties": {
+                          "html": "1<sup>st</sup>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721985534660_349",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721985534660_352",
+                        "type": "text",
+                        "properties": {
+                          "html": "2<sup>nd</sup>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721985534660_356",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721985534660_355",
+                        "type": "text",
+                        "properties": {
+                          "html": "3<sup>rd</sup>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721985534660_350",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721985534660_360",
+                        "type": "text",
+                        "properties": {
+                          "html": "4<sup>th</sup>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_6_blockData_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_6": []
+              }
+            }
+          },
+          {
+            "id": "mc1721985608229_365",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721985608229_362",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong>\n</p><div style=\"text-align: justify;\">Five boys A, B, C, D, and E are sitting in a row, not necessarily in the given order. There is only one newspaper that gets circulated from the first to the fifth person, the first person being at the extreme left. One can hand over the newspaper only to a person who is sitting next to him. The following are some of the points known about the group.\t\n</div><div style=\"text-align: justify;\">i.\tB cannot take the paper from C.\n</div><div style=\"text-align: justify;\">ii.\tC sits first in the row.\n</div><div style=\"text-align: justify;\">iii.\tD cannot take the paper from C.\n</div><div style=\"text-align: justify;\">iv.\tA cannot hand over the paper to anybody.\n</div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">How many arrangements are possible?</div><div>\n</div>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721985608229_364",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721985608229_369",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721985608229_370",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721985608229_373",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721985608229_371",
+                        "type": "text",
+                        "properties": {
+                          "html": "1"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721985608229_367",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721985608229_361",
+                        "type": "text",
+                        "properties": {
+                          "html": "2"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721985608229_363",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721985608229_368",
+                        "type": "text",
+                        "properties": {
+                          "html": "3"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721985608229_366",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721985608229_372",
+                        "type": "text",
+                        "properties": {
+                          "html": "4"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_6_blockData_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_7": []
+              }
+            }
+          },
+          {
+            "id": "mc1721985637056_382",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721985637056_378",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong>\n</p><div style=\"text-align: justify;\">Nine football fanatics are watching a Manchester United vs Arsenal Match at Old Trafford. Seated in one row, they are A, B, C, D, E, F, G, H and I. C is sitting to the immediate left of D and at second place to the right of E. B is at one end of the row. H is sitting adjacent to both B and F. I is second to the right of D. F is sitting to the immediate left of E. G does not sit with E.\n</div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">Who sits at the other end of the row?</div><div>\n</div>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721985637056_381",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721985637056_377",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721985637056_384",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721985637056_380",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721985637056_386",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>G</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721985637056_375",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721985637056_376",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>I</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721985637056_379",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721985637056_383",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>A</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721985637056_385",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721985637056_374",
+                        "type": "text",
+                        "properties": {
+                          "html": "None of these"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_8_blockData_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_8": []
+              }
+            }
+          },
+          {
+            "id": "mc1721985697160_399",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721985697160_389",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong>\n</p><div style=\"text-align: justify;\">Nine football fanatics are watching a Manchester United vs Arsenal Match at Old Trafford. Seated in one row, they are A, B, C, D, E, F, G, H and I. C is sitting to the immediate left of D and at second place to the right of E. B is at one end of the row. H is sitting adjacent to both B and F. I is second to the right of D. F is sitting to the immediate left of E. G does not sit with E.\n</div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">Who is sitting at middle of the row?</div><div>\n</div>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721985697160_390",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721985697160_394",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721985697160_391",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721985697160_397",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721985697160_398",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>A</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721985697160_396",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721985697160_387",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>B</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721985697160_392",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721985697160_395",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>C</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721985697160_388",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721985697160_393",
+                        "type": "text",
+                        "properties": {
+                          "html": "D"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_8_blockData_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_9": []
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "availabilityStatus": null,
+    "autoNavigationEnabled": false,
+    "displayBackButtonWhenNavigationPerBlock": true,
+    "saveAndResumeLaterEnabled": null,
+    "tagsAddedOnCompletion": [],
+    "tagsAddedOnPass": [],
+    "sendAnonymousSubmissionsToEmailLeads": false,
+    "afterSubmitActionEnabled": null,
+    "afterSubmitActionProperties": null,
+    "showWizardOnNextEdit": false,
+    "revisitAfterSubmissionAction": null,
+    "navigationTemplate": "HorizontalSpacedBetweenNavigationTemplate",
+    "learnerSearchBarEnabled": true,
+    "learnerUnansweredQuestionsEnabled": true,
+    "learnerFavouriteQuestionEnabled": true,
+    "learnerCompletionProgressEnabled": true,
+    "learnerShowIndexOfQuestionsEnabled": false,
+    "learnerTimeNotificationsEnabled": false,
+    "learnerAllowInterruptionsEnabled": true,
+    "learnerAllowInterruptionsTimeoutInMinutes": 30,
+    "learnerReclaimTryOnInterruptionTimeoutEnabled": false,
+    "learnerAskBeforeContinueToSaved": true,
+    "learnerAutoSaveEnabled": null,
+    "spellcheckDisabled": null,
+    "showPartialScoreOnSubmission": true,
+    "deliverableQuestionsSubsetType": "all",
+    "questionRandomizationType": "none",
+    "serveQuestionsBasedOnPreviousSubmission": null,
+    "scoringDisabled": true,
+    "isSelfAssessment": true,
+    "useDefaultCertificateTemplate": null,
+    "certificateTemplate": null,
+    "certificateSocialShare": null,
+    "migrationData": null,
+    "useAssessmentPassingGradeForOpenEndedCorrectness": true,
+    "openEndedCorrectnessPassingGrade": null,
+    "showScorePercentage": null,
+    "showScorePoints": null,
+    "showScoreCorrectAnswers": null,
+    "editorBehaviorSettings": null,
+    "manualReviewEnabled": false,
+    "resultsSummary": {
+      "enabled": true,
+      "showStatusIcon": true,
+      "showStatusText": true,
+      "showScorePercentage": true,
+      "showScorePoints": true,
+      "showScoreCorrectAnswers": true,
+      "showTimeTakenToComplete": true,
+      "showDateSubmitted": true,
+      "showAttemptCount": true
+    },
+    "meta": null,
+    "submissionsCount": 307,
+    "fromMarketplace": null,
+    "aiFeedbackEnabled": null,
+    "numberOfFeedbackQuestions": null,
+    "created": 1721908507.473212,
+    "modified": 1723739228.195243,
+    "contentHash": "14d3e56fc30b18d7c1442b72f1d2f7a4e19f02bd231af44b16ce66ed9be2fbf2",
+    "id": "66a23d1b68de68b4d50012a8",
+    "objectType": "assessment",
+    "isEditBlockedDueToSync": false,
+    "variables": {
+      "submission": {
+        "self": {
+          "score": null,
+          "points": null,
+          "total_points": null,
+          "correct_answers": null,
+          "total_questions": 10,
+          "time_spent": "00:00:00",
+          "date_submitted": "11/08/26",
+          "attempt_count": 3,
+          "max_tries": null,
+          "pass_grade": null,
+          "time_spent_seconds": 0,
+          "raw_start_date": 1786440417.01731
+        }
+      },
+      "school": {
+        "name": "Apna College",
+        "url": "www.apnacollege.in",
+        "description": "The most loved coding community of India ❤️"
+      },
+      "user": {
+        "username": "ram",
+        "email": "p4542639@gmail.com",
+        "cf_phonenumber": "7666690798"
+      }
+    }
+  },
+  "reclaimedTry": false,
+  "feedback": [
+    {
+      "title": "",
+      "id": "section66a23d1b0350b",
+      "blocks": [
+        {
+          "id": "mc1721985235769_273",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions: A gardener arranges Red, Brown, Green, Yellow, Orange, Blue, White, and Pink coloured pots in a row subject to the following conditions: i. The Red and the Brown pots are not adjacent to each other. ii. There is one pot each between the Blue and the Red pot and one between the Pink and Orange pot. iii. The Green pot is between the Orange and the Yellow pot. iv. The Brown pot is not kept adjacent to the Orange pot. v. The Red pot is at position one. vi. The White pot is not at the end. Which pot is kept at position 5?",
+            "widgets": [
+              {
+                "id": "mc1721985235769_272",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions:</strong>\n</p><div style=\"text-align: justify;\">A gardener arranges Red, Brown, Green, Yellow, Orange, Blue, White, and Pink coloured pots in a row subject to the following conditions:\n</div><div style=\"text-align: justify;\">i.\tThe Red and the Brown pots are not adjacent to each other.\n</div><div style=\"text-align: justify;\">ii.\tThere is one pot each between the Blue and the Red pot and one between the Pink and Orange pot.\n</div><div style=\"text-align: justify;\">iii.\tThe Green pot is between the Orange and the Yellow pot.\n</div><div style=\"text-align: justify;\">iv.\tThe Brown pot is not kept adjacent to the Orange pot.\n</div><div style=\"text-align: justify;\">v.\tThe Red pot is at position one.\n</div><div style=\"text-align: justify;\">vi.\tThe White pot is not at the end. \n</div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">Which pot is kept at position 5?</div>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721985235769_271",
+              "description": {
+                "text": "White",
+                "widgets": [
+                  {
+                    "id": "mc1721985235769_275",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>White</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721985235769_281",
+              "description": {
+                "text": "Orange",
+                "widgets": [
+                  {
+                    "id": "mc1721985235769_274",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Orange</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721985235769_277",
+              "description": {
+                "text": "Green",
+                "widgets": [
+                  {
+                    "id": "mc1721985235769_276",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Green</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721985235769_279",
+              "description": {
+                "text": "Brown",
+                "widgets": [
+                  {
+                    "id": "mc1721985235769_282",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Brown</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721985235769_277",
+              "text": "Green",
+              "widgets": [
+                {
+                  "id": "mc1721985235769_276",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>Green</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:</p><p style=\"text-align: justify;\"><span>The Red pot is at position one, so the Blue pot is at position\nthree. For the Green pot to be between the Orange and the Yellow pot, for one\npot to be between the Pink and the Orange pot, and for the brown pot not being\nadjacent to the orange pot, the Pink pot should be at the second position and\nthe Green pot at the fifth position. The White pot is in the seventh position\nand the Brown pot is at the eighth position.</span></p><p style=\"text-align: justify;\">\n<span>The possible arrangement is\nas follows,</span><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/3b398dc9c6b27a1e3d29ba4b03239102.png\"><br><span>The\ngreen pot is kept at position 5.</span></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721985316589_286",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions: A gardener arranges Red, Brown, Green, Yellow, Orange, Blue, White, and Pink coloured pots in a row subject to the following conditions: i. The Red and the Brown pots are not adjacent to each other. ii. There is one pot each between the Blue and the Red pot and one between the Pink and Orange pot. iii. The Green pot is between the Orange and the Yellow pot. iv. The Brown pot is not kept adjacent to the Orange pot. v. The Red pot is at position one. vi. The White pot is not at the end. How many arrangements are possible?",
+            "widgets": [
+              {
+                "id": "mc1721985316589_290",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions:</strong>\n</p><div style=\"text-align: justify;\">A gardener arranges Red, Brown, Green, Yellow, Orange, Blue, White, and Pink coloured pots in a row subject to the following conditions:\n</div><div style=\"text-align: justify;\">i.\tThe Red and the Brown pots are not adjacent to each other.\n</div><div style=\"text-align: justify;\">ii.\tThere is one pot each between the Blue and the Red pot and one between the Pink and Orange pot.\n</div><div style=\"text-align: justify;\">iii.\tThe Green pot is between the Orange and the Yellow pot.\n</div><div style=\"text-align: justify;\">iv.\tThe Brown pot is not kept adjacent to the Orange pot.\n</div><div style=\"text-align: justify;\">v.\tThe Red pot is at position one.\n</div><div style=\"text-align: justify;\">vi.\tThe White pot is not at the end. \n</div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">How many arrangements are possible?</div>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721985316589_289",
+              "description": {
+                "text": "1",
+                "widgets": [
+                  {
+                    "id": "mc1721985316589_295",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>1</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721985316589_293",
+              "description": {
+                "text": "2",
+                "widgets": [
+                  {
+                    "id": "mc1721985316589_283",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>2</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721985316589_294",
+              "description": {
+                "text": "3",
+                "widgets": [
+                  {
+                    "id": "mc1721985316589_292",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>3</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721985316589_285",
+              "description": {
+                "text": "4",
+                "widgets": [
+                  {
+                    "id": "mc1721985316589_287",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>4</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721985316589_289",
+              "text": "1",
+              "widgets": [
+                {
+                  "id": "mc1721985316589_295",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>1</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br><span>There\nis only one arrangement possible, as shown above.</span></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721985341332_301",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions: P, Q, R, S, T, U, V are sitting in a row facing north such that: 1) U is to the immediate right of T 2) T is 4th to the right of V 3) R is the neighbor of Q and S 4) Person who is 3rd to the left of S is at one of the ends.Who is to the immediate right of P?",
+            "widgets": [
+              {
+                "id": "mc1721985341332_303",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions:</strong>\n</p><div style=\"text-align: justify;\">P, Q, R, S, T, U, V are sitting in a row facing north such that:\n</div><div style=\"text-align: justify;\">1)\tU is to the immediate right of T\n</div><div style=\"text-align: justify;\">2)\tT is 4th to the right of V\n</div><div style=\"text-align: justify;\">3)\tR is the neighbor of Q and S\n</div><div style=\"text-align: justify;\">4)\tPerson who is 3rd to the left of S is at one of the ends.</div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">Who is to the immediate right of P?</div>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721985341332_304",
+              "description": {
+                "text": "S",
+                "widgets": [
+                  {
+                    "id": "mc1721985341332_298",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>S</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721985341332_296",
+              "description": {
+                "text": "T",
+                "widgets": [
+                  {
+                    "id": "mc1721985341332_307",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>T</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721985341332_300",
+              "description": {
+                "text": "U",
+                "widgets": [
+                  {
+                    "id": "mc1721985341332_299",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>U</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721985341332_308",
+              "description": {
+                "text": "None of the above",
+                "widgets": [
+                  {
+                    "id": "mc1721985341332_305",
+                    "type": "text",
+                    "properties": {
+                      "html": "None of the above"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721985341332_308",
+              "text": "None of the above",
+              "widgets": [
+                {
+                  "id": "mc1721985341332_305",
+                  "type": "text",
+                  "properties": {
+                    "html": "None of the above"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><u>V          Q          R          S          T          U          P</u>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721985399376_312",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions: P, Q, R, S, T, U, V are sitting in a row facing north such that: 1) U is to the immediate right of T 2) T is 4th to the right of V 3) R is the neighbor of Q and S 4) Person who is 3rd to the left of S is at one of the ends.Who is 2nd to the right of V?",
+            "widgets": [
+              {
+                "id": "mc1721985399376_320",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions:</strong>\n</p><div style=\"text-align: justify;\">P, Q, R, S, T, U, V are sitting in a row facing north such that:\n</div><div style=\"text-align: justify;\">1)\tU is to the immediate right of T\n</div><div style=\"text-align: justify;\">2)\tT is 4th to the right of V\n</div><div style=\"text-align: justify;\">3)\tR is the neighbor of Q and S\n</div><div style=\"text-align: justify;\">4)\tPerson who is 3rd to the left of S is at one of the ends.</div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">Who is 2<sup>nd</sup> to the right of V?</div>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721985399376_311",
+              "description": {
+                "text": "R",
+                "widgets": [
+                  {
+                    "id": "mc1721985399376_321",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>R</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721985399376_315",
+              "description": {
+                "text": "T",
+                "widgets": [
+                  {
+                    "id": "mc1721985399376_316",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>T</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721985399376_314",
+              "description": {
+                "text": "U",
+                "widgets": [
+                  {
+                    "id": "mc1721985399376_319",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>U</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721985399376_318",
+              "description": {
+                "text": "None of the above",
+                "widgets": [
+                  {
+                    "id": "mc1721985399376_309",
+                    "type": "text",
+                    "properties": {
+                      "html": "None of the above"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721985399376_311",
+              "text": "R",
+              "widgets": [
+                {
+                  "id": "mc1721985399376_321",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>R</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><span>R\nis sitting second to the right of V.</span>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721985436652_330",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions: Seven friends Tiya, Umesh, Villa, Waka, Xavier, Yamuna, and Zoya are sitting in a straight line facing north. Waka sits fifth to the right of Tiya. Waka does not sit at any extreme end. Two people sit between Zoya and Xavier. Yamuna sits third to the left of Umesh. Yamuna sits exactly in the middle. Zoya is not an immediate neighbor of Yamuna. What is Zoya's position with respect to Waka?",
+            "widgets": [
+              {
+                "id": "mc1721985436652_329",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions:</strong>\n</p><div style=\"text-align: justify;\">Seven friends Tiya, Umesh, Villa, Waka, Xavier, Yamuna, and Zoya are sitting in a straight line facing north. Waka sits fifth to the right of Tiya. Waka does not sit at any extreme end. Two people sit between Zoya and Xavier. Yamuna sits third to the left of Umesh. Yamuna sits exactly in the middle. Zoya is not an immediate neighbor of Yamuna.\n</div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">What is Zoya's position with respect to Waka?</div><div>\n</div>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721985436652_327",
+              "description": {
+                "text": "Second to the left",
+                "widgets": [
+                  {
+                    "id": "mc1721985436652_333",
+                    "type": "text",
+                    "properties": {
+                      "html": "Second to the left"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721985436652_334",
+              "description": {
+                "text": "Third to the right",
+                "widgets": [
+                  {
+                    "id": "mc1721985436652_323",
+                    "type": "text",
+                    "properties": {
+                      "html": "Third to the right"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721985436652_324",
+              "description": {
+                "text": "Fourth to the left",
+                "widgets": [
+                  {
+                    "id": "mc1721985436652_332",
+                    "type": "text",
+                    "properties": {
+                      "html": "Fourth to the left"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721985436652_331",
+              "description": {
+                "text": "Third to the left",
+                "widgets": [
+                  {
+                    "id": "mc1721985436652_322",
+                    "type": "text",
+                    "properties": {
+                      "html": "Third to the left"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721985436652_324",
+              "text": "Fourth to the left",
+              "widgets": [
+                {
+                  "id": "mc1721985436652_332",
+                  "type": "text",
+                  "properties": {
+                    "html": "Fourth to the left"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/5470265a872c8fa8232cf2061725e79b.png\"><br><span>Hence,\nZoya’s position with respect to Waka is fourth to the left.</span></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721985495716_343",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions: Seven friends Tiya, Umesh, Villa, Waka, Xavier, Yamuna, and Zoya are sitting in a straight line facing north. Waka sits fifth to the right of Tiya. Waka does not sit at any extreme end. Two people sit between Zoya and Xavier. Yamuna sits third to the left of Umesh. Yamuna sits exactly in the middle. Zoya is not an immediate neighbor of Yamuna. Who is second to the right of Tiya?",
+            "widgets": [
+              {
+                "id": "mc1721985495716_342",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions:</strong>\n</p><div style=\"text-align: justify;\">Seven friends Tiya, Umesh, Villa, Waka, Xavier, Yamuna, and Zoya are sitting in a straight line facing north. Waka sits fifth to the right of Tiya. Waka does not sit at any extreme end. Two people sit between Zoya and Xavier. Yamuna sits third to the left of Umesh. Yamuna sits exactly in the middle. Zoya is not an immediate neighbor of Yamuna.\n</div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">Who is second to the right of Tiya?</div><div>\n</div>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721985495716_346",
+              "description": {
+                "text": "Yamuna",
+                "widgets": [
+                  {
+                    "id": "mc1721985495716_347",
+                    "type": "text",
+                    "properties": {
+                      "html": "Yamuna"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721985495716_337",
+              "description": {
+                "text": "Xavier",
+                "widgets": [
+                  {
+                    "id": "mc1721985495716_345",
+                    "type": "text",
+                    "properties": {
+                      "html": "Xavier"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721985495716_340",
+              "description": {
+                "text": "Umesh",
+                "widgets": [
+                  {
+                    "id": "mc1721985495716_336",
+                    "type": "text",
+                    "properties": {
+                      "html": "Umesh"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721985495716_341",
+              "description": {
+                "text": "Villa",
+                "widgets": [
+                  {
+                    "id": "mc1721985495716_339",
+                    "type": "text",
+                    "properties": {
+                      "html": "Villa"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721985495716_341",
+              "text": "Villa",
+              "widgets": [
+                {
+                  "id": "mc1721985495716_339",
+                  "type": "text",
+                  "properties": {
+                    "html": "Villa"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><span>Villa\nis second to the right of Tiya.</span>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721985534660_359",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions : Five boys A, B, C, D, and E are sitting in a row, not necessarily in the given order. There is only one newspaper that gets circulated from the first to the fifth person, the first person being at the extreme left. One can hand over the newspaper only to a person who is sitting next to him. The following are some of the points known about the group. i. B cannot take the paper from C. ii. C sits first in the row. iii. D cannot take the paper from C. iv. A cannot hand over the paper to anybody. At what position is E sitting?",
+            "widgets": [
+              {
+                "id": "mc1721985534660_357",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong>\n</p><div style=\"text-align: justify;\">Five boys A, B, C, D, and E are sitting in a row, not necessarily in the given order. There is only one newspaper that gets circulated from the first to the fifth person, the first person being at the extreme left. One can hand over the newspaper only to a person who is sitting next to him. The following are some of the points known about the group.\t\n</div><div style=\"text-align: justify;\">i.\tB cannot take the paper from C.\n</div><div style=\"text-align: justify;\">ii.\tC sits first in the row.\n</div><div style=\"text-align: justify;\">iii.\tD cannot take the paper from C.\n</div><div style=\"text-align: justify;\">iv.\tA cannot hand over the paper to anybody.\n</div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">At what position is E sitting?</div><div>\n</div>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721985534660_358",
+              "description": {
+                "text": "1st",
+                "widgets": [
+                  {
+                    "id": "mc1721985534660_353",
+                    "type": "text",
+                    "properties": {
+                      "html": "1<sup>st</sup>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721985534660_349",
+              "description": {
+                "text": "2nd",
+                "widgets": [
+                  {
+                    "id": "mc1721985534660_352",
+                    "type": "text",
+                    "properties": {
+                      "html": "2<sup>nd</sup>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721985534660_356",
+              "description": {
+                "text": "3rd",
+                "widgets": [
+                  {
+                    "id": "mc1721985534660_355",
+                    "type": "text",
+                    "properties": {
+                      "html": "3<sup>rd</sup>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721985534660_350",
+              "description": {
+                "text": "4th",
+                "widgets": [
+                  {
+                    "id": "mc1721985534660_360",
+                    "type": "text",
+                    "properties": {
+                      "html": "4<sup>th</sup>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721985534660_349",
+              "text": "2nd",
+              "widgets": [
+                {
+                  "id": "mc1721985534660_352",
+                  "type": "text",
+                  "properties": {
+                    "html": "2<sup>nd</sup>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>C and A have to be seated in the first and the fifth positions\nrespectively. Since B and D cannot take the newspaper from C, they cannot\noccupy the second position. So, E is in the 2nd position and either of D and B\nis in the fourth position and the other is in the third position. Hence, the\npossible arrangements are as follows\n<br><u>C E D B</u><u> A</u> or <u>C\nE B D A</u>\n<br>Thus, E is sitting in the\nsecond position.</p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721985608229_365",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions : Five boys A, B, C, D, and E are sitting in a row, not necessarily in the given order. There is only one newspaper that gets circulated from the first to the fifth person, the first person being at the extreme left. One can hand over the newspaper only to a person who is sitting next to him. The following are some of the points known about the group. i. B cannot take the paper from C. ii. C sits first in the row. iii. D cannot take the paper from C. iv. A cannot hand over the paper to anybody. How many arrangements are possible?",
+            "widgets": [
+              {
+                "id": "mc1721985608229_362",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong>\n</p><div style=\"text-align: justify;\">Five boys A, B, C, D, and E are sitting in a row, not necessarily in the given order. There is only one newspaper that gets circulated from the first to the fifth person, the first person being at the extreme left. One can hand over the newspaper only to a person who is sitting next to him. The following are some of the points known about the group.\t\n</div><div style=\"text-align: justify;\">i.\tB cannot take the paper from C.\n</div><div style=\"text-align: justify;\">ii.\tC sits first in the row.\n</div><div style=\"text-align: justify;\">iii.\tD cannot take the paper from C.\n</div><div style=\"text-align: justify;\">iv.\tA cannot hand over the paper to anybody.\n</div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">How many arrangements are possible?</div><div>\n</div>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721985608229_373",
+              "description": {
+                "text": "1",
+                "widgets": [
+                  {
+                    "id": "mc1721985608229_371",
+                    "type": "text",
+                    "properties": {
+                      "html": "1"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721985608229_367",
+              "description": {
+                "text": "2",
+                "widgets": [
+                  {
+                    "id": "mc1721985608229_361",
+                    "type": "text",
+                    "properties": {
+                      "html": "2"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721985608229_363",
+              "description": {
+                "text": "3",
+                "widgets": [
+                  {
+                    "id": "mc1721985608229_368",
+                    "type": "text",
+                    "properties": {
+                      "html": "3"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721985608229_366",
+              "description": {
+                "text": "4",
+                "widgets": [
+                  {
+                    "id": "mc1721985608229_372",
+                    "type": "text",
+                    "properties": {
+                      "html": "4"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721985608229_367",
+              "text": "2",
+              "widgets": [
+                {
+                  "id": "mc1721985608229_361",
+                  "type": "text",
+                  "properties": {
+                    "html": "2"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><span>As\nshown above, there are 2 arrangements possible.</span>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721985637056_382",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions : Nine football fanatics are watching a Manchester United vs Arsenal Match at Old Trafford. Seated in one row, they are A, B, C, D, E, F, G, H and I. C is sitting to the immediate left of D and at second place to the right of E. B is at one end of the row. H is sitting adjacent to both B and F. I is second to the right of D. F is sitting to the immediate left of E. G does not sit with E. Who sits at the other end of the row?",
+            "widgets": [
+              {
+                "id": "mc1721985637056_378",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong>\n</p><div style=\"text-align: justify;\">Nine football fanatics are watching a Manchester United vs Arsenal Match at Old Trafford. Seated in one row, they are A, B, C, D, E, F, G, H and I. C is sitting to the immediate left of D and at second place to the right of E. B is at one end of the row. H is sitting adjacent to both B and F. I is second to the right of D. F is sitting to the immediate left of E. G does not sit with E.\n</div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">Who sits at the other end of the row?</div><div>\n</div>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721985637056_380",
+              "description": {
+                "text": "G",
+                "widgets": [
+                  {
+                    "id": "mc1721985637056_386",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>G</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721985637056_375",
+              "description": {
+                "text": "I",
+                "widgets": [
+                  {
+                    "id": "mc1721985637056_376",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>I</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721985637056_379",
+              "description": {
+                "text": "A",
+                "widgets": [
+                  {
+                    "id": "mc1721985637056_383",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>A</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721985637056_385",
+              "description": {
+                "text": "None of these",
+                "widgets": [
+                  {
+                    "id": "mc1721985637056_374",
+                    "type": "text",
+                    "properties": {
+                      "html": "None of these"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721985637056_375",
+              "text": "I",
+              "widgets": [
+                {
+                  "id": "mc1721985637056_376",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>I</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>The arrangement is,\nB, H, F, E, A, C, D, G, I\n<br>I sits at the other end of\nthe row.</p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721985697160_399",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions : Nine football fanatics are watching a Manchester United vs Arsenal Match at Old Trafford. Seated in one row, they are A, B, C, D, E, F, G, H and I. C is sitting to the immediate left of D and at second place to the right of E. B is at one end of the row. H is sitting adjacent to both B and F. I is second to the right of D. F is sitting to the immediate left of E. G does not sit with E. Who is sitting at middle of the row?",
+            "widgets": [
+              {
+                "id": "mc1721985697160_389",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong>\n</p><div style=\"text-align: justify;\">Nine football fanatics are watching a Manchester United vs Arsenal Match at Old Trafford. Seated in one row, they are A, B, C, D, E, F, G, H and I. C is sitting to the immediate left of D and at second place to the right of E. B is at one end of the row. H is sitting adjacent to both B and F. I is second to the right of D. F is sitting to the immediate left of E. G does not sit with E.\n</div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">Who is sitting at middle of the row?</div><div>\n</div>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721985697160_397",
+              "description": {
+                "text": "A",
+                "widgets": [
+                  {
+                    "id": "mc1721985697160_398",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>A</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721985697160_396",
+              "description": {
+                "text": "B",
+                "widgets": [
+                  {
+                    "id": "mc1721985697160_387",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>B</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721985697160_392",
+              "description": {
+                "text": "C",
+                "widgets": [
+                  {
+                    "id": "mc1721985697160_395",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>C</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721985697160_388",
+              "description": {
+                "text": "D",
+                "widgets": [
+                  {
+                    "id": "mc1721985697160_393",
+                    "type": "text",
+                    "properties": {
+                      "html": "D"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721985697160_397",
+              "text": "A",
+              "widgets": [
+                {
+                  "id": "mc1721985697160_398",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>A</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><span>A\nsits at middle of the row.</span>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        }
+      ]
+    }
+  ],
+  "submitted": true,
+  "updated": true,
+  "retryCount": 3,
+  "inlineFeedback": [],
+  "errors": [],
+  "success": true
+}

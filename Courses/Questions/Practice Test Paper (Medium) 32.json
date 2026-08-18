@@ -1,0 +1,1763 @@
+{
+  "submission": {
+    "anon_id": null,
+    "model": "assessment-submission",
+    "courseTitleId": "aptitude-qs-library",
+    "object_id": "66a23e55490bee5bdf09b796",
+    "assessmentId": "66a23e55490bee5bdf09b795",
+    "snapshotId": "66bcf09f3378167ba90264b5",
+    "questions": {
+      "section66a23e5555d60": [
+        "mc1721991871473_276",
+        "mc1721992211010_342",
+        "mc1721991911194_325",
+        "mc1721991910842_317",
+        "mc1721991910418_306"
+      ]
+    },
+    "certificateAnswers": [],
+    "certificateId": null,
+    "questionData": {
+      "mc1721991871473_276": {
+        "deliveredOnTimestamp": 1786440421.691914,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721992211010_342": {
+        "deliveredOnTimestamp": 1786440421.691937,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721991911194_325": {
+        "deliveredOnTimestamp": 1786440421.691951,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721991910842_317": {
+        "deliveredOnTimestamp": 1786440421.691963,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721991910418_306": {
+        "deliveredOnTimestamp": 1786440421.691974,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      }
+    },
+    "answers": [
+      {
+        "blockId": "mc1721991871473_276",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721992211010_342",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721991911194_325",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721991910842_317",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721991910418_306",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      }
+    ],
+    "submittedTimestamp": 1786440421.911724,
+    "status": "submitted",
+    "grading_status": "grading_status_no_grade",
+    "access": "public",
+    "actual_score": null,
+    "score": [],
+    "source": {
+      "type": "unit"
+    },
+    "isDefining": true,
+    "isAdminAutoGradedSubmission": null,
+    "listOfNonConsentedBlocks": [],
+    "created": 1786440421.697061,
+    "modified": 1786440421.99689,
+    "id": "6a7aeae57201d255fa0910e1",
+    "passed": null
+  },
+  "assessment": {
+    "title": "Practice Test Paper (Medium)",
+    "access": "public",
+    "type": "assessment",
+    "model": "assessmentSnapshot",
+    "description": "Intermediate practice test paper containing 5 conceptual problems designed to evaluate speed and accuracy.",
+    "isTimed": false,
+    "timerFor": "assessmentTimed",
+    "onTimerExpiration": "autoSubmit",
+    "assessmentTimeLimitInSeconds": 600,
+    "questionTimeLimitInSeconds": 60,
+    "standaloneShareEnabled": null,
+    "customUrl": null,
+    "usesCustomUrl": null,
+    "allowAnonymous": true,
+    "randomizeQuestionOptions": false,
+    "disallowPartialSubmissions": false,
+    "submissionDueDateEnabled": false,
+    "submissionDueDate": 1626257823,
+    "makeFeedbackAvailableAfterDateEnabled": false,
+    "makeFeedbackAvailableAfterDate": 0,
+    "customStylesEnabled": true,
+    "customStyles": {
+      "assessmentPage": {
+        "background": {
+          "type": "color",
+          "colorData": {
+            "code": "",
+            "class": "lw-body-bg"
+          }
+        },
+        "dividers": {
+          "top": {
+            "orientation": "top",
+            "divider": "none"
+          },
+          "bottom": {
+            "orientation": "bottom",
+            "divider": "none"
+          }
+        }
+      },
+      "option": {
+        "radioEffect": "scribble",
+        "checkboxEffect": "scribble",
+        "size": "small"
+      },
+      "assessment": {
+        "transition": "none",
+        "background": {
+          "type": "color",
+          "colorData": {
+            "code": "",
+            "class": ""
+          }
+        },
+        "width": "normal",
+        "timerTemplate": "rectangle"
+      },
+      "linearRating": {
+        "labels": {
+          "size": "small"
+        }
+      },
+      "question": {
+        "description": {
+          "background": {
+            "type": "color",
+            "colorData": {
+              "code": "",
+              "class": ""
+            }
+          },
+          "type": "p",
+          "size": "small"
+        },
+        "answers": {
+          "background": {
+            "type": "color",
+            "colorData": {
+              "code": "",
+              "class": ""
+            }
+          }
+        },
+        "requiredAsterisk": {
+          "colorData": {
+            "code": "#ff0000",
+            "class": ""
+          }
+        },
+        "errorMessages": {
+          "size": "verySmall",
+          "colorData": {
+            "code": "#ff0000",
+            "class": ""
+          }
+        }
+      },
+      "input": {
+        "size": "small",
+        "type": "solidDark"
+      },
+      "textarea": {
+        "size": "small",
+        "type": "solidDark"
+      },
+      "dropdown": {
+        "size": "small",
+        "type": "solidDark"
+      }
+    },
+    "submissionMode": "all",
+    "startingDate": 1626765704,
+    "startingDateEnabled": false,
+    "showOnlyFailedQuestionsOnRetry": false,
+    "retryEnabled": true,
+    "retryOnFailOnly": false,
+    "gradingMethod": null,
+    "maxTries": null,
+    "onlyWrongOnRetake": null,
+    "isAmendable": false,
+    "feedbackShowOnScreen": false,
+    "feedbackDownloadPDF": false,
+    "feedbackShowInline": true,
+    "feedbackQuestionList": "all-questions",
+    "feedbackShowQuestionScore": false,
+    "feedbackShowFeedback": true,
+    "feedbackShowNumbering": false,
+    "feedbackShowSectionTitles": false,
+    "feedbackShowUserAnswers": true,
+    "feedbackShowCorrectAnswers": true,
+    "feedbackShowAnswerCorrectness": true,
+    "displayInlineFeedbackEnabled": true,
+    "displayBackButtonWhenSubmissionPerBlock": true,
+    "feedbackShowSectionResultSummary": false,
+    "askConfirmationBeforeSubmit": false,
+    "hasCustomConfirmationBeforeSubmitText": false,
+    "customConfirmationBeforeSubmitText": "Are you sure you want to submit the questionnaire?",
+    "customConfirmationBeforeSubmitTexts": {
+      "title": "Submit Assessment?",
+      "baseConfirmationMessage": "Are you sure you want to submit the questionnaire?",
+      "unansweredNotice": "You have not answered {X} questions."
+    },
+    "amendResubmissionMinutes": 30,
+    "passingGrade": null,
+    "navigationMode": "per-block",
+    "conditionalBlocks": {
+      "introContent": {
+        "id": "content66a23e5555cb6",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66a23e5555cc0",
+              "type": "text",
+              "insertedAsWidget": true,
+              "properties": {
+                "html": "Games PAPER LEVEL-2",
+                "alignment": "center",
+                "customStyle": true,
+                "type": "h2",
+                "size": "normal"
+              }
+            },
+            {
+              "id": "text66a23e5555cd1",
+              "type": "text",
+              "properties": {
+                "html": "<div><span style=\"font-size: 1.7rem; letter-spacing: 0rem;\">Self-assess your knowledge. Express yourself and get feedback from our instructors.</span><br></div>",
+                "customStyle": true,
+                "alignment": "center"
+              }
+            },
+            {
+              "id": "spacer66a23e5555cdc",
+              "type": "spacer",
+              "properties": {
+                "height": 25,
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            },
+            {
+              "id": "button66a23e5555ce8",
+              "type": "button",
+              "properties": {
+                "buttonLabel": "<span>Ready to start</span>",
+                "buttonSize": "normal",
+                "buttonType": "solidBrand",
+                "alignment": "center",
+                "linkData": {
+                  "linkType": "goToFirst"
+                },
+                "iconColorData": {
+                  "code": "",
+                  "class": ""
+                },
+                "iconDisplay": false,
+                "iconSize": 26,
+                "iconClassName": " fas fa-angle-right",
+                "iconPosition": "right"
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "variables": {
+            "conditionalBlocks_introContent_blockData_widgets_0": []
+          }
+        }
+      },
+      "submissionStartingDate": {
+        "id": "content66a23e5555d09",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66a23e5555d0d",
+              "type": "text",
+              "properties": {
+                "html": "Sorry but this assessment hasn't started yet."
+              }
+            },
+            {
+              "id": "date66a23e5555d14",
+              "type": "date",
+              "properties": {
+                "value": ""
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "displayConditions": ["startingDate"]
+        }
+      },
+      "submissionDueDate": {
+        "id": "content66a23e5555d20",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66a23e5555d25",
+              "type": "text",
+              "properties": {
+                "html": "Sorry but this assessment date is due."
+              }
+            },
+            {
+              "id": "date66a23e5555d2b",
+              "type": "date",
+              "properties": {
+                "value": ""
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "displayConditions": ["dateIsDue"]
+        }
+      },
+      "outroContent": {
+        "id": "content66a23e5555d37",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "userResults66a23e5555d3c",
+              "type": "userResults",
+              "properties": {
+                "layout": "template2",
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            },
+            {
+              "id": "feedback66a23e5555d48",
+              "type": "feedback",
+              "properties": []
+            },
+            {
+              "id": "outroActions66a23e5555d4f",
+              "type": "outroActions",
+              "properties": {
+                "layout": "",
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true
+        }
+      }
+    },
+    "systemSections": null,
+    "sections": [
+      {
+        "id": "section66a23e5555d60",
+        "title": "",
+        "type": "section",
+        "navigationMode": "per-block",
+        "blocks": [
+          {
+            "id": "mc1721991871473_276",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721991871473_277",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions:</strong></p><p style=\"text-align: justify;\">A group of four friends – A, B, C and D found Rs. 20 on a table. They decided to play a game of cards to distribute the amount amongst themselves. A deck of cards was kept face down on the table. The rules of the game were as follows:\n</p><div style=\"text-align: justify;\">In each round each player draws one card from the pack\n</div><div style=\"text-align: justify;\">If a single player gets a card of the highest value amongst the four, he picks Rs. 4 from the table.\n</div><div style=\"text-align: justify;\">If two players get cards of the highest value, they both pick Rs. 2 from the table. If three players get cards of the highest value, each of them takes Re.1 from the fourth player (if he doesn’t have the money, he simply owes them the amount and has to pay up as soon as he earns it)\n</div><div style=\"text-align: justify;\">If all four players get cards of the same value, no one earns anything.\n</div><div style=\"text-align: justify;\">Value of the ace is the highest, followed by king, queen, etc. irrespective of the suit.\n</div><div style=\"text-align: justify;\">Then they proceed to the next round.\n</div><div style=\"text-align: justify;\">At the end of 4 rounds:\n</div><div style=\"text-align: justify;\">i.\tEach player made money in the same \tnumber of rounds.\n</div><div style=\"text-align: justify;\">ii.\tD had earned more money than anyone else and B had earned less than anyone else.\n</div><div style=\"text-align: justify;\">iii.\tThere were Rs. 8 left on the table.\n</div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">Which of the following is certainly True?</div>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721991871473_282",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721991871473_279",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721991871473_278",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721991871473_275",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721991871473_270",
+                        "type": "text",
+                        "properties": {
+                          "html": "A and C earned Rs. 2 each in the same \tround"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721991871473_280",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721991871473_281",
+                        "type": "text",
+                        "properties": {
+                          "html": "B had earned either Rs. 0 or Rs. 2 at the end of four rounds"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721991871473_271",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721991871473_273",
+                        "type": "text",
+                        "properties": {
+                          "html": "had earned Rs. 2 more than C at the end of four rounds"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721991871473_272",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721991871473_274",
+                        "type": "text",
+                        "properties": {
+                          "html": "D Cannot be Determined"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": []
+              }
+            }
+          },
+          {
+            "id": "mc1721992211010_342",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721992211010_343",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions:</strong></p><p style=\"text-align: justify;\">A group of four friends – A, B, C and D found Rs. 20 on a table. They decided to play a game of cards to distribute the amount amongst themselves. A deck of cards was kept face down on the table. The rules of the game were as follows:\n</p><div style=\"text-align: justify;\">In each round each player draws one card from the pack\n</div><div style=\"text-align: justify;\">If a single player gets a card of the highest value amongst the four, he picks Rs. 4 from the table.\n</div><div style=\"text-align: justify;\">If two players get cards of the highest value, they both pick Rs. 2 from the table. If three players get cards of the highest value, each of them takes Re.1 from the fourth player (if he doesn’t have the money, he simply owes them the amount and has to pay up as soon as he earns it)\n</div><div style=\"text-align: justify;\">If all four players get cards of the same value, no one earns anything.\n</div><div style=\"text-align: justify;\">Value of the ace is the highest, followed by king, queen, etc. irrespective of the suit.\n</div><div style=\"text-align: justify;\">Then they proceed to the next round.\n</div><div style=\"text-align: justify;\">At the end of 4 rounds:\n</div><div style=\"text-align: justify;\">i.\tEach player made money in the same \tnumber of rounds.\n</div><div style=\"text-align: justify;\">ii.\tD had earned more money than anyone else and B had earned less than anyone else.\n</div><div style=\"text-align: justify;\">iii.\tThere were Rs. 8 left on the table.\n</div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">How much amount did A earn at the end of 4 rounds?</div>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721992211010_337",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721992211010_344",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721992211010_340",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721992211010_345",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721992211010_346",
+                        "type": "text",
+                        "properties": {
+                          "html": "Rs.2"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721992211010_338",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721992211010_341",
+                        "type": "text",
+                        "properties": {
+                          "html": "Rs.3"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721992211010_339",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721992211010_336",
+                        "type": "text",
+                        "properties": {
+                          "html": "Rs.4"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721992211010_335",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721992211010_347",
+                        "type": "text",
+                        "properties": {
+                          "html": "Cannot be Determined"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_1": []
+              }
+            }
+          },
+          {
+            "id": "mc1721991911194_325",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721991911194_331",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions:</strong></p><p style=\"text-align: justify;\">There are certain numbers of one rupee coins and two rupee coins kept on the table. Two players play a game of picking coins in turn. The rules of the games are as follows:\n</p><div style=\"text-align: justify;\">(a)\tThe players play alternately i.e. First \tturn for player 1 followed by player 2 and then again player 1 and so on.\n</div><div style=\"text-align: justify;\">(b)\tEach player in his turn can remove any two coins on the table on his turn but must keep back one new replacement coin as per the following rules:\n</div><div style=\"text-align: justify;\">i.\tIf the coins removed are of same denominations (i.e. both one rupee OR \tboth two rupee) then the replacement coin to be kept on the table must be a 2-rupee coin.\n</div><div style=\"text-align: justify;\">ii.\tIf the coins removed are of different denominations (i.e. 1 one rupee and 1 two rupee) then the replacement coin to be kept on the table must be one rupee coin.\n</div><div style=\"text-align: justify;\">iii.\tThey continue playing the game till one player can no longer follow the steps mentioned in (b). Then that person will be declared the loser and the player with the step before that is declared the winner.\n</div><div style=\"text-align: justify;\">Assume infinite supply of one rupee and two-rupee coins.\n</div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">If the total number of coins is odd, who will win the game?</div>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721991911194_328",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721991911194_322",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721991911194_323",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721991911194_332",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721991911194_333",
+                        "type": "text",
+                        "properties": {
+                          "html": "First player&nbsp;"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721991911194_327",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721991911194_329",
+                        "type": "text",
+                        "properties": {
+                          "html": "Second Player"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721991911194_326",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721991911194_324",
+                        "type": "text",
+                        "properties": {
+                          "html": "Depends on the moves by the players"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721991911194_330",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721991911194_334",
+                        "type": "text",
+                        "properties": {
+                          "html": "No player can win this game"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_2_blockData_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_2": []
+              }
+            }
+          },
+          {
+            "id": "mc1721991910842_317",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721991910842_316",
+                    "type": "text",
+                    "properties": {
+                      "html": "<div style=\"text-align: justify;\"><strong>Direction for questions:</strong></div><p style=\"text-align: justify;\">There are certain numbers of one-rupee coins and two rupee coins kept on the table. Two players play a game of picking coins in turn. The rules of the games are as follows:\n</p><div style=\"text-align: justify;\">(a)\tThe players play alternately i.e. First \tturn for player 1 followed by player 2 and then again player 1 and so on.\n</div><div style=\"text-align: justify;\">(b)\tEach player in his turn can remove any \ttwo coins on the table on his turn but \tmust keep back one new replacement \tcoin as per the following rules:\n</div><div style=\"text-align: justify;\">i.\tIf the coins removed are of the same \tdenominations (i.e. both one rupee or \tboth two rupees) then the \treplacement coin to be kept on the \ttable must be a 2-rupee coin.\n</div><div style=\"text-align: justify;\">ii.\tIf the coins removed are of different \tdenominations (i.e. 1 one rupee and 1 \ttwo rupees) then the replacement coin \tto be kept on the table must be one \trupee coin.\n</div><div style=\"text-align: justify;\">iii.\tThey continue playing the game till \tone player can no longer follow the \tsteps mentioned in (b). Then that \tperson will be declared the loser and \tthe player with the step before that is \tdeclared the winner.\n</div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">What is the denomination of the last coin left on the table if initially there were 3<sup>197</sup> two-rupee coins and at least 1 one-rupee coin?</div><div>\t\n</div>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721991910842_318",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721991910842_311",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721991910842_312",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721991910842_313",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721991910842_314",
+                        "type": "text",
+                        "properties": {
+                          "html": "one rupee&nbsp;"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721991910842_321",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721991910842_310",
+                        "type": "text",
+                        "properties": {
+                          "html": "two rupees"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721991910842_320",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721991910842_309",
+                        "type": "text",
+                        "properties": {
+                          "html": "will never be left with one coin"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721991910842_315",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721991910842_319",
+                        "type": "text",
+                        "properties": {
+                          "html": "cannot be determined"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_3_blockData_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3": []
+              }
+            }
+          },
+          {
+            "id": "mc1721991910418_306",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721991910418_303",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions:</strong></p><p style=\"text-align: justify;\">There are certain numbers of one-rupee coins and two rupee coins kept on the table. Two players play a game of picking coins in turn. The rules of the games are as follows:\n</p><div style=\"text-align: justify;\">(a)\tThe players play alternately i.e. First \tturn for player 1 followed by player 2 \tand then again player 1 and so on.\n</div><div style=\"text-align: justify;\">(b)\tEach player in his turn can remove any \ttwo coins on the table on his turn but \tmust keep back one new replacement \tcoin as per the following rules:\n</div><div style=\"text-align: justify;\">i.\tIf the coins removed are of the same \tdenominations (i.e. both one rupee OR \tboth two rupees) then the \treplacement coin to be kept on the \ttable must be a 2-rupee coin.\n</div><div style=\"text-align: justify;\">ii.\tIf the coins removed are of different \tdenominations (i.e. 1 one rupee and 1 \ttwo rupees) then the replacement coin \tto be kept on the table must be one \trupee coin.\n</div><div style=\"text-align: justify;\">iii.\tThey continue playing the game till \tone player can no longer follow the \tsteps mentioned in (b) then that \tperson will be declared the loser and \tthe player with the step before that is \tdeclared the winner.\n</div><div style=\"text-align: justify;\">Assume infinite supply of one rupee and two-rupee coins.\n</div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">What is the denomination of the last coin left on the table if initially there were 2125 one-rupee coins and 3175 two rupee coins?</div>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721991910418_298",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721991910418_296",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721991910418_301",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721991910418_299",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721991910418_297",
+                        "type": "text",
+                        "properties": {
+                          "html": "One rupee&nbsp;"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721991910418_302",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721991910418_304",
+                        "type": "text",
+                        "properties": {
+                          "html": "two rupees"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721991910418_308",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721991910418_307",
+                        "type": "text",
+                        "properties": {
+                          "html": "will never be left with one coin&nbsp;"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721991910418_300",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721991910418_305",
+                        "type": "text",
+                        "properties": {
+                          "html": "cannot be determined"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_4_blockData_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4": []
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "availabilityStatus": null,
+    "autoNavigationEnabled": false,
+    "displayBackButtonWhenNavigationPerBlock": true,
+    "saveAndResumeLaterEnabled": null,
+    "tagsAddedOnCompletion": [],
+    "tagsAddedOnPass": [],
+    "sendAnonymousSubmissionsToEmailLeads": false,
+    "afterSubmitActionEnabled": null,
+    "afterSubmitActionProperties": null,
+    "showWizardOnNextEdit": false,
+    "revisitAfterSubmissionAction": null,
+    "navigationTemplate": "HorizontalSpacedBetweenNavigationTemplate",
+    "learnerSearchBarEnabled": true,
+    "learnerUnansweredQuestionsEnabled": true,
+    "learnerFavouriteQuestionEnabled": true,
+    "learnerCompletionProgressEnabled": true,
+    "learnerShowIndexOfQuestionsEnabled": false,
+    "learnerTimeNotificationsEnabled": false,
+    "learnerAllowInterruptionsEnabled": true,
+    "learnerAllowInterruptionsTimeoutInMinutes": 30,
+    "learnerReclaimTryOnInterruptionTimeoutEnabled": false,
+    "learnerAskBeforeContinueToSaved": true,
+    "learnerAutoSaveEnabled": null,
+    "spellcheckDisabled": null,
+    "showPartialScoreOnSubmission": true,
+    "deliverableQuestionsSubsetType": "all",
+    "questionRandomizationType": "none",
+    "serveQuestionsBasedOnPreviousSubmission": null,
+    "scoringDisabled": true,
+    "isSelfAssessment": true,
+    "useDefaultCertificateTemplate": null,
+    "certificateTemplate": null,
+    "certificateSocialShare": null,
+    "migrationData": null,
+    "useAssessmentPassingGradeForOpenEndedCorrectness": true,
+    "openEndedCorrectnessPassingGrade": null,
+    "showScorePercentage": null,
+    "showScorePoints": null,
+    "showScoreCorrectAnswers": null,
+    "editorBehaviorSettings": null,
+    "manualReviewEnabled": false,
+    "resultsSummary": {
+      "enabled": true,
+      "showStatusIcon": true,
+      "showStatusText": true,
+      "showScorePercentage": true,
+      "showScorePoints": true,
+      "showScoreCorrectAnswers": true,
+      "showTimeTakenToComplete": true,
+      "showDateSubmitted": true,
+      "showAttemptCount": true
+    },
+    "meta": null,
+    "submissionsCount": 57,
+    "fromMarketplace": null,
+    "aiFeedbackEnabled": null,
+    "numberOfFeedbackQuestions": null,
+    "created": 1721908821.743764,
+    "modified": 1723658399.981844,
+    "contentHash": "6c30362457417a55924b4e6cf8f5b56dd7068de0ca20d8252e45c018f2f55954",
+    "id": "66a23e55490bee5bdf09b795",
+    "objectType": "assessment",
+    "isEditBlockedDueToSync": false,
+    "variables": {
+      "submission": {
+        "self": {
+          "score": null,
+          "points": null,
+          "total_points": null,
+          "correct_answers": null,
+          "total_questions": 5,
+          "time_spent": "00:00:00",
+          "date_submitted": "11/08/26",
+          "attempt_count": 3,
+          "max_tries": null,
+          "pass_grade": null,
+          "time_spent_seconds": 0,
+          "raw_start_date": 1786440421.697061
+        }
+      },
+      "school": {
+        "name": "Apna College",
+        "url": "www.apnacollege.in",
+        "description": "The most loved coding community of India ❤️"
+      },
+      "user": {
+        "username": "ram",
+        "email": "p4542639@gmail.com",
+        "cf_phonenumber": "7666690798"
+      }
+    }
+  },
+  "reclaimedTry": false,
+  "feedback": [
+    {
+      "title": "",
+      "id": "section66a23e5555d60",
+      "blocks": [
+        {
+          "id": "mc1721991871473_276",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions:A group of four friends – A, B, C and D found Rs. 20 on a table. They decided to play a game of cards to distribute the amount amongst themselves. A deck of cards was kept face down on the table. The rules of the game were as follows: In each round each player draws one card from the pack If a single player gets a card of the highest value amongst the four, he picks Rs. 4 from the table. If two players get cards of the highest value, they both pick Rs. 2 from the table. If three players get cards of the highest value, each of them takes Re.1 from the fourth player (if he doesn’t have the money, he simply owes them the amount and has to pay up as soon as he earns it) If all four players get cards of the same value, no one earns anything. Value of the ace is the highest, followed by king, queen, etc. irrespective of the suit. Then they proceed to the next round. At the end of 4 rounds: i. Each player made money in the same number of rounds. ii. D had earned more money than anyone else and B had earned less than anyone else. iii. There were Rs. 8 left on the table. Which of the following is certainly True?",
+            "widgets": [
+              {
+                "id": "mc1721991871473_277",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions:</strong></p><p style=\"text-align: justify;\">A group of four friends – A, B, C and D found Rs. 20 on a table. They decided to play a game of cards to distribute the amount amongst themselves. A deck of cards was kept face down on the table. The rules of the game were as follows:\n</p><div style=\"text-align: justify;\">In each round each player draws one card from the pack\n</div><div style=\"text-align: justify;\">If a single player gets a card of the highest value amongst the four, he picks Rs. 4 from the table.\n</div><div style=\"text-align: justify;\">If two players get cards of the highest value, they both pick Rs. 2 from the table. If three players get cards of the highest value, each of them takes Re.1 from the fourth player (if he doesn’t have the money, he simply owes them the amount and has to pay up as soon as he earns it)\n</div><div style=\"text-align: justify;\">If all four players get cards of the same value, no one earns anything.\n</div><div style=\"text-align: justify;\">Value of the ace is the highest, followed by king, queen, etc. irrespective of the suit.\n</div><div style=\"text-align: justify;\">Then they proceed to the next round.\n</div><div style=\"text-align: justify;\">At the end of 4 rounds:\n</div><div style=\"text-align: justify;\">i.\tEach player made money in the same \tnumber of rounds.\n</div><div style=\"text-align: justify;\">ii.\tD had earned more money than anyone else and B had earned less than anyone else.\n</div><div style=\"text-align: justify;\">iii.\tThere were Rs. 8 left on the table.\n</div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">Which of the following is certainly True?</div>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721991871473_275",
+              "description": {
+                "text": "A and C earned Rs. 2 each in the same round",
+                "widgets": [
+                  {
+                    "id": "mc1721991871473_270",
+                    "type": "text",
+                    "properties": {
+                      "html": "A and C earned Rs. 2 each in the same \tround"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721991871473_280",
+              "description": {
+                "text": "B had earned either Rs. 0 or Rs. 2 at the end of four rounds",
+                "widgets": [
+                  {
+                    "id": "mc1721991871473_281",
+                    "type": "text",
+                    "properties": {
+                      "html": "B had earned either Rs. 0 or Rs. 2 at the end of four rounds"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721991871473_271",
+              "description": {
+                "text": "had earned Rs. 2 more than C at the end of four rounds",
+                "widgets": [
+                  {
+                    "id": "mc1721991871473_273",
+                    "type": "text",
+                    "properties": {
+                      "html": "had earned Rs. 2 more than C at the end of four rounds"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721991871473_272",
+              "description": {
+                "text": "D Cannot be Determined",
+                "widgets": [
+                  {
+                    "id": "mc1721991871473_274",
+                    "type": "text",
+                    "properties": {
+                      "html": "D Cannot be Determined"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721991871473_271",
+              "text": "had earned Rs. 2 more than C at the end of four rounds",
+              "widgets": [
+                {
+                  "id": "mc1721991871473_273",
+                  "type": "text",
+                  "properties": {
+                    "html": "had earned Rs. 2 more than C at the end of four rounds"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>i. The amount taken from the table is always\n4, an even number & it is distributed as either 4 + 0 + 0 + 0 or 2 + 2 + 0\n+ 0. <br>Thus amount earned by each individual in 3 out of 4 rounds is even. <br>ii. In the remaining round the 3 players   must have tied at the top spot as the amounts\nof each player is different. amount added/subtracted in this scenario is 1 or 3 which are odd numbers. Thus, the amounts\nthey must possess at the end of 4 rounds\nmust be odd. <br>iii. Also D has highest amount & B has the lowest amount. Thus only 1  combination is possible.<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/2e5ce714720869b6b649017305eb8d2d.png\" style=\"width: 275px; height: 44px;\"><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/0fe607209cb80cc848f46f6a688337aa.png\" style=\"width: 275px; height: 129px;\"></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721992211010_342",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions:A group of four friends – A, B, C and D found Rs. 20 on a table. They decided to play a game of cards to distribute the amount amongst themselves. A deck of cards was kept face down on the table. The rules of the game were as follows: In each round each player draws one card from the pack If a single player gets a card of the highest value amongst the four, he picks Rs. 4 from the table. If two players get cards of the highest value, they both pick Rs. 2 from the table. If three players get cards of the highest value, each of them takes Re.1 from the fourth player (if he doesn’t have the money, he simply owes them the amount and has to pay up as soon as he earns it) If all four players get cards of the same value, no one earns anything. Value of the ace is the highest, followed by king, queen, etc. irrespective of the suit. Then they proceed to the next round. At the end of 4 rounds: i. Each player made money in the same number of rounds. ii. D had earned more money than anyone else and B had earned less than anyone else. iii. There were Rs. 8 left on the table. How much amount did A earn at the end of 4 rounds?",
+            "widgets": [
+              {
+                "id": "mc1721992211010_343",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions:</strong></p><p style=\"text-align: justify;\">A group of four friends – A, B, C and D found Rs. 20 on a table. They decided to play a game of cards to distribute the amount amongst themselves. A deck of cards was kept face down on the table. The rules of the game were as follows:\n</p><div style=\"text-align: justify;\">In each round each player draws one card from the pack\n</div><div style=\"text-align: justify;\">If a single player gets a card of the highest value amongst the four, he picks Rs. 4 from the table.\n</div><div style=\"text-align: justify;\">If two players get cards of the highest value, they both pick Rs. 2 from the table. If three players get cards of the highest value, each of them takes Re.1 from the fourth player (if he doesn’t have the money, he simply owes them the amount and has to pay up as soon as he earns it)\n</div><div style=\"text-align: justify;\">If all four players get cards of the same value, no one earns anything.\n</div><div style=\"text-align: justify;\">Value of the ace is the highest, followed by king, queen, etc. irrespective of the suit.\n</div><div style=\"text-align: justify;\">Then they proceed to the next round.\n</div><div style=\"text-align: justify;\">At the end of 4 rounds:\n</div><div style=\"text-align: justify;\">i.\tEach player made money in the same \tnumber of rounds.\n</div><div style=\"text-align: justify;\">ii.\tD had earned more money than anyone else and B had earned less than anyone else.\n</div><div style=\"text-align: justify;\">iii.\tThere were Rs. 8 left on the table.\n</div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">How much amount did A earn at the end of 4 rounds?</div>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721992211010_345",
+              "description": {
+                "text": "Rs.2",
+                "widgets": [
+                  {
+                    "id": "mc1721992211010_346",
+                    "type": "text",
+                    "properties": {
+                      "html": "Rs.2"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721992211010_338",
+              "description": {
+                "text": "Rs.3",
+                "widgets": [
+                  {
+                    "id": "mc1721992211010_341",
+                    "type": "text",
+                    "properties": {
+                      "html": "Rs.3"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721992211010_339",
+              "description": {
+                "text": "Rs.4",
+                "widgets": [
+                  {
+                    "id": "mc1721992211010_336",
+                    "type": "text",
+                    "properties": {
+                      "html": "Rs.4"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721992211010_335",
+              "description": {
+                "text": "Cannot be Determined",
+                "widgets": [
+                  {
+                    "id": "mc1721992211010_347",
+                    "type": "text",
+                    "properties": {
+                      "html": "Cannot be Determined"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721992211010_338",
+              "text": "Rs.3",
+              "widgets": [
+                {
+                  "id": "mc1721992211010_341",
+                  "type": "text",
+                  "properties": {
+                    "html": "Rs.3"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>i. The amount taken from the table is always 4, an even number \\& it\nis   distributed as either $4 + 0 + 0 + 0$\nor $2 + 2 + 0 + 0$. Thus amount\nearned by each individual in 3\nout of 4 rounds is even.\n            <br>ii. In the remaining round the 3 players must have tied at the top spot as the amounts of each player is different. Amount added / subtracted in this  scenario is 1 or 3 which are odd numbers.  Thus,\nthe amounts they must possess at the end of 4 rounds must be odd.  <br>iii. Also D has highest amount \\& B has the lowest amount. Thus only 1 combination is possible<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/5eba6dc5ce7fc724a03dc912dd2a253c.png\" style=\"width: 275px; height: 47px;\"><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/1027ea1e395474319b04fefd9bb6fb31.png\" style=\"width: 275px; height: 127px;\"></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721991911194_325",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions:There are certain numbers of one rupee coins and two rupee coins kept on the table. Two players play a game of picking coins in turn. The rules of the games are as follows: (a) The players play alternately i.e. First turn for player 1 followed by player 2 and then again player 1 and so on. (b) Each player in his turn can remove any two coins on the table on his turn but must keep back one new replacement coin as per the following rules: i. If the coins removed are of same denominations (i.e. both one rupee OR both two rupee) then the replacement coin to be kept on the table must be a 2-rupee coin. ii. If the coins removed are of different denominations (i.e. 1 one rupee and 1 two rupee) then the replacement coin to be kept on the table must be one rupee coin. iii. They continue playing the game till one player can no longer follow the steps mentioned in (b). Then that person will be declared the loser and the player with the step before that is declared the winner. Assume infinite supply of one rupee and two-rupee coins. If the total number of coins is odd, who will win the game?",
+            "widgets": [
+              {
+                "id": "mc1721991911194_331",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions:</strong></p><p style=\"text-align: justify;\">There are certain numbers of one rupee coins and two rupee coins kept on the table. Two players play a game of picking coins in turn. The rules of the games are as follows:\n</p><div style=\"text-align: justify;\">(a)\tThe players play alternately i.e. First \tturn for player 1 followed by player 2 and then again player 1 and so on.\n</div><div style=\"text-align: justify;\">(b)\tEach player in his turn can remove any two coins on the table on his turn but must keep back one new replacement coin as per the following rules:\n</div><div style=\"text-align: justify;\">i.\tIf the coins removed are of same denominations (i.e. both one rupee OR \tboth two rupee) then the replacement coin to be kept on the table must be a 2-rupee coin.\n</div><div style=\"text-align: justify;\">ii.\tIf the coins removed are of different denominations (i.e. 1 one rupee and 1 two rupee) then the replacement coin to be kept on the table must be one rupee coin.\n</div><div style=\"text-align: justify;\">iii.\tThey continue playing the game till one player can no longer follow the steps mentioned in (b). Then that person will be declared the loser and the player with the step before that is declared the winner.\n</div><div style=\"text-align: justify;\">Assume infinite supply of one rupee and two-rupee coins.\n</div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">If the total number of coins is odd, who will win the game?</div>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721991911194_332",
+              "description": {
+                "text": "First player",
+                "widgets": [
+                  {
+                    "id": "mc1721991911194_333",
+                    "type": "text",
+                    "properties": {
+                      "html": "First player&nbsp;"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721991911194_327",
+              "description": {
+                "text": "Second Player",
+                "widgets": [
+                  {
+                    "id": "mc1721991911194_329",
+                    "type": "text",
+                    "properties": {
+                      "html": "Second Player"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721991911194_326",
+              "description": {
+                "text": "Depends on the moves by the players",
+                "widgets": [
+                  {
+                    "id": "mc1721991911194_324",
+                    "type": "text",
+                    "properties": {
+                      "html": "Depends on the moves by the players"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721991911194_330",
+              "description": {
+                "text": "No player can win this game",
+                "widgets": [
+                  {
+                    "id": "mc1721991911194_334",
+                    "type": "text",
+                    "properties": {
+                      "html": "No player can win this game"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721991911194_326",
+              "text": "Depends on the moves by the players",
+              "widgets": [
+                {
+                  "id": "mc1721991911194_324",
+                  "type": "text",
+                  "properties": {
+                    "html": "Depends on the moves by the players"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>The transactions that can happen during the game\nare as follows:  <br>–1\n– 1 + 2 = 0 (2 one rupee coin removed and a two rupee coin kept back) <br>–2\n– 2 + 2 = –2 <br>1\n– 2 + 1 = –2\n            <br>Thus\nevery transaction is removing either Rs. O or Rs. 2.\n            <br>So\nif the initial amount is even, the final amount left on the table should also\nbe even.\n            <br>Similarly\nif the initial amount is odd, the final quantity will also be odd.\n            <br>The\nwinner is the player with the last step when there were 2 coins left on the\ntable.\n            <br>If\na player is left with just one coin then he will lose the game.\n            <br>Now\nif there are “n” coins on the table, it will take n – 1 transactions to reduce\nit to one coin (as in every transaction there is a net reduction of one coin). <br>Since\nthe total number of coins is odd, number of transactions required to reach just\none coin is even. <br>Hence second player will win the\ngame.</p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721991910842_317",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions:There are certain numbers of one-rupee coins and two rupee coins kept on the table. Two players play a game of picking coins in turn. The rules of the games are as follows: (a) The players play alternately i.e. First turn for player 1 followed by player 2 and then again player 1 and so on. (b) Each player in his turn can remove any two coins on the table on his turn but must keep back one new replacement coin as per the following rules: i. If the coins removed are of the same denominations (i.e. both one rupee or both two rupees) then the replacement coin to be kept on the table must be a 2-rupee coin. ii. If the coins removed are of different denominations (i.e. 1 one rupee and 1 two rupees) then the replacement coin to be kept on the table must be one rupee coin. iii. They continue playing the game till one player can no longer follow the steps mentioned in (b). Then that person will be declared the loser and the player with the step before that is declared the winner. What is the denomination of the last coin left on the table if initially there were 3197 two-rupee coins and at least 1 one-rupee coin?",
+            "widgets": [
+              {
+                "id": "mc1721991910842_316",
+                "type": "text",
+                "properties": {
+                  "html": "<div style=\"text-align: justify;\"><strong>Direction for questions:</strong></div><p style=\"text-align: justify;\">There are certain numbers of one-rupee coins and two rupee coins kept on the table. Two players play a game of picking coins in turn. The rules of the games are as follows:\n</p><div style=\"text-align: justify;\">(a)\tThe players play alternately i.e. First \tturn for player 1 followed by player 2 and then again player 1 and so on.\n</div><div style=\"text-align: justify;\">(b)\tEach player in his turn can remove any \ttwo coins on the table on his turn but \tmust keep back one new replacement \tcoin as per the following rules:\n</div><div style=\"text-align: justify;\">i.\tIf the coins removed are of the same \tdenominations (i.e. both one rupee or \tboth two rupees) then the \treplacement coin to be kept on the \ttable must be a 2-rupee coin.\n</div><div style=\"text-align: justify;\">ii.\tIf the coins removed are of different \tdenominations (i.e. 1 one rupee and 1 \ttwo rupees) then the replacement coin \tto be kept on the table must be one \trupee coin.\n</div><div style=\"text-align: justify;\">iii.\tThey continue playing the game till \tone player can no longer follow the \tsteps mentioned in (b). Then that \tperson will be declared the loser and \tthe player with the step before that is \tdeclared the winner.\n</div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">What is the denomination of the last coin left on the table if initially there were 3<sup>197</sup> two-rupee coins and at least 1 one-rupee coin?</div><div>\t\n</div>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721991910842_313",
+              "description": {
+                "text": "one rupee",
+                "widgets": [
+                  {
+                    "id": "mc1721991910842_314",
+                    "type": "text",
+                    "properties": {
+                      "html": "one rupee&nbsp;"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721991910842_321",
+              "description": {
+                "text": "two rupees",
+                "widgets": [
+                  {
+                    "id": "mc1721991910842_310",
+                    "type": "text",
+                    "properties": {
+                      "html": "two rupees"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721991910842_320",
+              "description": {
+                "text": "will never be left with one coin",
+                "widgets": [
+                  {
+                    "id": "mc1721991910842_309",
+                    "type": "text",
+                    "properties": {
+                      "html": "will never be left with one coin"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721991910842_315",
+              "description": {
+                "text": "cannot be determined",
+                "widgets": [
+                  {
+                    "id": "mc1721991910842_319",
+                    "type": "text",
+                    "properties": {
+                      "html": "cannot be determined"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721991910842_315",
+              "text": "cannot be determined",
+              "widgets": [
+                {
+                  "id": "mc1721991910842_319",
+                  "type": "text",
+                  "properties": {
+                    "html": "cannot be determined"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>The transactions that can happen during the game\nare as follows:\n            <br>–1\n– 1 + 2 = 0 (2 one rupee coin removed and a two rupee coin kept back)\n            <br>–2\n– 2 + 2 = –2\n            <br>–1\n– 2 + 1 = –2\n            <br>Thus\nevery transaction is removing either Rs. O or Rs. 2. So if the initial amount\nis even, the final amount left on the table should also be even. Similarly, if\nthe initial amount is odd, the final quantity will also be odd.\n            <br>Just\nby knowing the number of two rupee coins, we cannot determine whether the\ninitial amount will be even or odd, as that will get decided by the number of\none rupee coin. \n            <br></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721991910418_306",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions:There are certain numbers of one-rupee coins and two rupee coins kept on the table. Two players play a game of picking coins in turn. The rules of the games are as follows: (a) The players play alternately i.e. First turn for player 1 followed by player 2 and then again player 1 and so on. (b) Each player in his turn can remove any two coins on the table on his turn but must keep back one new replacement coin as per the following rules: i. If the coins removed are of the same denominations (i.e. both one rupee OR both two rupees) then the replacement coin to be kept on the table must be a 2-rupee coin. ii. If the coins removed are of different denominations (i.e. 1 one rupee and 1 two rupees) then the replacement coin to be kept on the table must be one rupee coin. iii. They continue playing the game till one player can no longer follow the steps mentioned in (b) then that person will be declared the loser and the player with the step before that is declared the winner. Assume infinite supply of one rupee and two-rupee coins. What is the denomination of the last coin left on the table if initially there were 2125 one-rupee coins and 3175 two rupee coins?",
+            "widgets": [
+              {
+                "id": "mc1721991910418_303",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions:</strong></p><p style=\"text-align: justify;\">There are certain numbers of one-rupee coins and two rupee coins kept on the table. Two players play a game of picking coins in turn. The rules of the games are as follows:\n</p><div style=\"text-align: justify;\">(a)\tThe players play alternately i.e. First \tturn for player 1 followed by player 2 \tand then again player 1 and so on.\n</div><div style=\"text-align: justify;\">(b)\tEach player in his turn can remove any \ttwo coins on the table on his turn but \tmust keep back one new replacement \tcoin as per the following rules:\n</div><div style=\"text-align: justify;\">i.\tIf the coins removed are of the same \tdenominations (i.e. both one rupee OR \tboth two rupees) then the \treplacement coin to be kept on the \ttable must be a 2-rupee coin.\n</div><div style=\"text-align: justify;\">ii.\tIf the coins removed are of different \tdenominations (i.e. 1 one rupee and 1 \ttwo rupees) then the replacement coin \tto be kept on the table must be one \trupee coin.\n</div><div style=\"text-align: justify;\">iii.\tThey continue playing the game till \tone player can no longer follow the \tsteps mentioned in (b) then that \tperson will be declared the loser and \tthe player with the step before that is \tdeclared the winner.\n</div><div style=\"text-align: justify;\">Assume infinite supply of one rupee and two-rupee coins.\n</div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">What is the denomination of the last coin left on the table if initially there were 2125 one-rupee coins and 3175 two rupee coins?</div>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721991910418_299",
+              "description": {
+                "text": "One rupee",
+                "widgets": [
+                  {
+                    "id": "mc1721991910418_297",
+                    "type": "text",
+                    "properties": {
+                      "html": "One rupee&nbsp;"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721991910418_302",
+              "description": {
+                "text": "two rupees",
+                "widgets": [
+                  {
+                    "id": "mc1721991910418_304",
+                    "type": "text",
+                    "properties": {
+                      "html": "two rupees"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721991910418_308",
+              "description": {
+                "text": "will never be left with one coin",
+                "widgets": [
+                  {
+                    "id": "mc1721991910418_307",
+                    "type": "text",
+                    "properties": {
+                      "html": "will never be left with one coin&nbsp;"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721991910418_300",
+              "description": {
+                "text": "cannot be determined",
+                "widgets": [
+                  {
+                    "id": "mc1721991910418_305",
+                    "type": "text",
+                    "properties": {
+                      "html": "cannot be determined"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721991910418_302",
+              "text": "two rupees",
+              "widgets": [
+                {
+                  "id": "mc1721991910418_304",
+                  "type": "text",
+                  "properties": {
+                    "html": "two rupees"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>If the coins removed are of same denomination, then\nreplacement coin is 2 rupees\n            <br>So\neither it is\n            <br>–1\n– 1 + 2 = 0\n            <br>or –2\n– 2 + 2 = –2\n            <br>If\nthe coins removed are of different denomination then the replacement coin is 1\nrupee So it is\n            <br>1\n– 2 + 1 = –2\n            <br>So\nwhatever be the transaction the final resultant is always an even number. So if\nthe initial amount on the table is an even number, the final amount on the\ntable will also be even that is a 2-rupee coin, and similarly, for the initial\nodd amount, it will be a 1-rupee coin.\n            <br>Also\nin every step number of coins reduce by one coin. So if there are n coins total\nsteps required to reduce it to just one coin is (n – 1).\n            <br>Total 1-rupee coins are even. So the\ntotal initial and final amount will be also even.</p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        }
+      ]
+    }
+  ],
+  "submitted": true,
+  "updated": true,
+  "retryCount": 3,
+  "inlineFeedback": [],
+  "errors": [],
+  "success": true
+}

@@ -1,0 +1,3392 @@
+{
+  "submission": {
+    "anon_id": null,
+    "model": "assessment-submission",
+    "courseTitleId": "aptitude-teacher2",
+    "object_id": "66b74bb47f809db010095228",
+    "assessmentId": "66b74bb47f809db010095227",
+    "snapshotId": "66bf90999e8357aeba02a816",
+    "questions": {
+      "section66b74bb3971f6": [
+        "mcImage66b74bb3971fe",
+        "mcImage66b74bb3972f0",
+        "mc66b74bb3973e0",
+        "mc66b74bb39748c",
+        "mc66b74bb397538",
+        "mc66b74bb3975f8",
+        "mc66b74bb3976b3",
+        "mc66b74bb39775f",
+        "mc66b74bb397812",
+        "mc66b74bb3978cd"
+      ]
+    },
+    "certificateAnswers": [],
+    "certificateId": null,
+    "questionData": {
+      "mcImage66b74bb3971fe": {
+        "deliveredOnTimestamp": 1786440557.912506,
+        "blockType": "mcImage",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mcImage66b74bb3972f0": {
+        "deliveredOnTimestamp": 1786440557.91253,
+        "blockType": "mcImage",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74bb3973e0": {
+        "deliveredOnTimestamp": 1786440557.912543,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74bb39748c": {
+        "deliveredOnTimestamp": 1786440557.912554,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74bb397538": {
+        "deliveredOnTimestamp": 1786440557.912565,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74bb3975f8": {
+        "deliveredOnTimestamp": 1786440557.912576,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74bb3976b3": {
+        "deliveredOnTimestamp": 1786440557.912586,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74bb39775f": {
+        "deliveredOnTimestamp": 1786440557.912596,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74bb397812": {
+        "deliveredOnTimestamp": 1786440557.912607,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74bb3978cd": {
+        "deliveredOnTimestamp": 1786440557.912617,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      }
+    },
+    "answers": [
+      {
+        "blockId": "mcImage66b74bb3971fe",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mcImage66b74bb3972f0",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74bb3973e0",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74bb39748c",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74bb397538",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74bb3975f8",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74bb3976b3",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74bb39775f",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74bb397812",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74bb3978cd",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      }
+    ],
+    "submittedTimestamp": 1786440558.153531,
+    "status": "submitted",
+    "grading_status": "grading_status_graded",
+    "access": "public",
+    "actual_score": null,
+    "score": {
+      "maxScore": 10,
+      "value": 0,
+      "pass": false,
+      "passGrade": 50,
+      "points": 0
+    },
+    "source": {
+      "type": "unit"
+    },
+    "isDefining": true,
+    "isAdminAutoGradedSubmission": null,
+    "listOfNonConsentedBlocks": [],
+    "created": 1786440557.918596,
+    "modified": 1786440558.296895,
+    "id": "6a7aeb6decf09718de0fb036",
+    "passed": false
+  },
+  "assessment": {
+    "title": "Practice Test Paper (Medium)",
+    "access": "public",
+    "type": "assessment",
+    "model": "assessmentSnapshot",
+    "description": "Intermediate practice test paper containing 10 assessment questions covering Mensuration & Geometry.",
+    "isTimed": false,
+    "timerFor": "assessmentTimed",
+    "onTimerExpiration": "autoSubmit",
+    "assessmentTimeLimitInSeconds": 600,
+    "questionTimeLimitInSeconds": 60,
+    "standaloneShareEnabled": null,
+    "customUrl": null,
+    "usesCustomUrl": null,
+    "allowAnonymous": true,
+    "randomizeQuestionOptions": false,
+    "disallowPartialSubmissions": false,
+    "submissionDueDateEnabled": false,
+    "submissionDueDate": 1626257823,
+    "makeFeedbackAvailableAfterDateEnabled": false,
+    "makeFeedbackAvailableAfterDate": 0,
+    "customStylesEnabled": true,
+    "customStyles": {
+      "assessmentPage": {
+        "background": {
+          "type": "color",
+          "colorData": {
+            "code": "",
+            "class": "lw-body-bg"
+          }
+        },
+        "dividers": {
+          "top": {
+            "orientation": "top",
+            "divider": "none"
+          },
+          "bottom": {
+            "orientation": "bottom",
+            "divider": "none"
+          }
+        }
+      },
+      "option": {
+        "radioEffect": "scribble",
+        "checkboxEffect": "scribble",
+        "size": "small"
+      },
+      "assessment": {
+        "transition": "none",
+        "background": {
+          "type": "color",
+          "colorData": {
+            "code": "",
+            "class": ""
+          }
+        },
+        "width": "normal",
+        "timerTemplate": "rectangle"
+      },
+      "linearRating": {
+        "labels": {
+          "size": "small"
+        }
+      },
+      "question": {
+        "description": {
+          "background": {
+            "type": "color",
+            "colorData": {
+              "code": "",
+              "class": ""
+            }
+          },
+          "type": "p",
+          "size": "small"
+        },
+        "answers": {
+          "background": {
+            "type": "color",
+            "colorData": {
+              "code": "",
+              "class": ""
+            }
+          }
+        },
+        "requiredAsterisk": {
+          "colorData": {
+            "code": "#ff0000",
+            "class": ""
+          }
+        },
+        "errorMessages": {
+          "size": "verySmall",
+          "colorData": {
+            "code": "#ff0000",
+            "class": ""
+          }
+        }
+      },
+      "input": {
+        "size": "small",
+        "type": "solidDark"
+      },
+      "textarea": {
+        "size": "small",
+        "type": "solidDark"
+      },
+      "dropdown": {
+        "size": "small",
+        "type": "solidDark"
+      }
+    },
+    "submissionMode": "all",
+    "startingDate": 1626765704,
+    "startingDateEnabled": false,
+    "showOnlyFailedQuestionsOnRetry": false,
+    "retryEnabled": true,
+    "retryOnFailOnly": false,
+    "gradingMethod": null,
+    "maxTries": null,
+    "onlyWrongOnRetake": null,
+    "isAmendable": false,
+    "feedbackShowOnScreen": true,
+    "feedbackDownloadPDF": false,
+    "feedbackShowInline": null,
+    "feedbackQuestionList": "all-questions",
+    "feedbackShowQuestionScore": true,
+    "feedbackShowFeedback": true,
+    "feedbackShowNumbering": false,
+    "feedbackShowSectionTitles": false,
+    "feedbackShowUserAnswers": true,
+    "feedbackShowCorrectAnswers": true,
+    "feedbackShowAnswerCorrectness": true,
+    "displayInlineFeedbackEnabled": null,
+    "displayBackButtonWhenSubmissionPerBlock": null,
+    "feedbackShowSectionResultSummary": false,
+    "askConfirmationBeforeSubmit": true,
+    "hasCustomConfirmationBeforeSubmitText": false,
+    "customConfirmationBeforeSubmitText": "Are you sure you want to submit the questionnaire?",
+    "customConfirmationBeforeSubmitTexts": {
+      "title": "Submit Assessment?",
+      "baseConfirmationMessage": "Are you sure you want to submit the questionnaire?",
+      "unansweredNotice": "You have not answered {X} questions."
+    },
+    "amendResubmissionMinutes": 30,
+    "passingGrade": null,
+    "navigationMode": "per-block",
+    "conditionalBlocks": {
+      "introContent": {
+        "id": "content66b74bb397139",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66b74bb397147",
+              "type": "text",
+              "insertedAsWidget": true,
+              "properties": {
+                "html": "Venn Diagrams PAPER LEVEL-2",
+                "alignment": "center",
+                "customStyle": true,
+                "type": "h2",
+                "size": "normal"
+              }
+            },
+            {
+              "id": "text66b74bb397158",
+              "type": "text",
+              "properties": {
+                "html": "Self-assess your knowledge. Express yourself and get feedback from our instructors.",
+                "customStyle": true,
+                "alignment": "center"
+              }
+            },
+            {
+              "id": "spacer66b74bb397162",
+              "type": "spacer",
+              "properties": {
+                "height": 20,
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            },
+            {
+              "id": "button66b74bb39716f",
+              "type": "button",
+              "properties": {
+                "buttonLabel": "<span>Ready to start</span>",
+                "buttonSize": "normal",
+                "buttonType": "solidBrand",
+                "alignment": "center",
+                "linkData": {
+                  "linkType": "goToFirst"
+                },
+                "iconColorData": {
+                  "code": "",
+                  "class": ""
+                },
+                "iconDisplay": false,
+                "iconSize": 26,
+                "iconClassName": " fas fa-angle-right",
+                "iconPosition": "right"
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "variables": {
+            "conditionalBlocks_introContent_blockData_widgets_0": [],
+            "conditionalBlocks_introContent_blockData_widgets_1": []
+          }
+        }
+      },
+      "submissionStartingDate": {
+        "id": "content66b74bb3971a0",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66b74bb3971a5",
+              "type": "text",
+              "properties": {
+                "html": "Sorry but this assessment hasn't started yet."
+              }
+            },
+            {
+              "id": "date66b74bb3971ac",
+              "type": "date",
+              "properties": {
+                "value": ""
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "displayConditions": ["startingDate"]
+        }
+      },
+      "submissionDueDate": {
+        "id": "content66b74bb3971b8",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66b74bb3971bc",
+              "type": "text",
+              "properties": {
+                "html": "Sorry but this assessment date is due."
+              }
+            },
+            {
+              "id": "date66b74bb3971c3",
+              "type": "date",
+              "properties": {
+                "value": ""
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "displayConditions": ["dateIsDue"]
+        }
+      },
+      "outroContent": {
+        "id": "content66b74bb3971ce",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "userResults66b74bb3971d2",
+              "type": "userResults",
+              "properties": {
+                "layout": "template2",
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            },
+            {
+              "id": "feedback66b74bb3971df",
+              "type": "feedback",
+              "properties": []
+            },
+            {
+              "id": "outroActions66b74bb3971e6",
+              "type": "outroActions",
+              "properties": {
+                "layout": "",
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true
+        }
+      }
+    },
+    "systemSections": null,
+    "sections": [
+      {
+        "id": "section66b74bb3971f6",
+        "title": "",
+        "type": "section",
+        "navigationMode": "per-block",
+        "blocks": [
+          {
+            "id": "mcImage66b74bb3971fe",
+            "type": "mcImage",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bb397203",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">Which of the following Venn Diagram represents the relationship among \n</p><div style=\"text-align: justify;\">Crockery, Table, Cup</div>"
+                    }
+                  }
+                ]
+              },
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-image-option66b74bb39721e",
+                  "type": "mc-image-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "image66b74bb397226",
+                        "type": "image",
+                        "properties": {
+                          "hasLightbox": false,
+                          "imageData": {
+                            "title": "image",
+                            "tags": [],
+                            "width": 175,
+                            "height": 101,
+                            "size": 2,
+                            "name": "/3f4697a6dac561a9212c6ffea45bf2ae.png",
+                            "access": "public",
+                            "created": 1722425799.857319,
+                            "modified": 1722425799.857319,
+                            "user": {
+                              "username": "Sneha AK Team"
+                            },
+                            "id": "66aa21c7bae7189d1c0546e6",
+                            "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/3f4697a6dac561a9212c6ffea45bf2ae.png",
+                            "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/3f4697a6dac561a9212c6ffea45bf2ae.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                            "modifiedF": "2024-07-31 14:36:39"
+                          },
+                          "height": 86,
+                          "width": 150
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-image-option66b74bb397252",
+                  "type": "mc-image-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "image66b74bb397259",
+                        "type": "image",
+                        "properties": {
+                          "hasLightbox": false,
+                          "imageData": {
+                            "title": "image",
+                            "tags": [],
+                            "width": 148,
+                            "height": 105,
+                            "size": 2,
+                            "name": "/bb1b08dfa089905d404c98fd6717455b.png",
+                            "access": "public",
+                            "created": 1722425811.951989,
+                            "modified": 1722425811.951989,
+                            "user": {
+                              "username": "Sneha AK Team"
+                            },
+                            "id": "66aa21d3b2cb6c3da10fd586",
+                            "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/bb1b08dfa089905d404c98fd6717455b.png",
+                            "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/bb1b08dfa089905d404c98fd6717455b.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                            "modifiedF": "2024-07-31 14:36:51"
+                          },
+                          "height": 92,
+                          "width": 130
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-image-option66b74bb397283",
+                  "type": "mc-image-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "image66b74bb39728a",
+                        "type": "image",
+                        "properties": {
+                          "hasLightbox": false,
+                          "imageData": {
+                            "title": "image",
+                            "tags": [],
+                            "width": 175,
+                            "height": 91,
+                            "size": 2,
+                            "name": "/b506ae3922483126fc88522f711cbbfe.png",
+                            "access": "public",
+                            "created": 1722425822.853437,
+                            "modified": 1722425822.853437,
+                            "user": {
+                              "username": "Sneha AK Team"
+                            },
+                            "id": "66aa21de41830929c20d6a55",
+                            "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/b506ae3922483126fc88522f711cbbfe.png",
+                            "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/b506ae3922483126fc88522f711cbbfe.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                            "modifiedF": "2024-07-31 14:37:02"
+                          },
+                          "height": null,
+                          "width": null
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-image-option66b74bb3972b4",
+                  "type": "mc-image-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "image66b74bb3972bb",
+                        "type": "image",
+                        "properties": {
+                          "hasLightbox": false,
+                          "imageData": {
+                            "title": "image",
+                            "tags": [],
+                            "width": 177,
+                            "height": 56,
+                            "size": 2,
+                            "name": "/40e601c5339af9c4d91fa78450b58f07.png",
+                            "access": "public",
+                            "created": 1722425835.453014,
+                            "modified": 1722425835.453014,
+                            "user": {
+                              "username": "Sneha AK Team"
+                            },
+                            "id": "66aa21ebe22e8a87a6047715",
+                            "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/40e601c5339af9c4d91fa78450b58f07.png",
+                            "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/40e601c5339af9c4d91fa78450b58f07.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                            "modifiedF": "2024-07-31 14:37:15"
+                          },
+                          "height": null,
+                          "width": null
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "optionNumbering": "none",
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_0_description_widgets_1": [],
+                "sections_0_blocks_0": []
+              }
+            }
+          },
+          {
+            "id": "mcImage66b74bb3972f0",
+            "type": "mcImage",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bb3972f5",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">Select the proper Venn Diagram to represent the relationship among\n</p><p style=\"text-align: justify;\">Horse, Penguin, Mammals</p>"
+                    }
+                  }
+                ]
+              },
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-image-option66b74bb39730f",
+                  "type": "mc-image-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "image66b74bb397316",
+                        "type": "image",
+                        "properties": {
+                          "hasLightbox": false,
+                          "imageData": {
+                            "title": "image",
+                            "tags": [],
+                            "width": 169,
+                            "height": 72,
+                            "size": 2,
+                            "name": "/710d8d2fab36107953ee5a5dbfcacd7f.png",
+                            "access": "public",
+                            "created": 1722425919.479793,
+                            "modified": 1722425919.479793,
+                            "user": {
+                              "username": "Sneha AK Team"
+                            },
+                            "id": "66aa223f60464675990801d7",
+                            "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/710d8d2fab36107953ee5a5dbfcacd7f.png",
+                            "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/710d8d2fab36107953ee5a5dbfcacd7f.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                            "modifiedF": "2024-07-31 14:38:39"
+                          },
+                          "height": null,
+                          "width": null
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-image-option66b74bb397341",
+                  "type": "mc-image-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "image66b74bb397348",
+                        "type": "image",
+                        "properties": {
+                          "hasLightbox": false,
+                          "imageData": {
+                            "title": "image",
+                            "tags": [],
+                            "width": 182,
+                            "height": 94,
+                            "size": 2,
+                            "name": "/5cc346dd3b312322233fbb3317e28518.png",
+                            "access": "public",
+                            "created": 1722425932.050899,
+                            "modified": 1722425932.050899,
+                            "user": {
+                              "username": "Sneha AK Team"
+                            },
+                            "id": "66aa224cbdf2c2882d020a65",
+                            "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/5cc346dd3b312322233fbb3317e28518.png",
+                            "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/5cc346dd3b312322233fbb3317e28518.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                            "modifiedF": "2024-07-31 14:38:52"
+                          },
+                          "height": null,
+                          "width": null
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-image-option66b74bb397372",
+                  "type": "mc-image-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "image66b74bb397379",
+                        "type": "image",
+                        "properties": {
+                          "hasLightbox": false,
+                          "imageData": {
+                            "title": "image",
+                            "tags": [],
+                            "width": 121,
+                            "height": 119,
+                            "size": 2,
+                            "name": "/cb0510447a334603ed27eec417848a9b.png",
+                            "access": "public",
+                            "created": 1722425945.104409,
+                            "modified": 1722425945.104409,
+                            "user": {
+                              "username": "Sneha AK Team"
+                            },
+                            "id": "66aa2259f1c12ba1480794b5",
+                            "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/cb0510447a334603ed27eec417848a9b.png",
+                            "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/cb0510447a334603ed27eec417848a9b.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                            "modifiedF": "2024-07-31 14:39:05"
+                          },
+                          "height": null,
+                          "width": null
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-image-option66b74bb3973a2",
+                  "type": "mc-image-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "image66b74bb3973a9",
+                        "type": "image",
+                        "properties": {
+                          "hasLightbox": false,
+                          "imageData": {
+                            "title": "image",
+                            "tags": [],
+                            "width": 138,
+                            "height": 135,
+                            "size": 2,
+                            "name": "/d76b4cff2975b0552a769235870491f9.png",
+                            "access": "public",
+                            "created": 1722425957.765973,
+                            "modified": 1722425957.765973,
+                            "user": {
+                              "username": "Sneha AK Team"
+                            },
+                            "id": "66aa2265563abc37520c695b",
+                            "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/d76b4cff2975b0552a769235870491f9.png",
+                            "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/d76b4cff2975b0552a769235870491f9.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                            "modifiedF": "2024-07-31 14:39:17"
+                          },
+                          "height": 97,
+                          "width": 100
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "optionNumbering": "none",
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_0_description_widgets_1": [],
+                "sections_0_blocks_1_blockData_description_widgets_0": [],
+                "sections_0_blocks_1": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74bb3973e0",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bb3973e5",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">In the following diagram, triangle represents ‘Guest Lecturers’, circle represents ‘Associate Professors’, rectangle represents ‘Official Staff’ and square represents ‘Researchers’. Which letter identifies only the person who is Associate professor and Researcher both?</p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/28928b343676021baf56a3f64592e70c.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto;\"></p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74bb3973f6",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74bb3973fd",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74bb397405",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74bb397424",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb39742b",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>C</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb39743a",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb397441",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>D</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb397450",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb397457",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>A</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb397465",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb39746c",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>F</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_2_blockData_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_2": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74bb39748c",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bb397491",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong>&nbsp;</p><p style=\"text-align: justify;\">In the following Venn Diagram, circle represents ‘Students’, triangle represents ‘Cricket Player’, rectangle represents ‘Boy’, square represents ‘Dancers’.</p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/7ffd7164dd0ff68c84975a593483000e.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 500px;\"></p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">How many Students are boys?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74bb3974a3",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74bb3974aa",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74bb3974b1",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74bb3974d0",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb3974d7",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>24</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb3974e5",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb3974ec",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>21</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb3974fc",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb397502",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>18</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb397511",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb397518",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>22</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_3_blockData_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74bb397538",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bb39753d",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong>&nbsp;</p><p style=\"text-align: justify;\">In the following Venn Diagram, circle represents ‘Students’, triangle represents ‘Cricket Player’, rectangle represents ‘Boy’, square represents ‘Dancers’.</p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/7ffd7164dd0ff68c84975a593483000e.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 500px;\"></p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">How many Cricket players are boys and also students?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74bb39754e",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74bb397555",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74bb39755c",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74bb397587",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb39758e",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>8</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb39759d",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb3975a4",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>12</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb3975b2",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb3975b9",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>14</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb3975c8",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb3975cf",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>15</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_3_blockData_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74bb3975f8",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bb3975fc",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong>&nbsp;</p><p style=\"text-align: justify;\">In the following Venn Diagram, circle represents ‘Students’, triangle represents ‘Cricket Player’, rectangle represents ‘Boy’, square represents ‘Dancers’.</p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/7ffd7164dd0ff68c84975a593483000e.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 500px;\"></p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">How many dancers are students but not cricket players?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74bb39760e",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74bb397615",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74bb39761c",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74bb39763b",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb397641",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>26</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb397651",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb397657",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>23</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb397666",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb39766d",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>21</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb39767b",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb397682",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>22</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_3_blockData_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74bb3976b3",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bb3976b8",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong></p><p style=\"text-align: justify;\"> In the following Venn Diagram, square represents ‘boys’, rectangle represents ‘School Going buddies’, circle represents ‘rural population’, triangle represents ‘children’.</p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/5635fbf3105be84a2be0679f06c664e6.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto;\"></p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">How many school goers are not children?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74bb3976c9",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74bb3976d0",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74bb3976d7",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74bb3976f6",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb3976fd",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>20</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb39770c",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb397713",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>12</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb397722",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb397729",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>15</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb397737",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb39773e",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>19</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_6_blockData_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_6": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74bb39775f",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bb397764",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong></p><p style=\"text-align: justify;\"> In the following Venn Diagram, square represents ‘boys’, rectangle represents ‘School Going buddies’, circle represents ‘rural population’, triangle represents ‘children’.</p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/5635fbf3105be84a2be0679f06c664e6.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto;\"></p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">How many boys, who are not children, from rural population?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74bb397775",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74bb39777c",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74bb397783",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74bb3977a2",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb3977a8",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>20</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb3977b7",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb3977be",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>16</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb3977cd",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb3977d3",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>15</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb3977e2",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb3977e9",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>13</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_6_blockData_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_7": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74bb397812",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bb397817",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong></p><p style=\"text-align: justify;\"> In the following Venn Diagram, square represents ‘boys’, rectangle represents ‘School Going buddies’, circle represents ‘rural population’, triangle represents ‘children’.</p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/5635fbf3105be84a2be0679f06c664e6.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto;\"></p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">How many children are not school goers?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74bb397827",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74bb39782e",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74bb397835",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74bb397854",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb39785b",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>18</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb39786a",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb397871",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>26</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb397880",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb397887",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>12</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb397896",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb39789c",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>20</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_6_blockData_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_8": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74bb3978cd",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bb3978d1",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">In the following diagram, rectangle represents ‘Metallic’, one square represents ‘balls’ and the other square represents ‘Heavy’ as shown below-\n</p><p style=\"text-align: justify;\">How many Metallic balls are not heavy?</p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/87ad7d78608ffb19d3df628de6c7887e.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 300px;\"></p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74bb3978e3",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74bb3978ea",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74bb3978f1",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74bb39790f",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb397916",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>None</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb397925",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb39792b",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>29</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb39793a",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb397941",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>40</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb39795b",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb397962",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>69</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_9_blockData_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_9": []
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "availabilityStatus": null,
+    "autoNavigationEnabled": false,
+    "displayBackButtonWhenNavigationPerBlock": true,
+    "saveAndResumeLaterEnabled": null,
+    "tagsAddedOnCompletion": [],
+    "tagsAddedOnPass": [],
+    "sendAnonymousSubmissionsToEmailLeads": false,
+    "afterSubmitActionEnabled": null,
+    "afterSubmitActionProperties": null,
+    "showWizardOnNextEdit": false,
+    "revisitAfterSubmissionAction": null,
+    "navigationTemplate": "HorizontalSpacedBetweenNavigationTemplate",
+    "learnerSearchBarEnabled": true,
+    "learnerUnansweredQuestionsEnabled": true,
+    "learnerFavouriteQuestionEnabled": true,
+    "learnerCompletionProgressEnabled": true,
+    "learnerShowIndexOfQuestionsEnabled": false,
+    "learnerTimeNotificationsEnabled": false,
+    "learnerAllowInterruptionsEnabled": true,
+    "learnerAllowInterruptionsTimeoutInMinutes": 30,
+    "learnerReclaimTryOnInterruptionTimeoutEnabled": false,
+    "learnerAskBeforeContinueToSaved": true,
+    "learnerAutoSaveEnabled": null,
+    "spellcheckDisabled": null,
+    "showPartialScoreOnSubmission": true,
+    "deliverableQuestionsSubsetType": "all",
+    "questionRandomizationType": "none",
+    "serveQuestionsBasedOnPreviousSubmission": null,
+    "scoringDisabled": false,
+    "isSelfAssessment": false,
+    "useDefaultCertificateTemplate": null,
+    "certificateTemplate": null,
+    "certificateSocialShare": null,
+    "migrationData": null,
+    "useAssessmentPassingGradeForOpenEndedCorrectness": true,
+    "openEndedCorrectnessPassingGrade": null,
+    "showScorePercentage": null,
+    "showScorePoints": null,
+    "showScoreCorrectAnswers": null,
+    "editorBehaviorSettings": null,
+    "manualReviewEnabled": null,
+    "resultsSummary": {
+      "enabled": true,
+      "showStatusIcon": true,
+      "showStatusText": true,
+      "showScorePercentage": true,
+      "showScorePoints": true,
+      "showScoreCorrectAnswers": false,
+      "showTimeTakenToComplete": true,
+      "showDateSubmitted": true,
+      "showAttemptCount": true
+    },
+    "meta": null,
+    "submissionsCount": 1081,
+    "fromMarketplace": null,
+    "aiFeedbackEnabled": null,
+    "numberOfFeedbackQuestions": null,
+    "created": 1723288500.065293,
+    "modified": 1723830425.16451,
+    "contentHash": "6a620ffc4df5fa30009ef6d2cb892f8d960a5a8089bfa84c4a9da79774f6a531",
+    "id": "66b74bb47f809db010095227",
+    "objectType": "assessment",
+    "isEditBlockedDueToSync": false,
+    "variables": {
+      "submission": {
+        "self": {
+          "score": 0,
+          "points": 0,
+          "total_points": 10,
+          "correct_answers": 0,
+          "total_questions": 10,
+          "time_spent": "00:00:01",
+          "date_submitted": "11/08/26",
+          "attempt_count": 3,
+          "max_tries": null,
+          "pass_grade": 50,
+          "time_spent_seconds": 1,
+          "raw_start_date": 1786440557.918596
+        }
+      },
+      "school": {
+        "name": "Apna College",
+        "url": "www.apnacollege.in",
+        "description": "The most loved coding community of India ❤️"
+      },
+      "user": {
+        "username": "ram",
+        "email": "p4542639@gmail.com",
+        "cf_phonenumber": "7666690798"
+      }
+    }
+  },
+  "reclaimedTry": false,
+  "feedback": [
+    {
+      "title": "",
+      "id": "section66b74bb3971f6",
+      "blocks": [
+        {
+          "id": "mcImage66b74bb3971fe",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mcImage",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Which of the following Venn Diagram represents the relationship among Crockery, Table, Cup",
+            "widgets": [
+              {
+                "id": "text66b74bb397203",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">Which of the following Venn Diagram represents the relationship among \n</p><div style=\"text-align: justify;\">Crockery, Table, Cup</div>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-image-option66b74bb39721e",
+              "description": {
+                "text": "(Image)",
+                "widgets": [
+                  {
+                    "id": "image66b74bb397226",
+                    "type": "image",
+                    "properties": {
+                      "hasLightbox": false,
+                      "imageData": {
+                        "title": "image",
+                        "tags": [],
+                        "width": 175,
+                        "height": 101,
+                        "size": 2,
+                        "name": "/3f4697a6dac561a9212c6ffea45bf2ae.png",
+                        "access": "public",
+                        "created": 1722425799.857319,
+                        "modified": 1722425799.857319,
+                        "user": {
+                          "username": "Sneha AK Team"
+                        },
+                        "id": "66aa21c7bae7189d1c0546e6",
+                        "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/3f4697a6dac561a9212c6ffea45bf2ae.png",
+                        "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/3f4697a6dac561a9212c6ffea45bf2ae.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                        "modifiedF": "2024-07-31 14:36:39"
+                      },
+                      "height": 86,
+                      "width": 150
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-image-option66b74bb397252",
+              "description": {
+                "text": "(Image)",
+                "widgets": [
+                  {
+                    "id": "image66b74bb397259",
+                    "type": "image",
+                    "properties": {
+                      "hasLightbox": false,
+                      "imageData": {
+                        "title": "image",
+                        "tags": [],
+                        "width": 148,
+                        "height": 105,
+                        "size": 2,
+                        "name": "/bb1b08dfa089905d404c98fd6717455b.png",
+                        "access": "public",
+                        "created": 1722425811.951989,
+                        "modified": 1722425811.951989,
+                        "user": {
+                          "username": "Sneha AK Team"
+                        },
+                        "id": "66aa21d3b2cb6c3da10fd586",
+                        "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/bb1b08dfa089905d404c98fd6717455b.png",
+                        "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/bb1b08dfa089905d404c98fd6717455b.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                        "modifiedF": "2024-07-31 14:36:51"
+                      },
+                      "height": 92,
+                      "width": 130
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-image-option66b74bb397283",
+              "description": {
+                "text": "(Image)",
+                "widgets": [
+                  {
+                    "id": "image66b74bb39728a",
+                    "type": "image",
+                    "properties": {
+                      "hasLightbox": false,
+                      "imageData": {
+                        "title": "image",
+                        "tags": [],
+                        "width": 175,
+                        "height": 91,
+                        "size": 2,
+                        "name": "/b506ae3922483126fc88522f711cbbfe.png",
+                        "access": "public",
+                        "created": 1722425822.853437,
+                        "modified": 1722425822.853437,
+                        "user": {
+                          "username": "Sneha AK Team"
+                        },
+                        "id": "66aa21de41830929c20d6a55",
+                        "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/b506ae3922483126fc88522f711cbbfe.png",
+                        "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/b506ae3922483126fc88522f711cbbfe.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                        "modifiedF": "2024-07-31 14:37:02"
+                      },
+                      "height": null,
+                      "width": null
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-image-option66b74bb3972b4",
+              "description": {
+                "text": "(Image)",
+                "widgets": [
+                  {
+                    "id": "image66b74bb3972bb",
+                    "type": "image",
+                    "properties": {
+                      "hasLightbox": false,
+                      "imageData": {
+                        "title": "image",
+                        "tags": [],
+                        "width": 177,
+                        "height": 56,
+                        "size": 2,
+                        "name": "/40e601c5339af9c4d91fa78450b58f07.png",
+                        "access": "public",
+                        "created": 1722425835.453014,
+                        "modified": 1722425835.453014,
+                        "user": {
+                          "username": "Sneha AK Team"
+                        },
+                        "id": "66aa21ebe22e8a87a6047715",
+                        "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/40e601c5339af9c4d91fa78450b58f07.png",
+                        "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/40e601c5339af9c4d91fa78450b58f07.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                        "modifiedF": "2024-07-31 14:37:15"
+                      },
+                      "height": null,
+                      "width": null
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-image-option66b74bb397283",
+              "text": "(Image)",
+              "widgets": [
+                {
+                  "id": "image66b74bb39728a",
+                  "type": "image",
+                  "properties": {
+                    "hasLightbox": false,
+                    "imageData": {
+                      "title": "image",
+                      "tags": [],
+                      "width": 175,
+                      "height": 91,
+                      "size": 2,
+                      "name": "/b506ae3922483126fc88522f711cbbfe.png",
+                      "access": "public",
+                      "created": 1722425822.853437,
+                      "modified": 1722425822.853437,
+                      "user": {
+                        "username": "Sneha AK Team"
+                      },
+                      "id": "66aa21de41830929c20d6a55",
+                      "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/b506ae3922483126fc88522f711cbbfe.png",
+                      "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/b506ae3922483126fc88522f711cbbfe.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                      "modifiedF": "2024-07-31 14:37:02"
+                    },
+                    "height": null,
+                    "width": null
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><span>Correct\nanswer is Option (C)</span><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/9ea50442948dcadcbe3ae31c5cbd94aa.png\" style=\"width: 300px; height: 144px;\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mcImage66b74bb3972f0",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mcImage",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Select the proper Venn Diagram to represent the relationship among Horse, Penguin, Mammals",
+            "widgets": [
+              {
+                "id": "text66b74bb3972f5",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">Select the proper Venn Diagram to represent the relationship among\n</p><p style=\"text-align: justify;\">Horse, Penguin, Mammals</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-image-option66b74bb39730f",
+              "description": {
+                "text": "(Image)",
+                "widgets": [
+                  {
+                    "id": "image66b74bb397316",
+                    "type": "image",
+                    "properties": {
+                      "hasLightbox": false,
+                      "imageData": {
+                        "title": "image",
+                        "tags": [],
+                        "width": 169,
+                        "height": 72,
+                        "size": 2,
+                        "name": "/710d8d2fab36107953ee5a5dbfcacd7f.png",
+                        "access": "public",
+                        "created": 1722425919.479793,
+                        "modified": 1722425919.479793,
+                        "user": {
+                          "username": "Sneha AK Team"
+                        },
+                        "id": "66aa223f60464675990801d7",
+                        "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/710d8d2fab36107953ee5a5dbfcacd7f.png",
+                        "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/710d8d2fab36107953ee5a5dbfcacd7f.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                        "modifiedF": "2024-07-31 14:38:39"
+                      },
+                      "height": null,
+                      "width": null
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-image-option66b74bb397341",
+              "description": {
+                "text": "(Image)",
+                "widgets": [
+                  {
+                    "id": "image66b74bb397348",
+                    "type": "image",
+                    "properties": {
+                      "hasLightbox": false,
+                      "imageData": {
+                        "title": "image",
+                        "tags": [],
+                        "width": 182,
+                        "height": 94,
+                        "size": 2,
+                        "name": "/5cc346dd3b312322233fbb3317e28518.png",
+                        "access": "public",
+                        "created": 1722425932.050899,
+                        "modified": 1722425932.050899,
+                        "user": {
+                          "username": "Sneha AK Team"
+                        },
+                        "id": "66aa224cbdf2c2882d020a65",
+                        "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/5cc346dd3b312322233fbb3317e28518.png",
+                        "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/5cc346dd3b312322233fbb3317e28518.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                        "modifiedF": "2024-07-31 14:38:52"
+                      },
+                      "height": null,
+                      "width": null
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-image-option66b74bb397372",
+              "description": {
+                "text": "(Image)",
+                "widgets": [
+                  {
+                    "id": "image66b74bb397379",
+                    "type": "image",
+                    "properties": {
+                      "hasLightbox": false,
+                      "imageData": {
+                        "title": "image",
+                        "tags": [],
+                        "width": 121,
+                        "height": 119,
+                        "size": 2,
+                        "name": "/cb0510447a334603ed27eec417848a9b.png",
+                        "access": "public",
+                        "created": 1722425945.104409,
+                        "modified": 1722425945.104409,
+                        "user": {
+                          "username": "Sneha AK Team"
+                        },
+                        "id": "66aa2259f1c12ba1480794b5",
+                        "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/cb0510447a334603ed27eec417848a9b.png",
+                        "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/cb0510447a334603ed27eec417848a9b.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                        "modifiedF": "2024-07-31 14:39:05"
+                      },
+                      "height": null,
+                      "width": null
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-image-option66b74bb3973a2",
+              "description": {
+                "text": "(Image)",
+                "widgets": [
+                  {
+                    "id": "image66b74bb3973a9",
+                    "type": "image",
+                    "properties": {
+                      "hasLightbox": false,
+                      "imageData": {
+                        "title": "image",
+                        "tags": [],
+                        "width": 138,
+                        "height": 135,
+                        "size": 2,
+                        "name": "/d76b4cff2975b0552a769235870491f9.png",
+                        "access": "public",
+                        "created": 1722425957.765973,
+                        "modified": 1722425957.765973,
+                        "user": {
+                          "username": "Sneha AK Team"
+                        },
+                        "id": "66aa2265563abc37520c695b",
+                        "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/d76b4cff2975b0552a769235870491f9.png",
+                        "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/d76b4cff2975b0552a769235870491f9.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                        "modifiedF": "2024-07-31 14:39:17"
+                      },
+                      "height": 97,
+                      "width": 100
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-image-option66b74bb397341",
+              "text": "(Image)",
+              "widgets": [
+                {
+                  "id": "image66b74bb397348",
+                  "type": "image",
+                  "properties": {
+                    "hasLightbox": false,
+                    "imageData": {
+                      "title": "image",
+                      "tags": [],
+                      "width": 182,
+                      "height": 94,
+                      "size": 2,
+                      "name": "/5cc346dd3b312322233fbb3317e28518.png",
+                      "access": "public",
+                      "created": 1722425932.050899,
+                      "modified": 1722425932.050899,
+                      "user": {
+                        "username": "Sneha AK Team"
+                      },
+                      "id": "66aa224cbdf2c2882d020a65",
+                      "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/5cc346dd3b312322233fbb3317e28518.png",
+                      "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/5cc346dd3b312322233fbb3317e28518.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                      "modifiedF": "2024-07-31 14:38:52"
+                    },
+                    "height": null,
+                    "width": null
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><span>Correct\nanswer is option (B)</span><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/8fbd9b11b34203bfad2e29e7d702e35f.png\" style=\"width: 250px; height: 121px;\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74bb3973e0",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "In the following diagram, triangle represents ‘Guest Lecturers’, circle represents ‘Associate Professors’, rectangle represents ‘Official Staff’ and square represents ‘Researchers’. Which letter identifies only the person who is Associate professor and Researcher both?",
+            "widgets": [
+              {
+                "id": "text66b74bb3973e5",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">In the following diagram, triangle represents ‘Guest Lecturers’, circle represents ‘Associate Professors’, rectangle represents ‘Official Staff’ and square represents ‘Researchers’. Which letter identifies only the person who is Associate professor and Researcher both?</p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/28928b343676021baf56a3f64592e70c.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto;\"></p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74bb397424",
+              "description": {
+                "text": "C",
+                "widgets": [
+                  {
+                    "id": "text66b74bb39742b",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>C</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb39743a",
+              "description": {
+                "text": "D",
+                "widgets": [
+                  {
+                    "id": "text66b74bb397441",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>D</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb397450",
+              "description": {
+                "text": "A",
+                "widgets": [
+                  {
+                    "id": "text66b74bb397457",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>A</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb397465",
+              "description": {
+                "text": "F",
+                "widgets": [
+                  {
+                    "id": "text66b74bb39746c",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>F</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74bb397465",
+              "text": "F",
+              "widgets": [
+                {
+                  "id": "text66b74bb39746c",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>F</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br><span>Correct\nanswer is the letter in the intersection of circle and square i.e. option (D) F</span></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74bb39748c",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions :In the following Venn Diagram, circle represents ‘Students’, triangle represents ‘Cricket Player’, rectangle represents ‘Boy’, square represents ‘Dancers’.How many Students are boys?",
+            "widgets": [
+              {
+                "id": "text66b74bb397491",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong>&nbsp;</p><p style=\"text-align: justify;\">In the following Venn Diagram, circle represents ‘Students’, triangle represents ‘Cricket Player’, rectangle represents ‘Boy’, square represents ‘Dancers’.</p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/7ffd7164dd0ff68c84975a593483000e.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 500px;\"></p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">How many Students are boys?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74bb3974d0",
+              "description": {
+                "text": "24",
+                "widgets": [
+                  {
+                    "id": "text66b74bb3974d7",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>24</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb3974e5",
+              "description": {
+                "text": "21",
+                "widgets": [
+                  {
+                    "id": "text66b74bb3974ec",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>21</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb3974fc",
+              "description": {
+                "text": "18",
+                "widgets": [
+                  {
+                    "id": "text66b74bb397502",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>18</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb397511",
+              "description": {
+                "text": "22",
+                "widgets": [
+                  {
+                    "id": "text66b74bb397518",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>22</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74bb397511",
+              "text": "22",
+              "widgets": [
+                {
+                  "id": "text66b74bb397518",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>22</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>Students + Boys = (3+8+6+5) = 22 …\nOption (D)</p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74bb397538",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions :In the following Venn Diagram, circle represents ‘Students’, triangle represents ‘Cricket Player’, rectangle represents ‘Boy’, square represents ‘Dancers’.How many Cricket players are boys and also students?",
+            "widgets": [
+              {
+                "id": "text66b74bb39753d",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong>&nbsp;</p><p style=\"text-align: justify;\">In the following Venn Diagram, circle represents ‘Students’, triangle represents ‘Cricket Player’, rectangle represents ‘Boy’, square represents ‘Dancers’.</p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/7ffd7164dd0ff68c84975a593483000e.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 500px;\"></p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">How many Cricket players are boys and also students?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74bb397587",
+              "description": {
+                "text": "8",
+                "widgets": [
+                  {
+                    "id": "text66b74bb39758e",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>8</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb39759d",
+              "description": {
+                "text": "12",
+                "widgets": [
+                  {
+                    "id": "text66b74bb3975a4",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>12</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb3975b2",
+              "description": {
+                "text": "14",
+                "widgets": [
+                  {
+                    "id": "text66b74bb3975b9",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>14</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb3975c8",
+              "description": {
+                "text": "15",
+                "widgets": [
+                  {
+                    "id": "text66b74bb3975cf",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>15</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74bb397587",
+              "text": "8",
+              "widgets": [
+                {
+                  "id": "text66b74bb39758e",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>8</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>Cricket Players + Boys + Students = (8) …\nOption (A)</p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74bb3975f8",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions :In the following Venn Diagram, circle represents ‘Students’, triangle represents ‘Cricket Player’, rectangle represents ‘Boy’, square represents ‘Dancers’.How many dancers are students but not cricket players?",
+            "widgets": [
+              {
+                "id": "text66b74bb3975fc",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong>&nbsp;</p><p style=\"text-align: justify;\">In the following Venn Diagram, circle represents ‘Students’, triangle represents ‘Cricket Player’, rectangle represents ‘Boy’, square represents ‘Dancers’.</p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/7ffd7164dd0ff68c84975a593483000e.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 500px;\"></p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">How many dancers are students but not cricket players?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74bb39763b",
+              "description": {
+                "text": "26",
+                "widgets": [
+                  {
+                    "id": "text66b74bb397641",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>26</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb397651",
+              "description": {
+                "text": "23",
+                "widgets": [
+                  {
+                    "id": "text66b74bb397657",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>23</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb397666",
+              "description": {
+                "text": "21",
+                "widgets": [
+                  {
+                    "id": "text66b74bb39766d",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>21</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb39767b",
+              "description": {
+                "text": "22",
+                "widgets": [
+                  {
+                    "id": "text66b74bb397682",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>22</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74bb397651",
+              "text": "23",
+              "widgets": [
+                {
+                  "id": "text66b74bb397657",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>23</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>Dancers + Students – Cricket Players \n= (5+3+7+6+2) = 23 … Option (B)</p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74bb3976b3",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions : In the following Venn Diagram, square represents ‘boys’, rectangle represents ‘School Going buddies’, circle represents ‘rural population’, triangle represents ‘children’.How many school goers are not children?",
+            "widgets": [
+              {
+                "id": "text66b74bb3976b8",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong></p><p style=\"text-align: justify;\"> In the following Venn Diagram, square represents ‘boys’, rectangle represents ‘School Going buddies’, circle represents ‘rural population’, triangle represents ‘children’.</p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/5635fbf3105be84a2be0679f06c664e6.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto;\"></p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">How many school goers are not children?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74bb3976f6",
+              "description": {
+                "text": "20",
+                "widgets": [
+                  {
+                    "id": "text66b74bb3976fd",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>20</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb39770c",
+              "description": {
+                "text": "12",
+                "widgets": [
+                  {
+                    "id": "text66b74bb397713",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>12</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb397722",
+              "description": {
+                "text": "15",
+                "widgets": [
+                  {
+                    "id": "text66b74bb397729",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>15</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb397737",
+              "description": {
+                "text": "19",
+                "widgets": [
+                  {
+                    "id": "text66b74bb39773e",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>19</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74bb39770c",
+              "text": "12",
+              "widgets": [
+                {
+                  "id": "text66b74bb397713",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>12</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>School Goers – Children = (7+5) = 12 …\nOption (B)</p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74bb39775f",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions : In the following Venn Diagram, square represents ‘boys’, rectangle represents ‘School Going buddies’, circle represents ‘rural population’, triangle represents ‘children’.How many boys, who are not children, from rural population?",
+            "widgets": [
+              {
+                "id": "text66b74bb397764",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong></p><p style=\"text-align: justify;\"> In the following Venn Diagram, square represents ‘boys’, rectangle represents ‘School Going buddies’, circle represents ‘rural population’, triangle represents ‘children’.</p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/5635fbf3105be84a2be0679f06c664e6.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto;\"></p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">How many boys, who are not children, from rural population?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74bb3977a2",
+              "description": {
+                "text": "20",
+                "widgets": [
+                  {
+                    "id": "text66b74bb3977a8",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>20</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb3977b7",
+              "description": {
+                "text": "16",
+                "widgets": [
+                  {
+                    "id": "text66b74bb3977be",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>16</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb3977cd",
+              "description": {
+                "text": "15",
+                "widgets": [
+                  {
+                    "id": "text66b74bb3977d3",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>15</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb3977e2",
+              "description": {
+                "text": "13",
+                "widgets": [
+                  {
+                    "id": "text66b74bb3977e9",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>13</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74bb3977e2",
+              "text": "13",
+              "widgets": [
+                {
+                  "id": "text66b74bb3977e9",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>13</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br><span>Boys\n+ Rural Population – Children = (8+5) = 13 … Option (D)</span></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74bb397812",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions : In the following Venn Diagram, square represents ‘boys’, rectangle represents ‘School Going buddies’, circle represents ‘rural population’, triangle represents ‘children’.How many children are not school goers?",
+            "widgets": [
+              {
+                "id": "text66b74bb397817",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong></p><p style=\"text-align: justify;\"> In the following Venn Diagram, square represents ‘boys’, rectangle represents ‘School Going buddies’, circle represents ‘rural population’, triangle represents ‘children’.</p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/5635fbf3105be84a2be0679f06c664e6.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto;\"></p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">How many children are not school goers?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74bb397854",
+              "description": {
+                "text": "18",
+                "widgets": [
+                  {
+                    "id": "text66b74bb39785b",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>18</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb39786a",
+              "description": {
+                "text": "26",
+                "widgets": [
+                  {
+                    "id": "text66b74bb397871",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>26</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb397880",
+              "description": {
+                "text": "12",
+                "widgets": [
+                  {
+                    "id": "text66b74bb397887",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>12</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb397896",
+              "description": {
+                "text": "20",
+                "widgets": [
+                  {
+                    "id": "text66b74bb39789c",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>20</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74bb397854",
+              "text": "18",
+              "widgets": [
+                {
+                  "id": "text66b74bb39785b",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>18</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br><span>Children\n– School Goers = (9+1+2+6) = 18 … Option (A)</span></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74bb3978cd",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "In the following diagram, rectangle represents ‘Metallic’, one square represents ‘balls’ and the other square represents ‘Heavy’ as shown below- How many Metallic balls are not heavy?",
+            "widgets": [
+              {
+                "id": "text66b74bb3978d1",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">In the following diagram, rectangle represents ‘Metallic’, one square represents ‘balls’ and the other square represents ‘Heavy’ as shown below-\n</p><p style=\"text-align: justify;\">How many Metallic balls are not heavy?</p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/87ad7d78608ffb19d3df628de6c7887e.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 300px;\"></p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74bb39790f",
+              "description": {
+                "text": "None",
+                "widgets": [
+                  {
+                    "id": "text66b74bb397916",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>None</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb397925",
+              "description": {
+                "text": "29",
+                "widgets": [
+                  {
+                    "id": "text66b74bb39792b",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>29</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb39793a",
+              "description": {
+                "text": "40",
+                "widgets": [
+                  {
+                    "id": "text66b74bb397941",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>40</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb39795b",
+              "description": {
+                "text": "69",
+                "widgets": [
+                  {
+                    "id": "text66b74bb397962",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>69</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74bb397925",
+              "text": "29",
+              "widgets": [
+                {
+                  "id": "text66b74bb39792b",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>29</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br><span>Metallic\n+ Balls – Heavy = (29) … Option (B)</span></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        }
+      ]
+    }
+  ],
+  "submitted": true,
+  "updated": true,
+  "retryCount": 3,
+  "inlineFeedback": [],
+  "errors": [],
+  "success": true
+}

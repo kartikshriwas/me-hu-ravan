@@ -1,0 +1,3063 @@
+{
+  "submission": {
+    "anon_id": null,
+    "model": "assessment-submission",
+    "courseTitleId": "aptitude-teacher2",
+    "object_id": "66b74b877f809db01009516d",
+    "assessmentId": "66b74b877f809db01009516c",
+    "snapshotId": "66f67f1f629ce068cd089cb6",
+    "questions": {
+      "section66b74b86c4cab": [
+        "mc66b74b86c4cb3",
+        "mc66b74b86c4d5d",
+        "mc66b74b86c4e0e",
+        "mc66b74b86c4eb6",
+        "mc66b74b86c4f62",
+        "mc66b74b86c5015",
+        "mc66b74b86c50bc",
+        "mc66b74b86c5164",
+        "mc66b74b86c520d",
+        "mc66b74b86c52cc"
+      ]
+    },
+    "certificateAnswers": [],
+    "certificateId": null,
+    "questionData": {
+      "mc66b74b86c4cb3": {
+        "deliveredOnTimestamp": 1786440484.383021,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74b86c4d5d": {
+        "deliveredOnTimestamp": 1786440484.38305,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74b86c4e0e": {
+        "deliveredOnTimestamp": 1786440484.383066,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74b86c4eb6": {
+        "deliveredOnTimestamp": 1786440484.383077,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74b86c4f62": {
+        "deliveredOnTimestamp": 1786440484.383088,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74b86c5015": {
+        "deliveredOnTimestamp": 1786440484.383099,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74b86c50bc": {
+        "deliveredOnTimestamp": 1786440484.383109,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74b86c5164": {
+        "deliveredOnTimestamp": 1786440484.383119,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74b86c520d": {
+        "deliveredOnTimestamp": 1786440484.383128,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74b86c52cc": {
+        "deliveredOnTimestamp": 1786440484.383139,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      }
+    },
+    "answers": [
+      {
+        "blockId": "mc66b74b86c4cb3",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74b86c4d5d",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74b86c4e0e",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74b86c4eb6",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74b86c4f62",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74b86c5015",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74b86c50bc",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74b86c5164",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74b86c520d",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74b86c52cc",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      }
+    ],
+    "submittedTimestamp": 1786440484.621427,
+    "status": "submitted",
+    "grading_status": "grading_status_graded",
+    "access": "public",
+    "actual_score": null,
+    "score": {
+      "maxScore": 10,
+      "value": 0,
+      "pass": false,
+      "passGrade": 50,
+      "points": 0
+    },
+    "source": {
+      "type": "unit"
+    },
+    "isDefining": true,
+    "isAdminAutoGradedSubmission": null,
+    "listOfNonConsentedBlocks": [],
+    "created": 1786440484.38911,
+    "modified": 1786440484.750527,
+    "id": "6a7aeb246b380afe380d0ce3",
+    "passed": false
+  },
+  "assessment": {
+    "title": "Practice Test Paper (Easy)",
+    "access": "public",
+    "type": "assessment",
+    "model": "assessmentSnapshot",
+    "description": "Foundational practice test paper containing 10 assessment questions covering Percentages, Profit, Loss & Discounts.",
+    "isTimed": false,
+    "timerFor": "assessmentTimed",
+    "onTimerExpiration": "autoSubmit",
+    "assessmentTimeLimitInSeconds": 600,
+    "questionTimeLimitInSeconds": 60,
+    "standaloneShareEnabled": null,
+    "customUrl": null,
+    "usesCustomUrl": null,
+    "allowAnonymous": true,
+    "randomizeQuestionOptions": false,
+    "disallowPartialSubmissions": false,
+    "submissionDueDateEnabled": false,
+    "submissionDueDate": 1626257823,
+    "makeFeedbackAvailableAfterDateEnabled": false,
+    "makeFeedbackAvailableAfterDate": 0,
+    "customStylesEnabled": true,
+    "customStyles": {
+      "assessmentPage": {
+        "background": {
+          "type": "color",
+          "colorData": {
+            "code": "",
+            "class": "lw-body-bg"
+          }
+        },
+        "dividers": {
+          "top": {
+            "orientation": "top",
+            "divider": "none"
+          },
+          "bottom": {
+            "orientation": "bottom",
+            "divider": "none"
+          }
+        }
+      },
+      "option": {
+        "radioEffect": "scribble",
+        "checkboxEffect": "scribble",
+        "size": "small"
+      },
+      "assessment": {
+        "transition": "none",
+        "background": {
+          "type": "color",
+          "colorData": {
+            "code": "",
+            "class": ""
+          }
+        },
+        "width": "normal",
+        "timerTemplate": "rectangle"
+      },
+      "linearRating": {
+        "labels": {
+          "size": "small"
+        }
+      },
+      "question": {
+        "description": {
+          "background": {
+            "type": "color",
+            "colorData": {
+              "code": "",
+              "class": ""
+            }
+          },
+          "type": "p",
+          "size": "small"
+        },
+        "answers": {
+          "background": {
+            "type": "color",
+            "colorData": {
+              "code": "",
+              "class": ""
+            }
+          }
+        },
+        "requiredAsterisk": {
+          "colorData": {
+            "code": "#ff0000",
+            "class": ""
+          }
+        },
+        "errorMessages": {
+          "size": "verySmall",
+          "colorData": {
+            "code": "#ff0000",
+            "class": ""
+          }
+        }
+      },
+      "input": {
+        "size": "small",
+        "type": "solidDark"
+      },
+      "textarea": {
+        "size": "small",
+        "type": "solidDark"
+      },
+      "dropdown": {
+        "size": "small",
+        "type": "solidDark"
+      }
+    },
+    "submissionMode": "all",
+    "startingDate": 1626765704,
+    "startingDateEnabled": false,
+    "showOnlyFailedQuestionsOnRetry": false,
+    "retryEnabled": true,
+    "retryOnFailOnly": false,
+    "gradingMethod": null,
+    "maxTries": null,
+    "onlyWrongOnRetake": null,
+    "isAmendable": false,
+    "feedbackShowOnScreen": true,
+    "feedbackDownloadPDF": false,
+    "feedbackShowInline": null,
+    "feedbackQuestionList": "all-questions",
+    "feedbackShowQuestionScore": true,
+    "feedbackShowFeedback": true,
+    "feedbackShowNumbering": false,
+    "feedbackShowSectionTitles": false,
+    "feedbackShowUserAnswers": true,
+    "feedbackShowCorrectAnswers": true,
+    "feedbackShowAnswerCorrectness": true,
+    "displayInlineFeedbackEnabled": null,
+    "displayBackButtonWhenSubmissionPerBlock": null,
+    "feedbackShowSectionResultSummary": false,
+    "askConfirmationBeforeSubmit": true,
+    "hasCustomConfirmationBeforeSubmitText": false,
+    "customConfirmationBeforeSubmitText": "Are you sure you want to submit the questionnaire?",
+    "customConfirmationBeforeSubmitTexts": {
+      "title": "Submit Assessment?",
+      "baseConfirmationMessage": "Are you sure you want to submit the questionnaire?",
+      "unansweredNotice": "You have not answered {X} questions."
+    },
+    "amendResubmissionMinutes": 30,
+    "passingGrade": null,
+    "navigationMode": "per-block",
+    "conditionalBlocks": {
+      "introContent": {
+        "id": "content66b74b86c4beb",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66b74b86c4c0c",
+              "type": "text",
+              "insertedAsWidget": true,
+              "properties": {
+                "html": "Percentages PAPER LEVEL-1",
+                "alignment": "center",
+                "customStyle": true,
+                "type": "h2",
+                "size": "normal"
+              }
+            },
+            {
+              "id": "text66b74b86c4c1d",
+              "type": "text",
+              "properties": {
+                "html": "Self-assess your knowledge. Express yourself and get feedback from our instructors.",
+                "customStyle": true,
+                "alignment": "center"
+              }
+            },
+            {
+              "id": "spacer66b74b86c4c27",
+              "type": "spacer",
+              "properties": {
+                "height": 20,
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            },
+            {
+              "id": "button66b74b86c4c33",
+              "type": "button",
+              "properties": {
+                "buttonLabel": "<span>Ready to start</span>",
+                "buttonSize": "normal",
+                "buttonType": "solidBrand",
+                "alignment": "center",
+                "linkData": {
+                  "linkType": "goToFirst"
+                },
+                "iconColorData": {
+                  "code": "",
+                  "class": ""
+                },
+                "iconDisplay": false,
+                "iconSize": 26,
+                "iconClassName": " fas fa-angle-right",
+                "iconPosition": "right"
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "variables": {
+            "conditionalBlocks_introContent_blockData_widgets_0": [],
+            "conditionalBlocks_introContent_blockData_widgets_1": []
+          }
+        }
+      },
+      "submissionStartingDate": {
+        "id": "content66b74b86c4c54",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66b74b86c4c59",
+              "type": "text",
+              "properties": {
+                "html": "Sorry but this assessment hasn't started yet."
+              }
+            },
+            {
+              "id": "date66b74b86c4c60",
+              "type": "date",
+              "properties": {
+                "value": ""
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "displayConditions": ["startingDate"]
+        }
+      },
+      "submissionDueDate": {
+        "id": "content66b74b86c4c6c",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66b74b86c4c70",
+              "type": "text",
+              "properties": {
+                "html": "Sorry but this assessment date is due."
+              }
+            },
+            {
+              "id": "date66b74b86c4c77",
+              "type": "date",
+              "properties": {
+                "value": ""
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "displayConditions": ["dateIsDue"]
+        }
+      },
+      "outroContent": {
+        "id": "content66b74b86c4c84",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "userResults66b74b86c4c88",
+              "type": "userResults",
+              "properties": {
+                "layout": "template2",
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            },
+            {
+              "id": "feedback66b74b86c4c94",
+              "type": "feedback",
+              "properties": []
+            },
+            {
+              "id": "outroActions66b74b86c4c9b",
+              "type": "outroActions",
+              "properties": {
+                "layout": "",
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true
+        }
+      }
+    },
+    "systemSections": null,
+    "sections": [
+      {
+        "id": "section66b74b86c4cab",
+        "title": "",
+        "type": "section",
+        "navigationMode": "per-block",
+        "blocks": [
+          {
+            "id": "mc66b74b86c4cb3",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74b86c4cb8",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">A laptop priced at $1200 is on sale for 15% off. What is the sale price of the laptop?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74b86c4cca",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74b86c4cd2",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74b86c4cd9",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74b86c4cf8",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b86c4cff",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>1020</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b86c4d0e",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b86c4d15",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>1002</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b86c4d24",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b86c4d2b",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>1520</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b86c4d3a",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b86c4d40",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>2010</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_0": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74b86c4d5d",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74b86c4d62",
+                    "type": "text",
+                    "properties": {
+                      "html": "If 30% of a number is 45, what is the number?"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74b86c4d7c",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74b86c4d83",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74b86c4d8a",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74b86c4da9",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b86c4db0",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>150</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b86c4dbf",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b86c4dc5",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>135</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b86c4dd5",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b86c4ddc",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>120</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b86c4dea",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b86c4df1",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>110</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_1_blockData_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_1": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74b86c4e0e",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74b86c4e12",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">A car depreciates by 10% in value each year. If its initial value was $20,000 what will its value be after 3 years?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74b86c4e24",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74b86c4e2a",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74b86c4e32",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74b86c4e50",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b86c4e57",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>$14480</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b86c4e66",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b86c4e6d",
+                        "type": "text",
+                        "properties": {
+                          "html": "$16200"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b86c4e7b",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b86c4e82",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>$14580</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b86c4e91",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b86c4e97",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>$18000</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_2": [],
+                "sections_0_blocks_2_blockData_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_3_description_widgets_0": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74b86c4eb6",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74b86c4ebb",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">If the price of a shirt is increased by 20% and then decreased by 10%, what is the net percentage change in the price?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74b86c4ecc",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74b86c4ed3",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74b86c4eda",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74b86c4efc",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b86c4f03",
+                        "type": "text",
+                        "properties": {
+                          "html": "8% increase"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b86c4f12",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b86c4f19",
+                        "type": "text",
+                        "properties": {
+                          "html": "8% decrease&nbsp;&nbsp;"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b86c4f27",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b86c4f2e",
+                        "type": "text",
+                        "properties": {
+                          "html": "10% increase"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b86c4f3d",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b86c4f44",
+                        "type": "text",
+                        "properties": {
+                          "html": "10% decrease"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_2": [],
+                "sections_0_blocks_3_blockData_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74b86c4f62",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74b86c4f66",
+                    "type": "text",
+                    "properties": {
+                      "html": "If 25% of a number is 40, what is 40% of that number?"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74b86c4f77",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74b86c4f7e",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74b86c4f85",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74b86c4fa3",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b86c4faa",
+                        "type": "text",
+                        "properties": {
+                          "html": "64"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b86c4fb9",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b86c4fc0",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>100</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b86c4fce",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b86c4fd5",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>96</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b86c4ff0",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b86c4ff7",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>160</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_2": [],
+                "sections_0_blocks_4_blockData_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74b86c5015",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74b86c501a",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">If a bookstore sells a book at a 25% discount and still makes a 20% profit, what is the cost price of the book if the selling price is $60?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74b86c502b",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74b86c5032",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74b86c5039",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74b86c5057",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b86c505e",
+                        "type": "text",
+                        "properties": {
+                          "html": "$45"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b86c506d",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b86c5074",
+                        "type": "text",
+                        "properties": {
+                          "html": "$48"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b86c5082",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b86c5089",
+                        "type": "text",
+                        "properties": {
+                          "html": "$50"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b86c5098",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b86c509e",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>$55</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_2": [],
+                "sections_0_blocks_5_blockData_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74b86c50bc",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74b86c50c1",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">The population of a town increased by 20% in one year and then decreased by 10% in the following year. What was the net percentage change in the population over the two years?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74b86c50d2",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74b86c50d9",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74b86c50e0",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74b86c50fe",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b86c5105",
+                        "type": "text",
+                        "properties": {
+                          "html": "8% increase"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b86c5114",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b86c511b",
+                        "type": "text",
+                        "properties": {
+                          "html": "10% increase"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b86c512a",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b86c5130",
+                        "type": "text",
+                        "properties": {
+                          "html": "8% decrease"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b86c513f",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b86c5146",
+                        "type": "text",
+                        "properties": {
+                          "html": "10% decrease"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_2": [],
+                "sections_0_blocks_6_blockData_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_6": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74b86c5164",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74b86c5169",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">A student scored 72% in the first exam and 80% in the second exam. If the exams have equal weightage, what is the student's overall percentage?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74b86c517a",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74b86c5181",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74b86c5188",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74b86c51a6",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b86c51ae",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>76%<strong></strong></span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b86c51bd",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b86c51c3",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>77%</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b86c51d2",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b86c51d9",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>78%</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b86c51e8",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b86c51ee",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>79%</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_2": [],
+                "sections_0_blocks_7_blockData_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_7": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74b86c520d",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74b86c5211",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">In a certain city, the population increased by 20% over the past decade. If the current population is 500,000 what was the population a decade ago?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74b86c5222",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74b86c522c",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74b86c5238",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74b86c5266",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b86c526d",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>416,000</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b86c527c",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b86c5283",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>416,667</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b86c5292",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b86c5298",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>420,000</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b86c52a7",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b86c52ae",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>422,000</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_2": [],
+                "sections_0_blocks_8_blockData_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_8": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74b86c52cc",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74b86c52d5",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">If a company's revenue increased from $500,000 to $650,000 what is the percentage increase in revenue?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74b86c52e7",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74b86c52ed",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74b86c52f4",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74b86c5313",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b86c531a",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>20%</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b86c5329",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b86c5330",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>25%</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b86c533f",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b86c5346",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>30%</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b86c5355",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b86c535b",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>35%</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_2": [],
+                "sections_0_blocks_9_blockData_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_9": []
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "availabilityStatus": null,
+    "autoNavigationEnabled": false,
+    "displayBackButtonWhenNavigationPerBlock": true,
+    "saveAndResumeLaterEnabled": null,
+    "tagsAddedOnCompletion": [],
+    "tagsAddedOnPass": [],
+    "sendAnonymousSubmissionsToEmailLeads": false,
+    "afterSubmitActionEnabled": null,
+    "afterSubmitActionProperties": null,
+    "showWizardOnNextEdit": false,
+    "revisitAfterSubmissionAction": null,
+    "navigationTemplate": "HorizontalSpacedBetweenNavigationTemplate",
+    "learnerSearchBarEnabled": true,
+    "learnerUnansweredQuestionsEnabled": true,
+    "learnerFavouriteQuestionEnabled": true,
+    "learnerCompletionProgressEnabled": true,
+    "learnerShowIndexOfQuestionsEnabled": false,
+    "learnerTimeNotificationsEnabled": false,
+    "learnerAllowInterruptionsEnabled": true,
+    "learnerAllowInterruptionsTimeoutInMinutes": 30,
+    "learnerReclaimTryOnInterruptionTimeoutEnabled": false,
+    "learnerAskBeforeContinueToSaved": true,
+    "learnerAutoSaveEnabled": null,
+    "spellcheckDisabled": null,
+    "showPartialScoreOnSubmission": true,
+    "deliverableQuestionsSubsetType": "all",
+    "questionRandomizationType": "none",
+    "serveQuestionsBasedOnPreviousSubmission": null,
+    "scoringDisabled": false,
+    "isSelfAssessment": false,
+    "useDefaultCertificateTemplate": null,
+    "certificateTemplate": null,
+    "certificateSocialShare": null,
+    "migrationData": null,
+    "useAssessmentPassingGradeForOpenEndedCorrectness": true,
+    "openEndedCorrectnessPassingGrade": null,
+    "showScorePercentage": null,
+    "showScorePoints": null,
+    "showScoreCorrectAnswers": null,
+    "editorBehaviorSettings": null,
+    "manualReviewEnabled": null,
+    "resultsSummary": {
+      "enabled": true,
+      "showStatusIcon": true,
+      "showStatusText": true,
+      "showScorePercentage": true,
+      "showScorePoints": true,
+      "showScoreCorrectAnswers": false,
+      "showTimeTakenToComplete": true,
+      "showDateSubmitted": true,
+      "showAttemptCount": true
+    },
+    "meta": null,
+    "submissionsCount": 18447,
+    "fromMarketplace": null,
+    "aiFeedbackEnabled": null,
+    "numberOfFeedbackQuestions": null,
+    "created": 1723288455.205195,
+    "modified": 1727430431.387709,
+    "contentHash": "518b3f90e6032aafc5a669865e2f796627271c90b3ec415a7e5a610e290bcbd4",
+    "id": "66b74b877f809db01009516c",
+    "objectType": "assessment",
+    "isEditBlockedDueToSync": false,
+    "variables": {
+      "submission": {
+        "self": {
+          "score": 0,
+          "points": 0,
+          "total_points": 10,
+          "correct_answers": 0,
+          "total_questions": 10,
+          "time_spent": "00:00:00",
+          "date_submitted": "11/08/26",
+          "attempt_count": 5,
+          "max_tries": null,
+          "pass_grade": 50,
+          "time_spent_seconds": 0,
+          "raw_start_date": 1786440484.38911
+        }
+      },
+      "school": {
+        "name": "Apna College",
+        "url": "www.apnacollege.in",
+        "description": "The most loved coding community of India ❤️"
+      },
+      "user": {
+        "username": "ram",
+        "email": "p4542639@gmail.com",
+        "cf_phonenumber": "7666690798"
+      }
+    }
+  },
+  "reclaimedTry": false,
+  "feedback": [
+    {
+      "title": "",
+      "id": "section66b74b86c4cab",
+      "blocks": [
+        {
+          "id": "mc66b74b86c4cb3",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "A laptop priced at $1200 is on sale for 15% off. What is the sale price of the laptop?",
+            "widgets": [
+              {
+                "id": "text66b74b86c4cb8",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">A laptop priced at $1200 is on sale for 15% off. What is the sale price of the laptop?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74b86c4cf8",
+              "description": {
+                "text": "1020",
+                "widgets": [
+                  {
+                    "id": "text66b74b86c4cff",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>1020</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b86c4d0e",
+              "description": {
+                "text": "1002",
+                "widgets": [
+                  {
+                    "id": "text66b74b86c4d15",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>1002</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b86c4d24",
+              "description": {
+                "text": "1520",
+                "widgets": [
+                  {
+                    "id": "text66b74b86c4d2b",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>1520</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b86c4d3a",
+              "description": {
+                "text": "2010",
+                "widgets": [
+                  {
+                    "id": "text66b74b86c4d40",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>2010</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74b86c4cf8",
+              "text": "1020",
+              "widgets": [
+                {
+                  "id": "text66b74b86c4cff",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>1020</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br>Original price = $1200 <br>Sale discount = 15% <br>Sale price = Original price - (Original price * Sale discount) <br>Sale price = $1200 - ($1200 * 0.15) <br>Sale price = $1200 - $180 <br>Sale price = $1020 <br>The sale price of the laptop after a 15% discount is $1020.<br>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74b86c4d5d",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "If 30% of a number is 45, what is the number?",
+            "widgets": [
+              {
+                "id": "text66b74b86c4d62",
+                "type": "text",
+                "properties": {
+                  "html": "If 30% of a number is 45, what is the number?"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74b86c4da9",
+              "description": {
+                "text": "150",
+                "widgets": [
+                  {
+                    "id": "text66b74b86c4db0",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>150</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b86c4dbf",
+              "description": {
+                "text": "135",
+                "widgets": [
+                  {
+                    "id": "text66b74b86c4dc5",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>135</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b86c4dd5",
+              "description": {
+                "text": "120",
+                "widgets": [
+                  {
+                    "id": "text66b74b86c4ddc",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>120</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b86c4dea",
+              "description": {
+                "text": "110",
+                "widgets": [
+                  {
+                    "id": "text66b74b86c4df1",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>110</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74b86c4da9",
+              "text": "150",
+              "widgets": [
+                {
+                  "id": "text66b74b86c4db0",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>150</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br>Let the number be x. <br>30% of x = 45 <br>0.30x = 45 <br>x = 45 / 0.30 <br>x = 150<div>\nTherefore, the number is 150. <br><br><br></div>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74b86c4e0e",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "A car depreciates by 10% in value each year. If its initial value was $20,000 what will its value be after 3 years?",
+            "widgets": [
+              {
+                "id": "text66b74b86c4e12",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">A car depreciates by 10% in value each year. If its initial value was $20,000 what will its value be after 3 years?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74b86c4e50",
+              "description": {
+                "text": "$14480",
+                "widgets": [
+                  {
+                    "id": "text66b74b86c4e57",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>$14480</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b86c4e66",
+              "description": {
+                "text": "$16200",
+                "widgets": [
+                  {
+                    "id": "text66b74b86c4e6d",
+                    "type": "text",
+                    "properties": {
+                      "html": "$16200"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b86c4e7b",
+              "description": {
+                "text": "$14580",
+                "widgets": [
+                  {
+                    "id": "text66b74b86c4e82",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>$14580</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b86c4e91",
+              "description": {
+                "text": "$18000",
+                "widgets": [
+                  {
+                    "id": "text66b74b86c4e97",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>$18000</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74b86c4e7b",
+              "text": "$14580",
+              "widgets": [
+                {
+                  "id": "text66b74b86c4e82",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>$14580</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br>Initial value = $20,000 <br>After 3 years with a 10% decrease per year: <br>Value after 3 years = $20000 * (1 - 0.10)^3 <br>Value after 3 years ≈ $20000 * 0.729 <br>Value after 3 years ≈ $14580 <br>Therefore, the value of the car after 3 years would be $14580. <br>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74b86c4eb6",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "If the price of a shirt is increased by 20% and then decreased by 10%, what is the net percentage change in the price?",
+            "widgets": [
+              {
+                "id": "text66b74b86c4ebb",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">If the price of a shirt is increased by 20% and then decreased by 10%, what is the net percentage change in the price?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74b86c4efc",
+              "description": {
+                "text": "8% increase",
+                "widgets": [
+                  {
+                    "id": "text66b74b86c4f03",
+                    "type": "text",
+                    "properties": {
+                      "html": "8% increase"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b86c4f12",
+              "description": {
+                "text": "8% decrease",
+                "widgets": [
+                  {
+                    "id": "text66b74b86c4f19",
+                    "type": "text",
+                    "properties": {
+                      "html": "8% decrease&nbsp;&nbsp;"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b86c4f27",
+              "description": {
+                "text": "10% increase",
+                "widgets": [
+                  {
+                    "id": "text66b74b86c4f2e",
+                    "type": "text",
+                    "properties": {
+                      "html": "10% increase"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b86c4f3d",
+              "description": {
+                "text": "10% decrease",
+                "widgets": [
+                  {
+                    "id": "text66b74b86c4f44",
+                    "type": "text",
+                    "properties": {
+                      "html": "10% decrease"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74b86c4efc",
+              "text": "8% increase",
+              "widgets": [
+                {
+                  "id": "text66b74b86c4f03",
+                  "type": "text",
+                  "properties": {
+                    "html": "8% increase"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br>Let the original price of the shirt be $100. <br>After a 20% increase: Price <br>= $100 + $100 * 0.20 = $120 <br>After a 10% decrease: Price <br>= $120 - $120 * 0.10 = $108 <br>Net percentage change = ((Final Price - Initial Price) / Initial Price) * 100% <br>Net percentage change = (($108 - $100) / $100) * 100% = 8% increase <br>Therefore, the net percentage change in the price is an 8% increase. <br>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74b86c4f62",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "If 25% of a number is 40, what is 40% of that number?",
+            "widgets": [
+              {
+                "id": "text66b74b86c4f66",
+                "type": "text",
+                "properties": {
+                  "html": "If 25% of a number is 40, what is 40% of that number?"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74b86c4fa3",
+              "description": {
+                "text": "64",
+                "widgets": [
+                  {
+                    "id": "text66b74b86c4faa",
+                    "type": "text",
+                    "properties": {
+                      "html": "64"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b86c4fb9",
+              "description": {
+                "text": "100",
+                "widgets": [
+                  {
+                    "id": "text66b74b86c4fc0",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>100</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b86c4fce",
+              "description": {
+                "text": "96",
+                "widgets": [
+                  {
+                    "id": "text66b74b86c4fd5",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>96</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b86c4ff0",
+              "description": {
+                "text": "160",
+                "widgets": [
+                  {
+                    "id": "text66b74b86c4ff7",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>160</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74b86c4fa3",
+              "text": "64",
+              "widgets": [
+                {
+                  "id": "text66b74b86c4faa",
+                  "type": "text",
+                  "properties": {
+                    "html": "64"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br>Let the number be x. <br>25% of x = 40 <br>0.25x = 40 <br>x = 40 / 0.25 <br>x = 160 <br>40% of x = 0.40 * 160 = 64 <br>Therefore, 40% of the number is 64. <br>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74b86c5015",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "If a bookstore sells a book at a 25% discount and still makes a 20% profit, what is the cost price of the book if the selling price is $60?",
+            "widgets": [
+              {
+                "id": "text66b74b86c501a",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">If a bookstore sells a book at a 25% discount and still makes a 20% profit, what is the cost price of the book if the selling price is $60?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74b86c5057",
+              "description": {
+                "text": "$45",
+                "widgets": [
+                  {
+                    "id": "text66b74b86c505e",
+                    "type": "text",
+                    "properties": {
+                      "html": "$45"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b86c506d",
+              "description": {
+                "text": "$48",
+                "widgets": [
+                  {
+                    "id": "text66b74b86c5074",
+                    "type": "text",
+                    "properties": {
+                      "html": "$48"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b86c5082",
+              "description": {
+                "text": "$50",
+                "widgets": [
+                  {
+                    "id": "text66b74b86c5089",
+                    "type": "text",
+                    "properties": {
+                      "html": "$50"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b86c5098",
+              "description": {
+                "text": "$55",
+                "widgets": [
+                  {
+                    "id": "text66b74b86c509e",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>$55</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74b86c5082",
+              "text": "$50",
+              "widgets": [
+                {
+                  "id": "text66b74b86c5089",
+                  "type": "text",
+                  "properties": {
+                    "html": "$50"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br>Let the cost price of the book be x. <br>- 'The Marked price of the book is $80.  <br>- Now, the bookstore makes a 20% profit on the cost price\n<br>SP=C+0.2C=1.2C\n<br>Given that the selling price is $60:\n<br>1.2𝐶 = 60\nSolving for C:\n<br>𝐶=60/1.2 = 50\n<br>Therefore, the cost price of the book is $50.\n<br>Correct Answer : C. $50<br>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74b86c50bc",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "The population of a town increased by 20% in one year and then decreased by 10% in the following year. What was the net percentage change in the population over the two years?",
+            "widgets": [
+              {
+                "id": "text66b74b86c50c1",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">The population of a town increased by 20% in one year and then decreased by 10% in the following year. What was the net percentage change in the population over the two years?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74b86c50fe",
+              "description": {
+                "text": "8% increase",
+                "widgets": [
+                  {
+                    "id": "text66b74b86c5105",
+                    "type": "text",
+                    "properties": {
+                      "html": "8% increase"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b86c5114",
+              "description": {
+                "text": "10% increase",
+                "widgets": [
+                  {
+                    "id": "text66b74b86c511b",
+                    "type": "text",
+                    "properties": {
+                      "html": "10% increase"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b86c512a",
+              "description": {
+                "text": "8% decrease",
+                "widgets": [
+                  {
+                    "id": "text66b74b86c5130",
+                    "type": "text",
+                    "properties": {
+                      "html": "8% decrease"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b86c513f",
+              "description": {
+                "text": "10% decrease",
+                "widgets": [
+                  {
+                    "id": "text66b74b86c5146",
+                    "type": "text",
+                    "properties": {
+                      "html": "10% decrease"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74b86c50fe",
+              "text": "8% increase",
+              "widgets": [
+                {
+                  "id": "text66b74b86c5105",
+                  "type": "text",
+                  "properties": {
+                    "html": "8% increase"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br>Let the initial population be 100. <br>After a 20% increase: Population <br>= 100 + 100 * 0.20 = 120 <br>After a 10% decrease: Population <br>= 120 - 120 * 0.10 = 108 <br>Net percentage change = ((Final Population - Initial Population) / Initial Population) * 100% <br>Net percentage change <br>= ((108 - 100) / 100) * 100% = 8% increase <br>Therefore, the net percentage change in the population over the two years is an 8% increase. <br>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74b86c5164",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "A student scored 72% in the first exam and 80% in the second exam. If the exams have equal weightage, what is the student's overall percentage?",
+            "widgets": [
+              {
+                "id": "text66b74b86c5169",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">A student scored 72% in the first exam and 80% in the second exam. If the exams have equal weightage, what is the student's overall percentage?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74b86c51a6",
+              "description": {
+                "text": "76%",
+                "widgets": [
+                  {
+                    "id": "text66b74b86c51ae",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>76%<strong></strong></span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b86c51bd",
+              "description": {
+                "text": "77%",
+                "widgets": [
+                  {
+                    "id": "text66b74b86c51c3",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>77%</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b86c51d2",
+              "description": {
+                "text": "78%",
+                "widgets": [
+                  {
+                    "id": "text66b74b86c51d9",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>78%</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b86c51e8",
+              "description": {
+                "text": "79%",
+                "widgets": [
+                  {
+                    "id": "text66b74b86c51ee",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>79%</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74b86c51a6",
+              "text": "76%",
+              "widgets": [
+                {
+                  "id": "text66b74b86c51ae",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>76%<strong></strong></span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br>Let the total marks in each exam be 100 for simplicity. <br>The student's overall percentage = (72 + 80) / 2 = 76 \nTherefore, the student's overall percentage is 76%.<br>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74b86c520d",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "In a certain city, the population increased by 20% over the past decade. If the current population is 500,000 what was the population a decade ago?",
+            "widgets": [
+              {
+                "id": "text66b74b86c5211",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">In a certain city, the population increased by 20% over the past decade. If the current population is 500,000 what was the population a decade ago?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74b86c5266",
+              "description": {
+                "text": "416,000",
+                "widgets": [
+                  {
+                    "id": "text66b74b86c526d",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>416,000</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b86c527c",
+              "description": {
+                "text": "416,667",
+                "widgets": [
+                  {
+                    "id": "text66b74b86c5283",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>416,667</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b86c5292",
+              "description": {
+                "text": "420,000",
+                "widgets": [
+                  {
+                    "id": "text66b74b86c5298",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>420,000</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b86c52a7",
+              "description": {
+                "text": "422,000",
+                "widgets": [
+                  {
+                    "id": "text66b74b86c52ae",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>422,000</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74b86c527c",
+              "text": "416,667",
+              "widgets": [
+                {
+                  "id": "text66b74b86c5283",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>416,667</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br>Given:\n<br>• Current population: 500,000\n<br>• Population increased by 20% over the past decade\nWe can use the formula for calculating percentage increase:\n<br>New Population=Old Population× (1+Percentage Increase) <br>Let p be the population a decade ago. So, the equation becomes: \n500,000=p×(1+0.20)\np=500,000/1.20 <br>p≈416,666.67<br>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74b86c52cc",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "If a company's revenue increased from $500,000 to $650,000 what is the percentage increase in revenue?",
+            "widgets": [
+              {
+                "id": "text66b74b86c52d5",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">If a company's revenue increased from $500,000 to $650,000 what is the percentage increase in revenue?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74b86c5313",
+              "description": {
+                "text": "20%",
+                "widgets": [
+                  {
+                    "id": "text66b74b86c531a",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>20%</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b86c5329",
+              "description": {
+                "text": "25%",
+                "widgets": [
+                  {
+                    "id": "text66b74b86c5330",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>25%</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b86c533f",
+              "description": {
+                "text": "30%",
+                "widgets": [
+                  {
+                    "id": "text66b74b86c5346",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>30%</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b86c5355",
+              "description": {
+                "text": "35%",
+                "widgets": [
+                  {
+                    "id": "text66b74b86c535b",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>35%</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74b86c533f",
+              "text": "30%",
+              "widgets": [
+                {
+                  "id": "text66b74b86c5346",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>30%</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br>Initial revenue = $500,000 <br>Final revenue = $650,000 <br>Increase in revenue <br>= $650,000 - $500,000 = $150,000 <br>Percentage increase = (Increase in revenue / Initial revenue) * 100% <br>Percentage increase = ($150,000 / $500,000) * 100% = 30% <br>Therefore, the percentage increase in revenue is 30%.<br>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        }
+      ]
+    }
+  ],
+  "submitted": true,
+  "updated": true,
+  "retryCount": 5,
+  "inlineFeedback": [],
+  "errors": [],
+  "success": true
+}

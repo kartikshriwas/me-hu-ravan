@@ -1,0 +1,3070 @@
+{
+  "submission": {
+    "anon_id": null,
+    "model": "assessment-submission",
+    "courseTitleId": "aptitude-teacher2",
+    "object_id": "66b74b957f809db0100951ab",
+    "assessmentId": "66b74b957f809db0100951aa",
+    "snapshotId": "66d8b122e2d7d3a90b019bf6",
+    "questions": {
+      "section66b74b952e452": [
+        "mc66b74b952e45a",
+        "mc66b74b952e50e",
+        "mc66b74b952e5cc",
+        "mc66b74b952e678",
+        "mc66b74b952e724",
+        "mc66b74b952e7cd",
+        "mc66b74b952e878",
+        "mc66b74b952e926",
+        "mc66b74b952e9db",
+        "mc66b74b952ea84"
+      ]
+    },
+    "certificateAnswers": [],
+    "certificateId": null,
+    "questionData": {
+      "mc66b74b952e45a": {
+        "deliveredOnTimestamp": 1786440508.97007,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74b952e50e": {
+        "deliveredOnTimestamp": 1786440508.97009,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74b952e5cc": {
+        "deliveredOnTimestamp": 1786440508.970103,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74b952e678": {
+        "deliveredOnTimestamp": 1786440508.970113,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74b952e724": {
+        "deliveredOnTimestamp": 1786440508.970123,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74b952e7cd": {
+        "deliveredOnTimestamp": 1786440508.970133,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74b952e878": {
+        "deliveredOnTimestamp": 1786440508.970143,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74b952e926": {
+        "deliveredOnTimestamp": 1786440508.970153,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74b952e9db": {
+        "deliveredOnTimestamp": 1786440508.970162,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74b952ea84": {
+        "deliveredOnTimestamp": 1786440508.970172,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      }
+    },
+    "answers": [
+      {
+        "blockId": "mc66b74b952e45a",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74b952e50e",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74b952e5cc",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74b952e678",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74b952e724",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74b952e7cd",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74b952e878",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74b952e926",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74b952e9db",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74b952ea84",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      }
+    ],
+    "submittedTimestamp": 1786440509.186819,
+    "status": "submitted",
+    "grading_status": "grading_status_graded",
+    "access": "public",
+    "actual_score": null,
+    "score": {
+      "maxScore": 10,
+      "value": 0,
+      "pass": false,
+      "passGrade": 50,
+      "points": 0
+    },
+    "source": {
+      "type": "unit"
+    },
+    "isDefining": true,
+    "isAdminAutoGradedSubmission": null,
+    "listOfNonConsentedBlocks": [],
+    "created": 1786440508.975777,
+    "modified": 1786440509.320968,
+    "id": "6a7aeb3c8d3898c50907d695",
+    "passed": false
+  },
+  "assessment": {
+    "title": "Practice Test Paper (Medium)",
+    "access": "public",
+    "type": "assessment",
+    "model": "assessmentSnapshot",
+    "description": "Intermediate practice test paper containing 10 assessment questions covering Ratios & Proportions, Speed, Distance & Time.",
+    "isTimed": false,
+    "timerFor": "assessmentTimed",
+    "onTimerExpiration": "autoSubmit",
+    "assessmentTimeLimitInSeconds": 600,
+    "questionTimeLimitInSeconds": 60,
+    "standaloneShareEnabled": null,
+    "customUrl": null,
+    "usesCustomUrl": null,
+    "allowAnonymous": true,
+    "randomizeQuestionOptions": false,
+    "disallowPartialSubmissions": false,
+    "submissionDueDateEnabled": false,
+    "submissionDueDate": 1626257823,
+    "makeFeedbackAvailableAfterDateEnabled": false,
+    "makeFeedbackAvailableAfterDate": 0,
+    "customStylesEnabled": true,
+    "customStyles": {
+      "assessmentPage": {
+        "background": {
+          "type": "color",
+          "colorData": {
+            "code": "",
+            "class": "lw-body-bg"
+          }
+        },
+        "dividers": {
+          "top": {
+            "orientation": "top",
+            "divider": "none"
+          },
+          "bottom": {
+            "orientation": "bottom",
+            "divider": "none"
+          }
+        }
+      },
+      "option": {
+        "radioEffect": "scribble",
+        "checkboxEffect": "scribble",
+        "size": "small"
+      },
+      "assessment": {
+        "transition": "none",
+        "background": {
+          "type": "color",
+          "colorData": {
+            "code": "",
+            "class": ""
+          }
+        },
+        "width": "normal",
+        "timerTemplate": "rectangle"
+      },
+      "linearRating": {
+        "labels": {
+          "size": "small"
+        }
+      },
+      "question": {
+        "description": {
+          "background": {
+            "type": "color",
+            "colorData": {
+              "code": "",
+              "class": ""
+            }
+          },
+          "type": "p",
+          "size": "small"
+        },
+        "answers": {
+          "background": {
+            "type": "color",
+            "colorData": {
+              "code": "",
+              "class": ""
+            }
+          }
+        },
+        "requiredAsterisk": {
+          "colorData": {
+            "code": "#ff0000",
+            "class": ""
+          }
+        },
+        "errorMessages": {
+          "size": "verySmall",
+          "colorData": {
+            "code": "#ff0000",
+            "class": ""
+          }
+        }
+      },
+      "input": {
+        "size": "small",
+        "type": "solidDark"
+      },
+      "textarea": {
+        "size": "small",
+        "type": "solidDark"
+      },
+      "dropdown": {
+        "size": "small",
+        "type": "solidDark"
+      }
+    },
+    "submissionMode": "all",
+    "startingDate": 1626765704,
+    "startingDateEnabled": false,
+    "showOnlyFailedQuestionsOnRetry": false,
+    "retryEnabled": true,
+    "retryOnFailOnly": false,
+    "gradingMethod": null,
+    "maxTries": null,
+    "onlyWrongOnRetake": null,
+    "isAmendable": false,
+    "feedbackShowOnScreen": true,
+    "feedbackDownloadPDF": false,
+    "feedbackShowInline": null,
+    "feedbackQuestionList": "all-questions",
+    "feedbackShowQuestionScore": true,
+    "feedbackShowFeedback": true,
+    "feedbackShowNumbering": false,
+    "feedbackShowSectionTitles": false,
+    "feedbackShowUserAnswers": true,
+    "feedbackShowCorrectAnswers": true,
+    "feedbackShowAnswerCorrectness": true,
+    "displayInlineFeedbackEnabled": null,
+    "displayBackButtonWhenSubmissionPerBlock": null,
+    "feedbackShowSectionResultSummary": false,
+    "askConfirmationBeforeSubmit": true,
+    "hasCustomConfirmationBeforeSubmitText": false,
+    "customConfirmationBeforeSubmitText": "Are you sure you want to submit the questionnaire?",
+    "customConfirmationBeforeSubmitTexts": {
+      "title": "Submit Assessment?",
+      "baseConfirmationMessage": "Are you sure you want to submit the questionnaire?",
+      "unansweredNotice": "You have not answered {X} questions."
+    },
+    "amendResubmissionMinutes": 30,
+    "passingGrade": null,
+    "navigationMode": "per-block",
+    "conditionalBlocks": {
+      "introContent": {
+        "id": "content66b74b952e398",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66b74b952e3a7",
+              "type": "text",
+              "insertedAsWidget": true,
+              "properties": {
+                "html": "Trains PAPER LEVEL-2",
+                "alignment": "center",
+                "customStyle": true,
+                "type": "h2",
+                "size": "normal"
+              }
+            },
+            {
+              "id": "text66b74b952e3ba",
+              "type": "text",
+              "properties": {
+                "html": "Self-assess your knowledge. Express yourself and get feedback from our instructors.",
+                "customStyle": true,
+                "alignment": "center"
+              }
+            },
+            {
+              "id": "spacer66b74b952e3c5",
+              "type": "spacer",
+              "properties": {
+                "height": 20,
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            },
+            {
+              "id": "button66b74b952e3d2",
+              "type": "button",
+              "properties": {
+                "buttonLabel": "<span>Ready to start</span>",
+                "buttonSize": "normal",
+                "buttonType": "solidBrand",
+                "alignment": "center",
+                "linkData": {
+                  "linkType": "goToFirst"
+                },
+                "iconColorData": {
+                  "code": "",
+                  "class": ""
+                },
+                "iconDisplay": false,
+                "iconSize": 26,
+                "iconClassName": " fas fa-angle-right",
+                "iconPosition": "right"
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "variables": {
+            "conditionalBlocks_introContent_blockData_widgets_0": [],
+            "conditionalBlocks_introContent_blockData_widgets_1": []
+          }
+        }
+      },
+      "submissionStartingDate": {
+        "id": "content66b74b952e3f6",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66b74b952e3fb",
+              "type": "text",
+              "properties": {
+                "html": "Sorry but this assessment hasn't started yet."
+              }
+            },
+            {
+              "id": "date66b74b952e403",
+              "type": "date",
+              "properties": {
+                "value": ""
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "displayConditions": ["startingDate"]
+        }
+      },
+      "submissionDueDate": {
+        "id": "content66b74b952e40f",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66b74b952e414",
+              "type": "text",
+              "properties": {
+                "html": "Sorry but this assessment date is due."
+              }
+            },
+            {
+              "id": "date66b74b952e41b",
+              "type": "date",
+              "properties": {
+                "value": ""
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "displayConditions": ["dateIsDue"]
+        }
+      },
+      "outroContent": {
+        "id": "content66b74b952e428",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "userResults66b74b952e42d",
+              "type": "userResults",
+              "properties": {
+                "layout": "template2",
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            },
+            {
+              "id": "feedback66b74b952e43a",
+              "type": "feedback",
+              "properties": []
+            },
+            {
+              "id": "outroActions66b74b952e441",
+              "type": "outroActions",
+              "properties": {
+                "layout": "",
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true
+        }
+      }
+    },
+    "systemSections": null,
+    "sections": [
+      {
+        "id": "section66b74b952e452",
+        "title": "",
+        "type": "section",
+        "navigationMode": "per-block",
+        "blocks": [
+          {
+            "id": "mc66b74b952e45a",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74b952e45f",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">Kandari express leaves its starting point at 8:00 AM and reaches an intermediate halt at 12:00 PM. A Minister starts at 8:30 AM from the halt of Kandari express with his convoy and reaches the starting point of Kandari express at 12:00 PM. At what time both will meet in their journey?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74b952e471",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74b952e478",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74b952e480",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74b952e49f",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b952e4a6",
+                        "type": "text",
+                        "properties": {
+                          "html": "9:56 AM"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b952e4c0",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b952e4c7",
+                        "type": "text",
+                        "properties": {
+                          "html": "10:13 AM"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b952e4d6",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b952e4dc",
+                        "type": "text",
+                        "properties": {
+                          "html": "10:08 AM"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b952e4eb",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b952e4f1",
+                        "type": "text",
+                        "properties": {
+                          "html": "Data Insufficient"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74b952e50e",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74b952e513",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">A train travels a distance of 400 km at a constant speed. If the speed is raised by 10 km/hr, the distance will be completed in less than 2 hours. What is the standard time (in hours) to complete the trip?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74b952e525",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74b952e52b",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74b952e533",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74b952e552",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b952e558",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>10</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b952e567",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b952e56e",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>12</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b952e57c",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b952e583",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>8</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b952e592",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b952e599",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>11</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_1_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_1": [],
+                "sections_0_blocks_1_blockData_description_widgets_0": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74b952e5cc",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74b952e5d2",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">Two trains with a difference in length of 170 m pass each other in 16 seconds when they move in opposite directions but pass each other in 36 seconds when they move in the same direction. The slower train is moving at a speed of 35 km/h. What is the speed of the faster train?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74b952e5e3",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74b952e5ea",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74b952e5f2",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74b952e611",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b952e618",
+                        "type": "text",
+                        "properties": {
+                          "html": "90 km/h"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b952e627",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b952e62e",
+                        "type": "text",
+                        "properties": {
+                          "html": "80 km/h"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b952e63d",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b952e644",
+                        "type": "text",
+                        "properties": {
+                          "html": "91 km/h"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b952e652",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b952e659",
+                        "type": "text",
+                        "properties": {
+                          "html": "95 km/h"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_2_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_2": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74b952e678",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74b952e67d",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">Two Premium trains M and M having length 380m and 220 m respectively. M takes 20 seconds to cross the train N, when travelling in the same direction. M and N take 12 seconds to overtake each other in opposite direction. What is the speed of train M (in km/h)?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74b952e68e",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74b952e695",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74b952e69c",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74b952e6bc",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b952e6c3",
+                        "type": "text",
+                        "properties": {
+                          "html": "40 km/h"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b952e6d2",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b952e6d9",
+                        "type": "text",
+                        "properties": {
+                          "html": "144 km/h"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b952e6e7",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b952e6ee",
+                        "type": "text",
+                        "properties": {
+                          "html": "45 km/h"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b952e6fd",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b952e703",
+                        "type": "text",
+                        "properties": {
+                          "html": "148 km/h"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3": [],
+                "sections_0_blocks_3_blockData_description_widgets_0": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74b952e724",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74b952e729",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">Speed of Kashmir express and Kanyakumari express is 46.8 km/h and 61.2 km/h, respectively. Length of Kashmir express is 40% less than Kanyakumari express. When they running in opposite direction, they can cross each other in 12 seconds. What will be the required time for Kanyakumari express to travel a 336m long bridge (in seconds)?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74b952e73b",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74b952e741",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74b952e749",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74b952e767",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b952e76e",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>27</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b952e77d",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b952e784",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>36</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b952e793",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b952e79a",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>39</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b952e7a8",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b952e7af",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>33</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_4_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74b952e7cd",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74b952e7d2",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">Train P and Q started at the same time and moves towards each other, while train p is moving at a speed of 80 km/h and train Q is moving at a speed of 95 km/h. at the meeting spot, it is observed that one train had completed 180 km more than the other train. What would be the time taken by the slower train to complete this journey, if the slower train increases its speed by 5%?&nbsp;</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74b952e7e4",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74b952e7ea",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74b952e7f1",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74b952e810",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b952e817",
+                        "type": "text",
+                        "properties": {
+                          "html": "25 hr"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b952e826",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b952e82d",
+                        "type": "text",
+                        "properties": {
+                          "html": "24 hr"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b952e83c",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b952e843",
+                        "type": "text",
+                        "properties": {
+                          "html": "28 hr"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b952e851",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b952e858",
+                        "type": "text",
+                        "properties": {
+                          "html": "30 hr"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_5_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5": [],
+                "sections_0_blocks_5_blockData_description_widgets_0": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74b952e878",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74b952e87d",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">A local train is travelling at a speed of s km/hr. It crossed a salesman walking on the platform at 6 km/hr in the same direction in 20 seconds. It also crossed the complete platform of length 300 m in 30 seconds. Then s is –&nbsp;</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74b952e88e",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74b952e895",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74b952e8a1",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74b952e8c0",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b952e8c7",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>96</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b952e8d6",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b952e8dd",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>104</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b952e8ec",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b952e8f2",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>97</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b952e901",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b952e908",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>89</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_6_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_6": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74b952e926",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74b952e92b",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">A passenger was travelling in a train at a speed of 50 km/h. a goods train, which 3 times longer than the passenger train, crossed the passenger in opposite direction in 15 seconds. If the goods train was moving at 58 km/h, then what was the length of the passenger train (in metres)?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74b952e93c",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74b952e942",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74b952e94a",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74b952e968",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b952e96f",
+                        "type": "text",
+                        "properties": {
+                          "html": "450 m"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b952e97e",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b952e984",
+                        "type": "text",
+                        "properties": {
+                          "html": "350 m"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b952e993",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b952e99a",
+                        "type": "text",
+                        "properties": {
+                          "html": "250 m"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b952e9b4",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b952e9bb",
+                        "type": "text",
+                        "properties": {
+                          "html": "150 m"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_7_blockData_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_7": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74b952e9db",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74b952e9df",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">The ratio of speed of two trains X and Y is 9:14 and they both running in the same direction. If Y crosses the X in 85 seconds and Shabnam, who is in train Y, observes that she overtakes the train X in 35 seconds. If total length of both the trains is 1326 m, then what is the difference in length of them?&nbsp;</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74b952e9f1",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74b952e9f8",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74b952e9ff",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74b952ea1d",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b952ea24",
+                        "type": "text",
+                        "properties": {
+                          "html": "224 m"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b952ea33",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b952ea39",
+                        "type": "text",
+                        "properties": {
+                          "html": "234 m"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b952ea48",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b952ea4f",
+                        "type": "text",
+                        "properties": {
+                          "html": "780 m"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b952ea5d",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b952ea64",
+                        "type": "text",
+                        "properties": {
+                          "html": "254 m"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_8_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_8": [],
+                "sections_0_blocks_8_blockData_description_widgets_0": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74b952ea84",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74b952ea89",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">Kalyani Local crossed a pole in 29 seconds and Krishnanagar Local crossed the same pole in 13 seconds. When they move in opposite direction, they can overtake each other in 19 seconds. If the speed of the faster train is 76.5 km/h, then what is the difference in speed of them?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74b952ea99",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74b952eaa0",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74b952eaa7",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74b952eac6",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b952eacd",
+                        "type": "text",
+                        "properties": {
+                          "html": "7.5 m/sec"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b952eadb",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b952eae2",
+                        "type": "text",
+                        "properties": {
+                          "html": "9.5 m/sec"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b952eaf0",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b952eaf7",
+                        "type": "text",
+                        "properties": {
+                          "html": "8.5 m/sec"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b952eb06",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b952eb0c",
+                        "type": "text",
+                        "properties": {
+                          "html": "10.5 m/sec"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_9_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_9": []
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "availabilityStatus": null,
+    "autoNavigationEnabled": false,
+    "displayBackButtonWhenNavigationPerBlock": true,
+    "saveAndResumeLaterEnabled": null,
+    "tagsAddedOnCompletion": [],
+    "tagsAddedOnPass": [],
+    "sendAnonymousSubmissionsToEmailLeads": false,
+    "afterSubmitActionEnabled": null,
+    "afterSubmitActionProperties": null,
+    "showWizardOnNextEdit": false,
+    "revisitAfterSubmissionAction": null,
+    "navigationTemplate": "HorizontalSpacedBetweenNavigationTemplate",
+    "learnerSearchBarEnabled": true,
+    "learnerUnansweredQuestionsEnabled": true,
+    "learnerFavouriteQuestionEnabled": true,
+    "learnerCompletionProgressEnabled": true,
+    "learnerShowIndexOfQuestionsEnabled": false,
+    "learnerTimeNotificationsEnabled": false,
+    "learnerAllowInterruptionsEnabled": true,
+    "learnerAllowInterruptionsTimeoutInMinutes": 30,
+    "learnerReclaimTryOnInterruptionTimeoutEnabled": false,
+    "learnerAskBeforeContinueToSaved": true,
+    "learnerAutoSaveEnabled": null,
+    "spellcheckDisabled": null,
+    "showPartialScoreOnSubmission": true,
+    "deliverableQuestionsSubsetType": "all",
+    "questionRandomizationType": "none",
+    "serveQuestionsBasedOnPreviousSubmission": null,
+    "scoringDisabled": false,
+    "isSelfAssessment": false,
+    "useDefaultCertificateTemplate": null,
+    "certificateTemplate": null,
+    "certificateSocialShare": null,
+    "migrationData": null,
+    "useAssessmentPassingGradeForOpenEndedCorrectness": true,
+    "openEndedCorrectnessPassingGrade": null,
+    "showScorePercentage": null,
+    "showScorePoints": null,
+    "showScoreCorrectAnswers": null,
+    "editorBehaviorSettings": null,
+    "manualReviewEnabled": null,
+    "resultsSummary": {
+      "enabled": true,
+      "showStatusIcon": true,
+      "showStatusText": true,
+      "showScorePercentage": true,
+      "showScorePoints": true,
+      "showScoreCorrectAnswers": false,
+      "showTimeTakenToComplete": true,
+      "showDateSubmitted": true,
+      "showAttemptCount": true
+    },
+    "meta": null,
+    "submissionsCount": 596,
+    "fromMarketplace": null,
+    "aiFeedbackEnabled": null,
+    "numberOfFeedbackQuestions": null,
+    "created": 1723288469.649243,
+    "modified": 1725477154.539763,
+    "contentHash": "450194665352cc05e6567c86c1b16cd51b4ca07ca0e81c27829de61a91d8f8f0",
+    "id": "66b74b957f809db0100951aa",
+    "objectType": "assessment",
+    "isEditBlockedDueToSync": false,
+    "variables": {
+      "submission": {
+        "self": {
+          "score": 0,
+          "points": 0,
+          "total_points": 10,
+          "correct_answers": 0,
+          "total_questions": 10,
+          "time_spent": "00:00:01",
+          "date_submitted": "11/08/26",
+          "attempt_count": 4,
+          "max_tries": null,
+          "pass_grade": 50,
+          "time_spent_seconds": 1,
+          "raw_start_date": 1786440508.975777
+        }
+      },
+      "school": {
+        "name": "Apna College",
+        "url": "www.apnacollege.in",
+        "description": "The most loved coding community of India ❤️"
+      },
+      "user": {
+        "username": "ram",
+        "email": "p4542639@gmail.com",
+        "cf_phonenumber": "7666690798"
+      }
+    }
+  },
+  "reclaimedTry": false,
+  "feedback": [
+    {
+      "title": "",
+      "id": "section66b74b952e452",
+      "blocks": [
+        {
+          "id": "mc66b74b952e45a",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Kandari express leaves its starting point at 8:00 AM and reaches an intermediate halt at 12:00 PM. A Minister starts at 8:30 AM from the halt of Kandari express with his convoy and reaches the starting point of Kandari express at 12:00 PM. At what time both will meet in their journey?",
+            "widgets": [
+              {
+                "id": "text66b74b952e45f",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">Kandari express leaves its starting point at 8:00 AM and reaches an intermediate halt at 12:00 PM. A Minister starts at 8:30 AM from the halt of Kandari express with his convoy and reaches the starting point of Kandari express at 12:00 PM. At what time both will meet in their journey?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74b952e49f",
+              "description": {
+                "text": "9:56 AM",
+                "widgets": [
+                  {
+                    "id": "text66b74b952e4a6",
+                    "type": "text",
+                    "properties": {
+                      "html": "9:56 AM"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b952e4c0",
+              "description": {
+                "text": "10:13 AM",
+                "widgets": [
+                  {
+                    "id": "text66b74b952e4c7",
+                    "type": "text",
+                    "properties": {
+                      "html": "10:13 AM"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b952e4d6",
+              "description": {
+                "text": "10:08 AM",
+                "widgets": [
+                  {
+                    "id": "text66b74b952e4dc",
+                    "type": "text",
+                    "properties": {
+                      "html": "10:08 AM"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b952e4eb",
+              "description": {
+                "text": "Data Insufficient",
+                "widgets": [
+                  {
+                    "id": "text66b74b952e4f1",
+                    "type": "text",
+                    "properties": {
+                      "html": "Data Insufficient"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74b952e4d6",
+              "text": "10:08 AM",
+              "widgets": [
+                {
+                  "id": "text66b74b952e4dc",
+                  "type": "text",
+                  "properties": {
+                    "html": "10:08 AM"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/e6f6e0a8d8935e646dc79a374edb5353.jpg\"></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74b952e50e",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "A train travels a distance of 400 km at a constant speed. If the speed is raised by 10 km/hr, the distance will be completed in less than 2 hours. What is the standard time (in hours) to complete the trip?",
+            "widgets": [
+              {
+                "id": "text66b74b952e513",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">A train travels a distance of 400 km at a constant speed. If the speed is raised by 10 km/hr, the distance will be completed in less than 2 hours. What is the standard time (in hours) to complete the trip?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74b952e552",
+              "description": {
+                "text": "10",
+                "widgets": [
+                  {
+                    "id": "text66b74b952e558",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>10</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b952e567",
+              "description": {
+                "text": "12",
+                "widgets": [
+                  {
+                    "id": "text66b74b952e56e",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>12</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b952e57c",
+              "description": {
+                "text": "8",
+                "widgets": [
+                  {
+                    "id": "text66b74b952e583",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>8</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b952e592",
+              "description": {
+                "text": "11",
+                "widgets": [
+                  {
+                    "id": "text66b74b952e599",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>11</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74b952e552",
+              "text": "10",
+              "widgets": [
+                {
+                  "id": "text66b74b952e558",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>10</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>Let, the speed of the train is T km/hr\n<br>So, 400/T\n−\n400/(T+10)\n= 2\n<br>Solving the equation, we got T = 40km/hr\n<br>Therefore, standard time to cover the distance is = 400/40\n= 10 hr</p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74b952e5cc",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Two trains with a difference in length of 170 m pass each other in 16 seconds when they move in opposite directions but pass each other in 36 seconds when they move in the same direction. The slower train is moving at a speed of 35 km/h. What is the speed of the faster train?",
+            "widgets": [
+              {
+                "id": "text66b74b952e5d2",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">Two trains with a difference in length of 170 m pass each other in 16 seconds when they move in opposite directions but pass each other in 36 seconds when they move in the same direction. The slower train is moving at a speed of 35 km/h. What is the speed of the faster train?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74b952e611",
+              "description": {
+                "text": "90 km/h",
+                "widgets": [
+                  {
+                    "id": "text66b74b952e618",
+                    "type": "text",
+                    "properties": {
+                      "html": "90 km/h"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b952e627",
+              "description": {
+                "text": "80 km/h",
+                "widgets": [
+                  {
+                    "id": "text66b74b952e62e",
+                    "type": "text",
+                    "properties": {
+                      "html": "80 km/h"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b952e63d",
+              "description": {
+                "text": "91 km/h",
+                "widgets": [
+                  {
+                    "id": "text66b74b952e644",
+                    "type": "text",
+                    "properties": {
+                      "html": "91 km/h"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b952e652",
+              "description": {
+                "text": "95 km/h",
+                "widgets": [
+                  {
+                    "id": "text66b74b952e659",
+                    "type": "text",
+                    "properties": {
+                      "html": "95 km/h"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74b952e63d",
+              "text": "91 km/h",
+              "widgets": [
+                {
+                  "id": "text66b74b952e644",
+                  "type": "text",
+                  "properties": {
+                    "html": "91 km/h"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/e60229efe33a7b1799a2ea70f57d7a66.jpg\"></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74b952e678",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Two Premium trains M and M having length 380m and 220 m respectively. M takes 20 seconds to cross the train N, when travelling in the same direction. M and N take 12 seconds to overtake each other in opposite direction. What is the speed of train M (in km/h)?",
+            "widgets": [
+              {
+                "id": "text66b74b952e67d",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">Two Premium trains M and M having length 380m and 220 m respectively. M takes 20 seconds to cross the train N, when travelling in the same direction. M and N take 12 seconds to overtake each other in opposite direction. What is the speed of train M (in km/h)?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74b952e6bc",
+              "description": {
+                "text": "40 km/h",
+                "widgets": [
+                  {
+                    "id": "text66b74b952e6c3",
+                    "type": "text",
+                    "properties": {
+                      "html": "40 km/h"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b952e6d2",
+              "description": {
+                "text": "144 km/h",
+                "widgets": [
+                  {
+                    "id": "text66b74b952e6d9",
+                    "type": "text",
+                    "properties": {
+                      "html": "144 km/h"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b952e6e7",
+              "description": {
+                "text": "45 km/h",
+                "widgets": [
+                  {
+                    "id": "text66b74b952e6ee",
+                    "type": "text",
+                    "properties": {
+                      "html": "45 km/h"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b952e6fd",
+              "description": {
+                "text": "148 km/h",
+                "widgets": [
+                  {
+                    "id": "text66b74b952e703",
+                    "type": "text",
+                    "properties": {
+                      "html": "148 km/h"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74b952e6d2",
+              "text": "144 km/h",
+              "widgets": [
+                {
+                  "id": "text66b74b952e6d9",
+                  "type": "text",
+                  "properties": {
+                    "html": "144 km/h"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/0740d18cb74efff3096e3668d560df70.jpg\"></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74b952e724",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Speed of Kashmir express and Kanyakumari express is 46.8 km/h and 61.2 km/h, respectively. Length of Kashmir express is 40% less than Kanyakumari express. When they running in opposite direction, they can cross each other in 12 seconds. What will be the required time for Kanyakumari express to travel a 336m long bridge (in seconds)?",
+            "widgets": [
+              {
+                "id": "text66b74b952e729",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">Speed of Kashmir express and Kanyakumari express is 46.8 km/h and 61.2 km/h, respectively. Length of Kashmir express is 40% less than Kanyakumari express. When they running in opposite direction, they can cross each other in 12 seconds. What will be the required time for Kanyakumari express to travel a 336m long bridge (in seconds)?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74b952e767",
+              "description": {
+                "text": "27",
+                "widgets": [
+                  {
+                    "id": "text66b74b952e76e",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>27</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b952e77d",
+              "description": {
+                "text": "36",
+                "widgets": [
+                  {
+                    "id": "text66b74b952e784",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>36</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b952e793",
+              "description": {
+                "text": "39",
+                "widgets": [
+                  {
+                    "id": "text66b74b952e79a",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>39</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b952e7a8",
+              "description": {
+                "text": "33",
+                "widgets": [
+                  {
+                    "id": "text66b74b952e7af",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>33</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74b952e7a8",
+              "text": "33",
+              "widgets": [
+                {
+                  "id": "text66b74b952e7af",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>33</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/a41096a6c8dbc672c779cee4680274d4.jpg\"></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74b952e7cd",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Train P and Q started at the same time and moves towards each other, while train p is moving at a speed of 80 km/h and train Q is moving at a speed of 95 km/h. at the meeting spot, it is observed that one train had completed 180 km more than the other train. What would be the time taken by the slower train to complete this journey, if the slower train increases its speed by 5%?",
+            "widgets": [
+              {
+                "id": "text66b74b952e7d2",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">Train P and Q started at the same time and moves towards each other, while train p is moving at a speed of 80 km/h and train Q is moving at a speed of 95 km/h. at the meeting spot, it is observed that one train had completed 180 km more than the other train. What would be the time taken by the slower train to complete this journey, if the slower train increases its speed by 5%?&nbsp;</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74b952e810",
+              "description": {
+                "text": "25 hr",
+                "widgets": [
+                  {
+                    "id": "text66b74b952e817",
+                    "type": "text",
+                    "properties": {
+                      "html": "25 hr"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b952e826",
+              "description": {
+                "text": "24 hr",
+                "widgets": [
+                  {
+                    "id": "text66b74b952e82d",
+                    "type": "text",
+                    "properties": {
+                      "html": "24 hr"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b952e83c",
+              "description": {
+                "text": "28 hr",
+                "widgets": [
+                  {
+                    "id": "text66b74b952e843",
+                    "type": "text",
+                    "properties": {
+                      "html": "28 hr"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b952e851",
+              "description": {
+                "text": "30 hr",
+                "widgets": [
+                  {
+                    "id": "text66b74b952e858",
+                    "type": "text",
+                    "properties": {
+                      "html": "30 hr"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74b952e810",
+              "text": "25 hr",
+              "widgets": [
+                {
+                  "id": "text66b74b952e817",
+                  "type": "text",
+                  "properties": {
+                    "html": "25 hr"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/020302bc0696ae3c084f51cee36c5271.jpg\"></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74b952e878",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "A local train is travelling at a speed of s km/hr. It crossed a salesman walking on the platform at 6 km/hr in the same direction in 20 seconds. It also crossed the complete platform of length 300 m in 30 seconds. Then s is –",
+            "widgets": [
+              {
+                "id": "text66b74b952e87d",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">A local train is travelling at a speed of s km/hr. It crossed a salesman walking on the platform at 6 km/hr in the same direction in 20 seconds. It also crossed the complete platform of length 300 m in 30 seconds. Then s is –&nbsp;</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74b952e8c0",
+              "description": {
+                "text": "96",
+                "widgets": [
+                  {
+                    "id": "text66b74b952e8c7",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>96</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b952e8d6",
+              "description": {
+                "text": "104",
+                "widgets": [
+                  {
+                    "id": "text66b74b952e8dd",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>104</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b952e8ec",
+              "description": {
+                "text": "97",
+                "widgets": [
+                  {
+                    "id": "text66b74b952e8f2",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>97</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b952e901",
+              "description": {
+                "text": "89",
+                "widgets": [
+                  {
+                    "id": "text66b74b952e908",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>89</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74b952e8c0",
+              "text": "96",
+              "widgets": [
+                {
+                  "id": "text66b74b952e8c7",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>96</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/d72851a63cf717c63a88d204a6a5c4f2.jpg\"></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74b952e926",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "A passenger was travelling in a train at a speed of 50 km/h. a goods train, which 3 times longer than the passenger train, crossed the passenger in opposite direction in 15 seconds. If the goods train was moving at 58 km/h, then what was the length of the passenger train (in metres)?",
+            "widgets": [
+              {
+                "id": "text66b74b952e92b",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">A passenger was travelling in a train at a speed of 50 km/h. a goods train, which 3 times longer than the passenger train, crossed the passenger in opposite direction in 15 seconds. If the goods train was moving at 58 km/h, then what was the length of the passenger train (in metres)?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74b952e968",
+              "description": {
+                "text": "450 m",
+                "widgets": [
+                  {
+                    "id": "text66b74b952e96f",
+                    "type": "text",
+                    "properties": {
+                      "html": "450 m"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b952e97e",
+              "description": {
+                "text": "350 m",
+                "widgets": [
+                  {
+                    "id": "text66b74b952e984",
+                    "type": "text",
+                    "properties": {
+                      "html": "350 m"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b952e993",
+              "description": {
+                "text": "250 m",
+                "widgets": [
+                  {
+                    "id": "text66b74b952e99a",
+                    "type": "text",
+                    "properties": {
+                      "html": "250 m"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b952e9b4",
+              "description": {
+                "text": "150 m",
+                "widgets": [
+                  {
+                    "id": "text66b74b952e9bb",
+                    "type": "text",
+                    "properties": {
+                      "html": "150 m"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74b952e9b4",
+              "text": "150 m",
+              "widgets": [
+                {
+                  "id": "text66b74b952e9bb",
+                  "type": "text",
+                  "properties": {
+                    "html": "150 m"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>length of the goods trains = (50+58) ×\n5/18\n× 15 = 450 m\n<br>Therefore, length of the passenger train is = 450/3\n= 150 m</p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74b952e9db",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "The ratio of speed of two trains X and Y is 9:14 and they both running in the same direction. If Y crosses the X in 85 seconds and Shabnam, who is in train Y, observes that she overtakes the train X in 35 seconds. If total length of both the trains is 1326 m, then what is the difference in length of them?",
+            "widgets": [
+              {
+                "id": "text66b74b952e9df",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">The ratio of speed of two trains X and Y is 9:14 and they both running in the same direction. If Y crosses the X in 85 seconds and Shabnam, who is in train Y, observes that she overtakes the train X in 35 seconds. If total length of both the trains is 1326 m, then what is the difference in length of them?&nbsp;</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74b952ea1d",
+              "description": {
+                "text": "224 m",
+                "widgets": [
+                  {
+                    "id": "text66b74b952ea24",
+                    "type": "text",
+                    "properties": {
+                      "html": "224 m"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b952ea33",
+              "description": {
+                "text": "234 m",
+                "widgets": [
+                  {
+                    "id": "text66b74b952ea39",
+                    "type": "text",
+                    "properties": {
+                      "html": "234 m"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b952ea48",
+              "description": {
+                "text": "780 m",
+                "widgets": [
+                  {
+                    "id": "text66b74b952ea4f",
+                    "type": "text",
+                    "properties": {
+                      "html": "780 m"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b952ea5d",
+              "description": {
+                "text": "254 m",
+                "widgets": [
+                  {
+                    "id": "text66b74b952ea64",
+                    "type": "text",
+                    "properties": {
+                      "html": "254 m"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74b952ea33",
+              "text": "234 m",
+              "widgets": [
+                {
+                  "id": "text66b74b952ea39",
+                  "type": "text",
+                  "properties": {
+                    "html": "234 m"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/6db2422282245cca0d8995ccbbe2462b.jpg\"></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74b952ea84",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Kalyani Local crossed a pole in 29 seconds and Krishnanagar Local crossed the same pole in 13 seconds. When they move in opposite direction, they can overtake each other in 19 seconds. If the speed of the faster train is 76.5 km/h, then what is the difference in speed of them?",
+            "widgets": [
+              {
+                "id": "text66b74b952ea89",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">Kalyani Local crossed a pole in 29 seconds and Krishnanagar Local crossed the same pole in 13 seconds. When they move in opposite direction, they can overtake each other in 19 seconds. If the speed of the faster train is 76.5 km/h, then what is the difference in speed of them?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74b952eac6",
+              "description": {
+                "text": "7.5 m/sec",
+                "widgets": [
+                  {
+                    "id": "text66b74b952eacd",
+                    "type": "text",
+                    "properties": {
+                      "html": "7.5 m/sec"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b952eadb",
+              "description": {
+                "text": "9.5 m/sec",
+                "widgets": [
+                  {
+                    "id": "text66b74b952eae2",
+                    "type": "text",
+                    "properties": {
+                      "html": "9.5 m/sec"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b952eaf0",
+              "description": {
+                "text": "8.5 m/sec",
+                "widgets": [
+                  {
+                    "id": "text66b74b952eaf7",
+                    "type": "text",
+                    "properties": {
+                      "html": "8.5 m/sec"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b952eb06",
+              "description": {
+                "text": "10.5 m/sec",
+                "widgets": [
+                  {
+                    "id": "text66b74b952eb0c",
+                    "type": "text",
+                    "properties": {
+                      "html": "10.5 m/sec"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74b952eaf0",
+              "text": "8.5 m/sec",
+              "widgets": [
+                {
+                  "id": "text66b74b952eaf7",
+                  "type": "text",
+                  "properties": {
+                    "html": "8.5 m/sec"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/3d1b3fc849fc3479a14604e9195d861d.jpg\"></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        }
+      ]
+    }
+  ],
+  "submitted": true,
+  "updated": true,
+  "retryCount": 4,
+  "inlineFeedback": [],
+  "errors": [],
+  "success": true
+}

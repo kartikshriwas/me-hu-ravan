@@ -1,0 +1,1786 @@
+{
+  "submission": {
+    "anon_id": null,
+    "model": "assessment-submission",
+    "courseTitleId": "aptitude-teacher2",
+    "object_id": "66b74bb27f809db010095221",
+    "assessmentId": "66b74bb27f809db010095220",
+    "snapshotId": "66c0470d75415eb484051ee5",
+    "questions": {
+      "section66b74bb1d8131": [
+        "mc66b74bb1d8138",
+        "mc66b74bb1d81e5",
+        "mc66b74bb1d829a",
+        "mc66b74bb1d834b",
+        "mc66b74bb1d8404"
+      ]
+    },
+    "certificateAnswers": [],
+    "certificateId": null,
+    "questionData": {
+      "mc66b74bb1d8138": {
+        "deliveredOnTimestamp": 1786440555.030897,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74bb1d81e5": {
+        "deliveredOnTimestamp": 1786440555.030921,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74bb1d829a": {
+        "deliveredOnTimestamp": 1786440555.030934,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74bb1d834b": {
+        "deliveredOnTimestamp": 1786440555.030945,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74bb1d8404": {
+        "deliveredOnTimestamp": 1786440555.030955,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      }
+    },
+    "answers": [
+      {
+        "blockId": "mc66b74bb1d8138",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74bb1d81e5",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74bb1d829a",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74bb1d834b",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74bb1d8404",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      }
+    ],
+    "submittedTimestamp": 1786440555.256044,
+    "status": "submitted",
+    "grading_status": "grading_status_graded",
+    "access": "public",
+    "actual_score": null,
+    "score": {
+      "maxScore": 5,
+      "value": 0,
+      "pass": false,
+      "passGrade": 50,
+      "points": 0
+    },
+    "source": {
+      "type": "unit"
+    },
+    "isDefining": true,
+    "isAdminAutoGradedSubmission": null,
+    "listOfNonConsentedBlocks": [],
+    "created": 1786440555.035996,
+    "modified": 1786440555.386191,
+    "id": "6a7aeb6bee07780321092f4f",
+    "passed": false
+  },
+  "assessment": {
+    "title": "Practice Test Paper (Easy)",
+    "access": "public",
+    "type": "assessment",
+    "model": "assessmentSnapshot",
+    "description": "Foundational practice test paper featuring 5 fundamental aptitude and reasoning questions for quick revision.",
+    "isTimed": false,
+    "timerFor": "assessmentTimed",
+    "onTimerExpiration": "autoSubmit",
+    "assessmentTimeLimitInSeconds": 600,
+    "questionTimeLimitInSeconds": 60,
+    "standaloneShareEnabled": null,
+    "customUrl": null,
+    "usesCustomUrl": null,
+    "allowAnonymous": true,
+    "randomizeQuestionOptions": false,
+    "disallowPartialSubmissions": false,
+    "submissionDueDateEnabled": false,
+    "submissionDueDate": 1626257823,
+    "makeFeedbackAvailableAfterDateEnabled": false,
+    "makeFeedbackAvailableAfterDate": 0,
+    "customStylesEnabled": true,
+    "customStyles": {
+      "assessmentPage": {
+        "background": {
+          "type": "color",
+          "colorData": {
+            "code": "",
+            "class": "lw-body-bg"
+          }
+        },
+        "dividers": {
+          "top": {
+            "orientation": "top",
+            "divider": "none"
+          },
+          "bottom": {
+            "orientation": "bottom",
+            "divider": "none"
+          }
+        }
+      },
+      "option": {
+        "radioEffect": "scribble",
+        "checkboxEffect": "scribble",
+        "size": "small"
+      },
+      "assessment": {
+        "transition": "none",
+        "background": {
+          "type": "color",
+          "colorData": {
+            "code": "",
+            "class": ""
+          }
+        },
+        "width": "normal",
+        "timerTemplate": "rectangle"
+      },
+      "linearRating": {
+        "labels": {
+          "size": "small"
+        }
+      },
+      "question": {
+        "description": {
+          "background": {
+            "type": "color",
+            "colorData": {
+              "code": "",
+              "class": ""
+            }
+          },
+          "type": "p",
+          "size": "small"
+        },
+        "answers": {
+          "background": {
+            "type": "color",
+            "colorData": {
+              "code": "",
+              "class": ""
+            }
+          }
+        },
+        "requiredAsterisk": {
+          "colorData": {
+            "code": "#ff0000",
+            "class": ""
+          }
+        },
+        "errorMessages": {
+          "size": "verySmall",
+          "colorData": {
+            "code": "#ff0000",
+            "class": ""
+          }
+        }
+      },
+      "input": {
+        "size": "small",
+        "type": "solidDark"
+      },
+      "textarea": {
+        "size": "small",
+        "type": "solidDark"
+      },
+      "dropdown": {
+        "size": "small",
+        "type": "solidDark"
+      }
+    },
+    "submissionMode": "all",
+    "startingDate": 1626765704,
+    "startingDateEnabled": false,
+    "showOnlyFailedQuestionsOnRetry": false,
+    "retryEnabled": true,
+    "retryOnFailOnly": false,
+    "gradingMethod": null,
+    "maxTries": null,
+    "onlyWrongOnRetake": null,
+    "isAmendable": false,
+    "feedbackShowOnScreen": true,
+    "feedbackDownloadPDF": false,
+    "feedbackShowInline": null,
+    "feedbackQuestionList": "all-questions",
+    "feedbackShowQuestionScore": true,
+    "feedbackShowFeedback": true,
+    "feedbackShowNumbering": false,
+    "feedbackShowSectionTitles": false,
+    "feedbackShowUserAnswers": true,
+    "feedbackShowCorrectAnswers": true,
+    "feedbackShowAnswerCorrectness": true,
+    "displayInlineFeedbackEnabled": null,
+    "displayBackButtonWhenSubmissionPerBlock": null,
+    "feedbackShowSectionResultSummary": false,
+    "askConfirmationBeforeSubmit": true,
+    "hasCustomConfirmationBeforeSubmitText": false,
+    "customConfirmationBeforeSubmitText": "Are you sure you want to submit the questionnaire?",
+    "customConfirmationBeforeSubmitTexts": {
+      "title": "Submit Assessment?",
+      "baseConfirmationMessage": "Are you sure you want to submit the questionnaire?",
+      "unansweredNotice": "You have not answered {X} questions."
+    },
+    "amendResubmissionMinutes": 30,
+    "passingGrade": null,
+    "navigationMode": "per-block",
+    "conditionalBlocks": {
+      "introContent": {
+        "id": "content66b74bb1d807c",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66b74bb1d8087",
+              "type": "text",
+              "insertedAsWidget": true,
+              "properties": {
+                "html": "Games and Tournaments PAPER LEVEL-1",
+                "alignment": "center",
+                "customStyle": true,
+                "type": "h2",
+                "size": "normal"
+              }
+            },
+            {
+              "id": "text66b74bb1d80a6",
+              "type": "text",
+              "properties": {
+                "html": "Self-assess your knowledge. Express yourself and get feedback from our instructors.",
+                "customStyle": true,
+                "alignment": "center"
+              }
+            },
+            {
+              "id": "spacer66b74bb1d80b0",
+              "type": "spacer",
+              "properties": {
+                "height": 20,
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            },
+            {
+              "id": "button66b74bb1d80bc",
+              "type": "button",
+              "properties": {
+                "buttonLabel": "<span>Ready to start</span>",
+                "buttonSize": "normal",
+                "buttonType": "solidBrand",
+                "alignment": "center",
+                "linkData": {
+                  "linkType": "goToFirst"
+                },
+                "iconColorData": {
+                  "code": "",
+                  "class": ""
+                },
+                "iconDisplay": false,
+                "iconSize": 26,
+                "iconClassName": " fas fa-angle-right",
+                "iconPosition": "right"
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "variables": {
+            "conditionalBlocks_introContent_blockData_widgets_0": [],
+            "conditionalBlocks_introContent_blockData_widgets_1": []
+          }
+        }
+      },
+      "submissionStartingDate": {
+        "id": "content66b74bb1d80dd",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66b74bb1d80e2",
+              "type": "text",
+              "properties": {
+                "html": "Sorry but this assessment hasn't started yet."
+              }
+            },
+            {
+              "id": "date66b74bb1d80e8",
+              "type": "date",
+              "properties": {
+                "value": ""
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "displayConditions": ["startingDate"]
+        }
+      },
+      "submissionDueDate": {
+        "id": "content66b74bb1d80f4",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66b74bb1d80f8",
+              "type": "text",
+              "properties": {
+                "html": "Sorry but this assessment date is due."
+              }
+            },
+            {
+              "id": "date66b74bb1d80ff",
+              "type": "date",
+              "properties": {
+                "value": ""
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "displayConditions": ["dateIsDue"]
+        }
+      },
+      "outroContent": {
+        "id": "content66b74bb1d810a",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "userResults66b74bb1d810f",
+              "type": "userResults",
+              "properties": {
+                "layout": "template2",
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            },
+            {
+              "id": "feedback66b74bb1d811b",
+              "type": "feedback",
+              "properties": []
+            },
+            {
+              "id": "outroActions66b74bb1d8121",
+              "type": "outroActions",
+              "properties": {
+                "layout": "",
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true
+        }
+      }
+    },
+    "systemSections": null,
+    "sections": [
+      {
+        "id": "section66b74bb1d8131",
+        "title": "",
+        "type": "section",
+        "navigationMode": "per-block",
+        "blocks": [
+          {
+            "id": "mc66b74bb1d8138",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bb1d813d",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong> \n</p><div style=\"text-align: justify;\">The number of innings played and runs scored by each of the ten batsmen—A, D, G, H, J, K, R, S, and Y—are displayed in the scatter plot which follows. The number of runs a batsman scores per number of innings played is a batman's average.\n</div><div style=\"text-align: justify;\">For instance, the scatter plot's point (10, 150) designates one of the ten batters who played 10 innings and scored 150 runs. Given order of names is also the increasing order of run scorers i.e. Y is the highest scorer, then R is the second highest scorer and so on.</div><div style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/a770dafe2afb9da891182078c1195359.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto;\"></div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">What is the average of the top most run scorer among all?</div>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74bb1d814f",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74bb1d8156",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74bb1d815e",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74bb1d817d",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb1d8184",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>23.8</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb1d8193",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb1d819a",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>15.8</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb1d81a8",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb1d81af",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>16</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb1d81be",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb1d81c5",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>37.5</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_1_blockData_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_description_widgets_1": [],
+                "sections_0_blocks_1_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_description_widgets_0": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74bb1d81e5",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bb1d81ea",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong> \n</p><div style=\"text-align: justify;\">The number of innings played and runs scored by each of the ten batsmen—A, D, G, H, J, K, R, S, and Y—are displayed in the scatter plot which follows. The number of runs a batsman scores per number of innings played is a batman's average.\n</div><div style=\"text-align: justify;\">For instance, the scatter plot's point (10, 150) designates one of the ten batters who played 10 innings and scored 150 runs. Given order of names is also the increasing order of run scorers i.e. Y is the highest scorer, then R is the second highest scorer and so on.</div><div style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/a770dafe2afb9da891182078c1195359.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto;\"></div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">If A becomes the lowest scorer, then what is the average of second lowest scorer then?</div>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74bb1d8204",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74bb1d820b",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74bb1d8212",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74bb1d8231",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb1d8238",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>33.3</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb1d8247",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb1d824e",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>35.7</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb1d825c",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb1d8263",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>15</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb1d8272",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb1d8279",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>16.6</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_1_blockData_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_description_widgets_1": [],
+                "sections_0_blocks_1_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_1": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74bb1d829a",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bb1d829e",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong> \n</p><div style=\"text-align: justify;\">The number of innings played and runs scored by each of the ten batsmen—A, D, G, H, J, K, R, S, and Y—are displayed in the scatter plot which follows. The number of runs a batsman scores per number of innings played is a batman's average.\n</div><div style=\"text-align: justify;\">For instance, the scatter plot's point (10, 150) designates one of the ten batters who played 10 innings and scored 150 runs. Given order of names is also the increasing order of run scorers i.e. Y is the highest scorer, then R is the second highest scorer and so on.</div><div style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/a770dafe2afb9da891182078c1195359.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto;\"></div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">If a batsman scored 66 runs in 8 matches, what will be his position with respect to average of all other batsmen?</div>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74bb1d82af",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74bb1d82b6",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74bb1d82bd",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74bb1d82dc",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb1d82e2",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Last</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb1d82f1",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb1d82f8",
+                        "type": "text",
+                        "properties": {
+                          "html": "Second Last"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb1d8306",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb1d830d",
+                        "type": "text",
+                        "properties": {
+                          "html": "Third from the last"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb1d831c",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb1d8322",
+                        "type": "text",
+                        "properties": {
+                          "html": "Fourth from the last"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_1_blockData_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_description_widgets_1": [],
+                "sections_0_blocks_1_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_2": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74bb1d834b",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bb1d834f",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong> \n</p><div style=\"text-align: justify;\">The number of innings played and runs scored by each of the ten batsmen—A, D, G, H, J, K, R, S, and Y—are displayed in the scatter plot which follows. The number of runs a batsman scores per number of innings played is a batman's average.\n</div><div style=\"text-align: justify;\">For instance, the scatter plot's point (10, 150) designates one of the ten batters who played 10 innings and scored 150 runs. Given order of names is also the increasing order of run scorers i.e. Y is the highest scorer, then R is the second highest scorer and so on.</div><div style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/a770dafe2afb9da891182078c1195359.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto;\"></div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">What is the average of batsman J and Y?</div>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74bb1d8360",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74bb1d8367",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74bb1d836e",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74bb1d8394",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb1d839b",
+                        "type": "text",
+                        "properties": {
+                          "html": "180 : 91"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb1d83aa",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb1d83b1",
+                        "type": "text",
+                        "properties": {
+                          "html": "150 : 77"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb1d83c0",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb1d83c6",
+                        "type": "text",
+                        "properties": {
+                          "html": "91 : 180"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb1d83d5",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb1d83db",
+                        "type": "text",
+                        "properties": {
+                          "html": "77 : 150"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_1_blockData_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_description_widgets_1": [],
+                "sections_0_blocks_1_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74bb1d8404",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bb1d8409",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong> \n</p><div style=\"text-align: justify;\">The number of innings played and runs scored by each of the ten batsmen—A, D, G, H, J, K, R, S, and Y—are displayed in the scatter plot which follows. The number of runs a batsman scores per number of innings played is a batman's average.\n</div><div style=\"text-align: justify;\">For instance, the scatter plot's point (10, 150) designates one of the ten batters who played 10 innings and scored 150 runs. Given order of names is also the increasing order of run scorers i.e. Y is the highest scorer, then R is the second highest scorer and so on.</div><div style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/a770dafe2afb9da891182078c1195359.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto;\"></div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">What is the difference between average of batsman R and batsman D?</div>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74bb1d841b",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74bb1d8421",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74bb1d8428",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74bb1d8447",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb1d844e",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>0</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb1d845c",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb1d8463",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>2</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb1d8472",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb1d8486",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>4</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb1d8494",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb1d849b",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>1</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_1_blockData_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_description_widgets_1": [],
+                "sections_0_blocks_1_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4": []
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "availabilityStatus": null,
+    "autoNavigationEnabled": false,
+    "displayBackButtonWhenNavigationPerBlock": true,
+    "saveAndResumeLaterEnabled": null,
+    "tagsAddedOnCompletion": [],
+    "tagsAddedOnPass": [],
+    "sendAnonymousSubmissionsToEmailLeads": false,
+    "afterSubmitActionEnabled": null,
+    "afterSubmitActionProperties": null,
+    "showWizardOnNextEdit": false,
+    "revisitAfterSubmissionAction": null,
+    "navigationTemplate": "HorizontalSpacedBetweenNavigationTemplate",
+    "learnerSearchBarEnabled": true,
+    "learnerUnansweredQuestionsEnabled": true,
+    "learnerFavouriteQuestionEnabled": true,
+    "learnerCompletionProgressEnabled": true,
+    "learnerShowIndexOfQuestionsEnabled": false,
+    "learnerTimeNotificationsEnabled": false,
+    "learnerAllowInterruptionsEnabled": true,
+    "learnerAllowInterruptionsTimeoutInMinutes": 30,
+    "learnerReclaimTryOnInterruptionTimeoutEnabled": false,
+    "learnerAskBeforeContinueToSaved": true,
+    "learnerAutoSaveEnabled": null,
+    "spellcheckDisabled": null,
+    "showPartialScoreOnSubmission": true,
+    "deliverableQuestionsSubsetType": "all",
+    "questionRandomizationType": "none",
+    "serveQuestionsBasedOnPreviousSubmission": null,
+    "scoringDisabled": false,
+    "isSelfAssessment": false,
+    "useDefaultCertificateTemplate": null,
+    "certificateTemplate": null,
+    "certificateSocialShare": null,
+    "migrationData": null,
+    "useAssessmentPassingGradeForOpenEndedCorrectness": true,
+    "openEndedCorrectnessPassingGrade": null,
+    "showScorePercentage": null,
+    "showScorePoints": null,
+    "showScoreCorrectAnswers": null,
+    "editorBehaviorSettings": null,
+    "manualReviewEnabled": null,
+    "resultsSummary": {
+      "enabled": true,
+      "showStatusIcon": true,
+      "showStatusText": true,
+      "showScorePercentage": true,
+      "showScorePoints": true,
+      "showScoreCorrectAnswers": false,
+      "showTimeTakenToComplete": true,
+      "showDateSubmitted": true,
+      "showAttemptCount": true
+    },
+    "meta": null,
+    "submissionsCount": 1461,
+    "fromMarketplace": null,
+    "aiFeedbackEnabled": null,
+    "numberOfFeedbackQuestions": null,
+    "created": 1723288498.28217,
+    "modified": 1723877133.192616,
+    "contentHash": "ae9a94866975746860ba84eef13c9dac4044cf78c409e79e452a96f0a844e4b1",
+    "id": "66b74bb27f809db010095220",
+    "objectType": "assessment",
+    "isEditBlockedDueToSync": false,
+    "variables": {
+      "submission": {
+        "self": {
+          "score": 0,
+          "points": 0,
+          "total_points": 5,
+          "correct_answers": 0,
+          "total_questions": 5,
+          "time_spent": "00:00:00",
+          "date_submitted": "11/08/26",
+          "attempt_count": 3,
+          "max_tries": null,
+          "pass_grade": 50,
+          "time_spent_seconds": 0,
+          "raw_start_date": 1786440555.035996
+        }
+      },
+      "school": {
+        "name": "Apna College",
+        "url": "www.apnacollege.in",
+        "description": "The most loved coding community of India ❤️"
+      },
+      "user": {
+        "username": "ram",
+        "email": "p4542639@gmail.com",
+        "cf_phonenumber": "7666690798"
+      }
+    }
+  },
+  "reclaimedTry": false,
+  "feedback": [
+    {
+      "title": "",
+      "id": "section66b74bb1d8131",
+      "blocks": [
+        {
+          "id": "mc66b74bb1d8138",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions : The number of innings played and runs scored by each of the ten batsmen—A, D, G, H, J, K, R, S, and Y—are displayed in the scatter plot which follows. The number of runs a batsman scores per number of innings played is a batman's average. For instance, the scatter plot's point (10, 150) designates one of the ten batters who played 10 innings and scored 150 runs. Given order of names is also the increasing order of run scorers i.e. Y is the highest scorer, then R is the second highest scorer and so on.What is the average of the top most run scorer among all?",
+            "widgets": [
+              {
+                "id": "text66b74bb1d813d",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong> \n</p><div style=\"text-align: justify;\">The number of innings played and runs scored by each of the ten batsmen—A, D, G, H, J, K, R, S, and Y—are displayed in the scatter plot which follows. The number of runs a batsman scores per number of innings played is a batman's average.\n</div><div style=\"text-align: justify;\">For instance, the scatter plot's point (10, 150) designates one of the ten batters who played 10 innings and scored 150 runs. Given order of names is also the increasing order of run scorers i.e. Y is the highest scorer, then R is the second highest scorer and so on.</div><div style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/a770dafe2afb9da891182078c1195359.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto;\"></div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">What is the average of the top most run scorer among all?</div>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74bb1d817d",
+              "description": {
+                "text": "23.8",
+                "widgets": [
+                  {
+                    "id": "text66b74bb1d8184",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>23.8</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb1d8193",
+              "description": {
+                "text": "15.8",
+                "widgets": [
+                  {
+                    "id": "text66b74bb1d819a",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>15.8</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb1d81a8",
+              "description": {
+                "text": "16",
+                "widgets": [
+                  {
+                    "id": "text66b74bb1d81af",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>16</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb1d81be",
+              "description": {
+                "text": "37.5",
+                "widgets": [
+                  {
+                    "id": "text66b74bb1d81c5",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>37.5</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74bb1d817d",
+              "text": "23.8",
+              "widgets": [
+                {
+                  "id": "text66b74bb1d8184",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>23.8</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>Average of top most run scorer = 500/21\n=\n23.8 … Option (A)</p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74bb1d81e5",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions : The number of innings played and runs scored by each of the ten batsmen—A, D, G, H, J, K, R, S, and Y—are displayed in the scatter plot which follows. The number of runs a batsman scores per number of innings played is a batman's average. For instance, the scatter plot's point (10, 150) designates one of the ten batters who played 10 innings and scored 150 runs. Given order of names is also the increasing order of run scorers i.e. Y is the highest scorer, then R is the second highest scorer and so on.If A becomes the lowest scorer, then what is the average of second lowest scorer then?",
+            "widgets": [
+              {
+                "id": "text66b74bb1d81ea",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong> \n</p><div style=\"text-align: justify;\">The number of innings played and runs scored by each of the ten batsmen—A, D, G, H, J, K, R, S, and Y—are displayed in the scatter plot which follows. The number of runs a batsman scores per number of innings played is a batman's average.\n</div><div style=\"text-align: justify;\">For instance, the scatter plot's point (10, 150) designates one of the ten batters who played 10 innings and scored 150 runs. Given order of names is also the increasing order of run scorers i.e. Y is the highest scorer, then R is the second highest scorer and so on.</div><div style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/a770dafe2afb9da891182078c1195359.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto;\"></div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">If A becomes the lowest scorer, then what is the average of second lowest scorer then?</div>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74bb1d8231",
+              "description": {
+                "text": "33.3",
+                "widgets": [
+                  {
+                    "id": "text66b74bb1d8238",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>33.3</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb1d8247",
+              "description": {
+                "text": "35.7",
+                "widgets": [
+                  {
+                    "id": "text66b74bb1d824e",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>35.7</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb1d825c",
+              "description": {
+                "text": "15",
+                "widgets": [
+                  {
+                    "id": "text66b74bb1d8263",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>15</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb1d8272",
+              "description": {
+                "text": "16.6",
+                "widgets": [
+                  {
+                    "id": "text66b74bb1d8279",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>16.6</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74bb1d825c",
+              "text": "15",
+              "widgets": [
+                {
+                  "id": "text66b74bb1d8263",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>15</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br>Average of second lowest scorer = 150/10\n=\n15 … Option (C)"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74bb1d829a",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions : The number of innings played and runs scored by each of the ten batsmen—A, D, G, H, J, K, R, S, and Y—are displayed in the scatter plot which follows. The number of runs a batsman scores per number of innings played is a batman's average. For instance, the scatter plot's point (10, 150) designates one of the ten batters who played 10 innings and scored 150 runs. Given order of names is also the increasing order of run scorers i.e. Y is the highest scorer, then R is the second highest scorer and so on.If a batsman scored 66 runs in 8 matches, what will be his position with respect to average of all other batsmen?",
+            "widgets": [
+              {
+                "id": "text66b74bb1d829e",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong> \n</p><div style=\"text-align: justify;\">The number of innings played and runs scored by each of the ten batsmen—A, D, G, H, J, K, R, S, and Y—are displayed in the scatter plot which follows. The number of runs a batsman scores per number of innings played is a batman's average.\n</div><div style=\"text-align: justify;\">For instance, the scatter plot's point (10, 150) designates one of the ten batters who played 10 innings and scored 150 runs. Given order of names is also the increasing order of run scorers i.e. Y is the highest scorer, then R is the second highest scorer and so on.</div><div style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/a770dafe2afb9da891182078c1195359.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto;\"></div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">If a batsman scored 66 runs in 8 matches, what will be his position with respect to average of all other batsmen?</div>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74bb1d82dc",
+              "description": {
+                "text": "Last",
+                "widgets": [
+                  {
+                    "id": "text66b74bb1d82e2",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Last</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb1d82f1",
+              "description": {
+                "text": "Second Last",
+                "widgets": [
+                  {
+                    "id": "text66b74bb1d82f8",
+                    "type": "text",
+                    "properties": {
+                      "html": "Second Last"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb1d8306",
+              "description": {
+                "text": "Third from the last",
+                "widgets": [
+                  {
+                    "id": "text66b74bb1d830d",
+                    "type": "text",
+                    "properties": {
+                      "html": "Third from the last"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb1d831c",
+              "description": {
+                "text": "Fourth from the last",
+                "widgets": [
+                  {
+                    "id": "text66b74bb1d8322",
+                    "type": "text",
+                    "properties": {
+                      "html": "Fourth from the last"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74bb1d82dc",
+              "text": "Last",
+              "widgets": [
+                {
+                  "id": "text66b74bb1d82e2",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>Last</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>Average of the batsman given is the \nquestion = 66/8\n= 8.25\nNow, for the given ten batsmen, no one \nhas average below 8.25\nSo, obviously position of this batsman w.r.t \nto average is last…Option(A)</p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74bb1d834b",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions : The number of innings played and runs scored by each of the ten batsmen—A, D, G, H, J, K, R, S, and Y—are displayed in the scatter plot which follows. The number of runs a batsman scores per number of innings played is a batman's average. For instance, the scatter plot's point (10, 150) designates one of the ten batters who played 10 innings and scored 150 runs. Given order of names is also the increasing order of run scorers i.e. Y is the highest scorer, then R is the second highest scorer and so on.What is the average of batsman J and Y?",
+            "widgets": [
+              {
+                "id": "text66b74bb1d834f",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong> \n</p><div style=\"text-align: justify;\">The number of innings played and runs scored by each of the ten batsmen—A, D, G, H, J, K, R, S, and Y—are displayed in the scatter plot which follows. The number of runs a batsman scores per number of innings played is a batman's average.\n</div><div style=\"text-align: justify;\">For instance, the scatter plot's point (10, 150) designates one of the ten batters who played 10 innings and scored 150 runs. Given order of names is also the increasing order of run scorers i.e. Y is the highest scorer, then R is the second highest scorer and so on.</div><div style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/a770dafe2afb9da891182078c1195359.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto;\"></div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">What is the average of batsman J and Y?</div>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74bb1d8394",
+              "description": {
+                "text": "180 : 91",
+                "widgets": [
+                  {
+                    "id": "text66b74bb1d839b",
+                    "type": "text",
+                    "properties": {
+                      "html": "180 : 91"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb1d83aa",
+              "description": {
+                "text": "150 : 77",
+                "widgets": [
+                  {
+                    "id": "text66b74bb1d83b1",
+                    "type": "text",
+                    "properties": {
+                      "html": "150 : 77"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb1d83c0",
+              "description": {
+                "text": "91 : 180",
+                "widgets": [
+                  {
+                    "id": "text66b74bb1d83c6",
+                    "type": "text",
+                    "properties": {
+                      "html": "91 : 180"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb1d83d5",
+              "description": {
+                "text": "77 : 150",
+                "widgets": [
+                  {
+                    "id": "text66b74bb1d83db",
+                    "type": "text",
+                    "properties": {
+                      "html": "77 : 150"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74bb1d83c0",
+              "text": "91 : 180",
+              "widgets": [
+                {
+                  "id": "text66b74bb1d83c6",
+                  "type": "text",
+                  "properties": {
+                    "html": "91 : 180"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br>Average of batsman J = 325/27\n & Average of \nbatsman Y = 500/21\n<br>Therefore ratio is = 325/27\n∶\n500/21\n= 91 ∶ 180 \n… Option (C)"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74bb1d8404",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions : The number of innings played and runs scored by each of the ten batsmen—A, D, G, H, J, K, R, S, and Y—are displayed in the scatter plot which follows. The number of runs a batsman scores per number of innings played is a batman's average. For instance, the scatter plot's point (10, 150) designates one of the ten batters who played 10 innings and scored 150 runs. Given order of names is also the increasing order of run scorers i.e. Y is the highest scorer, then R is the second highest scorer and so on.What is the difference between average of batsman R and batsman D?",
+            "widgets": [
+              {
+                "id": "text66b74bb1d8409",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong> \n</p><div style=\"text-align: justify;\">The number of innings played and runs scored by each of the ten batsmen—A, D, G, H, J, K, R, S, and Y—are displayed in the scatter plot which follows. The number of runs a batsman scores per number of innings played is a batman's average.\n</div><div style=\"text-align: justify;\">For instance, the scatter plot's point (10, 150) designates one of the ten batters who played 10 innings and scored 150 runs. Given order of names is also the increasing order of run scorers i.e. Y is the highest scorer, then R is the second highest scorer and so on.</div><div style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/a770dafe2afb9da891182078c1195359.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto;\"></div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">What is the difference between average of batsman R and batsman D?</div>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74bb1d8447",
+              "description": {
+                "text": "0",
+                "widgets": [
+                  {
+                    "id": "text66b74bb1d844e",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>0</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb1d845c",
+              "description": {
+                "text": "2",
+                "widgets": [
+                  {
+                    "id": "text66b74bb1d8463",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>2</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb1d8472",
+              "description": {
+                "text": "4",
+                "widgets": [
+                  {
+                    "id": "text66b74bb1d8486",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>4</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb1d8494",
+              "description": {
+                "text": "1",
+                "widgets": [
+                  {
+                    "id": "text66b74bb1d849b",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>1</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74bb1d8494",
+              "text": "1",
+              "widgets": [
+                {
+                  "id": "text66b74bb1d849b",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>1</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br>Average of batsman R = 400/25\n= 16\n<br>Average of batsman D = 150/10\n= 15\n<br>So, the difference is = (16 – 15) = 1 … \nOption(D)"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        }
+      ]
+    }
+  ],
+  "submitted": true,
+  "updated": true,
+  "retryCount": 3,
+  "inlineFeedback": [],
+  "errors": [],
+  "success": true
+}

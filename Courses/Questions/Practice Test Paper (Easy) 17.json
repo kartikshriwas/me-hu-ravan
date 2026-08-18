@@ -1,0 +1,3416 @@
+{
+  "submission": {
+    "anon_id": null,
+    "model": "assessment-submission",
+    "courseTitleId": "aptitude-qs-library",
+    "object_id": "66a0ef055090d2c0e7047524",
+    "assessmentId": "66a0ef055090d2c0e7047523",
+    "snapshotId": "66bce4af003df8b84502d545",
+    "questions": {
+      "section66a0ef0523e30": [
+        "mc1721912079938_276",
+        "mc1721912156413_291",
+        "mc1721912215245_297",
+        "mc1721912254948_311",
+        "mc1721912322491_339",
+        "mc1721912359817_358",
+        "mc1721912406809_369",
+        "mcImage1721912548729_394",
+        "mc1721912702960_422",
+        "mc1721912749985_437"
+      ]
+    },
+    "certificateAnswers": [],
+    "certificateId": null,
+    "questionData": {
+      "mc1721912079938_276": {
+        "deliveredOnTimestamp": 1786440394.477974,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721912156413_291": {
+        "deliveredOnTimestamp": 1786440394.477999,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721912215245_297": {
+        "deliveredOnTimestamp": 1786440394.478013,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721912254948_311": {
+        "deliveredOnTimestamp": 1786440394.478024,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721912322491_339": {
+        "deliveredOnTimestamp": 1786440394.478035,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721912359817_358": {
+        "deliveredOnTimestamp": 1786440394.478047,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721912406809_369": {
+        "deliveredOnTimestamp": 1786440394.478057,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mcImage1721912548729_394": {
+        "deliveredOnTimestamp": 1786440394.478068,
+        "blockType": "mcImage",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721912702960_422": {
+        "deliveredOnTimestamp": 1786440394.478078,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721912749985_437": {
+        "deliveredOnTimestamp": 1786440394.478088,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      }
+    },
+    "answers": [
+      {
+        "blockId": "mc1721912079938_276",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721912156413_291",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721912215245_297",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721912254948_311",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721912322491_339",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721912359817_358",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721912406809_369",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mcImage1721912548729_394",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721912702960_422",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721912749985_437",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      }
+    ],
+    "submittedTimestamp": 1786440394.707748,
+    "status": "submitted",
+    "grading_status": "grading_status_no_grade",
+    "access": "public",
+    "actual_score": null,
+    "score": [],
+    "source": {
+      "type": "unit"
+    },
+    "isDefining": true,
+    "isAdminAutoGradedSubmission": null,
+    "listOfNonConsentedBlocks": [],
+    "created": 1786440394.484863,
+    "modified": 1786440394.797991,
+    "id": "6a7aeaca76c9a640520deaae",
+    "passed": null
+  },
+  "assessment": {
+    "title": "Practice Test Paper (Easy)",
+    "access": "public",
+    "type": "assessment",
+    "model": "assessmentSnapshot",
+    "description": "Foundational practice test paper containing 9 assessment questions covering Permutations & Probability, Blood Relations, Seating Arrangements.",
+    "isTimed": false,
+    "timerFor": "assessmentTimed",
+    "onTimerExpiration": "autoSubmit",
+    "assessmentTimeLimitInSeconds": 600,
+    "questionTimeLimitInSeconds": 60,
+    "standaloneShareEnabled": null,
+    "customUrl": null,
+    "usesCustomUrl": null,
+    "allowAnonymous": true,
+    "randomizeQuestionOptions": false,
+    "disallowPartialSubmissions": false,
+    "submissionDueDateEnabled": false,
+    "submissionDueDate": 1626257823,
+    "makeFeedbackAvailableAfterDateEnabled": false,
+    "makeFeedbackAvailableAfterDate": 0,
+    "customStylesEnabled": true,
+    "customStyles": {
+      "assessmentPage": {
+        "background": {
+          "type": "color",
+          "colorData": {
+            "code": "",
+            "class": "lw-body-bg"
+          }
+        },
+        "dividers": {
+          "top": {
+            "orientation": "top",
+            "divider": "none"
+          },
+          "bottom": {
+            "orientation": "bottom",
+            "divider": "none"
+          }
+        }
+      },
+      "option": {
+        "radioEffect": "scribble",
+        "checkboxEffect": "scribble",
+        "size": "small"
+      },
+      "assessment": {
+        "transition": "none",
+        "background": {
+          "type": "color",
+          "colorData": {
+            "code": "",
+            "class": ""
+          }
+        },
+        "width": "normal",
+        "timerTemplate": "rectangle"
+      },
+      "linearRating": {
+        "labels": {
+          "size": "small"
+        }
+      },
+      "question": {
+        "description": {
+          "background": {
+            "type": "color",
+            "colorData": {
+              "code": "",
+              "class": ""
+            }
+          },
+          "type": "p",
+          "size": "small"
+        },
+        "answers": {
+          "background": {
+            "type": "color",
+            "colorData": {
+              "code": "",
+              "class": ""
+            }
+          }
+        },
+        "requiredAsterisk": {
+          "colorData": {
+            "code": "#ff0000",
+            "class": ""
+          }
+        },
+        "errorMessages": {
+          "size": "verySmall",
+          "colorData": {
+            "code": "#ff0000",
+            "class": ""
+          }
+        }
+      },
+      "input": {
+        "size": "small",
+        "type": "solidDark"
+      },
+      "textarea": {
+        "size": "small",
+        "type": "solidDark"
+      },
+      "dropdown": {
+        "size": "small",
+        "type": "solidDark"
+      }
+    },
+    "submissionMode": "all",
+    "startingDate": 1626765704,
+    "startingDateEnabled": false,
+    "showOnlyFailedQuestionsOnRetry": false,
+    "retryEnabled": true,
+    "retryOnFailOnly": false,
+    "gradingMethod": null,
+    "maxTries": null,
+    "onlyWrongOnRetake": null,
+    "isAmendable": false,
+    "feedbackShowOnScreen": false,
+    "feedbackDownloadPDF": false,
+    "feedbackShowInline": true,
+    "feedbackQuestionList": "all-questions",
+    "feedbackShowQuestionScore": false,
+    "feedbackShowFeedback": true,
+    "feedbackShowNumbering": false,
+    "feedbackShowSectionTitles": false,
+    "feedbackShowUserAnswers": true,
+    "feedbackShowCorrectAnswers": true,
+    "feedbackShowAnswerCorrectness": true,
+    "displayInlineFeedbackEnabled": true,
+    "displayBackButtonWhenSubmissionPerBlock": true,
+    "feedbackShowSectionResultSummary": false,
+    "askConfirmationBeforeSubmit": false,
+    "hasCustomConfirmationBeforeSubmitText": false,
+    "customConfirmationBeforeSubmitText": "Are you sure you want to submit the questionnaire?",
+    "customConfirmationBeforeSubmitTexts": {
+      "title": "Submit Assessment?",
+      "baseConfirmationMessage": "Are you sure you want to submit the questionnaire?",
+      "unansweredNotice": "You have not answered {X} questions."
+    },
+    "amendResubmissionMinutes": 30,
+    "passingGrade": null,
+    "navigationMode": "per-block",
+    "conditionalBlocks": {
+      "introContent": {
+        "id": "content66a0ef0523d5e",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66a0ef0523d6d",
+              "type": "text",
+              "insertedAsWidget": true,
+              "properties": {
+                "html": "Probability PAPER LEVEL-1",
+                "alignment": "center",
+                "customStyle": true,
+                "type": "h2",
+                "size": "normal"
+              }
+            },
+            {
+              "id": "text66a0ef0523d82",
+              "type": "text",
+              "properties": {
+                "html": "<div><span style=\"font-size: 1.7rem; letter-spacing: 0rem;\">Self-assess your knowledge. Express yourself and get feedback from our instructors.</span><br></div>",
+                "customStyle": true,
+                "alignment": "center"
+              }
+            },
+            {
+              "id": "spacer66a0ef0523d8f",
+              "type": "spacer",
+              "properties": {
+                "height": 25,
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            },
+            {
+              "id": "button66a0ef0523d9f",
+              "type": "button",
+              "properties": {
+                "buttonLabel": "<span>Ready to start</span>",
+                "buttonSize": "normal",
+                "buttonType": "solidBrand",
+                "alignment": "center",
+                "linkData": {
+                  "linkType": "goToFirst"
+                },
+                "iconColorData": {
+                  "code": "",
+                  "class": ""
+                },
+                "iconDisplay": false,
+                "iconSize": 26,
+                "iconClassName": " fas fa-angle-right",
+                "iconPosition": "right"
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "variables": {
+            "conditionalBlocks_introContent_blockData_widgets_0": []
+          }
+        }
+      },
+      "submissionStartingDate": {
+        "id": "content66a0ef0523dc6",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66a0ef0523dcc",
+              "type": "text",
+              "properties": {
+                "html": "Sorry but this assessment hasn't started yet."
+              }
+            },
+            {
+              "id": "date66a0ef0523dd4",
+              "type": "date",
+              "properties": {
+                "value": ""
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "displayConditions": ["startingDate"]
+        }
+      },
+      "submissionDueDate": {
+        "id": "content66a0ef0523de3",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66a0ef0523de9",
+              "type": "text",
+              "properties": {
+                "html": "Sorry but this assessment date is due."
+              }
+            },
+            {
+              "id": "date66a0ef0523df1",
+              "type": "date",
+              "properties": {
+                "value": ""
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "displayConditions": ["dateIsDue"]
+        }
+      },
+      "outroContent": {
+        "id": "content66a0ef0523dff",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "userResults66a0ef0523e04",
+              "type": "userResults",
+              "properties": {
+                "layout": "template2",
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            },
+            {
+              "id": "feedback66a0ef0523e13",
+              "type": "feedback",
+              "properties": []
+            },
+            {
+              "id": "outroActions66a0ef0523e1b",
+              "type": "outroActions",
+              "properties": {
+                "layout": "",
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true
+        }
+      }
+    },
+    "systemSections": null,
+    "sections": [
+      {
+        "id": "section66a0ef0523e30",
+        "title": "",
+        "type": "section",
+        "navigationMode": "per-block",
+        "blocks": [
+          {
+            "id": "mc1721912079938_276",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721912079938_275",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">In a box, there are 6 red, 8 blue and 12 green balls. One ball is picked up randomly. What is the probability that it is neither red nor green?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721912079938_277",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721912079938_273",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721912079938_278",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721912079938_281",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721912079938_274",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>5/13</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721912079938_271",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721912079938_282",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>4/13</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721912079938_280",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721912079938_270",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>3/13</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721912079938_272",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721912079938_279",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>6/13</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": []
+              }
+            }
+          },
+          {
+            "id": "mc1721912156413_291",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721912156413_284",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">In a group of 24 students, 15 are girls. What is the probability that two girls and one boy are chosen at random?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721912156413_290",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721912156413_294",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721912156413_292",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721912156413_283",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721912156413_285",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>645/1024</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721912156413_288",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721912156413_286",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>945/2024</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721912156413_289",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721912156413_287",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>945/1012</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721912156413_295",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721912156413_293",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>345/1014</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_1": []
+              }
+            }
+          },
+          {
+            "id": "mc1721912215245_297",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721912215245_301",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">What is the probability that a number selected from the number 1,2,3….20 is a prime number, when each of given number is equally likely to be selected?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721912215245_298",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721912215245_308",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721912215245_302",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721912215245_296",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721912215245_307",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>2/7</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721912215245_304",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721912215245_303",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>3/5</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721912215245_300",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721912215245_299",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>2/5</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721912215245_305",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721912215245_306",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>1/5</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_2": []
+              }
+            }
+          },
+          {
+            "id": "mc1721912254948_311",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721912254948_318",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">A box contains 6 red pens, 5 green pens and 4 white pens. A ball is drawn randomly from the box. What is the probability that the pen drawn is either red or green?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721912254948_315",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721912254948_313",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721912254948_312",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721912254948_320",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721912254948_317",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>7/15</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721912254948_314",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721912254948_309",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>8/15</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721912254948_310",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721912254948_319",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>11/15</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721912254948_316",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721912254948_321",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>4/5</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3": []
+              }
+            }
+          },
+          {
+            "id": "mc1721912322491_339",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721912322491_347",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">The probability of drawing an odd-numbered card from a bag containing cards 1 to x is 1/2. Which of the following can be the possible value of x ?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721912322491_344",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721912322491_342",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721912322491_340",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721912322491_337",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721912322491_341",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>15</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721912322491_345",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721912322491_338",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>3</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721912322491_346",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721912322491_343",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>6</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721912322491_336",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721912322491_335",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>11</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4": []
+              }
+            }
+          },
+          {
+            "id": "mc1721912359817_358",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721912359817_351",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">A die is rolled three times. What is the probability, that the number that turns up in the second roll is more than that which turns up in the first roll and the number that turns up in the third roll is more than that which turns up in the second roll?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721912359817_354",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721912359817_359",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721912359817_355",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721912359817_353",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721912359817_348",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>5/54</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721912359817_350",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721912359817_360",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>7/54</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721912359817_356",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721912359817_352",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>11/54</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721912359817_349",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721912359817_357",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>13/54</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5": [],
+                "sections_0_blocks_5_blockData_description_widgets_0": []
+              }
+            }
+          },
+          {
+            "id": "mc1721912406809_369",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721912406809_371",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">A fair dice is rolled thrice. What is the probability of getting the sum of the three outcomes as less than 17?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721912406809_367",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721912406808_366",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721912406808_364",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721912406808_361",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721912406808_365",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>53/54</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721912406809_372",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721912406809_370",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>71/72</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721912406808_363",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721912406809_373",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>35/36</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721912406808_362",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721912406809_368",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>209/216</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_6": []
+              }
+            }
+          },
+          {
+            "id": "mcImage1721912548729_394",
+            "type": "mcImage",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mcImage1721912548729_398",
+                    "type": "text",
+                    "properties": {
+                      "html": "4 men and 7 women are seated at random in a row. What is the possibility that no two men are sitting together?"
+                    }
+                  }
+                ]
+              },
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-image-option1721912548729_387",
+                  "type": "mc-image-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mcImage1721912548729_400",
+                        "type": "image",
+                        "properties": {
+                          "hasLightbox": false,
+                          "imageData": {
+                            "title": "image",
+                            "tags": [],
+                            "width": 123,
+                            "height": 163,
+                            "size": 6,
+                            "name": "/fe41aa1d811cedb4137b88d8fab305e2.png",
+                            "access": "public",
+                            "created": 1721892776.971294,
+                            "modified": 1721892776.971294,
+                            "user": {
+                              "username": "Sachin AK Team"
+                            },
+                            "id": "66a1ffa8a1b7c6ab0e0c5c26",
+                            "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/fe41aa1d811cedb4137b88d8fab305e2.png",
+                            "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/fe41aa1d811cedb4137b88d8fab305e2.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                            "modifiedF": "2024-07-25 10:32:56"
+                          },
+                          "height": 53,
+                          "width": 40
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-image-option1721912548729_388",
+                  "type": "mc-image-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mcImage1721912548729_392",
+                        "type": "image",
+                        "properties": {
+                          "hasLightbox": false,
+                          "imageData": {
+                            "title": "image",
+                            "tags": [],
+                            "width": 164,
+                            "height": 153,
+                            "size": 9,
+                            "name": "/6efa7c2c38e61c4f0051c0f50698035a.png",
+                            "access": "public",
+                            "created": 1721892793.732077,
+                            "modified": 1721892793.732077,
+                            "user": {
+                              "username": "Sachin AK Team"
+                            },
+                            "id": "66a1ffb9112ab81be803f906",
+                            "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/6efa7c2c38e61c4f0051c0f50698035a.png",
+                            "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/6efa7c2c38e61c4f0051c0f50698035a.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                            "modifiedF": "2024-07-25 10:33:13"
+                          },
+                          "height": 46,
+                          "width": 50
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-image-option1721912548729_393",
+                  "type": "mc-image-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mcImage1721912548729_391",
+                        "type": "image",
+                        "properties": {
+                          "hasLightbox": false,
+                          "imageData": {
+                            "title": "image",
+                            "tags": [],
+                            "width": 116,
+                            "height": 152,
+                            "size": 6,
+                            "name": "/900d3faf6b21dfff303a959b7eaad0ba.png",
+                            "access": "public",
+                            "created": 1721892815.062518,
+                            "modified": 1721892815.062518,
+                            "user": {
+                              "username": "Sachin AK Team"
+                            },
+                            "id": "66a1ffcffc12b98cf705c7e5",
+                            "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/900d3faf6b21dfff303a959b7eaad0ba.png",
+                            "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/900d3faf6b21dfff303a959b7eaad0ba.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                            "modifiedF": "2024-07-25 10:33:35"
+                          },
+                          "height": 52,
+                          "width": 40
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-image-option1721912548729_399",
+                  "type": "mc-image-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mcImage1721912548729_389",
+                        "type": "image",
+                        "properties": {
+                          "hasLightbox": false,
+                          "imageData": {
+                            "title": "image",
+                            "tags": [],
+                            "width": 198,
+                            "height": 139,
+                            "size": 9,
+                            "name": "/1121992b11a7a172a4919b0ffc15aade.png",
+                            "access": "public",
+                            "created": 1721892834.077303,
+                            "modified": 1721892834.077303,
+                            "user": {
+                              "username": "Sachin AK Team"
+                            },
+                            "id": "66a1ffe2ba92637b3c038989",
+                            "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/1121992b11a7a172a4919b0ffc15aade.png",
+                            "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/1121992b11a7a172a4919b0ffc15aade.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                            "modifiedF": "2024-07-25 10:33:54"
+                          },
+                          "height": 42,
+                          "width": 60
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "optionNumbering": "none",
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_8_blockData_description_widgets_0": [],
+                "sections_0_blocks_7": []
+              }
+            }
+          },
+          {
+            "id": "mc1721912702960_422",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721912702960_421",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">A brother and sister appeared for an interview for two vacancies in the same organisation. The probability of the brother's selection is 2/7 and that of the sister is 3/8. What is the probability that neither of them will be selected?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721912702960_423",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721912702960_424",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721912702960_426",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721912702960_416",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721912702960_417",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>25/56</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721912702960_420",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721912702960_415",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>6/56</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721912702960_418",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721912702960_419",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>15/56</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721912702960_427",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721912702960_425",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>5/28</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_8": []
+              }
+            }
+          },
+          {
+            "id": "mc1721912749985_437",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721912749985_430",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><br></p>"
+                    }
+                  },
+                  {
+                    "id": "image1721912809031_441",
+                    "type": "image",
+                    "properties": {
+                      "width": 1003,
+                      "height": 55,
+                      "alt": "",
+                      "imageData": {
+                        "title": "image",
+                        "tags": [],
+                        "width": 1004,
+                        "height": 56,
+                        "size": 8,
+                        "name": "/df5a0f63bb93e9aeacf75ccce4f32257.png",
+                        "access": "public",
+                        "created": 1721893016.260663,
+                        "modified": 1721893016.260663,
+                        "user": {
+                          "username": "Sachin AK Team"
+                        },
+                        "id": "66a20098685a33f01d061829",
+                        "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/df5a0f63bb93e9aeacf75ccce4f32257.png",
+                        "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/df5a0f63bb93e9aeacf75ccce4f32257.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                        "modifiedF": "2024-07-25 10:36:56"
+                      },
+                      "hasLightbox": false,
+                      "alignment": "left"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721912749985_434",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721912749985_428",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721912749985_440",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721912749985_435",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721912749985_431",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>29/70</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721912749985_438",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721912749985_432",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>37/70</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721912749985_436",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721912749985_433",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>41/70</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721912749985_429",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721912749985_439",
+                        "type": "text",
+                        "properties": {
+                          "html": "cannot be determined"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_9": []
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "availabilityStatus": null,
+    "autoNavigationEnabled": false,
+    "displayBackButtonWhenNavigationPerBlock": true,
+    "saveAndResumeLaterEnabled": null,
+    "tagsAddedOnCompletion": [],
+    "tagsAddedOnPass": [],
+    "sendAnonymousSubmissionsToEmailLeads": false,
+    "afterSubmitActionEnabled": null,
+    "afterSubmitActionProperties": null,
+    "showWizardOnNextEdit": false,
+    "revisitAfterSubmissionAction": null,
+    "navigationTemplate": "HorizontalSpacedBetweenNavigationTemplate",
+    "learnerSearchBarEnabled": true,
+    "learnerUnansweredQuestionsEnabled": true,
+    "learnerFavouriteQuestionEnabled": true,
+    "learnerCompletionProgressEnabled": true,
+    "learnerShowIndexOfQuestionsEnabled": false,
+    "learnerTimeNotificationsEnabled": false,
+    "learnerAllowInterruptionsEnabled": true,
+    "learnerAllowInterruptionsTimeoutInMinutes": 30,
+    "learnerReclaimTryOnInterruptionTimeoutEnabled": false,
+    "learnerAskBeforeContinueToSaved": true,
+    "learnerAutoSaveEnabled": null,
+    "spellcheckDisabled": null,
+    "showPartialScoreOnSubmission": true,
+    "deliverableQuestionsSubsetType": "all",
+    "questionRandomizationType": "none",
+    "serveQuestionsBasedOnPreviousSubmission": null,
+    "scoringDisabled": true,
+    "isSelfAssessment": true,
+    "useDefaultCertificateTemplate": null,
+    "certificateTemplate": null,
+    "certificateSocialShare": null,
+    "migrationData": null,
+    "useAssessmentPassingGradeForOpenEndedCorrectness": true,
+    "openEndedCorrectnessPassingGrade": null,
+    "showScorePercentage": null,
+    "showScorePoints": null,
+    "showScoreCorrectAnswers": null,
+    "editorBehaviorSettings": null,
+    "manualReviewEnabled": false,
+    "resultsSummary": {
+      "enabled": true,
+      "showStatusIcon": true,
+      "showStatusText": true,
+      "showScorePercentage": true,
+      "showScorePoints": true,
+      "showScoreCorrectAnswers": true,
+      "showTimeTakenToComplete": true,
+      "showDateSubmitted": true,
+      "showAttemptCount": true
+    },
+    "meta": null,
+    "submissionsCount": 354,
+    "fromMarketplace": null,
+    "aiFeedbackEnabled": null,
+    "numberOfFeedbackQuestions": null,
+    "created": 1721822981.554053,
+    "modified": 1723655343.392368,
+    "contentHash": "7d0439ea9152e76f22cd60ecc05ac6f9ba7974fc9b64b4092452df523385ae10",
+    "id": "66a0ef055090d2c0e7047523",
+    "objectType": "assessment",
+    "isEditBlockedDueToSync": false,
+    "variables": {
+      "submission": {
+        "self": {
+          "score": null,
+          "points": null,
+          "total_points": null,
+          "correct_answers": null,
+          "total_questions": 10,
+          "time_spent": "00:00:00",
+          "date_submitted": "11/08/26",
+          "attempt_count": 3,
+          "max_tries": null,
+          "pass_grade": null,
+          "time_spent_seconds": 0,
+          "raw_start_date": 1786440394.484863
+        }
+      },
+      "school": {
+        "name": "Apna College",
+        "url": "www.apnacollege.in",
+        "description": "The most loved coding community of India ❤️"
+      },
+      "user": {
+        "username": "ram",
+        "email": "p4542639@gmail.com",
+        "cf_phonenumber": "7666690798"
+      }
+    }
+  },
+  "reclaimedTry": false,
+  "feedback": [
+    {
+      "title": "",
+      "id": "section66a0ef0523e30",
+      "blocks": [
+        {
+          "id": "mc1721912079938_276",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "In a box, there are 6 red, 8 blue and 12 green balls. One ball is picked up randomly. What is the probability that it is neither red nor green?",
+            "widgets": [
+              {
+                "id": "mc1721912079938_275",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">In a box, there are 6 red, 8 blue and 12 green balls. One ball is picked up randomly. What is the probability that it is neither red nor green?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721912079938_281",
+              "description": {
+                "text": "5/13",
+                "widgets": [
+                  {
+                    "id": "mc1721912079938_274",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>5/13</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721912079938_271",
+              "description": {
+                "text": "4/13",
+                "widgets": [
+                  {
+                    "id": "mc1721912079938_282",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>4/13</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721912079938_280",
+              "description": {
+                "text": "3/13",
+                "widgets": [
+                  {
+                    "id": "mc1721912079938_270",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>3/13</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721912079938_272",
+              "description": {
+                "text": "6/13",
+                "widgets": [
+                  {
+                    "id": "mc1721912079938_279",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>6/13</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721912079938_271",
+              "text": "4/13",
+              "widgets": [
+                {
+                  "id": "mc1721912079938_282",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>4/13</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>Neither red nor green means it is blue Required probability = 8/26 = 4/13</p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721912156413_291",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "In a group of 24 students, 15 are girls. What is the probability that two girls and one boy are chosen at random?",
+            "widgets": [
+              {
+                "id": "mc1721912156413_284",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">In a group of 24 students, 15 are girls. What is the probability that two girls and one boy are chosen at random?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721912156413_283",
+              "description": {
+                "text": "645/1024",
+                "widgets": [
+                  {
+                    "id": "mc1721912156413_285",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>645/1024</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721912156413_288",
+              "description": {
+                "text": "945/2024",
+                "widgets": [
+                  {
+                    "id": "mc1721912156413_286",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>945/2024</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721912156413_289",
+              "description": {
+                "text": "945/1012",
+                "widgets": [
+                  {
+                    "id": "mc1721912156413_287",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>945/1012</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721912156413_295",
+              "description": {
+                "text": "345/1014",
+                "widgets": [
+                  {
+                    "id": "mc1721912156413_293",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>345/1014</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721912156413_288",
+              "text": "945/2024",
+              "widgets": [
+                {
+                  "id": "mc1721912156413_286",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>945/2024</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/37915a4494daf177d746dd6d442c09fe.png\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721912215245_297",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "What is the probability that a number selected from the number 1,2,3….20 is a prime number, when each of given number is equally likely to be selected?",
+            "widgets": [
+              {
+                "id": "mc1721912215245_301",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">What is the probability that a number selected from the number 1,2,3….20 is a prime number, when each of given number is equally likely to be selected?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721912215245_296",
+              "description": {
+                "text": "2/7",
+                "widgets": [
+                  {
+                    "id": "mc1721912215245_307",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>2/7</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721912215245_304",
+              "description": {
+                "text": "3/5",
+                "widgets": [
+                  {
+                    "id": "mc1721912215245_303",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>3/5</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721912215245_300",
+              "description": {
+                "text": "2/5",
+                "widgets": [
+                  {
+                    "id": "mc1721912215245_299",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>2/5</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721912215245_305",
+              "description": {
+                "text": "1/5",
+                "widgets": [
+                  {
+                    "id": "mc1721912215245_306",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>1/5</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721912215245_300",
+              "text": "2/5",
+              "widgets": [
+                {
+                  "id": "mc1721912215245_299",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>2/5</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br>\n\n\n<p class=\"MsoNormal\" style=\"font-size: 12pt; font-family: Cambria, serif; margin: 0cm 0cm 0cm 36pt; text-align: justify; text-indent: -36pt; line-height: 150%;\"><span lang=\"EN-US\">Prime numbers </span><m:omath><span lang=\"EN-US\" style=\"font-family:\"Cambria Math\",serif\"><m:r><m:rpr><m:scr m:val=\"roman\"><m:sty m:val=\"p\"></m:sty></m:scr></m:rpr>=2,3,5,7,9,11,13,17,19</m:r></span></m:omath><!--[endif]----><span lang=\"EN-US\" style=\"font-size:12.0pt;line-height:107%;font-family:\"Cambria\",serif;\nmso-fareast-font-family:Calibri;mso-fareast-theme-font:minor-latin;mso-bidi-font-family:\n\"Times New Roman\";mso-bidi-theme-font:minor-bidi;position:relative;top:4.0pt;\nmso-text-raise:-4.0pt;mso-font-kerning:0pt;mso-ligatures:none;mso-ansi-language:\nEN-US;mso-fareast-language:EN-US;mso-bidi-language:AR-SA\"><v:shapetype id=\"_x0000_t75\" coordsize=\"21600,21600\" o:spt=\"75\" o:preferrelative=\"t\" path=\"m@4@5l@4@11@9@11@9@5xe\" filled=\"f\" stroked=\"f\">\n <v:stroke joinstyle=\"miter\">\n <v:formulas>\n  <v:f eqn=\"if lineDrawn pixelLineWidth 0\">\n  <v:f eqn=\"sum @0 1 0\">\n  <v:f eqn=\"sum 0 0 @1\">\n  <v:f eqn=\"prod @2 1 2\">\n  <v:f eqn=\"prod @3 21600 pixelWidth\">\n  <v:f eqn=\"prod @3 21600 pixelHeight\">\n  <v:f eqn=\"sum @0 0 1\">\n  <v:f eqn=\"prod @6 1 2\">\n  <v:f eqn=\"prod @7 21600 pixelWidth\">\n  <v:f eqn=\"sum @8 21600 0\">\n  <v:f eqn=\"prod @7 21600 pixelHeight\">\n  <v:f eqn=\"sum @10 21600 0\">\n </v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:formulas>\n <v:path o:extrusionok=\"f\" gradientshapeok=\"t\" o:connecttype=\"rect\">\n <o:lock v:ext=\"edit\" aspectratio=\"t\">\n</o:lock></v:path></v:stroke></v:shapetype><v:shape id=\"_x0000_i1025\" type=\"#_x0000_t75\" style=\"width:118.5pt;\n height:15pt\">\n <v:imagedata src=\"file:///C:/Users/TEST/AppData/Local/Temp/msohtmlclip1/01/clip_image001.png\" o:title=\"\" chromakey=\"white\">\n</v:imagedata></v:shape></span></p>\n\n<span lang=\"EN-US\" style=\"font-size:12.0pt;\nline-height:107%;font-family:\"Cambria\",serif;mso-fareast-font-family:Calibri;\nmso-fareast-theme-font:minor-latin;mso-bidi-font-family:\"Times New Roman\";\nmso-bidi-theme-font:minor-bidi;mso-ansi-language:EN-US;mso-fareast-language:\nEN-US;mso-bidi-language:AR-SA\">Probability </span><m:omath><span lang=\"EN-US\" style=\"font-size:12.0pt;line-height:107%;font-family:\"Cambria Math\",serif;\n mso-fareast-font-family:Calibri;mso-fareast-theme-font:minor-latin;mso-bidi-font-family:\n \"Times New Roman\";mso-bidi-theme-font:minor-bidi;mso-ansi-language:EN-US;\n mso-fareast-language:EN-US;mso-bidi-language:AR-SA\"><m:r><m:rpr><m:scr m:val=\"roman\"><m:sty m:val=\"p\"></m:sty></m:scr></m:rpr>=8/20=2/5</m:r></span></m:omath><!--[endif]----><span lang=\"EN-US\" style=\"font-size:12.0pt;line-height:107%;font-family:\"Cambria\",serif;\nmso-fareast-font-family:Calibri;mso-fareast-theme-font:minor-latin;mso-bidi-font-family:\n\"Times New Roman\";mso-bidi-theme-font:minor-bidi;position:relative;top:4.0pt;\nmso-text-raise:-4.0pt;mso-font-kerning:0pt;mso-ligatures:none;mso-ansi-language:\nEN-US;mso-fareast-language:EN-US;mso-bidi-language:AR-SA\"><v:shape id=\"_x0000_i1025\" type=\"#_x0000_t75\" style=\"width:72.75pt;height:15pt\">\n <v:imagedata src=\"file:///C:/Users/TEST/AppData/Local/Temp/msohtmlclip1/01/clip_image002.png\" o:title=\"\" chromakey=\"white\">\n</v:imagedata></v:shape></span>\n\n\n"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721912254948_311",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "A box contains 6 red pens, 5 green pens and 4 white pens. A ball is drawn randomly from the box. What is the probability that the pen drawn is either red or green?",
+            "widgets": [
+              {
+                "id": "mc1721912254948_318",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">A box contains 6 red pens, 5 green pens and 4 white pens. A ball is drawn randomly from the box. What is the probability that the pen drawn is either red or green?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721912254948_320",
+              "description": {
+                "text": "7/15",
+                "widgets": [
+                  {
+                    "id": "mc1721912254948_317",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>7/15</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721912254948_314",
+              "description": {
+                "text": "8/15",
+                "widgets": [
+                  {
+                    "id": "mc1721912254948_309",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>8/15</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721912254948_310",
+              "description": {
+                "text": "11/15",
+                "widgets": [
+                  {
+                    "id": "mc1721912254948_319",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>11/15</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721912254948_316",
+              "description": {
+                "text": "4/5",
+                "widgets": [
+                  {
+                    "id": "mc1721912254948_321",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>4/5</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721912254948_310",
+              "text": "11/15",
+              "widgets": [
+                {
+                  "id": "mc1721912254948_319",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>11/15</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/20a45f703cc23a6a760e189768a44e68.png\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721912322491_339",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "The probability of drawing an odd-numbered card from a bag containing cards 1 to x is 1/2. Which of the following can be the possible value of x ?",
+            "widgets": [
+              {
+                "id": "mc1721912322491_347",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">The probability of drawing an odd-numbered card from a bag containing cards 1 to x is 1/2. Which of the following can be the possible value of x ?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721912322491_337",
+              "description": {
+                "text": "15",
+                "widgets": [
+                  {
+                    "id": "mc1721912322491_341",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>15</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721912322491_345",
+              "description": {
+                "text": "3",
+                "widgets": [
+                  {
+                    "id": "mc1721912322491_338",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>3</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721912322491_346",
+              "description": {
+                "text": "6",
+                "widgets": [
+                  {
+                    "id": "mc1721912322491_343",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>6</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721912322491_336",
+              "description": {
+                "text": "11",
+                "widgets": [
+                  {
+                    "id": "mc1721912322491_335",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>11</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721912322491_346",
+              "text": "6",
+              "widgets": [
+                {
+                  "id": "mc1721912322491_343",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>6</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>Since the bag contains cards numbered 1 to x and the probability of drawing an odd-numbered card \nis 1/2, the probability of drawing even-numbered card also becomes 1/2.\nHence, there must be an equal number of odd and even - numbered cards.\nThis is only possible when x = 6</p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721912359817_358",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "A die is rolled three times. What is the probability, that the number that turns up in the second roll is more than that which turns up in the first roll and the number that turns up in the third roll is more than that which turns up in the second roll?",
+            "widgets": [
+              {
+                "id": "mc1721912359817_351",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">A die is rolled three times. What is the probability, that the number that turns up in the second roll is more than that which turns up in the first roll and the number that turns up in the third roll is more than that which turns up in the second roll?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721912359817_353",
+              "description": {
+                "text": "5/54",
+                "widgets": [
+                  {
+                    "id": "mc1721912359817_348",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>5/54</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721912359817_350",
+              "description": {
+                "text": "7/54",
+                "widgets": [
+                  {
+                    "id": "mc1721912359817_360",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>7/54</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721912359817_356",
+              "description": {
+                "text": "11/54",
+                "widgets": [
+                  {
+                    "id": "mc1721912359817_352",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>11/54</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721912359817_349",
+              "description": {
+                "text": "13/54",
+                "widgets": [
+                  {
+                    "id": "mc1721912359817_357",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>13/54</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721912359817_353",
+              "text": "5/54",
+              "widgets": [
+                {
+                  "id": "mc1721912359817_348",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>5/54</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/bb016c9b6e1eb1b01d8c5fb7d60e6a0e.png\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721912406809_369",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "A fair dice is rolled thrice. What is the probability of getting the sum of the three outcomes as less than 17?",
+            "widgets": [
+              {
+                "id": "mc1721912406809_371",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">A fair dice is rolled thrice. What is the probability of getting the sum of the three outcomes as less than 17?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721912406808_361",
+              "description": {
+                "text": "53/54",
+                "widgets": [
+                  {
+                    "id": "mc1721912406808_365",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>53/54</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721912406809_372",
+              "description": {
+                "text": "71/72",
+                "widgets": [
+                  {
+                    "id": "mc1721912406809_370",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>71/72</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721912406808_363",
+              "description": {
+                "text": "35/36",
+                "widgets": [
+                  {
+                    "id": "mc1721912406809_373",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>35/36</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721912406808_362",
+              "description": {
+                "text": "209/216",
+                "widgets": [
+                  {
+                    "id": "mc1721912406809_368",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>209/216</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721912406808_361",
+              "text": "53/54",
+              "widgets": [
+                {
+                  "id": "mc1721912406808_365",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>53/54</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/a377719b54bec4f34bcba3738f76489d.png\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mcImage1721912548729_394",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mcImage",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "4 men and 7 women are seated at random in a row. What is the possibility that no two men are sitting together?",
+            "widgets": [
+              {
+                "id": "mcImage1721912548729_398",
+                "type": "text",
+                "properties": {
+                  "html": "4 men and 7 women are seated at random in a row. What is the possibility that no two men are sitting together?"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-image-option1721912548729_387",
+              "description": {
+                "text": "(Image)",
+                "widgets": [
+                  {
+                    "id": "mcImage1721912548729_400",
+                    "type": "image",
+                    "properties": {
+                      "hasLightbox": false,
+                      "imageData": {
+                        "title": "image",
+                        "tags": [],
+                        "width": 123,
+                        "height": 163,
+                        "size": 6,
+                        "name": "/fe41aa1d811cedb4137b88d8fab305e2.png",
+                        "access": "public",
+                        "created": 1721892776.971294,
+                        "modified": 1721892776.971294,
+                        "user": {
+                          "username": "Sachin AK Team"
+                        },
+                        "id": "66a1ffa8a1b7c6ab0e0c5c26",
+                        "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/fe41aa1d811cedb4137b88d8fab305e2.png",
+                        "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/fe41aa1d811cedb4137b88d8fab305e2.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                        "modifiedF": "2024-07-25 10:32:56"
+                      },
+                      "height": 53,
+                      "width": 40
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-image-option1721912548729_388",
+              "description": {
+                "text": "(Image)",
+                "widgets": [
+                  {
+                    "id": "mcImage1721912548729_392",
+                    "type": "image",
+                    "properties": {
+                      "hasLightbox": false,
+                      "imageData": {
+                        "title": "image",
+                        "tags": [],
+                        "width": 164,
+                        "height": 153,
+                        "size": 9,
+                        "name": "/6efa7c2c38e61c4f0051c0f50698035a.png",
+                        "access": "public",
+                        "created": 1721892793.732077,
+                        "modified": 1721892793.732077,
+                        "user": {
+                          "username": "Sachin AK Team"
+                        },
+                        "id": "66a1ffb9112ab81be803f906",
+                        "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/6efa7c2c38e61c4f0051c0f50698035a.png",
+                        "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/6efa7c2c38e61c4f0051c0f50698035a.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                        "modifiedF": "2024-07-25 10:33:13"
+                      },
+                      "height": 46,
+                      "width": 50
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-image-option1721912548729_393",
+              "description": {
+                "text": "(Image)",
+                "widgets": [
+                  {
+                    "id": "mcImage1721912548729_391",
+                    "type": "image",
+                    "properties": {
+                      "hasLightbox": false,
+                      "imageData": {
+                        "title": "image",
+                        "tags": [],
+                        "width": 116,
+                        "height": 152,
+                        "size": 6,
+                        "name": "/900d3faf6b21dfff303a959b7eaad0ba.png",
+                        "access": "public",
+                        "created": 1721892815.062518,
+                        "modified": 1721892815.062518,
+                        "user": {
+                          "username": "Sachin AK Team"
+                        },
+                        "id": "66a1ffcffc12b98cf705c7e5",
+                        "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/900d3faf6b21dfff303a959b7eaad0ba.png",
+                        "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/900d3faf6b21dfff303a959b7eaad0ba.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                        "modifiedF": "2024-07-25 10:33:35"
+                      },
+                      "height": 52,
+                      "width": 40
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-image-option1721912548729_399",
+              "description": {
+                "text": "(Image)",
+                "widgets": [
+                  {
+                    "id": "mcImage1721912548729_389",
+                    "type": "image",
+                    "properties": {
+                      "hasLightbox": false,
+                      "imageData": {
+                        "title": "image",
+                        "tags": [],
+                        "width": 198,
+                        "height": 139,
+                        "size": 9,
+                        "name": "/1121992b11a7a172a4919b0ffc15aade.png",
+                        "access": "public",
+                        "created": 1721892834.077303,
+                        "modified": 1721892834.077303,
+                        "user": {
+                          "username": "Sachin AK Team"
+                        },
+                        "id": "66a1ffe2ba92637b3c038989",
+                        "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/1121992b11a7a172a4919b0ffc15aade.png",
+                        "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/1121992b11a7a172a4919b0ffc15aade.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                        "modifiedF": "2024-07-25 10:33:54"
+                      },
+                      "height": 42,
+                      "width": 60
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-image-option1721912548729_393",
+              "text": "(Image)",
+              "widgets": [
+                {
+                  "id": "mcImage1721912548729_391",
+                  "type": "image",
+                  "properties": {
+                    "hasLightbox": false,
+                    "imageData": {
+                      "title": "image",
+                      "tags": [],
+                      "width": 116,
+                      "height": 152,
+                      "size": 6,
+                      "name": "/900d3faf6b21dfff303a959b7eaad0ba.png",
+                      "access": "public",
+                      "created": 1721892815.062518,
+                      "modified": 1721892815.062518,
+                      "user": {
+                        "username": "Sachin AK Team"
+                      },
+                      "id": "66a1ffcffc12b98cf705c7e5",
+                      "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/900d3faf6b21dfff303a959b7eaad0ba.png",
+                      "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/900d3faf6b21dfff303a959b7eaad0ba.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                      "modifiedF": "2024-07-25 10:33:35"
+                    },
+                    "height": 52,
+                    "width": 40
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/c34bdd581e49bd3d6f43f2c5489222d4.png\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721912702960_422",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "A brother and sister appeared for an interview for two vacancies in the same organisation. The probability of the brother's selection is 2/7 and that of the sister is 3/8. What is the probability that neither of them will be selected?",
+            "widgets": [
+              {
+                "id": "mc1721912702960_421",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">A brother and sister appeared for an interview for two vacancies in the same organisation. The probability of the brother's selection is 2/7 and that of the sister is 3/8. What is the probability that neither of them will be selected?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721912702960_416",
+              "description": {
+                "text": "25/56",
+                "widgets": [
+                  {
+                    "id": "mc1721912702960_417",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>25/56</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721912702960_420",
+              "description": {
+                "text": "6/56",
+                "widgets": [
+                  {
+                    "id": "mc1721912702960_415",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>6/56</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721912702960_418",
+              "description": {
+                "text": "15/56",
+                "widgets": [
+                  {
+                    "id": "mc1721912702960_419",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>15/56</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721912702960_427",
+              "description": {
+                "text": "5/28",
+                "widgets": [
+                  {
+                    "id": "mc1721912702960_425",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>5/28</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721912702960_416",
+              "text": "25/56",
+              "widgets": [
+                {
+                  "id": "mc1721912702960_417",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>25/56</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/ecc4b2c591508b3c2a073a105e4b8af2.png\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721912749985_437",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "(Image)",
+            "widgets": [
+              {
+                "id": "mc1721912749985_430",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><br></p>"
+                }
+              },
+              {
+                "id": "image1721912809031_441",
+                "type": "image",
+                "properties": {
+                  "width": 1003,
+                  "height": 55,
+                  "alt": "",
+                  "imageData": {
+                    "title": "image",
+                    "tags": [],
+                    "width": 1004,
+                    "height": 56,
+                    "size": 8,
+                    "name": "/df5a0f63bb93e9aeacf75ccce4f32257.png",
+                    "access": "public",
+                    "created": 1721893016.260663,
+                    "modified": 1721893016.260663,
+                    "user": {
+                      "username": "Sachin AK Team"
+                    },
+                    "id": "66a20098685a33f01d061829",
+                    "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/df5a0f63bb93e9aeacf75ccce4f32257.png",
+                    "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/df5a0f63bb93e9aeacf75ccce4f32257.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                    "modifiedF": "2024-07-25 10:36:56"
+                  },
+                  "hasLightbox": false,
+                  "alignment": "left"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721912749985_435",
+              "description": {
+                "text": "29/70",
+                "widgets": [
+                  {
+                    "id": "mc1721912749985_431",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>29/70</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721912749985_438",
+              "description": {
+                "text": "37/70",
+                "widgets": [
+                  {
+                    "id": "mc1721912749985_432",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>37/70</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721912749985_436",
+              "description": {
+                "text": "41/70",
+                "widgets": [
+                  {
+                    "id": "mc1721912749985_433",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>41/70</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721912749985_429",
+              "description": {
+                "text": "cannot be determined",
+                "widgets": [
+                  {
+                    "id": "mc1721912749985_439",
+                    "type": "text",
+                    "properties": {
+                      "html": "cannot be determined"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721912749985_436",
+              "text": "41/70",
+              "widgets": [
+                {
+                  "id": "mc1721912749985_433",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>41/70</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/5888d5fb54f5d67428c4dd63d2c9086a.png\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        }
+      ]
+    }
+  ],
+  "submitted": true,
+  "updated": true,
+  "retryCount": 3,
+  "inlineFeedback": [],
+  "errors": [],
+  "success": true
+}

@@ -1,0 +1,3081 @@
+{
+  "submission": {
+    "anon_id": null,
+    "model": "assessment-submission",
+    "courseTitleId": "aptitude-qs-library",
+    "object_id": "66a1cb6c4491eca1eb0f79c6",
+    "assessmentId": "66a1cb6c4491eca1eb0f79c5",
+    "snapshotId": "66bd0d8883a3cf2f5501fcd5",
+    "questions": {
+      "section66a1cb6c0e4ee": [
+        "mc1721923037454_281",
+        "mc1721923117956_293",
+        "mc1721923211149_296",
+        "mc1721923284220_310",
+        "mc1721923365164_326",
+        "mc1721923429244_337",
+        "mc1721923523052_357",
+        "mc1721923607419_367",
+        "mc1721923683388_386",
+        "mc1721923756332_400"
+      ]
+    },
+    "certificateAnswers": [],
+    "certificateId": null,
+    "questionData": {
+      "mc1721923037454_281": {
+        "deliveredOnTimestamp": 1786440405.937669,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721923117956_293": {
+        "deliveredOnTimestamp": 1786440405.9377,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721923211149_296": {
+        "deliveredOnTimestamp": 1786440405.937718,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721923284220_310": {
+        "deliveredOnTimestamp": 1786440405.937733,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721923365164_326": {
+        "deliveredOnTimestamp": 1786440405.937747,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721923429244_337": {
+        "deliveredOnTimestamp": 1786440405.937762,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721923523052_357": {
+        "deliveredOnTimestamp": 1786440405.937776,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721923607419_367": {
+        "deliveredOnTimestamp": 1786440405.93779,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721923683388_386": {
+        "deliveredOnTimestamp": 1786440405.937804,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721923756332_400": {
+        "deliveredOnTimestamp": 1786440405.937819,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      }
+    },
+    "answers": [
+      {
+        "blockId": "mc1721923037454_281",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721923117956_293",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721923211149_296",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721923284220_310",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721923365164_326",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721923429244_337",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721923523052_357",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721923607419_367",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721923683388_386",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721923756332_400",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      }
+    ],
+    "submittedTimestamp": 1786440406.165152,
+    "status": "submitted",
+    "grading_status": "grading_status_no_grade",
+    "access": "public",
+    "actual_score": null,
+    "score": [],
+    "source": {
+      "type": "unit"
+    },
+    "isDefining": true,
+    "isAdminAutoGradedSubmission": null,
+    "listOfNonConsentedBlocks": [],
+    "created": 1786440405.942988,
+    "modified": 1786440406.255465,
+    "id": "6a7aead5c9a39c0683078160",
+    "passed": null
+  },
+  "assessment": {
+    "title": "Practice Test Paper (Easy)",
+    "access": "public",
+    "type": "assessment",
+    "model": "assessmentSnapshot",
+    "description": "Foundational practice test paper containing 10 assessment questions covering Sentence Rearrangement, Coding-Decoding.",
+    "isTimed": false,
+    "timerFor": "assessmentTimed",
+    "onTimerExpiration": "autoSubmit",
+    "assessmentTimeLimitInSeconds": 600,
+    "questionTimeLimitInSeconds": 60,
+    "standaloneShareEnabled": null,
+    "customUrl": null,
+    "usesCustomUrl": null,
+    "allowAnonymous": true,
+    "randomizeQuestionOptions": false,
+    "disallowPartialSubmissions": false,
+    "submissionDueDateEnabled": false,
+    "submissionDueDate": 1626257823,
+    "makeFeedbackAvailableAfterDateEnabled": false,
+    "makeFeedbackAvailableAfterDate": 0,
+    "customStylesEnabled": true,
+    "customStyles": {
+      "assessmentPage": {
+        "background": {
+          "type": "color",
+          "colorData": {
+            "code": "",
+            "class": "lw-body-bg"
+          }
+        },
+        "dividers": {
+          "top": {
+            "orientation": "top",
+            "divider": "none"
+          },
+          "bottom": {
+            "orientation": "bottom",
+            "divider": "none"
+          }
+        }
+      },
+      "option": {
+        "radioEffect": "scribble",
+        "checkboxEffect": "scribble",
+        "size": "small"
+      },
+      "assessment": {
+        "transition": "none",
+        "background": {
+          "type": "color",
+          "colorData": {
+            "code": "",
+            "class": ""
+          }
+        },
+        "width": "normal",
+        "timerTemplate": "rectangle"
+      },
+      "linearRating": {
+        "labels": {
+          "size": "small"
+        }
+      },
+      "question": {
+        "description": {
+          "background": {
+            "type": "color",
+            "colorData": {
+              "code": "",
+              "class": ""
+            }
+          },
+          "type": "p",
+          "size": "small"
+        },
+        "answers": {
+          "background": {
+            "type": "color",
+            "colorData": {
+              "code": "",
+              "class": ""
+            }
+          }
+        },
+        "requiredAsterisk": {
+          "colorData": {
+            "code": "#ff0000",
+            "class": ""
+          }
+        },
+        "errorMessages": {
+          "size": "verySmall",
+          "colorData": {
+            "code": "#ff0000",
+            "class": ""
+          }
+        }
+      },
+      "input": {
+        "size": "small",
+        "type": "solidDark"
+      },
+      "textarea": {
+        "size": "small",
+        "type": "solidDark"
+      },
+      "dropdown": {
+        "size": "small",
+        "type": "solidDark"
+      }
+    },
+    "submissionMode": "all",
+    "startingDate": 1626765704,
+    "startingDateEnabled": false,
+    "showOnlyFailedQuestionsOnRetry": false,
+    "retryEnabled": true,
+    "retryOnFailOnly": false,
+    "gradingMethod": null,
+    "maxTries": null,
+    "onlyWrongOnRetake": null,
+    "isAmendable": false,
+    "feedbackShowOnScreen": false,
+    "feedbackDownloadPDF": false,
+    "feedbackShowInline": true,
+    "feedbackQuestionList": "all-questions",
+    "feedbackShowQuestionScore": false,
+    "feedbackShowFeedback": true,
+    "feedbackShowNumbering": false,
+    "feedbackShowSectionTitles": false,
+    "feedbackShowUserAnswers": true,
+    "feedbackShowCorrectAnswers": true,
+    "feedbackShowAnswerCorrectness": true,
+    "displayInlineFeedbackEnabled": true,
+    "displayBackButtonWhenSubmissionPerBlock": true,
+    "feedbackShowSectionResultSummary": false,
+    "askConfirmationBeforeSubmit": false,
+    "hasCustomConfirmationBeforeSubmitText": false,
+    "customConfirmationBeforeSubmitText": "Are you sure you want to submit the questionnaire?",
+    "customConfirmationBeforeSubmitTexts": {
+      "title": "Submit Assessment?",
+      "baseConfirmationMessage": "Are you sure you want to submit the questionnaire?",
+      "unansweredNotice": "You have not answered {X} questions."
+    },
+    "amendResubmissionMinutes": 30,
+    "passingGrade": null,
+    "navigationMode": "per-block",
+    "conditionalBlocks": {
+      "introContent": {
+        "id": "content66a1cb6c0e441",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66a1cb6c0e44b",
+              "type": "text",
+              "insertedAsWidget": true,
+              "properties": {
+                "html": "Coding Decoding PAPER LEVEL-1",
+                "alignment": "center",
+                "customStyle": true,
+                "type": "h2",
+                "size": "normal"
+              }
+            },
+            {
+              "id": "text66a1cb6c0e45d",
+              "type": "text",
+              "properties": {
+                "html": "<div><span style=\"font-size: 1.7rem; letter-spacing: 0rem;\">Self-assess your knowledge. Express yourself and get feedback from our instructors.</span><br></div>",
+                "customStyle": true,
+                "alignment": "center"
+              }
+            },
+            {
+              "id": "spacer66a1cb6c0e468",
+              "type": "spacer",
+              "properties": {
+                "height": 25,
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            },
+            {
+              "id": "button66a1cb6c0e475",
+              "type": "button",
+              "properties": {
+                "buttonLabel": "<span>Ready to start</span>",
+                "buttonSize": "normal",
+                "buttonType": "solidBrand",
+                "alignment": "center",
+                "linkData": {
+                  "linkType": "goToFirst"
+                },
+                "iconColorData": {
+                  "code": "",
+                  "class": ""
+                },
+                "iconDisplay": false,
+                "iconSize": 26,
+                "iconClassName": " fas fa-angle-right",
+                "iconPosition": "right"
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "variables": {
+            "conditionalBlocks_introContent_blockData_widgets_0": []
+          }
+        }
+      },
+      "submissionStartingDate": {
+        "id": "content66a1cb6c0e496",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66a1cb6c0e49b",
+              "type": "text",
+              "properties": {
+                "html": "Sorry but this assessment hasn't started yet."
+              }
+            },
+            {
+              "id": "date66a1cb6c0e4a1",
+              "type": "date",
+              "properties": {
+                "value": ""
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "displayConditions": ["startingDate"]
+        }
+      },
+      "submissionDueDate": {
+        "id": "content66a1cb6c0e4ae",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66a1cb6c0e4b2",
+              "type": "text",
+              "properties": {
+                "html": "Sorry but this assessment date is due."
+              }
+            },
+            {
+              "id": "date66a1cb6c0e4b9",
+              "type": "date",
+              "properties": {
+                "value": ""
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "displayConditions": ["dateIsDue"]
+        }
+      },
+      "outroContent": {
+        "id": "content66a1cb6c0e4c5",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "userResults66a1cb6c0e4c9",
+              "type": "userResults",
+              "properties": {
+                "layout": "template2",
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            },
+            {
+              "id": "feedback66a1cb6c0e4d6",
+              "type": "feedback",
+              "properties": []
+            },
+            {
+              "id": "outroActions66a1cb6c0e4dd",
+              "type": "outroActions",
+              "properties": {
+                "layout": "",
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true
+        }
+      }
+    },
+    "systemSections": null,
+    "sections": [
+      {
+        "id": "section66a1cb6c0e4ee",
+        "title": "",
+        "type": "section",
+        "navigationMode": "per-block",
+        "blocks": [
+          {
+            "id": "mc1721923037454_281",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721923037454_276",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">In a certain code language, If MATHS = 16, ENGLISH = 47, then find the code of SCIENCE?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721923037454_278",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721923037453_270",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721923037454_277",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721923037454_279",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721923037454_273",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>85</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721923037454_280",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721923037454_275",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>87</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721923037454_272",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721923037454_282",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>89</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721923037454_274",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721923037453_271",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>91</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_0": []
+              }
+            }
+          },
+          {
+            "id": "mc1721923117956_293",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721923117956_287",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">In a certain code language if the value of INVADER is 42 and SECURE is 30, then what is the value of SITUATION?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721923117956_292",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721923117956_294",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721923117956_283",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721923117956_290",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721923117956_285",
+                        "type": "text",
+                        "properties": {
+                          "html": "81"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721923117956_284",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721923117956_288",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>72</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721923117956_295",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721923117956_291",
+                        "type": "text",
+                        "properties": {
+                          "html": "63"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721923117956_286",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721923117956_289",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>90</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_1_blockData_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_1": []
+              }
+            }
+          },
+          {
+            "id": "mc1721923211149_296",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721923211149_298",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">If ISLAND is coded as JUOESJ, then how shall PLATEAU be coded?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721923211149_308",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721923211149_299",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721923211149_300",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721923211149_304",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721923211149_303",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>QMDXJGG</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721923211149_297",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721923211149_301",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>RNDXJGB</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721923211149_305",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721923211149_302",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>QNDVJGB</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721923211149_306",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721923211149_307",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>QNDXJGB</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_2_blockData_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_2": []
+              }
+            }
+          },
+          {
+            "id": "mc1721923284220_310",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721923284220_313",
+                    "type": "text",
+                    "properties": {
+                      "html": "If BLACK is coded as 87, then how PAPER is coded in the same pattern?"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721923284220_319",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721923284220_320",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721923284220_309",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721923284220_314",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721923284220_321",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>102</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721923284220_316",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721923284220_312",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>132</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721923284220_318",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721923284220_317",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>168</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721923284220_315",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721923284220_311",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>162</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721923319475_322",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc-option1721923319475_323",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>156</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_3_blockData_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_4_description_widgets_0": [],
+                "sections_0_blocks_3": []
+              }
+            }
+          },
+          {
+            "id": "mc1721923365164_326",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721923365164_330",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">In a certain coding language DELHI is written as IJQMN. In the same coding language, BHOPAL will be written as:</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721923365164_325",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721923365164_327",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721923365164_331",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721923365164_332",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721923365164_335",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>GTTEHQ</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721923365164_333",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721923365164_324",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>HGYJKW</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721923365164_336",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721923365164_329",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>HYTFDE</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721923365164_334",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721923365164_328",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>GMTUFQ</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_4_blockData_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4": []
+              }
+            }
+          },
+          {
+            "id": "mc1721923429244_337",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721923429244_348",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">In a certain code language, ‘DRINK’ is coded as ‘jmhqc’ and ‘BLOTS’ is coded as ‘rsnka’. In the same code language, ‘HONEY’ will be coded as what?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721923429244_347",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721923429244_346",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721923429244_339",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721923429244_341",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721923429244_343",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>xdmog</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721923429244_340",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721923429244_342",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>gnmdx</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721923429244_344",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721923429244_349",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>xdmng</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721923429244_345",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721923429244_338",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>dxmgn</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_5_blockData_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5": []
+              }
+            }
+          },
+          {
+            "id": "mc1721923523052_357",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721923523052_355",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">In a certain coding language LOAFER is written as MMBDFP. In the same coding language, SHORTS will be written as:</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721923523052_354",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721923523052_361",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721923523052_350",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721923523052_362",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721923523052_353",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>TTEPHQ</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721923523052_359",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721923523052_352",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>TPPUPF</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721923523052_360",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721923523052_351",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>PTPUFQ</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721923523052_356",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721923523052_358",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>TFPPUQ</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_6_blockData_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_6": []
+              }
+            }
+          },
+          {
+            "id": "mc1721923607419_367",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721923607419_375",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">If each consonant in the word \"TENDULKAR\" is replaced by the next letter of the English alphabet and each vowel is replaced by the previous letter of the English alphabet, and the new letters thus formed are arranged alphabetically, then which of the following will be the fifth letter from the left end after the rearrangement?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721923607419_371",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721923607419_374",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721923607419_369",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721923607419_368",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721923607419_370",
+                        "type": "text",
+                        "properties": {
+                          "html": "J&nbsp;"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721923607419_372",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721923607419_363",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>L</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721923607419_364",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721923607419_373",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>M</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721923607419_365",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721923607419_366",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>O</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_7_blockData_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_7": []
+              }
+            }
+          },
+          {
+            "id": "mc1721923683388_386",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721923683388_382",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">In a certain code language. If word ‘MAGIC’ is coded as ‘EKICO’. Then what is the code for ‘TOPIC’ in that language?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721923683388_384",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721923683388_379",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721923683388_388",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721923683388_377",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721923683388_387",
+                        "type": "text",
+                        "properties": {
+                          "html": "E K L Q V"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721923683388_376",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721923683388_381",
+                        "type": "text",
+                        "properties": {
+                          "html": "E L K Q V"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721923683388_385",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721923683388_383",
+                        "type": "text",
+                        "properties": {
+                          "html": "K E R Q V"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721923683388_380",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721923683388_378",
+                        "type": "text",
+                        "properties": {
+                          "html": "E K R Q V"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_8_blockData_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_8": []
+              }
+            }
+          },
+          {
+            "id": "mc1721923756332_400",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721923756332_393",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">In a certain language, CAGES is written as NADYB, and SILVER is written as LZRIGR. How is WATER written in that code language?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721923756332_389",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721923756332_397",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721923756332_395",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721923756332_394",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721923756332_399",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>MAQYV</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721923756332_391",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721923756332_398",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>SGWEB</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721923756332_401",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721923756332_396",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>QCPVR</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721923756332_392",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721923756332_390",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>VYQAM</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_9_blockData_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_9": []
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "availabilityStatus": null,
+    "autoNavigationEnabled": false,
+    "displayBackButtonWhenNavigationPerBlock": true,
+    "saveAndResumeLaterEnabled": null,
+    "tagsAddedOnCompletion": [],
+    "tagsAddedOnPass": [],
+    "sendAnonymousSubmissionsToEmailLeads": false,
+    "afterSubmitActionEnabled": null,
+    "afterSubmitActionProperties": null,
+    "showWizardOnNextEdit": false,
+    "revisitAfterSubmissionAction": null,
+    "navigationTemplate": "HorizontalSpacedBetweenNavigationTemplate",
+    "learnerSearchBarEnabled": true,
+    "learnerUnansweredQuestionsEnabled": true,
+    "learnerFavouriteQuestionEnabled": true,
+    "learnerCompletionProgressEnabled": true,
+    "learnerShowIndexOfQuestionsEnabled": false,
+    "learnerTimeNotificationsEnabled": false,
+    "learnerAllowInterruptionsEnabled": true,
+    "learnerAllowInterruptionsTimeoutInMinutes": 30,
+    "learnerReclaimTryOnInterruptionTimeoutEnabled": false,
+    "learnerAskBeforeContinueToSaved": true,
+    "learnerAutoSaveEnabled": null,
+    "spellcheckDisabled": null,
+    "showPartialScoreOnSubmission": true,
+    "deliverableQuestionsSubsetType": "all",
+    "questionRandomizationType": "none",
+    "serveQuestionsBasedOnPreviousSubmission": null,
+    "scoringDisabled": true,
+    "isSelfAssessment": true,
+    "useDefaultCertificateTemplate": null,
+    "certificateTemplate": null,
+    "certificateSocialShare": null,
+    "migrationData": null,
+    "useAssessmentPassingGradeForOpenEndedCorrectness": true,
+    "openEndedCorrectnessPassingGrade": null,
+    "showScorePercentage": null,
+    "showScorePoints": null,
+    "showScoreCorrectAnswers": null,
+    "editorBehaviorSettings": null,
+    "manualReviewEnabled": false,
+    "resultsSummary": {
+      "enabled": true,
+      "showStatusIcon": true,
+      "showStatusText": true,
+      "showScorePercentage": true,
+      "showScorePoints": true,
+      "showScoreCorrectAnswers": true,
+      "showTimeTakenToComplete": true,
+      "showDateSubmitted": true,
+      "showAttemptCount": true
+    },
+    "meta": null,
+    "submissionsCount": 791,
+    "fromMarketplace": null,
+    "aiFeedbackEnabled": null,
+    "numberOfFeedbackQuestions": null,
+    "created": 1721879404.41639,
+    "modified": 1723665800.50966,
+    "contentHash": "7011c30c4fafa7f4022ccab25c97d1fa84b85114e460cc383484a77defac98b9",
+    "id": "66a1cb6c4491eca1eb0f79c5",
+    "objectType": "assessment",
+    "isEditBlockedDueToSync": false,
+    "variables": {
+      "submission": {
+        "self": {
+          "score": null,
+          "points": null,
+          "total_points": null,
+          "correct_answers": null,
+          "total_questions": 10,
+          "time_spent": "00:00:01",
+          "date_submitted": "11/08/26",
+          "attempt_count": 3,
+          "max_tries": null,
+          "pass_grade": null,
+          "time_spent_seconds": 1,
+          "raw_start_date": 1786440405.942988
+        }
+      },
+      "school": {
+        "name": "Apna College",
+        "url": "www.apnacollege.in",
+        "description": "The most loved coding community of India ❤️"
+      },
+      "user": {
+        "username": "ram",
+        "email": "p4542639@gmail.com",
+        "cf_phonenumber": "7666690798"
+      }
+    }
+  },
+  "reclaimedTry": false,
+  "feedback": [
+    {
+      "title": "",
+      "id": "section66a1cb6c0e4ee",
+      "blocks": [
+        {
+          "id": "mc1721923037454_281",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "In a certain code language, If MATHS = 16, ENGLISH = 47, then find the code of SCIENCE?",
+            "widgets": [
+              {
+                "id": "mc1721923037454_276",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">In a certain code language, If MATHS = 16, ENGLISH = 47, then find the code of SCIENCE?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721923037454_279",
+              "description": {
+                "text": "85",
+                "widgets": [
+                  {
+                    "id": "mc1721923037454_273",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>85</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721923037454_280",
+              "description": {
+                "text": "87",
+                "widgets": [
+                  {
+                    "id": "mc1721923037454_275",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>87</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721923037454_272",
+              "description": {
+                "text": "89",
+                "widgets": [
+                  {
+                    "id": "mc1721923037454_282",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>89</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721923037454_274",
+              "description": {
+                "text": "91",
+                "widgets": [
+                  {
+                    "id": "mc1721923037453_271",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>91</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721923037454_279",
+              "text": "85",
+              "widgets": [
+                {
+                  "id": "mc1721923037454_273",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>85</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/40d6ce6b1893d7029b46152d1e9f4754.jpg\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721923117956_293",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "In a certain code language if the value of INVADER is 42 and SECURE is 30, then what is the value of SITUATION?",
+            "widgets": [
+              {
+                "id": "mc1721923117956_287",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">In a certain code language if the value of INVADER is 42 and SECURE is 30, then what is the value of SITUATION?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721923117956_290",
+              "description": {
+                "text": "81",
+                "widgets": [
+                  {
+                    "id": "mc1721923117956_285",
+                    "type": "text",
+                    "properties": {
+                      "html": "81"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721923117956_284",
+              "description": {
+                "text": "72",
+                "widgets": [
+                  {
+                    "id": "mc1721923117956_288",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>72</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721923117956_295",
+              "description": {
+                "text": "63",
+                "widgets": [
+                  {
+                    "id": "mc1721923117956_291",
+                    "type": "text",
+                    "properties": {
+                      "html": "63"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721923117956_286",
+              "description": {
+                "text": "90",
+                "widgets": [
+                  {
+                    "id": "mc1721923117956_289",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>90</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721923117956_284",
+              "text": "72",
+              "widgets": [
+                {
+                  "id": "mc1721923117956_288",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>72</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/cac88d28cec60a71f8f49b2f80108206.jpg\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721923211149_296",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "If ISLAND is coded as JUOESJ, then how shall PLATEAU be coded?",
+            "widgets": [
+              {
+                "id": "mc1721923211149_298",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">If ISLAND is coded as JUOESJ, then how shall PLATEAU be coded?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721923211149_304",
+              "description": {
+                "text": "QMDXJGG",
+                "widgets": [
+                  {
+                    "id": "mc1721923211149_303",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>QMDXJGG</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721923211149_297",
+              "description": {
+                "text": "RNDXJGB",
+                "widgets": [
+                  {
+                    "id": "mc1721923211149_301",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>RNDXJGB</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721923211149_305",
+              "description": {
+                "text": "QNDVJGB",
+                "widgets": [
+                  {
+                    "id": "mc1721923211149_302",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>QNDVJGB</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721923211149_306",
+              "description": {
+                "text": "QNDXJGB",
+                "widgets": [
+                  {
+                    "id": "mc1721923211149_307",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>QNDXJGB</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721923211149_306",
+              "text": "QNDXJGB",
+              "widgets": [
+                {
+                  "id": "mc1721923211149_307",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>QNDXJGB</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/a52728637c16947c553c03905897de8f.jpg\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721923284220_310",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "If BLACK is coded as 87, then how PAPER is coded in the same pattern?",
+            "widgets": [
+              {
+                "id": "mc1721923284220_313",
+                "type": "text",
+                "properties": {
+                  "html": "If BLACK is coded as 87, then how PAPER is coded in the same pattern?"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721923284220_314",
+              "description": {
+                "text": "102",
+                "widgets": [
+                  {
+                    "id": "mc1721923284220_321",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>102</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721923284220_316",
+              "description": {
+                "text": "132",
+                "widgets": [
+                  {
+                    "id": "mc1721923284220_312",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>132</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721923284220_318",
+              "description": {
+                "text": "168",
+                "widgets": [
+                  {
+                    "id": "mc1721923284220_317",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>168</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721923284220_315",
+              "description": {
+                "text": "162",
+                "widgets": [
+                  {
+                    "id": "mc1721923284220_311",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>162</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721923319475_322",
+              "description": {
+                "text": "156",
+                "widgets": [
+                  {
+                    "id": "mc-option1721923319475_323",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>156</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721923284220_318",
+              "text": "168",
+              "widgets": [
+                {
+                  "id": "mc1721923284220_317",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>168</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/40e3a33091ebf50fd3768ed8ba962609.jpg\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721923365164_326",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "In a certain coding language DELHI is written as IJQMN. In the same coding language, BHOPAL will be written as:",
+            "widgets": [
+              {
+                "id": "mc1721923365164_330",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">In a certain coding language DELHI is written as IJQMN. In the same coding language, BHOPAL will be written as:</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721923365164_332",
+              "description": {
+                "text": "GTTEHQ",
+                "widgets": [
+                  {
+                    "id": "mc1721923365164_335",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>GTTEHQ</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721923365164_333",
+              "description": {
+                "text": "HGYJKW",
+                "widgets": [
+                  {
+                    "id": "mc1721923365164_324",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>HGYJKW</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721923365164_336",
+              "description": {
+                "text": "HYTFDE",
+                "widgets": [
+                  {
+                    "id": "mc1721923365164_329",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>HYTFDE</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721923365164_334",
+              "description": {
+                "text": "GMTUFQ",
+                "widgets": [
+                  {
+                    "id": "mc1721923365164_328",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>GMTUFQ</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721923365164_334",
+              "text": "GMTUFQ",
+              "widgets": [
+                {
+                  "id": "mc1721923365164_328",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>GMTUFQ</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/5d40e74ee448c8e453ed270f35dfa19a.jpg\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721923429244_337",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "In a certain code language, ‘DRINK’ is coded as ‘jmhqc’ and ‘BLOTS’ is coded as ‘rsnka’. In the same code language, ‘HONEY’ will be coded as what?",
+            "widgets": [
+              {
+                "id": "mc1721923429244_348",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">In a certain code language, ‘DRINK’ is coded as ‘jmhqc’ and ‘BLOTS’ is coded as ‘rsnka’. In the same code language, ‘HONEY’ will be coded as what?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721923429244_341",
+              "description": {
+                "text": "xdmog",
+                "widgets": [
+                  {
+                    "id": "mc1721923429244_343",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>xdmog</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721923429244_340",
+              "description": {
+                "text": "gnmdx",
+                "widgets": [
+                  {
+                    "id": "mc1721923429244_342",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>gnmdx</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721923429244_344",
+              "description": {
+                "text": "xdmng",
+                "widgets": [
+                  {
+                    "id": "mc1721923429244_349",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>xdmng</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721923429244_345",
+              "description": {
+                "text": "dxmgn",
+                "widgets": [
+                  {
+                    "id": "mc1721923429244_338",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>dxmgn</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721923429244_344",
+              "text": "xdmng",
+              "widgets": [
+                {
+                  "id": "mc1721923429244_349",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>xdmng</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>The word formed from the previous alphabets of 'DRINK' written in small-hand is 'cqhmj' \nrespectively. Now reversing the order, we get the code 'jmhqc'.\nSimilarly, 'BLOTS' becomes 'aknsr' which on reversing becomes the code 'rsnka'.\n<br>Similarly 'HONEY' becomes 'gnmdx', which on reversing becomes the code 'xdmng'.<br></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721923523052_357",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "In a certain coding language LOAFER is written as MMBDFP. In the same coding language, SHORTS will be written as:",
+            "widgets": [
+              {
+                "id": "mc1721923523052_355",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">In a certain coding language LOAFER is written as MMBDFP. In the same coding language, SHORTS will be written as:</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721923523052_362",
+              "description": {
+                "text": "TTEPHQ",
+                "widgets": [
+                  {
+                    "id": "mc1721923523052_353",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>TTEPHQ</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721923523052_359",
+              "description": {
+                "text": "TPPUPF",
+                "widgets": [
+                  {
+                    "id": "mc1721923523052_352",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>TPPUPF</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721923523052_360",
+              "description": {
+                "text": "PTPUFQ",
+                "widgets": [
+                  {
+                    "id": "mc1721923523052_351",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>PTPUFQ</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721923523052_356",
+              "description": {
+                "text": "TFPPUQ",
+                "widgets": [
+                  {
+                    "id": "mc1721923523052_358",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>TFPPUQ</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721923523052_356",
+              "text": "TFPPUQ",
+              "widgets": [
+                {
+                  "id": "mc1721923523052_358",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>TFPPUQ</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/c4b9348972b89ed70e149edad5ccd6ea.jpg\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721923607419_367",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "If each consonant in the word \"TENDULKAR\" is replaced by the next letter of the English alphabet and each vowel is replaced by the previous letter of the English alphabet, and the new letters thus formed are arranged alphabetically, then which of the following will be the fifth letter from the left end after the rearrangement?",
+            "widgets": [
+              {
+                "id": "mc1721923607419_375",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">If each consonant in the word \"TENDULKAR\" is replaced by the next letter of the English alphabet and each vowel is replaced by the previous letter of the English alphabet, and the new letters thus formed are arranged alphabetically, then which of the following will be the fifth letter from the left end after the rearrangement?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721923607419_368",
+              "description": {
+                "text": "J",
+                "widgets": [
+                  {
+                    "id": "mc1721923607419_370",
+                    "type": "text",
+                    "properties": {
+                      "html": "J&nbsp;"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721923607419_372",
+              "description": {
+                "text": "L",
+                "widgets": [
+                  {
+                    "id": "mc1721923607419_363",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>L</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721923607419_364",
+              "description": {
+                "text": "M",
+                "widgets": [
+                  {
+                    "id": "mc1721923607419_373",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>M</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721923607419_365",
+              "description": {
+                "text": "O",
+                "widgets": [
+                  {
+                    "id": "mc1721923607419_366",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>O</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721923607419_365",
+              "text": "O",
+              "widgets": [
+                {
+                  "id": "mc1721923607419_366",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>O</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/1e5c18bd4887d153b5c45b9fdfe37e8f.jpg\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721923683388_386",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "In a certain code language. If word ‘MAGIC’ is coded as ‘EKICO’. Then what is the code for ‘TOPIC’ in that language?",
+            "widgets": [
+              {
+                "id": "mc1721923683388_382",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">In a certain code language. If word ‘MAGIC’ is coded as ‘EKICO’. Then what is the code for ‘TOPIC’ in that language?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721923683388_377",
+              "description": {
+                "text": "E K L Q V",
+                "widgets": [
+                  {
+                    "id": "mc1721923683388_387",
+                    "type": "text",
+                    "properties": {
+                      "html": "E K L Q V"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721923683388_376",
+              "description": {
+                "text": "E L K Q V",
+                "widgets": [
+                  {
+                    "id": "mc1721923683388_381",
+                    "type": "text",
+                    "properties": {
+                      "html": "E L K Q V"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721923683388_385",
+              "description": {
+                "text": "K E R Q V",
+                "widgets": [
+                  {
+                    "id": "mc1721923683388_383",
+                    "type": "text",
+                    "properties": {
+                      "html": "K E R Q V"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721923683388_380",
+              "description": {
+                "text": "E K R Q V",
+                "widgets": [
+                  {
+                    "id": "mc1721923683388_378",
+                    "type": "text",
+                    "properties": {
+                      "html": "E K R Q V"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721923683388_380",
+              "text": "E K R Q V",
+              "widgets": [
+                {
+                  "id": "mc1721923683388_378",
+                  "type": "text",
+                  "properties": {
+                    "html": "E K R Q V"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/c2914af10c5087f275e3d018601294e4.jpg\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721923756332_400",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "In a certain language, CAGES is written as NADYB, and SILVER is written as LZRIGR. How is WATER written in that code language?",
+            "widgets": [
+              {
+                "id": "mc1721923756332_393",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">In a certain language, CAGES is written as NADYB, and SILVER is written as LZRIGR. How is WATER written in that code language?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721923756332_394",
+              "description": {
+                "text": "MAQYV",
+                "widgets": [
+                  {
+                    "id": "mc1721923756332_399",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>MAQYV</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721923756332_391",
+              "description": {
+                "text": "SGWEB",
+                "widgets": [
+                  {
+                    "id": "mc1721923756332_398",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>SGWEB</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721923756332_401",
+              "description": {
+                "text": "QCPVR",
+                "widgets": [
+                  {
+                    "id": "mc1721923756332_396",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>QCPVR</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721923756332_392",
+              "description": {
+                "text": "VYQAM",
+                "widgets": [
+                  {
+                    "id": "mc1721923756332_390",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>VYQAM</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721923756332_394",
+              "text": "MAQYV",
+              "widgets": [
+                {
+                  "id": "mc1721923756332_399",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>MAQYV</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/ef9c14a807f1f6ef9f3e163130b5d95f.jpg\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        }
+      ]
+    }
+  ],
+  "submitted": true,
+  "updated": true,
+  "retryCount": 3,
+  "inlineFeedback": [],
+  "errors": [],
+  "success": true
+}

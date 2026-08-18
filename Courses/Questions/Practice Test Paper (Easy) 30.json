@@ -1,0 +1,3075 @@
+{
+  "submission": {
+    "anon_id": null,
+    "model": "assessment-submission",
+    "courseTitleId": "aptitude-qs-library",
+    "object_id": "66a1cb608a62d5a0ba0b12a8",
+    "assessmentId": "66a1cb608a62d5a0ba0b12a7",
+    "snapshotId": "66c7168b06abbc2b11026685",
+    "questions": {
+      "section66a1cb606af19": [
+        "mc1721989098611_280",
+        "mc1721989180304_287",
+        "mc1721989341507_322",
+        "mc1721989417399_343",
+        "mc1721989461156_353",
+        "mc1721989552848_362",
+        "mc1721989601748_377",
+        "mc1721989816703_387",
+        "mc1721989909867_402",
+        "mc1721989990855_429"
+      ]
+    },
+    "certificateAnswers": [],
+    "certificateId": null,
+    "questionData": {
+      "mc1721989098611_280": {
+        "deliveredOnTimestamp": 1786440418.9056,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721989180304_287": {
+        "deliveredOnTimestamp": 1786440418.905623,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721989341507_322": {
+        "deliveredOnTimestamp": 1786440418.905637,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721989417399_343": {
+        "deliveredOnTimestamp": 1786440418.90565,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721989461156_353": {
+        "deliveredOnTimestamp": 1786440418.905661,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721989552848_362": {
+        "deliveredOnTimestamp": 1786440418.905672,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721989601748_377": {
+        "deliveredOnTimestamp": 1786440418.905683,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721989816703_387": {
+        "deliveredOnTimestamp": 1786440418.905694,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721989909867_402": {
+        "deliveredOnTimestamp": 1786440418.905704,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721989990855_429": {
+        "deliveredOnTimestamp": 1786440418.905719,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      }
+    },
+    "answers": [
+      {
+        "blockId": "mc1721989098611_280",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721989180304_287",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721989341507_322",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721989417399_343",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721989461156_353",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721989552848_362",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721989601748_377",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721989816703_387",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721989909867_402",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721989990855_429",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      }
+    ],
+    "submittedTimestamp": 1786440419.137357,
+    "status": "submitted",
+    "grading_status": "grading_status_no_grade",
+    "access": "public",
+    "actual_score": null,
+    "score": [],
+    "source": {
+      "type": "unit"
+    },
+    "isDefining": true,
+    "isAdminAutoGradedSubmission": null,
+    "listOfNonConsentedBlocks": [],
+    "created": 1786440418.911835,
+    "modified": 1786440419.242765,
+    "id": "6a7aeae2cf3726cf200180fe",
+    "passed": null
+  },
+  "assessment": {
+    "title": "Practice Test Paper (Easy)",
+    "access": "public",
+    "type": "assessment",
+    "model": "assessmentSnapshot",
+    "description": "Foundational practice test paper containing 10 assessment questions covering Mensuration & Geometry, Seating Arrangements.",
+    "isTimed": false,
+    "timerFor": "assessmentTimed",
+    "onTimerExpiration": "autoSubmit",
+    "assessmentTimeLimitInSeconds": 600,
+    "questionTimeLimitInSeconds": 60,
+    "standaloneShareEnabled": null,
+    "customUrl": null,
+    "usesCustomUrl": null,
+    "allowAnonymous": true,
+    "randomizeQuestionOptions": false,
+    "disallowPartialSubmissions": false,
+    "submissionDueDateEnabled": false,
+    "submissionDueDate": 1626257823,
+    "makeFeedbackAvailableAfterDateEnabled": false,
+    "makeFeedbackAvailableAfterDate": 0,
+    "customStylesEnabled": true,
+    "customStyles": {
+      "assessmentPage": {
+        "background": {
+          "type": "color",
+          "colorData": {
+            "code": "",
+            "class": "lw-body-bg"
+          }
+        },
+        "dividers": {
+          "top": {
+            "orientation": "top",
+            "divider": "none"
+          },
+          "bottom": {
+            "orientation": "bottom",
+            "divider": "none"
+          }
+        }
+      },
+      "option": {
+        "radioEffect": "scribble",
+        "checkboxEffect": "scribble",
+        "size": "small"
+      },
+      "assessment": {
+        "transition": "none",
+        "background": {
+          "type": "color",
+          "colorData": {
+            "code": "",
+            "class": ""
+          }
+        },
+        "width": "normal",
+        "timerTemplate": "rectangle"
+      },
+      "linearRating": {
+        "labels": {
+          "size": "small"
+        }
+      },
+      "question": {
+        "description": {
+          "background": {
+            "type": "color",
+            "colorData": {
+              "code": "",
+              "class": ""
+            }
+          },
+          "type": "p",
+          "size": "small"
+        },
+        "answers": {
+          "background": {
+            "type": "color",
+            "colorData": {
+              "code": "",
+              "class": ""
+            }
+          }
+        },
+        "requiredAsterisk": {
+          "colorData": {
+            "code": "#ff0000",
+            "class": ""
+          }
+        },
+        "errorMessages": {
+          "size": "verySmall",
+          "colorData": {
+            "code": "#ff0000",
+            "class": ""
+          }
+        }
+      },
+      "input": {
+        "size": "small",
+        "type": "solidDark"
+      },
+      "textarea": {
+        "size": "small",
+        "type": "solidDark"
+      },
+      "dropdown": {
+        "size": "small",
+        "type": "solidDark"
+      }
+    },
+    "submissionMode": "all",
+    "startingDate": 1626765704,
+    "startingDateEnabled": false,
+    "showOnlyFailedQuestionsOnRetry": false,
+    "retryEnabled": true,
+    "retryOnFailOnly": false,
+    "gradingMethod": null,
+    "maxTries": null,
+    "onlyWrongOnRetake": null,
+    "isAmendable": false,
+    "feedbackShowOnScreen": false,
+    "feedbackDownloadPDF": false,
+    "feedbackShowInline": true,
+    "feedbackQuestionList": "all-questions",
+    "feedbackShowQuestionScore": false,
+    "feedbackShowFeedback": true,
+    "feedbackShowNumbering": false,
+    "feedbackShowSectionTitles": false,
+    "feedbackShowUserAnswers": true,
+    "feedbackShowCorrectAnswers": true,
+    "feedbackShowAnswerCorrectness": true,
+    "displayInlineFeedbackEnabled": true,
+    "displayBackButtonWhenSubmissionPerBlock": true,
+    "feedbackShowSectionResultSummary": false,
+    "askConfirmationBeforeSubmit": false,
+    "hasCustomConfirmationBeforeSubmitText": false,
+    "customConfirmationBeforeSubmitText": "Are you sure you want to submit the questionnaire?",
+    "customConfirmationBeforeSubmitTexts": {
+      "title": "Submit Assessment?",
+      "baseConfirmationMessage": "Are you sure you want to submit the questionnaire?",
+      "unansweredNotice": "You have not answered {X} questions."
+    },
+    "amendResubmissionMinutes": 30,
+    "passingGrade": null,
+    "navigationMode": "per-block",
+    "conditionalBlocks": {
+      "introContent": {
+        "id": "content66a1cb606ae5a",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66a1cb606ae65",
+              "type": "text",
+              "insertedAsWidget": true,
+              "properties": {
+                "html": "Circular Arrangements PAPER LEVEL-1",
+                "alignment": "center",
+                "customStyle": true,
+                "type": "h2",
+                "size": "normal"
+              }
+            },
+            {
+              "id": "text66a1cb606ae78",
+              "type": "text",
+              "properties": {
+                "html": "<div><span style=\"font-size: 1.7rem; letter-spacing: 0rem;\">Self-assess your knowledge. Express yourself and get feedback from our instructors.</span><br></div>",
+                "customStyle": true,
+                "alignment": "center"
+              }
+            },
+            {
+              "id": "spacer66a1cb606ae84",
+              "type": "spacer",
+              "properties": {
+                "height": 25,
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            },
+            {
+              "id": "button66a1cb606ae92",
+              "type": "button",
+              "properties": {
+                "buttonLabel": "<span>Ready to start</span>",
+                "buttonSize": "normal",
+                "buttonType": "solidBrand",
+                "alignment": "center",
+                "linkData": {
+                  "linkType": "goToFirst"
+                },
+                "iconColorData": {
+                  "code": "",
+                  "class": ""
+                },
+                "iconDisplay": false,
+                "iconSize": 26,
+                "iconClassName": " fas fa-angle-right",
+                "iconPosition": "right"
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "variables": {
+            "conditionalBlocks_introContent_blockData_widgets_0": []
+          }
+        }
+      },
+      "submissionStartingDate": {
+        "id": "content66a1cb606aeb7",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66a1cb606aebc",
+              "type": "text",
+              "properties": {
+                "html": "Sorry but this assessment hasn't started yet."
+              }
+            },
+            {
+              "id": "date66a1cb606aec3",
+              "type": "date",
+              "properties": {
+                "value": ""
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "displayConditions": ["startingDate"]
+        }
+      },
+      "submissionDueDate": {
+        "id": "content66a1cb606aed1",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66a1cb606aed6",
+              "type": "text",
+              "properties": {
+                "html": "Sorry but this assessment date is due."
+              }
+            },
+            {
+              "id": "date66a1cb606aedd",
+              "type": "date",
+              "properties": {
+                "value": ""
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "displayConditions": ["dateIsDue"]
+        }
+      },
+      "outroContent": {
+        "id": "content66a1cb606aeeb",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "userResults66a1cb606aef0",
+              "type": "userResults",
+              "properties": {
+                "layout": "template2",
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            },
+            {
+              "id": "feedback66a1cb606aefe",
+              "type": "feedback",
+              "properties": []
+            },
+            {
+              "id": "outroActions66a1cb606af05",
+              "type": "outroActions",
+              "properties": {
+                "layout": "",
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true
+        }
+      }
+    },
+    "systemSections": null,
+    "sections": [
+      {
+        "id": "section66a1cb606af19",
+        "title": "",
+        "type": "section",
+        "navigationMode": "per-block",
+        "blocks": [
+          {
+            "id": "mc1721989098611_280",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721989098611_275",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong>\n</p><div style=\"text-align: justify;\">Eight people Aman, Binay, Charul, Dhaval, Eric, Fred, Ganesh, and Harry are sitting around a circular table. Aman and Binay are facing toward the center while the other six people are facing opposite the center. Charul is not an immediate neighbor of Dhaval. Aman sits second to the right of Harry. Binay sits third to the left of Aman. Harry is sitting between Dhaval and Ganesh. Ganesh is the immediate neighbor of neither Binay nor Aman. Eric and Fred are immediate neighbors of each other.</div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">Which of the following pairs represents the people who are immediate neighbors of Charul?</div>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721989098611_271",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721989098611_274",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721989098611_279",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721989098611_272",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721989098611_276",
+                        "type": "text",
+                        "properties": {
+                          "html": "Binay and Ganesh"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721989098611_282",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721989098611_278",
+                        "type": "text",
+                        "properties": {
+                          "html": "Aman and Harry"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721989098611_281",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721989098611_273",
+                        "type": "text",
+                        "properties": {
+                          "html": "Ganesh and Harry&nbsp;"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721989098611_270",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721989098611_277",
+                        "type": "text",
+                        "properties": {
+                          "html": "Dhaval and Ganesh"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": []
+              }
+            }
+          },
+          {
+            "id": "mc1721989180304_287",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721989180304_292",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong>\n</p><div style=\"text-align: justify;\">Eight people Aman, Binay, Charul, Dhaval, Eric, Fred, Ganesh, and Harry are sitting around a circular table. Aman and Binay are facing toward the center while the other six people are facing opposite the center. Charul is not an immediate neighbor of Dhaval. Aman sits second to the right of Harry. Binay sits third to the left of Aman. Harry is sitting between Dhaval and Ganesh. Ganesh is the immediate neighbor of neither Binay nor Aman. Eric and Fred are immediate neighbors of each other.</div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">Who is sitting third to the left of Ganesh?</div>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721989180304_283",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721989180304_286",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721989180304_284",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721989180304_291",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721989180304_295",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Charul</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721989180304_285",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721989180304_289",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Aman</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721989180304_290",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721989180304_293",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Binay</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721989180304_288",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721989180304_294",
+                        "type": "text",
+                        "properties": {
+                          "html": "Either Eric or Fred"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_1_blockData_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_1": []
+              }
+            }
+          },
+          {
+            "id": "mc1721989341507_322",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721989341507_328",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong>\n</p><div style=\"text-align: justify;\">Six persons, A, B, C, D, K, and L, sit around a circular table facing the center, but not necessarily in the same order. C sits two places away from K, who is not adjacent to L. A sits adjacent to C and opposite D.\n</div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">Who sits to the immediate left of K?</div>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721989341507_323",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721989341507_325",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721989341507_332",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721989341507_324",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721989341507_326",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>B</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721989341507_327",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721989341507_334",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>A</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721989341507_331",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721989341507_333",
+                        "type": "text",
+                        "properties": {
+                          "html": "A or D"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721989341507_329",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721989341507_330",
+                        "type": "text",
+                        "properties": {
+                          "html": "A or B"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_2_blockData_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_2": []
+              }
+            }
+          },
+          {
+            "id": "mc1721989417399_343",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721989417399_335",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong>\n</p><div style=\"text-align: justify;\">Six persons, A, B, C, D, K, and L, sit around a circular table facing the center, but not necessarily in the same order. C sits two places away from K, who is not adjacent to L. A sits adjacent to C and opposite D.\n</div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">Who sits opposite of A?</div>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721989417399_339",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721989417399_337",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721989417399_340",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721989417399_341",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721989417399_338",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>B</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721989417399_346",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721989417399_336",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>D</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721989417399_344",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721989417399_342",
+                        "type": "text",
+                        "properties": {
+                          "html": "K"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721989417399_347",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721989417399_345",
+                        "type": "text",
+                        "properties": {
+                          "html": "L"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_2_blockData_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_2": [],
+                "sections_0_blocks_3_blockData_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3": []
+              }
+            }
+          },
+          {
+            "id": "mc1721989461156_353",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721989461156_349",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong>\n</p><div style=\"text-align: justify;\">There are six people Jay, Kamal, Lakhan, Mohan, Naren, and Om, seating around a rectangular table facing outwards. Four of them are seated at the longer sides (two people on each of the longer side) and remaining are seated at the shorter sides (one person on each of the shorter side). Mohan and Naren are not immediate neighbors. Jay is sitting diagonally opposite to Kamal. Om and Mohan sit diagonally opposite to each other. Kamal is sitting second to the left of Lakhan, who is sitting at the shorter side of the table. Naren is sitting two places away from Jay.\n</div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">Who sits to the immediate right of Naren?</div>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721989461156_360",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721989461156_356",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721989461156_350",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721989461156_348",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721989461156_354",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Mohan</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721989461156_351",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721989461156_359",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Lakhan</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721989461156_355",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721989461156_352",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Jay</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721989461156_357",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721989461156_358",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Kamal</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_4_blockData_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4": []
+              }
+            }
+          },
+          {
+            "id": "mc1721989552848_362",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721989552848_373",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong>\n</p><div style=\"text-align: justify;\">There are six people Jay, Kamal, Lakhan, Mohan, Naren, and Om, seating around a rectangular table facing outwards. Four of them are seated at the longer sides (two people on each of the longer side) and remaining are seated at the shorter sides (one person on each of the shorter side). Mohan and Naren are not immediate neighbors. Jay is sitting diagonally opposite to Kamal. Om and Mohan sit diagonally opposite to each other. Kamal is sitting second to the left of Lakhan, who is sitting at the shorter side of the table. Naren is sitting two places away from Jay.\n</div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">Who sits second to the left of Lakhan?</div>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721989552848_368",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721989552848_363",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721989552848_365",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721989552848_369",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721989552848_371",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Kamal</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721989552848_367",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721989552848_366",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Mohan</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721989552848_370",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721989552848_361",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Naren</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721989552848_372",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721989552848_364",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Om</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_4_blockData_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4": [],
+                "sections_0_blocks_5_blockData_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5": []
+              }
+            }
+          },
+          {
+            "id": "mc1721989601748_377",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721989601748_381",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong>\n</p><div style=\"text-align: justify;\">In a circular ring, six people, Aryan, Bimal, Chauhan, Dhiraj, Esha, and Farhan, are sitting, and they are facing toward the center. Bimal sits 2nd to the right of Aryan, Esha sits to the immediate left of Dhiraj, and Esha does not sit beside Bimal. Farhan sits 3rd to the left of Aryan.\n</div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">Who sits to the immediate right of Esha?</div>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721989601748_375",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721989601748_376",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721989601748_382",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721989601748_385",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721989601748_378",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Dhiraj</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721989601748_380",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721989601748_386",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Bimal</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721989601748_374",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721989601748_383",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Farhan</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721989601748_384",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721989601748_379",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Chauhan</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_6_blockData_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_6": []
+              }
+            }
+          },
+          {
+            "id": "mc1721989816703_387",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721989816703_394",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong>\n</p><div style=\"text-align: justify;\">In a circular ring, six people, Aryan, Bimal, Chauhan, Dhiraj, Esha, and Farhan, are sitting, and they are facing toward the center. Bimal sits 2nd to the right of Aryan, Esha sits to the immediate left of Dhiraj, and Esha does not sit beside Bimal. Farhan sits 3rd to the left of Aryan.\n</div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">Who among the following sits to the opposite of Dhiraj?</div>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721989816703_398",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721989816703_396",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721989816703_399",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721989816703_395",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721989816703_390",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Chauhan</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721989816703_388",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721989816703_391",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Esha</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721989816703_389",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721989816703_392",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Bimal</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721989816703_397",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721989816703_393",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Farhan</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_6_blockData_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_6": [],
+                "sections_0_blocks_7_blockData_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_7": []
+              }
+            }
+          },
+          {
+            "id": "mc1721989909867_402",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721989909867_401",
+                    "type": "text",
+                    "properties": {
+                      "html": "<strong>Direction for questions :</strong>\n<div>Five boys Ajay, Bijay, Chirag, Dhruv and Emam are sitting in a park in a circle. Ajay is facing South – West, Dhruv is facing South – East. Bijay and Emam and  Ajay and Dhruv are opposite to each other and Chirag is equidistant between Dhruv and Bijay. \n</div><div><br></div><div>Which direction is Chirag facing?</div>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721989909867_409",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721989909867_408",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721989909867_406",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721989909867_407",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721989909867_404",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>West</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721989909867_400",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721989909867_412",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>South</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721989909867_411",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721989909867_405",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>North</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721989909867_410",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721989909867_403",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>East</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_8_blockData_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_8": []
+              }
+            }
+          },
+          {
+            "id": "mc1721989990855_429",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721989990855_432",
+                    "type": "text",
+                    "properties": {
+                      "html": "<strong>Direction for questions :</strong>\n<div>Five boys Ajay, Bijay, Chirag, Dhruv and Emam are sitting in a park in a circle. Ajay is facing South – West, Dhruv is facing South – East. Bijay and Emam and  Ajay and Dhruv are opposite to each other and Chirag is equidistant between Dhruv and Bijay. \n</div><div><br></div><div>Out of the four pairs, which pair doesn’t have the same relation as others?</div>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721989990855_428",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721989990855_436",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721989990855_427",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721989990855_430",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721989990855_433",
+                        "type": "text",
+                        "properties": {
+                          "html": "Ajay - Bijay"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721989990855_431",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721989990855_435",
+                        "type": "text",
+                        "properties": {
+                          "html": "Bijay - Emam"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721989990855_426",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721989990855_434",
+                        "type": "text",
+                        "properties": {
+                          "html": "Chirag - Bijay"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721989990855_437",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721989990855_438",
+                        "type": "text",
+                        "properties": {
+                          "html": "Dhruv – Chirag"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_8_blockData_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_8": [],
+                "sections_0_blocks_9_blockData_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_9": []
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "availabilityStatus": null,
+    "autoNavigationEnabled": false,
+    "displayBackButtonWhenNavigationPerBlock": true,
+    "saveAndResumeLaterEnabled": null,
+    "tagsAddedOnCompletion": [],
+    "tagsAddedOnPass": [],
+    "sendAnonymousSubmissionsToEmailLeads": false,
+    "afterSubmitActionEnabled": null,
+    "afterSubmitActionProperties": null,
+    "showWizardOnNextEdit": false,
+    "revisitAfterSubmissionAction": null,
+    "navigationTemplate": "HorizontalSpacedBetweenNavigationTemplate",
+    "learnerSearchBarEnabled": true,
+    "learnerUnansweredQuestionsEnabled": true,
+    "learnerFavouriteQuestionEnabled": true,
+    "learnerCompletionProgressEnabled": true,
+    "learnerShowIndexOfQuestionsEnabled": false,
+    "learnerTimeNotificationsEnabled": false,
+    "learnerAllowInterruptionsEnabled": true,
+    "learnerAllowInterruptionsTimeoutInMinutes": 30,
+    "learnerReclaimTryOnInterruptionTimeoutEnabled": false,
+    "learnerAskBeforeContinueToSaved": true,
+    "learnerAutoSaveEnabled": null,
+    "spellcheckDisabled": null,
+    "showPartialScoreOnSubmission": true,
+    "deliverableQuestionsSubsetType": "all",
+    "questionRandomizationType": "none",
+    "serveQuestionsBasedOnPreviousSubmission": null,
+    "scoringDisabled": true,
+    "isSelfAssessment": true,
+    "useDefaultCertificateTemplate": null,
+    "certificateTemplate": null,
+    "certificateSocialShare": null,
+    "migrationData": null,
+    "useAssessmentPassingGradeForOpenEndedCorrectness": true,
+    "openEndedCorrectnessPassingGrade": null,
+    "showScorePercentage": null,
+    "showScorePoints": null,
+    "showScoreCorrectAnswers": null,
+    "editorBehaviorSettings": null,
+    "manualReviewEnabled": false,
+    "resultsSummary": {
+      "enabled": true,
+      "showStatusIcon": true,
+      "showStatusText": true,
+      "showScorePercentage": true,
+      "showScorePoints": true,
+      "showScoreCorrectAnswers": true,
+      "showTimeTakenToComplete": true,
+      "showDateSubmitted": true,
+      "showAttemptCount": true
+    },
+    "meta": null,
+    "submissionsCount": 200,
+    "fromMarketplace": null,
+    "aiFeedbackEnabled": null,
+    "numberOfFeedbackQuestions": null,
+    "created": 1721879392.798298,
+    "modified": 1724323467.975835,
+    "contentHash": "8f31ead8eac67c040d1482958c539699b8891c0430117aec6984f22141f5734a",
+    "id": "66a1cb608a62d5a0ba0b12a7",
+    "objectType": "assessment",
+    "isEditBlockedDueToSync": false,
+    "variables": {
+      "submission": {
+        "self": {
+          "score": null,
+          "points": null,
+          "total_points": null,
+          "correct_answers": null,
+          "total_questions": 10,
+          "time_spent": "00:00:01",
+          "date_submitted": "11/08/26",
+          "attempt_count": 3,
+          "max_tries": null,
+          "pass_grade": null,
+          "time_spent_seconds": 1,
+          "raw_start_date": 1786440418.911835
+        }
+      },
+      "school": {
+        "name": "Apna College",
+        "url": "www.apnacollege.in",
+        "description": "The most loved coding community of India ❤️"
+      },
+      "user": {
+        "username": "ram",
+        "email": "p4542639@gmail.com",
+        "cf_phonenumber": "7666690798"
+      }
+    }
+  },
+  "reclaimedTry": false,
+  "feedback": [
+    {
+      "title": "",
+      "id": "section66a1cb606af19",
+      "blocks": [
+        {
+          "id": "mc1721989098611_280",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions : Eight people Aman, Binay, Charul, Dhaval, Eric, Fred, Ganesh, and Harry are sitting around a circular table. Aman and Binay are facing toward the center while the other six people are facing opposite the center. Charul is not an immediate neighbor of Dhaval. Aman sits second to the right of Harry. Binay sits third to the left of Aman. Harry is sitting between Dhaval and Ganesh. Ganesh is the immediate neighbor of neither Binay nor Aman. Eric and Fred are immediate neighbors of each other.Which of the following pairs represents the people who are immediate neighbors of Charul?",
+            "widgets": [
+              {
+                "id": "mc1721989098611_275",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong>\n</p><div style=\"text-align: justify;\">Eight people Aman, Binay, Charul, Dhaval, Eric, Fred, Ganesh, and Harry are sitting around a circular table. Aman and Binay are facing toward the center while the other six people are facing opposite the center. Charul is not an immediate neighbor of Dhaval. Aman sits second to the right of Harry. Binay sits third to the left of Aman. Harry is sitting between Dhaval and Ganesh. Ganesh is the immediate neighbor of neither Binay nor Aman. Eric and Fred are immediate neighbors of each other.</div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">Which of the following pairs represents the people who are immediate neighbors of Charul?</div>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721989098611_272",
+              "description": {
+                "text": "Binay and Ganesh",
+                "widgets": [
+                  {
+                    "id": "mc1721989098611_276",
+                    "type": "text",
+                    "properties": {
+                      "html": "Binay and Ganesh"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721989098611_282",
+              "description": {
+                "text": "Aman and Harry",
+                "widgets": [
+                  {
+                    "id": "mc1721989098611_278",
+                    "type": "text",
+                    "properties": {
+                      "html": "Aman and Harry"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721989098611_281",
+              "description": {
+                "text": "Ganesh and Harry",
+                "widgets": [
+                  {
+                    "id": "mc1721989098611_273",
+                    "type": "text",
+                    "properties": {
+                      "html": "Ganesh and Harry&nbsp;"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721989098611_270",
+              "description": {
+                "text": "Dhaval and Ganesh",
+                "widgets": [
+                  {
+                    "id": "mc1721989098611_277",
+                    "type": "text",
+                    "properties": {
+                      "html": "Dhaval and Ganesh"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721989098611_272",
+              "text": "Binay and Ganesh",
+              "widgets": [
+                {
+                  "id": "mc1721989098611_276",
+                  "type": "text",
+                  "properties": {
+                    "html": "Binay and Ganesh"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/57a4a880dd68897aa5556e70c2e8994a.jpg\"><br>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721989180304_287",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions : Eight people Aman, Binay, Charul, Dhaval, Eric, Fred, Ganesh, and Harry are sitting around a circular table. Aman and Binay are facing toward the center while the other six people are facing opposite the center. Charul is not an immediate neighbor of Dhaval. Aman sits second to the right of Harry. Binay sits third to the left of Aman. Harry is sitting between Dhaval and Ganesh. Ganesh is the immediate neighbor of neither Binay nor Aman. Eric and Fred are immediate neighbors of each other.Who is sitting third to the left of Ganesh?",
+            "widgets": [
+              {
+                "id": "mc1721989180304_292",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong>\n</p><div style=\"text-align: justify;\">Eight people Aman, Binay, Charul, Dhaval, Eric, Fred, Ganesh, and Harry are sitting around a circular table. Aman and Binay are facing toward the center while the other six people are facing opposite the center. Charul is not an immediate neighbor of Dhaval. Aman sits second to the right of Harry. Binay sits third to the left of Aman. Harry is sitting between Dhaval and Ganesh. Ganesh is the immediate neighbor of neither Binay nor Aman. Eric and Fred are immediate neighbors of each other.</div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">Who is sitting third to the left of Ganesh?</div>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721989180304_291",
+              "description": {
+                "text": "Charul",
+                "widgets": [
+                  {
+                    "id": "mc1721989180304_295",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Charul</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721989180304_285",
+              "description": {
+                "text": "Aman",
+                "widgets": [
+                  {
+                    "id": "mc1721989180304_289",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Aman</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721989180304_290",
+              "description": {
+                "text": "Binay",
+                "widgets": [
+                  {
+                    "id": "mc1721989180304_293",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Binay</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721989180304_288",
+              "description": {
+                "text": "Either Eric or Fred",
+                "widgets": [
+                  {
+                    "id": "mc1721989180304_294",
+                    "type": "text",
+                    "properties": {
+                      "html": "Either Eric or Fred"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721989180304_288",
+              "text": "Either Eric or Fred",
+              "widgets": [
+                {
+                  "id": "mc1721989180304_294",
+                  "type": "text",
+                  "properties": {
+                    "html": "Either Eric or Fred"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br>Charul is sitting to the left of Ganesh.<br>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721989341507_322",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions : Six persons, A, B, C, D, K, and L, sit around a circular table facing the center, but not necessarily in the same order. C sits two places away from K, who is not adjacent to L. A sits adjacent to C and opposite D. Who sits to the immediate left of K?",
+            "widgets": [
+              {
+                "id": "mc1721989341507_328",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong>\n</p><div style=\"text-align: justify;\">Six persons, A, B, C, D, K, and L, sit around a circular table facing the center, but not necessarily in the same order. C sits two places away from K, who is not adjacent to L. A sits adjacent to C and opposite D.\n</div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">Who sits to the immediate left of K?</div>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721989341507_324",
+              "description": {
+                "text": "B",
+                "widgets": [
+                  {
+                    "id": "mc1721989341507_326",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>B</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721989341507_327",
+              "description": {
+                "text": "A",
+                "widgets": [
+                  {
+                    "id": "mc1721989341507_334",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>A</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721989341507_331",
+              "description": {
+                "text": "A or D",
+                "widgets": [
+                  {
+                    "id": "mc1721989341507_333",
+                    "type": "text",
+                    "properties": {
+                      "html": "A or D"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721989341507_329",
+              "description": {
+                "text": "A or B",
+                "widgets": [
+                  {
+                    "id": "mc1721989341507_330",
+                    "type": "text",
+                    "properties": {
+                      "html": "A or B"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721989341507_329",
+              "text": "A or B",
+              "widgets": [
+                {
+                  "id": "mc1721989341507_330",
+                  "type": "text",
+                  "properties": {
+                    "html": "A or B"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/df86dd259de5886c2e963dc484909a8e.jpg\"><br>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721989417399_343",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions : Six persons, A, B, C, D, K, and L, sit around a circular table facing the center, but not necessarily in the same order. C sits two places away from K, who is not adjacent to L. A sits adjacent to C and opposite D. Who sits opposite of A?",
+            "widgets": [
+              {
+                "id": "mc1721989417399_335",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong>\n</p><div style=\"text-align: justify;\">Six persons, A, B, C, D, K, and L, sit around a circular table facing the center, but not necessarily in the same order. C sits two places away from K, who is not adjacent to L. A sits adjacent to C and opposite D.\n</div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">Who sits opposite of A?</div>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721989417399_341",
+              "description": {
+                "text": "B",
+                "widgets": [
+                  {
+                    "id": "mc1721989417399_338",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>B</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721989417399_346",
+              "description": {
+                "text": "D",
+                "widgets": [
+                  {
+                    "id": "mc1721989417399_336",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>D</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721989417399_344",
+              "description": {
+                "text": "K",
+                "widgets": [
+                  {
+                    "id": "mc1721989417399_342",
+                    "type": "text",
+                    "properties": {
+                      "html": "K"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721989417399_347",
+              "description": {
+                "text": "L",
+                "widgets": [
+                  {
+                    "id": "mc1721989417399_345",
+                    "type": "text",
+                    "properties": {
+                      "html": "L"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721989417399_346",
+              "text": "D",
+              "widgets": [
+                {
+                  "id": "mc1721989417399_336",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>D</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br>D is sitting to the opposite of A.<br>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721989461156_353",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions : There are six people Jay, Kamal, Lakhan, Mohan, Naren, and Om, seating around a rectangular table facing outwards. Four of them are seated at the longer sides (two people on each of the longer side) and remaining are seated at the shorter sides (one person on each of the shorter side). Mohan and Naren are not immediate neighbors. Jay is sitting diagonally opposite to Kamal. Om and Mohan sit diagonally opposite to each other. Kamal is sitting second to the left of Lakhan, who is sitting at the shorter side of the table. Naren is sitting two places away from Jay. Who sits to the immediate right of Naren?",
+            "widgets": [
+              {
+                "id": "mc1721989461156_349",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong>\n</p><div style=\"text-align: justify;\">There are six people Jay, Kamal, Lakhan, Mohan, Naren, and Om, seating around a rectangular table facing outwards. Four of them are seated at the longer sides (two people on each of the longer side) and remaining are seated at the shorter sides (one person on each of the shorter side). Mohan and Naren are not immediate neighbors. Jay is sitting diagonally opposite to Kamal. Om and Mohan sit diagonally opposite to each other. Kamal is sitting second to the left of Lakhan, who is sitting at the shorter side of the table. Naren is sitting two places away from Jay.\n</div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">Who sits to the immediate right of Naren?</div>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721989461156_348",
+              "description": {
+                "text": "Mohan",
+                "widgets": [
+                  {
+                    "id": "mc1721989461156_354",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Mohan</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721989461156_351",
+              "description": {
+                "text": "Lakhan",
+                "widgets": [
+                  {
+                    "id": "mc1721989461156_359",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Lakhan</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721989461156_355",
+              "description": {
+                "text": "Jay",
+                "widgets": [
+                  {
+                    "id": "mc1721989461156_352",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Jay</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721989461156_357",
+              "description": {
+                "text": "Kamal",
+                "widgets": [
+                  {
+                    "id": "mc1721989461156_358",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Kamal</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721989461156_357",
+              "text": "Kamal",
+              "widgets": [
+                {
+                  "id": "mc1721989461156_358",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>Kamal</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/94d418b3424d766f66fe69f0731b6ce4.jpg\"><br>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721989552848_362",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions : There are six people Jay, Kamal, Lakhan, Mohan, Naren, and Om, seating around a rectangular table facing outwards. Four of them are seated at the longer sides (two people on each of the longer side) and remaining are seated at the shorter sides (one person on each of the shorter side). Mohan and Naren are not immediate neighbors. Jay is sitting diagonally opposite to Kamal. Om and Mohan sit diagonally opposite to each other. Kamal is sitting second to the left of Lakhan, who is sitting at the shorter side of the table. Naren is sitting two places away from Jay. Who sits second to the left of Lakhan?",
+            "widgets": [
+              {
+                "id": "mc1721989552848_373",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong>\n</p><div style=\"text-align: justify;\">There are six people Jay, Kamal, Lakhan, Mohan, Naren, and Om, seating around a rectangular table facing outwards. Four of them are seated at the longer sides (two people on each of the longer side) and remaining are seated at the shorter sides (one person on each of the shorter side). Mohan and Naren are not immediate neighbors. Jay is sitting diagonally opposite to Kamal. Om and Mohan sit diagonally opposite to each other. Kamal is sitting second to the left of Lakhan, who is sitting at the shorter side of the table. Naren is sitting two places away from Jay.\n</div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">Who sits second to the left of Lakhan?</div>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721989552848_369",
+              "description": {
+                "text": "Kamal",
+                "widgets": [
+                  {
+                    "id": "mc1721989552848_371",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Kamal</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721989552848_367",
+              "description": {
+                "text": "Mohan",
+                "widgets": [
+                  {
+                    "id": "mc1721989552848_366",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Mohan</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721989552848_370",
+              "description": {
+                "text": "Naren",
+                "widgets": [
+                  {
+                    "id": "mc1721989552848_361",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Naren</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721989552848_372",
+              "description": {
+                "text": "Om",
+                "widgets": [
+                  {
+                    "id": "mc1721989552848_364",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Om</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721989552848_367",
+              "text": "Mohan",
+              "widgets": [
+                {
+                  "id": "mc1721989552848_366",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>Mohan</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br>Kamal sits second to the left of Laxman.<br>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721989601748_377",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions : In a circular ring, six people, Aryan, Bimal, Chauhan, Dhiraj, Esha, and Farhan, are sitting, and they are facing toward the center. Bimal sits 2nd to the right of Aryan, Esha sits to the immediate left of Dhiraj, and Esha does not sit beside Bimal. Farhan sits 3rd to the left of Aryan. Who sits to the immediate right of Esha?",
+            "widgets": [
+              {
+                "id": "mc1721989601748_381",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong>\n</p><div style=\"text-align: justify;\">In a circular ring, six people, Aryan, Bimal, Chauhan, Dhiraj, Esha, and Farhan, are sitting, and they are facing toward the center. Bimal sits 2nd to the right of Aryan, Esha sits to the immediate left of Dhiraj, and Esha does not sit beside Bimal. Farhan sits 3rd to the left of Aryan.\n</div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">Who sits to the immediate right of Esha?</div>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721989601748_385",
+              "description": {
+                "text": "Dhiraj",
+                "widgets": [
+                  {
+                    "id": "mc1721989601748_378",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Dhiraj</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721989601748_380",
+              "description": {
+                "text": "Bimal",
+                "widgets": [
+                  {
+                    "id": "mc1721989601748_386",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Bimal</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721989601748_374",
+              "description": {
+                "text": "Farhan",
+                "widgets": [
+                  {
+                    "id": "mc1721989601748_383",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Farhan</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721989601748_384",
+              "description": {
+                "text": "Chauhan",
+                "widgets": [
+                  {
+                    "id": "mc1721989601748_379",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Chauhan</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721989601748_385",
+              "text": "Dhiraj",
+              "widgets": [
+                {
+                  "id": "mc1721989601748_378",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>Dhiraj</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/d230a0962d1e153b8700041b2f1e7bbc.jpg\"><br><br>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721989816703_387",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions : In a circular ring, six people, Aryan, Bimal, Chauhan, Dhiraj, Esha, and Farhan, are sitting, and they are facing toward the center. Bimal sits 2nd to the right of Aryan, Esha sits to the immediate left of Dhiraj, and Esha does not sit beside Bimal. Farhan sits 3rd to the left of Aryan. Who among the following sits to the opposite of Dhiraj?",
+            "widgets": [
+              {
+                "id": "mc1721989816703_394",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong>\n</p><div style=\"text-align: justify;\">In a circular ring, six people, Aryan, Bimal, Chauhan, Dhiraj, Esha, and Farhan, are sitting, and they are facing toward the center. Bimal sits 2nd to the right of Aryan, Esha sits to the immediate left of Dhiraj, and Esha does not sit beside Bimal. Farhan sits 3rd to the left of Aryan.\n</div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">Who among the following sits to the opposite of Dhiraj?</div>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721989816703_395",
+              "description": {
+                "text": "Chauhan",
+                "widgets": [
+                  {
+                    "id": "mc1721989816703_390",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Chauhan</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721989816703_388",
+              "description": {
+                "text": "Esha",
+                "widgets": [
+                  {
+                    "id": "mc1721989816703_391",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Esha</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721989816703_389",
+              "description": {
+                "text": "Bimal",
+                "widgets": [
+                  {
+                    "id": "mc1721989816703_392",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Bimal</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721989816703_397",
+              "description": {
+                "text": "Farhan",
+                "widgets": [
+                  {
+                    "id": "mc1721989816703_393",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Farhan</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721989816703_389",
+              "text": "Bimal",
+              "widgets": [
+                {
+                  "id": "mc1721989816703_392",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>Bimal</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br>Bimal sits to the opposite of Dhiraj.<br><br>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721989909867_402",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions : Five boys Ajay, Bijay, Chirag, Dhruv and Emam are sitting in a park in a circle. Ajay is facing South – West, Dhruv is facing South – East. Bijay and Emam and Ajay and Dhruv are opposite to each other and Chirag is equidistant between Dhruv and Bijay. Which direction is Chirag facing?",
+            "widgets": [
+              {
+                "id": "mc1721989909867_401",
+                "type": "text",
+                "properties": {
+                  "html": "<strong>Direction for questions :</strong>\n<div>Five boys Ajay, Bijay, Chirag, Dhruv and Emam are sitting in a park in a circle. Ajay is facing South – West, Dhruv is facing South – East. Bijay and Emam and  Ajay and Dhruv are opposite to each other and Chirag is equidistant between Dhruv and Bijay. \n</div><div><br></div><div>Which direction is Chirag facing?</div>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721989909867_407",
+              "description": {
+                "text": "West",
+                "widgets": [
+                  {
+                    "id": "mc1721989909867_404",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>West</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721989909867_400",
+              "description": {
+                "text": "South",
+                "widgets": [
+                  {
+                    "id": "mc1721989909867_412",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>South</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721989909867_411",
+              "description": {
+                "text": "North",
+                "widgets": [
+                  {
+                    "id": "mc1721989909867_405",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>North</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721989909867_410",
+              "description": {
+                "text": "East",
+                "widgets": [
+                  {
+                    "id": "mc1721989909867_403",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>East</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721989909867_410",
+              "text": "East",
+              "widgets": [
+                {
+                  "id": "mc1721989909867_403",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>East</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/a355488e8328fb595a12ed4cb702f1c8.jpg\"><br>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721989990855_429",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions : Five boys Ajay, Bijay, Chirag, Dhruv and Emam are sitting in a park in a circle. Ajay is facing South – West, Dhruv is facing South – East. Bijay and Emam and Ajay and Dhruv are opposite to each other and Chirag is equidistant between Dhruv and Bijay. Out of the four pairs, which pair doesn’t have the same relation as others?",
+            "widgets": [
+              {
+                "id": "mc1721989990855_432",
+                "type": "text",
+                "properties": {
+                  "html": "<strong>Direction for questions :</strong>\n<div>Five boys Ajay, Bijay, Chirag, Dhruv and Emam are sitting in a park in a circle. Ajay is facing South – West, Dhruv is facing South – East. Bijay and Emam and  Ajay and Dhruv are opposite to each other and Chirag is equidistant between Dhruv and Bijay. \n</div><div><br></div><div>Out of the four pairs, which pair doesn’t have the same relation as others?</div>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721989990855_430",
+              "description": {
+                "text": "Ajay - Bijay",
+                "widgets": [
+                  {
+                    "id": "mc1721989990855_433",
+                    "type": "text",
+                    "properties": {
+                      "html": "Ajay - Bijay"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721989990855_431",
+              "description": {
+                "text": "Bijay - Emam",
+                "widgets": [
+                  {
+                    "id": "mc1721989990855_435",
+                    "type": "text",
+                    "properties": {
+                      "html": "Bijay - Emam"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721989990855_426",
+              "description": {
+                "text": "Chirag - Bijay",
+                "widgets": [
+                  {
+                    "id": "mc1721989990855_434",
+                    "type": "text",
+                    "properties": {
+                      "html": "Chirag - Bijay"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721989990855_437",
+              "description": {
+                "text": "Dhruv – Chirag",
+                "widgets": [
+                  {
+                    "id": "mc1721989990855_438",
+                    "type": "text",
+                    "properties": {
+                      "html": "Dhruv – Chirag"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721989990855_430",
+              "text": "Ajay - Bijay",
+              "widgets": [
+                {
+                  "id": "mc1721989990855_433",
+                  "type": "text",
+                  "properties": {
+                    "html": "Ajay - Bijay"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br>Ajay and Bijay are sitting opposite to each other, rest all the other pairs mentioned are sitting \nadjacent to each other.<br>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        }
+      ]
+    }
+  ],
+  "submitted": true,
+  "updated": true,
+  "retryCount": 3,
+  "inlineFeedback": [],
+  "errors": [],
+  "success": true
+}

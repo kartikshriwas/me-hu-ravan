@@ -1,0 +1,3098 @@
+{
+  "submission": {
+    "anon_id": null,
+    "model": "assessment-submission",
+    "courseTitleId": "aptitude-teacher2",
+    "object_id": "66b74bb77f809db010095235",
+    "assessmentId": "66b74bb77f809db010095234",
+    "snapshotId": "66be0445b9d3a00b830b92c5",
+    "questions": {
+      "section66b74bb6e259e": [
+        "mc66b74bb6e25a5",
+        "mc66b74bb6e2653",
+        "mc66b74bb6e2701",
+        "mc66b74bb6e27af",
+        "mc66b74bb6e285c",
+        "mc66b74bb6e2919",
+        "mc66b74bb6e29cd",
+        "mc66b74bb6e2a89",
+        "mc66b74bb6e2b38",
+        "mc66b74bb6e2bed"
+      ]
+    },
+    "certificateAnswers": [],
+    "certificateId": null,
+    "questionData": {
+      "mc66b74bb6e25a5": {
+        "deliveredOnTimestamp": 1786440562.900109,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74bb6e2653": {
+        "deliveredOnTimestamp": 1786440562.900132,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74bb6e2701": {
+        "deliveredOnTimestamp": 1786440562.900146,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74bb6e27af": {
+        "deliveredOnTimestamp": 1786440562.900158,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74bb6e285c": {
+        "deliveredOnTimestamp": 1786440562.90017,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74bb6e2919": {
+        "deliveredOnTimestamp": 1786440562.900181,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74bb6e29cd": {
+        "deliveredOnTimestamp": 1786440562.900203,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74bb6e2a89": {
+        "deliveredOnTimestamp": 1786440562.900216,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74bb6e2b38": {
+        "deliveredOnTimestamp": 1786440562.900229,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74bb6e2bed": {
+        "deliveredOnTimestamp": 1786440562.900243,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      }
+    },
+    "answers": [
+      {
+        "blockId": "mc66b74bb6e25a5",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74bb6e2653",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74bb6e2701",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74bb6e27af",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74bb6e285c",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74bb6e2919",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74bb6e29cd",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74bb6e2a89",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74bb6e2b38",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74bb6e2bed",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      }
+    ],
+    "submittedTimestamp": 1786440563.135877,
+    "status": "submitted",
+    "grading_status": "grading_status_graded",
+    "access": "public",
+    "actual_score": null,
+    "score": {
+      "maxScore": 10,
+      "value": 0,
+      "pass": false,
+      "passGrade": 50,
+      "points": 0
+    },
+    "source": {
+      "type": "unit"
+    },
+    "isDefining": true,
+    "isAdminAutoGradedSubmission": null,
+    "listOfNonConsentedBlocks": [],
+    "created": 1786440562.906967,
+    "modified": 1786440563.27587,
+    "id": "6a7aeb72aac1c5a70a089547",
+    "passed": false
+  },
+  "assessment": {
+    "title": "Practice Test Paper (Easy)",
+    "access": "public",
+    "type": "assessment",
+    "model": "assessmentSnapshot",
+    "description": "Foundational practice test paper featuring 10 fundamental aptitude and reasoning questions for quick revision.",
+    "isTimed": false,
+    "timerFor": "assessmentTimed",
+    "onTimerExpiration": "autoSubmit",
+    "assessmentTimeLimitInSeconds": 600,
+    "questionTimeLimitInSeconds": 60,
+    "standaloneShareEnabled": null,
+    "customUrl": null,
+    "usesCustomUrl": null,
+    "allowAnonymous": true,
+    "randomizeQuestionOptions": false,
+    "disallowPartialSubmissions": false,
+    "submissionDueDateEnabled": false,
+    "submissionDueDate": 1626257823,
+    "makeFeedbackAvailableAfterDateEnabled": false,
+    "makeFeedbackAvailableAfterDate": 0,
+    "customStylesEnabled": true,
+    "customStyles": {
+      "assessmentPage": {
+        "background": {
+          "type": "color",
+          "colorData": {
+            "code": "",
+            "class": "lw-body-bg"
+          }
+        },
+        "dividers": {
+          "top": {
+            "orientation": "top",
+            "divider": "none"
+          },
+          "bottom": {
+            "orientation": "bottom",
+            "divider": "none"
+          }
+        }
+      },
+      "option": {
+        "radioEffect": "scribble",
+        "checkboxEffect": "scribble",
+        "size": "small"
+      },
+      "assessment": {
+        "transition": "none",
+        "background": {
+          "type": "color",
+          "colorData": {
+            "code": "",
+            "class": ""
+          }
+        },
+        "width": "normal",
+        "timerTemplate": "rectangle"
+      },
+      "linearRating": {
+        "labels": {
+          "size": "small"
+        }
+      },
+      "question": {
+        "description": {
+          "background": {
+            "type": "color",
+            "colorData": {
+              "code": "",
+              "class": ""
+            }
+          },
+          "type": "p",
+          "size": "small"
+        },
+        "answers": {
+          "background": {
+            "type": "color",
+            "colorData": {
+              "code": "",
+              "class": ""
+            }
+          }
+        },
+        "requiredAsterisk": {
+          "colorData": {
+            "code": "#ff0000",
+            "class": ""
+          }
+        },
+        "errorMessages": {
+          "size": "verySmall",
+          "colorData": {
+            "code": "#ff0000",
+            "class": ""
+          }
+        }
+      },
+      "input": {
+        "size": "small",
+        "type": "solidDark"
+      },
+      "textarea": {
+        "size": "small",
+        "type": "solidDark"
+      },
+      "dropdown": {
+        "size": "small",
+        "type": "solidDark"
+      }
+    },
+    "submissionMode": "all",
+    "startingDate": 1626765704,
+    "startingDateEnabled": false,
+    "showOnlyFailedQuestionsOnRetry": false,
+    "retryEnabled": true,
+    "retryOnFailOnly": false,
+    "gradingMethod": null,
+    "maxTries": null,
+    "onlyWrongOnRetake": null,
+    "isAmendable": false,
+    "feedbackShowOnScreen": true,
+    "feedbackDownloadPDF": false,
+    "feedbackShowInline": null,
+    "feedbackQuestionList": "all-questions",
+    "feedbackShowQuestionScore": true,
+    "feedbackShowFeedback": true,
+    "feedbackShowNumbering": false,
+    "feedbackShowSectionTitles": false,
+    "feedbackShowUserAnswers": true,
+    "feedbackShowCorrectAnswers": true,
+    "feedbackShowAnswerCorrectness": true,
+    "displayInlineFeedbackEnabled": null,
+    "displayBackButtonWhenSubmissionPerBlock": null,
+    "feedbackShowSectionResultSummary": false,
+    "askConfirmationBeforeSubmit": true,
+    "hasCustomConfirmationBeforeSubmitText": false,
+    "customConfirmationBeforeSubmitText": "Are you sure you want to submit the questionnaire?",
+    "customConfirmationBeforeSubmitTexts": {
+      "title": "Submit Assessment?",
+      "baseConfirmationMessage": "Are you sure you want to submit the questionnaire?",
+      "unansweredNotice": "You have not answered {X} questions."
+    },
+    "amendResubmissionMinutes": 30,
+    "passingGrade": null,
+    "navigationMode": "per-block",
+    "conditionalBlocks": {
+      "introContent": {
+        "id": "content66b74bb6e24db",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66b74bb6e24f9",
+              "type": "text",
+              "insertedAsWidget": true,
+              "properties": {
+                "html": "Puzzles - Ordering PAPER LEVEL-1",
+                "alignment": "center",
+                "customStyle": true,
+                "type": "h2",
+                "size": "normal"
+              }
+            },
+            {
+              "id": "text66b74bb6e250a",
+              "type": "text",
+              "properties": {
+                "html": "Self-assess your knowledge. Express yourself and get feedback from our instructors.",
+                "customStyle": true,
+                "alignment": "center"
+              }
+            },
+            {
+              "id": "spacer66b74bb6e2515",
+              "type": "spacer",
+              "properties": {
+                "height": 20,
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            },
+            {
+              "id": "button66b74bb6e2523",
+              "type": "button",
+              "properties": {
+                "buttonLabel": "<span>Ready to start</span>",
+                "buttonSize": "normal",
+                "buttonType": "solidBrand",
+                "alignment": "center",
+                "linkData": {
+                  "linkType": "goToFirst"
+                },
+                "iconColorData": {
+                  "code": "",
+                  "class": ""
+                },
+                "iconDisplay": false,
+                "iconSize": 26,
+                "iconClassName": " fas fa-angle-right",
+                "iconPosition": "right"
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "variables": {
+            "conditionalBlocks_introContent_blockData_widgets_0": [],
+            "conditionalBlocks_introContent_blockData_widgets_1": []
+          }
+        }
+      },
+      "submissionStartingDate": {
+        "id": "content66b74bb6e2545",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66b74bb6e254a",
+              "type": "text",
+              "properties": {
+                "html": "Sorry but this assessment hasn't started yet."
+              }
+            },
+            {
+              "id": "date66b74bb6e2551",
+              "type": "date",
+              "properties": {
+                "value": ""
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "displayConditions": ["startingDate"]
+        }
+      },
+      "submissionDueDate": {
+        "id": "content66b74bb6e255e",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66b74bb6e2562",
+              "type": "text",
+              "properties": {
+                "html": "Sorry but this assessment date is due."
+              }
+            },
+            {
+              "id": "date66b74bb6e2569",
+              "type": "date",
+              "properties": {
+                "value": ""
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "displayConditions": ["dateIsDue"]
+        }
+      },
+      "outroContent": {
+        "id": "content66b74bb6e2575",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "userResults66b74bb6e257a",
+              "type": "userResults",
+              "properties": {
+                "layout": "template2",
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            },
+            {
+              "id": "feedback66b74bb6e2586",
+              "type": "feedback",
+              "properties": []
+            },
+            {
+              "id": "outroActions66b74bb6e258d",
+              "type": "outroActions",
+              "properties": {
+                "layout": "",
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true
+        }
+      }
+    },
+    "systemSections": null,
+    "sections": [
+      {
+        "id": "section66b74bb6e259e",
+        "title": "",
+        "type": "section",
+        "navigationMode": "per-block",
+        "blocks": [
+          {
+            "id": "mc66b74bb6e25a5",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bb6e25aa",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">Sachin is better than Rohit. Rohit is not as good as Surya. Raina is better than Suresh but not as good as Sachin. Who is the best player among all?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74bb6e25bd",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74bb6e25c4",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74bb6e25cc",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74bb6e25ec",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb6e25f3",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Sachin</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb6e2603",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb6e260a",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Raina</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb6e2619",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb6e2620",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Surya</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb6e262f",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb6e2636",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Suresh</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74bb6e2653",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bb6e2658",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">Five floors are named A,K,P,R,T which is actually 1st to 5th floor but not necessarily in the given order. Only T is between K and P. P is below K. R is just below P. A is three places below T. What is the name of the 1st floor?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74bb6e266b",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74bb6e2672",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74bb6e2679",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74bb6e2699",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb6e26a0",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>T</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb6e26af",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb6e26b5",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>R</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb6e26c4",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb6e26cb",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>P</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb6e26da",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb6e26e1",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>A</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_1_blockData_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_1": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74bb6e2701",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bb6e2706",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">Five friends, Deepika, Tina, Aditi, Soumen and Warisha are of different heights but not necessarily in the same order. Soumen is taller than three other friends. Warisha is just taller than Tina but just shorter than Aditi. There is no one who is taller than Deepika. Who is at the 4th position if we arrange them according to height where tallest person is the No. 1 person?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74bb6e2717",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74bb6e271e",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74bb6e2726",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74bb6e2746",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb6e274d",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Warisha</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb6e275c",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb6e2763",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Aditi</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb6e2772",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb6e2779",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Soumen</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb6e2788",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb6e278f",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Tina</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_2_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_2": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74bb6e27af",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bb6e27b3",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">Six athletes, A,B,C,D,E and F finishes a 200 m sprint in different positions, but not necessarily in the same order. D finishes the sprint exactly before 3 athletes. E finishes after D but before B. No one finishes before C. There are exactly two athletes in between F and E.  Who finishes the sprint at last position or sixth position?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74bb6e27c5",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74bb6e27cc",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74bb6e27d3",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74bb6e27f3",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb6e27fa",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>A</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb6e2809",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb6e2810",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>E</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb6e281f",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb6e2825",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>F</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb6e2834",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb6e283b",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>B</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_3_blockData_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74bb6e285c",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bb6e2861",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong></p><p style=\"text-align: justify;\"><span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">Seven individuals M, N, O, P, Q, R, and S reside in a building of seven stories. The first floor is at the bottom, while the seventh is at the top. O and Q are separated by three storeys. M resides below S and above P. R resides one even number of storeys below the fifth floor. S does not reside in a higher storey than Q. O resides directly below R. There is exactly the same number of persons living below Q as there are above N.</span></p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">Who resides at the 1st floor?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74bb6e2872",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74bb6e2879",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74bb6e2891",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74bb6e28b0",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb6e28b7",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>P</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb6e28c6",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb6e28cd",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Q</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb6e28dc",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb6e28e3",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>N</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb6e28f2",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb6e28f9",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>O</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_4_blockData_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74bb6e2919",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bb6e291e",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong></p><p style=\"text-align: justify;\"><span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">Seven individuals M, N, O, P, Q, R, and S reside in a building of seven stories. The first floor is at the bottom, while the seventh is at the top. O and Q are separated by three storeys. M resides below S and above P. R resides one even number of storeys below the fifth floor. S does not reside in a higher storey than Q. O resides directly below R. There is exactly the same number of persons living below Q as there are above N.</span></p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">Who resides at exactly between 1st and 7th floor?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74bb6e2930",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74bb6e2937",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74bb6e293e",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74bb6e295d",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb6e2964",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>R</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb6e2973",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb6e297a",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>O</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb6e2989",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb6e2990",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>M</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb6e299f",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb6e29a5",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>S</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_4_blockData_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74bb6e29cd",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bb6e29d2",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong></p><p style=\"text-align: justify;\"><span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">Seven individuals M, N, O, P, Q, R, and S reside in a building of seven stories. The first floor is at the bottom, while the seventh is at the top. O and Q are separated by three storeys. M resides below S and above P. R resides one even number of storeys below the fifth floor. S does not reside in a higher storey than Q. O resides directly below R. There is exactly the same number of persons living below Q as there are above N.</span></p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">Who resides just above M?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74bb6e29e3",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74bb6e29ea",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74bb6e29f2",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74bb6e2a11",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb6e2a18",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Q</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb6e2a27",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb6e2a2e",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>S</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb6e2a3d",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb6e2a44",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>R</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb6e2a53",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb6e2a5a",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>P</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_4_blockData_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_6": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74bb6e2a89",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bb6e2a8d",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong>\n</p><p style=\"text-align: justify;\">Eleven persons A, B, C, D, E, F, G, H, I, J and K buy merchandises one after another, but not necessarily in the same order.\n</p><p style=\"text-align: justify;\">Two people at most are purchasing goods ahead of F. There is just one buyer between D and F. There is just one buyer between C and D. C is making the purchase before H does. The number of people purchasing goods following H equals the number of people purchasing goods prior to I. K is purchasing immediately ahead of B and right after J. Between G and J, there are just two people purchasing merchandise. A is purchasing the item just ahead of E.\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">Who buy merchandise at the end?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74bb6e2a9f",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74bb6e2aa6",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74bb6e2aae",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74bb6e2acd",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb6e2ad4",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>E</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb6e2ae4",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb6e2aeb",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>F</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb6e2afa",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb6e2b01",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>A</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb6e2b10",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb6e2b17",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>G</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_7_blockData_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_7": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74bb6e2b38",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bb6e2b3d",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong>\n</p><p style=\"text-align: justify;\">Eleven persons A, B, C, D, E, F, G, H, I, J and K buy merchandises one after another, but not necessarily in the same order.\n</p><p style=\"text-align: justify;\">Two people at most are purchasing goods ahead of F. There is just one buyer between D and F. There is just one buyer between C and D. C is making the purchase before H does. The number of people purchasing goods following H equals the number of people purchasing goods prior to I. K is purchasing immediately ahead of B and right after J. Between G and J, there are just two people purchasing merchandise. A is purchasing the item just ahead of E.\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">How many people buy in between D and J?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74bb6e2b4e",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74bb6e2b55",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74bb6e2b5d",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74bb6e2b7c",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb6e2b83",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>4</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb6e2b93",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb6e2b99",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>3</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb6e2ba9",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb6e2bb0",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>2</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb6e2bbf",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb6e2bc6",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>5</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_7_blockData_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_8": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74bb6e2bed",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bb6e2bf2",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong>\n</p><p style=\"text-align: justify;\">Eleven persons A, B, C, D, E, F, G, H, I, J and K buy merchandises one after another, but not necessarily in the same order.\n</p><p style=\"text-align: justify;\">Two people at most are purchasing goods ahead of F. There is just one buyer between D and F. There is just one buyer between C and D. C is making the purchase before H does. The number of people purchasing goods following H equals the number of people purchasing goods prior to I. K is purchasing immediately ahead of B and right after J. Between G and J, there are just two people purchasing merchandise. A is purchasing the item just ahead of E.\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">Who purchase just after B?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74bb6e2c04",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74bb6e2c0b",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74bb6e2c12",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74bb6e2c32",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb6e2c39",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>K</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb6e2c48",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb6e2c4f",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>J</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb6e2c5f",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb6e2c66",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>C</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb6e2c82",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb6e2c89",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>H</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_7_blockData_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_9": []
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "availabilityStatus": null,
+    "autoNavigationEnabled": false,
+    "displayBackButtonWhenNavigationPerBlock": true,
+    "saveAndResumeLaterEnabled": null,
+    "tagsAddedOnCompletion": [],
+    "tagsAddedOnPass": [],
+    "sendAnonymousSubmissionsToEmailLeads": false,
+    "afterSubmitActionEnabled": null,
+    "afterSubmitActionProperties": null,
+    "showWizardOnNextEdit": false,
+    "revisitAfterSubmissionAction": null,
+    "navigationTemplate": "HorizontalSpacedBetweenNavigationTemplate",
+    "learnerSearchBarEnabled": true,
+    "learnerUnansweredQuestionsEnabled": true,
+    "learnerFavouriteQuestionEnabled": true,
+    "learnerCompletionProgressEnabled": true,
+    "learnerShowIndexOfQuestionsEnabled": false,
+    "learnerTimeNotificationsEnabled": false,
+    "learnerAllowInterruptionsEnabled": true,
+    "learnerAllowInterruptionsTimeoutInMinutes": 30,
+    "learnerReclaimTryOnInterruptionTimeoutEnabled": false,
+    "learnerAskBeforeContinueToSaved": true,
+    "learnerAutoSaveEnabled": null,
+    "spellcheckDisabled": null,
+    "showPartialScoreOnSubmission": true,
+    "deliverableQuestionsSubsetType": "all",
+    "questionRandomizationType": "none",
+    "serveQuestionsBasedOnPreviousSubmission": null,
+    "scoringDisabled": false,
+    "isSelfAssessment": false,
+    "useDefaultCertificateTemplate": null,
+    "certificateTemplate": null,
+    "certificateSocialShare": null,
+    "migrationData": null,
+    "useAssessmentPassingGradeForOpenEndedCorrectness": true,
+    "openEndedCorrectnessPassingGrade": null,
+    "showScorePercentage": null,
+    "showScorePoints": null,
+    "showScoreCorrectAnswers": null,
+    "editorBehaviorSettings": null,
+    "manualReviewEnabled": null,
+    "resultsSummary": {
+      "enabled": true,
+      "showStatusIcon": true,
+      "showStatusText": true,
+      "showScorePercentage": true,
+      "showScorePoints": true,
+      "showScoreCorrectAnswers": false,
+      "showTimeTakenToComplete": true,
+      "showDateSubmitted": true,
+      "showAttemptCount": true
+    },
+    "meta": null,
+    "submissionsCount": 1406,
+    "fromMarketplace": null,
+    "aiFeedbackEnabled": null,
+    "numberOfFeedbackQuestions": null,
+    "created": 1723288503.55186,
+    "modified": 1723728965.594869,
+    "contentHash": "d4d0175df7b98547c1a2f348bf715f02a827fb2a6c9869850669207fab9b2afe",
+    "id": "66b74bb77f809db010095234",
+    "objectType": "assessment",
+    "isEditBlockedDueToSync": false,
+    "variables": {
+      "submission": {
+        "self": {
+          "score": 0,
+          "points": 0,
+          "total_points": 10,
+          "correct_answers": 0,
+          "total_questions": 10,
+          "time_spent": "00:00:01",
+          "date_submitted": "11/08/26",
+          "attempt_count": 3,
+          "max_tries": null,
+          "pass_grade": 50,
+          "time_spent_seconds": 1,
+          "raw_start_date": 1786440562.906967
+        }
+      },
+      "school": {
+        "name": "Apna College",
+        "url": "www.apnacollege.in",
+        "description": "The most loved coding community of India ❤️"
+      },
+      "user": {
+        "username": "ram",
+        "email": "p4542639@gmail.com",
+        "cf_phonenumber": "7666690798"
+      }
+    }
+  },
+  "reclaimedTry": false,
+  "feedback": [
+    {
+      "title": "",
+      "id": "section66b74bb6e259e",
+      "blocks": [
+        {
+          "id": "mc66b74bb6e25a5",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Sachin is better than Rohit. Rohit is not as good as Surya. Raina is better than Suresh but not as good as Sachin. Who is the best player among all?",
+            "widgets": [
+              {
+                "id": "text66b74bb6e25aa",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">Sachin is better than Rohit. Rohit is not as good as Surya. Raina is better than Suresh but not as good as Sachin. Who is the best player among all?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74bb6e25ec",
+              "description": {
+                "text": "Sachin",
+                "widgets": [
+                  {
+                    "id": "text66b74bb6e25f3",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Sachin</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb6e2603",
+              "description": {
+                "text": "Raina",
+                "widgets": [
+                  {
+                    "id": "text66b74bb6e260a",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Raina</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb6e2619",
+              "description": {
+                "text": "Surya",
+                "widgets": [
+                  {
+                    "id": "text66b74bb6e2620",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Surya</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb6e262f",
+              "description": {
+                "text": "Suresh",
+                "widgets": [
+                  {
+                    "id": "text66b74bb6e2636",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Suresh</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74bb6e25ec",
+              "text": "Sachin",
+              "widgets": [
+                {
+                  "id": "text66b74bb6e25f3",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>Sachin</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>Using the given hints we get – Sachin > Surya >Rohit &\nRaina >Suresh<br>Now, Raina must be below Sachin, so position of Raina,\nSuresh, Surya, Rohit is not confirmed but the best player must be Sachin.\n[Option (A)]</p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74bb6e2653",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Five floors are named A,K,P,R,T which is actually 1st to 5th floor but not necessarily in the given order. Only T is between K and P. P is below K. R is just below P. A is three places below T. What is the name of the 1st floor?",
+            "widgets": [
+              {
+                "id": "text66b74bb6e2658",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">Five floors are named A,K,P,R,T which is actually 1st to 5th floor but not necessarily in the given order. Only T is between K and P. P is below K. R is just below P. A is three places below T. What is the name of the 1st floor?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74bb6e2699",
+              "description": {
+                "text": "T",
+                "widgets": [
+                  {
+                    "id": "text66b74bb6e26a0",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>T</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb6e26af",
+              "description": {
+                "text": "R",
+                "widgets": [
+                  {
+                    "id": "text66b74bb6e26b5",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>R</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb6e26c4",
+              "description": {
+                "text": "P",
+                "widgets": [
+                  {
+                    "id": "text66b74bb6e26cb",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>P</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb6e26da",
+              "description": {
+                "text": "A",
+                "widgets": [
+                  {
+                    "id": "text66b74bb6e26e1",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>A</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74bb6e26da",
+              "text": "A",
+              "widgets": [
+                {
+                  "id": "text66b74bb6e26e1",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>A</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br><span>using\nall criteria we get the final arrangement – </span><br>\n\n\n</p><div align=\"center\">\n\n<table class=\"MsoTableGrid\" border=\"1\" cellspacing=\"0\" cellpadding=\"0\" style=\"border-collapse: collapse; border: none; width: 73.2523%; margin-left: -22.1884%; text-align: center;\">\n <tbody><tr style=\"mso-yfti-irow:0;mso-yfti-firstrow:yes;height:14.25pt\">\n  <td width=\"85\" valign=\"top\" style=\"width: 52.5097%; border: 1pt solid windowtext; padding: 0cm 5.4pt; height: 14.25pt; text-align: center;\">\n  <p class=\"MsoNormal\" style=\"margin: 0cm; font-size: 12pt; font-family: Cambria, serif; line-height: normal; text-align: center;\"><strong><span lang=\"EN-US\">Floor No.</span></strong></p>\n  </td>\n  <td width=\"94\" valign=\"top\" style=\"width: 47.1042%; border-top: 1pt solid windowtext; border-right: 1pt solid windowtext; border-bottom: 1pt solid windowtext; border-image: initial; border-left: none; padding: 0cm 5.4pt; height: 14.25pt; text-align: center;\">\n  <p class=\"MsoNormal\" style=\"margin: 0cm; font-size: 12pt; font-family: Cambria, serif; line-height: normal;\"><b><span lang=\"EN-US\">Floor Name</span></b></p>\n  </td>\n </tr>\n <tr style=\"mso-yfti-irow:1;height:13.65pt\">\n  <td width=\"85\" valign=\"top\" style=\"width: 52.5097%; border-right: 1pt solid windowtext; border-bottom: 1pt solid windowtext; border-left: 1pt solid windowtext; border-image: initial; border-top: none; padding: 0cm 5.4pt; height: 13.65pt;\">\n  <p class=\"MsoNormal\" align=\"center\" style=\"margin: 0cm; font-size: 12pt; font-family: Cambria, serif; text-align: center; line-height: normal;\"><span lang=\"EN-US\">5</span></p>\n  </td>\n  <td width=\"94\" valign=\"top\" style=\"width: 47.1042%; border-top: none; border-left: none; border-bottom: 1pt solid windowtext; border-right: 1pt solid windowtext; padding: 0cm 5.4pt; height: 13.65pt;\">\n  <p class=\"MsoNormal\" align=\"center\" style=\"margin: 0cm; font-size: 12pt; font-family: Cambria, serif; text-align: center; line-height: normal;\"><span lang=\"EN-US\">K</span></p>\n  </td>\n </tr>\n <tr style=\"mso-yfti-irow:2;height:13.65pt\">\n  <td width=\"85\" valign=\"top\" style=\"width: 52.5097%; border-right: 1pt solid windowtext; border-bottom: 1pt solid windowtext; border-left: 1pt solid windowtext; border-image: initial; border-top: none; padding: 0cm 5.4pt; height: 13.65pt;\">\n  <p class=\"MsoNormal\" align=\"center\" style=\"margin: 0cm; font-size: 12pt; font-family: Cambria, serif; text-align: center; line-height: normal;\"><span lang=\"EN-US\">4</span></p>\n  </td>\n  <td width=\"94\" valign=\"top\" style=\"width: 47.1042%; border-top: none; border-left: none; border-bottom: 1pt solid windowtext; border-right: 1pt solid windowtext; padding: 0cm 5.4pt; height: 13.65pt;\">\n  <p class=\"MsoNormal\" align=\"center\" style=\"margin: 0cm; font-size: 12pt; font-family: Cambria, serif; text-align: center; line-height: normal;\"><span lang=\"EN-US\">T</span></p>\n  </td>\n </tr>\n <tr style=\"mso-yfti-irow:3;height:13.65pt\">\n  <td width=\"85\" valign=\"top\" style=\"width: 52.5097%; border-right: 1pt solid windowtext; border-bottom: 1pt solid windowtext; border-left: 1pt solid windowtext; border-image: initial; border-top: none; padding: 0cm 5.4pt; height: 13.65pt;\">\n  <p class=\"MsoNormal\" align=\"center\" style=\"margin: 0cm; font-size: 12pt; font-family: Cambria, serif; text-align: center; line-height: normal;\"><span lang=\"EN-US\">3</span></p>\n  </td>\n  <td width=\"94\" valign=\"top\" style=\"width: 47.1042%; border-top: none; border-left: none; border-bottom: 1pt solid windowtext; border-right: 1pt solid windowtext; padding: 0cm 5.4pt; height: 13.65pt;\">\n  <p class=\"MsoNormal\" align=\"center\" style=\"margin: 0cm; font-size: 12pt; font-family: Cambria, serif; text-align: center; line-height: normal;\"><span lang=\"EN-US\">P</span></p>\n  </td>\n </tr>\n <tr style=\"mso-yfti-irow:4;height:14.25pt\">\n  <td width=\"85\" valign=\"top\" style=\"width: 52.5097%; border-right: 1pt solid windowtext; border-bottom: 1pt solid windowtext; border-left: 1pt solid windowtext; border-image: initial; border-top: none; padding: 0cm 5.4pt; height: 14.25pt;\">\n  <p class=\"MsoNormal\" align=\"center\" style=\"margin: 0cm; font-size: 12pt; font-family: Cambria, serif; text-align: center; line-height: normal;\"><span lang=\"EN-US\">2</span></p>\n  </td>\n  <td width=\"94\" valign=\"top\" style=\"width: 47.1042%; border-top: none; border-left: none; border-bottom: 1pt solid windowtext; border-right: 1pt solid windowtext; padding: 0cm 5.4pt; height: 14.25pt;\">\n  <p class=\"MsoNormal\" align=\"center\" style=\"margin: 0cm; font-size: 12pt; font-family: Cambria, serif; text-align: center; line-height: normal;\"><span lang=\"EN-US\">R</span></p>\n  </td>\n </tr>\n <tr style=\"mso-yfti-irow:5;mso-yfti-lastrow:yes;height:14.25pt\">\n  <td width=\"85\" valign=\"top\" style=\"width: 52.5097%; border-right: 1pt solid windowtext; border-bottom: 1pt solid windowtext; border-left: 1pt solid windowtext; border-image: initial; border-top: none; padding: 0cm 5.4pt; height: 14.25pt;\">\n  <p class=\"MsoNormal\" align=\"center\" style=\"margin: 0cm; font-size: 12pt; font-family: Cambria, serif; text-align: center; line-height: normal;\"><span lang=\"EN-US\">1</span></p>\n  </td>\n  <td width=\"94\" valign=\"top\" style=\"width: 47.1042%; border-top: none; border-left: none; border-bottom: 1pt solid windowtext; border-right: 1pt solid windowtext; padding: 0cm 5.4pt; height: 14.25pt;\">\n  <p class=\"MsoNormal\" align=\"center\" style=\"margin: 0cm; font-size: 12pt; font-family: Cambria, serif; text-align: center; line-height: normal;\"><span lang=\"EN-US\">A</span></p>\n  </td>\n </tr>\n</tbody></table>\n\n</div>\n\n\n\n\n<span>So,\n1st floor is A [option (D)]</span>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74bb6e2701",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Five friends, Deepika, Tina, Aditi, Soumen and Warisha are of different heights but not necessarily in the same order. Soumen is taller than three other friends. Warisha is just taller than Tina but just shorter than Aditi. There is no one who is taller than Deepika. Who is at the 4th position if we arrange them according to height where tallest person is the No. 1 person?",
+            "widgets": [
+              {
+                "id": "text66b74bb6e2706",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">Five friends, Deepika, Tina, Aditi, Soumen and Warisha are of different heights but not necessarily in the same order. Soumen is taller than three other friends. Warisha is just taller than Tina but just shorter than Aditi. There is no one who is taller than Deepika. Who is at the 4th position if we arrange them according to height where tallest person is the No. 1 person?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74bb6e2746",
+              "description": {
+                "text": "Warisha",
+                "widgets": [
+                  {
+                    "id": "text66b74bb6e274d",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Warisha</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb6e275c",
+              "description": {
+                "text": "Aditi",
+                "widgets": [
+                  {
+                    "id": "text66b74bb6e2763",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Aditi</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb6e2772",
+              "description": {
+                "text": "Soumen",
+                "widgets": [
+                  {
+                    "id": "text66b74bb6e2779",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Soumen</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb6e2788",
+              "description": {
+                "text": "Tina",
+                "widgets": [
+                  {
+                    "id": "text66b74bb6e278f",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Tina</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74bb6e2746",
+              "text": "Warisha",
+              "widgets": [
+                {
+                  "id": "text66b74bb6e274d",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>Warisha</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>Using all criteria final arrangement is – <br>Sl No. According to height Person’s<br>\n\n\n</p><table class=\"MsoTableGrid\" border=\"1\" cellspacing=\"0\" cellpadding=\"0\" style=\"margin-left: 0.607903%; border-collapse: collapse; border: none; width: 84.4985%;\">\n <tbody><tr style=\"mso-yfti-irow:0;mso-yfti-firstrow:yes;height:13.05pt\">\n  <td width=\"208\" style=\"width: 55.3191%; border: 1pt solid windowtext; padding: 0cm 5.4pt; height: 13.05pt;\">\n  <p class=\"MsoNormal\" align=\"center\" style=\"margin: 0cm; font-size: 12pt; font-family: Cambria, serif; text-align: center; line-height: normal;\"><b><span lang=\"EN-US\">Sl No. According to height</span></b></p>\n  </td>\n  <td width=\"161\" style=\"width: 44.3769%; border-top: 1pt solid windowtext; border-right: 1pt solid windowtext; border-bottom: 1pt solid windowtext; border-image: initial; border-left: none; padding: 0cm 5.4pt; height: 13.05pt;\">\n  <p class=\"MsoNormal\" align=\"center\" style=\"margin: 0cm; font-size: 12pt; font-family: Cambria, serif; text-align: center; line-height: normal;\"><b><span lang=\"EN-US\">Person’s Name</span></b></p>\n  </td>\n </tr>\n <tr style=\"mso-yfti-irow:1;height:18.15pt\">\n  <td width=\"208\" style=\"width: 55.3191%; border-right: 1pt solid windowtext; border-bottom: 1pt solid windowtext; border-left: 1pt solid windowtext; border-image: initial; border-top: none; padding: 0cm 5.4pt; height: 18.15pt;\">\n  <p class=\"MsoNormal\" align=\"center\" style=\"margin: 0cm; font-size: 12pt; font-family: Cambria, serif; text-align: center; line-height: normal;\"><span lang=\"EN-US\">1</span></p>\n  </td>\n  <td width=\"161\" style=\"width: 44.3769%; border-top: none; border-left: none; border-bottom: 1pt solid windowtext; border-right: 1pt solid windowtext; padding: 0cm 5.4pt; height: 18.15pt;\">\n  <p class=\"MsoNormal\" align=\"center\" style=\"margin: 0cm; font-size: 12pt; font-family: Cambria, serif; text-align: center; line-height: normal;\"><span lang=\"EN-US\">Deepika</span></p>\n  </td>\n </tr>\n <tr style=\"mso-yfti-irow:2;height:9.95pt\">\n  <td width=\"208\" style=\"width: 55.3191%; border-right: 1pt solid windowtext; border-bottom: 1pt solid windowtext; border-left: 1pt solid windowtext; border-image: initial; border-top: none; padding: 0cm 5.4pt; height: 9.95pt;\">\n  <p class=\"MsoNormal\" align=\"center\" style=\"margin: 0cm; font-size: 12pt; font-family: Cambria, serif; text-align: center; line-height: normal;\"><span lang=\"EN-US\">2</span></p>\n  </td>\n  <td width=\"161\" style=\"width: 44.3769%; border-top: none; border-left: none; border-bottom: 1pt solid windowtext; border-right: 1pt solid windowtext; padding: 0cm 5.4pt; height: 9.95pt;\">\n  <p class=\"MsoNormal\" align=\"center\" style=\"margin: 0cm; font-size: 12pt; font-family: Cambria, serif; text-align: center; line-height: normal;\"><span lang=\"EN-US\">Soumen</span></p>\n  </td>\n </tr>\n <tr style=\"mso-yfti-irow:3;height:13.05pt\">\n  <td width=\"208\" style=\"width: 55.3191%; border-right: 1pt solid windowtext; border-bottom: 1pt solid windowtext; border-left: 1pt solid windowtext; border-image: initial; border-top: none; padding: 0cm 5.4pt; height: 13.05pt;\">\n  <p class=\"MsoNormal\" align=\"center\" style=\"margin: 0cm; font-size: 12pt; font-family: Cambria, serif; text-align: center; line-height: normal;\"><span lang=\"EN-US\">3</span></p>\n  </td>\n  <td width=\"161\" style=\"width: 44.3769%; border-top: none; border-left: none; border-bottom: 1pt solid windowtext; border-right: 1pt solid windowtext; padding: 0cm 5.4pt; height: 13.05pt;\">\n  <p class=\"MsoNormal\" align=\"center\" style=\"margin: 0cm; font-size: 12pt; font-family: Cambria, serif; text-align: center; line-height: normal;\"><span lang=\"EN-US\">Aditi</span></p>\n  </td>\n </tr>\n <tr style=\"mso-yfti-irow:4;height:13.05pt\">\n  <td width=\"208\" style=\"width: 55.3191%; border-right: 1pt solid windowtext; border-bottom: 1pt solid windowtext; border-left: 1pt solid windowtext; border-image: initial; border-top: none; padding: 0cm 5.4pt; height: 13.05pt;\">\n  <p class=\"MsoNormal\" align=\"center\" style=\"margin: 0cm; font-size: 12pt; font-family: Cambria, serif; text-align: center; line-height: normal;\"><span lang=\"EN-US\">4</span></p>\n  </td>\n  <td width=\"161\" style=\"width: 44.3769%; border-top: none; border-left: none; border-bottom: 1pt solid windowtext; border-right: 1pt solid windowtext; padding: 0cm 5.4pt; height: 13.05pt;\">\n  <p class=\"MsoNormal\" align=\"center\" style=\"margin: 0cm; font-size: 12pt; font-family: Cambria, serif; text-align: center; line-height: normal;\"><span lang=\"EN-US\">Warisha</span></p>\n  </td>\n </tr>\n <tr style=\"mso-yfti-irow:5;mso-yfti-lastrow:yes;height:14.3pt\">\n  <td width=\"208\" style=\"width: 55.3191%; border-right: 1pt solid windowtext; border-bottom: 1pt solid windowtext; border-left: 1pt solid windowtext; border-image: initial; border-top: none; padding: 0cm 5.4pt; height: 14.3pt;\">\n  <p class=\"MsoNormal\" align=\"center\" style=\"margin: 0cm; font-size: 12pt; font-family: Cambria, serif; text-align: center; line-height: normal;\"><span lang=\"EN-US\">5</span></p>\n  </td>\n  <td width=\"161\" style=\"width: 44.3769%; border-top: none; border-left: none; border-bottom: 1pt solid windowtext; border-right: 1pt solid windowtext; padding: 0cm 5.4pt; height: 14.3pt;\">\n  <p class=\"MsoNormal\" align=\"center\" style=\"margin: 0cm; font-size: 12pt; font-family: Cambria, serif; text-align: center; line-height: normal;\"><span lang=\"EN-US\">Tina</span></p>\n  </td>\n </tr>\n</tbody></table>\n\n\n\n\n<br><span>So,4th\nperson is – Warisha [option(A)]</span> <p><br></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74bb6e27af",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Six athletes, A,B,C,D,E and F finishes a 200 m sprint in different positions, but not necessarily in the same order. D finishes the sprint exactly before 3 athletes. E finishes after D but before B. No one finishes before C. There are exactly two athletes in between F and E. Who finishes the sprint at last position or sixth position?",
+            "widgets": [
+              {
+                "id": "text66b74bb6e27b3",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">Six athletes, A,B,C,D,E and F finishes a 200 m sprint in different positions, but not necessarily in the same order. D finishes the sprint exactly before 3 athletes. E finishes after D but before B. No one finishes before C. There are exactly two athletes in between F and E.  Who finishes the sprint at last position or sixth position?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74bb6e27f3",
+              "description": {
+                "text": "A",
+                "widgets": [
+                  {
+                    "id": "text66b74bb6e27fa",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>A</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb6e2809",
+              "description": {
+                "text": "E",
+                "widgets": [
+                  {
+                    "id": "text66b74bb6e2810",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>E</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb6e281f",
+              "description": {
+                "text": "F",
+                "widgets": [
+                  {
+                    "id": "text66b74bb6e2825",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>F</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb6e2834",
+              "description": {
+                "text": "B",
+                "widgets": [
+                  {
+                    "id": "text66b74bb6e283b",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>B</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74bb6e2834",
+              "text": "B",
+              "widgets": [
+                {
+                  "id": "text66b74bb6e283b",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>B</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>Using the all criteria, final arrangement is – <br>\n\n\n<table class=\"MsoTableGrid\" border=\"1\" cellspacing=\"0\" cellpadding=\"0\" align=\"left\" style=\"border-collapse: collapse; border: none; margin-left: 6.75pt; margin-right: 6.75pt; width: 79.3313%;\">\n <tbody><tr style=\"mso-yfti-irow:0;mso-yfti-firstrow:yes;height:13.25pt\">\n  <td width=\"75\" style=\"width: 49.8084%; border: 1pt solid windowtext; padding: 0cm 5.4pt; height: 13.25pt;\">\n  <p class=\"MsoNormal\" align=\"center\" style=\"margin: 0cm; font-size: 12pt; font-family: Cambria, serif; text-align: center; line-height: normal;\"><b><span lang=\"EN-US\">Position</span></b></p>\n  </td>\n  <td width=\"75\" style=\"width: 49.8084%; border-top: 1pt solid windowtext; border-right: 1pt solid windowtext; border-bottom: 1pt solid windowtext; border-image: initial; border-left: none; padding: 0cm 5.4pt; height: 13.25pt;\">\n  <p class=\"MsoNormal\" align=\"center\" style=\"margin: 0cm; font-size: 12pt; font-family: Cambria, serif; text-align: center; line-height: normal;\"><b><span lang=\"EN-US\">Athlete</span></b></p>\n  </td>\n </tr>\n <tr style=\"mso-yfti-irow:1;height:13.85pt\">\n  <td width=\"75\" style=\"width: 49.8084%; border-right: 1pt solid windowtext; border-bottom: 1pt solid windowtext; border-left: 1pt solid windowtext; border-image: initial; border-top: none; padding: 0cm 5.4pt; height: 13.85pt;\">\n  <p class=\"MsoNormal\" align=\"center\" style=\"margin: 0cm; font-size: 12pt; font-family: Cambria, serif; text-align: center; line-height: normal;\"><span lang=\"EN-US\">1<sup>st</sup></span></p>\n  </td>\n  <td width=\"75\" style=\"width: 49.8084%; border-top: none; border-left: none; border-bottom: 1pt solid windowtext; border-right: 1pt solid windowtext; padding: 0cm 5.4pt; height: 13.85pt;\">\n  <p class=\"MsoNormal\" align=\"center\" style=\"margin: 0cm; font-size: 12pt; font-family: Cambria, serif; text-align: center; line-height: normal;\"><span lang=\"EN-US\">C</span></p>\n  </td>\n </tr>\n <tr style=\"mso-yfti-irow:2;height:13.25pt\">\n  <td width=\"75\" style=\"width: 49.8084%; border-right: 1pt solid windowtext; border-bottom: 1pt solid windowtext; border-left: 1pt solid windowtext; border-image: initial; border-top: none; padding: 0cm 5.4pt; height: 13.25pt;\">\n  <p class=\"MsoNormal\" align=\"center\" style=\"margin: 0cm; font-size: 12pt; font-family: Cambria, serif; text-align: center; line-height: normal;\"><span lang=\"EN-US\">2<sup>nd</sup></span></p>\n  </td>\n  <td width=\"75\" style=\"width: 49.8084%; border-top: none; border-left: none; border-bottom: 1pt solid windowtext; border-right: 1pt solid windowtext; padding: 0cm 5.4pt; height: 13.25pt;\">\n  <p class=\"MsoNormal\" align=\"center\" style=\"margin: 0cm; font-size: 12pt; font-family: Cambria, serif; text-align: center; line-height: normal;\"><span lang=\"EN-US\">F</span></p>\n  </td>\n </tr>\n <tr style=\"mso-yfti-irow:3;height:13.25pt\">\n  <td width=\"75\" style=\"width: 49.8084%; border-right: 1pt solid windowtext; border-bottom: 1pt solid windowtext; border-left: 1pt solid windowtext; border-image: initial; border-top: none; padding: 0cm 5.4pt; height: 13.25pt;\">\n  <p class=\"MsoNormal\" align=\"center\" style=\"margin: 0cm; font-size: 12pt; font-family: Cambria, serif; text-align: center; line-height: normal;\"><span lang=\"EN-US\">3<sup>rd</sup></span></p>\n  </td>\n  <td width=\"75\" style=\"width: 49.8084%; border-top: none; border-left: none; border-bottom: 1pt solid windowtext; border-right: 1pt solid windowtext; padding: 0cm 5.4pt; height: 13.25pt;\">\n  <p class=\"MsoNormal\" align=\"center\" style=\"margin: 0cm; font-size: 12pt; font-family: Cambria, serif; text-align: center; line-height: normal;\"><span lang=\"EN-US\">D</span></p>\n  </td>\n </tr>\n <tr style=\"mso-yfti-irow:4;height:13.25pt\">\n  <td width=\"75\" style=\"width: 49.8084%; border-right: 1pt solid windowtext; border-bottom: 1pt solid windowtext; border-left: 1pt solid windowtext; border-image: initial; border-top: none; padding: 0cm 5.4pt; height: 13.25pt;\">\n  <p class=\"MsoNormal\" align=\"center\" style=\"margin: 0cm; font-size: 12pt; font-family: Cambria, serif; text-align: center; line-height: normal;\"><span lang=\"EN-US\">4<sup>th</sup></span></p>\n  </td>\n  <td width=\"75\" style=\"width: 49.8084%; border-top: none; border-left: none; border-bottom: 1pt solid windowtext; border-right: 1pt solid windowtext; padding: 0cm 5.4pt; height: 13.25pt;\">\n  <p class=\"MsoNormal\" align=\"center\" style=\"margin: 0cm; font-size: 12pt; font-family: Cambria, serif; text-align: center; line-height: normal;\"><span lang=\"EN-US\">A</span></p>\n  </td>\n </tr>\n <tr style=\"mso-yfti-irow:5;height:13.85pt\">\n  <td width=\"75\" style=\"width: 49.8084%; border-right: 1pt solid windowtext; border-bottom: 1pt solid windowtext; border-left: 1pt solid windowtext; border-image: initial; border-top: none; padding: 0cm 5.4pt; height: 13.85pt;\">\n  <p class=\"MsoNormal\" align=\"center\" style=\"margin: 0cm; font-size: 12pt; font-family: Cambria, serif; text-align: center; line-height: normal;\"><span lang=\"EN-US\">5<sup>th</sup></span></p>\n  </td>\n  <td width=\"75\" style=\"width: 49.8084%; border-top: none; border-left: none; border-bottom: 1pt solid windowtext; border-right: 1pt solid windowtext; padding: 0cm 5.4pt; height: 13.85pt;\">\n  <p class=\"MsoNormal\" align=\"center\" style=\"margin: 0cm; font-size: 12pt; font-family: Cambria, serif; text-align: center; line-height: normal;\"><span lang=\"EN-US\">E</span></p>\n  </td>\n </tr>\n <tr style=\"mso-yfti-irow:6;mso-yfti-lastrow:yes;height:13.85pt\">\n  <td width=\"75\" style=\"width: 49.8084%; border-right: 1pt solid windowtext; border-bottom: 1pt solid windowtext; border-left: 1pt solid windowtext; border-image: initial; border-top: none; padding: 0cm 5.4pt; height: 13.85pt;\">\n  <p class=\"MsoNormal\" align=\"center\" style=\"margin: 0cm; font-size: 12pt; font-family: Cambria, serif; text-align: center; line-height: normal;\"><span lang=\"EN-US\">6<sup>th</sup></span></p>\n  </td>\n  <td width=\"75\" style=\"width: 49.8084%; border-top: none; border-left: none; border-bottom: 1pt solid windowtext; border-right: 1pt solid windowtext; padding: 0cm 5.4pt; height: 13.85pt;\">\n  <p class=\"MsoNormal\" align=\"center\" style=\"margin: 0cm; font-size: 12pt; font-family: Cambria, serif; text-align: center; line-height: normal;\"><span lang=\"EN-US\">B</span></p>\n  </td>\n </tr>\n</tbody></table>\n\n\n\n\n</p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74bb6e285c",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions :Seven individuals M, N, O, P, Q, R, and S reside in a building of seven stories. The first floor is at the bottom, while the seventh is at the top. O and Q are separated by three storeys. M resides below S and above P. R resides one even number of storeys below the fifth floor. S does not reside in a higher storey than Q. O resides directly below R. There is exactly the same number of persons living below Q as there are above N.Who resides at the 1st floor?",
+            "widgets": [
+              {
+                "id": "text66b74bb6e2861",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong></p><p style=\"text-align: justify;\"><span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">Seven individuals M, N, O, P, Q, R, and S reside in a building of seven stories. The first floor is at the bottom, while the seventh is at the top. O and Q are separated by three storeys. M resides below S and above P. R resides one even number of storeys below the fifth floor. S does not reside in a higher storey than Q. O resides directly below R. There is exactly the same number of persons living below Q as there are above N.</span></p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">Who resides at the 1st floor?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74bb6e28b0",
+              "description": {
+                "text": "P",
+                "widgets": [
+                  {
+                    "id": "text66b74bb6e28b7",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>P</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb6e28c6",
+              "description": {
+                "text": "Q",
+                "widgets": [
+                  {
+                    "id": "text66b74bb6e28cd",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Q</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb6e28dc",
+              "description": {
+                "text": "N",
+                "widgets": [
+                  {
+                    "id": "text66b74bb6e28e3",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>N</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb6e28f2",
+              "description": {
+                "text": "O",
+                "widgets": [
+                  {
+                    "id": "text66b74bb6e28f9",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>O</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74bb6e28dc",
+              "text": "N",
+              "widgets": [
+                {
+                  "id": "text66b74bb6e28e3",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>N</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>(1) R resides on an even numbered storeys below  5th storey.<br>(2) O is residing\njust below R.<br>(3) Three storeys\nare in between O and Q.\n<br>From the above the\nhints, We get -<br>From hint 1, we get two possibilities-<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/8c1746db9d6e03e60ee236cab043ec7d.png\" style=\"width: 200px; height: 265px;\"><br>(4) The number of people residing below Q is equal to\nthe number of people residing above N.<br>(5) Person M\nresides above P and below S.<br>(6) S doesn’t\nreside above Q.<br>From the above\nhints, we get - <br>From point 4, six\npeople reside below Q in case 1 and four people reside below Q in case 2.\n           <br>From point 6, Case\n2 is ruled out because S resides above Q, which is not allowed.<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/445a7fa845ce86cee4454102a5d24868.png\" style=\"width: 200px; height: 267px;\"><br><span>So,\nthe final arrangement will be –<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/03218acb7c6717b6f888412103621aea.png\" style=\"width: 120px; height: 216px;\"></span></p><span>Therefore,\ncorrect answers are –<br><span>option(C)\nN.</span> </span>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74bb6e2919",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions :Seven individuals M, N, O, P, Q, R, and S reside in a building of seven stories. The first floor is at the bottom, while the seventh is at the top. O and Q are separated by three storeys. M resides below S and above P. R resides one even number of storeys below the fifth floor. S does not reside in a higher storey than Q. O resides directly below R. There is exactly the same number of persons living below Q as there are above N.Who resides at exactly between 1st and 7th floor?",
+            "widgets": [
+              {
+                "id": "text66b74bb6e291e",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong></p><p style=\"text-align: justify;\"><span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">Seven individuals M, N, O, P, Q, R, and S reside in a building of seven stories. The first floor is at the bottom, while the seventh is at the top. O and Q are separated by three storeys. M resides below S and above P. R resides one even number of storeys below the fifth floor. S does not reside in a higher storey than Q. O resides directly below R. There is exactly the same number of persons living below Q as there are above N.</span></p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">Who resides at exactly between 1st and 7th floor?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74bb6e295d",
+              "description": {
+                "text": "R",
+                "widgets": [
+                  {
+                    "id": "text66b74bb6e2964",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>R</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb6e2973",
+              "description": {
+                "text": "O",
+                "widgets": [
+                  {
+                    "id": "text66b74bb6e297a",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>O</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb6e2989",
+              "description": {
+                "text": "M",
+                "widgets": [
+                  {
+                    "id": "text66b74bb6e2990",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>M</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb6e299f",
+              "description": {
+                "text": "S",
+                "widgets": [
+                  {
+                    "id": "text66b74bb6e29a5",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>S</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74bb6e295d",
+              "text": "R",
+              "widgets": [
+                {
+                  "id": "text66b74bb6e2964",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>R</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:</p><p>(1) R resides on an even numbered storeys below  5th storey.<br>(2) O is residing\njust below R.<br>(3) Three storeys\nare in between O and Q.\n<br>From the above the\nhints, We get -<br>From hint 1, we get two possibilities:<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/8c1746db9d6e03e60ee236cab043ec7d.png\" style=\"width: 200px; height: 265px;\"><br>(4) The number of people residing below Q is equal to\nthe number of people residing above N.<br>(5) Person M\nresides above P and below S.<br>(6) S doesn’t\nreside above Q.<br>From the above\nhints, we get - <br>From point 4, six\npeople reside below Q in case 1 and four people reside below Q in case 2.\n           <br>From point 6, Case\n2 is ruled out because S resides above Q, which is not allowed.<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/445a7fa845ce86cee4454102a5d24868.png\" style=\"width: 200px; height: 267px;\"><br><span>So,\nthe final arrangement will be –<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/03218acb7c6717b6f888412103621aea.png\" style=\"width: 120px; height: 216px;\"></span></p><span>Therefore,\ncorrect answers are –<br><span>option(A)\nR</span>.</span><p><br></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74bb6e29cd",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions :Seven individuals M, N, O, P, Q, R, and S reside in a building of seven stories. The first floor is at the bottom, while the seventh is at the top. O and Q are separated by three storeys. M resides below S and above P. R resides one even number of storeys below the fifth floor. S does not reside in a higher storey than Q. O resides directly below R. There is exactly the same number of persons living below Q as there are above N.Who resides just above M?",
+            "widgets": [
+              {
+                "id": "text66b74bb6e29d2",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong></p><p style=\"text-align: justify;\"><span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">Seven individuals M, N, O, P, Q, R, and S reside in a building of seven stories. The first floor is at the bottom, while the seventh is at the top. O and Q are separated by three storeys. M resides below S and above P. R resides one even number of storeys below the fifth floor. S does not reside in a higher storey than Q. O resides directly below R. There is exactly the same number of persons living below Q as there are above N.</span></p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">Who resides just above M?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74bb6e2a11",
+              "description": {
+                "text": "Q",
+                "widgets": [
+                  {
+                    "id": "text66b74bb6e2a18",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Q</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb6e2a27",
+              "description": {
+                "text": "S",
+                "widgets": [
+                  {
+                    "id": "text66b74bb6e2a2e",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>S</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb6e2a3d",
+              "description": {
+                "text": "R",
+                "widgets": [
+                  {
+                    "id": "text66b74bb6e2a44",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>R</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb6e2a53",
+              "description": {
+                "text": "P",
+                "widgets": [
+                  {
+                    "id": "text66b74bb6e2a5a",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>P</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74bb6e2a27",
+              "text": "S",
+              "widgets": [
+                {
+                  "id": "text66b74bb6e2a2e",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>S</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:</p><p>(1) R resides on an even numbered storeys below  5th storey.<br>(2) O is residing\njust below R.<br>(3) Three storeys\nare in between O and Q.\n<br>From the above the\nhints, We get -<br>From hint 1, we get two possibilities-<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/8c1746db9d6e03e60ee236cab043ec7d.png\" style=\"width: 200px; height: 265px;\"><br>(4) The number of people residing below Q is equal to\nthe number of people residing above N.<br>(5) Person M\nresides above P and below S.<br>(6) S doesn’t\nreside above Q.<br>From the above\nhints, we get - <br>From point 4, six\npeople reside below Q in case 1 and four people reside below Q in case 2.\n           <br>From point 6, Case\n2 is ruled out because S resides above Q, which is not allowed.<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/445a7fa845ce86cee4454102a5d24868.png\" style=\"width: 200px; height: 267px;\"><br><span>So,\nthe final arrangement will be –<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/03218acb7c6717b6f888412103621aea.png\" style=\"width: 120px; height: 216px;\"></span></p><span>Therefore,\ncorrect answers are –<br><span>option(B)\nS</span>.</span>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74bb6e2a89",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions : Eleven persons A, B, C, D, E, F, G, H, I, J and K buy merchandises one after another, but not necessarily in the same order. Two people at most are purchasing goods ahead of F. There is just one buyer between D and F. There is just one buyer between C and D. C is making the purchase before H does. The number of people purchasing goods following H equals the number of people purchasing goods prior to I. K is purchasing immediately ahead of B and right after J. Between G and J, there are just two people purchasing merchandise. A is purchasing the item just ahead of E. Who buy merchandise at the end?",
+            "widgets": [
+              {
+                "id": "text66b74bb6e2a8d",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong>\n</p><p style=\"text-align: justify;\">Eleven persons A, B, C, D, E, F, G, H, I, J and K buy merchandises one after another, but not necessarily in the same order.\n</p><p style=\"text-align: justify;\">Two people at most are purchasing goods ahead of F. There is just one buyer between D and F. There is just one buyer between C and D. C is making the purchase before H does. The number of people purchasing goods following H equals the number of people purchasing goods prior to I. K is purchasing immediately ahead of B and right after J. Between G and J, there are just two people purchasing merchandise. A is purchasing the item just ahead of E.\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">Who buy merchandise at the end?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74bb6e2acd",
+              "description": {
+                "text": "E",
+                "widgets": [
+                  {
+                    "id": "text66b74bb6e2ad4",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>E</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb6e2ae4",
+              "description": {
+                "text": "F",
+                "widgets": [
+                  {
+                    "id": "text66b74bb6e2aeb",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>F</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb6e2afa",
+              "description": {
+                "text": "A",
+                "widgets": [
+                  {
+                    "id": "text66b74bb6e2b01",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>A</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb6e2b10",
+              "description": {
+                "text": "G",
+                "widgets": [
+                  {
+                    "id": "text66b74bb6e2b17",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>G</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74bb6e2afa",
+              "text": "A",
+              "widgets": [
+                {
+                  "id": "text66b74bb6e2b01",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>A</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br><span>Maximum\ntwo persons are buying merchandises before F. So, we get 3 possible cases,\nconsidering only one person is buying between D and F.</span><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/16c64b438155d75ff77d378bf92aaa7e.png\" style=\"width: 300px; height: 368px;\"><br><span>Now,\none person buys between C and D & C buys just before H.<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/9146f90f61277af80b3549fb6b05cd1a.png\" style=\"width: 300px; height: 369px;\"></span><br><span>The\nnumber of persons bought merchandises after H is equal to the number of persons\nbought merchandises before I. Case 1 is now eliminated. K buys just before B\nand just after J.<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/86ac6c1c6f6893bce6049d7b1c278b19.png\" style=\"width: 300px; height: 387px;\"></span><br><span>Only\ntwo persons buy merchandises between G and J. So, Case 2 is ruled out.<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/b76268c149292881f49c0e1fc1f97c05.png\" style=\"width: 250px; height: 411px;\"></span><br><span>A\nbuy the merchandise just before E. So, final arrangement will be-<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/ab11ebf185d1f5d16ae4858714c01a58.png\" style=\"width: 80px; height: 381px;\"><br>So correct answers will be –<br>option(C) – A.</span></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74bb6e2b38",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions : Eleven persons A, B, C, D, E, F, G, H, I, J and K buy merchandises one after another, but not necessarily in the same order. Two people at most are purchasing goods ahead of F. There is just one buyer between D and F. There is just one buyer between C and D. C is making the purchase before H does. The number of people purchasing goods following H equals the number of people purchasing goods prior to I. K is purchasing immediately ahead of B and right after J. Between G and J, there are just two people purchasing merchandise. A is purchasing the item just ahead of E. How many people buy in between D and J?",
+            "widgets": [
+              {
+                "id": "text66b74bb6e2b3d",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong>\n</p><p style=\"text-align: justify;\">Eleven persons A, B, C, D, E, F, G, H, I, J and K buy merchandises one after another, but not necessarily in the same order.\n</p><p style=\"text-align: justify;\">Two people at most are purchasing goods ahead of F. There is just one buyer between D and F. There is just one buyer between C and D. C is making the purchase before H does. The number of people purchasing goods following H equals the number of people purchasing goods prior to I. K is purchasing immediately ahead of B and right after J. Between G and J, there are just two people purchasing merchandise. A is purchasing the item just ahead of E.\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">How many people buy in between D and J?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74bb6e2b7c",
+              "description": {
+                "text": "4",
+                "widgets": [
+                  {
+                    "id": "text66b74bb6e2b83",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>4</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb6e2b93",
+              "description": {
+                "text": "3",
+                "widgets": [
+                  {
+                    "id": "text66b74bb6e2b99",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>3</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb6e2ba9",
+              "description": {
+                "text": "2",
+                "widgets": [
+                  {
+                    "id": "text66b74bb6e2bb0",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>2</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb6e2bbf",
+              "description": {
+                "text": "5",
+                "widgets": [
+                  {
+                    "id": "text66b74bb6e2bc6",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>5</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74bb6e2b93",
+              "text": "3",
+              "widgets": [
+                {
+                  "id": "text66b74bb6e2b99",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>3</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br><span>Maximum\ntwo persons are buying merchandises before F. So, we get 3 possible cases,\nconsidering only one person is buying between D and F.</span><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/16c64b438155d75ff77d378bf92aaa7e.png\" style=\"width: 300px; height: 368px;\"><br><span>Now,\none person buys between C and D & C buys just before H.<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/9146f90f61277af80b3549fb6b05cd1a.png\" style=\"width: 300px; height: 369px;\"></span><br><span>The\nnumber of persons bought merchandises after H is equal to the number of persons\nbought merchandises before I. Case 1 is now eliminated. K buys just before B\nand just after J.<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/86ac6c1c6f6893bce6049d7b1c278b19.png\" style=\"width: 300px; height: 387px;\"></span><br><span>Only\ntwo persons buy merchandises between G and J. So, Case 2 is ruled out.<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/b76268c149292881f49c0e1fc1f97c05.png\" style=\"width: 250px; height: 411px;\"></span><br><span>A\nbuy the merchandise just before E. So, final arrangement will be-<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/ab11ebf185d1f5d16ae4858714c01a58.png\" style=\"width: 80px; height: 381px;\"><br>So correct answers will be –<br>option(B) – 3 people.</span><span><br></span></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74bb6e2bed",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions : Eleven persons A, B, C, D, E, F, G, H, I, J and K buy merchandises one after another, but not necessarily in the same order. Two people at most are purchasing goods ahead of F. There is just one buyer between D and F. There is just one buyer between C and D. C is making the purchase before H does. The number of people purchasing goods following H equals the number of people purchasing goods prior to I. K is purchasing immediately ahead of B and right after J. Between G and J, there are just two people purchasing merchandise. A is purchasing the item just ahead of E. Who purchase just after B?",
+            "widgets": [
+              {
+                "id": "text66b74bb6e2bf2",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong>\n</p><p style=\"text-align: justify;\">Eleven persons A, B, C, D, E, F, G, H, I, J and K buy merchandises one after another, but not necessarily in the same order.\n</p><p style=\"text-align: justify;\">Two people at most are purchasing goods ahead of F. There is just one buyer between D and F. There is just one buyer between C and D. C is making the purchase before H does. The number of people purchasing goods following H equals the number of people purchasing goods prior to I. K is purchasing immediately ahead of B and right after J. Between G and J, there are just two people purchasing merchandise. A is purchasing the item just ahead of E.\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">Who purchase just after B?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74bb6e2c32",
+              "description": {
+                "text": "K",
+                "widgets": [
+                  {
+                    "id": "text66b74bb6e2c39",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>K</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb6e2c48",
+              "description": {
+                "text": "J",
+                "widgets": [
+                  {
+                    "id": "text66b74bb6e2c4f",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>J</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb6e2c5f",
+              "description": {
+                "text": "C",
+                "widgets": [
+                  {
+                    "id": "text66b74bb6e2c66",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>C</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb6e2c82",
+              "description": {
+                "text": "H",
+                "widgets": [
+                  {
+                    "id": "text66b74bb6e2c89",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>H</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74bb6e2c32",
+              "text": "K",
+              "widgets": [
+                {
+                  "id": "text66b74bb6e2c39",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>K</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br><span>Maximum\ntwo persons are buying merchandises before F. So, we get 3 possible cases,\nconsidering only one person is buying between D and F.</span><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/16c64b438155d75ff77d378bf92aaa7e.png\" style=\"width: 300px; height: 368px;\"><br><span>Now,\none person buys between C and D & C buys just before H.<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/9146f90f61277af80b3549fb6b05cd1a.png\" style=\"width: 300px; height: 369px;\"></span><br><span>The\nnumber of persons bought merchandises after H is equal to the number of persons\nbought merchandises before I. Case 1 is now eliminated. K buys just before B\nand just after J.<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/86ac6c1c6f6893bce6049d7b1c278b19.png\" style=\"width: 300px; height: 387px;\"></span><br><span>Only\ntwo persons buy merchandises between G and J. So, Case 2 is ruled out.<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/b76268c149292881f49c0e1fc1f97c05.png\" style=\"width: 250px; height: 411px;\"></span><br><span>A\nbuy the merchandise just before E. So, final arrangement will be-<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/ab11ebf185d1f5d16ae4858714c01a58.png\" style=\"width: 80px; height: 381px;\"><br>So correct answers will be –<br>option(A) - K.</span></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        }
+      ]
+    }
+  ],
+  "submitted": true,
+  "updated": true,
+  "retryCount": 3,
+  "inlineFeedback": [],
+  "errors": [],
+  "success": true
+}

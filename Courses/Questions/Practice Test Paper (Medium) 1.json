@@ -1,0 +1,3349 @@
+{
+  "submission": {
+    "anon_id": null,
+    "model": "assessment-submission",
+    "courseTitleId": "aptitude-qs-library",
+    "object_id": "66bcc17a44d282959e0b53b6",
+    "assessmentId": "66bcc17a44d282959e0b53b5",
+    "snapshotId": "66bccbbfd9d2bec2860d9e65",
+    "questions": {
+      "section66bcc17a0125a": [
+        "mc66bcc17a01262",
+        "mc66bcc17a0139d",
+        "mc66bcc17a014c7",
+        "mc66bcc17a015e0",
+        "mcImage66bcc17a016b1",
+        "mc66bcc17a017a3",
+        "mcImage66bcc17a01846",
+        "mc66bcc17a019dc",
+        "mc66bcc17a01b14",
+        "mc66bcc17a01c30"
+      ]
+    },
+    "certificateAnswers": [],
+    "certificateId": null,
+    "questionData": {
+      "mc66bcc17a01262": {
+        "deliveredOnTimestamp": 1786440364.175968,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66bcc17a0139d": {
+        "deliveredOnTimestamp": 1786440364.175991,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66bcc17a014c7": {
+        "deliveredOnTimestamp": 1786440364.176005,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66bcc17a015e0": {
+        "deliveredOnTimestamp": 1786440364.176016,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mcImage66bcc17a016b1": {
+        "deliveredOnTimestamp": 1786440364.176029,
+        "blockType": "mcImage",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66bcc17a017a3": {
+        "deliveredOnTimestamp": 1786440364.176039,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mcImage66bcc17a01846": {
+        "deliveredOnTimestamp": 1786440364.176051,
+        "blockType": "mcImage",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66bcc17a019dc": {
+        "deliveredOnTimestamp": 1786440364.176064,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66bcc17a01b14": {
+        "deliveredOnTimestamp": 1786440364.176078,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66bcc17a01c30": {
+        "deliveredOnTimestamp": 1786440364.176092,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      }
+    },
+    "answers": [
+      {
+        "blockId": "mc66bcc17a01262",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66bcc17a0139d",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66bcc17a014c7",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66bcc17a015e0",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mcImage66bcc17a016b1",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66bcc17a017a3",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mcImage66bcc17a01846",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66bcc17a019dc",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66bcc17a01b14",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66bcc17a01c30",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      }
+    ],
+    "submittedTimestamp": 1786440364.40524,
+    "status": "submitted",
+    "grading_status": "grading_status_no_grade",
+    "access": "public",
+    "actual_score": null,
+    "score": [],
+    "source": {
+      "type": "unit"
+    },
+    "isDefining": true,
+    "isAdminAutoGradedSubmission": null,
+    "listOfNonConsentedBlocks": [],
+    "created": 1786440364.181343,
+    "modified": 1786440364.496489,
+    "id": "6a7aeaac5b72cf4f3800bd16",
+    "passed": null
+  },
+  "assessment": {
+    "title": "Practice Test Paper (Medium)",
+    "access": "public",
+    "type": "assessment",
+    "model": "assessmentSnapshot",
+    "description": "Intermediate practice test paper containing 10 assessment questions covering Percentages, Ratios & Proportions, Simple & Compound Interest.",
+    "isTimed": false,
+    "timerFor": "assessmentTimed",
+    "onTimerExpiration": "autoSubmit",
+    "assessmentTimeLimitInSeconds": 600,
+    "questionTimeLimitInSeconds": 60,
+    "standaloneShareEnabled": null,
+    "customUrl": null,
+    "usesCustomUrl": null,
+    "allowAnonymous": true,
+    "randomizeQuestionOptions": false,
+    "disallowPartialSubmissions": false,
+    "submissionDueDateEnabled": false,
+    "submissionDueDate": 1626257823,
+    "makeFeedbackAvailableAfterDateEnabled": false,
+    "makeFeedbackAvailableAfterDate": 0,
+    "customStylesEnabled": true,
+    "customStyles": {
+      "assessmentPage": {
+        "background": {
+          "type": "color",
+          "colorData": {
+            "code": "",
+            "class": "lw-body-bg"
+          }
+        },
+        "dividers": {
+          "top": {
+            "orientation": "top",
+            "divider": "none"
+          },
+          "bottom": {
+            "orientation": "bottom",
+            "divider": "none"
+          }
+        }
+      },
+      "option": {
+        "radioEffect": "scribble",
+        "checkboxEffect": "scribble",
+        "size": "small"
+      },
+      "assessment": {
+        "transition": "none",
+        "background": {
+          "type": "color",
+          "colorData": {
+            "code": "",
+            "class": ""
+          }
+        },
+        "width": "normal",
+        "timerTemplate": "rectangle"
+      },
+      "linearRating": {
+        "labels": {
+          "size": "small"
+        }
+      },
+      "question": {
+        "description": {
+          "background": {
+            "type": "color",
+            "colorData": {
+              "code": "",
+              "class": ""
+            }
+          },
+          "type": "p",
+          "size": "small"
+        },
+        "answers": {
+          "background": {
+            "type": "color",
+            "colorData": {
+              "code": "",
+              "class": ""
+            }
+          }
+        },
+        "requiredAsterisk": {
+          "colorData": {
+            "code": "#ff0000",
+            "class": ""
+          }
+        },
+        "errorMessages": {
+          "size": "verySmall",
+          "colorData": {
+            "code": "#ff0000",
+            "class": ""
+          }
+        }
+      },
+      "input": {
+        "size": "small",
+        "type": "solidDark"
+      },
+      "textarea": {
+        "size": "small",
+        "type": "solidDark"
+      },
+      "dropdown": {
+        "size": "small",
+        "type": "solidDark"
+      }
+    },
+    "submissionMode": "all",
+    "startingDate": 1626765704,
+    "startingDateEnabled": false,
+    "showOnlyFailedQuestionsOnRetry": false,
+    "retryEnabled": true,
+    "retryOnFailOnly": false,
+    "gradingMethod": null,
+    "maxTries": null,
+    "onlyWrongOnRetake": null,
+    "isAmendable": false,
+    "feedbackShowOnScreen": false,
+    "feedbackDownloadPDF": false,
+    "feedbackShowInline": true,
+    "feedbackQuestionList": "all-questions",
+    "feedbackShowQuestionScore": false,
+    "feedbackShowFeedback": true,
+    "feedbackShowNumbering": false,
+    "feedbackShowSectionTitles": false,
+    "feedbackShowUserAnswers": true,
+    "feedbackShowCorrectAnswers": true,
+    "feedbackShowAnswerCorrectness": true,
+    "displayInlineFeedbackEnabled": true,
+    "displayBackButtonWhenSubmissionPerBlock": true,
+    "feedbackShowSectionResultSummary": false,
+    "askConfirmationBeforeSubmit": false,
+    "hasCustomConfirmationBeforeSubmitText": false,
+    "customConfirmationBeforeSubmitText": "Are you sure you want to submit the questionnaire?",
+    "customConfirmationBeforeSubmitTexts": {
+      "title": "Submit Assessment?",
+      "baseConfirmationMessage": "Are you sure you want to submit the questionnaire?",
+      "unansweredNotice": "You have not answered {X} questions."
+    },
+    "amendResubmissionMinutes": 30,
+    "passingGrade": null,
+    "navigationMode": "per-block",
+    "conditionalBlocks": {
+      "introContent": {
+        "id": "content66bcc17a01152",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66bcc17a0117d",
+              "type": "text",
+              "insertedAsWidget": true,
+              "properties": {
+                "html": "Percentages PAPER LEVEL-2",
+                "alignment": "center",
+                "customStyle": true,
+                "type": "h2",
+                "size": "normal"
+              }
+            },
+            {
+              "id": "text66bcc17a0119a",
+              "type": "text",
+              "properties": {
+                "html": "<div><span style=\"font-size: 1.7rem; letter-spacing: 0rem;\">Self-assess your knowledge. Express yourself and get feedback from our instructors.</span><br></div>",
+                "customStyle": true,
+                "alignment": "center"
+              }
+            },
+            {
+              "id": "spacer66bcc17a011ab",
+              "type": "spacer",
+              "properties": {
+                "height": 25,
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            },
+            {
+              "id": "button66bcc17a011c0",
+              "type": "button",
+              "properties": {
+                "buttonLabel": "<span>Ready to start</span>",
+                "buttonSize": "normal",
+                "buttonType": "solidBrand",
+                "alignment": "center",
+                "linkData": {
+                  "linkType": "goToFirst"
+                },
+                "iconColorData": {
+                  "code": "",
+                  "class": ""
+                },
+                "iconDisplay": false,
+                "iconSize": 26,
+                "iconClassName": " fas fa-angle-right",
+                "iconPosition": "right"
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "variables": {
+            "conditionalBlocks_introContent_blockData_widgets_0": []
+          }
+        }
+      },
+      "submissionStartingDate": {
+        "id": "content66bcc17a011f9",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66bcc17a01202",
+              "type": "text",
+              "properties": {
+                "html": "Sorry but this assessment hasn't started yet."
+              }
+            },
+            {
+              "id": "date66bcc17a0120b",
+              "type": "date",
+              "properties": {
+                "value": ""
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "displayConditions": ["startingDate"]
+        }
+      },
+      "submissionDueDate": {
+        "id": "content66bcc17a01217",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66bcc17a0121c",
+              "type": "text",
+              "properties": {
+                "html": "Sorry but this assessment date is due."
+              }
+            },
+            {
+              "id": "date66bcc17a01224",
+              "type": "date",
+              "properties": {
+                "value": ""
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "displayConditions": ["dateIsDue"]
+        }
+      },
+      "outroContent": {
+        "id": "content66bcc17a01230",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "userResults66bcc17a01235",
+              "type": "userResults",
+              "properties": {
+                "layout": "template2",
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            },
+            {
+              "id": "feedback66bcc17a01242",
+              "type": "feedback",
+              "properties": []
+            },
+            {
+              "id": "outroActions66bcc17a01249",
+              "type": "outroActions",
+              "properties": {
+                "layout": "",
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true
+        }
+      }
+    },
+    "systemSections": null,
+    "sections": [
+      {
+        "id": "section66bcc17a0125a",
+        "title": "",
+        "type": "section",
+        "navigationMode": "per-block",
+        "blocks": [
+          {
+            "id": "mc66bcc17a01262",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66bcc17a01282",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">In a class of 110 persons in a seminar and each one has either opted for Cola or Thumps-Up as a drink and was either interested in disco or quarantine. The number of people who have opted for Cola and are interested in disco is 66.66% of the number of people who have opted for Cola and are interested in quarantine. The number of people who opted for in Thumps-up is twice the numbers of the people who opted for Cola and Quarantine. Find the total number of person who have opted for the Thumps-Up?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66bcc17a0129f",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66bcc17a012ac",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66bcc17a012b7",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66bcc17a012e9",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66bcc17a012f5",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>40</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66bcc17a0130f",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66bcc17a01322",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>36</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66bcc17a0133b",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66bcc17a01346",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>60</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66bcc17a0135f",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66bcc17a0136b",
+                        "type": "text",
+                        "properties": {
+                          "html": "cannot be determined."
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_0": []
+              }
+            }
+          },
+          {
+            "id": "mc66bcc17a0139d",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66bcc17a013a4",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">Gokulanand restaurant regularly conducts survey of its customers. The customers are asked to rate the food quality, service and price as Excellent, Good and Fair. Customers are also asked whether they would come back. It was. found that 76% of customers say that they will come back. Amongst. those who say that they will come back, 57% rate the restaurant as Excellent, 36% rate as Good and remaining rate as Fair. of those who say that they will not return, the respective values are 14%,32% and 54%. What approximate percentage of customers rated the restaurant as good?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66bcc17a013c1",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66bcc17a013cb",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66bcc17a013d7",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66bcc17a01409",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66bcc17a01413",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>27.4%</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66bcc17a0142c",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66bcc17a01437",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>35%</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66bcc17a01450",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66bcc17a0146b",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>51%</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66bcc17a01486",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66bcc17a01491",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>30.7%</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_1": [],
+                "sections_0_blocks_1_blockData_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_3_description_widgets_0": []
+              }
+            }
+          },
+          {
+            "id": "mc66bcc17a014c7",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66bcc17a014d1",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">Shubham has raised 66.6% of the donation that he needs for his NGO project HELP in order to educate children in slums, by receiving an average donation of Rs. 600 per person from a group of people. To raise the remaining amount, Shubham now approaching another group of people who has retwo-fifths the number of. people as the first group. What should be the average donation (in rupees) per person from the new group?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66bcc17a014f1",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66bcc17a014fe",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66bcc17a0150b",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66bcc17a01540",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66bcc17a0154c",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>600</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66bcc17a01567",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66bcc17a01574",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>750</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66bcc17a01590",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66bcc17a0159b",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>1000</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66bcc17a015b3",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66bcc17a015bf",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>1260</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_1": [],
+                "sections_0_blocks_2_blockData_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_2": []
+              }
+            }
+          },
+          {
+            "id": "mc66bcc17a015e0",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66bcc17a015e4",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">Shamika scored an aggregate of 85% in 5 subjects of her 10^\"th \"  class. Two of those subjects had maximum marks which were 20% more than the maximum marks of the remaining three subjects. Her aggregate in the three subjects that had lower maximum marks was 82%. What was her aggregate percentage in the two subjects which had higher maximum a marks?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66bcc17a015f5",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66bcc17a015fc",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66bcc17a01603",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66bcc17a01624",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66bcc17a0162a",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>86.5%</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66bcc17a01639",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66bcc17a01640",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>87.25%</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66bcc17a0166b",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66bcc17a01677",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>88.75%</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66bcc17a0168b",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66bcc17a01692",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>89.25%</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_1": [],
+                "sections_0_blocks_3_blockData_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3": []
+              }
+            }
+          },
+          {
+            "id": "mcImage66bcc17a016b1",
+            "type": "mcImage",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66bcc17a016b6",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">There were P people in the room when a meeting started. Half of the people left the room after half an hour and Q people entered the room. If this process has occurred three times, then what percent of people remained in room?</p>"
+                    }
+                  }
+                ]
+              },
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-image-option66bcc17a016d0",
+                  "type": "mc-image-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "image66bcc17a016d6",
+                        "type": "image",
+                        "properties": {
+                          "hasLightbox": false,
+                          "imageData": {
+                            "title": "Picture1",
+                            "tags": [],
+                            "width": 200,
+                            "height": 81,
+                            "size": 1,
+                            "name": "/ab1d42f8ed0bf57c6afce7fc24c0c3be.png",
+                            "access": "public",
+                            "created": 1721810617.625772,
+                            "modified": 1721810617.625772,
+                            "user": {
+                              "username": "Lakhan AK Team"
+                            },
+                            "id": "66a0beb952ae20db270bdb85",
+                            "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/ab1d42f8ed0bf57c6afce7fc24c0c3be.png",
+                            "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/ab1d42f8ed0bf57c6afce7fc24c0c3be.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                            "modifiedF": "2024-07-24 11:43:37"
+                          },
+                          "height": 48,
+                          "width": 120
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-image-option66bcc17a01700",
+                  "type": "mc-image-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "image66bcc17a0170b",
+                        "type": "image",
+                        "properties": {
+                          "hasLightbox": false,
+                          "imageData": {
+                            "title": "Picture3",
+                            "tags": [],
+                            "width": 193,
+                            "height": 83,
+                            "size": 1,
+                            "name": "/2132ec0209b66972f30c65728125dba4.png",
+                            "access": "public",
+                            "created": 1721810635.96849,
+                            "modified": 1721810635.96849,
+                            "user": {
+                              "username": "Lakhan AK Team"
+                            },
+                            "id": "66a0becbd039f57cf4091195",
+                            "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/2132ec0209b66972f30c65728125dba4.png",
+                            "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/2132ec0209b66972f30c65728125dba4.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                            "modifiedF": "2024-07-24 11:43:55"
+                          },
+                          "height": 51,
+                          "width": 120
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-image-option66bcc17a01734",
+                  "type": "mc-image-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "image66bcc17a0173b",
+                        "type": "image",
+                        "properties": {
+                          "hasLightbox": false,
+                          "imageData": {
+                            "title": "Picture4",
+                            "tags": [],
+                            "width": 196,
+                            "height": 73,
+                            "size": 1,
+                            "name": "/d246f84ccda61355ad3c01b224094fe2.png",
+                            "access": "public",
+                            "created": 1721810657.360882,
+                            "modified": 1721810657.360882,
+                            "user": {
+                              "username": "Lakhan AK Team"
+                            },
+                            "id": "66a0bee166c2d5711c09c286",
+                            "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/d246f84ccda61355ad3c01b224094fe2.png",
+                            "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/d246f84ccda61355ad3c01b224094fe2.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                            "modifiedF": "2024-07-24 11:44:17"
+                          },
+                          "height": 44,
+                          "width": 120
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-image-option66bcc17a01763",
+                  "type": "mc-image-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "image66bcc17a0176a",
+                        "type": "image",
+                        "properties": {
+                          "hasLightbox": false,
+                          "imageData": {
+                            "title": "Picture5",
+                            "tags": [],
+                            "width": 214,
+                            "height": 79,
+                            "size": 1,
+                            "name": "/f386c81ef7c244ea0e2022b6b892fdae.png",
+                            "access": "public",
+                            "created": 1721810673.041862,
+                            "modified": 1721810673.041862,
+                            "user": {
+                              "username": "Lakhan AK Team"
+                            },
+                            "id": "66a0bef11613dd46a80ee297",
+                            "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/f386c81ef7c244ea0e2022b6b892fdae.png",
+                            "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/f386c81ef7c244ea0e2022b6b892fdae.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                            "modifiedF": "2024-07-24 11:44:33"
+                          },
+                          "height": 44,
+                          "width": 120
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "optionNumbering": "none",
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_4_blockData_description_widgets_0": [],
+                "sections_0_blocks_4": [],
+                "sections_0_blocks_4_blockData_options_0_description_widgets_1": [],
+                "sections_0_blocks_4_blockData_options_1_description_widgets_1": [],
+                "sections_0_blocks_4_blockData_options_2_description_widgets_1": [],
+                "sections_0_blocks_4_blockData_options_3_description_widgets_1": []
+              }
+            }
+          },
+          {
+            "id": "mc66bcc17a017a3",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66bcc17a017a7",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">A bag contains a total of 500 coins worth ₹150. Same coin of 25 paise denomination and other of 50 paise denomination. If 10% of 25 paise coins and 25% of 50 paise coins are fake, then the percentage of money fake in the bag is?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66bcc17a017b8",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66bcc17a017bf",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66bcc17a017c6",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66bcc17a017e4",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66bcc17a017eb",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>15%</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66bcc17a017f9",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66bcc17a01800",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>20%</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66bcc17a0180e",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66bcc17a01814",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>30%</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66bcc17a01823",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66bcc17a01829",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>40%</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_1": [],
+                "sections_0_blocks_5_blockData_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5": []
+              }
+            }
+          },
+          {
+            "id": "mcImage66bcc17a01846",
+            "type": "mcImage",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66bcc17a0184b",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">Mamta spends for milk and oil in the ratio 3:4 per month. The price is increased for milk by 10% and decreased by 5% for oil. Find the percentage change in oil consumption if there is no change in consumption of milk as it essential for her child. Given that the total monthly expenditure in both commodities remains the same.</p>"
+                    }
+                  }
+                ]
+              },
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-image-option66bcc17a0187a",
+                  "type": "mc-image-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "image66bcc17a01886",
+                        "type": "image",
+                        "properties": {
+                          "hasLightbox": false,
+                          "imageData": {
+                            "title": "Picture6",
+                            "tags": [],
+                            "width": 106,
+                            "height": 77,
+                            "size": 1,
+                            "name": "/eba3496f62ac5123938c2f022df1fec9.png",
+                            "access": "public",
+                            "created": 1721811094.734395,
+                            "modified": 1721811094.734395,
+                            "user": {
+                              "username": "Lakhan AK Team"
+                            },
+                            "id": "66a0c096a6f5cda5640809e5",
+                            "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/eba3496f62ac5123938c2f022df1fec9.png",
+                            "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/eba3496f62ac5123938c2f022df1fec9.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                            "modifiedF": "2024-07-24 11:51:34"
+                          },
+                          "height": 47,
+                          "width": 65
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-image-option66bcc17a018d3",
+                  "type": "mc-image-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "image66bcc17a018de",
+                        "type": "image",
+                        "properties": {
+                          "hasLightbox": false,
+                          "imageData": {
+                            "title": "Picture7",
+                            "tags": [],
+                            "width": 76,
+                            "height": 60,
+                            "size": 1,
+                            "name": "/b159fb4add43838b21a730a3d1d4ed3d.png",
+                            "access": "public",
+                            "created": 1721811111.392988,
+                            "modified": 1721811111.392988,
+                            "user": {
+                              "username": "Lakhan AK Team"
+                            },
+                            "id": "66a0c0a7ce072716fd02264b",
+                            "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/b159fb4add43838b21a730a3d1d4ed3d.png",
+                            "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/b159fb4add43838b21a730a3d1d4ed3d.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                            "modifiedF": "2024-07-24 11:51:51"
+                          },
+                          "height": 39,
+                          "width": 50
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-image-option66bcc17a01924",
+                  "type": "mc-image-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "image66bcc17a01930",
+                        "type": "image",
+                        "properties": {
+                          "hasLightbox": false,
+                          "imageData": {
+                            "title": "Picture9",
+                            "tags": [],
+                            "width": 79,
+                            "height": 54,
+                            "size": 1,
+                            "name": "/a982f8db8697d40aa8c5c11735a328bc.png",
+                            "access": "public",
+                            "created": 1721811125.590681,
+                            "modified": 1721811125.590681,
+                            "user": {
+                              "username": "Lakhan AK Team"
+                            },
+                            "id": "66a0c0b5a42b83992e0c6a69",
+                            "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/a982f8db8697d40aa8c5c11735a328bc.png",
+                            "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/a982f8db8697d40aa8c5c11735a328bc.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                            "modifiedF": "2024-07-24 11:52:05"
+                          },
+                          "height": 34,
+                          "width": 50
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-image-option66bcc17a01976",
+                  "type": "mc-image-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "image66bcc17a01982",
+                        "type": "image",
+                        "properties": {
+                          "hasLightbox": false,
+                          "imageData": {
+                            "title": "Picture10",
+                            "tags": [],
+                            "width": 103,
+                            "height": 75,
+                            "size": 1,
+                            "name": "/38039aa4f8791020fca94199f60d567b.png",
+                            "access": "public",
+                            "created": 1721811140.99714,
+                            "modified": 1721811140.99714,
+                            "user": {
+                              "username": "Lakhan AK Team"
+                            },
+                            "id": "66a0c0c4e5e2848b1a04b076",
+                            "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/38039aa4f8791020fca94199f60d567b.png",
+                            "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/38039aa4f8791020fca94199f60d567b.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                            "modifiedF": "2024-07-24 11:52:20"
+                          },
+                          "height": 43,
+                          "width": 60
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "optionNumbering": "none",
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_6_blockData_description_widgets_0": [],
+                "sections_0_blocks_6": [],
+                "sections_0_blocks_6_blockData_options_2_description_widgets_1": [],
+                "sections_0_blocks_6_blockData_options_3_description_widgets_1": []
+              }
+            }
+          },
+          {
+            "id": "mc66bcc17a019dc",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66bcc17a019e4",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">A small town contains three localities P,Q and R. The population of P,Q and R are in the ratio of 8:7:5 respectively. In P, the literacy rate is 80% whereas in Q the literacy rate is 70%. If the illiteracy rate in R is average of illiteracy rate of P and Q then find the percentage of literacy in that town.</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66bcc17a01a02",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66bcc17a01a0e",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66bcc17a01a1a",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66bcc17a01a62",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66bcc17a01a6d",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>60%</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66bcc17a01a85",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66bcc17a01a91",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>72.25%</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66bcc17a01aaa",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66bcc17a01ab5",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>27.75%</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66bcc17a01ace",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66bcc17a01ad9",
+                        "type": "text",
+                        "properties": {
+                          "html": "none of these"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_1": [],
+                "sections_0_blocks_7_blockData_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_7": []
+              }
+            }
+          },
+          {
+            "id": "mc66bcc17a01b14",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66bcc17a01b1b",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">In order to elect next President of the College students Union, an election was announced where three suitable candidates competed to become the next president. They were namely A,B and C. In the election, A gets 20% of the total votes cast. B trails A by 60 votes and C who secured the third position got 40% of B's votes. There are only three candidates in the election. If 292 of the total votes are deemed invalid, then find the total number of votes cast by the students of the college.</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66bcc17a01b38",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66bcc17a01b44",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66bcc17a01b50",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66bcc17a01b85",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66bcc17a01b90",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>400</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66bcc17a01ba9",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66bcc17a01bb5",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>380</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66bcc17a01bce",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66bcc17a01bd9",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>420</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66bcc17a01bf2",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66bcc17a01bfd",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>440</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_1": [],
+                "sections_0_blocks_8_blockData_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_8": []
+              }
+            }
+          },
+          {
+            "id": "mc66bcc17a01c30",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66bcc17a01c38",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">In an exam, every question correctly answered fetches 2 marks, Every question wrongly answered loses 1 mark. Unanswered questions have no marks associated with them. Ritam and Syed wrote this exam. Ritam attempted a certain number of questions and 25% of them went wrong. Syed attempted a certain number of questions and 50% of them went wrong. Ritam got 40 marks more than the pass mark. Syed got 5 marks more than the pass mark. The two of them together attempted a total of 140 questions. Find the pass mark in the exam.</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66bcc17a01c55",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66bcc17a01c60",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66bcc17a01c6c",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66bcc17a01ca1",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66bcc17a01cad",
+                        "type": "text",
+                        "properties": {
+                          "html": "45&nbsp;"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66bcc17a01cc6",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66bcc17a01cd1",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>40</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66bcc17a01ceb",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66bcc17a01cf6",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>30</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66bcc17a01d0f",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66bcc17a01d1b",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>35</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_1": [],
+                "sections_0_blocks_9_blockData_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_9": []
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "availabilityStatus": null,
+    "autoNavigationEnabled": false,
+    "displayBackButtonWhenNavigationPerBlock": true,
+    "saveAndResumeLaterEnabled": null,
+    "tagsAddedOnCompletion": [],
+    "tagsAddedOnPass": [],
+    "sendAnonymousSubmissionsToEmailLeads": false,
+    "afterSubmitActionEnabled": null,
+    "afterSubmitActionProperties": null,
+    "showWizardOnNextEdit": false,
+    "revisitAfterSubmissionAction": null,
+    "navigationTemplate": "HorizontalSpacedBetweenNavigationTemplate",
+    "learnerSearchBarEnabled": true,
+    "learnerUnansweredQuestionsEnabled": true,
+    "learnerFavouriteQuestionEnabled": true,
+    "learnerCompletionProgressEnabled": true,
+    "learnerShowIndexOfQuestionsEnabled": false,
+    "learnerTimeNotificationsEnabled": false,
+    "learnerAllowInterruptionsEnabled": true,
+    "learnerAllowInterruptionsTimeoutInMinutes": 30,
+    "learnerReclaimTryOnInterruptionTimeoutEnabled": false,
+    "learnerAskBeforeContinueToSaved": true,
+    "learnerAutoSaveEnabled": null,
+    "spellcheckDisabled": null,
+    "showPartialScoreOnSubmission": true,
+    "deliverableQuestionsSubsetType": "all",
+    "questionRandomizationType": "none",
+    "serveQuestionsBasedOnPreviousSubmission": null,
+    "scoringDisabled": true,
+    "isSelfAssessment": true,
+    "useDefaultCertificateTemplate": null,
+    "certificateTemplate": null,
+    "certificateSocialShare": null,
+    "migrationData": null,
+    "useAssessmentPassingGradeForOpenEndedCorrectness": true,
+    "openEndedCorrectnessPassingGrade": null,
+    "showScorePercentage": null,
+    "showScorePoints": null,
+    "showScoreCorrectAnswers": null,
+    "editorBehaviorSettings": null,
+    "manualReviewEnabled": false,
+    "resultsSummary": {
+      "enabled": true,
+      "showStatusIcon": true,
+      "showStatusText": true,
+      "showScorePercentage": true,
+      "showScorePoints": true,
+      "showScoreCorrectAnswers": true,
+      "showTimeTakenToComplete": true,
+      "showDateSubmitted": true,
+      "showAttemptCount": true
+    },
+    "meta": null,
+    "submissionsCount": 2635,
+    "fromMarketplace": null,
+    "aiFeedbackEnabled": null,
+    "numberOfFeedbackQuestions": null,
+    "created": 1723646330.53723,
+    "modified": 1723648959.521696,
+    "contentHash": "77cccc1c4a6dfa4f37ff78c66db6a722f8ebc1ba4d394584492cf0f3b339829d",
+    "id": "66bcc17a44d282959e0b53b5",
+    "objectType": "assessment",
+    "isEditBlockedDueToSync": false,
+    "variables": {
+      "submission": {
+        "self": {
+          "score": null,
+          "points": null,
+          "total_points": null,
+          "correct_answers": null,
+          "total_questions": 10,
+          "time_spent": "00:00:00",
+          "date_submitted": "11/08/26",
+          "attempt_count": 4,
+          "max_tries": null,
+          "pass_grade": null,
+          "time_spent_seconds": 0,
+          "raw_start_date": 1786440364.181343
+        }
+      },
+      "school": {
+        "name": "Apna College",
+        "url": "www.apnacollege.in",
+        "description": "The most loved coding community of India ❤️"
+      },
+      "user": {
+        "username": "ram",
+        "email": "p4542639@gmail.com",
+        "cf_phonenumber": "7666690798"
+      }
+    }
+  },
+  "reclaimedTry": false,
+  "feedback": [
+    {
+      "title": "",
+      "id": "section66bcc17a0125a",
+      "blocks": [
+        {
+          "id": "mc66bcc17a01262",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "In a class of 110 persons in a seminar and each one has either opted for Cola or Thumps-Up as a drink and was either interested in disco or quarantine. The number of people who have opted for Cola and are interested in disco is 66.66% of the number of people who have opted for Cola and are interested in quarantine. The number of people who opted for in Thumps-up is twice the numbers of the people who opted for Cola and Quarantine. Find the total number of person who have opted for the Thumps-Up?",
+            "widgets": [
+              {
+                "id": "text66bcc17a01282",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">In a class of 110 persons in a seminar and each one has either opted for Cola or Thumps-Up as a drink and was either interested in disco or quarantine. The number of people who have opted for Cola and are interested in disco is 66.66% of the number of people who have opted for Cola and are interested in quarantine. The number of people who opted for in Thumps-up is twice the numbers of the people who opted for Cola and Quarantine. Find the total number of person who have opted for the Thumps-Up?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66bcc17a012e9",
+              "description": {
+                "text": "40",
+                "widgets": [
+                  {
+                    "id": "text66bcc17a012f5",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>40</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66bcc17a0130f",
+              "description": {
+                "text": "36",
+                "widgets": [
+                  {
+                    "id": "text66bcc17a01322",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>36</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66bcc17a0133b",
+              "description": {
+                "text": "60",
+                "widgets": [
+                  {
+                    "id": "text66bcc17a01346",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>60</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66bcc17a0135f",
+              "description": {
+                "text": "cannot be determined.",
+                "widgets": [
+                  {
+                    "id": "text66bcc17a0136b",
+                    "type": "text",
+                    "properties": {
+                      "html": "cannot be determined."
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66bcc17a0133b",
+              "text": "60",
+              "widgets": [
+                {
+                  "id": "text66bcc17a01346",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>60</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/9e91a8cbdb1a9f822718485c363675da.jpg\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66bcc17a0139d",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Gokulanand restaurant regularly conducts survey of its customers. The customers are asked to rate the food quality, service and price as Excellent, Good and Fair. Customers are also asked whether they would come back. It was. found that 76% of customers say that they will come back. Amongst. those who say that they will come back, 57% rate the restaurant as Excellent, 36% rate as Good and remaining rate as Fair. of those who say that they will not return, the respective values are 14%,32% and 54%. What approximate percentage of customers rated the restaurant as good?",
+            "widgets": [
+              {
+                "id": "text66bcc17a013a4",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">Gokulanand restaurant regularly conducts survey of its customers. The customers are asked to rate the food quality, service and price as Excellent, Good and Fair. Customers are also asked whether they would come back. It was. found that 76% of customers say that they will come back. Amongst. those who say that they will come back, 57% rate the restaurant as Excellent, 36% rate as Good and remaining rate as Fair. of those who say that they will not return, the respective values are 14%,32% and 54%. What approximate percentage of customers rated the restaurant as good?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66bcc17a01409",
+              "description": {
+                "text": "27.4%",
+                "widgets": [
+                  {
+                    "id": "text66bcc17a01413",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>27.4%</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66bcc17a0142c",
+              "description": {
+                "text": "35%",
+                "widgets": [
+                  {
+                    "id": "text66bcc17a01437",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>35%</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66bcc17a01450",
+              "description": {
+                "text": "51%",
+                "widgets": [
+                  {
+                    "id": "text66bcc17a0146b",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>51%</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66bcc17a01486",
+              "description": {
+                "text": "30.7%",
+                "widgets": [
+                  {
+                    "id": "text66bcc17a01491",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>30.7%</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66bcc17a0142c",
+              "text": "35%",
+              "widgets": [
+                {
+                  "id": "text66bcc17a01437",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>35%</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/f95fc0c7bb9bcab0c870b692af40c055.jpg\"><br>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66bcc17a014c7",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Shubham has raised 66.6% of the donation that he needs for his NGO project HELP in order to educate children in slums, by receiving an average donation of Rs. 600 per person from a group of people. To raise the remaining amount, Shubham now approaching another group of people who has retwo-fifths the number of. people as the first group. What should be the average donation (in rupees) per person from the new group?",
+            "widgets": [
+              {
+                "id": "text66bcc17a014d1",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">Shubham has raised 66.6% of the donation that he needs for his NGO project HELP in order to educate children in slums, by receiving an average donation of Rs. 600 per person from a group of people. To raise the remaining amount, Shubham now approaching another group of people who has retwo-fifths the number of. people as the first group. What should be the average donation (in rupees) per person from the new group?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66bcc17a01540",
+              "description": {
+                "text": "600",
+                "widgets": [
+                  {
+                    "id": "text66bcc17a0154c",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>600</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66bcc17a01567",
+              "description": {
+                "text": "750",
+                "widgets": [
+                  {
+                    "id": "text66bcc17a01574",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>750</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66bcc17a01590",
+              "description": {
+                "text": "1000",
+                "widgets": [
+                  {
+                    "id": "text66bcc17a0159b",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>1000</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66bcc17a015b3",
+              "description": {
+                "text": "1260",
+                "widgets": [
+                  {
+                    "id": "text66bcc17a015bf",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>1260</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66bcc17a01567",
+              "text": "750",
+              "widgets": [
+                {
+                  "id": "text66bcc17a01574",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>750</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/1cf6e387ce3c27330e27e2e2b8280c21.jpg\"><br>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66bcc17a015e0",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Shamika scored an aggregate of 85% in 5 subjects of her 10^\"th \" class. Two of those subjects had maximum marks which were 20% more than the maximum marks of the remaining three subjects. Her aggregate in the three subjects that had lower maximum marks was 82%. What was her aggregate percentage in the two subjects which had higher maximum a marks?",
+            "widgets": [
+              {
+                "id": "text66bcc17a015e4",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">Shamika scored an aggregate of 85% in 5 subjects of her 10^\"th \"  class. Two of those subjects had maximum marks which were 20% more than the maximum marks of the remaining three subjects. Her aggregate in the three subjects that had lower maximum marks was 82%. What was her aggregate percentage in the two subjects which had higher maximum a marks?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66bcc17a01624",
+              "description": {
+                "text": "86.5%",
+                "widgets": [
+                  {
+                    "id": "text66bcc17a0162a",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>86.5%</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66bcc17a01639",
+              "description": {
+                "text": "87.25%",
+                "widgets": [
+                  {
+                    "id": "text66bcc17a01640",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>87.25%</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66bcc17a0166b",
+              "description": {
+                "text": "88.75%",
+                "widgets": [
+                  {
+                    "id": "text66bcc17a01677",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>88.75%</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66bcc17a0168b",
+              "description": {
+                "text": "89.25%",
+                "widgets": [
+                  {
+                    "id": "text66bcc17a01692",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>89.25%</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66bcc17a0166b",
+              "text": "88.75%",
+              "widgets": [
+                {
+                  "id": "text66bcc17a01677",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>88.75%</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/5e91180bb3c6f2683732ee97d282a50b.jpg\"><br>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mcImage66bcc17a016b1",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mcImage",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "There were P people in the room when a meeting started. Half of the people left the room after half an hour and Q people entered the room. If this process has occurred three times, then what percent of people remained in room?",
+            "widgets": [
+              {
+                "id": "text66bcc17a016b6",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">There were P people in the room when a meeting started. Half of the people left the room after half an hour and Q people entered the room. If this process has occurred three times, then what percent of people remained in room?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-image-option66bcc17a016d0",
+              "description": {
+                "text": "(Image)",
+                "widgets": [
+                  {
+                    "id": "image66bcc17a016d6",
+                    "type": "image",
+                    "properties": {
+                      "hasLightbox": false,
+                      "imageData": {
+                        "title": "Picture1",
+                        "tags": [],
+                        "width": 200,
+                        "height": 81,
+                        "size": 1,
+                        "name": "/ab1d42f8ed0bf57c6afce7fc24c0c3be.png",
+                        "access": "public",
+                        "created": 1721810617.625772,
+                        "modified": 1721810617.625772,
+                        "user": {
+                          "username": "Lakhan AK Team"
+                        },
+                        "id": "66a0beb952ae20db270bdb85",
+                        "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/ab1d42f8ed0bf57c6afce7fc24c0c3be.png",
+                        "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/ab1d42f8ed0bf57c6afce7fc24c0c3be.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                        "modifiedF": "2024-07-24 11:43:37"
+                      },
+                      "height": 48,
+                      "width": 120
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-image-option66bcc17a01700",
+              "description": {
+                "text": "(Image)",
+                "widgets": [
+                  {
+                    "id": "image66bcc17a0170b",
+                    "type": "image",
+                    "properties": {
+                      "hasLightbox": false,
+                      "imageData": {
+                        "title": "Picture3",
+                        "tags": [],
+                        "width": 193,
+                        "height": 83,
+                        "size": 1,
+                        "name": "/2132ec0209b66972f30c65728125dba4.png",
+                        "access": "public",
+                        "created": 1721810635.96849,
+                        "modified": 1721810635.96849,
+                        "user": {
+                          "username": "Lakhan AK Team"
+                        },
+                        "id": "66a0becbd039f57cf4091195",
+                        "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/2132ec0209b66972f30c65728125dba4.png",
+                        "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/2132ec0209b66972f30c65728125dba4.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                        "modifiedF": "2024-07-24 11:43:55"
+                      },
+                      "height": 51,
+                      "width": 120
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-image-option66bcc17a01734",
+              "description": {
+                "text": "(Image)",
+                "widgets": [
+                  {
+                    "id": "image66bcc17a0173b",
+                    "type": "image",
+                    "properties": {
+                      "hasLightbox": false,
+                      "imageData": {
+                        "title": "Picture4",
+                        "tags": [],
+                        "width": 196,
+                        "height": 73,
+                        "size": 1,
+                        "name": "/d246f84ccda61355ad3c01b224094fe2.png",
+                        "access": "public",
+                        "created": 1721810657.360882,
+                        "modified": 1721810657.360882,
+                        "user": {
+                          "username": "Lakhan AK Team"
+                        },
+                        "id": "66a0bee166c2d5711c09c286",
+                        "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/d246f84ccda61355ad3c01b224094fe2.png",
+                        "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/d246f84ccda61355ad3c01b224094fe2.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                        "modifiedF": "2024-07-24 11:44:17"
+                      },
+                      "height": 44,
+                      "width": 120
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-image-option66bcc17a01763",
+              "description": {
+                "text": "(Image)",
+                "widgets": [
+                  {
+                    "id": "image66bcc17a0176a",
+                    "type": "image",
+                    "properties": {
+                      "hasLightbox": false,
+                      "imageData": {
+                        "title": "Picture5",
+                        "tags": [],
+                        "width": 214,
+                        "height": 79,
+                        "size": 1,
+                        "name": "/f386c81ef7c244ea0e2022b6b892fdae.png",
+                        "access": "public",
+                        "created": 1721810673.041862,
+                        "modified": 1721810673.041862,
+                        "user": {
+                          "username": "Lakhan AK Team"
+                        },
+                        "id": "66a0bef11613dd46a80ee297",
+                        "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/f386c81ef7c244ea0e2022b6b892fdae.png",
+                        "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/f386c81ef7c244ea0e2022b6b892fdae.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                        "modifiedF": "2024-07-24 11:44:33"
+                      },
+                      "height": 44,
+                      "width": 120
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-image-option66bcc17a01763",
+              "text": "(Image)",
+              "widgets": [
+                {
+                  "id": "image66bcc17a0176a",
+                  "type": "image",
+                  "properties": {
+                    "hasLightbox": false,
+                    "imageData": {
+                      "title": "Picture5",
+                      "tags": [],
+                      "width": 214,
+                      "height": 79,
+                      "size": 1,
+                      "name": "/f386c81ef7c244ea0e2022b6b892fdae.png",
+                      "access": "public",
+                      "created": 1721810673.041862,
+                      "modified": 1721810673.041862,
+                      "user": {
+                        "username": "Lakhan AK Team"
+                      },
+                      "id": "66a0bef11613dd46a80ee297",
+                      "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/f386c81ef7c244ea0e2022b6b892fdae.png",
+                      "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/f386c81ef7c244ea0e2022b6b892fdae.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                      "modifiedF": "2024-07-24 11:44:33"
+                    },
+                    "height": 44,
+                    "width": 120
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/3630768e5bdb5ad5404f2a71df683c62.jpg\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66bcc17a017a3",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "A bag contains a total of 500 coins worth ₹150. Same coin of 25 paise denomination and other of 50 paise denomination. If 10% of 25 paise coins and 25% of 50 paise coins are fake, then the percentage of money fake in the bag is?",
+            "widgets": [
+              {
+                "id": "text66bcc17a017a7",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">A bag contains a total of 500 coins worth ₹150. Same coin of 25 paise denomination and other of 50 paise denomination. If 10% of 25 paise coins and 25% of 50 paise coins are fake, then the percentage of money fake in the bag is?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66bcc17a017e4",
+              "description": {
+                "text": "15%",
+                "widgets": [
+                  {
+                    "id": "text66bcc17a017eb",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>15%</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66bcc17a017f9",
+              "description": {
+                "text": "20%",
+                "widgets": [
+                  {
+                    "id": "text66bcc17a01800",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>20%</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66bcc17a0180e",
+              "description": {
+                "text": "30%",
+                "widgets": [
+                  {
+                    "id": "text66bcc17a01814",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>30%</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66bcc17a01823",
+              "description": {
+                "text": "40%",
+                "widgets": [
+                  {
+                    "id": "text66bcc17a01829",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>40%</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66bcc17a017e4",
+              "text": "15%",
+              "widgets": [
+                {
+                  "id": "text66bcc17a017eb",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>15%</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/dbcdda8836bf8a25391595d5ddd3a9ce.jpg\"><br>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mcImage66bcc17a01846",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mcImage",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Mamta spends for milk and oil in the ratio 3:4 per month. The price is increased for milk by 10% and decreased by 5% for oil. Find the percentage change in oil consumption if there is no change in consumption of milk as it essential for her child. Given that the total monthly expenditure in both commodities remains the same.",
+            "widgets": [
+              {
+                "id": "text66bcc17a0184b",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">Mamta spends for milk and oil in the ratio 3:4 per month. The price is increased for milk by 10% and decreased by 5% for oil. Find the percentage change in oil consumption if there is no change in consumption of milk as it essential for her child. Given that the total monthly expenditure in both commodities remains the same.</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-image-option66bcc17a0187a",
+              "description": {
+                "text": "(Image)",
+                "widgets": [
+                  {
+                    "id": "image66bcc17a01886",
+                    "type": "image",
+                    "properties": {
+                      "hasLightbox": false,
+                      "imageData": {
+                        "title": "Picture6",
+                        "tags": [],
+                        "width": 106,
+                        "height": 77,
+                        "size": 1,
+                        "name": "/eba3496f62ac5123938c2f022df1fec9.png",
+                        "access": "public",
+                        "created": 1721811094.734395,
+                        "modified": 1721811094.734395,
+                        "user": {
+                          "username": "Lakhan AK Team"
+                        },
+                        "id": "66a0c096a6f5cda5640809e5",
+                        "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/eba3496f62ac5123938c2f022df1fec9.png",
+                        "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/eba3496f62ac5123938c2f022df1fec9.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                        "modifiedF": "2024-07-24 11:51:34"
+                      },
+                      "height": 47,
+                      "width": 65
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-image-option66bcc17a018d3",
+              "description": {
+                "text": "(Image)",
+                "widgets": [
+                  {
+                    "id": "image66bcc17a018de",
+                    "type": "image",
+                    "properties": {
+                      "hasLightbox": false,
+                      "imageData": {
+                        "title": "Picture7",
+                        "tags": [],
+                        "width": 76,
+                        "height": 60,
+                        "size": 1,
+                        "name": "/b159fb4add43838b21a730a3d1d4ed3d.png",
+                        "access": "public",
+                        "created": 1721811111.392988,
+                        "modified": 1721811111.392988,
+                        "user": {
+                          "username": "Lakhan AK Team"
+                        },
+                        "id": "66a0c0a7ce072716fd02264b",
+                        "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/b159fb4add43838b21a730a3d1d4ed3d.png",
+                        "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/b159fb4add43838b21a730a3d1d4ed3d.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                        "modifiedF": "2024-07-24 11:51:51"
+                      },
+                      "height": 39,
+                      "width": 50
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-image-option66bcc17a01924",
+              "description": {
+                "text": "(Image)",
+                "widgets": [
+                  {
+                    "id": "image66bcc17a01930",
+                    "type": "image",
+                    "properties": {
+                      "hasLightbox": false,
+                      "imageData": {
+                        "title": "Picture9",
+                        "tags": [],
+                        "width": 79,
+                        "height": 54,
+                        "size": 1,
+                        "name": "/a982f8db8697d40aa8c5c11735a328bc.png",
+                        "access": "public",
+                        "created": 1721811125.590681,
+                        "modified": 1721811125.590681,
+                        "user": {
+                          "username": "Lakhan AK Team"
+                        },
+                        "id": "66a0c0b5a42b83992e0c6a69",
+                        "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/a982f8db8697d40aa8c5c11735a328bc.png",
+                        "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/a982f8db8697d40aa8c5c11735a328bc.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                        "modifiedF": "2024-07-24 11:52:05"
+                      },
+                      "height": 34,
+                      "width": 50
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-image-option66bcc17a01976",
+              "description": {
+                "text": "(Image)",
+                "widgets": [
+                  {
+                    "id": "image66bcc17a01982",
+                    "type": "image",
+                    "properties": {
+                      "hasLightbox": false,
+                      "imageData": {
+                        "title": "Picture10",
+                        "tags": [],
+                        "width": 103,
+                        "height": 75,
+                        "size": 1,
+                        "name": "/38039aa4f8791020fca94199f60d567b.png",
+                        "access": "public",
+                        "created": 1721811140.99714,
+                        "modified": 1721811140.99714,
+                        "user": {
+                          "username": "Lakhan AK Team"
+                        },
+                        "id": "66a0c0c4e5e2848b1a04b076",
+                        "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/38039aa4f8791020fca94199f60d567b.png",
+                        "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/38039aa4f8791020fca94199f60d567b.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                        "modifiedF": "2024-07-24 11:52:20"
+                      },
+                      "height": 43,
+                      "width": 60
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-image-option66bcc17a01976",
+              "text": "(Image)",
+              "widgets": [
+                {
+                  "id": "image66bcc17a01982",
+                  "type": "image",
+                  "properties": {
+                    "hasLightbox": false,
+                    "imageData": {
+                      "title": "Picture10",
+                      "tags": [],
+                      "width": 103,
+                      "height": 75,
+                      "size": 1,
+                      "name": "/38039aa4f8791020fca94199f60d567b.png",
+                      "access": "public",
+                      "created": 1721811140.99714,
+                      "modified": 1721811140.99714,
+                      "user": {
+                        "username": "Lakhan AK Team"
+                      },
+                      "id": "66a0c0c4e5e2848b1a04b076",
+                      "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/38039aa4f8791020fca94199f60d567b.png",
+                      "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/38039aa4f8791020fca94199f60d567b.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                      "modifiedF": "2024-07-24 11:52:20"
+                    },
+                    "height": 43,
+                    "width": 60
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/775170f7c2afd3e6d5b50284657ccbf2.jpg\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66bcc17a019dc",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "A small town contains three localities P,Q and R. The population of P,Q and R are in the ratio of 8:7:5 respectively. In P, the literacy rate is 80% whereas in Q the literacy rate is 70%. If the illiteracy rate in R is average of illiteracy rate of P and Q then find the percentage of literacy in that town.",
+            "widgets": [
+              {
+                "id": "text66bcc17a019e4",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">A small town contains three localities P,Q and R. The population of P,Q and R are in the ratio of 8:7:5 respectively. In P, the literacy rate is 80% whereas in Q the literacy rate is 70%. If the illiteracy rate in R is average of illiteracy rate of P and Q then find the percentage of literacy in that town.</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66bcc17a01a62",
+              "description": {
+                "text": "60%",
+                "widgets": [
+                  {
+                    "id": "text66bcc17a01a6d",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>60%</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66bcc17a01a85",
+              "description": {
+                "text": "72.25%",
+                "widgets": [
+                  {
+                    "id": "text66bcc17a01a91",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>72.25%</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66bcc17a01aaa",
+              "description": {
+                "text": "27.75%",
+                "widgets": [
+                  {
+                    "id": "text66bcc17a01ab5",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>27.75%</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66bcc17a01ace",
+              "description": {
+                "text": "none of these",
+                "widgets": [
+                  {
+                    "id": "text66bcc17a01ad9",
+                    "type": "text",
+                    "properties": {
+                      "html": "none of these"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66bcc17a01a85",
+              "text": "72.25%",
+              "widgets": [
+                {
+                  "id": "text66bcc17a01a91",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>72.25%</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/4c25a464bdc9fc771bf1a3b274afbaf6.jpg\"><br>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66bcc17a01b14",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "In order to elect next President of the College students Union, an election was announced where three suitable candidates competed to become the next president. They were namely A,B and C. In the election, A gets 20% of the total votes cast. B trails A by 60 votes and C who secured the third position got 40% of B's votes. There are only three candidates in the election. If 292 of the total votes are deemed invalid, then find the total number of votes cast by the students of the college.",
+            "widgets": [
+              {
+                "id": "text66bcc17a01b1b",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">In order to elect next President of the College students Union, an election was announced where three suitable candidates competed to become the next president. They were namely A,B and C. In the election, A gets 20% of the total votes cast. B trails A by 60 votes and C who secured the third position got 40% of B's votes. There are only three candidates in the election. If 292 of the total votes are deemed invalid, then find the total number of votes cast by the students of the college.</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66bcc17a01b85",
+              "description": {
+                "text": "400",
+                "widgets": [
+                  {
+                    "id": "text66bcc17a01b90",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>400</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66bcc17a01ba9",
+              "description": {
+                "text": "380",
+                "widgets": [
+                  {
+                    "id": "text66bcc17a01bb5",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>380</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66bcc17a01bce",
+              "description": {
+                "text": "420",
+                "widgets": [
+                  {
+                    "id": "text66bcc17a01bd9",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>420</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66bcc17a01bf2",
+              "description": {
+                "text": "440",
+                "widgets": [
+                  {
+                    "id": "text66bcc17a01bfd",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>440</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66bcc17a01b85",
+              "text": "400",
+              "widgets": [
+                {
+                  "id": "text66bcc17a01b90",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>400</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/a914e06e0afa0e3cc50b575a46d12e93.jpg\"><br>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66bcc17a01c30",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "In an exam, every question correctly answered fetches 2 marks, Every question wrongly answered loses 1 mark. Unanswered questions have no marks associated with them. Ritam and Syed wrote this exam. Ritam attempted a certain number of questions and 25% of them went wrong. Syed attempted a certain number of questions and 50% of them went wrong. Ritam got 40 marks more than the pass mark. Syed got 5 marks more than the pass mark. The two of them together attempted a total of 140 questions. Find the pass mark in the exam.",
+            "widgets": [
+              {
+                "id": "text66bcc17a01c38",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">In an exam, every question correctly answered fetches 2 marks, Every question wrongly answered loses 1 mark. Unanswered questions have no marks associated with them. Ritam and Syed wrote this exam. Ritam attempted a certain number of questions and 25% of them went wrong. Syed attempted a certain number of questions and 50% of them went wrong. Ritam got 40 marks more than the pass mark. Syed got 5 marks more than the pass mark. The two of them together attempted a total of 140 questions. Find the pass mark in the exam.</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66bcc17a01ca1",
+              "description": {
+                "text": "45",
+                "widgets": [
+                  {
+                    "id": "text66bcc17a01cad",
+                    "type": "text",
+                    "properties": {
+                      "html": "45&nbsp;"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66bcc17a01cc6",
+              "description": {
+                "text": "40",
+                "widgets": [
+                  {
+                    "id": "text66bcc17a01cd1",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>40</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66bcc17a01ceb",
+              "description": {
+                "text": "30",
+                "widgets": [
+                  {
+                    "id": "text66bcc17a01cf6",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>30</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66bcc17a01d0f",
+              "description": {
+                "text": "35",
+                "widgets": [
+                  {
+                    "id": "text66bcc17a01d1b",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>35</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66bcc17a01d0f",
+              "text": "35",
+              "widgets": [
+                {
+                  "id": "text66bcc17a01d1b",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>35</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/787214ab143a74c09f0ab95657729140.jpg\"><br><br>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        }
+      ]
+    }
+  ],
+  "submitted": true,
+  "updated": true,
+  "retryCount": 4,
+  "inlineFeedback": [],
+  "errors": [],
+  "success": true
+}

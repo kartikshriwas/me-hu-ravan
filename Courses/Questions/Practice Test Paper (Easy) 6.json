@@ -1,0 +1,3049 @@
+{
+  "submission": {
+    "anon_id": null,
+    "model": "assessment-submission",
+    "courseTitleId": "aptitude-qs-library",
+    "object_id": "66a0aaacc0e0b409e40d0f36",
+    "assessmentId": "66a0aaacc0e0b409e40d0f35",
+    "snapshotId": "66bcecd3e3e2750667074a25",
+    "questions": {
+      "section66a0aaac49aa4": [
+        "mc1721836893001_271",
+        "mc1721836999266_295",
+        "mc1721837098886_300",
+        "mc1721837171354_316",
+        "mc1721837255201_326",
+        "mc1721837429849_342",
+        "mc1721837520049_352",
+        "mc1721837598171_367",
+        "mc1721837722233_378",
+        "mc1721837803537_392"
+      ]
+    },
+    "certificateAnswers": [],
+    "certificateId": null,
+    "questionData": {
+      "mc1721836893001_271": {
+        "deliveredOnTimestamp": 1786440373.798831,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721836999266_295": {
+        "deliveredOnTimestamp": 1786440373.798852,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721837098886_300": {
+        "deliveredOnTimestamp": 1786440373.798866,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721837171354_316": {
+        "deliveredOnTimestamp": 1786440373.798878,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721837255201_326": {
+        "deliveredOnTimestamp": 1786440373.798888,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721837429849_342": {
+        "deliveredOnTimestamp": 1786440373.798899,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721837520049_352": {
+        "deliveredOnTimestamp": 1786440373.798915,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721837598171_367": {
+        "deliveredOnTimestamp": 1786440373.798925,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721837722233_378": {
+        "deliveredOnTimestamp": 1786440373.798935,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721837803537_392": {
+        "deliveredOnTimestamp": 1786440373.798946,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      }
+    },
+    "answers": [
+      {
+        "blockId": "mc1721836893001_271",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721836999266_295",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721837098886_300",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721837171354_316",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721837255201_326",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721837429849_342",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721837520049_352",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721837598171_367",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721837722233_378",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721837803537_392",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      }
+    ],
+    "submittedTimestamp": 1786440374.03989,
+    "status": "submitted",
+    "grading_status": "grading_status_no_grade",
+    "access": "public",
+    "actual_score": null,
+    "score": [],
+    "source": {
+      "type": "unit"
+    },
+    "isDefining": true,
+    "isAdminAutoGradedSubmission": null,
+    "listOfNonConsentedBlocks": [],
+    "created": 1786440373.803889,
+    "modified": 1786440374.129995,
+    "id": "6a7aeab5e0000dedbd00d7db",
+    "passed": null
+  },
+  "assessment": {
+    "title": "Practice Test Paper (Easy)",
+    "access": "public",
+    "type": "assessment",
+    "model": "assessmentSnapshot",
+    "description": "Foundational practice test paper containing 10 assessment questions covering Profit, Loss & Discounts, Speed, Distance & Time, Data Structures & Algorithms.",
+    "isTimed": false,
+    "timerFor": "assessmentTimed",
+    "onTimerExpiration": "autoSubmit",
+    "assessmentTimeLimitInSeconds": 600,
+    "questionTimeLimitInSeconds": 60,
+    "standaloneShareEnabled": null,
+    "customUrl": null,
+    "usesCustomUrl": null,
+    "allowAnonymous": true,
+    "randomizeQuestionOptions": false,
+    "disallowPartialSubmissions": false,
+    "submissionDueDateEnabled": false,
+    "submissionDueDate": 1626257823,
+    "makeFeedbackAvailableAfterDateEnabled": false,
+    "makeFeedbackAvailableAfterDate": 0,
+    "customStylesEnabled": true,
+    "customStyles": {
+      "assessmentPage": {
+        "background": {
+          "type": "color",
+          "colorData": {
+            "code": "",
+            "class": "lw-body-bg"
+          }
+        },
+        "dividers": {
+          "top": {
+            "orientation": "top",
+            "divider": "none"
+          },
+          "bottom": {
+            "orientation": "bottom",
+            "divider": "none"
+          }
+        }
+      },
+      "option": {
+        "radioEffect": "scribble",
+        "checkboxEffect": "scribble",
+        "size": "small"
+      },
+      "assessment": {
+        "transition": "none",
+        "background": {
+          "type": "color",
+          "colorData": {
+            "code": "",
+            "class": ""
+          }
+        },
+        "width": "normal",
+        "timerTemplate": "rectangle"
+      },
+      "linearRating": {
+        "labels": {
+          "size": "small"
+        }
+      },
+      "question": {
+        "description": {
+          "background": {
+            "type": "color",
+            "colorData": {
+              "code": "",
+              "class": ""
+            }
+          },
+          "type": "p",
+          "size": "small"
+        },
+        "answers": {
+          "background": {
+            "type": "color",
+            "colorData": {
+              "code": "",
+              "class": ""
+            }
+          }
+        },
+        "requiredAsterisk": {
+          "colorData": {
+            "code": "#ff0000",
+            "class": ""
+          }
+        },
+        "errorMessages": {
+          "size": "verySmall",
+          "colorData": {
+            "code": "#ff0000",
+            "class": ""
+          }
+        }
+      },
+      "input": {
+        "size": "small",
+        "type": "solidDark"
+      },
+      "textarea": {
+        "size": "small",
+        "type": "solidDark"
+      },
+      "dropdown": {
+        "size": "small",
+        "type": "solidDark"
+      }
+    },
+    "submissionMode": "all",
+    "startingDate": 1626765704,
+    "startingDateEnabled": false,
+    "showOnlyFailedQuestionsOnRetry": false,
+    "retryEnabled": true,
+    "retryOnFailOnly": false,
+    "gradingMethod": null,
+    "maxTries": null,
+    "onlyWrongOnRetake": null,
+    "isAmendable": false,
+    "feedbackShowOnScreen": false,
+    "feedbackDownloadPDF": false,
+    "feedbackShowInline": true,
+    "feedbackQuestionList": "all-questions",
+    "feedbackShowQuestionScore": false,
+    "feedbackShowFeedback": true,
+    "feedbackShowNumbering": false,
+    "feedbackShowSectionTitles": false,
+    "feedbackShowUserAnswers": true,
+    "feedbackShowCorrectAnswers": true,
+    "feedbackShowAnswerCorrectness": true,
+    "displayInlineFeedbackEnabled": true,
+    "displayBackButtonWhenSubmissionPerBlock": true,
+    "feedbackShowSectionResultSummary": false,
+    "askConfirmationBeforeSubmit": false,
+    "hasCustomConfirmationBeforeSubmitText": false,
+    "customConfirmationBeforeSubmitText": "Are you sure you want to submit the questionnaire?",
+    "customConfirmationBeforeSubmitTexts": {
+      "title": "Submit Assessment?",
+      "baseConfirmationMessage": "Are you sure you want to submit the questionnaire?",
+      "unansweredNotice": "You have not answered {X} questions."
+    },
+    "amendResubmissionMinutes": 30,
+    "passingGrade": null,
+    "navigationMode": "per-block",
+    "conditionalBlocks": {
+      "introContent": {
+        "id": "content66a0aaac499b0",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66a0aaac499c0",
+              "type": "text",
+              "insertedAsWidget": true,
+              "properties": {
+                "html": "Averages PAPER LEVEL-1",
+                "alignment": "center",
+                "customStyle": true,
+                "type": "h2",
+                "size": "normal"
+              }
+            },
+            {
+              "id": "text66a0aaac499d9",
+              "type": "text",
+              "properties": {
+                "html": "<div><span style=\"font-size: 1.7rem; letter-spacing: 0rem;\">Self-assess your knowledge. Express yourself and get feedback from our instructors.</span><br></div>",
+                "customStyle": true,
+                "alignment": "center"
+              }
+            },
+            {
+              "id": "spacer66a0aaac499eb",
+              "type": "spacer",
+              "properties": {
+                "height": 25,
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            },
+            {
+              "id": "button66a0aaac49a01",
+              "type": "button",
+              "properties": {
+                "buttonLabel": "<span>Ready to start</span>",
+                "buttonSize": "normal",
+                "buttonType": "solidBrand",
+                "alignment": "center",
+                "linkData": {
+                  "linkType": "goToFirst"
+                },
+                "iconColorData": {
+                  "code": "",
+                  "class": ""
+                },
+                "iconDisplay": false,
+                "iconSize": 26,
+                "iconClassName": " fas fa-angle-right",
+                "iconPosition": "right"
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "variables": {
+            "conditionalBlocks_introContent_blockData_widgets_0": []
+          }
+        }
+      },
+      "submissionStartingDate": {
+        "id": "content66a0aaac49a4e",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66a0aaac49a54",
+              "type": "text",
+              "properties": {
+                "html": "Sorry but this assessment hasn't started yet."
+              }
+            },
+            {
+              "id": "date66a0aaac49a5b",
+              "type": "date",
+              "properties": {
+                "value": ""
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "displayConditions": ["startingDate"]
+        }
+      },
+      "submissionDueDate": {
+        "id": "content66a0aaac49a67",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66a0aaac49a6b",
+              "type": "text",
+              "properties": {
+                "html": "Sorry but this assessment date is due."
+              }
+            },
+            {
+              "id": "date66a0aaac49a72",
+              "type": "date",
+              "properties": {
+                "value": ""
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "displayConditions": ["dateIsDue"]
+        }
+      },
+      "outroContent": {
+        "id": "content66a0aaac49a7d",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "userResults66a0aaac49a82",
+              "type": "userResults",
+              "properties": {
+                "layout": "template2",
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            },
+            {
+              "id": "feedback66a0aaac49a8e",
+              "type": "feedback",
+              "properties": []
+            },
+            {
+              "id": "outroActions66a0aaac49a94",
+              "type": "outroActions",
+              "properties": {
+                "layout": "",
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true
+        }
+      }
+    },
+    "systemSections": null,
+    "sections": [
+      {
+        "id": "section66a0aaac49aa4",
+        "title": "",
+        "type": "section",
+        "navigationMode": "per-block",
+        "blocks": [
+          {
+            "id": "mc1721836893001_271",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721836893001_276",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">If the Average age of 10 students reduces by 0.25 years when the oldest student leaves, then how much more is the age of the oldest student when compared to the average age.</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721836893001_270",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721836893001_273",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721836893001_282",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721836893001_281",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721836893001_275",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>2</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721836893001_272",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721836893001_280",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>2.15</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721836893001_274",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721836893001_278",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>2.75</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721836893001_277",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721836893001_279",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>2.5</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_0": []
+              }
+            }
+          },
+          {
+            "id": "mc1721836999266_295",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721836999266_286",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">The average of n numbers is 40. If each of the 4/5 of the numbers is increased by 5, and each of the remaining 1/5 of them is decreased by 10, then the new average will be:</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721836999266_294",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721836999266_285",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721836999266_293",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721836999266_288",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721836999266_291",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>41</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721836999266_284",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721836999266_289",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>41.45</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721836999266_290",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721836999266_292",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>42.5</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721836999266_283",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721836999266_287",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>42</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_1_blockData_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_1": []
+              }
+            }
+          },
+          {
+            "id": "mc1721837098886_300",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721837098886_305",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">The students of three classrooms, A, B and C, take a test. The average scores of students in classes A, B and C are 70, 80 and 74 respectively. The average scores of all the students of classes A and B together and B and C together are 74 and 76, respectively. Find the average score of all the three classes put together.</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721837098886_296",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721837098886_307",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721837098886_297",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721837098886_302",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721837098886_308",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>74</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721837098886_299",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721837098886_306",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>73.4</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721837098886_304",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721837098886_298",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>74.7</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721837098886_301",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721837098886_303",
+                        "type": "text",
+                        "properties": {
+                          "html": "None of these"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_2_blockData_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_2": []
+              }
+            }
+          },
+          {
+            "id": "mc1721837171354_316",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721837171354_313",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">Rakesh covers 12 km at 6 km/hr, 36 km at 9 km/hr and then 32 km at 4 km/hr. Find the approximate average speed in covering the whole distance</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721837171354_311",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721837171354_315",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721837171354_312",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721837171354_321",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721837171354_310",
+                        "type": "text",
+                        "properties": {
+                          "html": "4.2 km/hr"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721837171354_309",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721837171354_319",
+                        "type": "text",
+                        "properties": {
+                          "html": "5.52 km/hr"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721837171354_317",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721837171354_318",
+                        "type": "text",
+                        "properties": {
+                          "html": "5.71 km/hr"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721837171354_320",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721837171354_314",
+                        "type": "text",
+                        "properties": {
+                          "html": "5 km/hr"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_3_blockData_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3": []
+              }
+            }
+          },
+          {
+            "id": "mc1721837255201_326",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721837255201_328",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">There are eight people in the Singh family, and the average age of all the family members is 35 years. A new baby is born in the family. After five years, what will be the approximate average age of the Singh family members?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721837255201_323",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721837255201_331",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721837255201_322",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721837255201_327",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721837255201_334",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>40</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721837255201_330",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721837255201_329",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>36</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721837255201_324",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721837255201_333",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>39</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721837255201_325",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721837255201_332",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>41</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_4_blockData_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4": []
+              }
+            }
+          },
+          {
+            "id": "mc1721837429849_342",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721837429849_335",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">A man buys 12 litres of milk at Rs. 50/litre and 8 litres of water at Rs. 20/litre. He sells the mixture at a 30% profit. What is the selling price of a litre of the mixture?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721837429849_336",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721837429849_346",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721837429849_344",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721837429849_337",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721837429849_340",
+                        "type": "text",
+                        "properties": {
+                          "html": "Rs. 49.4/litre"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721837429849_339",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721837429849_343",
+                        "type": "text",
+                        "properties": {
+                          "html": "Rs. 50/litre"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721837429849_345",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721837429849_341",
+                        "type": "text",
+                        "properties": {
+                          "html": "Rs. 55/litre"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721837429849_347",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721837429849_338",
+                        "type": "text",
+                        "properties": {
+                          "html": "Rs. 38.5/litre"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_5_blockData_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5": []
+              }
+            }
+          },
+          {
+            "id": "mc1721837520049_352",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721837520049_350",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">Average weight of four persons A, B, C, and D is 72 kg. If the average weight of A and B is 65 kg and the average weight of B, C and D is 75 kg, then the weight of B is:</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721837520049_358",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721837520049_359",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721837520049_360",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721837520049_353",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721837520049_349",
+                        "type": "text",
+                        "properties": {
+                          "html": "67 kg"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721837520049_356",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721837520049_357",
+                        "type": "text",
+                        "properties": {
+                          "html": "70 kg"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721837520049_348",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721837520049_351",
+                        "type": "text",
+                        "properties": {
+                          "html": "72 kg"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721837520049_355",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721837520049_354",
+                        "type": "text",
+                        "properties": {
+                          "html": "75 kg"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_6_blockData_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_6": []
+              }
+            }
+          },
+          {
+            "id": "mc1721837598171_367",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721837598171_372",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">The average age of section P is A years. If section Q has one-third students compared to section P and their average age is A - 2 years, then what is the average age of both these sections combined together (in terms of A)?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721837598171_370",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721837598171_369",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721837598171_365",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721837598171_371",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721837598171_366",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>A</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721837598171_373",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721837598171_364",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>A+1/2</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721837598171_368",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721837598171_362",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>A-1/2</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721837598171_361",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721837598171_363",
+                        "type": "text",
+                        "properties": {
+                          "html": "&nbsp;2A-1"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_7_blockData_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_7": []
+              }
+            }
+          },
+          {
+            "id": "mc1721837722233_378",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721837722233_379",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">A certain number of trophies were distributed among the players of a cricket academy. The player who got 1/5th of the total number of trophies actually got 4 times the average number of trophies the others got. Find the number of players in the cricket academy.</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721837722233_381",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721837722233_386",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721837722233_385",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721837722233_384",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721837722233_380",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>20</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721837722233_375",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721837722233_383",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>17</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721837722233_376",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721837722233_377",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>16</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721837722233_382",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721837722233_374",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>21</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_8_blockData_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_8": []
+              }
+            }
+          },
+          {
+            "id": "mc1721837803537_392",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721837803537_398",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">Four years ago, the average age of Reena, Sheena and Cheena was 22. The average age of Reena and Cheena today is 25. Also, the present age of Reena is 75% of the present age of Sheena. What is the present age of Cheena?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721837803537_388",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721837803537_396",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721837803537_390",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721837803537_399",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721837803537_393",
+                        "type": "text",
+                        "properties": {
+                          "html": "29 years"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721837803537_391",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721837803537_387",
+                        "type": "text",
+                        "properties": {
+                          "html": "30 years"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721837803537_389",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721837803537_397",
+                        "type": "text",
+                        "properties": {
+                          "html": "32 years&nbsp;"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721837803537_394",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721837803537_395",
+                        "type": "text",
+                        "properties": {
+                          "html": "36 years"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_9_blockData_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_9": []
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "availabilityStatus": null,
+    "autoNavigationEnabled": false,
+    "displayBackButtonWhenNavigationPerBlock": true,
+    "saveAndResumeLaterEnabled": null,
+    "tagsAddedOnCompletion": [],
+    "tagsAddedOnPass": [],
+    "sendAnonymousSubmissionsToEmailLeads": false,
+    "afterSubmitActionEnabled": null,
+    "afterSubmitActionProperties": null,
+    "showWizardOnNextEdit": false,
+    "revisitAfterSubmissionAction": null,
+    "navigationTemplate": "HorizontalSpacedBetweenNavigationTemplate",
+    "learnerSearchBarEnabled": true,
+    "learnerUnansweredQuestionsEnabled": true,
+    "learnerFavouriteQuestionEnabled": true,
+    "learnerCompletionProgressEnabled": true,
+    "learnerShowIndexOfQuestionsEnabled": false,
+    "learnerTimeNotificationsEnabled": false,
+    "learnerAllowInterruptionsEnabled": true,
+    "learnerAllowInterruptionsTimeoutInMinutes": 30,
+    "learnerReclaimTryOnInterruptionTimeoutEnabled": false,
+    "learnerAskBeforeContinueToSaved": true,
+    "learnerAutoSaveEnabled": null,
+    "spellcheckDisabled": null,
+    "showPartialScoreOnSubmission": true,
+    "deliverableQuestionsSubsetType": "all",
+    "questionRandomizationType": "none",
+    "serveQuestionsBasedOnPreviousSubmission": null,
+    "scoringDisabled": true,
+    "isSelfAssessment": true,
+    "useDefaultCertificateTemplate": null,
+    "certificateTemplate": null,
+    "certificateSocialShare": null,
+    "migrationData": null,
+    "useAssessmentPassingGradeForOpenEndedCorrectness": true,
+    "openEndedCorrectnessPassingGrade": null,
+    "showScorePercentage": null,
+    "showScorePoints": null,
+    "showScoreCorrectAnswers": null,
+    "editorBehaviorSettings": null,
+    "manualReviewEnabled": false,
+    "resultsSummary": {
+      "enabled": true,
+      "showStatusIcon": true,
+      "showStatusText": true,
+      "showScorePercentage": true,
+      "showScorePoints": true,
+      "showScoreCorrectAnswers": true,
+      "showTimeTakenToComplete": true,
+      "showDateSubmitted": true,
+      "showAttemptCount": true
+    },
+    "meta": null,
+    "submissionsCount": 455,
+    "fromMarketplace": null,
+    "aiFeedbackEnabled": null,
+    "numberOfFeedbackQuestions": null,
+    "created": 1721805484.823253,
+    "modified": 1723657427.968825,
+    "contentHash": "3dafaafde108daaeeffd710fe2f68d71c722146dbf1db420c1d690003a7a5f9e",
+    "id": "66a0aaacc0e0b409e40d0f35",
+    "objectType": "assessment",
+    "isEditBlockedDueToSync": false,
+    "variables": {
+      "submission": {
+        "self": {
+          "score": null,
+          "points": null,
+          "total_points": null,
+          "correct_answers": null,
+          "total_questions": 10,
+          "time_spent": "00:00:01",
+          "date_submitted": "11/08/26",
+          "attempt_count": 3,
+          "max_tries": null,
+          "pass_grade": null,
+          "time_spent_seconds": 1,
+          "raw_start_date": 1786440373.803889
+        }
+      },
+      "school": {
+        "name": "Apna College",
+        "url": "www.apnacollege.in",
+        "description": "The most loved coding community of India ❤️"
+      },
+      "user": {
+        "username": "ram",
+        "email": "p4542639@gmail.com",
+        "cf_phonenumber": "7666690798"
+      }
+    }
+  },
+  "reclaimedTry": false,
+  "feedback": [
+    {
+      "title": "",
+      "id": "section66a0aaac49aa4",
+      "blocks": [
+        {
+          "id": "mc1721836893001_271",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "If the Average age of 10 students reduces by 0.25 years when the oldest student leaves, then how much more is the age of the oldest student when compared to the average age.",
+            "widgets": [
+              {
+                "id": "mc1721836893001_276",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">If the Average age of 10 students reduces by 0.25 years when the oldest student leaves, then how much more is the age of the oldest student when compared to the average age.</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721836893001_281",
+              "description": {
+                "text": "2",
+                "widgets": [
+                  {
+                    "id": "mc1721836893001_275",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>2</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721836893001_272",
+              "description": {
+                "text": "2.15",
+                "widgets": [
+                  {
+                    "id": "mc1721836893001_280",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>2.15</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721836893001_274",
+              "description": {
+                "text": "2.75",
+                "widgets": [
+                  {
+                    "id": "mc1721836893001_278",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>2.75</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721836893001_277",
+              "description": {
+                "text": "2.5",
+                "widgets": [
+                  {
+                    "id": "mc1721836893001_279",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>2.5</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721836893001_277",
+              "text": "2.5",
+              "widgets": [
+                {
+                  "id": "mc1721836893001_279",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>2.5</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/58d86e3e047341d42023f754e1845fb1.jpg\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721836999266_295",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "The average of n numbers is 40. If each of the 4/5 of the numbers is increased by 5, and each of the remaining 1/5 of them is decreased by 10, then the new average will be:",
+            "widgets": [
+              {
+                "id": "mc1721836999266_286",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">The average of n numbers is 40. If each of the 4/5 of the numbers is increased by 5, and each of the remaining 1/5 of them is decreased by 10, then the new average will be:</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721836999266_288",
+              "description": {
+                "text": "41",
+                "widgets": [
+                  {
+                    "id": "mc1721836999266_291",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>41</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721836999266_284",
+              "description": {
+                "text": "41.45",
+                "widgets": [
+                  {
+                    "id": "mc1721836999266_289",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>41.45</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721836999266_290",
+              "description": {
+                "text": "42.5",
+                "widgets": [
+                  {
+                    "id": "mc1721836999266_292",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>42.5</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721836999266_283",
+              "description": {
+                "text": "42",
+                "widgets": [
+                  {
+                    "id": "mc1721836999266_287",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>42</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721836999266_283",
+              "text": "42",
+              "widgets": [
+                {
+                  "id": "mc1721836999266_287",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>42</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/65485047437c1419525f892690b37017.jpg\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721837098886_300",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "The students of three classrooms, A, B and C, take a test. The average scores of students in classes A, B and C are 70, 80 and 74 respectively. The average scores of all the students of classes A and B together and B and C together are 74 and 76, respectively. Find the average score of all the three classes put together.",
+            "widgets": [
+              {
+                "id": "mc1721837098886_305",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">The students of three classrooms, A, B and C, take a test. The average scores of students in classes A, B and C are 70, 80 and 74 respectively. The average scores of all the students of classes A and B together and B and C together are 74 and 76, respectively. Find the average score of all the three classes put together.</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721837098886_302",
+              "description": {
+                "text": "74",
+                "widgets": [
+                  {
+                    "id": "mc1721837098886_308",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>74</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721837098886_299",
+              "description": {
+                "text": "73.4",
+                "widgets": [
+                  {
+                    "id": "mc1721837098886_306",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>73.4</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721837098886_304",
+              "description": {
+                "text": "74.7",
+                "widgets": [
+                  {
+                    "id": "mc1721837098886_298",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>74.7</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721837098886_301",
+              "description": {
+                "text": "None of these",
+                "widgets": [
+                  {
+                    "id": "mc1721837098886_303",
+                    "type": "text",
+                    "properties": {
+                      "html": "None of these"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721837098886_302",
+              "text": "74",
+              "widgets": [
+                {
+                  "id": "mc1721837098886_308",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>74</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/05fb7794b2504cdaeffd35e25ac8ea95.png\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721837171354_316",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Rakesh covers 12 km at 6 km/hr, 36 km at 9 km/hr and then 32 km at 4 km/hr. Find the approximate average speed in covering the whole distance",
+            "widgets": [
+              {
+                "id": "mc1721837171354_313",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">Rakesh covers 12 km at 6 km/hr, 36 km at 9 km/hr and then 32 km at 4 km/hr. Find the approximate average speed in covering the whole distance</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721837171354_321",
+              "description": {
+                "text": "4.2 km/hr",
+                "widgets": [
+                  {
+                    "id": "mc1721837171354_310",
+                    "type": "text",
+                    "properties": {
+                      "html": "4.2 km/hr"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721837171354_309",
+              "description": {
+                "text": "5.52 km/hr",
+                "widgets": [
+                  {
+                    "id": "mc1721837171354_319",
+                    "type": "text",
+                    "properties": {
+                      "html": "5.52 km/hr"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721837171354_317",
+              "description": {
+                "text": "5.71 km/hr",
+                "widgets": [
+                  {
+                    "id": "mc1721837171354_318",
+                    "type": "text",
+                    "properties": {
+                      "html": "5.71 km/hr"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721837171354_320",
+              "description": {
+                "text": "5 km/hr",
+                "widgets": [
+                  {
+                    "id": "mc1721837171354_314",
+                    "type": "text",
+                    "properties": {
+                      "html": "5 km/hr"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721837171354_317",
+              "text": "5.71 km/hr",
+              "widgets": [
+                {
+                  "id": "mc1721837171354_318",
+                  "type": "text",
+                  "properties": {
+                    "html": "5.71 km/hr"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/5fce79d8d28b26589de0a1d229fceb61.jpg\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721837255201_326",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "There are eight people in the Singh family, and the average age of all the family members is 35 years. A new baby is born in the family. After five years, what will be the approximate average age of the Singh family members?",
+            "widgets": [
+              {
+                "id": "mc1721837255201_328",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">There are eight people in the Singh family, and the average age of all the family members is 35 years. A new baby is born in the family. After five years, what will be the approximate average age of the Singh family members?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721837255201_327",
+              "description": {
+                "text": "40",
+                "widgets": [
+                  {
+                    "id": "mc1721837255201_334",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>40</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721837255201_330",
+              "description": {
+                "text": "36",
+                "widgets": [
+                  {
+                    "id": "mc1721837255201_329",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>36</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721837255201_324",
+              "description": {
+                "text": "39",
+                "widgets": [
+                  {
+                    "id": "mc1721837255201_333",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>39</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721837255201_325",
+              "description": {
+                "text": "41",
+                "widgets": [
+                  {
+                    "id": "mc1721837255201_332",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>41</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721837255201_330",
+              "text": "36",
+              "widgets": [
+                {
+                  "id": "mc1721837255201_329",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>36</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/2e6b0eb48097f4ad3b073d6907cd4552.jpg\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721837429849_342",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "A man buys 12 litres of milk at Rs. 50/litre and 8 litres of water at Rs. 20/litre. He sells the mixture at a 30% profit. What is the selling price of a litre of the mixture?",
+            "widgets": [
+              {
+                "id": "mc1721837429849_335",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">A man buys 12 litres of milk at Rs. 50/litre and 8 litres of water at Rs. 20/litre. He sells the mixture at a 30% profit. What is the selling price of a litre of the mixture?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721837429849_337",
+              "description": {
+                "text": "Rs. 49.4/litre",
+                "widgets": [
+                  {
+                    "id": "mc1721837429849_340",
+                    "type": "text",
+                    "properties": {
+                      "html": "Rs. 49.4/litre"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721837429849_339",
+              "description": {
+                "text": "Rs. 50/litre",
+                "widgets": [
+                  {
+                    "id": "mc1721837429849_343",
+                    "type": "text",
+                    "properties": {
+                      "html": "Rs. 50/litre"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721837429849_345",
+              "description": {
+                "text": "Rs. 55/litre",
+                "widgets": [
+                  {
+                    "id": "mc1721837429849_341",
+                    "type": "text",
+                    "properties": {
+                      "html": "Rs. 55/litre"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721837429849_347",
+              "description": {
+                "text": "Rs. 38.5/litre",
+                "widgets": [
+                  {
+                    "id": "mc1721837429849_338",
+                    "type": "text",
+                    "properties": {
+                      "html": "Rs. 38.5/litre"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721837429849_337",
+              "text": "Rs. 49.4/litre",
+              "widgets": [
+                {
+                  "id": "mc1721837429849_340",
+                  "type": "text",
+                  "properties": {
+                    "html": "Rs. 49.4/litre"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/df99d20dfbbf68fd72eaef7a9cb4c2b3.jpg\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721837520049_352",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Average weight of four persons A, B, C, and D is 72 kg. If the average weight of A and B is 65 kg and the average weight of B, C and D is 75 kg, then the weight of B is:",
+            "widgets": [
+              {
+                "id": "mc1721837520049_350",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">Average weight of four persons A, B, C, and D is 72 kg. If the average weight of A and B is 65 kg and the average weight of B, C and D is 75 kg, then the weight of B is:</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721837520049_353",
+              "description": {
+                "text": "67 kg",
+                "widgets": [
+                  {
+                    "id": "mc1721837520049_349",
+                    "type": "text",
+                    "properties": {
+                      "html": "67 kg"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721837520049_356",
+              "description": {
+                "text": "70 kg",
+                "widgets": [
+                  {
+                    "id": "mc1721837520049_357",
+                    "type": "text",
+                    "properties": {
+                      "html": "70 kg"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721837520049_348",
+              "description": {
+                "text": "72 kg",
+                "widgets": [
+                  {
+                    "id": "mc1721837520049_351",
+                    "type": "text",
+                    "properties": {
+                      "html": "72 kg"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721837520049_355",
+              "description": {
+                "text": "75 kg",
+                "widgets": [
+                  {
+                    "id": "mc1721837520049_354",
+                    "type": "text",
+                    "properties": {
+                      "html": "75 kg"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721837520049_353",
+              "text": "67 kg",
+              "widgets": [
+                {
+                  "id": "mc1721837520049_349",
+                  "type": "text",
+                  "properties": {
+                    "html": "67 kg"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/0f58ca651c03441dcc906271f162c673.png\"><br>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721837598171_367",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "The average age of section P is A years. If section Q has one-third students compared to section P and their average age is A - 2 years, then what is the average age of both these sections combined together (in terms of A)?",
+            "widgets": [
+              {
+                "id": "mc1721837598171_372",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">The average age of section P is A years. If section Q has one-third students compared to section P and their average age is A - 2 years, then what is the average age of both these sections combined together (in terms of A)?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721837598171_371",
+              "description": {
+                "text": "A",
+                "widgets": [
+                  {
+                    "id": "mc1721837598171_366",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>A</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721837598171_373",
+              "description": {
+                "text": "A+1/2",
+                "widgets": [
+                  {
+                    "id": "mc1721837598171_364",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>A+1/2</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721837598171_368",
+              "description": {
+                "text": "A-1/2",
+                "widgets": [
+                  {
+                    "id": "mc1721837598171_362",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>A-1/2</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721837598171_361",
+              "description": {
+                "text": "2A-1",
+                "widgets": [
+                  {
+                    "id": "mc1721837598171_363",
+                    "type": "text",
+                    "properties": {
+                      "html": "&nbsp;2A-1"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721837598171_368",
+              "text": "A-1/2",
+              "widgets": [
+                {
+                  "id": "mc1721837598171_362",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>A-1/2</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/daf55633b62a8290084494c5361558ab.jpg\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721837722233_378",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "A certain number of trophies were distributed among the players of a cricket academy. The player who got 1/5th of the total number of trophies actually got 4 times the average number of trophies the others got. Find the number of players in the cricket academy.",
+            "widgets": [
+              {
+                "id": "mc1721837722233_379",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">A certain number of trophies were distributed among the players of a cricket academy. The player who got 1/5th of the total number of trophies actually got 4 times the average number of trophies the others got. Find the number of players in the cricket academy.</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721837722233_384",
+              "description": {
+                "text": "20",
+                "widgets": [
+                  {
+                    "id": "mc1721837722233_380",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>20</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721837722233_375",
+              "description": {
+                "text": "17",
+                "widgets": [
+                  {
+                    "id": "mc1721837722233_383",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>17</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721837722233_376",
+              "description": {
+                "text": "16",
+                "widgets": [
+                  {
+                    "id": "mc1721837722233_377",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>16</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721837722233_382",
+              "description": {
+                "text": "21",
+                "widgets": [
+                  {
+                    "id": "mc1721837722233_374",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>21</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721837722233_375",
+              "text": "17",
+              "widgets": [
+                {
+                  "id": "mc1721837722233_383",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>17</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/447c951bc571864f68b12b41d2a7a619.jpg\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721837803537_392",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Four years ago, the average age of Reena, Sheena and Cheena was 22. The average age of Reena and Cheena today is 25. Also, the present age of Reena is 75% of the present age of Sheena. What is the present age of Cheena?",
+            "widgets": [
+              {
+                "id": "mc1721837803537_398",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">Four years ago, the average age of Reena, Sheena and Cheena was 22. The average age of Reena and Cheena today is 25. Also, the present age of Reena is 75% of the present age of Sheena. What is the present age of Cheena?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721837803537_399",
+              "description": {
+                "text": "29 years",
+                "widgets": [
+                  {
+                    "id": "mc1721837803537_393",
+                    "type": "text",
+                    "properties": {
+                      "html": "29 years"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721837803537_391",
+              "description": {
+                "text": "30 years",
+                "widgets": [
+                  {
+                    "id": "mc1721837803537_387",
+                    "type": "text",
+                    "properties": {
+                      "html": "30 years"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721837803537_389",
+              "description": {
+                "text": "32 years",
+                "widgets": [
+                  {
+                    "id": "mc1721837803537_397",
+                    "type": "text",
+                    "properties": {
+                      "html": "32 years&nbsp;"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721837803537_394",
+              "description": {
+                "text": "36 years",
+                "widgets": [
+                  {
+                    "id": "mc1721837803537_395",
+                    "type": "text",
+                    "properties": {
+                      "html": "36 years"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721837803537_399",
+              "text": "29 years",
+              "widgets": [
+                {
+                  "id": "mc1721837803537_393",
+                  "type": "text",
+                  "properties": {
+                    "html": "29 years"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/184c305e2f364370d0a95e169d446e5b.jpg\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        }
+      ]
+    }
+  ],
+  "submitted": true,
+  "updated": true,
+  "retryCount": 3,
+  "inlineFeedback": [],
+  "errors": [],
+  "success": true
+}

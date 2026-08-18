@@ -1,0 +1,3400 @@
+{
+  "submission": {
+    "anon_id": null,
+    "model": "assessment-submission",
+    "courseTitleId": "aptitude-teacher2",
+    "object_id": "66b74bba7f809db010095241",
+    "assessmentId": "66b74bba7f809db010095240",
+    "snapshotId": "66ced9d6518a1cffe40c31e6",
+    "questions": {
+      "section66b74bba160f0": [
+        "mc66b74bba160f7",
+        "mc66b74bba161bd",
+        "mc66b74bba16286",
+        "mc66b74bba16356",
+        "mc66b74bba16421",
+        "mc66b74bba164e9",
+        "mc66b74bba165a7",
+        "mc66b74bba1666e",
+        "mc66b74bba1673f",
+        "mc66b74bba16804"
+      ]
+    },
+    "certificateAnswers": [],
+    "certificateId": null,
+    "questionData": {
+      "mc66b74bba160f7": {
+        "deliveredOnTimestamp": 1786440567.790593,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74bba161bd": {
+        "deliveredOnTimestamp": 1786440567.790615,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74bba16286": {
+        "deliveredOnTimestamp": 1786440567.790628,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74bba16356": {
+        "deliveredOnTimestamp": 1786440567.79064,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74bba16421": {
+        "deliveredOnTimestamp": 1786440567.79065,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74bba164e9": {
+        "deliveredOnTimestamp": 1786440567.790661,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74bba165a7": {
+        "deliveredOnTimestamp": 1786440567.790671,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74bba1666e": {
+        "deliveredOnTimestamp": 1786440567.790682,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74bba1673f": {
+        "deliveredOnTimestamp": 1786440567.790692,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74bba16804": {
+        "deliveredOnTimestamp": 1786440567.790703,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      }
+    },
+    "answers": [
+      {
+        "blockId": "mc66b74bba160f7",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74bba161bd",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74bba16286",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74bba16356",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74bba16421",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74bba164e9",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74bba165a7",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74bba1666e",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74bba1673f",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74bba16804",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      }
+    ],
+    "submittedTimestamp": 1786440568.023484,
+    "status": "submitted",
+    "grading_status": "grading_status_graded",
+    "access": "public",
+    "actual_score": null,
+    "score": {
+      "maxScore": 10,
+      "value": 0,
+      "pass": false,
+      "passGrade": 50,
+      "points": 0
+    },
+    "source": {
+      "type": "unit"
+    },
+    "isDefining": true,
+    "isAdminAutoGradedSubmission": null,
+    "listOfNonConsentedBlocks": [],
+    "created": 1786440567.796599,
+    "modified": 1786440568.164498,
+    "id": "6a7aeb7753a953c918016679",
+    "passed": false
+  },
+  "assessment": {
+    "title": "Practice Test Paper (Medium)",
+    "access": "public",
+    "type": "assessment",
+    "model": "assessmentSnapshot",
+    "description": "Intermediate practice test paper containing 10 conceptual problems designed to evaluate speed and accuracy.",
+    "isTimed": false,
+    "timerFor": "assessmentTimed",
+    "onTimerExpiration": "autoSubmit",
+    "assessmentTimeLimitInSeconds": 600,
+    "questionTimeLimitInSeconds": 60,
+    "standaloneShareEnabled": null,
+    "customUrl": null,
+    "usesCustomUrl": null,
+    "allowAnonymous": true,
+    "randomizeQuestionOptions": false,
+    "disallowPartialSubmissions": false,
+    "submissionDueDateEnabled": false,
+    "submissionDueDate": 1626257823,
+    "makeFeedbackAvailableAfterDateEnabled": false,
+    "makeFeedbackAvailableAfterDate": 0,
+    "customStylesEnabled": true,
+    "customStyles": {
+      "assessmentPage": {
+        "background": {
+          "type": "color",
+          "colorData": {
+            "code": "",
+            "class": "lw-body-bg"
+          }
+        },
+        "dividers": {
+          "top": {
+            "orientation": "top",
+            "divider": "none"
+          },
+          "bottom": {
+            "orientation": "bottom",
+            "divider": "none"
+          }
+        }
+      },
+      "option": {
+        "radioEffect": "scribble",
+        "checkboxEffect": "scribble",
+        "size": "small"
+      },
+      "assessment": {
+        "transition": "none",
+        "background": {
+          "type": "color",
+          "colorData": {
+            "code": "",
+            "class": ""
+          }
+        },
+        "width": "normal",
+        "timerTemplate": "rectangle"
+      },
+      "linearRating": {
+        "labels": {
+          "size": "small"
+        }
+      },
+      "question": {
+        "description": {
+          "background": {
+            "type": "color",
+            "colorData": {
+              "code": "",
+              "class": ""
+            }
+          },
+          "type": "p",
+          "size": "small"
+        },
+        "answers": {
+          "background": {
+            "type": "color",
+            "colorData": {
+              "code": "",
+              "class": ""
+            }
+          }
+        },
+        "requiredAsterisk": {
+          "colorData": {
+            "code": "#ff0000",
+            "class": ""
+          }
+        },
+        "errorMessages": {
+          "size": "verySmall",
+          "colorData": {
+            "code": "#ff0000",
+            "class": ""
+          }
+        }
+      },
+      "input": {
+        "size": "small",
+        "type": "solidDark"
+      },
+      "textarea": {
+        "size": "small",
+        "type": "solidDark"
+      },
+      "dropdown": {
+        "size": "small",
+        "type": "solidDark"
+      }
+    },
+    "submissionMode": "all",
+    "startingDate": 1626765704,
+    "startingDateEnabled": false,
+    "showOnlyFailedQuestionsOnRetry": false,
+    "retryEnabled": true,
+    "retryOnFailOnly": false,
+    "gradingMethod": null,
+    "maxTries": null,
+    "onlyWrongOnRetake": null,
+    "isAmendable": false,
+    "feedbackShowOnScreen": true,
+    "feedbackDownloadPDF": false,
+    "feedbackShowInline": null,
+    "feedbackQuestionList": "all-questions",
+    "feedbackShowQuestionScore": true,
+    "feedbackShowFeedback": true,
+    "feedbackShowNumbering": false,
+    "feedbackShowSectionTitles": false,
+    "feedbackShowUserAnswers": true,
+    "feedbackShowCorrectAnswers": true,
+    "feedbackShowAnswerCorrectness": true,
+    "displayInlineFeedbackEnabled": null,
+    "displayBackButtonWhenSubmissionPerBlock": null,
+    "feedbackShowSectionResultSummary": false,
+    "askConfirmationBeforeSubmit": true,
+    "hasCustomConfirmationBeforeSubmitText": false,
+    "customConfirmationBeforeSubmitText": "Are you sure you want to submit the questionnaire?",
+    "customConfirmationBeforeSubmitTexts": {
+      "title": "Submit Assessment?",
+      "baseConfirmationMessage": "Are you sure you want to submit the questionnaire?",
+      "unansweredNotice": "You have not answered {X} questions."
+    },
+    "amendResubmissionMinutes": 30,
+    "passingGrade": null,
+    "navigationMode": "per-block",
+    "conditionalBlocks": {
+      "introContent": {
+        "id": "content66b74bba16033",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66b74bba16042",
+              "type": "text",
+              "insertedAsWidget": true,
+              "properties": {
+                "html": "Puzzles - Days/Months based PAPER LEVEL-2",
+                "alignment": "center",
+                "customStyle": true,
+                "type": "h2",
+                "size": "normal"
+              }
+            },
+            {
+              "id": "text66b74bba16053",
+              "type": "text",
+              "properties": {
+                "html": "Self-assess your knowledge. Express yourself and get feedback from our instructors.",
+                "customStyle": true,
+                "alignment": "center"
+              }
+            },
+            {
+              "id": "spacer66b74bba1605e",
+              "type": "spacer",
+              "properties": {
+                "height": 20,
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            },
+            {
+              "id": "button66b74bba1606a",
+              "type": "button",
+              "properties": {
+                "buttonLabel": "<span>Ready to start</span>",
+                "buttonSize": "normal",
+                "buttonType": "solidBrand",
+                "alignment": "center",
+                "linkData": {
+                  "linkType": "goToFirst"
+                },
+                "iconColorData": {
+                  "code": "",
+                  "class": ""
+                },
+                "iconDisplay": false,
+                "iconSize": 26,
+                "iconClassName": " fas fa-angle-right",
+                "iconPosition": "right"
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "variables": {
+            "conditionalBlocks_introContent_blockData_widgets_0": [],
+            "conditionalBlocks_introContent_blockData_widgets_1": []
+          }
+        }
+      },
+      "submissionStartingDate": {
+        "id": "content66b74bba1608b",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66b74bba16090",
+              "type": "text",
+              "properties": {
+                "html": "Sorry but this assessment hasn't started yet."
+              }
+            },
+            {
+              "id": "date66b74bba16097",
+              "type": "date",
+              "properties": {
+                "value": ""
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "displayConditions": ["startingDate"]
+        }
+      },
+      "submissionDueDate": {
+        "id": "content66b74bba160a2",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66b74bba160a7",
+              "type": "text",
+              "properties": {
+                "html": "Sorry but this assessment date is due."
+              }
+            },
+            {
+              "id": "date66b74bba160ae",
+              "type": "date",
+              "properties": {
+                "value": ""
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "displayConditions": ["dateIsDue"]
+        }
+      },
+      "outroContent": {
+        "id": "content66b74bba160be",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "userResults66b74bba160c6",
+              "type": "userResults",
+              "properties": {
+                "layout": "template2",
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            },
+            {
+              "id": "feedback66b74bba160d9",
+              "type": "feedback",
+              "properties": []
+            },
+            {
+              "id": "outroActions66b74bba160df",
+              "type": "outroActions",
+              "properties": {
+                "layout": "",
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true
+        }
+      }
+    },
+    "systemSections": null,
+    "sections": [
+      {
+        "id": "section66b74bba160f0",
+        "title": "",
+        "type": "section",
+        "navigationMode": "per-block",
+        "blocks": [
+          {
+            "id": "mc66b74bba160f7",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bba160fd",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :\n</strong></p><div style=\"text-align: justify;\"><strong>Set 1:</strong>\n</div><div style=\"text-align: justify;\">Seven friends (Alice, Bob, Charlie, David, Eve, Frank, Grace) have meetings on different days of the week (Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday). Based on the following clues, can you figure out who has a meeting on which day?\n</div><div style=\"text-align: justify;\">1. Alice has a meeting the day before Charlie.\n</div><div style=\"text-align: justify;\">2. Bob has a meeting sometime after Eve.\n</div><div style=\"text-align: justify;\">3. David does not have a meeting on Sunday or Monday.\n</div><div style=\"text-align: justify;\">4. Eve has a meeting the day after Alice.\n</div><div style=\"text-align: justify;\">5. Charlie has a meeting on Wednesday.\n</div><div style=\"text-align: justify;\">6. Frank has a meeting the day before Grace.\n</div><div style=\"text-align: justify;\">7. Grace does not have a meeting on Saturday.\n</div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">Who has a meeting on Sunday?</div><div>\n</div>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74bba1610f",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74bba16116",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74bba1611e",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74bba1613e",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bba16145",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Alice</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bba16155",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bba1615c",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Bob</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bba1616b",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bba16172",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Charlie</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bba16181",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bba16188",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>David</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bba16197",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bba1619e",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Eve</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_4_description_widgets_0": [],
+                "sections_0_blocks_0": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74bba161bd",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bba161c2",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :\n</strong></p><div style=\"text-align: justify;\"><strong>Set 1:</strong>\n</div><div style=\"text-align: justify;\">Seven friends (Alice, Bob, Charlie, David, Eve, Frank, Grace) have meetings on different days of the week (Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday). Based on the following clues, can you figure out who has a meeting on which day?\n</div><div style=\"text-align: justify;\">1. Alice has a meeting the day before Charlie.\n</div><div style=\"text-align: justify;\">2. Bob has a meeting sometime after Eve.\n</div><div style=\"text-align: justify;\">3. David does not have a meeting on Sunday or Monday.\n</div><div style=\"text-align: justify;\">4. Eve has a meeting the day after Alice.\n</div><div style=\"text-align: justify;\">5. Charlie has a meeting on Wednesday.\n</div><div style=\"text-align: justify;\">6. Frank has a meeting the day before Grace.\n</div><div style=\"text-align: justify;\">7. Grace does not have a meeting on Saturday.\n</div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">Who has a meeting on Wednesday?</div><div>\n</div>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74bba161d3",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74bba161da",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74bba161e2",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74bba16208",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bba16210",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Alice</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bba1621e",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bba16225",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Bob</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bba16234",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bba1623b",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Charlie</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bba16249",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bba16250",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>David</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bba1625f",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bba16266",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Eve</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_4_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_1_blockData_description_widgets_0": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74bba16286",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bba1628b",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :\n</strong></p><div style=\"text-align: justify;\"><strong>Set 1:</strong>\n</div><div style=\"text-align: justify;\">Seven friends (Alice, Bob, Charlie, David, Eve, Frank, Grace) have meetings on different days of the week (Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday). Based on the following clues, can you figure out who has a meeting on which day?\n</div><div style=\"text-align: justify;\">1. Alice has a meeting the day before Charlie.\n</div><div style=\"text-align: justify;\">2. Bob has a meeting sometime after Eve.\n</div><div style=\"text-align: justify;\">3. David does not have a meeting on Sunday or Monday.\n</div><div style=\"text-align: justify;\">4. Eve has a meeting the day after Alice.\n</div><div style=\"text-align: justify;\">5. Charlie has a meeting on Wednesday.\n</div><div style=\"text-align: justify;\">6. Frank has a meeting the day before Grace.\n</div><div style=\"text-align: justify;\">7. Grace does not have a meeting on Saturday.\n</div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">Who has a meeting the day before Grace?</div><div>\n</div>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74bba1629d",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74bba162a4",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74bba162ab",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74bba162ca",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bba162d1",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Alice</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bba162e0",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bba162e7",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Bob</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bba162f6",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bba16309",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Charlie</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bba16318",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bba1631f",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>David</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bba1632e",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bba16334",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Frank</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_4_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_2_blockData_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_4_description_widgets_0": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74bba16356",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bba1635b",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :\n</strong></p><div style=\"text-align: justify;\"><strong>Set 1:</strong>\n</div><div style=\"text-align: justify;\">Seven friends (Alice, Bob, Charlie, David, Eve, Frank, Grace) have meetings on different days of the week (Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday). Based on the following clues, can you figure out who has a meeting on which day?\n</div><div style=\"text-align: justify;\">1. Alice has a meeting the day before Charlie.\n</div><div style=\"text-align: justify;\">2. Bob has a meeting sometime after Eve.\n</div><div style=\"text-align: justify;\">3. David does not have a meeting on Sunday or Monday.\n</div><div style=\"text-align: justify;\">4. Eve has a meeting the day after Alice.\n</div><div style=\"text-align: justify;\">5. Charlie has a meeting on Wednesday.\n</div><div style=\"text-align: justify;\">6. Frank has a meeting the day before Grace.\n</div><div style=\"text-align: justify;\">7. Grace does not have a meeting on Saturday.\n</div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">Who has a meeting the day after Alice?</div><div>\n</div>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74bba1636d",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74bba16374",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74bba1637b",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74bba1639a",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bba163a1",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Bob</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bba163b0",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bba163b7",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Charlie</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bba163c6",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bba163cc",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>David</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bba163db",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bba163e2",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Eve</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bba163f1",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bba163f8",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Frank</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_4_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_3_blockData_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_4_description_widgets_0": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74bba16421",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bba16425",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :\n</strong></p><div style=\"text-align: justify;\"><strong>Set 1:</strong>\n</div><div style=\"text-align: justify;\">Seven friends (Alice, Bob, Charlie, David, Eve, Frank, Grace) have meetings on different days of the week (Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday). Based on the following clues, can you figure out who has a meeting on which day?\n</div><div style=\"text-align: justify;\">1. Alice has a meeting the day before Charlie.\n</div><div style=\"text-align: justify;\">2. Bob has a meeting sometime after Eve.\n</div><div style=\"text-align: justify;\">3. David does not have a meeting on Sunday or Monday.\n</div><div style=\"text-align: justify;\">4. Eve has a meeting the day after Alice.\n</div><div style=\"text-align: justify;\">5. Charlie has a meeting on Wednesday.\n</div><div style=\"text-align: justify;\">6. Frank has a meeting the day before Grace.\n</div><div style=\"text-align: justify;\">7. Grace does not have a meeting on Saturday.\n</div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">Who does not have a meeting on Sunday or Monday?</div><div>\n</div>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74bba16437",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74bba1643d",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74bba16445",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74bba16464",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bba1646b",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Charlie</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bba16479",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bba16480",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>David</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bba1648f",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bba16496",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Eve</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bba164a4",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bba164ab",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Frank</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bba164b9",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bba164c0",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Grace</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_4_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_4_blockData_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_4_description_widgets_0": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74bba164e9",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bba164ee",
+                    "type": "text",
+                    "properties": {
+                      "html": "<div><strong>Direction for questions :</strong></div><strong>Set 2:</strong>\n<div>Seven friends (Rahul, Suman, Tina, Usha, Vicky, Waseem, Xerxes) were born in different months (January, March, May, July, August, October, December). All these months have 31 days except February which has 28 or 29 days. Based on the following clues, can you figure out who was born in which month?\n</div><div>1. Rahul was born in a month before Tina.\n</div><div>2. Suman was not born in a month having less than 31 days.\n</div><div>3. Usha was born in the month after Suman.\n</div><div>4. Tina was born in July.\n</div><div>5. Rahul was not born in January.\n</div><div>6. Vicky was born in a month which has an odd number of days.\n</div><div>7. Waseem was born in the month before Xerxes.\n</div><div><br></div><div>Who was born in January?</div>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74bba164ff",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74bba16506",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74bba1650d",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74bba1652c",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bba16533",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Rahul</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bba16542",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bba16548",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Suman</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bba16557",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bba1655e",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Tina</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bba1656d",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bba16574",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Usha</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bba16582",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bba16589",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Vicky</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_5_blockData_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_4_description_widgets_0": [],
+                "sections_0_blocks_5": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74bba165a7",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bba165ac",
+                    "type": "text",
+                    "properties": {
+                      "html": "<div><strong>Direction for questions :</strong></div><strong>Set 2:</strong>\n<div>Seven friends (Rahul, Suman, Tina, Usha, Vicky, Waseem, Xerxes) were born in different months (January, March, May, July, August, October, December). All these months have 31 days except February which has 28 or 29 days. Based on the following clues, can you figure out who was born in which month?\n</div><div>1. Rahul was born in a month before Tina.\n</div><div>2. Suman was not born in a month having less than 31 days.\n</div><div>3. Usha was born in the month after Suman.\n</div><div>4. Tina was born in July.\n</div><div>5. Rahul was not born in January.\n</div><div>6. Vicky was born in a month which has an odd number of days.\n</div><div>7. Waseem was born in the month before Xerxes.\n</div><div><br></div><div>Who was born in July?</div>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74bba165bd",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74bba165c4",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74bba165cb",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74bba165ef",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bba165f6",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Rahul</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bba16605",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bba1660c",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Suman</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bba1661b",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bba16621",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Tina</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bba16631",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bba16638",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Usha</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bba16647",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bba1664e",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Vicky</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_5_blockData_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_4_description_widgets_0": [],
+                "sections_0_blocks_5": [],
+                "sections_0_blocks_6_blockData_description_widgets_0": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74bba1666e",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bba16673",
+                    "type": "text",
+                    "properties": {
+                      "html": "<div><strong>Direction for questions :</strong></div><strong>Set 2:</strong>\n<div>Seven friends (Rahul, Suman, Tina, Usha, Vicky, Waseem, Xerxes) were born in different months (January, March, May, July, August, October, December). All these months have 31 days except February which has 28 or 29 days. Based on the following clues, can you figure out who was born in which month?\n</div><div>1. Rahul was born in a month before Tina.\n</div><div>2. Suman was not born in a month having less than 31 days.\n</div><div>3. Usha was born in the month after Suman.\n</div><div>4. Tina was born in July.\n</div><div>5. Rahul was not born in January.\n</div><div>6. Vicky was born in a month which has an odd number of days.\n</div><div>7. Waseem was born in the month before Xerxes.\n</div><div><br></div><div>Who was born in a month which has an odd number of days?</div>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74bba16684",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74bba1668b",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74bba16692",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74bba166b1",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bba166b8",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Rahul</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bba166c7",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bba166ce",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Suman</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bba166de",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bba166ef",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Tina</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bba166ff",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bba16705",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Vicky</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bba16714",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bba1671b",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Waseem</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_5_blockData_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_4_description_widgets_0": [],
+                "sections_0_blocks_5": [],
+                "sections_0_blocks_7_blockData_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_4_description_widgets_0": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74bba1673f",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bba16744",
+                    "type": "text",
+                    "properties": {
+                      "html": "<div><strong>Direction for questions :</strong></div><strong>Set 2:</strong>\n<div>Seven friends (Rahul, Suman, Tina, Usha, Vicky, Waseem, Xerxes) were born in different months (January, March, May, July, August, October, December). All these months have 31 days except February which has 28 or 29 days. Based on the following clues, can you figure out who was born in which month?\n</div><div>1. Rahul was born in a month before Tina.\n</div><div>2. Suman was not born in a month having less than 31 days.\n</div><div>3. Usha was born in the month after Suman.\n</div><div>4. Tina was born in July.\n</div><div>5. Rahul was not born in January.\n</div><div>6. Vicky was born in a month which has an odd number of days.\n</div><div>7. Waseem was born in the month before Xerxes.\n</div><div><br></div><div>Who was born the month before Tina?</div>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74bba16755",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74bba1675c",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74bba16763",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74bba16782",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bba16788",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Rahul</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bba16797",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bba1679e",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Suman</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bba167ac",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bba167b3",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Usha</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bba167c2",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bba167c9",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Vicky</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bba167d7",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bba167de",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Waseem</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_5_blockData_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_4_description_widgets_0": [],
+                "sections_0_blocks_5": [],
+                "sections_0_blocks_8_blockData_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_4_description_widgets_0": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74bba16804",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bba16808",
+                    "type": "text",
+                    "properties": {
+                      "html": "<div><strong>Direction for questions :</strong></div><strong>Set 2:</strong>\n<div>Seven friends (Rahul, Suman, Tina, Usha, Vicky, Waseem, Xerxes) were born in different months (January, March, May, July, August, October, December). All these months have 31 days except February which has 28 or 29 days. Based on the following clues, can you figure out who was born in which month?\n</div><div>1. Rahul was born in a month before Tina.\n</div><div>2. Suman was not born in a month having less than 31 days.\n</div><div>3. Usha was born in the month after Suman.\n</div><div>4. Tina was born in July.\n</div><div>5. Rahul was not born in January.\n</div><div>6. Vicky was born in a month which has an odd number of days.\n</div><div>7. Waseem was born in the month before Xerxes.\n</div><div><br></div><div>Who was not born in a month having less than 31 days?</div>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74bba16819",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74bba16820",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74bba16827",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74bba16845",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bba1684c",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Rahul</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bba1685b",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bba16862",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Suman</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bba16870",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bba16877",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Tina</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bba16886",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bba1688c",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Usha</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bba1689b",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bba168a2",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Vicky</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_5_blockData_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_4_description_widgets_0": [],
+                "sections_0_blocks_5": [],
+                "sections_0_blocks_9_blockData_description_widgets_0": []
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "availabilityStatus": null,
+    "autoNavigationEnabled": false,
+    "displayBackButtonWhenNavigationPerBlock": true,
+    "saveAndResumeLaterEnabled": null,
+    "tagsAddedOnCompletion": [],
+    "tagsAddedOnPass": [],
+    "sendAnonymousSubmissionsToEmailLeads": false,
+    "afterSubmitActionEnabled": null,
+    "afterSubmitActionProperties": null,
+    "showWizardOnNextEdit": false,
+    "revisitAfterSubmissionAction": null,
+    "navigationTemplate": "HorizontalSpacedBetweenNavigationTemplate",
+    "learnerSearchBarEnabled": true,
+    "learnerUnansweredQuestionsEnabled": true,
+    "learnerFavouriteQuestionEnabled": true,
+    "learnerCompletionProgressEnabled": true,
+    "learnerShowIndexOfQuestionsEnabled": false,
+    "learnerTimeNotificationsEnabled": false,
+    "learnerAllowInterruptionsEnabled": true,
+    "learnerAllowInterruptionsTimeoutInMinutes": 30,
+    "learnerReclaimTryOnInterruptionTimeoutEnabled": false,
+    "learnerAskBeforeContinueToSaved": true,
+    "learnerAutoSaveEnabled": null,
+    "spellcheckDisabled": null,
+    "showPartialScoreOnSubmission": true,
+    "deliverableQuestionsSubsetType": "all",
+    "questionRandomizationType": "none",
+    "serveQuestionsBasedOnPreviousSubmission": null,
+    "scoringDisabled": false,
+    "isSelfAssessment": false,
+    "useDefaultCertificateTemplate": null,
+    "certificateTemplate": null,
+    "certificateSocialShare": null,
+    "migrationData": null,
+    "useAssessmentPassingGradeForOpenEndedCorrectness": true,
+    "openEndedCorrectnessPassingGrade": null,
+    "showScorePercentage": null,
+    "showScorePoints": null,
+    "showScoreCorrectAnswers": null,
+    "editorBehaviorSettings": null,
+    "manualReviewEnabled": null,
+    "resultsSummary": {
+      "enabled": true,
+      "showStatusIcon": true,
+      "showStatusText": true,
+      "showScorePercentage": true,
+      "showScorePoints": true,
+      "showScoreCorrectAnswers": false,
+      "showTimeTakenToComplete": true,
+      "showDateSubmitted": true,
+      "showAttemptCount": true
+    },
+    "meta": null,
+    "submissionsCount": 465,
+    "fromMarketplace": null,
+    "aiFeedbackEnabled": null,
+    "numberOfFeedbackQuestions": null,
+    "created": 1723288506.650735,
+    "modified": 1724832214.294834,
+    "contentHash": "82ee99246ad996a8e41c98faa56236abb047ba17eeeb7db51b4612a6cb6d226a",
+    "id": "66b74bba7f809db010095240",
+    "objectType": "assessment",
+    "isEditBlockedDueToSync": false,
+    "variables": {
+      "submission": {
+        "self": {
+          "score": 0,
+          "points": 0,
+          "total_points": 10,
+          "correct_answers": 0,
+          "total_questions": 10,
+          "time_spent": "00:00:01",
+          "date_submitted": "11/08/26",
+          "attempt_count": 3,
+          "max_tries": null,
+          "pass_grade": 50,
+          "time_spent_seconds": 1,
+          "raw_start_date": 1786440567.796599
+        }
+      },
+      "school": {
+        "name": "Apna College",
+        "url": "www.apnacollege.in",
+        "description": "The most loved coding community of India ❤️"
+      },
+      "user": {
+        "username": "ram",
+        "email": "p4542639@gmail.com",
+        "cf_phonenumber": "7666690798"
+      }
+    }
+  },
+  "reclaimedTry": false,
+  "feedback": [
+    {
+      "title": "",
+      "id": "section66b74bba160f0",
+      "blocks": [
+        {
+          "id": "mc66b74bba160f7",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions : Set 1: Seven friends (Alice, Bob, Charlie, David, Eve, Frank, Grace) have meetings on different days of the week (Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday). Based on the following clues, can you figure out who has a meeting on which day? 1. Alice has a meeting the day before Charlie. 2. Bob has a meeting sometime after Eve. 3. David does not have a meeting on Sunday or Monday. 4. Eve has a meeting the day after Alice. 5. Charlie has a meeting on Wednesday. 6. Frank has a meeting the day before Grace. 7. Grace does not have a meeting on Saturday. Who has a meeting on Sunday?",
+            "widgets": [
+              {
+                "id": "text66b74bba160fd",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :\n</strong></p><div style=\"text-align: justify;\"><strong>Set 1:</strong>\n</div><div style=\"text-align: justify;\">Seven friends (Alice, Bob, Charlie, David, Eve, Frank, Grace) have meetings on different days of the week (Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday). Based on the following clues, can you figure out who has a meeting on which day?\n</div><div style=\"text-align: justify;\">1. Alice has a meeting the day before Charlie.\n</div><div style=\"text-align: justify;\">2. Bob has a meeting sometime after Eve.\n</div><div style=\"text-align: justify;\">3. David does not have a meeting on Sunday or Monday.\n</div><div style=\"text-align: justify;\">4. Eve has a meeting the day after Alice.\n</div><div style=\"text-align: justify;\">5. Charlie has a meeting on Wednesday.\n</div><div style=\"text-align: justify;\">6. Frank has a meeting the day before Grace.\n</div><div style=\"text-align: justify;\">7. Grace does not have a meeting on Saturday.\n</div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">Who has a meeting on Sunday?</div><div>\n</div>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74bba1613e",
+              "description": {
+                "text": "Alice",
+                "widgets": [
+                  {
+                    "id": "text66b74bba16145",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Alice</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bba16155",
+              "description": {
+                "text": "Bob",
+                "widgets": [
+                  {
+                    "id": "text66b74bba1615c",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Bob</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bba1616b",
+              "description": {
+                "text": "Charlie",
+                "widgets": [
+                  {
+                    "id": "text66b74bba16172",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Charlie</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bba16181",
+              "description": {
+                "text": "David",
+                "widgets": [
+                  {
+                    "id": "text66b74bba16188",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>David</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bba16197",
+              "description": {
+                "text": "Eve",
+                "widgets": [
+                  {
+                    "id": "text66b74bba1619e",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Eve</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74bba16155",
+              "text": "Bob",
+              "widgets": [
+                {
+                  "id": "text66b74bba1615c",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>Bob</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>Set 1:\n<br>Based on the clues, the schedule of \nmeetings is as follows:\n<br>- Sunday: Bob (From clues 2 and 3, Bob \nhas a meeting sometime after Eve, and \nsince David does not have a meeting on \nSunday or Monday, Bob has a meeting on \nSunday.)\n<br>- Monday: Alice (From clues 1 and 4, Alice \nhas a meeting the day before Charlie, and \nsince Charlie has a meeting on Wednesday, \nAlice has a meeting on Monday.)\n<br>- Tuesday: Eve (From clue 4, Eve has a \nmeeting the day after Alice, so she has a \nmeeting on Tuesday.)\n<br>- Wednesday: Charlie (From clue 5, \nCharlie has a meeting on Wednesday.)\n<br>- Thursday: Frank (From clues 6 and 7, \nFrank has a meeting the day before Grace, \nand since Grace does not have a meeting \non Saturday, Frank has a meeting on \nThursday.)\n<br>- Friday: Grace (From clue 6, Grace has a \nmeeting the day after Frank, so she has a \nmeeting on Friday.)\n<br>- Saturday: David (From clue 3, David \ndoes not have a meeting on Sunday or \nMonday, and since all other days are taken, \nDavid has a meeting on Saturday.)<br></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74bba161bd",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions : Set 1: Seven friends (Alice, Bob, Charlie, David, Eve, Frank, Grace) have meetings on different days of the week (Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday). Based on the following clues, can you figure out who has a meeting on which day? 1. Alice has a meeting the day before Charlie. 2. Bob has a meeting sometime after Eve. 3. David does not have a meeting on Sunday or Monday. 4. Eve has a meeting the day after Alice. 5. Charlie has a meeting on Wednesday. 6. Frank has a meeting the day before Grace. 7. Grace does not have a meeting on Saturday. Who has a meeting on Wednesday?",
+            "widgets": [
+              {
+                "id": "text66b74bba161c2",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :\n</strong></p><div style=\"text-align: justify;\"><strong>Set 1:</strong>\n</div><div style=\"text-align: justify;\">Seven friends (Alice, Bob, Charlie, David, Eve, Frank, Grace) have meetings on different days of the week (Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday). Based on the following clues, can you figure out who has a meeting on which day?\n</div><div style=\"text-align: justify;\">1. Alice has a meeting the day before Charlie.\n</div><div style=\"text-align: justify;\">2. Bob has a meeting sometime after Eve.\n</div><div style=\"text-align: justify;\">3. David does not have a meeting on Sunday or Monday.\n</div><div style=\"text-align: justify;\">4. Eve has a meeting the day after Alice.\n</div><div style=\"text-align: justify;\">5. Charlie has a meeting on Wednesday.\n</div><div style=\"text-align: justify;\">6. Frank has a meeting the day before Grace.\n</div><div style=\"text-align: justify;\">7. Grace does not have a meeting on Saturday.\n</div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">Who has a meeting on Wednesday?</div><div>\n</div>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74bba16208",
+              "description": {
+                "text": "Alice",
+                "widgets": [
+                  {
+                    "id": "text66b74bba16210",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Alice</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bba1621e",
+              "description": {
+                "text": "Bob",
+                "widgets": [
+                  {
+                    "id": "text66b74bba16225",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Bob</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bba16234",
+              "description": {
+                "text": "Charlie",
+                "widgets": [
+                  {
+                    "id": "text66b74bba1623b",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Charlie</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bba16249",
+              "description": {
+                "text": "David",
+                "widgets": [
+                  {
+                    "id": "text66b74bba16250",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>David</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bba1625f",
+              "description": {
+                "text": "Eve",
+                "widgets": [
+                  {
+                    "id": "text66b74bba16266",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Eve</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74bba16234",
+              "text": "Charlie",
+              "widgets": [
+                {
+                  "id": "text66b74bba1623b",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>Charlie</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>Set 1:\n<br>Based on the clues, the schedule of \nmeetings is as follows:\n<br>- Sunday: Bob (From clues 2 and 3, Bob \nhas a meeting sometime after Eve, and \nsince David does not have a meeting on \nSunday or Monday, Bob has a meeting on \nSunday.)\n<br>- Monday: Alice (From clues 1 and 4, Alice \nhas a meeting the day before Charlie, and \nsince Charlie has a meeting on Wednesday, \nAlice has a meeting on Monday.)\n<br>- Tuesday: Eve (From clue 4, Eve has a \nmeeting the day after Alice, so she has a \nmeeting on Tuesday.)\n<br>- Wednesday: Charlie (From clue 5, \nCharlie has a meeting on Wednesday.)\n<br>- Thursday: Frank (From clues 6 and 7, \nFrank has a meeting the day before Grace, \nand since Grace does not have a meeting \non Saturday, Frank has a meeting on \nThursday.)\n<br>- Friday: Grace (From clue 6, Grace has a \nmeeting the day after Frank, so she has a \nmeeting on Friday.)\n<br>- Saturday: David (From clue 3, David \ndoes not have a meeting on Sunday or \nMonday, and since all other days are taken, \nDavid has a meeting on Saturday.)<br></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74bba16286",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions : Set 1: Seven friends (Alice, Bob, Charlie, David, Eve, Frank, Grace) have meetings on different days of the week (Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday). Based on the following clues, can you figure out who has a meeting on which day? 1. Alice has a meeting the day before Charlie. 2. Bob has a meeting sometime after Eve. 3. David does not have a meeting on Sunday or Monday. 4. Eve has a meeting the day after Alice. 5. Charlie has a meeting on Wednesday. 6. Frank has a meeting the day before Grace. 7. Grace does not have a meeting on Saturday. Who has a meeting the day before Grace?",
+            "widgets": [
+              {
+                "id": "text66b74bba1628b",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :\n</strong></p><div style=\"text-align: justify;\"><strong>Set 1:</strong>\n</div><div style=\"text-align: justify;\">Seven friends (Alice, Bob, Charlie, David, Eve, Frank, Grace) have meetings on different days of the week (Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday). Based on the following clues, can you figure out who has a meeting on which day?\n</div><div style=\"text-align: justify;\">1. Alice has a meeting the day before Charlie.\n</div><div style=\"text-align: justify;\">2. Bob has a meeting sometime after Eve.\n</div><div style=\"text-align: justify;\">3. David does not have a meeting on Sunday or Monday.\n</div><div style=\"text-align: justify;\">4. Eve has a meeting the day after Alice.\n</div><div style=\"text-align: justify;\">5. Charlie has a meeting on Wednesday.\n</div><div style=\"text-align: justify;\">6. Frank has a meeting the day before Grace.\n</div><div style=\"text-align: justify;\">7. Grace does not have a meeting on Saturday.\n</div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">Who has a meeting the day before Grace?</div><div>\n</div>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74bba162ca",
+              "description": {
+                "text": "Alice",
+                "widgets": [
+                  {
+                    "id": "text66b74bba162d1",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Alice</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bba162e0",
+              "description": {
+                "text": "Bob",
+                "widgets": [
+                  {
+                    "id": "text66b74bba162e7",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Bob</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bba162f6",
+              "description": {
+                "text": "Charlie",
+                "widgets": [
+                  {
+                    "id": "text66b74bba16309",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Charlie</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bba16318",
+              "description": {
+                "text": "David",
+                "widgets": [
+                  {
+                    "id": "text66b74bba1631f",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>David</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bba1632e",
+              "description": {
+                "text": "Frank",
+                "widgets": [
+                  {
+                    "id": "text66b74bba16334",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Frank</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74bba1632e",
+              "text": "Frank",
+              "widgets": [
+                {
+                  "id": "text66b74bba16334",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>Frank</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>Set 1:\n<br>Based on the clues, the schedule of \nmeetings is as follows:\n<br>- Sunday: Bob (From clues 2 and 3, Bob \nhas a meeting sometime after Eve, and \nsince David does not have a meeting on \nSunday or Monday, Bob has a meeting on \nSunday.)\n<br>- Monday: Alice (From clues 1 and 4, Alice \nhas a meeting the day before Charlie, and \nsince Charlie has a meeting on Wednesday, \nAlice has a meeting on Monday.)\n<br>- Tuesday: Eve (From clue 4, Eve has a \nmeeting the day after Alice, so she has a \nmeeting on Tuesday.)\n<br>- Wednesday: Charlie (From clue 5, \nCharlie has a meeting on Wednesday.)\n<br>- Thursday: Frank (From clues 6 and 7, \nFrank has a meeting the day before Grace, \nand since Grace does not have a meeting \non Saturday, Frank has a meeting on \nThursday.)\n<br>- Friday: Grace (From clue 6, Grace has a \nmeeting the day after Frank, so she has a \nmeeting on Friday.)\n<br>- Saturday: David (From clue 3, David \ndoes not have a meeting on Sunday or \nMonday, and since all other days are taken, \nDavid has a meeting on Saturday.)<br></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74bba16356",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions : Set 1: Seven friends (Alice, Bob, Charlie, David, Eve, Frank, Grace) have meetings on different days of the week (Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday). Based on the following clues, can you figure out who has a meeting on which day? 1. Alice has a meeting the day before Charlie. 2. Bob has a meeting sometime after Eve. 3. David does not have a meeting on Sunday or Monday. 4. Eve has a meeting the day after Alice. 5. Charlie has a meeting on Wednesday. 6. Frank has a meeting the day before Grace. 7. Grace does not have a meeting on Saturday. Who has a meeting the day after Alice?",
+            "widgets": [
+              {
+                "id": "text66b74bba1635b",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :\n</strong></p><div style=\"text-align: justify;\"><strong>Set 1:</strong>\n</div><div style=\"text-align: justify;\">Seven friends (Alice, Bob, Charlie, David, Eve, Frank, Grace) have meetings on different days of the week (Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday). Based on the following clues, can you figure out who has a meeting on which day?\n</div><div style=\"text-align: justify;\">1. Alice has a meeting the day before Charlie.\n</div><div style=\"text-align: justify;\">2. Bob has a meeting sometime after Eve.\n</div><div style=\"text-align: justify;\">3. David does not have a meeting on Sunday or Monday.\n</div><div style=\"text-align: justify;\">4. Eve has a meeting the day after Alice.\n</div><div style=\"text-align: justify;\">5. Charlie has a meeting on Wednesday.\n</div><div style=\"text-align: justify;\">6. Frank has a meeting the day before Grace.\n</div><div style=\"text-align: justify;\">7. Grace does not have a meeting on Saturday.\n</div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">Who has a meeting the day after Alice?</div><div>\n</div>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74bba1639a",
+              "description": {
+                "text": "Bob",
+                "widgets": [
+                  {
+                    "id": "text66b74bba163a1",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Bob</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bba163b0",
+              "description": {
+                "text": "Charlie",
+                "widgets": [
+                  {
+                    "id": "text66b74bba163b7",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Charlie</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bba163c6",
+              "description": {
+                "text": "David",
+                "widgets": [
+                  {
+                    "id": "text66b74bba163cc",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>David</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bba163db",
+              "description": {
+                "text": "Eve",
+                "widgets": [
+                  {
+                    "id": "text66b74bba163e2",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Eve</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bba163f1",
+              "description": {
+                "text": "Frank",
+                "widgets": [
+                  {
+                    "id": "text66b74bba163f8",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Frank</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74bba163db",
+              "text": "Eve",
+              "widgets": [
+                {
+                  "id": "text66b74bba163e2",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>Eve</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>Set 1:\n<br>Based on the clues, the schedule of \nmeetings is as follows:\n<br>- Sunday: Bob (From clues 2 and 3, Bob \nhas a meeting sometime after Eve, and \nsince David does not have a meeting on \nSunday or Monday, Bob has a meeting on \nSunday.)\n<br>- Monday: Alice (From clues 1 and 4, Alice \nhas a meeting the day before Charlie, and \nsince Charlie has a meeting on Wednesday, \nAlice has a meeting on Monday.)\n<br>- Tuesday: Eve (From clue 4, Eve has a \nmeeting the day after Alice, so she has a \nmeeting on Tuesday.)\n<br>- Wednesday: Charlie (From clue 5, \nCharlie has a meeting on Wednesday.)\n<br>- Thursday: Frank (From clues 6 and 7, \nFrank has a meeting the day before Grace, \nand since Grace does not have a meeting \non Saturday, Frank has a meeting on \nThursday.)\n<br>- Friday: Grace (From clue 6, Grace has a \nmeeting the day after Frank, so she has a \nmeeting on Friday.)\n<br>- Saturday: David (From clue 3, David \ndoes not have a meeting on Sunday or \nMonday, and since all other days are taken, \nDavid has a meeting on Saturday.)<br></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74bba16421",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions : Set 1: Seven friends (Alice, Bob, Charlie, David, Eve, Frank, Grace) have meetings on different days of the week (Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday). Based on the following clues, can you figure out who has a meeting on which day? 1. Alice has a meeting the day before Charlie. 2. Bob has a meeting sometime after Eve. 3. David does not have a meeting on Sunday or Monday. 4. Eve has a meeting the day after Alice. 5. Charlie has a meeting on Wednesday. 6. Frank has a meeting the day before Grace. 7. Grace does not have a meeting on Saturday. Who does not have a meeting on Sunday or Monday?",
+            "widgets": [
+              {
+                "id": "text66b74bba16425",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :\n</strong></p><div style=\"text-align: justify;\"><strong>Set 1:</strong>\n</div><div style=\"text-align: justify;\">Seven friends (Alice, Bob, Charlie, David, Eve, Frank, Grace) have meetings on different days of the week (Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday). Based on the following clues, can you figure out who has a meeting on which day?\n</div><div style=\"text-align: justify;\">1. Alice has a meeting the day before Charlie.\n</div><div style=\"text-align: justify;\">2. Bob has a meeting sometime after Eve.\n</div><div style=\"text-align: justify;\">3. David does not have a meeting on Sunday or Monday.\n</div><div style=\"text-align: justify;\">4. Eve has a meeting the day after Alice.\n</div><div style=\"text-align: justify;\">5. Charlie has a meeting on Wednesday.\n</div><div style=\"text-align: justify;\">6. Frank has a meeting the day before Grace.\n</div><div style=\"text-align: justify;\">7. Grace does not have a meeting on Saturday.\n</div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">Who does not have a meeting on Sunday or Monday?</div><div>\n</div>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74bba16464",
+              "description": {
+                "text": "Charlie",
+                "widgets": [
+                  {
+                    "id": "text66b74bba1646b",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Charlie</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bba16479",
+              "description": {
+                "text": "David",
+                "widgets": [
+                  {
+                    "id": "text66b74bba16480",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>David</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bba1648f",
+              "description": {
+                "text": "Eve",
+                "widgets": [
+                  {
+                    "id": "text66b74bba16496",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Eve</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bba164a4",
+              "description": {
+                "text": "Frank",
+                "widgets": [
+                  {
+                    "id": "text66b74bba164ab",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Frank</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bba164b9",
+              "description": {
+                "text": "Grace",
+                "widgets": [
+                  {
+                    "id": "text66b74bba164c0",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Grace</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74bba1648f",
+              "text": "Eve",
+              "widgets": [
+                {
+                  "id": "text66b74bba16496",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>Eve</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>Set 1:\n<br>Based on the clues, the schedule of \nmeetings is as follows:\n<br>- Sunday: Bob (From clues 2 and 3, Bob \nhas a meeting sometime after Eve, and \nsince David does not have a meeting on \nSunday or Monday, Bob has a meeting on \nSunday.)\n<br>- Monday: Alice (From clues 1 and 4, Alice \nhas a meeting the day before Charlie, and \nsince Charlie has a meeting on Wednesday, \nAlice has a meeting on Monday.)\n<br>- Tuesday: Eve (From clue 4, Eve has a \nmeeting the day after Alice, so she has a \nmeeting on Tuesday.)\n<br>- Wednesday: Charlie (From clue 5, \nCharlie has a meeting on Wednesday.)\n<br>- Thursday: Frank (From clues 6 and 7, \nFrank has a meeting the day before Grace, \nand since Grace does not have a meeting \non Saturday, Frank has a meeting on \nThursday.)\n<br>- Friday: Grace (From clue 6, Grace has a \nmeeting the day after Frank, so she has a \nmeeting on Friday.)\n<br>- Saturday: David (From clue 3, David \ndoes not have a meeting on Sunday or \nMonday, and since all other days are taken, \nDavid has a meeting on Saturday.)<br></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74bba164e9",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions :Set 2: Seven friends (Rahul, Suman, Tina, Usha, Vicky, Waseem, Xerxes) were born in different months (January, March, May, July, August, October, December). All these months have 31 days except February which has 28 or 29 days. Based on the following clues, can you figure out who was born in which month? 1. Rahul was born in a month before Tina. 2. Suman was not born in a month having less than 31 days. 3. Usha was born in the month after Suman. 4. Tina was born in July. 5. Rahul was not born in January. 6. Vicky was born in a month which has an odd number of days. 7. Waseem was born in the month before Xerxes. Who was born in January?",
+            "widgets": [
+              {
+                "id": "text66b74bba164ee",
+                "type": "text",
+                "properties": {
+                  "html": "<div><strong>Direction for questions :</strong></div><strong>Set 2:</strong>\n<div>Seven friends (Rahul, Suman, Tina, Usha, Vicky, Waseem, Xerxes) were born in different months (January, March, May, July, August, October, December). All these months have 31 days except February which has 28 or 29 days. Based on the following clues, can you figure out who was born in which month?\n</div><div>1. Rahul was born in a month before Tina.\n</div><div>2. Suman was not born in a month having less than 31 days.\n</div><div>3. Usha was born in the month after Suman.\n</div><div>4. Tina was born in July.\n</div><div>5. Rahul was not born in January.\n</div><div>6. Vicky was born in a month which has an odd number of days.\n</div><div>7. Waseem was born in the month before Xerxes.\n</div><div><br></div><div>Who was born in January?</div>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74bba1652c",
+              "description": {
+                "text": "Rahul",
+                "widgets": [
+                  {
+                    "id": "text66b74bba16533",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Rahul</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bba16542",
+              "description": {
+                "text": "Suman",
+                "widgets": [
+                  {
+                    "id": "text66b74bba16548",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Suman</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bba16557",
+              "description": {
+                "text": "Tina",
+                "widgets": [
+                  {
+                    "id": "text66b74bba1655e",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Tina</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bba1656d",
+              "description": {
+                "text": "Usha",
+                "widgets": [
+                  {
+                    "id": "text66b74bba16574",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Usha</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bba16582",
+              "description": {
+                "text": "Vicky",
+                "widgets": [
+                  {
+                    "id": "text66b74bba16589",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Vicky</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74bba16542",
+              "text": "Suman",
+              "widgets": [
+                {
+                  "id": "text66b74bba16548",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>Suman</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br>Set 2:\n<br>- January: Suman (From clues 2 and 3, \nSuman was not born in a month having \nless than 31 days, and Usha was born in \nthe month after Suman. So, Suman was \nborn in January.)\n<br>- February: Usha (From clue 3, Usha was \nborn in the month after Suman, so Usha \nwas born in February.)\n<br>- March: Rahul (From clues 1 and 5, Rahul \nwas born in a month before Tina, and \nRahul was not born in January. So, Rahul \nwas born in March.)\n<br>- April: Vicky (From clue 6, Vicky was born \nin a month which has an odd number of \ndays, and since all other months with 31 \ndays are taken, Vicky was born in April.)\n<br>- May: Waseem (From clue 7, Waseem was \nborn in the month before Xerxes, so \nWaseem was born in May.)\n<br>- June: Xerxes (From clue 7, Xerxes was \nborn in the month after Waseem, so Xerxes \nwas born in June.)\n<br>- July: Tina (From clue 4, Tina was born in \nJuly.)"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74bba165a7",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions :Set 2: Seven friends (Rahul, Suman, Tina, Usha, Vicky, Waseem, Xerxes) were born in different months (January, March, May, July, August, October, December). All these months have 31 days except February which has 28 or 29 days. Based on the following clues, can you figure out who was born in which month? 1. Rahul was born in a month before Tina. 2. Suman was not born in a month having less than 31 days. 3. Usha was born in the month after Suman. 4. Tina was born in July. 5. Rahul was not born in January. 6. Vicky was born in a month which has an odd number of days. 7. Waseem was born in the month before Xerxes. Who was born in July?",
+            "widgets": [
+              {
+                "id": "text66b74bba165ac",
+                "type": "text",
+                "properties": {
+                  "html": "<div><strong>Direction for questions :</strong></div><strong>Set 2:</strong>\n<div>Seven friends (Rahul, Suman, Tina, Usha, Vicky, Waseem, Xerxes) were born in different months (January, March, May, July, August, October, December). All these months have 31 days except February which has 28 or 29 days. Based on the following clues, can you figure out who was born in which month?\n</div><div>1. Rahul was born in a month before Tina.\n</div><div>2. Suman was not born in a month having less than 31 days.\n</div><div>3. Usha was born in the month after Suman.\n</div><div>4. Tina was born in July.\n</div><div>5. Rahul was not born in January.\n</div><div>6. Vicky was born in a month which has an odd number of days.\n</div><div>7. Waseem was born in the month before Xerxes.\n</div><div><br></div><div>Who was born in July?</div>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74bba165ef",
+              "description": {
+                "text": "Rahul",
+                "widgets": [
+                  {
+                    "id": "text66b74bba165f6",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Rahul</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bba16605",
+              "description": {
+                "text": "Suman",
+                "widgets": [
+                  {
+                    "id": "text66b74bba1660c",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Suman</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bba1661b",
+              "description": {
+                "text": "Tina",
+                "widgets": [
+                  {
+                    "id": "text66b74bba16621",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Tina</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bba16631",
+              "description": {
+                "text": "Usha",
+                "widgets": [
+                  {
+                    "id": "text66b74bba16638",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Usha</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bba16647",
+              "description": {
+                "text": "Vicky",
+                "widgets": [
+                  {
+                    "id": "text66b74bba1664e",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Vicky</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74bba1661b",
+              "text": "Tina",
+              "widgets": [
+                {
+                  "id": "text66b74bba16621",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>Tina</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br>Set 2:\n<br>- January: Suman (From clues 2 and 3, \nSuman was not born in a month having \nless than 31 days, and Usha was born in \nthe month after Suman. So, Suman was \nborn in January.)\n<br>- February: Usha (From clue 3, Usha was \nborn in the month after Suman, so Usha \nwas born in February.)\n<br>- March: Rahul (From clues 1 and 5, Rahul \nwas born in a month before Tina, and \nRahul was not born in January. So, Rahul \nwas born in March.)\n<br>- April: Vicky (From clue 6, Vicky was born \nin a month which has an odd number of \ndays, and since all other months with 31 \ndays are taken, Vicky was born in April.)\n<br>- May: Waseem (From clue 7, Waseem was \nborn in the month before Xerxes, so \nWaseem was born in May.)\n<br>- June: Xerxes (From clue 7, Xerxes was \nborn in the month after Waseem, so Xerxes \nwas born in June.)\n<br>- July: Tina (From clue 4, Tina was born in \nJuly.)"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74bba1666e",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions :Set 2: Seven friends (Rahul, Suman, Tina, Usha, Vicky, Waseem, Xerxes) were born in different months (January, March, May, July, August, October, December). All these months have 31 days except February which has 28 or 29 days. Based on the following clues, can you figure out who was born in which month? 1. Rahul was born in a month before Tina. 2. Suman was not born in a month having less than 31 days. 3. Usha was born in the month after Suman. 4. Tina was born in July. 5. Rahul was not born in January. 6. Vicky was born in a month which has an odd number of days. 7. Waseem was born in the month before Xerxes. Who was born in a month which has an odd number of days?",
+            "widgets": [
+              {
+                "id": "text66b74bba16673",
+                "type": "text",
+                "properties": {
+                  "html": "<div><strong>Direction for questions :</strong></div><strong>Set 2:</strong>\n<div>Seven friends (Rahul, Suman, Tina, Usha, Vicky, Waseem, Xerxes) were born in different months (January, March, May, July, August, October, December). All these months have 31 days except February which has 28 or 29 days. Based on the following clues, can you figure out who was born in which month?\n</div><div>1. Rahul was born in a month before Tina.\n</div><div>2. Suman was not born in a month having less than 31 days.\n</div><div>3. Usha was born in the month after Suman.\n</div><div>4. Tina was born in July.\n</div><div>5. Rahul was not born in January.\n</div><div>6. Vicky was born in a month which has an odd number of days.\n</div><div>7. Waseem was born in the month before Xerxes.\n</div><div><br></div><div>Who was born in a month which has an odd number of days?</div>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74bba166b1",
+              "description": {
+                "text": "Rahul",
+                "widgets": [
+                  {
+                    "id": "text66b74bba166b8",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Rahul</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bba166c7",
+              "description": {
+                "text": "Suman",
+                "widgets": [
+                  {
+                    "id": "text66b74bba166ce",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Suman</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bba166de",
+              "description": {
+                "text": "Tina",
+                "widgets": [
+                  {
+                    "id": "text66b74bba166ef",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Tina</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bba166ff",
+              "description": {
+                "text": "Vicky",
+                "widgets": [
+                  {
+                    "id": "text66b74bba16705",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Vicky</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bba16714",
+              "description": {
+                "text": "Waseem",
+                "widgets": [
+                  {
+                    "id": "text66b74bba1671b",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Waseem</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74bba16714",
+              "text": "Waseem",
+              "widgets": [
+                {
+                  "id": "text66b74bba1671b",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>Waseem</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br>Set 2:\n<br>- January: Suman (From clues 2 and 3, \nSuman was not born in a month having \nless than 31 days, and Usha was born in \nthe month after Suman. So, Suman was \nborn in January.)\n<br>- February: Usha (From clue 3, Usha was \nborn in the month after Suman, so Usha \nwas born in February.)\n<br>- March: Rahul (From clues 1 and 5, Rahul \nwas born in a month before Tina, and \nRahul was not born in January. So, Rahul \nwas born in March.)\n<br>- April: Vicky (From clue 6, Vicky was born \nin a month which has an odd number of \ndays, and since all other months with 31 \ndays are taken, Vicky was born in April.)\n<br>- May: Waseem (From clue 7, Waseem was \nborn in the month before Xerxes, so \nWaseem was born in May.)\n<br>- June: Xerxes (From clue 7, Xerxes was \nborn in the month after Waseem, so Xerxes \nwas born in June.)\n<br>- July: Tina (From clue 4, Tina was born in \nJuly.)"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74bba1673f",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions :Set 2: Seven friends (Rahul, Suman, Tina, Usha, Vicky, Waseem, Xerxes) were born in different months (January, March, May, July, August, October, December). All these months have 31 days except February which has 28 or 29 days. Based on the following clues, can you figure out who was born in which month? 1. Rahul was born in a month before Tina. 2. Suman was not born in a month having less than 31 days. 3. Usha was born in the month after Suman. 4. Tina was born in July. 5. Rahul was not born in January. 6. Vicky was born in a month which has an odd number of days. 7. Waseem was born in the month before Xerxes. Who was born the month before Tina?",
+            "widgets": [
+              {
+                "id": "text66b74bba16744",
+                "type": "text",
+                "properties": {
+                  "html": "<div><strong>Direction for questions :</strong></div><strong>Set 2:</strong>\n<div>Seven friends (Rahul, Suman, Tina, Usha, Vicky, Waseem, Xerxes) were born in different months (January, March, May, July, August, October, December). All these months have 31 days except February which has 28 or 29 days. Based on the following clues, can you figure out who was born in which month?\n</div><div>1. Rahul was born in a month before Tina.\n</div><div>2. Suman was not born in a month having less than 31 days.\n</div><div>3. Usha was born in the month after Suman.\n</div><div>4. Tina was born in July.\n</div><div>5. Rahul was not born in January.\n</div><div>6. Vicky was born in a month which has an odd number of days.\n</div><div>7. Waseem was born in the month before Xerxes.\n</div><div><br></div><div>Who was born the month before Tina?</div>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74bba16782",
+              "description": {
+                "text": "Rahul",
+                "widgets": [
+                  {
+                    "id": "text66b74bba16788",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Rahul</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bba16797",
+              "description": {
+                "text": "Suman",
+                "widgets": [
+                  {
+                    "id": "text66b74bba1679e",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Suman</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bba167ac",
+              "description": {
+                "text": "Usha",
+                "widgets": [
+                  {
+                    "id": "text66b74bba167b3",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Usha</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bba167c2",
+              "description": {
+                "text": "Vicky",
+                "widgets": [
+                  {
+                    "id": "text66b74bba167c9",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Vicky</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bba167d7",
+              "description": {
+                "text": "Waseem",
+                "widgets": [
+                  {
+                    "id": "text66b74bba167de",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Waseem</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74bba167ac",
+              "text": "Usha",
+              "widgets": [
+                {
+                  "id": "text66b74bba167b3",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>Usha</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br>Set 2:\n<br>- January: Suman (From clues 2 and 3, \nSuman was not born in a month having \nless than 31 days, and Usha was born in \nthe month after Suman. So, Suman was \nborn in January.)\n<br>- February: Usha (From clue 3, Usha was \nborn in the month after Suman, so Usha \nwas born in February.)\n<br>- March: Rahul (From clues 1 and 5, Rahul \nwas born in a month before Tina, and \nRahul was not born in January. So, Rahul \nwas born in March.)\n<br>- April: Vicky (From clue 6, Vicky was born \nin a month which has an odd number of \ndays, and since all other months with 31 \ndays are taken, Vicky was born in April.)\n<br>- May: Waseem (From clue 7, Waseem was \nborn in the month before Xerxes, so \nWaseem was born in May.)\n<br>- June: Xerxes (From clue 7, Xerxes was \nborn in the month after Waseem, so Xerxes \nwas born in June.)\n<br>- July: Tina (From clue 4, Tina was born in \nJuly.)"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74bba16804",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions :Set 2: Seven friends (Rahul, Suman, Tina, Usha, Vicky, Waseem, Xerxes) were born in different months (January, March, May, July, August, October, December). All these months have 31 days except February which has 28 or 29 days. Based on the following clues, can you figure out who was born in which month? 1. Rahul was born in a month before Tina. 2. Suman was not born in a month having less than 31 days. 3. Usha was born in the month after Suman. 4. Tina was born in July. 5. Rahul was not born in January. 6. Vicky was born in a month which has an odd number of days. 7. Waseem was born in the month before Xerxes. Who was not born in a month having less than 31 days?",
+            "widgets": [
+              {
+                "id": "text66b74bba16808",
+                "type": "text",
+                "properties": {
+                  "html": "<div><strong>Direction for questions :</strong></div><strong>Set 2:</strong>\n<div>Seven friends (Rahul, Suman, Tina, Usha, Vicky, Waseem, Xerxes) were born in different months (January, March, May, July, August, October, December). All these months have 31 days except February which has 28 or 29 days. Based on the following clues, can you figure out who was born in which month?\n</div><div>1. Rahul was born in a month before Tina.\n</div><div>2. Suman was not born in a month having less than 31 days.\n</div><div>3. Usha was born in the month after Suman.\n</div><div>4. Tina was born in July.\n</div><div>5. Rahul was not born in January.\n</div><div>6. Vicky was born in a month which has an odd number of days.\n</div><div>7. Waseem was born in the month before Xerxes.\n</div><div><br></div><div>Who was not born in a month having less than 31 days?</div>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74bba16845",
+              "description": {
+                "text": "Rahul",
+                "widgets": [
+                  {
+                    "id": "text66b74bba1684c",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Rahul</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bba1685b",
+              "description": {
+                "text": "Suman",
+                "widgets": [
+                  {
+                    "id": "text66b74bba16862",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Suman</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bba16870",
+              "description": {
+                "text": "Tina",
+                "widgets": [
+                  {
+                    "id": "text66b74bba16877",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Tina</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bba16886",
+              "description": {
+                "text": "Usha",
+                "widgets": [
+                  {
+                    "id": "text66b74bba1688c",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Usha</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bba1689b",
+              "description": {
+                "text": "Vicky",
+                "widgets": [
+                  {
+                    "id": "text66b74bba168a2",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Vicky</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74bba16886",
+              "text": "Usha",
+              "widgets": [
+                {
+                  "id": "text66b74bba1688c",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>Usha</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br>Set 2:\n<br>- January: Suman (From clues 2 and 3, \nSuman was not born in a month having \nless than 31 days, and Usha was born in \nthe month after Suman. So, Suman was \nborn in January.)\n<br>- February: Usha (From clue 3, Usha was \nborn in the month after Suman, so Usha \nwas born in February.)\n<br>- March: Rahul (From clues 1 and 5, Rahul \nwas born in a month before Tina, and \nRahul was not born in January. So, Rahul \nwas born in March.)\n<br>- April: Vicky (From clue 6, Vicky was born \nin a month which has an odd number of \ndays, and since all other months with 31 \ndays are taken, Vicky was born in April.)\n<br>- May: Waseem (From clue 7, Waseem was \nborn in the month before Xerxes, so \nWaseem was born in May.)\n<br>- June: Xerxes (From clue 7, Xerxes was \nborn in the month after Waseem, so Xerxes \nwas born in June.)\n<br>- July: Tina (From clue 4, Tina was born in \nJuly.)"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        }
+      ]
+    }
+  ],
+  "submitted": true,
+  "updated": true,
+  "retryCount": 3,
+  "inlineFeedback": [],
+  "errors": [],
+  "success": true
+}

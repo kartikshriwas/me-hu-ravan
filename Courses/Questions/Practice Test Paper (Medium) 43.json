@@ -1,0 +1,3065 @@
+{
+  "submission": {
+    "anon_id": null,
+    "model": "assessment-submission",
+    "courseTitleId": "aptitude-teacher2",
+    "object_id": "66b74b8d7f809db010095188",
+    "assessmentId": "66b74b8d7f809db010095187",
+    "snapshotId": "66c039786eaf20c8f90f1c05",
+    "questions": {
+      "section66b74b8d273f7": [
+        "mc66b74b8d273ff",
+        "mc66b74b8d274cc",
+        "mc66b74b8d27575",
+        "mc66b74b8d2761c",
+        "mc66b74b8d276c1",
+        "mc66b74b8d2776a",
+        "mc66b74b8d2780e",
+        "mc66b74b8d278dd",
+        "mc66b74b8d27982",
+        "mc66b74b8d27a29"
+      ]
+    },
+    "certificateAnswers": [],
+    "certificateId": null,
+    "questionData": {
+      "mc66b74b8d273ff": {
+        "deliveredOnTimestamp": 1786440495.478917,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74b8d274cc": {
+        "deliveredOnTimestamp": 1786440495.478939,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74b8d27575": {
+        "deliveredOnTimestamp": 1786440495.478953,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74b8d2761c": {
+        "deliveredOnTimestamp": 1786440495.478969,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74b8d276c1": {
+        "deliveredOnTimestamp": 1786440495.478985,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74b8d2776a": {
+        "deliveredOnTimestamp": 1786440495.478997,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74b8d2780e": {
+        "deliveredOnTimestamp": 1786440495.479008,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74b8d278dd": {
+        "deliveredOnTimestamp": 1786440495.479019,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74b8d27982": {
+        "deliveredOnTimestamp": 1786440495.479029,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74b8d27a29": {
+        "deliveredOnTimestamp": 1786440495.479039,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      }
+    },
+    "answers": [
+      {
+        "blockId": "mc66b74b8d273ff",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74b8d274cc",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74b8d27575",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74b8d2761c",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74b8d276c1",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74b8d2776a",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74b8d2780e",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74b8d278dd",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74b8d27982",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74b8d27a29",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      }
+    ],
+    "submittedTimestamp": 1786440495.700588,
+    "status": "submitted",
+    "grading_status": "grading_status_graded",
+    "access": "public",
+    "actual_score": null,
+    "score": {
+      "maxScore": 10,
+      "value": 0,
+      "pass": false,
+      "passGrade": 50,
+      "points": 0
+    },
+    "source": {
+      "type": "unit"
+    },
+    "isDefining": true,
+    "isAdminAutoGradedSubmission": null,
+    "listOfNonConsentedBlocks": [],
+    "created": 1786440495.484085,
+    "modified": 1786440495.837315,
+    "id": "6a7aeb2f30e5f08421007b24",
+    "passed": false
+  },
+  "assessment": {
+    "title": "Practice Test Paper (Medium)",
+    "access": "public",
+    "type": "assessment",
+    "model": "assessmentSnapshot",
+    "description": "Intermediate practice test paper containing 10 assessment questions covering Speed, Distance & Time, Time & Work, Data Structures & Algorithms.",
+    "isTimed": false,
+    "timerFor": "assessmentTimed",
+    "onTimerExpiration": "autoSubmit",
+    "assessmentTimeLimitInSeconds": 600,
+    "questionTimeLimitInSeconds": 60,
+    "standaloneShareEnabled": null,
+    "customUrl": null,
+    "usesCustomUrl": null,
+    "allowAnonymous": true,
+    "randomizeQuestionOptions": false,
+    "disallowPartialSubmissions": false,
+    "submissionDueDateEnabled": false,
+    "submissionDueDate": 1626257823,
+    "makeFeedbackAvailableAfterDateEnabled": false,
+    "makeFeedbackAvailableAfterDate": 0,
+    "customStylesEnabled": true,
+    "customStyles": {
+      "assessmentPage": {
+        "background": {
+          "type": "color",
+          "colorData": {
+            "code": "",
+            "class": "lw-body-bg"
+          }
+        },
+        "dividers": {
+          "top": {
+            "orientation": "top",
+            "divider": "none"
+          },
+          "bottom": {
+            "orientation": "bottom",
+            "divider": "none"
+          }
+        }
+      },
+      "option": {
+        "radioEffect": "scribble",
+        "checkboxEffect": "scribble",
+        "size": "small"
+      },
+      "assessment": {
+        "transition": "none",
+        "background": {
+          "type": "color",
+          "colorData": {
+            "code": "",
+            "class": ""
+          }
+        },
+        "width": "normal",
+        "timerTemplate": "rectangle"
+      },
+      "linearRating": {
+        "labels": {
+          "size": "small"
+        }
+      },
+      "question": {
+        "description": {
+          "background": {
+            "type": "color",
+            "colorData": {
+              "code": "",
+              "class": ""
+            }
+          },
+          "type": "p",
+          "size": "small"
+        },
+        "answers": {
+          "background": {
+            "type": "color",
+            "colorData": {
+              "code": "",
+              "class": ""
+            }
+          }
+        },
+        "requiredAsterisk": {
+          "colorData": {
+            "code": "#ff0000",
+            "class": ""
+          }
+        },
+        "errorMessages": {
+          "size": "verySmall",
+          "colorData": {
+            "code": "#ff0000",
+            "class": ""
+          }
+        }
+      },
+      "input": {
+        "size": "small",
+        "type": "solidDark"
+      },
+      "textarea": {
+        "size": "small",
+        "type": "solidDark"
+      },
+      "dropdown": {
+        "size": "small",
+        "type": "solidDark"
+      }
+    },
+    "submissionMode": "all",
+    "startingDate": 1626765704,
+    "startingDateEnabled": false,
+    "showOnlyFailedQuestionsOnRetry": false,
+    "retryEnabled": true,
+    "retryOnFailOnly": false,
+    "gradingMethod": null,
+    "maxTries": null,
+    "onlyWrongOnRetake": null,
+    "isAmendable": false,
+    "feedbackShowOnScreen": true,
+    "feedbackDownloadPDF": false,
+    "feedbackShowInline": null,
+    "feedbackQuestionList": "all-questions",
+    "feedbackShowQuestionScore": true,
+    "feedbackShowFeedback": true,
+    "feedbackShowNumbering": false,
+    "feedbackShowSectionTitles": false,
+    "feedbackShowUserAnswers": true,
+    "feedbackShowCorrectAnswers": true,
+    "feedbackShowAnswerCorrectness": true,
+    "displayInlineFeedbackEnabled": null,
+    "displayBackButtonWhenSubmissionPerBlock": null,
+    "feedbackShowSectionResultSummary": false,
+    "askConfirmationBeforeSubmit": true,
+    "hasCustomConfirmationBeforeSubmitText": false,
+    "customConfirmationBeforeSubmitText": "Are you sure you want to submit the questionnaire?",
+    "customConfirmationBeforeSubmitTexts": {
+      "title": "Submit Assessment?",
+      "baseConfirmationMessage": "Are you sure you want to submit the questionnaire?",
+      "unansweredNotice": "You have not answered {X} questions."
+    },
+    "amendResubmissionMinutes": 30,
+    "passingGrade": null,
+    "navigationMode": "per-block",
+    "conditionalBlocks": {
+      "introContent": {
+        "id": "content66b74b8d27343",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66b74b8d27353",
+              "type": "text",
+              "insertedAsWidget": true,
+              "properties": {
+                "html": "Averages pAPER LEVEL-2",
+                "alignment": "center",
+                "customStyle": true,
+                "type": "h2",
+                "size": "normal"
+              }
+            },
+            {
+              "id": "text66b74b8d27364",
+              "type": "text",
+              "properties": {
+                "html": "Self-assess your knowledge. Express yourself and get feedback from our instructors.",
+                "customStyle": true,
+                "alignment": "center"
+              }
+            },
+            {
+              "id": "spacer66b74b8d2736e",
+              "type": "spacer",
+              "properties": {
+                "height": 20,
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            },
+            {
+              "id": "button66b74b8d27380",
+              "type": "button",
+              "properties": {
+                "buttonLabel": "<span>Ready to start</span>",
+                "buttonSize": "normal",
+                "buttonType": "solidBrand",
+                "alignment": "center",
+                "linkData": {
+                  "linkType": "goToFirst"
+                },
+                "iconColorData": {
+                  "code": "",
+                  "class": ""
+                },
+                "iconDisplay": false,
+                "iconSize": 26,
+                "iconClassName": " fas fa-angle-right",
+                "iconPosition": "right"
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "variables": {
+            "conditionalBlocks_introContent_blockData_widgets_0": [],
+            "conditionalBlocks_introContent_blockData_widgets_1": []
+          }
+        }
+      },
+      "submissionStartingDate": {
+        "id": "content66b74b8d273a1",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66b74b8d273a6",
+              "type": "text",
+              "properties": {
+                "html": "Sorry but this assessment hasn't started yet."
+              }
+            },
+            {
+              "id": "date66b74b8d273ac",
+              "type": "date",
+              "properties": {
+                "value": ""
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "displayConditions": ["startingDate"]
+        }
+      },
+      "submissionDueDate": {
+        "id": "content66b74b8d273b8",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66b74b8d273bd",
+              "type": "text",
+              "properties": {
+                "html": "Sorry but this assessment date is due."
+              }
+            },
+            {
+              "id": "date66b74b8d273c4",
+              "type": "date",
+              "properties": {
+                "value": ""
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "displayConditions": ["dateIsDue"]
+        }
+      },
+      "outroContent": {
+        "id": "content66b74b8d273d0",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "userResults66b74b8d273d4",
+              "type": "userResults",
+              "properties": {
+                "layout": "template2",
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            },
+            {
+              "id": "feedback66b74b8d273e0",
+              "type": "feedback",
+              "properties": []
+            },
+            {
+              "id": "outroActions66b74b8d273e7",
+              "type": "outroActions",
+              "properties": {
+                "layout": "",
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true
+        }
+      }
+    },
+    "systemSections": null,
+    "sections": [
+      {
+        "id": "section66b74b8d273f7",
+        "title": "",
+        "type": "section",
+        "navigationMode": "per-block",
+        "blocks": [
+          {
+            "id": "mc66b74b8d273ff",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74b8d27404",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">A man travels from city A to city B at a speed of 60 km/hr and returns at a speed of 40 km/hr. He then travels from city B to city C at a speed of 80 km/hr and returns at a speed of 50 km/hr. What is the average speed for the entire journey?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74b8d27416",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74b8d2741d",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74b8d27425",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74b8d27445",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b8d2744c",
+                        "type": "text",
+                        "properties": {
+                          "html": "55 km/hr"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b8d2745c",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b8d27463",
+                        "type": "text",
+                        "properties": {
+                          "html": "56 km/hr"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b8d2748d",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b8d27499",
+                        "type": "text",
+                        "properties": {
+                          "html": "57 km/hr"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b8d274a8",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b8d274ae",
+                        "type": "text",
+                        "properties": {
+                          "html": "58 km/hr"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74b8d274cc",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74b8d274d0",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">The average age of a group of 10 people is 30 years. If a person aged 50 years leaves the group and a person aged 20 years joins the group, what will be the new average age of the group?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74b8d274e2",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74b8d274e9",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74b8d274f0",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74b8d2750f",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b8d27516",
+                        "type": "text",
+                        "properties": {
+                          "html": "27 years"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b8d27525",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b8d2752b",
+                        "type": "text",
+                        "properties": {
+                          "html": "29 years"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b8d2753a",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b8d27541",
+                        "type": "text",
+                        "properties": {
+                          "html": "30 years"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b8d2754f",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b8d27556",
+                        "type": "text",
+                        "properties": {
+                          "html": "31 years"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_1_blockData_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_1": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74b8d27575",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74b8d27579",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">The average weight of a class of 25 students is 50 kg. If the weight of the teacher is included, the average weight increases by 1 kg. If another teacher joins the class and the average weight increases by another 1 kg, what is the average weight of the two teachers?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74b8d2758b",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74b8d27591",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74b8d27599",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74b8d275b7",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b8d275be",
+                        "type": "text",
+                        "properties": {
+                          "html": "75 kg"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b8d275cd",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b8d275d3",
+                        "type": "text",
+                        "properties": {
+                          "html": "76 kg"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b8d275e2",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b8d275e9",
+                        "type": "text",
+                        "properties": {
+                          "html": "77 kg"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b8d275f7",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b8d275fe",
+                        "type": "text",
+                        "properties": {
+                          "html": "78 kg"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_2_blockData_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_2": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74b8d2761c",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74b8d27620",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">The average score of a cricketer for ten matches is 38.9 runs. If the average for the first six matches is 42 and the average for the last five matches is 40, then find the seventh match score.</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74b8d27631",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74b8d27638",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74b8d2763f",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74b8d2765d",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b8d27664",
+                        "type": "text",
+                        "properties": {
+                          "html": "34 runs"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b8d27673",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b8d27679",
+                        "type": "text",
+                        "properties": {
+                          "html": "35 runs"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b8d27688",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b8d2768e",
+                        "type": "text",
+                        "properties": {
+                          "html": "36 runs"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b8d2769c",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b8d276a3",
+                        "type": "text",
+                        "properties": {
+                          "html": "37 runs"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_3_blockData_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74b8d276c1",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74b8d276c5",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">The average of 7 consecutive numbers is 33. If the average of the first four numbers is 32 and the average of the last four numbers is 34, what is the fourth number?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74b8d276d6",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74b8d276dd",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74b8d276e4",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74b8d27702",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b8d27708",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>33</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b8d27717",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b8d2771d",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>34</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b8d2772c",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b8d27732",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>35</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b8d27741",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b8d27747",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>36</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_4_blockData_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74b8d2776a",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74b8d2776e",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">A batsman scores an average of 60 runs in 10 innings. How many runs must he score in the next two innings to raise his average to 62?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74b8d2777f",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74b8d27786",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74b8d2778d",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74b8d277ab",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b8d277b2",
+                        "type": "text",
+                        "properties": {
+                          "html": "164 runs"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b8d277c0",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b8d277c7",
+                        "type": "text",
+                        "properties": {
+                          "html": "166 runs"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b8d277d5",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b8d277dc",
+                        "type": "text",
+                        "properties": {
+                          "html": "168 runs"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b8d277ea",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b8d277f1",
+                        "type": "text",
+                        "properties": {
+                          "html": "170 runs"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_5_blockData_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74b8d2780e",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74b8d27813",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">The average of five numbers is 27. If one number is excluded, the average becomes 25. If another number is excluded and the average becomes 23, what is the sum of the excluded numbers?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74b8d27824",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74b8d2782b",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74b8d27832",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74b8d2784f",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b8d27873",
+                        "type": "text",
+                        "properties": {
+                          "html": "70&nbsp;"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b8d2788d",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b8d27894",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>72</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b8d278a3",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b8d278aa",
+                        "type": "text",
+                        "properties": {
+                          "html": "74&nbsp;"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b8d278b8",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b8d278bf",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>76</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_6_blockData_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_6": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74b8d278dd",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74b8d278e2",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">The average weight of 8 persons increases by 2.5 kg when a new person comes in place of one of them weighing 65 kg. If another person weighing 70 kg is replaced by a new person and the average weight increases by another 2.5 kg, what is the average weight of the two new persons?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74b8d278f3",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74b8d278fa",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74b8d27901",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74b8d2791f",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b8d27926",
+                        "type": "text",
+                        "properties": {
+                          "html": "170 kg"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b8d27934",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b8d2793b",
+                        "type": "text",
+                        "properties": {
+                          "html": "172 kg"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b8d27949",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b8d27950",
+                        "type": "text",
+                        "properties": {
+                          "html": "174 kg"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b8d2795e",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b8d27965",
+                        "type": "text",
+                        "properties": {
+                          "html": "176 kg"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_7_blockData_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_7": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74b8d27982",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74b8d27987",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">The average of 11 results is 50. If the average of the first six results is 49 and that of the last six is 52, find the sum of the sixth and seventh results.</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74b8d27998",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74b8d2799f",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74b8d279a6",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74b8d279c4",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b8d279cb",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>101</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b8d279da",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b8d279e1",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>102</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b8d279ef",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b8d279f6",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>103</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b8d27a05",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b8d27a0b",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>104</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_8_blockData_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_8": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74b8d27a29",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74b8d27a2e",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">The average salary of all the workers in a workshop is Rs.8000. The average salary of 7 technicians is Rs.12000 and the average salary of the rest is Rs.6000. If a new technician with a salary of Rs.15000 joins the workshop, what will be the new average salary of all the workers in the workshop?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74b8d27a3f",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74b8d27a45",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74b8d27a4c",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74b8d27a6a",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b8d27a71",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Rs.8100</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b8d27a80",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b8d27a86",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Rs.8200<strong></strong></span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b8d27a95",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b8d27a9b",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Rs.8300</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b8d27aaa",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b8d27ab0",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Rs.8400</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_9_blockData_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_9": []
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "availabilityStatus": null,
+    "autoNavigationEnabled": false,
+    "displayBackButtonWhenNavigationPerBlock": true,
+    "saveAndResumeLaterEnabled": null,
+    "tagsAddedOnCompletion": [],
+    "tagsAddedOnPass": [],
+    "sendAnonymousSubmissionsToEmailLeads": false,
+    "afterSubmitActionEnabled": null,
+    "afterSubmitActionProperties": null,
+    "showWizardOnNextEdit": false,
+    "revisitAfterSubmissionAction": null,
+    "navigationTemplate": "HorizontalSpacedBetweenNavigationTemplate",
+    "learnerSearchBarEnabled": true,
+    "learnerUnansweredQuestionsEnabled": true,
+    "learnerFavouriteQuestionEnabled": true,
+    "learnerCompletionProgressEnabled": true,
+    "learnerShowIndexOfQuestionsEnabled": false,
+    "learnerTimeNotificationsEnabled": false,
+    "learnerAllowInterruptionsEnabled": true,
+    "learnerAllowInterruptionsTimeoutInMinutes": 30,
+    "learnerReclaimTryOnInterruptionTimeoutEnabled": false,
+    "learnerAskBeforeContinueToSaved": true,
+    "learnerAutoSaveEnabled": null,
+    "spellcheckDisabled": null,
+    "showPartialScoreOnSubmission": true,
+    "deliverableQuestionsSubsetType": "all",
+    "questionRandomizationType": "none",
+    "serveQuestionsBasedOnPreviousSubmission": null,
+    "scoringDisabled": false,
+    "isSelfAssessment": false,
+    "useDefaultCertificateTemplate": null,
+    "certificateTemplate": null,
+    "certificateSocialShare": null,
+    "migrationData": null,
+    "useAssessmentPassingGradeForOpenEndedCorrectness": true,
+    "openEndedCorrectnessPassingGrade": null,
+    "showScorePercentage": null,
+    "showScorePoints": null,
+    "showScoreCorrectAnswers": null,
+    "editorBehaviorSettings": null,
+    "manualReviewEnabled": null,
+    "resultsSummary": {
+      "enabled": true,
+      "showStatusIcon": true,
+      "showStatusText": true,
+      "showScorePercentage": true,
+      "showScorePoints": true,
+      "showScoreCorrectAnswers": false,
+      "showTimeTakenToComplete": true,
+      "showDateSubmitted": true,
+      "showAttemptCount": true
+    },
+    "meta": null,
+    "submissionsCount": 3149,
+    "fromMarketplace": null,
+    "aiFeedbackEnabled": null,
+    "numberOfFeedbackQuestions": null,
+    "created": 1723288461.588785,
+    "modified": 1723873656.429148,
+    "contentHash": "daca4fdc689e1616615ef35d30ba2cdeda268c34f8034df1e5ea6e7853f70094",
+    "id": "66b74b8d7f809db010095187",
+    "objectType": "assessment",
+    "isEditBlockedDueToSync": false,
+    "variables": {
+      "submission": {
+        "self": {
+          "score": 0,
+          "points": 0,
+          "total_points": 10,
+          "correct_answers": 0,
+          "total_questions": 10,
+          "time_spent": "00:00:00",
+          "date_submitted": "11/08/26",
+          "attempt_count": 4,
+          "max_tries": null,
+          "pass_grade": 50,
+          "time_spent_seconds": 0,
+          "raw_start_date": 1786440495.484085
+        }
+      },
+      "school": {
+        "name": "Apna College",
+        "url": "www.apnacollege.in",
+        "description": "The most loved coding community of India ❤️"
+      },
+      "user": {
+        "username": "ram",
+        "email": "p4542639@gmail.com",
+        "cf_phonenumber": "7666690798"
+      }
+    }
+  },
+  "reclaimedTry": false,
+  "feedback": [
+    {
+      "title": "",
+      "id": "section66b74b8d273f7",
+      "blocks": [
+        {
+          "id": "mc66b74b8d273ff",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "A man travels from city A to city B at a speed of 60 km/hr and returns at a speed of 40 km/hr. He then travels from city B to city C at a speed of 80 km/hr and returns at a speed of 50 km/hr. What is the average speed for the entire journey?",
+            "widgets": [
+              {
+                "id": "text66b74b8d27404",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">A man travels from city A to city B at a speed of 60 km/hr and returns at a speed of 40 km/hr. He then travels from city B to city C at a speed of 80 km/hr and returns at a speed of 50 km/hr. What is the average speed for the entire journey?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74b8d27445",
+              "description": {
+                "text": "55 km/hr",
+                "widgets": [
+                  {
+                    "id": "text66b74b8d2744c",
+                    "type": "text",
+                    "properties": {
+                      "html": "55 km/hr"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b8d2745c",
+              "description": {
+                "text": "56 km/hr",
+                "widgets": [
+                  {
+                    "id": "text66b74b8d27463",
+                    "type": "text",
+                    "properties": {
+                      "html": "56 km/hr"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b8d2748d",
+              "description": {
+                "text": "57 km/hr",
+                "widgets": [
+                  {
+                    "id": "text66b74b8d27499",
+                    "type": "text",
+                    "properties": {
+                      "html": "57 km/hr"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b8d274a8",
+              "description": {
+                "text": "58 km/hr",
+                "widgets": [
+                  {
+                    "id": "text66b74b8d274ae",
+                    "type": "text",
+                    "properties": {
+                      "html": "58 km/hr"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74b8d2748d",
+              "text": "57 km/hr",
+              "widgets": [
+                {
+                  "id": "text66b74b8d27499",
+                  "type": "text",
+                  "properties": {
+                    "html": "57 km/hr"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>The average speed for the entire journey is given by the formula 2ab/(a+b) for each leg of the \njourney, and then taking the average of the two results. <br>So, the average speed is [(2*60*40/ (60+40)) + (2*80*50 / (80+50))] / 2 = 48 + 57.14 <br>= 105.14 / 2 \n= 52.57 km/hr. <br>So, the correct answer is C) 57 km/hr (rounded to the nearest whole number).<br></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74b8d274cc",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "The average age of a group of 10 people is 30 years. If a person aged 50 years leaves the group and a person aged 20 years joins the group, what will be the new average age of the group?",
+            "widgets": [
+              {
+                "id": "text66b74b8d274d0",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">The average age of a group of 10 people is 30 years. If a person aged 50 years leaves the group and a person aged 20 years joins the group, what will be the new average age of the group?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74b8d2750f",
+              "description": {
+                "text": "27 years",
+                "widgets": [
+                  {
+                    "id": "text66b74b8d27516",
+                    "type": "text",
+                    "properties": {
+                      "html": "27 years"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b8d27525",
+              "description": {
+                "text": "29 years",
+                "widgets": [
+                  {
+                    "id": "text66b74b8d2752b",
+                    "type": "text",
+                    "properties": {
+                      "html": "29 years"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b8d2753a",
+              "description": {
+                "text": "30 years",
+                "widgets": [
+                  {
+                    "id": "text66b74b8d27541",
+                    "type": "text",
+                    "properties": {
+                      "html": "30 years"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b8d2754f",
+              "description": {
+                "text": "31 years",
+                "widgets": [
+                  {
+                    "id": "text66b74b8d27556",
+                    "type": "text",
+                    "properties": {
+                      "html": "31 years"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74b8d2750f",
+              "text": "27 years",
+              "widgets": [
+                {
+                  "id": "text66b74b8d27516",
+                  "type": "text",
+                  "properties": {
+                    "html": "27 years"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>The total age of the group is 10*30 = 300 years. <br>If a person aged 50 years leaves the group and a person aged 20 years joins the group, the total age \nbecomes 300-50+20 = 270 years. <br>So, the new average age of the group is 270/10 = 27 years. <br>So, the correct answer is A) 27 years.<br></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74b8d27575",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "The average weight of a class of 25 students is 50 kg. If the weight of the teacher is included, the average weight increases by 1 kg. If another teacher joins the class and the average weight increases by another 1 kg, what is the average weight of the two teachers?",
+            "widgets": [
+              {
+                "id": "text66b74b8d27579",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">The average weight of a class of 25 students is 50 kg. If the weight of the teacher is included, the average weight increases by 1 kg. If another teacher joins the class and the average weight increases by another 1 kg, what is the average weight of the two teachers?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74b8d275b7",
+              "description": {
+                "text": "75 kg",
+                "widgets": [
+                  {
+                    "id": "text66b74b8d275be",
+                    "type": "text",
+                    "properties": {
+                      "html": "75 kg"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b8d275cd",
+              "description": {
+                "text": "76 kg",
+                "widgets": [
+                  {
+                    "id": "text66b74b8d275d3",
+                    "type": "text",
+                    "properties": {
+                      "html": "76 kg"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b8d275e2",
+              "description": {
+                "text": "77 kg",
+                "widgets": [
+                  {
+                    "id": "text66b74b8d275e9",
+                    "type": "text",
+                    "properties": {
+                      "html": "77 kg"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b8d275f7",
+              "description": {
+                "text": "78 kg",
+                "widgets": [
+                  {
+                    "id": "text66b74b8d275fe",
+                    "type": "text",
+                    "properties": {
+                      "html": "78 kg"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74b8d275e2",
+              "text": "77 kg",
+              "widgets": [
+                {
+                  "id": "text66b74b8d275e9",
+                  "type": "text",
+                  "properties": {
+                    "html": "77 kg"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>The total weight of the class is 25*50 = 1250 kg. <br>If the weight of the teacher is included, the total weight becomes 1250 + weight of the teacher. The \nnew average weight is (1250 + weight of the teacher)/26 = 51 kg. <br>Solving for the weight of the teacher gives 76 kg. <br>If another teacher joins the class and the average weight increases by another 1 kg, the total weight \nbecomes 1250 + 76 + weight of the second teacher. \nThe new average weight is (1250 + 76 + weight of the second teacher)/27 = 52 kg. <br>Solving for the weight of the second teacher gives 78 kg. <br>Therefore, the average weight of the two teachers is (76 + 78) / 2 = 77 kg. </p><p style=\"text-align: justify;\">So, the correct answer is C) 77 kg.</p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74b8d2761c",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "The average score of a cricketer for ten matches is 38.9 runs. If the average for the first six matches is 42 and the average for the last five matches is 40, then find the seventh match score.",
+            "widgets": [
+              {
+                "id": "text66b74b8d27620",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">The average score of a cricketer for ten matches is 38.9 runs. If the average for the first six matches is 42 and the average for the last five matches is 40, then find the seventh match score.</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74b8d2765d",
+              "description": {
+                "text": "34 runs",
+                "widgets": [
+                  {
+                    "id": "text66b74b8d27664",
+                    "type": "text",
+                    "properties": {
+                      "html": "34 runs"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b8d27673",
+              "description": {
+                "text": "35 runs",
+                "widgets": [
+                  {
+                    "id": "text66b74b8d27679",
+                    "type": "text",
+                    "properties": {
+                      "html": "35 runs"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b8d27688",
+              "description": {
+                "text": "36 runs",
+                "widgets": [
+                  {
+                    "id": "text66b74b8d2768e",
+                    "type": "text",
+                    "properties": {
+                      "html": "36 runs"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b8d2769c",
+              "description": {
+                "text": "37 runs",
+                "widgets": [
+                  {
+                    "id": "text66b74b8d276a3",
+                    "type": "text",
+                    "properties": {
+                      "html": "37 runs"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74b8d2769c",
+              "text": "37 runs",
+              "widgets": [
+                {
+                  "id": "text66b74b8d276a3",
+                  "type": "text",
+                  "properties": {
+                    "html": "37 runs"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>The total score of the cricketer for ten matches is 10*38.9 = 389 runs. <br>The total score for the first six matches is 6*42 = 252 runs. <br>So, the total score for the last five matches is 389 - 252 = 137 runs. <br>Therefore, the average for the last five matches is 137/5 = 27.4 runs. <br>So, the seventh match score is 40*5 - 27.4 = 172.6 runs. <br>So, the correct answer is D) 37 runs (rounded to the nearest whole number).<br></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74b8d276c1",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "The average of 7 consecutive numbers is 33. If the average of the first four numbers is 32 and the average of the last four numbers is 34, what is the fourth number?",
+            "widgets": [
+              {
+                "id": "text66b74b8d276c5",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">The average of 7 consecutive numbers is 33. If the average of the first four numbers is 32 and the average of the last four numbers is 34, what is the fourth number?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74b8d27702",
+              "description": {
+                "text": "33",
+                "widgets": [
+                  {
+                    "id": "text66b74b8d27708",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>33</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b8d27717",
+              "description": {
+                "text": "34",
+                "widgets": [
+                  {
+                    "id": "text66b74b8d2771d",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>34</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b8d2772c",
+              "description": {
+                "text": "35",
+                "widgets": [
+                  {
+                    "id": "text66b74b8d27732",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>35</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b8d27741",
+              "description": {
+                "text": "36",
+                "widgets": [
+                  {
+                    "id": "text66b74b8d27747",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>36</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74b8d27717",
+              "text": "34",
+              "widgets": [
+                {
+                  "id": "text66b74b8d2771d",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>34</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>The numbers are consecutive, so the middle number is the average, which is 33. <br>The fourth number is therefore 33 - 1 = 32. </p><p style=\"text-align: justify;\">So, the correct answer is B) 34.</p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74b8d2776a",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "A batsman scores an average of 60 runs in 10 innings. How many runs must he score in the next two innings to raise his average to 62?",
+            "widgets": [
+              {
+                "id": "text66b74b8d2776e",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">A batsman scores an average of 60 runs in 10 innings. How many runs must he score in the next two innings to raise his average to 62?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74b8d277ab",
+              "description": {
+                "text": "164 runs",
+                "widgets": [
+                  {
+                    "id": "text66b74b8d277b2",
+                    "type": "text",
+                    "properties": {
+                      "html": "164 runs"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b8d277c0",
+              "description": {
+                "text": "166 runs",
+                "widgets": [
+                  {
+                    "id": "text66b74b8d277c7",
+                    "type": "text",
+                    "properties": {
+                      "html": "166 runs"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b8d277d5",
+              "description": {
+                "text": "168 runs",
+                "widgets": [
+                  {
+                    "id": "text66b74b8d277dc",
+                    "type": "text",
+                    "properties": {
+                      "html": "168 runs"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b8d277ea",
+              "description": {
+                "text": "170 runs",
+                "widgets": [
+                  {
+                    "id": "text66b74b8d277f1",
+                    "type": "text",
+                    "properties": {
+                      "html": "170 runs"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74b8d277c0",
+              "text": "166 runs",
+              "widgets": [
+                {
+                  "id": "text66b74b8d277c7",
+                  "type": "text",
+                  "properties": {
+                    "html": "166 runs"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>The total score of the batsman for ten innings is 10*60 = 600 runs. <br>To raise his average to 62, the total score for twelve innings should be 12*62 = 744 runs. <br>Therefore, \nthe total score in the next two innings should be 744 - 600 = 144 runs. <br>So, the correct answer is B) 166 runs.<br></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74b8d2780e",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "The average of five numbers is 27. If one number is excluded, the average becomes 25. If another number is excluded and the average becomes 23, what is the sum of the excluded numbers?",
+            "widgets": [
+              {
+                "id": "text66b74b8d27813",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">The average of five numbers is 27. If one number is excluded, the average becomes 25. If another number is excluded and the average becomes 23, what is the sum of the excluded numbers?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74b8d2784f",
+              "description": {
+                "text": "70",
+                "widgets": [
+                  {
+                    "id": "text66b74b8d27873",
+                    "type": "text",
+                    "properties": {
+                      "html": "70&nbsp;"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b8d2788d",
+              "description": {
+                "text": "72",
+                "widgets": [
+                  {
+                    "id": "text66b74b8d27894",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>72</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b8d278a3",
+              "description": {
+                "text": "74",
+                "widgets": [
+                  {
+                    "id": "text66b74b8d278aa",
+                    "type": "text",
+                    "properties": {
+                      "html": "74&nbsp;"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b8d278b8",
+              "description": {
+                "text": "76",
+                "widgets": [
+                  {
+                    "id": "text66b74b8d278bf",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>76</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74b8d2788d",
+              "text": "72",
+              "widgets": [
+                {
+                  "id": "text66b74b8d27894",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>72</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>The total of the five numbers is 5*27 = 135. <br>If one number is excluded, the total becomes 135 - excluded number. <br>The new average is (135 - excluded number)/4 = 25. \nSolving for the excluded number gives 35. <br>If another number is excluded and the average becomes 23, the total becomes 135 - 35 - second \nexcluded number. <br>The new average is (135 - 35 - second excluded number)/3 = 23. <br>Solving for the second excluded number gives 37. \nTherefore, the sum of the excluded numbers is 35 + 37 = 72. <br>So, the correct answer is B) 72.<br></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74b8d278dd",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "The average weight of 8 persons increases by 2.5 kg when a new person comes in place of one of them weighing 65 kg. If another person weighing 70 kg is replaced by a new person and the average weight increases by another 2.5 kg, what is the average weight of the two new persons?",
+            "widgets": [
+              {
+                "id": "text66b74b8d278e2",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">The average weight of 8 persons increases by 2.5 kg when a new person comes in place of one of them weighing 65 kg. If another person weighing 70 kg is replaced by a new person and the average weight increases by another 2.5 kg, what is the average weight of the two new persons?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74b8d2791f",
+              "description": {
+                "text": "170 kg",
+                "widgets": [
+                  {
+                    "id": "text66b74b8d27926",
+                    "type": "text",
+                    "properties": {
+                      "html": "170 kg"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b8d27934",
+              "description": {
+                "text": "172 kg",
+                "widgets": [
+                  {
+                    "id": "text66b74b8d2793b",
+                    "type": "text",
+                    "properties": {
+                      "html": "172 kg"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b8d27949",
+              "description": {
+                "text": "174 kg",
+                "widgets": [
+                  {
+                    "id": "text66b74b8d27950",
+                    "type": "text",
+                    "properties": {
+                      "html": "174 kg"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b8d2795e",
+              "description": {
+                "text": "176 kg",
+                "widgets": [
+                  {
+                    "id": "text66b74b8d27965",
+                    "type": "text",
+                    "properties": {
+                      "html": "176 kg"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74b8d27949",
+              "text": "174 kg",
+              "widgets": [
+                {
+                  "id": "text66b74b8d27950",
+                  "type": "text",
+                  "properties": {
+                    "html": "174 kg"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>The total weight increase of 8 persons is 8*2.5 = 20 kg. <br>Therefore, the weight of the new person is 65 kg + 20 kg = 85 kg. <br>If another person weighing 70 kg is replaced by a new person and the average weight increases by \nanother 2.5 kg, the total weight increase of 8 persons is 8*2.5 = 20 kg. <br>Therefore, the weight of the second new person is 70 kg + 20 kg = 90 kg. <br>Therefore, the average weight of the two new persons is (85 + 90) / 2 = 87.5 kg. <br>So, the correct answer is C) 87 kg (rounded to the nearest whole number).<br></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74b8d27982",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "The average of 11 results is 50. If the average of the first six results is 49 and that of the last six is 52, find the sum of the sixth and seventh results.",
+            "widgets": [
+              {
+                "id": "text66b74b8d27987",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">The average of 11 results is 50. If the average of the first six results is 49 and that of the last six is 52, find the sum of the sixth and seventh results.</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74b8d279c4",
+              "description": {
+                "text": "101",
+                "widgets": [
+                  {
+                    "id": "text66b74b8d279cb",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>101</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b8d279da",
+              "description": {
+                "text": "102",
+                "widgets": [
+                  {
+                    "id": "text66b74b8d279e1",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>102</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b8d279ef",
+              "description": {
+                "text": "103",
+                "widgets": [
+                  {
+                    "id": "text66b74b8d279f6",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>103</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b8d27a05",
+              "description": {
+                "text": "104",
+                "widgets": [
+                  {
+                    "id": "text66b74b8d27a0b",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>104</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74b8d279c4",
+              "text": "101",
+              "widgets": [
+                {
+                  "id": "text66b74b8d279cb",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>101</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>The total of the 11 results is 11*50 = 550. <br>The total of the first six results is 6*49 = 294 and the total of the last six results is 6*52 = 312. <br>Therefore, the sum of the sixth and seventh results is 294 + 312 - 550 = 56. <br>So, the correct answer is A) 101.<br><br></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74b8d27a29",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "The average salary of all the workers in a workshop is Rs.8000. The average salary of 7 technicians is Rs.12000 and the average salary of the rest is Rs.6000. If a new technician with a salary of Rs.15000 joins the workshop, what will be the new average salary of all the workers in the workshop?",
+            "widgets": [
+              {
+                "id": "text66b74b8d27a2e",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">The average salary of all the workers in a workshop is Rs.8000. The average salary of 7 technicians is Rs.12000 and the average salary of the rest is Rs.6000. If a new technician with a salary of Rs.15000 joins the workshop, what will be the new average salary of all the workers in the workshop?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74b8d27a6a",
+              "description": {
+                "text": "Rs.8100",
+                "widgets": [
+                  {
+                    "id": "text66b74b8d27a71",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Rs.8100</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b8d27a80",
+              "description": {
+                "text": "Rs.8200",
+                "widgets": [
+                  {
+                    "id": "text66b74b8d27a86",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Rs.8200<strong></strong></span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b8d27a95",
+              "description": {
+                "text": "Rs.8300",
+                "widgets": [
+                  {
+                    "id": "text66b74b8d27a9b",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Rs.8300</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b8d27aaa",
+              "description": {
+                "text": "Rs.8400",
+                "widgets": [
+                  {
+                    "id": "text66b74b8d27ab0",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Rs.8400</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74b8d27a95",
+              "text": "Rs.8300",
+              "widgets": [
+                {
+                  "id": "text66b74b8d27a9b",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>Rs.8300</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>Let the total number of workers be x and the number of non-technicians be y. <br>We have the equations 8000x = 12000*7 + 6000y and x = 7 + y. <br>Solving these equations gives x = 21. <br>If a new technician with a salary of Rs.15000 joins the workshop, the total salary becomes 8000*21 \n+ 15000 = 168000 + 15000 = 183000. <br>Therefore, the new average salary of all the workers in the workshop is 183000/22 = Rs.8327.27. <br>So, the correct answer is C) Rs.8300 (rounded to the nearest hundred).<br><br></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        }
+      ]
+    }
+  ],
+  "submitted": true,
+  "updated": true,
+  "retryCount": 4,
+  "inlineFeedback": [],
+  "errors": [],
+  "success": true
+}

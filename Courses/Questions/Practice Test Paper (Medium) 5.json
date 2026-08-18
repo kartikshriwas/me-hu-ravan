@@ -1,0 +1,1786 @@
+{
+  "submission": {
+    "anon_id": null,
+    "model": "assessment-submission",
+    "courseTitleId": "aptitude-qs-library",
+    "object_id": "66a0a80218e0a72e2e00d5c9",
+    "assessmentId": "66a0a80218e0a72e2e00d5c8",
+    "snapshotId": "66bf12c3b0df8fd067066556",
+    "questions": {
+      "section66a0a80267d7b": [
+        "mc1721835894674_280",
+        "mc1721836027787_292",
+        "mc1721836139850_302",
+        "mc1721836250586_318",
+        "mc1721836339466_331"
+      ]
+    },
+    "certificateAnswers": [],
+    "certificateId": null,
+    "questionData": {
+      "mc1721835894674_280": {
+        "deliveredOnTimestamp": 1786440370.79443,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721836027787_292": {
+        "deliveredOnTimestamp": 1786440370.794451,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721836139850_302": {
+        "deliveredOnTimestamp": 1786440370.794466,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721836250586_318": {
+        "deliveredOnTimestamp": 1786440370.79448,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721836339466_331": {
+        "deliveredOnTimestamp": 1786440370.794493,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      }
+    },
+    "answers": [
+      {
+        "blockId": "mc1721835894674_280",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721836027787_292",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721836139850_302",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721836250586_318",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721836339466_331",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      }
+    ],
+    "submittedTimestamp": 1786440371.010268,
+    "status": "submitted",
+    "grading_status": "grading_status_no_grade",
+    "access": "public",
+    "actual_score": null,
+    "score": [],
+    "source": {
+      "type": "unit"
+    },
+    "isDefining": true,
+    "isAdminAutoGradedSubmission": null,
+    "listOfNonConsentedBlocks": [],
+    "created": 1786440370.799236,
+    "modified": 1786440371.107549,
+    "id": "6a7aeab2e3a3b72c6c04ba17",
+    "passed": null
+  },
+  "assessment": {
+    "title": "Practice Test Paper (Medium)",
+    "access": "public",
+    "type": "assessment",
+    "model": "assessmentSnapshot",
+    "description": "Intermediate practice test paper containing 5 assessment questions covering Profit, Loss & Discounts, Ratios & Proportions, Simple & Compound Interest.",
+    "isTimed": false,
+    "timerFor": "assessmentTimed",
+    "onTimerExpiration": "autoSubmit",
+    "assessmentTimeLimitInSeconds": 600,
+    "questionTimeLimitInSeconds": 60,
+    "standaloneShareEnabled": null,
+    "customUrl": null,
+    "usesCustomUrl": null,
+    "allowAnonymous": true,
+    "randomizeQuestionOptions": false,
+    "disallowPartialSubmissions": false,
+    "submissionDueDateEnabled": false,
+    "submissionDueDate": 1626257823,
+    "makeFeedbackAvailableAfterDateEnabled": false,
+    "makeFeedbackAvailableAfterDate": 0,
+    "customStylesEnabled": true,
+    "customStyles": {
+      "assessmentPage": {
+        "background": {
+          "type": "color",
+          "colorData": {
+            "code": "",
+            "class": "lw-body-bg"
+          }
+        },
+        "dividers": {
+          "top": {
+            "orientation": "top",
+            "divider": "none"
+          },
+          "bottom": {
+            "orientation": "bottom",
+            "divider": "none"
+          }
+        }
+      },
+      "option": {
+        "radioEffect": "scribble",
+        "checkboxEffect": "scribble",
+        "size": "small"
+      },
+      "assessment": {
+        "transition": "none",
+        "background": {
+          "type": "color",
+          "colorData": {
+            "code": "",
+            "class": ""
+          }
+        },
+        "width": "normal",
+        "timerTemplate": "rectangle"
+      },
+      "linearRating": {
+        "labels": {
+          "size": "small"
+        }
+      },
+      "question": {
+        "description": {
+          "background": {
+            "type": "color",
+            "colorData": {
+              "code": "",
+              "class": ""
+            }
+          },
+          "type": "p",
+          "size": "small"
+        },
+        "answers": {
+          "background": {
+            "type": "color",
+            "colorData": {
+              "code": "",
+              "class": ""
+            }
+          }
+        },
+        "requiredAsterisk": {
+          "colorData": {
+            "code": "#ff0000",
+            "class": ""
+          }
+        },
+        "errorMessages": {
+          "size": "verySmall",
+          "colorData": {
+            "code": "#ff0000",
+            "class": ""
+          }
+        }
+      },
+      "input": {
+        "size": "small",
+        "type": "solidDark"
+      },
+      "textarea": {
+        "size": "small",
+        "type": "solidDark"
+      },
+      "dropdown": {
+        "size": "small",
+        "type": "solidDark"
+      }
+    },
+    "submissionMode": "all",
+    "startingDate": 1626765704,
+    "startingDateEnabled": false,
+    "showOnlyFailedQuestionsOnRetry": false,
+    "retryEnabled": true,
+    "retryOnFailOnly": false,
+    "gradingMethod": null,
+    "maxTries": null,
+    "onlyWrongOnRetake": null,
+    "isAmendable": false,
+    "feedbackShowOnScreen": false,
+    "feedbackDownloadPDF": false,
+    "feedbackShowInline": true,
+    "feedbackQuestionList": "all-questions",
+    "feedbackShowQuestionScore": false,
+    "feedbackShowFeedback": true,
+    "feedbackShowNumbering": false,
+    "feedbackShowSectionTitles": false,
+    "feedbackShowUserAnswers": true,
+    "feedbackShowCorrectAnswers": true,
+    "feedbackShowAnswerCorrectness": true,
+    "displayInlineFeedbackEnabled": true,
+    "displayBackButtonWhenSubmissionPerBlock": true,
+    "feedbackShowSectionResultSummary": false,
+    "askConfirmationBeforeSubmit": false,
+    "hasCustomConfirmationBeforeSubmitText": false,
+    "customConfirmationBeforeSubmitText": "Are you sure you want to submit the questionnaire?",
+    "customConfirmationBeforeSubmitTexts": {
+      "title": "Submit Assessment?",
+      "baseConfirmationMessage": "Are you sure you want to submit the questionnaire?",
+      "unansweredNotice": "You have not answered {X} questions."
+    },
+    "amendResubmissionMinutes": 30,
+    "passingGrade": null,
+    "navigationMode": "per-block",
+    "conditionalBlocks": {
+      "introContent": {
+        "id": "content66a0a80267ce7",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66a0a80267cf1",
+              "type": "text",
+              "insertedAsWidget": true,
+              "properties": {
+                "html": "Partnership PAPER LEVEL-2",
+                "alignment": "center",
+                "customStyle": true,
+                "type": "h2",
+                "size": "normal"
+              }
+            },
+            {
+              "id": "text66a0a80267d00",
+              "type": "text",
+              "properties": {
+                "html": "<div><span style=\"font-size: 1.7rem; letter-spacing: 0rem;\">Self-assess your knowledge. Express yourself and get feedback from our instructors.</span><br></div>",
+                "customStyle": true,
+                "alignment": "center"
+              }
+            },
+            {
+              "id": "spacer66a0a80267d09",
+              "type": "spacer",
+              "properties": {
+                "height": 25,
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            },
+            {
+              "id": "button66a0a80267d14",
+              "type": "button",
+              "properties": {
+                "buttonLabel": "<span>Ready to start</span>",
+                "buttonSize": "normal",
+                "buttonType": "solidBrand",
+                "alignment": "center",
+                "linkData": {
+                  "linkType": "goToFirst"
+                },
+                "iconColorData": {
+                  "code": "",
+                  "class": ""
+                },
+                "iconDisplay": false,
+                "iconSize": 26,
+                "iconClassName": " fas fa-angle-right",
+                "iconPosition": "right"
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "variables": {
+            "conditionalBlocks_introContent_blockData_widgets_0": []
+          }
+        }
+      },
+      "submissionStartingDate": {
+        "id": "content66a0a80267d30",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66a0a80267d34",
+              "type": "text",
+              "properties": {
+                "html": "Sorry but this assessment hasn't started yet."
+              }
+            },
+            {
+              "id": "date66a0a80267d3a",
+              "type": "date",
+              "properties": {
+                "value": ""
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "displayConditions": ["startingDate"]
+        }
+      },
+      "submissionDueDate": {
+        "id": "content66a0a80267d44",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66a0a80267d48",
+              "type": "text",
+              "properties": {
+                "html": "Sorry but this assessment date is due."
+              }
+            },
+            {
+              "id": "date66a0a80267d4e",
+              "type": "date",
+              "properties": {
+                "value": ""
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "displayConditions": ["dateIsDue"]
+        }
+      },
+      "outroContent": {
+        "id": "content66a0a80267d58",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "userResults66a0a80267d5c",
+              "type": "userResults",
+              "properties": {
+                "layout": "template2",
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            },
+            {
+              "id": "feedback66a0a80267d66",
+              "type": "feedback",
+              "properties": []
+            },
+            {
+              "id": "outroActions66a0a80267d6c",
+              "type": "outroActions",
+              "properties": {
+                "layout": "",
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true
+        }
+      }
+    },
+    "systemSections": null,
+    "sections": [
+      {
+        "id": "section66a0a80267d7b",
+        "title": "",
+        "type": "section",
+        "navigationMode": "per-block",
+        "blocks": [
+          {
+            "id": "mc1721835894674_280",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721835894674_273",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">Three persons ‘Ashish’, ‘Bijal’ and ‘Charan’ started a business by making investments in the ratio (2/3) : (3/5) : (5/7), respectively. 4 months before the end of the year, ‘Bijay’ withdrew (2/3)<sup>rd</sup> of his initial investment. If the total annual profit received by them together is Rs. 6,984, then find the difference between profits received by ‘Ashish’ and ‘Charan’.</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721835894674_282",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721835894674_275",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721835894674_270",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721835894674_274",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721835894674_276",
+                        "type": "text",
+                        "properties": {
+                          "html": "Rs. 200&nbsp;"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721835894674_277",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721835894674_278",
+                        "type": "text",
+                        "properties": {
+                          "html": "Rs. 160"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721835894674_279",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721835894674_272",
+                        "type": "text",
+                        "properties": {
+                          "html": "Rs. 180&nbsp;"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721835894674_281",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721835894674_271",
+                        "type": "text",
+                        "properties": {
+                          "html": "Rs. 240"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721835956122_283",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc-option1721835956122_284",
+                        "type": "text",
+                        "properties": {
+                          "html": "Rs, 320"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_4_description_widgets_0": [],
+                "sections_0_blocks_0": []
+              }
+            }
+          },
+          {
+            "id": "mc1721836027787_292",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721836027787_285",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">Mukesh started a business with Rs.45,000. Bharat joined him 3 months later with Rs. 32,000. After 3 months Mukesh withdrew Rs.5,000 of his capital and 2 more months later, Bharat brought in Rs.13,000 more. At the end of the year, what will be the ratio in which they share the profits if Mukesh receives 20% of profits as commission?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721836027787_289",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721836027787_294",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721836027787_291",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721836027787_295",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721836027787_290",
+                        "type": "text",
+                        "properties": {
+                          "html": "3 : 2"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721836027787_288",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721836027787_293",
+                        "type": "text",
+                        "properties": {
+                          "html": "5 : 4"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721836027787_297",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721836027787_296",
+                        "type": "text",
+                        "properties": {
+                          "html": "5 : 17"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721836027787_286",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721836027787_287",
+                        "type": "text",
+                        "properties": {
+                          "html": "17 : 8"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_1_blockData_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_1": []
+              }
+            }
+          },
+          {
+            "id": "mc1721836139850_302",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721836139850_310",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">Each of the two friends - A and B - lend Rs. 20,000 to G, who is starting a business. G agrees to pay only 15% of the annual profit to A, while 12% of the annual profit in addition to 5% interest per year on his loan to B. What amount of the profit (in Rs.) is left with G, if it is known that A receives Rs. 119 more than B at the end of the year?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721836139850_309",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721836139850_306",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721836139850_308",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721836139850_303",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721836139850_307",
+                        "type": "text",
+                        "properties": {
+                          "html": "26, 229"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721836139850_305",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721836139850_304",
+                        "type": "text",
+                        "properties": {
+                          "html": "27, 229"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721836139850_301",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721836139850_298",
+                        "type": "text",
+                        "properties": {
+                          "html": "28, 439"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721836139850_299",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721836139850_300",
+                        "type": "text",
+                        "properties": {
+                          "html": "25, 679"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_2_blockData_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_2": []
+              }
+            }
+          },
+          {
+            "id": "mc1721836250586_318",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721836250586_312",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">Pranav, Harman and Chirag ventured into a new business. Pranav contributed Rs.10,000 for 6 months, Harman invested 16,000 for 5 months and Chirag invested certain sum for 8 months. Chirag manages the entire business s for which he takes 25% of the profit and the remaining profit is shared among Pranav, Harman and Chirag in the respective ratio of there cumulative investments. If at the end of the 8 months the profit realized was Rs. 20,000. Find the sum that Chirag invested, if profit received by Harman    is Rs. 4000</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721836250586_313",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721836250586_322",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721836250586_314",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721836250586_315",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721836250586_319",
+                        "type": "text",
+                        "properties": {
+                          "html": "16,000 Rs"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721836250586_321",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721836250586_316",
+                        "type": "text",
+                        "properties": {
+                          "html": "24,000 Rs"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721836250586_311",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721836250586_320",
+                        "type": "text",
+                        "properties": {
+                          "html": "20,000 Rs"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721836250586_323",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721836250586_317",
+                        "type": "text",
+                        "properties": {
+                          "html": "25,000 Rs"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_3_blockData_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3": []
+              }
+            }
+          },
+          {
+            "id": "mc1721836339466_331",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721836339466_327",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">A man sold his old car and divided the money received among his three sons A, B, and C in a ratio of 5 : 4 : 6. A and B started a business from their shares and C joined them after 4 months and simultaneously A and B withdrew Rs. 10000 and Rs. 8000, respectively, from the business. They hired a manager at Rs. 2000 per month for their business to whom only B and C paid from their share of profit equally at the end of 1 year. If C gets Rs. 48000 profit share (after paying to the manager) out of a total profit of Rs. 177000, find the money received by the man from the sold car.</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721836339466_326",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721836339466_325",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721836339466_336",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721836339466_324",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721836339466_328",
+                        "type": "text",
+                        "properties": {
+                          "html": "Rs. 1.2 lakhs"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721836339466_329",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721836339466_335",
+                        "type": "text",
+                        "properties": {
+                          "html": "Rs. 1 lakhs"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721836339466_330",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721836339466_333",
+                        "type": "text",
+                        "properties": {
+                          "html": "Rs. 1.5 lakhs"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721836339466_332",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721836339466_334",
+                        "type": "text",
+                        "properties": {
+                          "html": "Rs. 1.2 lakhs"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_4_blockData_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4": []
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "availabilityStatus": null,
+    "autoNavigationEnabled": false,
+    "displayBackButtonWhenNavigationPerBlock": true,
+    "saveAndResumeLaterEnabled": null,
+    "tagsAddedOnCompletion": [],
+    "tagsAddedOnPass": [],
+    "sendAnonymousSubmissionsToEmailLeads": false,
+    "afterSubmitActionEnabled": null,
+    "afterSubmitActionProperties": null,
+    "showWizardOnNextEdit": false,
+    "revisitAfterSubmissionAction": null,
+    "navigationTemplate": "HorizontalSpacedBetweenNavigationTemplate",
+    "learnerSearchBarEnabled": true,
+    "learnerUnansweredQuestionsEnabled": true,
+    "learnerFavouriteQuestionEnabled": true,
+    "learnerCompletionProgressEnabled": true,
+    "learnerShowIndexOfQuestionsEnabled": false,
+    "learnerTimeNotificationsEnabled": false,
+    "learnerAllowInterruptionsEnabled": true,
+    "learnerAllowInterruptionsTimeoutInMinutes": 30,
+    "learnerReclaimTryOnInterruptionTimeoutEnabled": false,
+    "learnerAskBeforeContinueToSaved": true,
+    "learnerAutoSaveEnabled": null,
+    "spellcheckDisabled": null,
+    "showPartialScoreOnSubmission": true,
+    "deliverableQuestionsSubsetType": "all",
+    "questionRandomizationType": "none",
+    "serveQuestionsBasedOnPreviousSubmission": null,
+    "scoringDisabled": true,
+    "isSelfAssessment": true,
+    "useDefaultCertificateTemplate": null,
+    "certificateTemplate": null,
+    "certificateSocialShare": null,
+    "migrationData": null,
+    "useAssessmentPassingGradeForOpenEndedCorrectness": true,
+    "openEndedCorrectnessPassingGrade": null,
+    "showScorePercentage": null,
+    "showScorePoints": null,
+    "showScoreCorrectAnswers": null,
+    "editorBehaviorSettings": null,
+    "manualReviewEnabled": false,
+    "resultsSummary": {
+      "enabled": true,
+      "showStatusIcon": true,
+      "showStatusText": true,
+      "showScorePercentage": true,
+      "showScorePoints": true,
+      "showScoreCorrectAnswers": true,
+      "showTimeTakenToComplete": true,
+      "showDateSubmitted": true,
+      "showAttemptCount": true
+    },
+    "meta": null,
+    "submissionsCount": 279,
+    "fromMarketplace": null,
+    "aiFeedbackEnabled": null,
+    "numberOfFeedbackQuestions": null,
+    "created": 1721804802.788922,
+    "modified": 1723798211.102021,
+    "contentHash": "eb97a16456620f67a79b2b505a6bdee2453b3ffcf9a684360f4c234949d11dc1",
+    "id": "66a0a80218e0a72e2e00d5c8",
+    "objectType": "assessment",
+    "isEditBlockedDueToSync": false,
+    "variables": {
+      "submission": {
+        "self": {
+          "score": null,
+          "points": null,
+          "total_points": null,
+          "correct_answers": null,
+          "total_questions": 5,
+          "time_spent": "00:00:01",
+          "date_submitted": "11/08/26",
+          "attempt_count": 3,
+          "max_tries": null,
+          "pass_grade": null,
+          "time_spent_seconds": 1,
+          "raw_start_date": 1786440370.799236
+        }
+      },
+      "school": {
+        "name": "Apna College",
+        "url": "www.apnacollege.in",
+        "description": "The most loved coding community of India ❤️"
+      },
+      "user": {
+        "username": "ram",
+        "email": "p4542639@gmail.com",
+        "cf_phonenumber": "7666690798"
+      }
+    }
+  },
+  "reclaimedTry": false,
+  "feedback": [
+    {
+      "title": "",
+      "id": "section66a0a80267d7b",
+      "blocks": [
+        {
+          "id": "mc1721835894674_280",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Three persons ‘Ashish’, ‘Bijal’ and ‘Charan’ started a business by making investments in the ratio (2/3) : (3/5) : (5/7), respectively. 4 months before the end of the year, ‘Bijay’ withdrew (2/3)rd of his initial investment. If the total annual profit received by them together is Rs. 6,984, then find the difference between profits received by ‘Ashish’ and ‘Charan’.",
+            "widgets": [
+              {
+                "id": "mc1721835894674_273",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">Three persons ‘Ashish’, ‘Bijal’ and ‘Charan’ started a business by making investments in the ratio (2/3) : (3/5) : (5/7), respectively. 4 months before the end of the year, ‘Bijay’ withdrew (2/3)<sup>rd</sup> of his initial investment. If the total annual profit received by them together is Rs. 6,984, then find the difference between profits received by ‘Ashish’ and ‘Charan’.</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721835894674_274",
+              "description": {
+                "text": "Rs. 200",
+                "widgets": [
+                  {
+                    "id": "mc1721835894674_276",
+                    "type": "text",
+                    "properties": {
+                      "html": "Rs. 200&nbsp;"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721835894674_277",
+              "description": {
+                "text": "Rs. 160",
+                "widgets": [
+                  {
+                    "id": "mc1721835894674_278",
+                    "type": "text",
+                    "properties": {
+                      "html": "Rs. 160"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721835894674_279",
+              "description": {
+                "text": "Rs. 180",
+                "widgets": [
+                  {
+                    "id": "mc1721835894674_272",
+                    "type": "text",
+                    "properties": {
+                      "html": "Rs. 180&nbsp;"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721835894674_281",
+              "description": {
+                "text": "Rs. 240",
+                "widgets": [
+                  {
+                    "id": "mc1721835894674_271",
+                    "type": "text",
+                    "properties": {
+                      "html": "Rs. 240"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721835956122_283",
+              "description": {
+                "text": "Rs, 320",
+                "widgets": [
+                  {
+                    "id": "mc-option1721835956122_284",
+                    "type": "text",
+                    "properties": {
+                      "html": "Rs, 320"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721835894674_279",
+              "text": "Rs. 180",
+              "widgets": [
+                {
+                  "id": "mc1721835894674_272",
+                  "type": "text",
+                  "properties": {
+                    "html": "Rs. 180&nbsp;"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/2d66a05a42d33316ebe6f01110a2c681.jpg\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721836027787_292",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Mukesh started a business with Rs.45,000. Bharat joined him 3 months later with Rs. 32,000. After 3 months Mukesh withdrew Rs.5,000 of his capital and 2 more months later, Bharat brought in Rs.13,000 more. At the end of the year, what will be the ratio in which they share the profits if Mukesh receives 20% of profits as commission?",
+            "widgets": [
+              {
+                "id": "mc1721836027787_285",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">Mukesh started a business with Rs.45,000. Bharat joined him 3 months later with Rs. 32,000. After 3 months Mukesh withdrew Rs.5,000 of his capital and 2 more months later, Bharat brought in Rs.13,000 more. At the end of the year, what will be the ratio in which they share the profits if Mukesh receives 20% of profits as commission?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721836027787_295",
+              "description": {
+                "text": "3 : 2",
+                "widgets": [
+                  {
+                    "id": "mc1721836027787_290",
+                    "type": "text",
+                    "properties": {
+                      "html": "3 : 2"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721836027787_288",
+              "description": {
+                "text": "5 : 4",
+                "widgets": [
+                  {
+                    "id": "mc1721836027787_293",
+                    "type": "text",
+                    "properties": {
+                      "html": "5 : 4"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721836027787_297",
+              "description": {
+                "text": "5 : 17",
+                "widgets": [
+                  {
+                    "id": "mc1721836027787_296",
+                    "type": "text",
+                    "properties": {
+                      "html": "5 : 17"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721836027787_286",
+              "description": {
+                "text": "17 : 8",
+                "widgets": [
+                  {
+                    "id": "mc1721836027787_287",
+                    "type": "text",
+                    "properties": {
+                      "html": "17 : 8"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721836027787_286",
+              "text": "17 : 8",
+              "widgets": [
+                {
+                  "id": "mc1721836027787_287",
+                  "type": "text",
+                  "properties": {
+                    "html": "17 : 8"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/921cd685102722e7f793b2bf73cc2396.jpg\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721836139850_302",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Each of the two friends - A and B - lend Rs. 20,000 to G, who is starting a business. G agrees to pay only 15% of the annual profit to A, while 12% of the annual profit in addition to 5% interest per year on his loan to B. What amount of the profit (in Rs.) is left with G, if it is known that A receives Rs. 119 more than B at the end of the year?",
+            "widgets": [
+              {
+                "id": "mc1721836139850_310",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">Each of the two friends - A and B - lend Rs. 20,000 to G, who is starting a business. G agrees to pay only 15% of the annual profit to A, while 12% of the annual profit in addition to 5% interest per year on his loan to B. What amount of the profit (in Rs.) is left with G, if it is known that A receives Rs. 119 more than B at the end of the year?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721836139850_303",
+              "description": {
+                "text": "26, 229",
+                "widgets": [
+                  {
+                    "id": "mc1721836139850_307",
+                    "type": "text",
+                    "properties": {
+                      "html": "26, 229"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721836139850_305",
+              "description": {
+                "text": "27, 229",
+                "widgets": [
+                  {
+                    "id": "mc1721836139850_304",
+                    "type": "text",
+                    "properties": {
+                      "html": "27, 229"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721836139850_301",
+              "description": {
+                "text": "28, 439",
+                "widgets": [
+                  {
+                    "id": "mc1721836139850_298",
+                    "type": "text",
+                    "properties": {
+                      "html": "28, 439"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721836139850_299",
+              "description": {
+                "text": "25, 679",
+                "widgets": [
+                  {
+                    "id": "mc1721836139850_300",
+                    "type": "text",
+                    "properties": {
+                      "html": "25, 679"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721836139850_303",
+              "text": "26, 229",
+              "widgets": [
+                {
+                  "id": "mc1721836139850_307",
+                  "type": "text",
+                  "properties": {
+                    "html": "26, 229"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/8e5789aca85d0db4828e053fe2993cc0.jpg\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721836250586_318",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Pranav, Harman and Chirag ventured into a new business. Pranav contributed Rs.10,000 for 6 months, Harman invested 16,000 for 5 months and Chirag invested certain sum for 8 months. Chirag manages the entire business s for which he takes 25% of the profit and the remaining profit is shared among Pranav, Harman and Chirag in the respective ratio of there cumulative investments. If at the end of the 8 months the profit realized was Rs. 20,000. Find the sum that Chirag invested, if profit received by Harman is Rs. 4000",
+            "widgets": [
+              {
+                "id": "mc1721836250586_312",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">Pranav, Harman and Chirag ventured into a new business. Pranav contributed Rs.10,000 for 6 months, Harman invested 16,000 for 5 months and Chirag invested certain sum for 8 months. Chirag manages the entire business s for which he takes 25% of the profit and the remaining profit is shared among Pranav, Harman and Chirag in the respective ratio of there cumulative investments. If at the end of the 8 months the profit realized was Rs. 20,000. Find the sum that Chirag invested, if profit received by Harman    is Rs. 4000</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721836250586_315",
+              "description": {
+                "text": "16,000 Rs",
+                "widgets": [
+                  {
+                    "id": "mc1721836250586_319",
+                    "type": "text",
+                    "properties": {
+                      "html": "16,000 Rs"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721836250586_321",
+              "description": {
+                "text": "24,000 Rs",
+                "widgets": [
+                  {
+                    "id": "mc1721836250586_316",
+                    "type": "text",
+                    "properties": {
+                      "html": "24,000 Rs"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721836250586_311",
+              "description": {
+                "text": "20,000 Rs",
+                "widgets": [
+                  {
+                    "id": "mc1721836250586_320",
+                    "type": "text",
+                    "properties": {
+                      "html": "20,000 Rs"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721836250586_323",
+              "description": {
+                "text": "25,000 Rs",
+                "widgets": [
+                  {
+                    "id": "mc1721836250586_317",
+                    "type": "text",
+                    "properties": {
+                      "html": "25,000 Rs"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721836250586_311",
+              "text": "20,000 Rs",
+              "widgets": [
+                {
+                  "id": "mc1721836250586_320",
+                  "type": "text",
+                  "properties": {
+                    "html": "20,000 Rs"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/e382566332207790b6482895bc6d81c2.jpg\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721836339466_331",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "A man sold his old car and divided the money received among his three sons A, B, and C in a ratio of 5 : 4 : 6. A and B started a business from their shares and C joined them after 4 months and simultaneously A and B withdrew Rs. 10000 and Rs. 8000, respectively, from the business. They hired a manager at Rs. 2000 per month for their business to whom only B and C paid from their share of profit equally at the end of 1 year. If C gets Rs. 48000 profit share (after paying to the manager) out of a total profit of Rs. 177000, find the money received by the man from the sold car.",
+            "widgets": [
+              {
+                "id": "mc1721836339466_327",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">A man sold his old car and divided the money received among his three sons A, B, and C in a ratio of 5 : 4 : 6. A and B started a business from their shares and C joined them after 4 months and simultaneously A and B withdrew Rs. 10000 and Rs. 8000, respectively, from the business. They hired a manager at Rs. 2000 per month for their business to whom only B and C paid from their share of profit equally at the end of 1 year. If C gets Rs. 48000 profit share (after paying to the manager) out of a total profit of Rs. 177000, find the money received by the man from the sold car.</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721836339466_324",
+              "description": {
+                "text": "Rs. 1.2 lakhs",
+                "widgets": [
+                  {
+                    "id": "mc1721836339466_328",
+                    "type": "text",
+                    "properties": {
+                      "html": "Rs. 1.2 lakhs"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721836339466_329",
+              "description": {
+                "text": "Rs. 1 lakhs",
+                "widgets": [
+                  {
+                    "id": "mc1721836339466_335",
+                    "type": "text",
+                    "properties": {
+                      "html": "Rs. 1 lakhs"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721836339466_330",
+              "description": {
+                "text": "Rs. 1.5 lakhs",
+                "widgets": [
+                  {
+                    "id": "mc1721836339466_333",
+                    "type": "text",
+                    "properties": {
+                      "html": "Rs. 1.5 lakhs"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721836339466_332",
+              "description": {
+                "text": "Rs. 1.2 lakhs",
+                "widgets": [
+                  {
+                    "id": "mc1721836339466_334",
+                    "type": "text",
+                    "properties": {
+                      "html": "Rs. 1.2 lakhs"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721836339466_330",
+              "text": "Rs. 1.5 lakhs",
+              "widgets": [
+                {
+                  "id": "mc1721836339466_333",
+                  "type": "text",
+                  "properties": {
+                    "html": "Rs. 1.5 lakhs"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/30e96b6ec59bc23c6b4fe679803aab27.jpg\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        }
+      ]
+    }
+  ],
+  "submitted": true,
+  "updated": true,
+  "retryCount": 3,
+  "inlineFeedback": [],
+  "errors": [],
+  "success": true
+}

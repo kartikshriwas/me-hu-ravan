@@ -1,0 +1,3343 @@
+{
+  "submission": {
+    "anon_id": null,
+    "model": "assessment-submission",
+    "courseTitleId": "aptitude-qs-library",
+    "object_id": "66a0a8a73551234704000866",
+    "assessmentId": "66a0a8a73551234704000865",
+    "snapshotId": "66c4828db2b1b73d770b1497",
+    "questions": {
+      "section66a0a8a6eb1d0": [
+        "mc1721906664974_272",
+        "mc1721906843051_294",
+        "mc1721906913758_305",
+        "mc1721907199734_321",
+        "mc1721907244951_336",
+        "mc1721907439106_348",
+        "mc1721907523163_362",
+        "mcImage1721907775930_399",
+        "mc1721908066176_445",
+        "mc1721908286993_451"
+      ]
+    },
+    "certificateAnswers": [],
+    "certificateId": null,
+    "questionData": {
+      "mc1721906664974_272": {
+        "deliveredOnTimestamp": 1786440402.188461,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721906843051_294": {
+        "deliveredOnTimestamp": 1786440402.188487,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721906913758_305": {
+        "deliveredOnTimestamp": 1786440402.188501,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721907199734_321": {
+        "deliveredOnTimestamp": 1786440402.188513,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721907244951_336": {
+        "deliveredOnTimestamp": 1786440402.188525,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721907439106_348": {
+        "deliveredOnTimestamp": 1786440402.188536,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721907523163_362": {
+        "deliveredOnTimestamp": 1786440402.188546,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mcImage1721907775930_399": {
+        "deliveredOnTimestamp": 1786440402.188558,
+        "blockType": "mcImage",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721908066176_445": {
+        "deliveredOnTimestamp": 1786440402.188569,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721908286993_451": {
+        "deliveredOnTimestamp": 1786440402.18858,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      }
+    },
+    "answers": [
+      {
+        "blockId": "mc1721906664974_272",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721906843051_294",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721906913758_305",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721907199734_321",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721907244951_336",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721907439106_348",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721907523163_362",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mcImage1721907775930_399",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721908066176_445",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721908286993_451",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      }
+    ],
+    "submittedTimestamp": 1786440402.416045,
+    "status": "submitted",
+    "grading_status": "grading_status_no_grade",
+    "access": "public",
+    "actual_score": null,
+    "score": [],
+    "source": {
+      "type": "unit"
+    },
+    "isDefining": true,
+    "isAdminAutoGradedSubmission": null,
+    "listOfNonConsentedBlocks": [],
+    "created": 1786440402.194803,
+    "modified": 1786440402.512228,
+    "id": "6a7aead24296b496a40b89d1",
+    "passed": null
+  },
+  "assessment": {
+    "title": "Practice Test Paper (Easy)",
+    "access": "public",
+    "type": "assessment",
+    "model": "assessmentSnapshot",
+    "description": "Foundational practice test paper containing 10 assessment questions covering Percentages, Ratios & Proportions, Time & Work.",
+    "isTimed": false,
+    "timerFor": "assessmentTimed",
+    "onTimerExpiration": "autoSubmit",
+    "assessmentTimeLimitInSeconds": 600,
+    "questionTimeLimitInSeconds": 60,
+    "standaloneShareEnabled": null,
+    "customUrl": null,
+    "usesCustomUrl": null,
+    "allowAnonymous": true,
+    "randomizeQuestionOptions": false,
+    "disallowPartialSubmissions": false,
+    "submissionDueDateEnabled": false,
+    "submissionDueDate": 1626257823,
+    "makeFeedbackAvailableAfterDateEnabled": false,
+    "makeFeedbackAvailableAfterDate": 0,
+    "customStylesEnabled": true,
+    "customStyles": {
+      "assessmentPage": {
+        "background": {
+          "type": "color",
+          "colorData": {
+            "code": "",
+            "class": "lw-body-bg"
+          }
+        },
+        "dividers": {
+          "top": {
+            "orientation": "top",
+            "divider": "none"
+          },
+          "bottom": {
+            "orientation": "bottom",
+            "divider": "none"
+          }
+        }
+      },
+      "option": {
+        "radioEffect": "scribble",
+        "checkboxEffect": "scribble",
+        "size": "small"
+      },
+      "assessment": {
+        "transition": "none",
+        "background": {
+          "type": "color",
+          "colorData": {
+            "code": "",
+            "class": ""
+          }
+        },
+        "width": "normal",
+        "timerTemplate": "rectangle"
+      },
+      "linearRating": {
+        "labels": {
+          "size": "small"
+        }
+      },
+      "question": {
+        "description": {
+          "background": {
+            "type": "color",
+            "colorData": {
+              "code": "",
+              "class": ""
+            }
+          },
+          "type": "p",
+          "size": "small"
+        },
+        "answers": {
+          "background": {
+            "type": "color",
+            "colorData": {
+              "code": "",
+              "class": ""
+            }
+          }
+        },
+        "requiredAsterisk": {
+          "colorData": {
+            "code": "#ff0000",
+            "class": ""
+          }
+        },
+        "errorMessages": {
+          "size": "verySmall",
+          "colorData": {
+            "code": "#ff0000",
+            "class": ""
+          }
+        }
+      },
+      "input": {
+        "size": "small",
+        "type": "solidDark"
+      },
+      "textarea": {
+        "size": "small",
+        "type": "solidDark"
+      },
+      "dropdown": {
+        "size": "small",
+        "type": "solidDark"
+      }
+    },
+    "submissionMode": "all",
+    "startingDate": 1626765704,
+    "startingDateEnabled": false,
+    "showOnlyFailedQuestionsOnRetry": false,
+    "retryEnabled": true,
+    "retryOnFailOnly": false,
+    "gradingMethod": null,
+    "maxTries": null,
+    "onlyWrongOnRetake": null,
+    "isAmendable": false,
+    "feedbackShowOnScreen": false,
+    "feedbackDownloadPDF": false,
+    "feedbackShowInline": true,
+    "feedbackQuestionList": "all-questions",
+    "feedbackShowQuestionScore": false,
+    "feedbackShowFeedback": true,
+    "feedbackShowNumbering": false,
+    "feedbackShowSectionTitles": false,
+    "feedbackShowUserAnswers": true,
+    "feedbackShowCorrectAnswers": true,
+    "feedbackShowAnswerCorrectness": true,
+    "displayInlineFeedbackEnabled": true,
+    "displayBackButtonWhenSubmissionPerBlock": true,
+    "feedbackShowSectionResultSummary": false,
+    "askConfirmationBeforeSubmit": false,
+    "hasCustomConfirmationBeforeSubmitText": false,
+    "customConfirmationBeforeSubmitText": "Are you sure you want to submit the questionnaire?",
+    "customConfirmationBeforeSubmitTexts": {
+      "title": "Submit Assessment?",
+      "baseConfirmationMessage": "Are you sure you want to submit the questionnaire?",
+      "unansweredNotice": "You have not answered {X} questions."
+    },
+    "amendResubmissionMinutes": 30,
+    "passingGrade": null,
+    "navigationMode": "per-block",
+    "conditionalBlocks": {
+      "introContent": {
+        "id": "content66a0a8a6eb11a",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66a0a8a6eb125",
+              "type": "text",
+              "insertedAsWidget": true,
+              "properties": {
+                "html": "Mixed Charts PAPER LEVEL-1",
+                "alignment": "center",
+                "customStyle": true,
+                "type": "h2",
+                "size": "normal"
+              }
+            },
+            {
+              "id": "text66a0a8a6eb137",
+              "type": "text",
+              "properties": {
+                "html": "<div><span style=\"font-size: 1.7rem; letter-spacing: 0rem;\">Self-assess your knowledge. Express yourself and get feedback from our instructors.</span><br></div>",
+                "customStyle": true,
+                "alignment": "center"
+              }
+            },
+            {
+              "id": "spacer66a0a8a6eb143",
+              "type": "spacer",
+              "properties": {
+                "height": 25,
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            },
+            {
+              "id": "button66a0a8a6eb150",
+              "type": "button",
+              "properties": {
+                "buttonLabel": "<span>Ready to start</span>",
+                "buttonSize": "normal",
+                "buttonType": "solidBrand",
+                "alignment": "center",
+                "linkData": {
+                  "linkType": "goToFirst"
+                },
+                "iconColorData": {
+                  "code": "",
+                  "class": ""
+                },
+                "iconDisplay": false,
+                "iconSize": 26,
+                "iconClassName": " fas fa-angle-right",
+                "iconPosition": "right"
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "variables": {
+            "conditionalBlocks_introContent_blockData_widgets_0": []
+          }
+        }
+      },
+      "submissionStartingDate": {
+        "id": "content66a0a8a6eb173",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66a0a8a6eb178",
+              "type": "text",
+              "properties": {
+                "html": "Sorry but this assessment hasn't started yet."
+              }
+            },
+            {
+              "id": "date66a0a8a6eb17f",
+              "type": "date",
+              "properties": {
+                "value": ""
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "displayConditions": ["startingDate"]
+        }
+      },
+      "submissionDueDate": {
+        "id": "content66a0a8a6eb18c",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66a0a8a6eb191",
+              "type": "text",
+              "properties": {
+                "html": "Sorry but this assessment date is due."
+              }
+            },
+            {
+              "id": "date66a0a8a6eb198",
+              "type": "date",
+              "properties": {
+                "value": ""
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "displayConditions": ["dateIsDue"]
+        }
+      },
+      "outroContent": {
+        "id": "content66a0a8a6eb1a5",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "userResults66a0a8a6eb1a9",
+              "type": "userResults",
+              "properties": {
+                "layout": "template2",
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            },
+            {
+              "id": "feedback66a0a8a6eb1b7",
+              "type": "feedback",
+              "properties": []
+            },
+            {
+              "id": "outroActions66a0a8a6eb1bd",
+              "type": "outroActions",
+              "properties": {
+                "layout": "",
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true
+        }
+      }
+    },
+    "systemSections": null,
+    "sections": [
+      {
+        "id": "section66a0a8a6eb1d0",
+        "title": "",
+        "type": "section",
+        "navigationMode": "per-block",
+        "blocks": [
+          {
+            "id": "mc1721906664974_272",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721906664974_276",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions:</strong> \n</p><div style=\"text-align: justify;\">The line graph shows the number of males and females in 5 cities.\n</div><div style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/b1961ad2137fe81ca7002b417bd83935.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 350px;\"></div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">If 40% of males from Delhi are married to females from Mumbai and 50% of males from Mumbai are married to females from Delhi, and after marriage, all females shift to the state in which they are married, then find the difference between the total population of Delhi and Mumbai now?</div>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721906664974_281",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721906664974_275",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721906664974_270",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721906664974_273",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721906664974_280",
+                        "type": "text",
+                        "properties": {
+                          "html": "550&nbsp;"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721906664974_278",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721906664974_271",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>1350</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721906664974_274",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721906664974_279",
+                        "type": "text",
+                        "properties": {
+                          "html": "None of these"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721906664974_277",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721906664974_282",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>200</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_0": []
+              }
+            }
+          },
+          {
+            "id": "mc1721906843051_294",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721906843051_290",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions:</strong> \n</p><div style=\"text-align: justify;\">The line graph shows the number of males and females in 5 cities.\n</div><div style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/b1961ad2137fe81ca7002b417bd83935.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 350px;\"><br></div><div style=\"text-align: justify;\">If 30% of females in Mumbai are literate and 60% of females in all cities are literate, then illiterate females in Mumbai are what percent less than that of in all cities?</div>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721906843051_286",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721906843051_289",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721906843051_293",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721906843051_285",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721906843051_287",
+                        "type": "text",
+                        "properties": {
+                          "html": "38%"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721906843051_296",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721906843051_291",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>67%</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721906843051_288",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721906843051_292",
+                        "type": "text",
+                        "properties": {
+                          "html": "62%"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721906843051_295",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721906843051_284",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>42%</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_1": []
+              }
+            }
+          },
+          {
+            "id": "mc1721906913758_305",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721906913758_300",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions:</strong> \n</p><div style=\"text-align: justify;\">Bar graph shows number of total employee working in five different company and table shows Ratio of male to female in these five company.</div><div style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/0d684791b23ad13a7f79f3e21315e402.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 380px;\"></div><div style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/7c3b3df90b3e439c088f45fd9fed423f.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"font-size: 1.6rem; letter-spacing: 0rem; height: auto; width: 480px;\"></div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">What is the ratio of female employees in company Samsung and H.P. together to the females in company DELL and Apple together.</div>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721906913758_301",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721906913758_308",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721906913758_298",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721906913758_303",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721906913758_307",
+                        "type": "text",
+                        "properties": {
+                          "html": "43 : 53"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721906913758_297",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721906913758_309",
+                        "type": "text",
+                        "properties": {
+                          "html": "54 : 59"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721906913758_299",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721906913758_304",
+                        "type": "text",
+                        "properties": {
+                          "html": "37 : 45"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721906913758_306",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721906913758_302",
+                        "type": "text",
+                        "properties": {
+                          "html": "23 : 27"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_2": [],
+                "sections_0_blocks_2_blockData_description_widgets_0": []
+              }
+            }
+          },
+          {
+            "id": "mc1721907199734_321",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721907199734_319",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions:</strong> \n</p><div style=\"text-align: justify;\">Bar graph shows number of total employee working in five different company and table shows Ratio of male to female in these five company.</div><div style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/0d684791b23ad13a7f79f3e21315e402.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 380px;\"></div><div style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/7c3b3df90b3e439c088f45fd9fed423f.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"font-size: 1.6rem; letter-spacing: 0rem; height: auto; width: 480px;\"></div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">If 20% females from LG company resigns and 12.5% females resigns from company H.P. then what is the ratio of remaining employees in LG to remaining employees in HP.</div>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721907199734_316",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721907199734_318",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721907199734_322",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721907199734_315",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721907199734_317",
+                        "type": "text",
+                        "properties": {
+                          "html": "192 : 149"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721907199734_313",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721907199734_314",
+                        "type": "text",
+                        "properties": {
+                          "html": "153 : 129"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721907199734_324",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721907199734_312",
+                        "type": "text",
+                        "properties": {
+                          "html": "72 : 73"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721907199734_323",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721907199734_320",
+                        "type": "text",
+                        "properties": {
+                          "html": "53 : 42"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3": []
+              }
+            }
+          },
+          {
+            "id": "mc1721907244951_336",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721907244951_333",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions:</strong> \n</p><div style=\"text-align: justify;\">Given below is the line graph which shows the population of five cities in 2016 and table shows the ratio of male to female in these five cities.\n</div><div style=\"text-align: justify;\">NOTE- Some values are missing in the table, you have to calculate these values if necessary to answer the questions\n</div><div style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/1218e3d46cb613161ececabd3733d3f7.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"font-size: 1.6rem; letter-spacing: 0rem; height: auto; width: 400px;\"></div><div style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/cd5fd40e6a9e950797da1db816633c5a.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 150px;\"></div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">If there is an increase of 25% and 15% population of male &amp; female live in Delhi in year 2017 with respect to previous year. Then what will be total percentage rise in the population of Delhi in 2017 with respect to previous year?.</div>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721907244951_331",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721907244951_335",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721907244951_327",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721907244951_337",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721907244951_330",
+                        "type": "text",
+                        "properties": {
+                          "html": "18.85%"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721907244951_326",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721907244951_328",
+                        "type": "text",
+                        "properties": {
+                          "html": "18.65%"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721907244951_334",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721907244951_325",
+                        "type": "text",
+                        "properties": {
+                          "html": "19%"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721907244951_332",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721907244951_329",
+                        "type": "text",
+                        "properties": {
+                          "html": "18.75%"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4": []
+              }
+            }
+          },
+          {
+            "id": "mc1721907439106_348",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721907439106_342",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions:</strong> \n</p><div style=\"text-align: justify;\">Given below is the line graph which shows the population of five cities in 2016 and table shows the ratio of male to female in these five cities.\n</div><div style=\"text-align: justify;\">NOTE- Some values are missing in the table, you have to calculate these values if necessary to answer the questions\n</div><div style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/1218e3d46cb613161ececabd3733d3f7.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"font-size: 1.6rem; letter-spacing: 0rem; height: auto; width: 400px;\"></div><div style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/cd5fd40e6a9e950797da1db816633c5a.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 150px;\"></div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">In Agartala 1/8 th of person affected from Dengue then what is ratio of un-affected females to unaffected male in Agartala. If no. of un-affected males in Agartala is same as no. of males in Delhi</div>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721907439106_344",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721907439106_345",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721907439106_347",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721907439106_341",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721907439106_343",
+                        "type": "text",
+                        "properties": {
+                          "html": "9 : 19"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721907439106_351",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721907439106_340",
+                        "type": "text",
+                        "properties": {
+                          "html": "19 : 9"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721907439106_350",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721907439106_349",
+                        "type": "text",
+                        "properties": {
+                          "html": "17 : 9"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721907439106_352",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721907439106_346",
+                        "type": "text",
+                        "properties": {
+                          "html": "9 : 17"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5": []
+              }
+            }
+          },
+          {
+            "id": "mc1721907523163_362",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721907523163_360",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions:</strong> \n</p><div style=\"text-align: justify;\">Bar graph shows Percentage distribution of flats constructed by six different Real Estate groups in Delhi.\n</div><div style=\"text-align: justify;\">Number of total flats = 8000\n</div><div style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/6d2d9dd61dfb43b4e848ddbbe4eccbc2.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 390px;\"></div><div style=\"text-align: justify;\"><span style=\"font-size: 1.6rem; letter-spacing: 0rem;\"><br></span></div><div style=\"text-align: justify;\"><span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">What is the respective ratio between the number of 2 BHK flats in C group and number of 3 BHK flats in B group?</span><br></div>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721907523163_359",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721907523163_355",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721907523163_365",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721907523163_364",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721907523163_357",
+                        "type": "text",
+                        "properties": {
+                          "html": "18 : 23"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721907523163_358",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721907523163_353",
+                        "type": "text",
+                        "properties": {
+                          "html": "11 : 15"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721907523163_354",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721907523163_363",
+                        "type": "text",
+                        "properties": {
+                          "html": "17 : 28"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721907523163_361",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721907523163_356",
+                        "type": "text",
+                        "properties": {
+                          "html": "54 : 55"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_6": []
+              }
+            }
+          },
+          {
+            "id": "mcImage1721907775930_399",
+            "type": "mcImage",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mcImage1721907775930_403",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions:</strong> \n</p><div style=\"text-align: justify;\">Bar graph shows Percentage distribution of flats constructed by six different Real Estate groups in Delhi.\n</div><div style=\"text-align: justify;\">Number of total flats = 8000\n</div><div style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/6d2d9dd61dfb43b4e848ddbbe4eccbc2.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 390px;\"></div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">The number of 2 BHK flats in F group is approximately what percent of the number of 3 BHK flats in C group?</div>"
+                    }
+                  }
+                ]
+              },
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-image-option1721907775930_401",
+                  "type": "mc-image-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mcImage1721907775930_393",
+                        "type": "image",
+                        "properties": {
+                          "hasLightbox": false,
+                          "imageData": {
+                            "title": "image",
+                            "tags": [],
+                            "width": 177,
+                            "height": 138,
+                            "size": 9,
+                            "name": "/01536adeea1f489bde9a7f987799595a.png",
+                            "access": "public",
+                            "created": 1721888029.297852,
+                            "modified": 1721888029.297852,
+                            "user": {
+                              "username": "Sachin AK Team"
+                            },
+                            "id": "66a1ed1d03e86b85280121c7",
+                            "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/01536adeea1f489bde9a7f987799595a.png",
+                            "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/01536adeea1f489bde9a7f987799595a.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                            "modifiedF": "2024-07-25 09:13:49"
+                          },
+                          "height": 54,
+                          "width": 70
+                        }
+                      },
+                      {
+                        "id": "mcImage1721907775930_402",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Option</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-image-option1721907775930_400",
+                  "type": "mc-image-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mcImage1721907775930_395",
+                        "type": "image",
+                        "properties": {
+                          "hasLightbox": false,
+                          "imageData": {
+                            "title": "image",
+                            "tags": [],
+                            "width": 186,
+                            "height": 142,
+                            "size": 9,
+                            "name": "/93538823a099b9ae31640849c6b1814d.png",
+                            "access": "public",
+                            "created": 1721888051.944982,
+                            "modified": 1721888051.944982,
+                            "user": {
+                              "username": "Sachin AK Team"
+                            },
+                            "id": "66a1ed33c1d077be6904883b",
+                            "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/93538823a099b9ae31640849c6b1814d.png",
+                            "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/93538823a099b9ae31640849c6b1814d.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                            "modifiedF": "2024-07-25 09:14:11"
+                          },
+                          "height": 53,
+                          "width": 70
+                        }
+                      },
+                      {
+                        "id": "mcImage1721907775930_394",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Option</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-image-option1721907775930_406",
+                  "type": "mc-image-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mcImage1721907775930_396",
+                        "type": "image",
+                        "properties": {
+                          "hasLightbox": false,
+                          "imageData": {
+                            "title": "image",
+                            "tags": [],
+                            "width": 183,
+                            "height": 130,
+                            "size": 9,
+                            "name": "/8a091bb736e505ef12595fb576c1a59f.png",
+                            "access": "public",
+                            "created": 1721888067.398843,
+                            "modified": 1721888067.398843,
+                            "user": {
+                              "username": "Sachin AK Team"
+                            },
+                            "id": "66a1ed436927c4d13c073fe5",
+                            "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/8a091bb736e505ef12595fb576c1a59f.png",
+                            "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/8a091bb736e505ef12595fb576c1a59f.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                            "modifiedF": "2024-07-25 09:14:27"
+                          },
+                          "height": 49,
+                          "width": 70
+                        }
+                      },
+                      {
+                        "id": "mcImage1721907775930_405",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Option</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-image-option1721907775930_398",
+                  "type": "mc-image-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mcImage1721907775930_397",
+                        "type": "image",
+                        "properties": {
+                          "hasLightbox": false,
+                          "imageData": {
+                            "title": "image",
+                            "tags": [],
+                            "width": 173,
+                            "height": 148,
+                            "size": 10,
+                            "name": "/a61e6be1768b9b7b3cebaa61988ed531.png",
+                            "access": "public",
+                            "created": 1721888085.630106,
+                            "modified": 1721888085.630106,
+                            "user": {
+                              "username": "Sachin AK Team"
+                            },
+                            "id": "66a1ed55e10864b93e019a55",
+                            "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/a61e6be1768b9b7b3cebaa61988ed531.png",
+                            "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/a61e6be1768b9b7b3cebaa61988ed531.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                            "modifiedF": "2024-07-25 09:14:45"
+                          },
+                          "height": 59,
+                          "width": 70
+                        }
+                      },
+                      {
+                        "id": "mcImage1721907775930_404",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Option</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "optionNumbering": "none",
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_8_blockData_description_widgets_0": [],
+                "sections_0_blocks_7": [],
+                "sections_0_blocks_7_blockData_description_widgets_0": []
+              }
+            }
+          },
+          {
+            "id": "mc1721908066176_445",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721908066176_436",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions:&nbsp;</strong></p><div style=\"text-align: justify;\">Bar graph shows the production (in litres) of Olive oil and Sunflower oil by a firm in 6 different years and the line graph shows the percentage of these two oils exported in respective years.</div><div style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/5d2e50fd91a53b41bb162a8166e169d6.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 400px;\"></div><div style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/66313227f0be61e269452c15618254c0.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 400px;\"></div><div style=\"text-align: justify;\"><span style=\"font-size: 1.6rem; letter-spacing: 0rem;\"><br></span></div><div style=\"text-align: justify;\"><span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">Find the quantity of Olive oil exported throughout the given years?</span></div>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721908066176_438",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721908066176_443",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721908066176_446",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721908066176_437",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721908066176_447",
+                        "type": "text",
+                        "properties": {
+                          "html": "11342 l"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721908066176_439",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721908066176_442",
+                        "type": "text",
+                        "properties": {
+                          "html": "11440 l&nbsp;"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721908066176_444",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721908066176_435",
+                        "type": "text",
+                        "properties": {
+                          "html": "11442 l"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721908066176_441",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721908066176_440",
+                        "type": "text",
+                        "properties": {
+                          "html": "11242 l"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_9_blockData_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_description_widgets_0": [],
+                "sections_0_blocks_8": []
+              }
+            }
+          },
+          {
+            "id": "mc1721908286993_451",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721908286993_459",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions:&nbsp;</strong></p><div style=\"text-align: justify;\">Bar graph shows the production (in litres) of Olive oil and Sunflower oil by a firm in 6 different years and the line graph shows the percentage of these two oils exported in respective years.</div><div style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/5d2e50fd91a53b41bb162a8166e169d6.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 400px;\"></div><div style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/66313227f0be61e269452c15618254c0.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 400px;\"></div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">What is the ratio of sunflower oil exported in 2011 to Olive oil exported in 2014?</div>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721908286993_454",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721908286993_455",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721908286993_456",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721908286993_453",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721908286993_452",
+                        "type": "text",
+                        "properties": {
+                          "html": "16 : 31"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721908286993_460",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721908286993_458",
+                        "type": "text",
+                        "properties": {
+                          "html": "15 : 29"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721908286993_457",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721908286993_461",
+                        "type": "text",
+                        "properties": {
+                          "html": "16 : 29"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721908286993_450",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721908286993_462",
+                        "type": "text",
+                        "properties": {
+                          "html": "29 : 16"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_9_blockData_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_9": []
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "availabilityStatus": null,
+    "autoNavigationEnabled": false,
+    "displayBackButtonWhenNavigationPerBlock": true,
+    "saveAndResumeLaterEnabled": null,
+    "tagsAddedOnCompletion": [],
+    "tagsAddedOnPass": [],
+    "sendAnonymousSubmissionsToEmailLeads": false,
+    "afterSubmitActionEnabled": null,
+    "afterSubmitActionProperties": null,
+    "showWizardOnNextEdit": false,
+    "revisitAfterSubmissionAction": null,
+    "navigationTemplate": "HorizontalSpacedBetweenNavigationTemplate",
+    "learnerSearchBarEnabled": true,
+    "learnerUnansweredQuestionsEnabled": true,
+    "learnerFavouriteQuestionEnabled": true,
+    "learnerCompletionProgressEnabled": true,
+    "learnerShowIndexOfQuestionsEnabled": false,
+    "learnerTimeNotificationsEnabled": false,
+    "learnerAllowInterruptionsEnabled": true,
+    "learnerAllowInterruptionsTimeoutInMinutes": 30,
+    "learnerReclaimTryOnInterruptionTimeoutEnabled": false,
+    "learnerAskBeforeContinueToSaved": true,
+    "learnerAutoSaveEnabled": null,
+    "spellcheckDisabled": null,
+    "showPartialScoreOnSubmission": true,
+    "deliverableQuestionsSubsetType": "all",
+    "questionRandomizationType": "none",
+    "serveQuestionsBasedOnPreviousSubmission": null,
+    "scoringDisabled": true,
+    "isSelfAssessment": true,
+    "useDefaultCertificateTemplate": null,
+    "certificateTemplate": null,
+    "certificateSocialShare": null,
+    "migrationData": null,
+    "useAssessmentPassingGradeForOpenEndedCorrectness": true,
+    "openEndedCorrectnessPassingGrade": null,
+    "showScorePercentage": null,
+    "showScorePoints": null,
+    "showScoreCorrectAnswers": null,
+    "editorBehaviorSettings": null,
+    "manualReviewEnabled": false,
+    "resultsSummary": {
+      "enabled": true,
+      "showStatusIcon": true,
+      "showStatusText": true,
+      "showScorePercentage": true,
+      "showScorePoints": true,
+      "showScoreCorrectAnswers": true,
+      "showTimeTakenToComplete": true,
+      "showDateSubmitted": true,
+      "showAttemptCount": true
+    },
+    "meta": null,
+    "submissionsCount": 102,
+    "fromMarketplace": null,
+    "aiFeedbackEnabled": null,
+    "numberOfFeedbackQuestions": null,
+    "created": 1721804967.337341,
+    "modified": 1724154509.742867,
+    "contentHash": "b4e237f78537ef59dbc6b89f4a512a02bd159c02b8b83a38307447feea50195f",
+    "id": "66a0a8a73551234704000865",
+    "objectType": "assessment",
+    "isEditBlockedDueToSync": false,
+    "variables": {
+      "submission": {
+        "self": {
+          "score": null,
+          "points": null,
+          "total_points": null,
+          "correct_answers": null,
+          "total_questions": 10,
+          "time_spent": "00:00:00",
+          "date_submitted": "11/08/26",
+          "attempt_count": 3,
+          "max_tries": null,
+          "pass_grade": null,
+          "time_spent_seconds": 0,
+          "raw_start_date": 1786440402.194803
+        }
+      },
+      "school": {
+        "name": "Apna College",
+        "url": "www.apnacollege.in",
+        "description": "The most loved coding community of India ❤️"
+      },
+      "user": {
+        "username": "ram",
+        "email": "p4542639@gmail.com",
+        "cf_phonenumber": "7666690798"
+      }
+    }
+  },
+  "reclaimedTry": false,
+  "feedback": [
+    {
+      "title": "",
+      "id": "section66a0a8a6eb1d0",
+      "blocks": [
+        {
+          "id": "mc1721906664974_272",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions: The line graph shows the number of males and females in 5 cities. If 40% of males from Delhi are married to females from Mumbai and 50% of males from Mumbai are married to females from Delhi, and after marriage, all females shift to the state in which they are married, then find the difference between the total population of Delhi and Mumbai now?",
+            "widgets": [
+              {
+                "id": "mc1721906664974_276",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions:</strong> \n</p><div style=\"text-align: justify;\">The line graph shows the number of males and females in 5 cities.\n</div><div style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/b1961ad2137fe81ca7002b417bd83935.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 350px;\"></div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">If 40% of males from Delhi are married to females from Mumbai and 50% of males from Mumbai are married to females from Delhi, and after marriage, all females shift to the state in which they are married, then find the difference between the total population of Delhi and Mumbai now?</div>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721906664974_273",
+              "description": {
+                "text": "550",
+                "widgets": [
+                  {
+                    "id": "mc1721906664974_280",
+                    "type": "text",
+                    "properties": {
+                      "html": "550&nbsp;"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721906664974_278",
+              "description": {
+                "text": "1350",
+                "widgets": [
+                  {
+                    "id": "mc1721906664974_271",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>1350</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721906664974_274",
+              "description": {
+                "text": "None of these",
+                "widgets": [
+                  {
+                    "id": "mc1721906664974_279",
+                    "type": "text",
+                    "properties": {
+                      "html": "None of these"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721906664974_277",
+              "description": {
+                "text": "200",
+                "widgets": [
+                  {
+                    "id": "mc1721906664974_282",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>200</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721906664974_277",
+              "text": "200",
+              "widgets": [
+                {
+                  "id": "mc1721906664974_282",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>200</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><s><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/184c18b3e1396f068b41296cbc6f95a1.png\"></s>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721906843051_294",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions: The line graph shows the number of males and females in 5 cities. If 30% of females in Mumbai are literate and 60% of females in all cities are literate, then illiterate females in Mumbai are what percent less than that of in all cities?",
+            "widgets": [
+              {
+                "id": "mc1721906843051_290",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions:</strong> \n</p><div style=\"text-align: justify;\">The line graph shows the number of males and females in 5 cities.\n</div><div style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/b1961ad2137fe81ca7002b417bd83935.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 350px;\"><br></div><div style=\"text-align: justify;\">If 30% of females in Mumbai are literate and 60% of females in all cities are literate, then illiterate females in Mumbai are what percent less than that of in all cities?</div>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721906843051_285",
+              "description": {
+                "text": "38%",
+                "widgets": [
+                  {
+                    "id": "mc1721906843051_287",
+                    "type": "text",
+                    "properties": {
+                      "html": "38%"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721906843051_296",
+              "description": {
+                "text": "67%",
+                "widgets": [
+                  {
+                    "id": "mc1721906843051_291",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>67%</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721906843051_288",
+              "description": {
+                "text": "62%",
+                "widgets": [
+                  {
+                    "id": "mc1721906843051_292",
+                    "type": "text",
+                    "properties": {
+                      "html": "62%"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721906843051_295",
+              "description": {
+                "text": "42%",
+                "widgets": [
+                  {
+                    "id": "mc1721906843051_284",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>42%</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721906843051_288",
+              "text": "62%",
+              "widgets": [
+                {
+                  "id": "mc1721906843051_292",
+                  "type": "text",
+                  "properties": {
+                    "html": "62%"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/f7e6f96a967bfbd2106b2a66065acef1.png\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721906913758_305",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions: Bar graph shows number of total employee working in five different company and table shows Ratio of male to female in these five company.What is the ratio of female employees in company Samsung and H.P. together to the females in company DELL and Apple together.",
+            "widgets": [
+              {
+                "id": "mc1721906913758_300",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions:</strong> \n</p><div style=\"text-align: justify;\">Bar graph shows number of total employee working in five different company and table shows Ratio of male to female in these five company.</div><div style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/0d684791b23ad13a7f79f3e21315e402.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 380px;\"></div><div style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/7c3b3df90b3e439c088f45fd9fed423f.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"font-size: 1.6rem; letter-spacing: 0rem; height: auto; width: 480px;\"></div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">What is the ratio of female employees in company Samsung and H.P. together to the females in company DELL and Apple together.</div>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721906913758_303",
+              "description": {
+                "text": "43 : 53",
+                "widgets": [
+                  {
+                    "id": "mc1721906913758_307",
+                    "type": "text",
+                    "properties": {
+                      "html": "43 : 53"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721906913758_297",
+              "description": {
+                "text": "54 : 59",
+                "widgets": [
+                  {
+                    "id": "mc1721906913758_309",
+                    "type": "text",
+                    "properties": {
+                      "html": "54 : 59"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721906913758_299",
+              "description": {
+                "text": "37 : 45",
+                "widgets": [
+                  {
+                    "id": "mc1721906913758_304",
+                    "type": "text",
+                    "properties": {
+                      "html": "37 : 45"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721906913758_306",
+              "description": {
+                "text": "23 : 27",
+                "widgets": [
+                  {
+                    "id": "mc1721906913758_302",
+                    "type": "text",
+                    "properties": {
+                      "html": "23 : 27"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721906913758_299",
+              "text": "37 : 45",
+              "widgets": [
+                {
+                  "id": "mc1721906913758_304",
+                  "type": "text",
+                  "properties": {
+                    "html": "37 : 45"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/f72a6c35d10c3c2c766142635f718ccb.png\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721907199734_321",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions: Bar graph shows number of total employee working in five different company and table shows Ratio of male to female in these five company.If 20% females from LG company resigns and 12.5% females resigns from company H.P. then what is the ratio of remaining employees in LG to remaining employees in HP.",
+            "widgets": [
+              {
+                "id": "mc1721907199734_319",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions:</strong> \n</p><div style=\"text-align: justify;\">Bar graph shows number of total employee working in five different company and table shows Ratio of male to female in these five company.</div><div style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/0d684791b23ad13a7f79f3e21315e402.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 380px;\"></div><div style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/7c3b3df90b3e439c088f45fd9fed423f.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"font-size: 1.6rem; letter-spacing: 0rem; height: auto; width: 480px;\"></div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">If 20% females from LG company resigns and 12.5% females resigns from company H.P. then what is the ratio of remaining employees in LG to remaining employees in HP.</div>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721907199734_315",
+              "description": {
+                "text": "192 : 149",
+                "widgets": [
+                  {
+                    "id": "mc1721907199734_317",
+                    "type": "text",
+                    "properties": {
+                      "html": "192 : 149"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721907199734_313",
+              "description": {
+                "text": "153 : 129",
+                "widgets": [
+                  {
+                    "id": "mc1721907199734_314",
+                    "type": "text",
+                    "properties": {
+                      "html": "153 : 129"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721907199734_324",
+              "description": {
+                "text": "72 : 73",
+                "widgets": [
+                  {
+                    "id": "mc1721907199734_312",
+                    "type": "text",
+                    "properties": {
+                      "html": "72 : 73"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721907199734_323",
+              "description": {
+                "text": "53 : 42",
+                "widgets": [
+                  {
+                    "id": "mc1721907199734_320",
+                    "type": "text",
+                    "properties": {
+                      "html": "53 : 42"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721907199734_315",
+              "text": "192 : 149",
+              "widgets": [
+                {
+                  "id": "mc1721907199734_317",
+                  "type": "text",
+                  "properties": {
+                    "html": "192 : 149"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/db2ea2ffb700c1922edfa53285bf88bd.png\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721907244951_336",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions: Given below is the line graph which shows the population of five cities in 2016 and table shows the ratio of male to female in these five cities. NOTE- Some values are missing in the table, you have to calculate these values if necessary to answer the questions If there is an increase of 25% and 15% population of male &amp; female live in Delhi in year 2017 with respect to previous year. Then what will be total percentage rise in the population of Delhi in 2017 with respect to previous year?.",
+            "widgets": [
+              {
+                "id": "mc1721907244951_333",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions:</strong> \n</p><div style=\"text-align: justify;\">Given below is the line graph which shows the population of five cities in 2016 and table shows the ratio of male to female in these five cities.\n</div><div style=\"text-align: justify;\">NOTE- Some values are missing in the table, you have to calculate these values if necessary to answer the questions\n</div><div style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/1218e3d46cb613161ececabd3733d3f7.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"font-size: 1.6rem; letter-spacing: 0rem; height: auto; width: 400px;\"></div><div style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/cd5fd40e6a9e950797da1db816633c5a.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 150px;\"></div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">If there is an increase of 25% and 15% population of male &amp; female live in Delhi in year 2017 with respect to previous year. Then what will be total percentage rise in the population of Delhi in 2017 with respect to previous year?.</div>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721907244951_337",
+              "description": {
+                "text": "18.85%",
+                "widgets": [
+                  {
+                    "id": "mc1721907244951_330",
+                    "type": "text",
+                    "properties": {
+                      "html": "18.85%"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721907244951_326",
+              "description": {
+                "text": "18.65%",
+                "widgets": [
+                  {
+                    "id": "mc1721907244951_328",
+                    "type": "text",
+                    "properties": {
+                      "html": "18.65%"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721907244951_334",
+              "description": {
+                "text": "19%",
+                "widgets": [
+                  {
+                    "id": "mc1721907244951_325",
+                    "type": "text",
+                    "properties": {
+                      "html": "19%"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721907244951_332",
+              "description": {
+                "text": "18.75%",
+                "widgets": [
+                  {
+                    "id": "mc1721907244951_329",
+                    "type": "text",
+                    "properties": {
+                      "html": "18.75%"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721907244951_332",
+              "text": "18.75%",
+              "widgets": [
+                {
+                  "id": "mc1721907244951_329",
+                  "type": "text",
+                  "properties": {
+                    "html": "18.75%"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/16c57fd52e59ff0f59ec75ead3cd252b.png\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721907439106_348",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions: Given below is the line graph which shows the population of five cities in 2016 and table shows the ratio of male to female in these five cities. NOTE- Some values are missing in the table, you have to calculate these values if necessary to answer the questions In Agartala 1/8 th of person affected from Dengue then what is ratio of un-affected females to unaffected male in Agartala. If no. of un-affected males in Agartala is same as no. of males in Delhi",
+            "widgets": [
+              {
+                "id": "mc1721907439106_342",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions:</strong> \n</p><div style=\"text-align: justify;\">Given below is the line graph which shows the population of five cities in 2016 and table shows the ratio of male to female in these five cities.\n</div><div style=\"text-align: justify;\">NOTE- Some values are missing in the table, you have to calculate these values if necessary to answer the questions\n</div><div style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/1218e3d46cb613161ececabd3733d3f7.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"font-size: 1.6rem; letter-spacing: 0rem; height: auto; width: 400px;\"></div><div style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/cd5fd40e6a9e950797da1db816633c5a.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 150px;\"></div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">In Agartala 1/8 th of person affected from Dengue then what is ratio of un-affected females to unaffected male in Agartala. If no. of un-affected males in Agartala is same as no. of males in Delhi</div>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721907439106_341",
+              "description": {
+                "text": "9 : 19",
+                "widgets": [
+                  {
+                    "id": "mc1721907439106_343",
+                    "type": "text",
+                    "properties": {
+                      "html": "9 : 19"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721907439106_351",
+              "description": {
+                "text": "19 : 9",
+                "widgets": [
+                  {
+                    "id": "mc1721907439106_340",
+                    "type": "text",
+                    "properties": {
+                      "html": "19 : 9"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721907439106_350",
+              "description": {
+                "text": "17 : 9",
+                "widgets": [
+                  {
+                    "id": "mc1721907439106_349",
+                    "type": "text",
+                    "properties": {
+                      "html": "17 : 9"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721907439106_352",
+              "description": {
+                "text": "9 : 17",
+                "widgets": [
+                  {
+                    "id": "mc1721907439106_346",
+                    "type": "text",
+                    "properties": {
+                      "html": "9 : 17"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721907439106_351",
+              "text": "19 : 9",
+              "widgets": [
+                {
+                  "id": "mc1721907439106_340",
+                  "type": "text",
+                  "properties": {
+                    "html": "19 : 9"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/4c319d417665517e11f170f6a333bd50.png\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721907523163_362",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions: Bar graph shows Percentage distribution of flats constructed by six different Real Estate groups in Delhi. Number of total flats = 8000 What is the respective ratio between the number of 2 BHK flats in C group and number of 3 BHK flats in B group?",
+            "widgets": [
+              {
+                "id": "mc1721907523163_360",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions:</strong> \n</p><div style=\"text-align: justify;\">Bar graph shows Percentage distribution of flats constructed by six different Real Estate groups in Delhi.\n</div><div style=\"text-align: justify;\">Number of total flats = 8000\n</div><div style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/6d2d9dd61dfb43b4e848ddbbe4eccbc2.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 390px;\"></div><div style=\"text-align: justify;\"><span style=\"font-size: 1.6rem; letter-spacing: 0rem;\"><br></span></div><div style=\"text-align: justify;\"><span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">What is the respective ratio between the number of 2 BHK flats in C group and number of 3 BHK flats in B group?</span><br></div>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721907523163_364",
+              "description": {
+                "text": "18 : 23",
+                "widgets": [
+                  {
+                    "id": "mc1721907523163_357",
+                    "type": "text",
+                    "properties": {
+                      "html": "18 : 23"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721907523163_358",
+              "description": {
+                "text": "11 : 15",
+                "widgets": [
+                  {
+                    "id": "mc1721907523163_353",
+                    "type": "text",
+                    "properties": {
+                      "html": "11 : 15"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721907523163_354",
+              "description": {
+                "text": "17 : 28",
+                "widgets": [
+                  {
+                    "id": "mc1721907523163_363",
+                    "type": "text",
+                    "properties": {
+                      "html": "17 : 28"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721907523163_361",
+              "description": {
+                "text": "54 : 55",
+                "widgets": [
+                  {
+                    "id": "mc1721907523163_356",
+                    "type": "text",
+                    "properties": {
+                      "html": "54 : 55"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721907523163_361",
+              "text": "54 : 55",
+              "widgets": [
+                {
+                  "id": "mc1721907523163_356",
+                  "type": "text",
+                  "properties": {
+                    "html": "54 : 55"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/51f1c0e2d7e823a4bffe9c97f18275de.png\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mcImage1721907775930_399",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mcImage",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions: Bar graph shows Percentage distribution of flats constructed by six different Real Estate groups in Delhi. Number of total flats = 8000 The number of 2 BHK flats in F group is approximately what percent of the number of 3 BHK flats in C group?",
+            "widgets": [
+              {
+                "id": "mcImage1721907775930_403",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions:</strong> \n</p><div style=\"text-align: justify;\">Bar graph shows Percentage distribution of flats constructed by six different Real Estate groups in Delhi.\n</div><div style=\"text-align: justify;\">Number of total flats = 8000\n</div><div style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/6d2d9dd61dfb43b4e848ddbbe4eccbc2.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 390px;\"></div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">The number of 2 BHK flats in F group is approximately what percent of the number of 3 BHK flats in C group?</div>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-image-option1721907775930_401",
+              "description": {
+                "text": "(Image) Option",
+                "widgets": [
+                  {
+                    "id": "mcImage1721907775930_393",
+                    "type": "image",
+                    "properties": {
+                      "hasLightbox": false,
+                      "imageData": {
+                        "title": "image",
+                        "tags": [],
+                        "width": 177,
+                        "height": 138,
+                        "size": 9,
+                        "name": "/01536adeea1f489bde9a7f987799595a.png",
+                        "access": "public",
+                        "created": 1721888029.297852,
+                        "modified": 1721888029.297852,
+                        "user": {
+                          "username": "Sachin AK Team"
+                        },
+                        "id": "66a1ed1d03e86b85280121c7",
+                        "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/01536adeea1f489bde9a7f987799595a.png",
+                        "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/01536adeea1f489bde9a7f987799595a.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                        "modifiedF": "2024-07-25 09:13:49"
+                      },
+                      "height": 54,
+                      "width": 70
+                    }
+                  },
+                  {
+                    "id": "mcImage1721907775930_402",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Option</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-image-option1721907775930_400",
+              "description": {
+                "text": "(Image) Option",
+                "widgets": [
+                  {
+                    "id": "mcImage1721907775930_395",
+                    "type": "image",
+                    "properties": {
+                      "hasLightbox": false,
+                      "imageData": {
+                        "title": "image",
+                        "tags": [],
+                        "width": 186,
+                        "height": 142,
+                        "size": 9,
+                        "name": "/93538823a099b9ae31640849c6b1814d.png",
+                        "access": "public",
+                        "created": 1721888051.944982,
+                        "modified": 1721888051.944982,
+                        "user": {
+                          "username": "Sachin AK Team"
+                        },
+                        "id": "66a1ed33c1d077be6904883b",
+                        "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/93538823a099b9ae31640849c6b1814d.png",
+                        "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/93538823a099b9ae31640849c6b1814d.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                        "modifiedF": "2024-07-25 09:14:11"
+                      },
+                      "height": 53,
+                      "width": 70
+                    }
+                  },
+                  {
+                    "id": "mcImage1721907775930_394",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Option</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-image-option1721907775930_406",
+              "description": {
+                "text": "(Image) Option",
+                "widgets": [
+                  {
+                    "id": "mcImage1721907775930_396",
+                    "type": "image",
+                    "properties": {
+                      "hasLightbox": false,
+                      "imageData": {
+                        "title": "image",
+                        "tags": [],
+                        "width": 183,
+                        "height": 130,
+                        "size": 9,
+                        "name": "/8a091bb736e505ef12595fb576c1a59f.png",
+                        "access": "public",
+                        "created": 1721888067.398843,
+                        "modified": 1721888067.398843,
+                        "user": {
+                          "username": "Sachin AK Team"
+                        },
+                        "id": "66a1ed436927c4d13c073fe5",
+                        "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/8a091bb736e505ef12595fb576c1a59f.png",
+                        "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/8a091bb736e505ef12595fb576c1a59f.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                        "modifiedF": "2024-07-25 09:14:27"
+                      },
+                      "height": 49,
+                      "width": 70
+                    }
+                  },
+                  {
+                    "id": "mcImage1721907775930_405",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Option</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-image-option1721907775930_398",
+              "description": {
+                "text": "(Image) Option",
+                "widgets": [
+                  {
+                    "id": "mcImage1721907775930_397",
+                    "type": "image",
+                    "properties": {
+                      "hasLightbox": false,
+                      "imageData": {
+                        "title": "image",
+                        "tags": [],
+                        "width": 173,
+                        "height": 148,
+                        "size": 10,
+                        "name": "/a61e6be1768b9b7b3cebaa61988ed531.png",
+                        "access": "public",
+                        "created": 1721888085.630106,
+                        "modified": 1721888085.630106,
+                        "user": {
+                          "username": "Sachin AK Team"
+                        },
+                        "id": "66a1ed55e10864b93e019a55",
+                        "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/a61e6be1768b9b7b3cebaa61988ed531.png",
+                        "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/a61e6be1768b9b7b3cebaa61988ed531.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                        "modifiedF": "2024-07-25 09:14:45"
+                      },
+                      "height": 59,
+                      "width": 70
+                    }
+                  },
+                  {
+                    "id": "mcImage1721907775930_404",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Option</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-image-option1721907775930_400",
+              "text": "(Image) Option",
+              "widgets": [
+                {
+                  "id": "mcImage1721907775930_395",
+                  "type": "image",
+                  "properties": {
+                    "hasLightbox": false,
+                    "imageData": {
+                      "title": "image",
+                      "tags": [],
+                      "width": 186,
+                      "height": 142,
+                      "size": 9,
+                      "name": "/93538823a099b9ae31640849c6b1814d.png",
+                      "access": "public",
+                      "created": 1721888051.944982,
+                      "modified": 1721888051.944982,
+                      "user": {
+                        "username": "Sachin AK Team"
+                      },
+                      "id": "66a1ed33c1d077be6904883b",
+                      "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/93538823a099b9ae31640849c6b1814d.png",
+                      "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/93538823a099b9ae31640849c6b1814d.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                      "modifiedF": "2024-07-25 09:14:11"
+                    },
+                    "height": 53,
+                    "width": 70
+                  }
+                },
+                {
+                  "id": "mcImage1721907775930_394",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>Option</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/36c8dc98eae07769f18e9c725b1a3445.png\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721908066176_445",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions:Bar graph shows the production (in litres) of Olive oil and Sunflower oil by a firm in 6 different years and the line graph shows the percentage of these two oils exported in respective years.Find the quantity of Olive oil exported throughout the given years?",
+            "widgets": [
+              {
+                "id": "mc1721908066176_436",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions:&nbsp;</strong></p><div style=\"text-align: justify;\">Bar graph shows the production (in litres) of Olive oil and Sunflower oil by a firm in 6 different years and the line graph shows the percentage of these two oils exported in respective years.</div><div style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/5d2e50fd91a53b41bb162a8166e169d6.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 400px;\"></div><div style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/66313227f0be61e269452c15618254c0.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 400px;\"></div><div style=\"text-align: justify;\"><span style=\"font-size: 1.6rem; letter-spacing: 0rem;\"><br></span></div><div style=\"text-align: justify;\"><span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">Find the quantity of Olive oil exported throughout the given years?</span></div>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721908066176_437",
+              "description": {
+                "text": "11342 l",
+                "widgets": [
+                  {
+                    "id": "mc1721908066176_447",
+                    "type": "text",
+                    "properties": {
+                      "html": "11342 l"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721908066176_439",
+              "description": {
+                "text": "11440 l",
+                "widgets": [
+                  {
+                    "id": "mc1721908066176_442",
+                    "type": "text",
+                    "properties": {
+                      "html": "11440 l&nbsp;"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721908066176_444",
+              "description": {
+                "text": "11442 l",
+                "widgets": [
+                  {
+                    "id": "mc1721908066176_435",
+                    "type": "text",
+                    "properties": {
+                      "html": "11442 l"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721908066176_441",
+              "description": {
+                "text": "11242 l",
+                "widgets": [
+                  {
+                    "id": "mc1721908066176_440",
+                    "type": "text",
+                    "properties": {
+                      "html": "11242 l"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721908066176_444",
+              "text": "11442 l",
+              "widgets": [
+                {
+                  "id": "mc1721908066176_435",
+                  "type": "text",
+                  "properties": {
+                    "html": "11442 l"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/69e03ee432e2f5d0289647b3b372a76a.png\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721908286993_451",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions:Bar graph shows the production (in litres) of Olive oil and Sunflower oil by a firm in 6 different years and the line graph shows the percentage of these two oils exported in respective years.What is the ratio of sunflower oil exported in 2011 to Olive oil exported in 2014?",
+            "widgets": [
+              {
+                "id": "mc1721908286993_459",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions:&nbsp;</strong></p><div style=\"text-align: justify;\">Bar graph shows the production (in litres) of Olive oil and Sunflower oil by a firm in 6 different years and the line graph shows the percentage of these two oils exported in respective years.</div><div style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/5d2e50fd91a53b41bb162a8166e169d6.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 400px;\"></div><div style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/66313227f0be61e269452c15618254c0.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 400px;\"></div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">What is the ratio of sunflower oil exported in 2011 to Olive oil exported in 2014?</div>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721908286993_453",
+              "description": {
+                "text": "16 : 31",
+                "widgets": [
+                  {
+                    "id": "mc1721908286993_452",
+                    "type": "text",
+                    "properties": {
+                      "html": "16 : 31"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721908286993_460",
+              "description": {
+                "text": "15 : 29",
+                "widgets": [
+                  {
+                    "id": "mc1721908286993_458",
+                    "type": "text",
+                    "properties": {
+                      "html": "15 : 29"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721908286993_457",
+              "description": {
+                "text": "16 : 29",
+                "widgets": [
+                  {
+                    "id": "mc1721908286993_461",
+                    "type": "text",
+                    "properties": {
+                      "html": "16 : 29"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721908286993_450",
+              "description": {
+                "text": "29 : 16",
+                "widgets": [
+                  {
+                    "id": "mc1721908286993_462",
+                    "type": "text",
+                    "properties": {
+                      "html": "29 : 16"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721908286993_457",
+              "text": "16 : 29",
+              "widgets": [
+                {
+                  "id": "mc1721908286993_461",
+                  "type": "text",
+                  "properties": {
+                    "html": "16 : 29"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/ce00e206d20b332c2003c450c8950ef2.png\"><br>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        }
+      ]
+    }
+  ],
+  "submitted": true,
+  "updated": true,
+  "retryCount": 3,
+  "inlineFeedback": [],
+  "errors": [],
+  "success": true
+}

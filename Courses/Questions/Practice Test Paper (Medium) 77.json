@@ -1,0 +1,3421 @@
+{
+  "submission": {
+    "anon_id": null,
+    "model": "assessment-submission",
+    "courseTitleId": "aptitude-teacher2",
+    "object_id": "66b74bb67f809db010095232",
+    "assessmentId": "66b74bb67f809db010095231",
+    "snapshotId": "66c425c834bbeed175011c54",
+    "questions": {
+      "section66b74bb63e4f8": [
+        "mc66b74bb63e4ff",
+        "mc66b74bb63e5e4",
+        "mc66b74bb63e6c9",
+        "mc66b74bb63e7c2",
+        "mc66b74bb63e8a6",
+        "mc66b74bb63e98f",
+        "mc66b74bb63ea7e",
+        "mc66b74bb63eb68",
+        "mc66b74bb63ec7b",
+        "mc66b74bb63ed65"
+      ]
+    },
+    "certificateAnswers": [],
+    "certificateId": null,
+    "questionData": {
+      "mc66b74bb63e4ff": {
+        "deliveredOnTimestamp": 1786440561.91512,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74bb63e5e4": {
+        "deliveredOnTimestamp": 1786440561.915151,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74bb63e6c9": {
+        "deliveredOnTimestamp": 1786440561.915171,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74bb63e7c2": {
+        "deliveredOnTimestamp": 1786440561.915188,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74bb63e8a6": {
+        "deliveredOnTimestamp": 1786440561.915205,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74bb63e98f": {
+        "deliveredOnTimestamp": 1786440561.915221,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74bb63ea7e": {
+        "deliveredOnTimestamp": 1786440561.915237,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74bb63eb68": {
+        "deliveredOnTimestamp": 1786440561.915252,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74bb63ec7b": {
+        "deliveredOnTimestamp": 1786440561.915267,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74bb63ed65": {
+        "deliveredOnTimestamp": 1786440561.915282,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      }
+    },
+    "answers": [
+      {
+        "blockId": "mc66b74bb63e4ff",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74bb63e5e4",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74bb63e6c9",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74bb63e7c2",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74bb63e8a6",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74bb63e98f",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74bb63ea7e",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74bb63eb68",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74bb63ec7b",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74bb63ed65",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      }
+    ],
+    "submittedTimestamp": 1786440562.158885,
+    "status": "submitted",
+    "grading_status": "grading_status_graded",
+    "access": "public",
+    "actual_score": null,
+    "score": {
+      "maxScore": 10,
+      "value": 0,
+      "pass": false,
+      "passGrade": 50,
+      "points": 0
+    },
+    "source": {
+      "type": "unit"
+    },
+    "isDefining": true,
+    "isAdminAutoGradedSubmission": null,
+    "listOfNonConsentedBlocks": [],
+    "created": 1786440561.922084,
+    "modified": 1786440562.304185,
+    "id": "6a7aeb716e4d4c9e9d053688",
+    "passed": false
+  },
+  "assessment": {
+    "title": "Practice Test Paper (Medium)",
+    "access": "public",
+    "type": "assessment",
+    "model": "assessmentSnapshot",
+    "description": "Intermediate practice test paper containing 10 assessment questions covering Seating Arrangements.",
+    "isTimed": false,
+    "timerFor": "assessmentTimed",
+    "onTimerExpiration": "autoSubmit",
+    "assessmentTimeLimitInSeconds": 600,
+    "questionTimeLimitInSeconds": 60,
+    "standaloneShareEnabled": null,
+    "customUrl": null,
+    "usesCustomUrl": null,
+    "allowAnonymous": true,
+    "randomizeQuestionOptions": false,
+    "disallowPartialSubmissions": false,
+    "submissionDueDateEnabled": false,
+    "submissionDueDate": 1626257823,
+    "makeFeedbackAvailableAfterDateEnabled": false,
+    "makeFeedbackAvailableAfterDate": 0,
+    "customStylesEnabled": true,
+    "customStyles": {
+      "assessmentPage": {
+        "background": {
+          "type": "color",
+          "colorData": {
+            "code": "",
+            "class": "lw-body-bg"
+          }
+        },
+        "dividers": {
+          "top": {
+            "orientation": "top",
+            "divider": "none"
+          },
+          "bottom": {
+            "orientation": "bottom",
+            "divider": "none"
+          }
+        }
+      },
+      "option": {
+        "radioEffect": "scribble",
+        "checkboxEffect": "scribble",
+        "size": "small"
+      },
+      "assessment": {
+        "transition": "none",
+        "background": {
+          "type": "color",
+          "colorData": {
+            "code": "",
+            "class": ""
+          }
+        },
+        "width": "normal",
+        "timerTemplate": "rectangle"
+      },
+      "linearRating": {
+        "labels": {
+          "size": "small"
+        }
+      },
+      "question": {
+        "description": {
+          "background": {
+            "type": "color",
+            "colorData": {
+              "code": "",
+              "class": ""
+            }
+          },
+          "type": "p",
+          "size": "small"
+        },
+        "answers": {
+          "background": {
+            "type": "color",
+            "colorData": {
+              "code": "",
+              "class": ""
+            }
+          }
+        },
+        "requiredAsterisk": {
+          "colorData": {
+            "code": "#ff0000",
+            "class": ""
+          }
+        },
+        "errorMessages": {
+          "size": "verySmall",
+          "colorData": {
+            "code": "#ff0000",
+            "class": ""
+          }
+        }
+      },
+      "input": {
+        "size": "small",
+        "type": "solidDark"
+      },
+      "textarea": {
+        "size": "small",
+        "type": "solidDark"
+      },
+      "dropdown": {
+        "size": "small",
+        "type": "solidDark"
+      }
+    },
+    "submissionMode": "all",
+    "startingDate": 1626765704,
+    "startingDateEnabled": false,
+    "showOnlyFailedQuestionsOnRetry": false,
+    "retryEnabled": true,
+    "retryOnFailOnly": false,
+    "gradingMethod": null,
+    "maxTries": null,
+    "onlyWrongOnRetake": null,
+    "isAmendable": false,
+    "feedbackShowOnScreen": true,
+    "feedbackDownloadPDF": false,
+    "feedbackShowInline": null,
+    "feedbackQuestionList": "all-questions",
+    "feedbackShowQuestionScore": true,
+    "feedbackShowFeedback": true,
+    "feedbackShowNumbering": false,
+    "feedbackShowSectionTitles": false,
+    "feedbackShowUserAnswers": true,
+    "feedbackShowCorrectAnswers": true,
+    "feedbackShowAnswerCorrectness": true,
+    "displayInlineFeedbackEnabled": null,
+    "displayBackButtonWhenSubmissionPerBlock": null,
+    "feedbackShowSectionResultSummary": false,
+    "askConfirmationBeforeSubmit": true,
+    "hasCustomConfirmationBeforeSubmitText": false,
+    "customConfirmationBeforeSubmitText": "Are you sure you want to submit the questionnaire?",
+    "customConfirmationBeforeSubmitTexts": {
+      "title": "Submit Assessment?",
+      "baseConfirmationMessage": "Are you sure you want to submit the questionnaire?",
+      "unansweredNotice": "You have not answered {X} questions."
+    },
+    "amendResubmissionMinutes": 30,
+    "passingGrade": null,
+    "navigationMode": "per-block",
+    "conditionalBlocks": {
+      "introContent": {
+        "id": "content66b74bb63e449",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66b74bb63e45a",
+              "type": "text",
+              "insertedAsWidget": true,
+              "properties": {
+                "html": "Seating Arrangement - Circular PAPER LEVEL-2",
+                "alignment": "center",
+                "customStyle": true,
+                "type": "h2",
+                "size": "normal"
+              }
+            },
+            {
+              "id": "text66b74bb63e46b",
+              "type": "text",
+              "properties": {
+                "html": "Self-assess your knowledge. Express yourself and get feedback from our instructors.",
+                "customStyle": true,
+                "alignment": "center"
+              }
+            },
+            {
+              "id": "spacer66b74bb63e475",
+              "type": "spacer",
+              "properties": {
+                "height": 20,
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            },
+            {
+              "id": "button66b74bb63e481",
+              "type": "button",
+              "properties": {
+                "buttonLabel": "<span>Ready to start</span>",
+                "buttonSize": "normal",
+                "buttonType": "solidBrand",
+                "alignment": "center",
+                "linkData": {
+                  "linkType": "goToFirst"
+                },
+                "iconColorData": {
+                  "code": "",
+                  "class": ""
+                },
+                "iconDisplay": false,
+                "iconSize": 26,
+                "iconClassName": " fas fa-angle-right",
+                "iconPosition": "right"
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "variables": {
+            "conditionalBlocks_introContent_blockData_widgets_0": [],
+            "conditionalBlocks_introContent_blockData_widgets_1": []
+          }
+        }
+      },
+      "submissionStartingDate": {
+        "id": "content66b74bb63e4a2",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66b74bb63e4a7",
+              "type": "text",
+              "properties": {
+                "html": "Sorry but this assessment hasn't started yet."
+              }
+            },
+            {
+              "id": "date66b74bb63e4ae",
+              "type": "date",
+              "properties": {
+                "value": ""
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "displayConditions": ["startingDate"]
+        }
+      },
+      "submissionDueDate": {
+        "id": "content66b74bb63e4b9",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66b74bb63e4be",
+              "type": "text",
+              "properties": {
+                "html": "Sorry but this assessment date is due."
+              }
+            },
+            {
+              "id": "date66b74bb63e4c4",
+              "type": "date",
+              "properties": {
+                "value": ""
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "displayConditions": ["dateIsDue"]
+        }
+      },
+      "outroContent": {
+        "id": "content66b74bb63e4d0",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "userResults66b74bb63e4d4",
+              "type": "userResults",
+              "properties": {
+                "layout": "template2",
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            },
+            {
+              "id": "feedback66b74bb63e4e1",
+              "type": "feedback",
+              "properties": []
+            },
+            {
+              "id": "outroActions66b74bb63e4e7",
+              "type": "outroActions",
+              "properties": {
+                "layout": "",
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true
+        }
+      }
+    },
+    "systemSections": null,
+    "sections": [
+      {
+        "id": "section66b74bb63e4f8",
+        "title": "",
+        "type": "section",
+        "navigationMode": "per-block",
+        "blocks": [
+          {
+            "id": "mc66b74bb63e4ff",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bb63e504",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for question:</strong></p><p style=\"text-align: justify;\">Eight people, P, Q, R, S, T, U, V, and W, are seated around a circular table with some facing the interior and others the outside, but not always in that sequence. A maximum of two adjacent people can be facing the same way at once. \n</p><p style=\"text-align: justify;\">With their faces are in different direction, Q is positioned second to R's left. W does not sit next to R; and, two people are seated between Q and W. V, who is seated second to U's right, is seated opposite to W. U, who is seated just to the right of S and faces out of the table. Between S and T, who is facing the same way as S, there are two people seated. T is not seated next to Q.\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">Who sits opposite of S?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74bb63e516",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74bb63e51d",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74bb63e524",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74bb63e544",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb63e54c",
+                        "type": "text",
+                        "properties": {
+                          "html": "V"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb63e55b",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb63e562",
+                        "type": "text",
+                        "properties": {
+                          "html": "T"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb63e571",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb63e578",
+                        "type": "text",
+                        "properties": {
+                          "html": "R"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb63e587",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb63e58d",
+                        "type": "text",
+                        "properties": {
+                          "html": "P"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_description_widgets_0": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74bb63e5e4",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bb63e5ea",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for question:</strong></p><p style=\"text-align: justify;\">Eight people, P, Q, R, S, T, U, V, and W, are seated around a circular table with some facing the interior and others the outside, but not always in that sequence. A maximum of two adjacent people can be facing the same way at once. \n</p><p style=\"text-align: justify;\">With their faces are in different direction, Q is positioned second to R's left. W does not sit next to R; and, two people are seated between Q and W. V, who is seated second to U's right, is seated opposite to W. U, who is seated just to the right of S and faces out of the table. Between S and T, who is facing the same way as S, there are two people seated. T is not seated next to Q.\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">Who sits at the left of Q?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74bb63e5fb",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74bb63e602",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74bb63e60a",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74bb63e629",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb63e630",
+                        "type": "text",
+                        "properties": {
+                          "html": "V"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb63e63f",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb63e646",
+                        "type": "text",
+                        "properties": {
+                          "html": "U"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb63e655",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb63e65c",
+                        "type": "text",
+                        "properties": {
+                          "html": "R"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb63e66b",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb63e672",
+                        "type": "text",
+                        "properties": {
+                          "html": "S"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_description_widgets_0": [],
+                "sections_0_blocks_1": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74bb63e6c9",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bb63e6ce",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for question:</strong></p><p style=\"text-align: justify;\">Eight people, P, Q, R, S, T, U, V, and W, are seated around a circular table with some facing the interior and others the outside, but not always in that sequence. A maximum of two adjacent people can be facing the same way at once. \n</p><p style=\"text-align: justify;\">With their faces are in different direction, Q is positioned second to R's left. W does not sit next to R; and, two people are seated between Q and W. V, who is seated second to U's right, is seated opposite to W. U, who is seated just to the right of S and faces out of the table. Between S and T, who is facing the same way as S, there are two people seated. T is not seated next to Q.\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">Who is at the 2nd right of S?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74bb63e6df",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74bb63e6e6",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74bb63e6ed",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74bb63e70c",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb63e713",
+                        "type": "text",
+                        "properties": {
+                          "html": "P"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb63e722",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb63e729",
+                        "type": "text",
+                        "properties": {
+                          "html": "Q"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb63e737",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb63e73e",
+                        "type": "text",
+                        "properties": {
+                          "html": "T"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb63e74e",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb63e754",
+                        "type": "text",
+                        "properties": {
+                          "html": "R"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_description_widgets_0": [],
+                "sections_0_blocks_2": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74bb63e7c2",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bb63e7ca",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for question:</strong></p><p style=\"text-align: justify;\">Eight people, P, Q, R, S, T, U, V, and W, are seated around a circular table with some facing the interior and others the outside, but not always in that sequence. A maximum of two adjacent people can be facing the same way at once. \n</p><p style=\"text-align: justify;\">With their faces are in different direction, Q is positioned second to R's left. W does not sit next to R; and, two people are seated between Q and W. V, who is seated second to U's right, is seated opposite to W. U, who is seated just to the right of S and faces out of the table. Between S and T, who is facing the same way as S, there are two people seated. T is not seated next to Q.\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">Who is at the opposite of W?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74bb63e7dc",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74bb63e7e2",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74bb63e7ea",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74bb63e808",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb63e80f",
+                        "type": "text",
+                        "properties": {
+                          "html": "Q"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb63e81d",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb63e824",
+                        "type": "text",
+                        "properties": {
+                          "html": "P"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb63e832",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb63e839",
+                        "type": "text",
+                        "properties": {
+                          "html": "U"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb63e848",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb63e84f",
+                        "type": "text",
+                        "properties": {
+                          "html": "V"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_description_widgets_0": [],
+                "sections_0_blocks_3": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74bb63e8a6",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bb63e8ab",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for question:</strong></p><p style=\"text-align: justify;\">Eight people, P, Q, R, S, T, U, V, and W, are seated around a circular table with some facing the interior and others the outside, but not always in that sequence. A maximum of two adjacent people can be facing the same way at once. \n</p><p style=\"text-align: justify;\">With their faces are in different direction, Q is positioned second to R's left. W does not sit next to R; and, two people are seated between Q and W. V, who is seated second to U's right, is seated opposite to W. U, who is seated just to the right of S and faces out of the table. Between S and T, who is facing the same way as S, there are two people seated. T is not seated next to Q.\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">Who is 3rd to right of U?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74bb63e8bc",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74bb63e8c3",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74bb63e8ca",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74bb63e8e9",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb63e8f0",
+                        "type": "text",
+                        "properties": {
+                          "html": "R"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb63e8ff",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb63e905",
+                        "type": "text",
+                        "properties": {
+                          "html": "V"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb63e914",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb63e91b",
+                        "type": "text",
+                        "properties": {
+                          "html": "P"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb63e92a",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb63e930",
+                        "type": "text",
+                        "properties": {
+                          "html": "W"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_4": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74bb63e98f",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bb63e994",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for question:</strong></p><p style=\"text-align: justify;\">Eight people, S, T, U, V, W, X, Y, and Z, are seated around a circular table with their faces to the centre. But they do not have to be seated in that sequence. \n</p><p style=\"text-align: justify;\">Z takes a seat on S's right (immediate) and three people away from T. Third from the left of S is W. There are just two people seated between W and V, who is seated just to X's left. U is seated immediately to Y's right.\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">Who is at the immediate left of X?</p><p style=\"text-align: justify;\">\n</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74bb63e9a5",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74bb63e9ac",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74bb63e9b3",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74bb63e9d1",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb63e9d8",
+                        "type": "text",
+                        "properties": {
+                          "html": "T"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb63e9e7",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb63e9ee",
+                        "type": "text",
+                        "properties": {
+                          "html": "Y"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb63e9fd",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb63ea03",
+                        "type": "text",
+                        "properties": {
+                          "html": "W"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb63ea18",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb63ea1e",
+                        "type": "text",
+                        "properties": {
+                          "html": "V"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_5": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74bb63ea7e",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bb63ea82",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for question:</strong></p><p style=\"text-align: justify;\">Eight people, S, T, U, V, W, X, Y, and Z, are seated around a circular table with their faces to the centre. But they do not have to be seated in that sequence. \n</p><p style=\"text-align: justify;\">Z takes a seat on S's right (immediate) and three people away from T. Third from the left of S is W. There are just two people seated between W and V, who is seated just to X's left. U is seated immediately to Y's right.\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">Who is at the opposite of S?</p><p style=\"text-align: justify;\">\n</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74bb63ea94",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74bb63ea9b",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74bb63eaa2",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74bb63eac0",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb63eac7",
+                        "type": "text",
+                        "properties": {
+                          "html": "U"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb63ead6",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb63eadd",
+                        "type": "text",
+                        "properties": {
+                          "html": "T"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb63eaec",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb63eaf3",
+                        "type": "text",
+                        "properties": {
+                          "html": "X"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb63eb01",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb63eb08",
+                        "type": "text",
+                        "properties": {
+                          "html": "Z"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_6": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74bb63eb68",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bb63eb7e",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for question:</strong></p><p style=\"text-align: justify;\">Eight people, S, T, U, V, W, X, Y, and Z, are seated around a circular table with their faces to the centre. But they do not have to be seated in that sequence. \n</p><p style=\"text-align: justify;\">Z takes a seat on S's right (immediate) and three people away from T. Third from the left of S is W. There are just two people seated between W and V, who is seated just to X's left. U is seated immediately to Y's right.\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">Who sits at the 3rd to left of T?</p><p style=\"text-align: justify;\">\n</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74bb63eb9d",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74bb63eba9",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74bb63ebb5",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74bb63ebd4",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb63ebdb",
+                        "type": "text",
+                        "properties": {
+                          "html": "S"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb63ebea",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb63ebf1",
+                        "type": "text",
+                        "properties": {
+                          "html": "V"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb63ec00",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb63ec06",
+                        "type": "text",
+                        "properties": {
+                          "html": "Z"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb63ec15",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb63ec1c",
+                        "type": "text",
+                        "properties": {
+                          "html": "X"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_7": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74bb63ec7b",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bb63ec80",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for question:</strong></p><p style=\"text-align: justify;\">Eight people, S, T, U, V, W, X, Y, and Z, are seated around a circular table with their faces to the centre. But they do not have to be seated in that sequence. \n</p><p style=\"text-align: justify;\">Z takes a seat on S's right (immediate) and three people away from T. Third from the left of S is W. There are just two people seated between W and V, who is seated just to X's left. U is seated immediately to Y's right.\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">Who is a neighbour of Y?</p><p style=\"text-align: justify;\">\n</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74bb63ec91",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74bb63ec98",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74bb63ec9f",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74bb63ecbe",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb63ecc5",
+                        "type": "text",
+                        "properties": {
+                          "html": "S"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb63ecd4",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb63ecda",
+                        "type": "text",
+                        "properties": {
+                          "html": "Z"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb63ece9",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb63ecf0",
+                        "type": "text",
+                        "properties": {
+                          "html": "X"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb63ecff",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb63ed06",
+                        "type": "text",
+                        "properties": {
+                          "html": "W"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_8": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74bb63ed65",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bb63ed6a",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for question:</strong></p><p style=\"text-align: justify;\">Eight people, S, T, U, V, W, X, Y, and Z, are seated around a circular table with their faces to the centre. But they do not have to be seated in that sequence. \n</p><p style=\"text-align: justify;\">Z takes a seat on S's right (immediate) and three people away from T. Third from the left of S is W. There are just two people seated between W and V, who is seated just to X's left. U is seated immediately to Y's right.\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">Which of the following is at the opposite of V?</p><p style=\"text-align: justify;\">\n</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74bb63ed7b",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74bb63ed82",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74bb63ed89",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74bb63eda8",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb63edaf",
+                        "type": "text",
+                        "properties": {
+                          "html": "Y"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb63edbd",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb63edc4",
+                        "type": "text",
+                        "properties": {
+                          "html": "U"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb63edd3",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb63edd9",
+                        "type": "text",
+                        "properties": {
+                          "html": "S"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb63ede8",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb63edef",
+                        "type": "text",
+                        "properties": {
+                          "html": "T"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_9": []
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "availabilityStatus": null,
+    "autoNavigationEnabled": false,
+    "displayBackButtonWhenNavigationPerBlock": true,
+    "saveAndResumeLaterEnabled": null,
+    "tagsAddedOnCompletion": [],
+    "tagsAddedOnPass": [],
+    "sendAnonymousSubmissionsToEmailLeads": false,
+    "afterSubmitActionEnabled": null,
+    "afterSubmitActionProperties": null,
+    "showWizardOnNextEdit": false,
+    "revisitAfterSubmissionAction": null,
+    "navigationTemplate": "HorizontalSpacedBetweenNavigationTemplate",
+    "learnerSearchBarEnabled": true,
+    "learnerUnansweredQuestionsEnabled": true,
+    "learnerFavouriteQuestionEnabled": true,
+    "learnerCompletionProgressEnabled": true,
+    "learnerShowIndexOfQuestionsEnabled": false,
+    "learnerTimeNotificationsEnabled": false,
+    "learnerAllowInterruptionsEnabled": true,
+    "learnerAllowInterruptionsTimeoutInMinutes": 30,
+    "learnerReclaimTryOnInterruptionTimeoutEnabled": false,
+    "learnerAskBeforeContinueToSaved": true,
+    "learnerAutoSaveEnabled": null,
+    "spellcheckDisabled": null,
+    "showPartialScoreOnSubmission": true,
+    "deliverableQuestionsSubsetType": "all",
+    "questionRandomizationType": "none",
+    "serveQuestionsBasedOnPreviousSubmission": null,
+    "scoringDisabled": false,
+    "isSelfAssessment": false,
+    "useDefaultCertificateTemplate": null,
+    "certificateTemplate": null,
+    "certificateSocialShare": null,
+    "migrationData": null,
+    "useAssessmentPassingGradeForOpenEndedCorrectness": true,
+    "openEndedCorrectnessPassingGrade": null,
+    "showScorePercentage": null,
+    "showScorePoints": null,
+    "showScoreCorrectAnswers": null,
+    "editorBehaviorSettings": null,
+    "manualReviewEnabled": null,
+    "resultsSummary": {
+      "enabled": true,
+      "showStatusIcon": true,
+      "showStatusText": true,
+      "showScorePercentage": true,
+      "showScorePoints": true,
+      "showScoreCorrectAnswers": false,
+      "showTimeTakenToComplete": true,
+      "showDateSubmitted": true,
+      "showAttemptCount": true
+    },
+    "meta": null,
+    "submissionsCount": 823,
+    "fromMarketplace": null,
+    "aiFeedbackEnabled": null,
+    "numberOfFeedbackQuestions": null,
+    "created": 1723288502.711226,
+    "modified": 1724130760.509979,
+    "contentHash": "ad0187be7bc285d6bede99d3b668213717e1b412305d1239c4fc58603fc35d6d",
+    "id": "66b74bb67f809db010095231",
+    "objectType": "assessment",
+    "isEditBlockedDueToSync": false,
+    "variables": {
+      "submission": {
+        "self": {
+          "score": 0,
+          "points": 0,
+          "total_points": 10,
+          "correct_answers": 0,
+          "total_questions": 10,
+          "time_spent": "00:00:01",
+          "date_submitted": "11/08/26",
+          "attempt_count": 3,
+          "max_tries": null,
+          "pass_grade": 50,
+          "time_spent_seconds": 1,
+          "raw_start_date": 1786440561.922084
+        }
+      },
+      "school": {
+        "name": "Apna College",
+        "url": "www.apnacollege.in",
+        "description": "The most loved coding community of India ❤️"
+      },
+      "user": {
+        "username": "ram",
+        "email": "p4542639@gmail.com",
+        "cf_phonenumber": "7666690798"
+      }
+    }
+  },
+  "reclaimedTry": false,
+  "feedback": [
+    {
+      "title": "",
+      "id": "section66b74bb63e4f8",
+      "blocks": [
+        {
+          "id": "mc66b74bb63e4ff",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for question:Eight people, P, Q, R, S, T, U, V, and W, are seated around a circular table with some facing the interior and others the outside, but not always in that sequence. A maximum of two adjacent people can be facing the same way at once. With their faces are in different direction, Q is positioned second to R's left. W does not sit next to R; and, two people are seated between Q and W. V, who is seated second to U's right, is seated opposite to W. U, who is seated just to the right of S and faces out of the table. Between S and T, who is facing the same way as S, there are two people seated. T is not seated next to Q. Who sits opposite of S?",
+            "widgets": [
+              {
+                "id": "text66b74bb63e504",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for question:</strong></p><p style=\"text-align: justify;\">Eight people, P, Q, R, S, T, U, V, and W, are seated around a circular table with some facing the interior and others the outside, but not always in that sequence. A maximum of two adjacent people can be facing the same way at once. \n</p><p style=\"text-align: justify;\">With their faces are in different direction, Q is positioned second to R's left. W does not sit next to R; and, two people are seated between Q and W. V, who is seated second to U's right, is seated opposite to W. U, who is seated just to the right of S and faces out of the table. Between S and T, who is facing the same way as S, there are two people seated. T is not seated next to Q.\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">Who sits opposite of S?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74bb63e544",
+              "description": {
+                "text": "V",
+                "widgets": [
+                  {
+                    "id": "text66b74bb63e54c",
+                    "type": "text",
+                    "properties": {
+                      "html": "V"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb63e55b",
+              "description": {
+                "text": "T",
+                "widgets": [
+                  {
+                    "id": "text66b74bb63e562",
+                    "type": "text",
+                    "properties": {
+                      "html": "T"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb63e571",
+              "description": {
+                "text": "R",
+                "widgets": [
+                  {
+                    "id": "text66b74bb63e578",
+                    "type": "text",
+                    "properties": {
+                      "html": "R"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb63e587",
+              "description": {
+                "text": "P",
+                "widgets": [
+                  {
+                    "id": "text66b74bb63e58d",
+                    "type": "text",
+                    "properties": {
+                      "html": "P"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74bb63e571",
+              "text": "R",
+              "widgets": [
+                {
+                  "id": "text66b74bb63e578",
+                  "type": "text",
+                  "properties": {
+                    "html": "R"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>As we have <br>Q is second to the left of R, and they are both facing different\ndirections. <br>W does not sit next to R; instead, two people are seated between Q\nand W. <br>There are two options based on the conditions mentioned above-<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/959d8088bc6da5e7499467737815c941.png\"><br>Once again, <br>we have \nW is seated opposite of V, who is seated second\nfrom the right of U.\n<br>U is seated immediately to the right of S and\nfaces the exterior of the table.<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/0156e9adff8aee328d4053dcd4f1b544.png\"><br>Once again, <br>we\nhave Between S and T, who is facing the same direction as S, are two people\nseated. \nT is\nnot seated next to Q. <br>Based on the mentioned\ncriteria, case 1 is disqualified. Case 2 thus illustrates the final\nconfiguration.<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/d83d2020c9b214fd249a293a2973bb62.png\"><br><span>Final\nConfiguration –<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/4ba8eeb1740c44017402af10d8a2efbb.png\"></span><br><span>Therefore,\ncorrect answers are –<br><span>Option\n(C) – R</span> </span><br></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74bb63e5e4",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for question:Eight people, P, Q, R, S, T, U, V, and W, are seated around a circular table with some facing the interior and others the outside, but not always in that sequence. A maximum of two adjacent people can be facing the same way at once. With their faces are in different direction, Q is positioned second to R's left. W does not sit next to R; and, two people are seated between Q and W. V, who is seated second to U's right, is seated opposite to W. U, who is seated just to the right of S and faces out of the table. Between S and T, who is facing the same way as S, there are two people seated. T is not seated next to Q. Who sits at the left of Q?",
+            "widgets": [
+              {
+                "id": "text66b74bb63e5ea",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for question:</strong></p><p style=\"text-align: justify;\">Eight people, P, Q, R, S, T, U, V, and W, are seated around a circular table with some facing the interior and others the outside, but not always in that sequence. A maximum of two adjacent people can be facing the same way at once. \n</p><p style=\"text-align: justify;\">With their faces are in different direction, Q is positioned second to R's left. W does not sit next to R; and, two people are seated between Q and W. V, who is seated second to U's right, is seated opposite to W. U, who is seated just to the right of S and faces out of the table. Between S and T, who is facing the same way as S, there are two people seated. T is not seated next to Q.\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">Who sits at the left of Q?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74bb63e629",
+              "description": {
+                "text": "V",
+                "widgets": [
+                  {
+                    "id": "text66b74bb63e630",
+                    "type": "text",
+                    "properties": {
+                      "html": "V"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb63e63f",
+              "description": {
+                "text": "U",
+                "widgets": [
+                  {
+                    "id": "text66b74bb63e646",
+                    "type": "text",
+                    "properties": {
+                      "html": "U"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb63e655",
+              "description": {
+                "text": "R",
+                "widgets": [
+                  {
+                    "id": "text66b74bb63e65c",
+                    "type": "text",
+                    "properties": {
+                      "html": "R"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb63e66b",
+              "description": {
+                "text": "S",
+                "widgets": [
+                  {
+                    "id": "text66b74bb63e672",
+                    "type": "text",
+                    "properties": {
+                      "html": "S"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74bb63e629",
+              "text": "V",
+              "widgets": [
+                {
+                  "id": "text66b74bb63e630",
+                  "type": "text",
+                  "properties": {
+                    "html": "V"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>As we have <br>Q is second to the left of R, and they are both facing different\ndirections. <br>W does not sit next to R; instead, two people are seated between Q\nand W. <br>There are two options based on the conditions mentioned above-<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/959d8088bc6da5e7499467737815c941.png\"><br>Once again, <br>we have \nW is seated opposite of V, who is seated second\nfrom the right of U.\n<br>U is seated immediately to the right of S and\nfaces the exterior of the table.<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/0156e9adff8aee328d4053dcd4f1b544.png\"><br>Once again, <br>we\nhave Between S and T, who is facing the same direction as S, are two people\nseated. \nT is\nnot seated next to Q. <br>Based on the mentioned\ncriteria, case 1 is disqualified. Case 2 thus illustrates the final\nconfiguration.<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/d83d2020c9b214fd249a293a2973bb62.png\"><br><span>Final\nConfiguration –<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/4ba8eeb1740c44017402af10d8a2efbb.png\"></span><br><span>Therefore,\ncorrect answers are –<br><span>Option\n(A) – V</span></span><br></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74bb63e6c9",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for question:Eight people, P, Q, R, S, T, U, V, and W, are seated around a circular table with some facing the interior and others the outside, but not always in that sequence. A maximum of two adjacent people can be facing the same way at once. With their faces are in different direction, Q is positioned second to R's left. W does not sit next to R; and, two people are seated between Q and W. V, who is seated second to U's right, is seated opposite to W. U, who is seated just to the right of S and faces out of the table. Between S and T, who is facing the same way as S, there are two people seated. T is not seated next to Q. Who is at the 2nd right of S?",
+            "widgets": [
+              {
+                "id": "text66b74bb63e6ce",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for question:</strong></p><p style=\"text-align: justify;\">Eight people, P, Q, R, S, T, U, V, and W, are seated around a circular table with some facing the interior and others the outside, but not always in that sequence. A maximum of two adjacent people can be facing the same way at once. \n</p><p style=\"text-align: justify;\">With their faces are in different direction, Q is positioned second to R's left. W does not sit next to R; and, two people are seated between Q and W. V, who is seated second to U's right, is seated opposite to W. U, who is seated just to the right of S and faces out of the table. Between S and T, who is facing the same way as S, there are two people seated. T is not seated next to Q.\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">Who is at the 2nd right of S?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74bb63e70c",
+              "description": {
+                "text": "P",
+                "widgets": [
+                  {
+                    "id": "text66b74bb63e713",
+                    "type": "text",
+                    "properties": {
+                      "html": "P"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb63e722",
+              "description": {
+                "text": "Q",
+                "widgets": [
+                  {
+                    "id": "text66b74bb63e729",
+                    "type": "text",
+                    "properties": {
+                      "html": "Q"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb63e737",
+              "description": {
+                "text": "T",
+                "widgets": [
+                  {
+                    "id": "text66b74bb63e73e",
+                    "type": "text",
+                    "properties": {
+                      "html": "T"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb63e74e",
+              "description": {
+                "text": "R",
+                "widgets": [
+                  {
+                    "id": "text66b74bb63e754",
+                    "type": "text",
+                    "properties": {
+                      "html": "R"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74bb63e722",
+              "text": "Q",
+              "widgets": [
+                {
+                  "id": "text66b74bb63e729",
+                  "type": "text",
+                  "properties": {
+                    "html": "Q"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>As we have <br>Q is second to the left of R, and they are both facing different\ndirections. <br>W does not sit next to R; instead, two people are seated between Q\nand W. <br>There are two options based on the conditions mentioned above-<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/959d8088bc6da5e7499467737815c941.png\"><br>Once again, <br>we have \nW is seated opposite of V, who is seated second\nfrom the right of U.\n<br>U is seated immediately to the right of S and\nfaces the exterior of the table.<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/0156e9adff8aee328d4053dcd4f1b544.png\"><br>Once again, <br>we\nhave Between S and T, who is facing the same direction as S, are two people\nseated. \nT is\nnot seated next to Q. <br>Based on the mentioned\ncriteria, case 1 is disqualified. Case 2 thus illustrates the final\nconfiguration.<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/d83d2020c9b214fd249a293a2973bb62.png\"><br><span>Final\nConfiguration –<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/4ba8eeb1740c44017402af10d8a2efbb.png\"></span><br><span>Therefore,\ncorrect answers are –<br><span>Option\n(B) – Q</span></span><br></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74bb63e7c2",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for question:Eight people, P, Q, R, S, T, U, V, and W, are seated around a circular table with some facing the interior and others the outside, but not always in that sequence. A maximum of two adjacent people can be facing the same way at once. With their faces are in different direction, Q is positioned second to R's left. W does not sit next to R; and, two people are seated between Q and W. V, who is seated second to U's right, is seated opposite to W. U, who is seated just to the right of S and faces out of the table. Between S and T, who is facing the same way as S, there are two people seated. T is not seated next to Q. Who is at the opposite of W?",
+            "widgets": [
+              {
+                "id": "text66b74bb63e7ca",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for question:</strong></p><p style=\"text-align: justify;\">Eight people, P, Q, R, S, T, U, V, and W, are seated around a circular table with some facing the interior and others the outside, but not always in that sequence. A maximum of two adjacent people can be facing the same way at once. \n</p><p style=\"text-align: justify;\">With their faces are in different direction, Q is positioned second to R's left. W does not sit next to R; and, two people are seated between Q and W. V, who is seated second to U's right, is seated opposite to W. U, who is seated just to the right of S and faces out of the table. Between S and T, who is facing the same way as S, there are two people seated. T is not seated next to Q.\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">Who is at the opposite of W?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74bb63e808",
+              "description": {
+                "text": "Q",
+                "widgets": [
+                  {
+                    "id": "text66b74bb63e80f",
+                    "type": "text",
+                    "properties": {
+                      "html": "Q"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb63e81d",
+              "description": {
+                "text": "P",
+                "widgets": [
+                  {
+                    "id": "text66b74bb63e824",
+                    "type": "text",
+                    "properties": {
+                      "html": "P"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb63e832",
+              "description": {
+                "text": "U",
+                "widgets": [
+                  {
+                    "id": "text66b74bb63e839",
+                    "type": "text",
+                    "properties": {
+                      "html": "U"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb63e848",
+              "description": {
+                "text": "V",
+                "widgets": [
+                  {
+                    "id": "text66b74bb63e84f",
+                    "type": "text",
+                    "properties": {
+                      "html": "V"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74bb63e848",
+              "text": "V",
+              "widgets": [
+                {
+                  "id": "text66b74bb63e84f",
+                  "type": "text",
+                  "properties": {
+                    "html": "V"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>As we have <br>Q is second to the left of R, and they are both facing different\ndirections. <br>W does not sit next to R; instead, two people are seated between Q\nand W. <br>There are two options based on the conditions mentioned above-<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/959d8088bc6da5e7499467737815c941.png\"><br>Once again, <br>we have \nW is seated opposite of V, who is seated second\nfrom the right of U.\n<br>U is seated immediately to the right of S and\nfaces the exterior of the table.<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/0156e9adff8aee328d4053dcd4f1b544.png\"><br>Once again, <br>we\nhave Between S and T, who is facing the same direction as S, are two people\nseated. \nT is\nnot seated next to Q. <br>Based on the mentioned\ncriteria, case 1 is disqualified. Case 2 thus illustrates the final\nconfiguration.<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/d83d2020c9b214fd249a293a2973bb62.png\"><br><span>Final\nConfiguration –<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/4ba8eeb1740c44017402af10d8a2efbb.png\"></span><br><span>Therefore,\ncorrect answers are –<br><span>Option\n(D) – V</span></span><br></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74bb63e8a6",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for question:Eight people, P, Q, R, S, T, U, V, and W, are seated around a circular table with some facing the interior and others the outside, but not always in that sequence. A maximum of two adjacent people can be facing the same way at once. With their faces are in different direction, Q is positioned second to R's left. W does not sit next to R; and, two people are seated between Q and W. V, who is seated second to U's right, is seated opposite to W. U, who is seated just to the right of S and faces out of the table. Between S and T, who is facing the same way as S, there are two people seated. T is not seated next to Q. Who is 3rd to right of U?",
+            "widgets": [
+              {
+                "id": "text66b74bb63e8ab",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for question:</strong></p><p style=\"text-align: justify;\">Eight people, P, Q, R, S, T, U, V, and W, are seated around a circular table with some facing the interior and others the outside, but not always in that sequence. A maximum of two adjacent people can be facing the same way at once. \n</p><p style=\"text-align: justify;\">With their faces are in different direction, Q is positioned second to R's left. W does not sit next to R; and, two people are seated between Q and W. V, who is seated second to U's right, is seated opposite to W. U, who is seated just to the right of S and faces out of the table. Between S and T, who is facing the same way as S, there are two people seated. T is not seated next to Q.\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">Who is 3rd to right of U?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74bb63e8e9",
+              "description": {
+                "text": "R",
+                "widgets": [
+                  {
+                    "id": "text66b74bb63e8f0",
+                    "type": "text",
+                    "properties": {
+                      "html": "R"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb63e8ff",
+              "description": {
+                "text": "V",
+                "widgets": [
+                  {
+                    "id": "text66b74bb63e905",
+                    "type": "text",
+                    "properties": {
+                      "html": "V"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb63e914",
+              "description": {
+                "text": "P",
+                "widgets": [
+                  {
+                    "id": "text66b74bb63e91b",
+                    "type": "text",
+                    "properties": {
+                      "html": "P"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb63e92a",
+              "description": {
+                "text": "W",
+                "widgets": [
+                  {
+                    "id": "text66b74bb63e930",
+                    "type": "text",
+                    "properties": {
+                      "html": "W"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74bb63e8e9",
+              "text": "R",
+              "widgets": [
+                {
+                  "id": "text66b74bb63e8f0",
+                  "type": "text",
+                  "properties": {
+                    "html": "R"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>As we have <br>Q is second to the left of R, and they are both facing different\ndirections. <br>W does not sit next to R; instead, two people are seated between Q\nand W. <br>There are two options based on the conditions mentioned above-<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/959d8088bc6da5e7499467737815c941.png\"><br>Once again, <br>we have \nW is seated opposite of V, who is seated second\nfrom the right of U.\n<br>U is seated immediately to the right of S and\nfaces the exterior of the table.<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/0156e9adff8aee328d4053dcd4f1b544.png\"><br>Once again, <br>we\nhave Between S and T, who is facing the same direction as S, are two people\nseated. \nT is\nnot seated next to Q. <br>Based on the mentioned\ncriteria, case 1 is disqualified. Case 2 thus illustrates the final\nconfiguration.<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/d83d2020c9b214fd249a293a2973bb62.png\"><br><span>Final\nConfiguration –<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/4ba8eeb1740c44017402af10d8a2efbb.png\"></span><br><span>Therefore,\ncorrect answers are –<br><span>Option\n(A) – R</span></span><br></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74bb63e98f",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for question:Eight people, S, T, U, V, W, X, Y, and Z, are seated around a circular table with their faces to the centre. But they do not have to be seated in that sequence. Z takes a seat on S's right (immediate) and three people away from T. Third from the left of S is W. There are just two people seated between W and V, who is seated just to X's left. U is seated immediately to Y's right. Who is at the immediate left of X?",
+            "widgets": [
+              {
+                "id": "text66b74bb63e994",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for question:</strong></p><p style=\"text-align: justify;\">Eight people, S, T, U, V, W, X, Y, and Z, are seated around a circular table with their faces to the centre. But they do not have to be seated in that sequence. \n</p><p style=\"text-align: justify;\">Z takes a seat on S's right (immediate) and three people away from T. Third from the left of S is W. There are just two people seated between W and V, who is seated just to X's left. U is seated immediately to Y's right.\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">Who is at the immediate left of X?</p><p style=\"text-align: justify;\">\n</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74bb63e9d1",
+              "description": {
+                "text": "T",
+                "widgets": [
+                  {
+                    "id": "text66b74bb63e9d8",
+                    "type": "text",
+                    "properties": {
+                      "html": "T"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb63e9e7",
+              "description": {
+                "text": "Y",
+                "widgets": [
+                  {
+                    "id": "text66b74bb63e9ee",
+                    "type": "text",
+                    "properties": {
+                      "html": "Y"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb63e9fd",
+              "description": {
+                "text": "W",
+                "widgets": [
+                  {
+                    "id": "text66b74bb63ea03",
+                    "type": "text",
+                    "properties": {
+                      "html": "W"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb63ea18",
+              "description": {
+                "text": "V",
+                "widgets": [
+                  {
+                    "id": "text66b74bb63ea1e",
+                    "type": "text",
+                    "properties": {
+                      "html": "V"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74bb63ea18",
+              "text": "V",
+              "widgets": [
+                {
+                  "id": "text66b74bb63ea1e",
+                  "type": "text",
+                  "properties": {
+                    "html": "V"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>1. Z sits three seats apart from T and directly to the right of S.\n<br>2. W sits third from the left\nof S.<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/64e0087af9c7ebbe94eb64e766b250a7.png\"><br>3. Only two people sit between W and V, who seats to the left of X. <br>4. U sits immediately to the right of Y.<br>Therefore, case 2 gets eliminated, & case 1 gives the\nfinal arrangement –<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/cc9b44feb456fe06fba1fe40b97ab395.png\"><br><span>Final\narrangement –<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/548af84d2ff14885eeb958ad580839b1.png\" style=\"width: 200px; height: 207px;\"></span><br><span>So,\nthe correct answers are –<br><span>Option\n(D) – V</span> </span><br></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74bb63ea7e",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for question:Eight people, S, T, U, V, W, X, Y, and Z, are seated around a circular table with their faces to the centre. But they do not have to be seated in that sequence. Z takes a seat on S's right (immediate) and three people away from T. Third from the left of S is W. There are just two people seated between W and V, who is seated just to X's left. U is seated immediately to Y's right. Who is at the opposite of S?",
+            "widgets": [
+              {
+                "id": "text66b74bb63ea82",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for question:</strong></p><p style=\"text-align: justify;\">Eight people, S, T, U, V, W, X, Y, and Z, are seated around a circular table with their faces to the centre. But they do not have to be seated in that sequence. \n</p><p style=\"text-align: justify;\">Z takes a seat on S's right (immediate) and three people away from T. Third from the left of S is W. There are just two people seated between W and V, who is seated just to X's left. U is seated immediately to Y's right.\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">Who is at the opposite of S?</p><p style=\"text-align: justify;\">\n</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74bb63eac0",
+              "description": {
+                "text": "U",
+                "widgets": [
+                  {
+                    "id": "text66b74bb63eac7",
+                    "type": "text",
+                    "properties": {
+                      "html": "U"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb63ead6",
+              "description": {
+                "text": "T",
+                "widgets": [
+                  {
+                    "id": "text66b74bb63eadd",
+                    "type": "text",
+                    "properties": {
+                      "html": "T"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb63eaec",
+              "description": {
+                "text": "X",
+                "widgets": [
+                  {
+                    "id": "text66b74bb63eaf3",
+                    "type": "text",
+                    "properties": {
+                      "html": "X"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb63eb01",
+              "description": {
+                "text": "Z",
+                "widgets": [
+                  {
+                    "id": "text66b74bb63eb08",
+                    "type": "text",
+                    "properties": {
+                      "html": "Z"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74bb63ead6",
+              "text": "T",
+              "widgets": [
+                {
+                  "id": "text66b74bb63eadd",
+                  "type": "text",
+                  "properties": {
+                    "html": "T"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>1. Z sits three seats apart from T and directly to the right of S.\n<br>2. W sits third from the left\nof S.<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/64e0087af9c7ebbe94eb64e766b250a7.png\"><br>3. Only two people sit between W and V, who seats to the left of X. <br>4. U sits immediately to the right of Y.<br>Therefore, case 2 gets eliminated, & case 1 gives the\nfinal arrangement –<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/cc9b44feb456fe06fba1fe40b97ab395.png\"><br><span>Final\narrangement –<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/548af84d2ff14885eeb958ad580839b1.png\" style=\"width: 200px; height: 207px;\"></span><br><span>So,\nthe correct answers are –<br><span>Option\n(B) – T</span></span><br></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74bb63eb68",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for question:Eight people, S, T, U, V, W, X, Y, and Z, are seated around a circular table with their faces to the centre. But they do not have to be seated in that sequence. Z takes a seat on S's right (immediate) and three people away from T. Third from the left of S is W. There are just two people seated between W and V, who is seated just to X's left. U is seated immediately to Y's right. Who sits at the 3rd to left of T?",
+            "widgets": [
+              {
+                "id": "text66b74bb63eb7e",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for question:</strong></p><p style=\"text-align: justify;\">Eight people, S, T, U, V, W, X, Y, and Z, are seated around a circular table with their faces to the centre. But they do not have to be seated in that sequence. \n</p><p style=\"text-align: justify;\">Z takes a seat on S's right (immediate) and three people away from T. Third from the left of S is W. There are just two people seated between W and V, who is seated just to X's left. U is seated immediately to Y's right.\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">Who sits at the 3rd to left of T?</p><p style=\"text-align: justify;\">\n</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74bb63ebd4",
+              "description": {
+                "text": "S",
+                "widgets": [
+                  {
+                    "id": "text66b74bb63ebdb",
+                    "type": "text",
+                    "properties": {
+                      "html": "S"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb63ebea",
+              "description": {
+                "text": "V",
+                "widgets": [
+                  {
+                    "id": "text66b74bb63ebf1",
+                    "type": "text",
+                    "properties": {
+                      "html": "V"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb63ec00",
+              "description": {
+                "text": "Z",
+                "widgets": [
+                  {
+                    "id": "text66b74bb63ec06",
+                    "type": "text",
+                    "properties": {
+                      "html": "Z"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb63ec15",
+              "description": {
+                "text": "X",
+                "widgets": [
+                  {
+                    "id": "text66b74bb63ec1c",
+                    "type": "text",
+                    "properties": {
+                      "html": "X"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74bb63ec00",
+              "text": "Z",
+              "widgets": [
+                {
+                  "id": "text66b74bb63ec06",
+                  "type": "text",
+                  "properties": {
+                    "html": "Z"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>1. Z sits three seats apart from T and directly to the right of S.\n<br>2. W sits third from the left\nof S.<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/64e0087af9c7ebbe94eb64e766b250a7.png\"><br>3. Only two people sit between W and V, who seats to the left of X. <br>4. U sits immediately to the right of Y.<br>Therefore, case 2 gets eliminated, & case 1 gives the\nfinal arrangement –<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/cc9b44feb456fe06fba1fe40b97ab395.png\"><br><span>Final\narrangement –<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/548af84d2ff14885eeb958ad580839b1.png\" style=\"width: 200px; height: 207px;\"></span><br><span>So,\nthe correct answers are –<br><span>Option\n(C) – Z</span></span><br></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74bb63ec7b",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for question:Eight people, S, T, U, V, W, X, Y, and Z, are seated around a circular table with their faces to the centre. But they do not have to be seated in that sequence. Z takes a seat on S's right (immediate) and three people away from T. Third from the left of S is W. There are just two people seated between W and V, who is seated just to X's left. U is seated immediately to Y's right. Who is a neighbour of Y?",
+            "widgets": [
+              {
+                "id": "text66b74bb63ec80",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for question:</strong></p><p style=\"text-align: justify;\">Eight people, S, T, U, V, W, X, Y, and Z, are seated around a circular table with their faces to the centre. But they do not have to be seated in that sequence. \n</p><p style=\"text-align: justify;\">Z takes a seat on S's right (immediate) and three people away from T. Third from the left of S is W. There are just two people seated between W and V, who is seated just to X's left. U is seated immediately to Y's right.\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">Who is a neighbour of Y?</p><p style=\"text-align: justify;\">\n</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74bb63ecbe",
+              "description": {
+                "text": "S",
+                "widgets": [
+                  {
+                    "id": "text66b74bb63ecc5",
+                    "type": "text",
+                    "properties": {
+                      "html": "S"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb63ecd4",
+              "description": {
+                "text": "Z",
+                "widgets": [
+                  {
+                    "id": "text66b74bb63ecda",
+                    "type": "text",
+                    "properties": {
+                      "html": "Z"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb63ece9",
+              "description": {
+                "text": "X",
+                "widgets": [
+                  {
+                    "id": "text66b74bb63ecf0",
+                    "type": "text",
+                    "properties": {
+                      "html": "X"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb63ecff",
+              "description": {
+                "text": "W",
+                "widgets": [
+                  {
+                    "id": "text66b74bb63ed06",
+                    "type": "text",
+                    "properties": {
+                      "html": "W"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74bb63ecff",
+              "text": "W",
+              "widgets": [
+                {
+                  "id": "text66b74bb63ed06",
+                  "type": "text",
+                  "properties": {
+                    "html": "W"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>1. Z sits three seats apart from T and directly to the right of S.\n<br>2. W sits third from the left\nof S.<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/64e0087af9c7ebbe94eb64e766b250a7.png\"><br>3. Only two people sit between W and V, who seats to the left of X. <br>4. U sits immediately to the right of Y.<br>Therefore, case 2 gets eliminated, & case 1 gives the\nfinal arrangement –<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/cc9b44feb456fe06fba1fe40b97ab395.png\"><br><span>Final\narrangement –<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/548af84d2ff14885eeb958ad580839b1.png\" style=\"width: 200px; height: 207px;\"></span><br><span>So,\nthe correct answers are –<br><span>Option\n(D) – W</span></span><br></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74bb63ed65",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for question:Eight people, S, T, U, V, W, X, Y, and Z, are seated around a circular table with their faces to the centre. But they do not have to be seated in that sequence. Z takes a seat on S's right (immediate) and three people away from T. Third from the left of S is W. There are just two people seated between W and V, who is seated just to X's left. U is seated immediately to Y's right. Which of the following is at the opposite of V?",
+            "widgets": [
+              {
+                "id": "text66b74bb63ed6a",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for question:</strong></p><p style=\"text-align: justify;\">Eight people, S, T, U, V, W, X, Y, and Z, are seated around a circular table with their faces to the centre. But they do not have to be seated in that sequence. \n</p><p style=\"text-align: justify;\">Z takes a seat on S's right (immediate) and three people away from T. Third from the left of S is W. There are just two people seated between W and V, who is seated just to X's left. U is seated immediately to Y's right.\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">Which of the following is at the opposite of V?</p><p style=\"text-align: justify;\">\n</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74bb63eda8",
+              "description": {
+                "text": "Y",
+                "widgets": [
+                  {
+                    "id": "text66b74bb63edaf",
+                    "type": "text",
+                    "properties": {
+                      "html": "Y"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb63edbd",
+              "description": {
+                "text": "U",
+                "widgets": [
+                  {
+                    "id": "text66b74bb63edc4",
+                    "type": "text",
+                    "properties": {
+                      "html": "U"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb63edd3",
+              "description": {
+                "text": "S",
+                "widgets": [
+                  {
+                    "id": "text66b74bb63edd9",
+                    "type": "text",
+                    "properties": {
+                      "html": "S"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb63ede8",
+              "description": {
+                "text": "T",
+                "widgets": [
+                  {
+                    "id": "text66b74bb63edef",
+                    "type": "text",
+                    "properties": {
+                      "html": "T"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74bb63eda8",
+              "text": "Y",
+              "widgets": [
+                {
+                  "id": "text66b74bb63edaf",
+                  "type": "text",
+                  "properties": {
+                    "html": "Y"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>1. Z sits three seats apart from T and directly to the right of S.\n<br>2. W sits third from the left\nof S.<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/64e0087af9c7ebbe94eb64e766b250a7.png\"><br>3. Only two people sit between W and V, who seats to the left of X. <br>4. U sits immediately to the right of Y.<br>Therefore, case 2 gets eliminated, & case 1 gives the\nfinal arrangement –<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/cc9b44feb456fe06fba1fe40b97ab395.png\"><br><span>Final\narrangement –<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/548af84d2ff14885eeb958ad580839b1.png\" style=\"width: 200px; height: 207px;\"></span><br><span>So,\nthe correct answers are –<br><span>Option\n(A) – Y</span></span><br></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        }
+      ]
+    }
+  ],
+  "submitted": true,
+  "updated": true,
+  "retryCount": 3,
+  "inlineFeedback": [],
+  "errors": [],
+  "success": true
+}

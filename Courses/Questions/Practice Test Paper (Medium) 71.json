@@ -1,0 +1,3410 @@
+{
+  "submission": {
+    "anon_id": null,
+    "model": "assessment-submission",
+    "courseTitleId": "aptitude-teacher2",
+    "object_id": "66b74baf7f809db010095214",
+    "assessmentId": "66b74baf7f809db010095213",
+    "snapshotId": "66bdc129eeb5e59437099a83",
+    "questions": {
+      "section66b74baef0845": [
+        "mc66b74baef084d",
+        "mc66b74baef0960",
+        "mc66b74baef0a6b",
+        "mc66b74baef0bb4",
+        "mc66b74baef0ca7",
+        "mc66b74baef0d8e",
+        "mc66b74baef0e79",
+        "mc66b74baef0f86",
+        "mc66b74baef1075",
+        "mc66b74baef1160"
+      ]
+    },
+    "certificateAnswers": [],
+    "certificateId": null,
+    "questionData": {
+      "mc66b74baef084d": {
+        "deliveredOnTimestamp": 1786440550.122542,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74baef0960": {
+        "deliveredOnTimestamp": 1786440550.122569,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74baef0a6b": {
+        "deliveredOnTimestamp": 1786440550.122582,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74baef0bb4": {
+        "deliveredOnTimestamp": 1786440550.122593,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74baef0ca7": {
+        "deliveredOnTimestamp": 1786440550.122603,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74baef0d8e": {
+        "deliveredOnTimestamp": 1786440550.122613,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74baef0e79": {
+        "deliveredOnTimestamp": 1786440550.122622,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74baef0f86": {
+        "deliveredOnTimestamp": 1786440550.122632,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74baef1075": {
+        "deliveredOnTimestamp": 1786440550.122642,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74baef1160": {
+        "deliveredOnTimestamp": 1786440550.122652,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      }
+    },
+    "answers": [
+      {
+        "blockId": "mc66b74baef084d",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74baef0960",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74baef0a6b",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74baef0bb4",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74baef0ca7",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74baef0d8e",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74baef0e79",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74baef0f86",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74baef1075",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74baef1160",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      }
+    ],
+    "submittedTimestamp": 1786440550.353187,
+    "status": "submitted",
+    "grading_status": "grading_status_graded",
+    "access": "public",
+    "actual_score": null,
+    "score": {
+      "maxScore": 10,
+      "value": 0,
+      "pass": false,
+      "passGrade": 50,
+      "points": 0
+    },
+    "source": {
+      "type": "unit"
+    },
+    "isDefining": true,
+    "isAdminAutoGradedSubmission": null,
+    "listOfNonConsentedBlocks": [],
+    "created": 1786440550.127967,
+    "modified": 1786440550.48512,
+    "id": "6a7aeb66e075fb3c8d0bb0ff",
+    "passed": false
+  },
+  "assessment": {
+    "title": "Practice Test Paper (Medium)",
+    "access": "public",
+    "type": "assessment",
+    "model": "assessmentSnapshot",
+    "description": "Intermediate practice test paper containing 10 assessment questions covering Ratios & Proportions, Time & Work, Blood Relations.",
+    "isTimed": false,
+    "timerFor": "assessmentTimed",
+    "onTimerExpiration": "autoSubmit",
+    "assessmentTimeLimitInSeconds": 600,
+    "questionTimeLimitInSeconds": 60,
+    "standaloneShareEnabled": null,
+    "customUrl": null,
+    "usesCustomUrl": null,
+    "allowAnonymous": true,
+    "randomizeQuestionOptions": false,
+    "disallowPartialSubmissions": false,
+    "submissionDueDateEnabled": false,
+    "submissionDueDate": 1626257823,
+    "makeFeedbackAvailableAfterDateEnabled": false,
+    "makeFeedbackAvailableAfterDate": 0,
+    "customStylesEnabled": true,
+    "customStyles": {
+      "assessmentPage": {
+        "background": {
+          "type": "color",
+          "colorData": {
+            "code": "",
+            "class": "lw-body-bg"
+          }
+        },
+        "dividers": {
+          "top": {
+            "orientation": "top",
+            "divider": "none"
+          },
+          "bottom": {
+            "orientation": "bottom",
+            "divider": "none"
+          }
+        }
+      },
+      "option": {
+        "radioEffect": "scribble",
+        "checkboxEffect": "scribble",
+        "size": "small"
+      },
+      "assessment": {
+        "transition": "none",
+        "background": {
+          "type": "color",
+          "colorData": {
+            "code": "",
+            "class": ""
+          }
+        },
+        "width": "normal",
+        "timerTemplate": "rectangle"
+      },
+      "linearRating": {
+        "labels": {
+          "size": "small"
+        }
+      },
+      "question": {
+        "description": {
+          "background": {
+            "type": "color",
+            "colorData": {
+              "code": "",
+              "class": ""
+            }
+          },
+          "type": "p",
+          "size": "small"
+        },
+        "answers": {
+          "background": {
+            "type": "color",
+            "colorData": {
+              "code": "",
+              "class": ""
+            }
+          }
+        },
+        "requiredAsterisk": {
+          "colorData": {
+            "code": "#ff0000",
+            "class": ""
+          }
+        },
+        "errorMessages": {
+          "size": "verySmall",
+          "colorData": {
+            "code": "#ff0000",
+            "class": ""
+          }
+        }
+      },
+      "input": {
+        "size": "small",
+        "type": "solidDark"
+      },
+      "textarea": {
+        "size": "small",
+        "type": "solidDark"
+      },
+      "dropdown": {
+        "size": "small",
+        "type": "solidDark"
+      }
+    },
+    "submissionMode": "all",
+    "startingDate": 1626765704,
+    "startingDateEnabled": false,
+    "showOnlyFailedQuestionsOnRetry": false,
+    "retryEnabled": true,
+    "retryOnFailOnly": false,
+    "gradingMethod": null,
+    "maxTries": null,
+    "onlyWrongOnRetake": null,
+    "isAmendable": false,
+    "feedbackShowOnScreen": true,
+    "feedbackDownloadPDF": false,
+    "feedbackShowInline": null,
+    "feedbackQuestionList": "all-questions",
+    "feedbackShowQuestionScore": true,
+    "feedbackShowFeedback": true,
+    "feedbackShowNumbering": false,
+    "feedbackShowSectionTitles": false,
+    "feedbackShowUserAnswers": true,
+    "feedbackShowCorrectAnswers": true,
+    "feedbackShowAnswerCorrectness": true,
+    "displayInlineFeedbackEnabled": null,
+    "displayBackButtonWhenSubmissionPerBlock": null,
+    "feedbackShowSectionResultSummary": false,
+    "askConfirmationBeforeSubmit": true,
+    "hasCustomConfirmationBeforeSubmitText": false,
+    "customConfirmationBeforeSubmitText": "Are you sure you want to submit the questionnaire?",
+    "customConfirmationBeforeSubmitTexts": {
+      "title": "Submit Assessment?",
+      "baseConfirmationMessage": "Are you sure you want to submit the questionnaire?",
+      "unansweredNotice": "You have not answered {X} questions."
+    },
+    "amendResubmissionMinutes": 30,
+    "passingGrade": null,
+    "navigationMode": "per-block",
+    "conditionalBlocks": {
+      "introContent": {
+        "id": "content66b74baef077e",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66b74baef078d",
+              "type": "text",
+              "insertedAsWidget": true,
+              "properties": {
+                "html": "Blood Relations PAPER LEVEL-2",
+                "alignment": "center",
+                "customStyle": true,
+                "type": "h2",
+                "size": "normal"
+              }
+            },
+            {
+              "id": "text66b74baef079f",
+              "type": "text",
+              "properties": {
+                "html": "Self-assess your knowledge. Express yourself and get feedback from our instructors.",
+                "customStyle": true,
+                "alignment": "center"
+              }
+            },
+            {
+              "id": "spacer66b74baef07a9",
+              "type": "spacer",
+              "properties": {
+                "height": 20,
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            },
+            {
+              "id": "button66b74baef07b5",
+              "type": "button",
+              "properties": {
+                "buttonLabel": "<span>Ready to start</span>",
+                "buttonSize": "normal",
+                "buttonType": "solidBrand",
+                "alignment": "center",
+                "linkData": {
+                  "linkType": "goToFirst"
+                },
+                "iconColorData": {
+                  "code": "",
+                  "class": ""
+                },
+                "iconDisplay": false,
+                "iconSize": 26,
+                "iconClassName": " fas fa-angle-right",
+                "iconPosition": "right"
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "variables": {
+            "conditionalBlocks_introContent_blockData_widgets_0": [],
+            "conditionalBlocks_introContent_blockData_widgets_1": []
+          }
+        }
+      },
+      "submissionStartingDate": {
+        "id": "content66b74baef07d6",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66b74baef07da",
+              "type": "text",
+              "properties": {
+                "html": "Sorry but this assessment hasn't started yet."
+              }
+            },
+            {
+              "id": "date66b74baef07e1",
+              "type": "date",
+              "properties": {
+                "value": ""
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "displayConditions": ["startingDate"]
+        }
+      },
+      "submissionDueDate": {
+        "id": "content66b74baef07ed",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66b74baef07f1",
+              "type": "text",
+              "properties": {
+                "html": "Sorry but this assessment date is due."
+              }
+            },
+            {
+              "id": "date66b74baef07f8",
+              "type": "date",
+              "properties": {
+                "value": ""
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "displayConditions": ["dateIsDue"]
+        }
+      },
+      "outroContent": {
+        "id": "content66b74baef0803",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "userResults66b74baef0809",
+              "type": "userResults",
+              "properties": {
+                "layout": "template2",
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            },
+            {
+              "id": "feedback66b74baef081e",
+              "type": "feedback",
+              "properties": []
+            },
+            {
+              "id": "outroActions66b74baef082a",
+              "type": "outroActions",
+              "properties": {
+                "layout": "",
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true
+        }
+      }
+    },
+    "systemSections": null,
+    "sections": [
+      {
+        "id": "section66b74baef0845",
+        "title": "",
+        "type": "section",
+        "navigationMode": "per-block",
+        "blocks": [
+          {
+            "id": "mc66b74baef084d",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74baef0852",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for Question:</strong></p><p style=\"text-align: justify;\">Anu, Ayushi, Sohan, Ajay, Anupama, and Anuj are part of a family of six people, consisting of three males and three females. Two of the people are bachelor, and there are two married couples. They are all of diverse professions: teacher, writer, architect, engineer, and lawyer. \n</p><p style=\"text-align: justify;\">Anu is Sohan's wife, and her mother-in-law is Anupama, an engineer. Anuj's father, Ajay, is neither an architect nor a doctor. Anuj is a lawyer, while his sister Ayushi is a writer. Architect is not the profession of Sohan.\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">With whom Anupama is married to?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74baef0864",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74baef086b",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74baef0873",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74baef08a8",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74baef08b0",
+                        "type": "text",
+                        "properties": {
+                          "html": "Anuj"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74baef08c0",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74baef08c7",
+                        "type": "text",
+                        "properties": {
+                          "html": "Ajay"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74baef08d6",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74baef08dd",
+                        "type": "text",
+                        "properties": {
+                          "html": "Sohan"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74baef08ef",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74baef08fb",
+                        "type": "text",
+                        "properties": {
+                          "html": "Ayushi"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_3_description_widgets_0": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74baef0960",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74baef0965",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for Question:</strong></p><p style=\"text-align: justify;\">Anu, Ayushi, Sohan, Ajay, Anupama, and Anuj are part of a family of six people, consisting of three males and three females. Two of the people are bachelor, and there are two married couples. They are all of diverse professions: teacher, writer, architect, engineer, and lawyer. \n</p><p style=\"text-align: justify;\">Anu is Sohan's wife, and her mother-in-law is Anupama, an engineer. Anuj's father, Ajay, is neither an architect nor a doctor. Anuj is a lawyer, while his sister Ayushi is a writer. Architect is not the profession of Sohan.\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">Who worked as an Architect?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74baef0976",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74baef097d",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74baef0993",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74baef09c7",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74baef09d2",
+                        "type": "text",
+                        "properties": {
+                          "html": "Anu"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74baef09e1",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74baef09e8",
+                        "type": "text",
+                        "properties": {
+                          "html": "Anuj"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74baef09f7",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74baef09fd",
+                        "type": "text",
+                        "properties": {
+                          "html": "Anupama"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74baef0a0c",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74baef0a13",
+                        "type": "text",
+                        "properties": {
+                          "html": "Ajay"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_1": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74baef0a6b",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74baef0a73",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for Question:</strong></p><p style=\"text-align: justify;\">Anu, Ayushi, Sohan, Ajay, Anupama, and Anuj are part of a family of six people, consisting of three males and three females. Two of the people are bachelor, and there are two married couples. They are all of diverse professions: teacher, writer, architect, engineer, and lawyer. \n</p><p style=\"text-align: justify;\">Anu is Sohan's wife, and her mother-in-law is Anupama, an engineer. Anuj's father, Ajay, is neither an architect nor a doctor. Anuj is a lawyer, while his sister Ayushi is a writer. Architect is not the profession of Sohan.\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">Which of the following person is sister-in-law of Anu?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74baef0a93",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74baef0a9b",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74baef0aa2",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74baef0ac1",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74baef0acd",
+                        "type": "text",
+                        "properties": {
+                          "html": "Anuj"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74baef0ae7",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74baef0af2",
+                        "type": "text",
+                        "properties": {
+                          "html": "Ajay"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74baef0b01",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74baef0b07",
+                        "type": "text",
+                        "properties": {
+                          "html": "Anupama"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74baef0b2e",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74baef0b39",
+                        "type": "text",
+                        "properties": {
+                          "html": "Ayushi"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_2": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74baef0bb4",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74baef0bb9",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for Question:</strong></p><p style=\"text-align: justify;\">Anu, Ayushi, Sohan, Ajay, Anupama, and Anuj are part of a family of six people, consisting of three males and three females. Two of the people are bachelor, and there are two married couples. They are all of diverse professions: teacher, writer, architect, engineer, and lawyer. \n</p><p style=\"text-align: justify;\">Anu is Sohan's wife, and her mother-in-law is Anupama, an engineer. Anuj's father, Ajay, is neither an architect nor a doctor. Anuj is a lawyer, while his sister Ayushi is a writer. Architect is not the profession of Sohan.\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">How many daughters does Anupama have?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74baef0bcb",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74baef0bd2",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74baef0bd9",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74baef0bf8",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74baef0bff",
+                        "type": "text",
+                        "properties": {
+                          "html": "3"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74baef0c0e",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74baef0c15",
+                        "type": "text",
+                        "properties": {
+                          "html": "2"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74baef0c23",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74baef0c2a",
+                        "type": "text",
+                        "properties": {
+                          "html": "1"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74baef0c39",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74baef0c40",
+                        "type": "text",
+                        "properties": {
+                          "html": "None"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74baef0ca7",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74baef0cac",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for Question:</strong></p><p style=\"text-align: justify;\">Three generations of the same family comprise the seven individuals: J, L, N, T, V, W, and X. \n</p><p style=\"text-align: justify;\">L is J's mother-in-law and the only daughter of L is W. W and J belong to the same gender. N is X's father and V's son-in-law. X is the grandson of V, while T is his paternal grandfather. X is not married to J.\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">Which generation has minimum number of person in the above family?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74baef0cbd",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74baef0cc4",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74baef0ccb",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74baef0ceb",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74baef0cf1",
+                        "type": "text",
+                        "properties": {
+                          "html": "Oldest generation"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74baef0d00",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74baef0d07",
+                        "type": "text",
+                        "properties": {
+                          "html": "Youngest generation"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74baef0d16",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74baef0d1d",
+                        "type": "text",
+                        "properties": {
+                          "html": "Middle generation"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74baef0d2b",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74baef0d32",
+                        "type": "text",
+                        "properties": {
+                          "html": "Can’t be determined"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_4": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74baef0d8e",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74baef0d93",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for Question:</strong></p><p style=\"text-align: justify;\">Three generations of the same family comprise the seven individuals: J, L, N, T, V, W, and X. \n</p><p style=\"text-align: justify;\">L is J's mother-in-law and the only daughter of L is W. W and J belong to the same gender. N is X's father and V's son-in-law. X is the grandson of V, while T is his paternal grandfather. X is not married to J.\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">How many children does T have?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74baef0da5",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74baef0dad",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74baef0db4",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74baef0dd3",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74baef0dda",
+                        "type": "text",
+                        "properties": {
+                          "html": "1"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74baef0de8",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74baef0def",
+                        "type": "text",
+                        "properties": {
+                          "html": "3"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74baef0dff",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74baef0e06",
+                        "type": "text",
+                        "properties": {
+                          "html": "4"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74baef0e15",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74baef0e1b",
+                        "type": "text",
+                        "properties": {
+                          "html": "2"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_5": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74baef0e79",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74baef0e7e",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for Question:</strong></p><p style=\"text-align: justify;\">Three generations of the same family comprise the seven individuals: J, L, N, T, V, W, and X. \n</p><p style=\"text-align: justify;\">L is J's mother-in-law and the only daughter of L is W. W and J belong to the same gender. N is X's father and V's son-in-law. X is the grandson of V, while T is his paternal grandfather. X is not married to J.\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">Who is the nephew of W?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74baef0e8f",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74baef0e96",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74baef0e9d",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74baef0ebc",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74baef0ec3",
+                        "type": "text",
+                        "properties": {
+                          "html": "V"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74baef0ed1",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74baef0ed8",
+                        "type": "text",
+                        "properties": {
+                          "html": "N"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74baef0ee7",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74baef0eee",
+                        "type": "text",
+                        "properties": {
+                          "html": "X"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74baef0f14",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74baef0f21",
+                        "type": "text",
+                        "properties": {
+                          "html": "T"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_6": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74baef0f86",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74baef0f8e",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for Question:</strong></p><p style=\"text-align: justify;\">A three-generation family consists of those are two married couples and eight family members in total, four of those are men and four of those are women. \n</p><p style=\"text-align: justify;\">Q is the mother of R, while J is Q's father-in-law. P is T's father-in-law. Q's mother-in-law is M. V is married to H and is either M's son or daughter. H is not the spouse of Q's sister-in-law.\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">How is Q related to T?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74baef0f9f",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74baef0fa6",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74baef0fad",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74baef0fcc",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74baef0fd3",
+                        "type": "text",
+                        "properties": {
+                          "html": "Mother"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74baef0fe2",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74baef0fe9",
+                        "type": "text",
+                        "properties": {
+                          "html": "Aunt&nbsp;"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74baef0ff8",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74baef0fff",
+                        "type": "text",
+                        "properties": {
+                          "html": "Mother-in-law"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74baef100e",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74baef1015",
+                        "type": "text",
+                        "properties": {
+                          "html": "Niece"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_7": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74baef1075",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74baef1079",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for Question:</strong></p><p style=\"text-align: justify;\">A three-generation family consists of those are two married couples and eight family members in total, four of those are men and four of those are women. \n</p><p style=\"text-align: justify;\">Q is the mother of R, while J is Q's father-in-law. P is T's father-in-law. Q's mother-in-law is M. V is married to H and is either M's son or daughter. H is not the spouse of Q's sister-in-law.\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">How is P related to V?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74baef108b",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74baef1092",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74baef1099",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74baef10b8",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74baef10bf",
+                        "type": "text",
+                        "properties": {
+                          "html": "Brother-in-law"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74baef10ce",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74baef10d5",
+                        "type": "text",
+                        "properties": {
+                          "html": "Father-in-law"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74baef10e4",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74baef10eb",
+                        "type": "text",
+                        "properties": {
+                          "html": "Brother"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74baef10fa",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74baef1101",
+                        "type": "text",
+                        "properties": {
+                          "html": "Uncle"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_description_widgets_0": [],
+                "sections_0_blocks_8": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74baef1160",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74baef1165",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for Question:</strong></p><p style=\"text-align: justify;\">A three-generation family consists of those are two married couples and eight family members in total, four of those are men and four of those are women. \n</p><p style=\"text-align: justify;\">Q is the mother of R, while J is Q's father-in-law. P is T's father-in-law. Q's mother-in-law is M. V is married to H and is either M's son or daughter. H is not the spouse of Q's sister-in-law.\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">How is R related to V?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74baef1177",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74baef117d",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74baef1185",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74baef11a3",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74baef11aa",
+                        "type": "text",
+                        "properties": {
+                          "html": "Nephew"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74baef11b9",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74baef11bf",
+                        "type": "text",
+                        "properties": {
+                          "html": "Niece"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74baef11ce",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74baef11d4",
+                        "type": "text",
+                        "properties": {
+                          "html": "Son"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74baef11e3",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74baef11ea",
+                        "type": "text",
+                        "properties": {
+                          "html": "Either (A) or (B)"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_9": []
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "availabilityStatus": null,
+    "autoNavigationEnabled": false,
+    "displayBackButtonWhenNavigationPerBlock": true,
+    "saveAndResumeLaterEnabled": null,
+    "tagsAddedOnCompletion": [],
+    "tagsAddedOnPass": [],
+    "sendAnonymousSubmissionsToEmailLeads": false,
+    "afterSubmitActionEnabled": null,
+    "afterSubmitActionProperties": null,
+    "showWizardOnNextEdit": false,
+    "revisitAfterSubmissionAction": null,
+    "navigationTemplate": "HorizontalSpacedBetweenNavigationTemplate",
+    "learnerSearchBarEnabled": true,
+    "learnerUnansweredQuestionsEnabled": true,
+    "learnerFavouriteQuestionEnabled": true,
+    "learnerCompletionProgressEnabled": true,
+    "learnerShowIndexOfQuestionsEnabled": false,
+    "learnerTimeNotificationsEnabled": false,
+    "learnerAllowInterruptionsEnabled": true,
+    "learnerAllowInterruptionsTimeoutInMinutes": 30,
+    "learnerReclaimTryOnInterruptionTimeoutEnabled": false,
+    "learnerAskBeforeContinueToSaved": true,
+    "learnerAutoSaveEnabled": null,
+    "spellcheckDisabled": null,
+    "showPartialScoreOnSubmission": true,
+    "deliverableQuestionsSubsetType": "all",
+    "questionRandomizationType": "none",
+    "serveQuestionsBasedOnPreviousSubmission": null,
+    "scoringDisabled": false,
+    "isSelfAssessment": false,
+    "useDefaultCertificateTemplate": null,
+    "certificateTemplate": null,
+    "certificateSocialShare": null,
+    "migrationData": null,
+    "useAssessmentPassingGradeForOpenEndedCorrectness": true,
+    "openEndedCorrectnessPassingGrade": null,
+    "showScorePercentage": null,
+    "showScorePoints": null,
+    "showScoreCorrectAnswers": null,
+    "editorBehaviorSettings": null,
+    "manualReviewEnabled": null,
+    "resultsSummary": {
+      "enabled": true,
+      "showStatusIcon": true,
+      "showStatusText": true,
+      "showScorePercentage": true,
+      "showScorePoints": true,
+      "showScoreCorrectAnswers": false,
+      "showTimeTakenToComplete": true,
+      "showDateSubmitted": true,
+      "showAttemptCount": true
+    },
+    "meta": null,
+    "submissionsCount": 1827,
+    "fromMarketplace": null,
+    "aiFeedbackEnabled": null,
+    "numberOfFeedbackQuestions": null,
+    "created": 1723288495.42951,
+    "modified": 1723711785.229226,
+    "contentHash": "c984365b1d9d5e2ba89d5e0f2da85cc33afc1c3371265eae02e8e56c8d88062c",
+    "id": "66b74baf7f809db010095213",
+    "objectType": "assessment",
+    "isEditBlockedDueToSync": false,
+    "variables": {
+      "submission": {
+        "self": {
+          "score": 0,
+          "points": 0,
+          "total_points": 10,
+          "correct_answers": 0,
+          "total_questions": 10,
+          "time_spent": "00:00:00",
+          "date_submitted": "11/08/26",
+          "attempt_count": 3,
+          "max_tries": null,
+          "pass_grade": 50,
+          "time_spent_seconds": 0,
+          "raw_start_date": 1786440550.127967
+        }
+      },
+      "school": {
+        "name": "Apna College",
+        "url": "www.apnacollege.in",
+        "description": "The most loved coding community of India ❤️"
+      },
+      "user": {
+        "username": "ram",
+        "email": "p4542639@gmail.com",
+        "cf_phonenumber": "7666690798"
+      }
+    }
+  },
+  "reclaimedTry": false,
+  "feedback": [
+    {
+      "title": "",
+      "id": "section66b74baef0845",
+      "blocks": [
+        {
+          "id": "mc66b74baef084d",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for Question:Anu, Ayushi, Sohan, Ajay, Anupama, and Anuj are part of a family of six people, consisting of three males and three females. Two of the people are bachelor, and there are two married couples. They are all of diverse professions: teacher, writer, architect, engineer, and lawyer. Anu is Sohan's wife, and her mother-in-law is Anupama, an engineer. Anuj's father, Ajay, is neither an architect nor a doctor. Anuj is a lawyer, while his sister Ayushi is a writer. Architect is not the profession of Sohan. With whom Anupama is married to?",
+            "widgets": [
+              {
+                "id": "text66b74baef0852",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for Question:</strong></p><p style=\"text-align: justify;\">Anu, Ayushi, Sohan, Ajay, Anupama, and Anuj are part of a family of six people, consisting of three males and three females. Two of the people are bachelor, and there are two married couples. They are all of diverse professions: teacher, writer, architect, engineer, and lawyer. \n</p><p style=\"text-align: justify;\">Anu is Sohan's wife, and her mother-in-law is Anupama, an engineer. Anuj's father, Ajay, is neither an architect nor a doctor. Anuj is a lawyer, while his sister Ayushi is a writer. Architect is not the profession of Sohan.\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">With whom Anupama is married to?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74baef08a8",
+              "description": {
+                "text": "Anuj",
+                "widgets": [
+                  {
+                    "id": "text66b74baef08b0",
+                    "type": "text",
+                    "properties": {
+                      "html": "Anuj"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74baef08c0",
+              "description": {
+                "text": "Ajay",
+                "widgets": [
+                  {
+                    "id": "text66b74baef08c7",
+                    "type": "text",
+                    "properties": {
+                      "html": "Ajay"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74baef08d6",
+              "description": {
+                "text": "Sohan",
+                "widgets": [
+                  {
+                    "id": "text66b74baef08dd",
+                    "type": "text",
+                    "properties": {
+                      "html": "Sohan"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74baef08ef",
+              "description": {
+                "text": "Ayushi",
+                "widgets": [
+                  {
+                    "id": "text66b74baef08fb",
+                    "type": "text",
+                    "properties": {
+                      "html": "Ayushi"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74baef08c0",
+              "text": "Ajay",
+              "widgets": [
+                {
+                  "id": "text66b74baef08c7",
+                  "type": "text",
+                  "properties": {
+                    "html": "Ajay"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/1d1629060f7686d88659deff1db9dfe3.jpg\"><br>Therefore, correct answers are –<br>Option (B) – Ajay<br></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74baef0960",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for Question:Anu, Ayushi, Sohan, Ajay, Anupama, and Anuj are part of a family of six people, consisting of three males and three females. Two of the people are bachelor, and there are two married couples. They are all of diverse professions: teacher, writer, architect, engineer, and lawyer. Anu is Sohan's wife, and her mother-in-law is Anupama, an engineer. Anuj's father, Ajay, is neither an architect nor a doctor. Anuj is a lawyer, while his sister Ayushi is a writer. Architect is not the profession of Sohan. Who worked as an Architect?",
+            "widgets": [
+              {
+                "id": "text66b74baef0965",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for Question:</strong></p><p style=\"text-align: justify;\">Anu, Ayushi, Sohan, Ajay, Anupama, and Anuj are part of a family of six people, consisting of three males and three females. Two of the people are bachelor, and there are two married couples. They are all of diverse professions: teacher, writer, architect, engineer, and lawyer. \n</p><p style=\"text-align: justify;\">Anu is Sohan's wife, and her mother-in-law is Anupama, an engineer. Anuj's father, Ajay, is neither an architect nor a doctor. Anuj is a lawyer, while his sister Ayushi is a writer. Architect is not the profession of Sohan.\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">Who worked as an Architect?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74baef09c7",
+              "description": {
+                "text": "Anu",
+                "widgets": [
+                  {
+                    "id": "text66b74baef09d2",
+                    "type": "text",
+                    "properties": {
+                      "html": "Anu"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74baef09e1",
+              "description": {
+                "text": "Anuj",
+                "widgets": [
+                  {
+                    "id": "text66b74baef09e8",
+                    "type": "text",
+                    "properties": {
+                      "html": "Anuj"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74baef09f7",
+              "description": {
+                "text": "Anupama",
+                "widgets": [
+                  {
+                    "id": "text66b74baef09fd",
+                    "type": "text",
+                    "properties": {
+                      "html": "Anupama"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74baef0a0c",
+              "description": {
+                "text": "Ajay",
+                "widgets": [
+                  {
+                    "id": "text66b74baef0a13",
+                    "type": "text",
+                    "properties": {
+                      "html": "Ajay"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74baef09c7",
+              "text": "Anu",
+              "widgets": [
+                {
+                  "id": "text66b74baef09d2",
+                  "type": "text",
+                  "properties": {
+                    "html": "Anu"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/1d1629060f7686d88659deff1db9dfe3.jpg\"><br>Therefore, correct answers are –<br>Option(A) – Anu<br></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74baef0a6b",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for Question:Anu, Ayushi, Sohan, Ajay, Anupama, and Anuj are part of a family of six people, consisting of three males and three females. Two of the people are bachelor, and there are two married couples. They are all of diverse professions: teacher, writer, architect, engineer, and lawyer. Anu is Sohan's wife, and her mother-in-law is Anupama, an engineer. Anuj's father, Ajay, is neither an architect nor a doctor. Anuj is a lawyer, while his sister Ayushi is a writer. Architect is not the profession of Sohan. Which of the following person is sister-in-law of Anu?",
+            "widgets": [
+              {
+                "id": "text66b74baef0a73",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for Question:</strong></p><p style=\"text-align: justify;\">Anu, Ayushi, Sohan, Ajay, Anupama, and Anuj are part of a family of six people, consisting of three males and three females. Two of the people are bachelor, and there are two married couples. They are all of diverse professions: teacher, writer, architect, engineer, and lawyer. \n</p><p style=\"text-align: justify;\">Anu is Sohan's wife, and her mother-in-law is Anupama, an engineer. Anuj's father, Ajay, is neither an architect nor a doctor. Anuj is a lawyer, while his sister Ayushi is a writer. Architect is not the profession of Sohan.\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">Which of the following person is sister-in-law of Anu?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74baef0ac1",
+              "description": {
+                "text": "Anuj",
+                "widgets": [
+                  {
+                    "id": "text66b74baef0acd",
+                    "type": "text",
+                    "properties": {
+                      "html": "Anuj"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74baef0ae7",
+              "description": {
+                "text": "Ajay",
+                "widgets": [
+                  {
+                    "id": "text66b74baef0af2",
+                    "type": "text",
+                    "properties": {
+                      "html": "Ajay"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74baef0b01",
+              "description": {
+                "text": "Anupama",
+                "widgets": [
+                  {
+                    "id": "text66b74baef0b07",
+                    "type": "text",
+                    "properties": {
+                      "html": "Anupama"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74baef0b2e",
+              "description": {
+                "text": "Ayushi",
+                "widgets": [
+                  {
+                    "id": "text66b74baef0b39",
+                    "type": "text",
+                    "properties": {
+                      "html": "Ayushi"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74baef0b2e",
+              "text": "Ayushi",
+              "widgets": [
+                {
+                  "id": "text66b74baef0b39",
+                  "type": "text",
+                  "properties": {
+                    "html": "Ayushi"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/1d1629060f7686d88659deff1db9dfe3.jpg\"><br>Therefore, correct answers are –<br>Option(D) – Ayushi<br></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74baef0bb4",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for Question:Anu, Ayushi, Sohan, Ajay, Anupama, and Anuj are part of a family of six people, consisting of three males and three females. Two of the people are bachelor, and there are two married couples. They are all of diverse professions: teacher, writer, architect, engineer, and lawyer. Anu is Sohan's wife, and her mother-in-law is Anupama, an engineer. Anuj's father, Ajay, is neither an architect nor a doctor. Anuj is a lawyer, while his sister Ayushi is a writer. Architect is not the profession of Sohan. How many daughters does Anupama have?",
+            "widgets": [
+              {
+                "id": "text66b74baef0bb9",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for Question:</strong></p><p style=\"text-align: justify;\">Anu, Ayushi, Sohan, Ajay, Anupama, and Anuj are part of a family of six people, consisting of three males and three females. Two of the people are bachelor, and there are two married couples. They are all of diverse professions: teacher, writer, architect, engineer, and lawyer. \n</p><p style=\"text-align: justify;\">Anu is Sohan's wife, and her mother-in-law is Anupama, an engineer. Anuj's father, Ajay, is neither an architect nor a doctor. Anuj is a lawyer, while his sister Ayushi is a writer. Architect is not the profession of Sohan.\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">How many daughters does Anupama have?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74baef0bf8",
+              "description": {
+                "text": "3",
+                "widgets": [
+                  {
+                    "id": "text66b74baef0bff",
+                    "type": "text",
+                    "properties": {
+                      "html": "3"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74baef0c0e",
+              "description": {
+                "text": "2",
+                "widgets": [
+                  {
+                    "id": "text66b74baef0c15",
+                    "type": "text",
+                    "properties": {
+                      "html": "2"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74baef0c23",
+              "description": {
+                "text": "1",
+                "widgets": [
+                  {
+                    "id": "text66b74baef0c2a",
+                    "type": "text",
+                    "properties": {
+                      "html": "1"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74baef0c39",
+              "description": {
+                "text": "None",
+                "widgets": [
+                  {
+                    "id": "text66b74baef0c40",
+                    "type": "text",
+                    "properties": {
+                      "html": "None"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74baef0c23",
+              "text": "1",
+              "widgets": [
+                {
+                  "id": "text66b74baef0c2a",
+                  "type": "text",
+                  "properties": {
+                    "html": "1"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/1d1629060f7686d88659deff1db9dfe3.jpg\"><br>Therefore, correct answers are –<br>Option (C) – 1<br></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74baef0ca7",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for Question:Three generations of the same family comprise the seven individuals: J, L, N, T, V, W, and X. L is J's mother-in-law and the only daughter of L is W. W and J belong to the same gender. N is X's father and V's son-in-law. X is the grandson of V, while T is his paternal grandfather. X is not married to J. Which generation has minimum number of person in the above family?",
+            "widgets": [
+              {
+                "id": "text66b74baef0cac",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for Question:</strong></p><p style=\"text-align: justify;\">Three generations of the same family comprise the seven individuals: J, L, N, T, V, W, and X. \n</p><p style=\"text-align: justify;\">L is J's mother-in-law and the only daughter of L is W. W and J belong to the same gender. N is X's father and V's son-in-law. X is the grandson of V, while T is his paternal grandfather. X is not married to J.\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">Which generation has minimum number of person in the above family?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74baef0ceb",
+              "description": {
+                "text": "Oldest generation",
+                "widgets": [
+                  {
+                    "id": "text66b74baef0cf1",
+                    "type": "text",
+                    "properties": {
+                      "html": "Oldest generation"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74baef0d00",
+              "description": {
+                "text": "Youngest generation",
+                "widgets": [
+                  {
+                    "id": "text66b74baef0d07",
+                    "type": "text",
+                    "properties": {
+                      "html": "Youngest generation"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74baef0d16",
+              "description": {
+                "text": "Middle generation",
+                "widgets": [
+                  {
+                    "id": "text66b74baef0d1d",
+                    "type": "text",
+                    "properties": {
+                      "html": "Middle generation"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74baef0d2b",
+              "description": {
+                "text": "Can’t be determined",
+                "widgets": [
+                  {
+                    "id": "text66b74baef0d32",
+                    "type": "text",
+                    "properties": {
+                      "html": "Can’t be determined"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74baef0d00",
+              "text": "Youngest generation",
+              "widgets": [
+                {
+                  "id": "text66b74baef0d07",
+                  "type": "text",
+                  "properties": {
+                    "html": "Youngest generation"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/d9502f3c0afeacc973595f468571de84.jpg\"><br>Therefore, correct answers are –<br>Option(B) – Youngest generation<br></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74baef0d8e",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for Question:Three generations of the same family comprise the seven individuals: J, L, N, T, V, W, and X. L is J's mother-in-law and the only daughter of L is W. W and J belong to the same gender. N is X's father and V's son-in-law. X is the grandson of V, while T is his paternal grandfather. X is not married to J. How many children does T have?",
+            "widgets": [
+              {
+                "id": "text66b74baef0d93",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for Question:</strong></p><p style=\"text-align: justify;\">Three generations of the same family comprise the seven individuals: J, L, N, T, V, W, and X. \n</p><p style=\"text-align: justify;\">L is J's mother-in-law and the only daughter of L is W. W and J belong to the same gender. N is X's father and V's son-in-law. X is the grandson of V, while T is his paternal grandfather. X is not married to J.\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">How many children does T have?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74baef0dd3",
+              "description": {
+                "text": "1",
+                "widgets": [
+                  {
+                    "id": "text66b74baef0dda",
+                    "type": "text",
+                    "properties": {
+                      "html": "1"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74baef0de8",
+              "description": {
+                "text": "3",
+                "widgets": [
+                  {
+                    "id": "text66b74baef0def",
+                    "type": "text",
+                    "properties": {
+                      "html": "3"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74baef0dff",
+              "description": {
+                "text": "4",
+                "widgets": [
+                  {
+                    "id": "text66b74baef0e06",
+                    "type": "text",
+                    "properties": {
+                      "html": "4"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74baef0e15",
+              "description": {
+                "text": "2",
+                "widgets": [
+                  {
+                    "id": "text66b74baef0e1b",
+                    "type": "text",
+                    "properties": {
+                      "html": "2"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74baef0e15",
+              "text": "2",
+              "widgets": [
+                {
+                  "id": "text66b74baef0e1b",
+                  "type": "text",
+                  "properties": {
+                    "html": "2"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/d9502f3c0afeacc973595f468571de84.jpg\"><br>Therefore, correct answers are –<br>Option(D) – 2<br></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74baef0e79",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for Question:Three generations of the same family comprise the seven individuals: J, L, N, T, V, W, and X. L is J's mother-in-law and the only daughter of L is W. W and J belong to the same gender. N is X's father and V's son-in-law. X is the grandson of V, while T is his paternal grandfather. X is not married to J. Who is the nephew of W?",
+            "widgets": [
+              {
+                "id": "text66b74baef0e7e",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for Question:</strong></p><p style=\"text-align: justify;\">Three generations of the same family comprise the seven individuals: J, L, N, T, V, W, and X. \n</p><p style=\"text-align: justify;\">L is J's mother-in-law and the only daughter of L is W. W and J belong to the same gender. N is X's father and V's son-in-law. X is the grandson of V, while T is his paternal grandfather. X is not married to J.\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">Who is the nephew of W?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74baef0ebc",
+              "description": {
+                "text": "V",
+                "widgets": [
+                  {
+                    "id": "text66b74baef0ec3",
+                    "type": "text",
+                    "properties": {
+                      "html": "V"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74baef0ed1",
+              "description": {
+                "text": "N",
+                "widgets": [
+                  {
+                    "id": "text66b74baef0ed8",
+                    "type": "text",
+                    "properties": {
+                      "html": "N"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74baef0ee7",
+              "description": {
+                "text": "X",
+                "widgets": [
+                  {
+                    "id": "text66b74baef0eee",
+                    "type": "text",
+                    "properties": {
+                      "html": "X"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74baef0f14",
+              "description": {
+                "text": "T",
+                "widgets": [
+                  {
+                    "id": "text66b74baef0f21",
+                    "type": "text",
+                    "properties": {
+                      "html": "T"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74baef0ee7",
+              "text": "X",
+              "widgets": [
+                {
+                  "id": "text66b74baef0eee",
+                  "type": "text",
+                  "properties": {
+                    "html": "X"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/d9502f3c0afeacc973595f468571de84.jpg\"><br>Therefore, correct answers are –<br>Option(C)- X<br></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74baef0f86",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for Question:A three-generation family consists of those are two married couples and eight family members in total, four of those are men and four of those are women. Q is the mother of R, while J is Q's father-in-law. P is T's father-in-law. Q's mother-in-law is M. V is married to H and is either M's son or daughter. H is not the spouse of Q's sister-in-law. How is Q related to T?",
+            "widgets": [
+              {
+                "id": "text66b74baef0f8e",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for Question:</strong></p><p style=\"text-align: justify;\">A three-generation family consists of those are two married couples and eight family members in total, four of those are men and four of those are women. \n</p><p style=\"text-align: justify;\">Q is the mother of R, while J is Q's father-in-law. P is T's father-in-law. Q's mother-in-law is M. V is married to H and is either M's son or daughter. H is not the spouse of Q's sister-in-law.\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">How is Q related to T?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74baef0fcc",
+              "description": {
+                "text": "Mother",
+                "widgets": [
+                  {
+                    "id": "text66b74baef0fd3",
+                    "type": "text",
+                    "properties": {
+                      "html": "Mother"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74baef0fe2",
+              "description": {
+                "text": "Aunt",
+                "widgets": [
+                  {
+                    "id": "text66b74baef0fe9",
+                    "type": "text",
+                    "properties": {
+                      "html": "Aunt&nbsp;"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74baef0ff8",
+              "description": {
+                "text": "Mother-in-law",
+                "widgets": [
+                  {
+                    "id": "text66b74baef0fff",
+                    "type": "text",
+                    "properties": {
+                      "html": "Mother-in-law"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74baef100e",
+              "description": {
+                "text": "Niece",
+                "widgets": [
+                  {
+                    "id": "text66b74baef1015",
+                    "type": "text",
+                    "properties": {
+                      "html": "Niece"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74baef0ff8",
+              "text": "Mother-in-law",
+              "widgets": [
+                {
+                  "id": "text66b74baef0fff",
+                  "type": "text",
+                  "properties": {
+                    "html": "Mother-in-law"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/984f9b413966a4c10c676cad87d9c31f.jpg\"><br>Therefore, correct answers are –<br>Option (C) – Mother-in-law<br></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74baef1075",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for Question:A three-generation family consists of those are two married couples and eight family members in total, four of those are men and four of those are women. Q is the mother of R, while J is Q's father-in-law. P is T's father-in-law. Q's mother-in-law is M. V is married to H and is either M's son or daughter. H is not the spouse of Q's sister-in-law. How is P related to V?",
+            "widgets": [
+              {
+                "id": "text66b74baef1079",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for Question:</strong></p><p style=\"text-align: justify;\">A three-generation family consists of those are two married couples and eight family members in total, four of those are men and four of those are women. \n</p><p style=\"text-align: justify;\">Q is the mother of R, while J is Q's father-in-law. P is T's father-in-law. Q's mother-in-law is M. V is married to H and is either M's son or daughter. H is not the spouse of Q's sister-in-law.\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">How is P related to V?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74baef10b8",
+              "description": {
+                "text": "Brother-in-law",
+                "widgets": [
+                  {
+                    "id": "text66b74baef10bf",
+                    "type": "text",
+                    "properties": {
+                      "html": "Brother-in-law"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74baef10ce",
+              "description": {
+                "text": "Father-in-law",
+                "widgets": [
+                  {
+                    "id": "text66b74baef10d5",
+                    "type": "text",
+                    "properties": {
+                      "html": "Father-in-law"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74baef10e4",
+              "description": {
+                "text": "Brother",
+                "widgets": [
+                  {
+                    "id": "text66b74baef10eb",
+                    "type": "text",
+                    "properties": {
+                      "html": "Brother"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74baef10fa",
+              "description": {
+                "text": "Uncle",
+                "widgets": [
+                  {
+                    "id": "text66b74baef1101",
+                    "type": "text",
+                    "properties": {
+                      "html": "Uncle"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74baef10e4",
+              "text": "Brother",
+              "widgets": [
+                {
+                  "id": "text66b74baef10eb",
+                  "type": "text",
+                  "properties": {
+                    "html": "Brother"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/984f9b413966a4c10c676cad87d9c31f.jpg\"><br>Therefore, correct answers are –<br>Option (C) - Brother<br></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74baef1160",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for Question:A three-generation family consists of those are two married couples and eight family members in total, four of those are men and four of those are women. Q is the mother of R, while J is Q's father-in-law. P is T's father-in-law. Q's mother-in-law is M. V is married to H and is either M's son or daughter. H is not the spouse of Q's sister-in-law. How is R related to V?",
+            "widgets": [
+              {
+                "id": "text66b74baef1165",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for Question:</strong></p><p style=\"text-align: justify;\">A three-generation family consists of those are two married couples and eight family members in total, four of those are men and four of those are women. \n</p><p style=\"text-align: justify;\">Q is the mother of R, while J is Q's father-in-law. P is T's father-in-law. Q's mother-in-law is M. V is married to H and is either M's son or daughter. H is not the spouse of Q's sister-in-law.\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">How is R related to V?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74baef11a3",
+              "description": {
+                "text": "Nephew",
+                "widgets": [
+                  {
+                    "id": "text66b74baef11aa",
+                    "type": "text",
+                    "properties": {
+                      "html": "Nephew"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74baef11b9",
+              "description": {
+                "text": "Niece",
+                "widgets": [
+                  {
+                    "id": "text66b74baef11bf",
+                    "type": "text",
+                    "properties": {
+                      "html": "Niece"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74baef11ce",
+              "description": {
+                "text": "Son",
+                "widgets": [
+                  {
+                    "id": "text66b74baef11d4",
+                    "type": "text",
+                    "properties": {
+                      "html": "Son"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74baef11e3",
+              "description": {
+                "text": "Either (A) or (B)",
+                "widgets": [
+                  {
+                    "id": "text66b74baef11ea",
+                    "type": "text",
+                    "properties": {
+                      "html": "Either (A) or (B)"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74baef11e3",
+              "text": "Either (A) or (B)",
+              "widgets": [
+                {
+                  "id": "text66b74baef11ea",
+                  "type": "text",
+                  "properties": {
+                    "html": "Either (A) or (B)"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/984f9b413966a4c10c676cad87d9c31f.jpg\"><br>Therefore, correct answers are –<br>Option (D) – Either (A) or (B)<br></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        }
+      ]
+    }
+  ],
+  "submitted": true,
+  "updated": true,
+  "retryCount": 3,
+  "inlineFeedback": [],
+  "errors": [],
+  "success": true
+}

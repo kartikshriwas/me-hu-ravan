@@ -1,0 +1,3798 @@
+{
+  "submission": {
+    "anon_id": null,
+    "model": "assessment-submission",
+    "courseTitleId": "aptitude-teacher2",
+    "object_id": "66b74bb37f809db010095226",
+    "assessmentId": "66b74bb37f809db010095225",
+    "snapshotId": "66be04057cd3e722cf01a219",
+    "questions": {
+      "section66b74bb317bef": [
+        "mc66b74bb317bf7",
+        "mc66b74bb317ca0",
+        "mcImage66b74bb317d4e",
+        "mcImage66b74bb317e60",
+        "mc66b74bb317f50",
+        "mcImage66b74bb317ffe",
+        "mc66b74bb3180ec",
+        "mc66b74bb31819c",
+        "mcImage66b74bb318253",
+        "mcImage66b74bb318346"
+      ]
+    },
+    "certificateAnswers": [],
+    "certificateId": null,
+    "questionData": {
+      "mc66b74bb317bf7": {
+        "deliveredOnTimestamp": 1786440556.93381,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74bb317ca0": {
+        "deliveredOnTimestamp": 1786440556.933838,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mcImage66b74bb317d4e": {
+        "deliveredOnTimestamp": 1786440556.933856,
+        "blockType": "mcImage",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mcImage66b74bb317e60": {
+        "deliveredOnTimestamp": 1786440556.933871,
+        "blockType": "mcImage",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74bb317f50": {
+        "deliveredOnTimestamp": 1786440556.933885,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mcImage66b74bb317ffe": {
+        "deliveredOnTimestamp": 1786440556.933899,
+        "blockType": "mcImage",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74bb3180ec": {
+        "deliveredOnTimestamp": 1786440556.933913,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74bb31819c": {
+        "deliveredOnTimestamp": 1786440556.933927,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mcImage66b74bb318253": {
+        "deliveredOnTimestamp": 1786440556.933941,
+        "blockType": "mcImage",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mcImage66b74bb318346": {
+        "deliveredOnTimestamp": 1786440556.933955,
+        "blockType": "mcImage",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      }
+    },
+    "answers": [
+      {
+        "blockId": "mc66b74bb317bf7",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74bb317ca0",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mcImage66b74bb317d4e",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mcImage66b74bb317e60",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74bb317f50",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mcImage66b74bb317ffe",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74bb3180ec",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74bb31819c",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mcImage66b74bb318253",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mcImage66b74bb318346",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      }
+    ],
+    "submittedTimestamp": 1786440557.175294,
+    "status": "submitted",
+    "grading_status": "grading_status_graded",
+    "access": "public",
+    "actual_score": null,
+    "score": {
+      "maxScore": 10,
+      "value": 0,
+      "pass": false,
+      "passGrade": 50,
+      "points": 0
+    },
+    "source": {
+      "type": "unit"
+    },
+    "isDefining": true,
+    "isAdminAutoGradedSubmission": null,
+    "listOfNonConsentedBlocks": [],
+    "created": 1786440556.940358,
+    "modified": 1786440557.307226,
+    "id": "6a7aeb6c876575bec606d4b9",
+    "passed": false
+  },
+  "assessment": {
+    "title": "Practice Test Paper (Easy)",
+    "access": "public",
+    "type": "assessment",
+    "model": "assessmentSnapshot",
+    "description": "Foundational practice test paper containing 10 assessment questions covering Speed, Distance & Time, Mensuration & Geometry.",
+    "isTimed": false,
+    "timerFor": "assessmentTimed",
+    "onTimerExpiration": "autoSubmit",
+    "assessmentTimeLimitInSeconds": 600,
+    "questionTimeLimitInSeconds": 60,
+    "standaloneShareEnabled": null,
+    "customUrl": null,
+    "usesCustomUrl": null,
+    "allowAnonymous": true,
+    "randomizeQuestionOptions": false,
+    "disallowPartialSubmissions": false,
+    "submissionDueDateEnabled": false,
+    "submissionDueDate": 1626257823,
+    "makeFeedbackAvailableAfterDateEnabled": false,
+    "makeFeedbackAvailableAfterDate": 0,
+    "customStylesEnabled": true,
+    "customStyles": {
+      "assessmentPage": {
+        "background": {
+          "type": "color",
+          "colorData": {
+            "code": "",
+            "class": "lw-body-bg"
+          }
+        },
+        "dividers": {
+          "top": {
+            "orientation": "top",
+            "divider": "none"
+          },
+          "bottom": {
+            "orientation": "bottom",
+            "divider": "none"
+          }
+        }
+      },
+      "option": {
+        "radioEffect": "scribble",
+        "checkboxEffect": "scribble",
+        "size": "small"
+      },
+      "assessment": {
+        "transition": "none",
+        "background": {
+          "type": "color",
+          "colorData": {
+            "code": "",
+            "class": ""
+          }
+        },
+        "width": "normal",
+        "timerTemplate": "rectangle"
+      },
+      "linearRating": {
+        "labels": {
+          "size": "small"
+        }
+      },
+      "question": {
+        "description": {
+          "background": {
+            "type": "color",
+            "colorData": {
+              "code": "",
+              "class": ""
+            }
+          },
+          "type": "p",
+          "size": "small"
+        },
+        "answers": {
+          "background": {
+            "type": "color",
+            "colorData": {
+              "code": "",
+              "class": ""
+            }
+          }
+        },
+        "requiredAsterisk": {
+          "colorData": {
+            "code": "#ff0000",
+            "class": ""
+          }
+        },
+        "errorMessages": {
+          "size": "verySmall",
+          "colorData": {
+            "code": "#ff0000",
+            "class": ""
+          }
+        }
+      },
+      "input": {
+        "size": "small",
+        "type": "solidDark"
+      },
+      "textarea": {
+        "size": "small",
+        "type": "solidDark"
+      },
+      "dropdown": {
+        "size": "small",
+        "type": "solidDark"
+      }
+    },
+    "submissionMode": "all",
+    "startingDate": 1626765704,
+    "startingDateEnabled": false,
+    "showOnlyFailedQuestionsOnRetry": false,
+    "retryEnabled": true,
+    "retryOnFailOnly": false,
+    "gradingMethod": null,
+    "maxTries": null,
+    "onlyWrongOnRetake": null,
+    "isAmendable": false,
+    "feedbackShowOnScreen": true,
+    "feedbackDownloadPDF": false,
+    "feedbackShowInline": null,
+    "feedbackQuestionList": "all-questions",
+    "feedbackShowQuestionScore": true,
+    "feedbackShowFeedback": true,
+    "feedbackShowNumbering": false,
+    "feedbackShowSectionTitles": false,
+    "feedbackShowUserAnswers": true,
+    "feedbackShowCorrectAnswers": true,
+    "feedbackShowAnswerCorrectness": true,
+    "displayInlineFeedbackEnabled": null,
+    "displayBackButtonWhenSubmissionPerBlock": null,
+    "feedbackShowSectionResultSummary": false,
+    "askConfirmationBeforeSubmit": true,
+    "hasCustomConfirmationBeforeSubmitText": false,
+    "customConfirmationBeforeSubmitText": "Are you sure you want to submit the questionnaire?",
+    "customConfirmationBeforeSubmitTexts": {
+      "title": "Submit Assessment?",
+      "baseConfirmationMessage": "Are you sure you want to submit the questionnaire?",
+      "unansweredNotice": "You have not answered {X} questions."
+    },
+    "amendResubmissionMinutes": 30,
+    "passingGrade": null,
+    "navigationMode": "per-block",
+    "conditionalBlocks": {
+      "introContent": {
+        "id": "content66b74bb317b41",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66b74bb317b50",
+              "type": "text",
+              "insertedAsWidget": true,
+              "properties": {
+                "html": "Venn Diagrams PAPER LEVEL-1",
+                "alignment": "center",
+                "customStyle": true,
+                "type": "h2",
+                "size": "normal"
+              }
+            },
+            {
+              "id": "text66b74bb317b60",
+              "type": "text",
+              "properties": {
+                "html": "Self-assess your knowledge. Express yourself and get feedback from our instructors.",
+                "customStyle": true,
+                "alignment": "center"
+              }
+            },
+            {
+              "id": "spacer66b74bb317b6b",
+              "type": "spacer",
+              "properties": {
+                "height": 20,
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            },
+            {
+              "id": "button66b74bb317b77",
+              "type": "button",
+              "properties": {
+                "buttonLabel": "<span>Ready to start</span>",
+                "buttonSize": "normal",
+                "buttonType": "solidBrand",
+                "alignment": "center",
+                "linkData": {
+                  "linkType": "goToFirst"
+                },
+                "iconColorData": {
+                  "code": "",
+                  "class": ""
+                },
+                "iconDisplay": false,
+                "iconSize": 26,
+                "iconClassName": " fas fa-angle-right",
+                "iconPosition": "right"
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "variables": {
+            "conditionalBlocks_introContent_blockData_widgets_0": [],
+            "conditionalBlocks_introContent_blockData_widgets_1": []
+          }
+        }
+      },
+      "submissionStartingDate": {
+        "id": "content66b74bb317b98",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66b74bb317b9d",
+              "type": "text",
+              "properties": {
+                "html": "Sorry but this assessment hasn't started yet."
+              }
+            },
+            {
+              "id": "date66b74bb317ba4",
+              "type": "date",
+              "properties": {
+                "value": ""
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "displayConditions": ["startingDate"]
+        }
+      },
+      "submissionDueDate": {
+        "id": "content66b74bb317bb0",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66b74bb317bb5",
+              "type": "text",
+              "properties": {
+                "html": "Sorry but this assessment date is due."
+              }
+            },
+            {
+              "id": "date66b74bb317bbb",
+              "type": "date",
+              "properties": {
+                "value": ""
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "displayConditions": ["dateIsDue"]
+        }
+      },
+      "outroContent": {
+        "id": "content66b74bb317bc7",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "userResults66b74bb317bcc",
+              "type": "userResults",
+              "properties": {
+                "layout": "template2",
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            },
+            {
+              "id": "feedback66b74bb317bd8",
+              "type": "feedback",
+              "properties": []
+            },
+            {
+              "id": "outroActions66b74bb317bde",
+              "type": "outroActions",
+              "properties": {
+                "layout": "",
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true
+        }
+      }
+    },
+    "systemSections": null,
+    "sections": [
+      {
+        "id": "section66b74bb317bef",
+        "title": "",
+        "type": "section",
+        "navigationMode": "per-block",
+        "blocks": [
+          {
+            "id": "mc66b74bb317bf7",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bb317bfc",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">Which of the following group is suitable to be represented by the given Venn diagram–</p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/0b52658f052bedc62049533276f18151.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 100px;\"></p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74bb317c0e",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74bb317c15",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74bb317c1d",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74bb317c3c",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb317c43",
+                        "type": "text",
+                        "properties": {
+                          "html": "Instrument, Screw driver, Guitar"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb317c52",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb317c59",
+                        "type": "text",
+                        "properties": {
+                          "html": "Extrovert, Man, Handsome"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb317c67",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb317c6e",
+                        "type": "text",
+                        "properties": {
+                          "html": "Mammal, Tiger, Lizard"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb317c7d",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb317c84",
+                        "type": "text",
+                        "properties": {
+                          "html": "Doctor, Male, Female"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74bb317ca0",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bb317ca5",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">In the following figure, the triangle represents ‘Doctor’, the circle represents ‘Engineer’ and the rectangle represents ‘Teacher’. How many people are Doctor and teacher both but not an engineer?</p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/3a9253aeb516468cfd6c30ad9204adb1.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 250px;\"></p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74bb317cb7",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74bb317cbe",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74bb317cc5",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74bb317ce4",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb317ceb",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>4</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb317cfb",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb317d01",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>3</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb317d10",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb317d17",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>2</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb317d27",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb317d2d",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>5</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_1_blockData_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_1": []
+              }
+            }
+          },
+          {
+            "id": "mcImage66b74bb317d4e",
+            "type": "mcImage",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bb317d53",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">Select the best possible Venn diagram, which will represent the relationship among \n</p><div style=\"text-align: justify;\">Employed, Mothers, Women</div>"
+                    }
+                  }
+                ]
+              },
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-image-option66b74bb317d76",
+                  "type": "mc-image-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "image66b74bb317d7d",
+                        "type": "image",
+                        "properties": {
+                          "hasLightbox": false,
+                          "imageData": {
+                            "title": "image",
+                            "tags": [],
+                            "width": 137,
+                            "height": 96,
+                            "size": 2,
+                            "name": "/112b7ac2e9be12689bf4201750901764.png",
+                            "access": "public",
+                            "created": 1722423635.051844,
+                            "modified": 1722423635.051844,
+                            "user": {
+                              "username": "Sneha AK Team"
+                            },
+                            "id": "66aa1953b4bd88e2840eabda",
+                            "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/112b7ac2e9be12689bf4201750901764.png",
+                            "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/112b7ac2e9be12689bf4201750901764.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                            "modifiedF": "2024-07-31 14:00:35"
+                          },
+                          "height": 84,
+                          "width": 120
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-image-option66b74bb317db1",
+                  "type": "mc-image-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "image66b74bb317db8",
+                        "type": "image",
+                        "properties": {
+                          "hasLightbox": false,
+                          "imageData": {
+                            "title": "image",
+                            "tags": [],
+                            "width": 176,
+                            "height": 91,
+                            "size": 2,
+                            "name": "/3a69fbb869ded7bb216f7f40a798397b.png",
+                            "access": "public",
+                            "created": 1722423648.567207,
+                            "modified": 1722423648.567207,
+                            "user": {
+                              "username": "Sneha AK Team"
+                            },
+                            "id": "66aa19603afd1568e6010663",
+                            "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/3a69fbb869ded7bb216f7f40a798397b.png",
+                            "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/3a69fbb869ded7bb216f7f40a798397b.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                            "modifiedF": "2024-07-31 14:00:48"
+                          },
+                          "height": 82,
+                          "width": 160
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-image-option66b74bb317de2",
+                  "type": "mc-image-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "image66b74bb317dea",
+                        "type": "image",
+                        "properties": {
+                          "hasLightbox": false,
+                          "imageData": {
+                            "title": "image",
+                            "tags": [],
+                            "width": 120,
+                            "height": 119,
+                            "size": 2,
+                            "name": "/baa3a0cb77d90dbc1b2f20652999cfba.png",
+                            "access": "public",
+                            "created": 1722423660.421378,
+                            "modified": 1722423660.421378,
+                            "user": {
+                              "username": "Sneha AK Team"
+                            },
+                            "id": "66aa196cfa0c1a8a1d0b5f05",
+                            "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/baa3a0cb77d90dbc1b2f20652999cfba.png",
+                            "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/baa3a0cb77d90dbc1b2f20652999cfba.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                            "modifiedF": "2024-07-31 14:01:00"
+                          },
+                          "height": 109,
+                          "width": 110
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-image-option66b74bb317e15",
+                  "type": "mc-image-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "image66b74bb317e1c",
+                        "type": "image",
+                        "properties": {
+                          "hasLightbox": false,
+                          "imageData": {
+                            "title": "image",
+                            "tags": [],
+                            "width": 181,
+                            "height": 58,
+                            "size": 2,
+                            "name": "/2787334efaa1530ccf7bbd1f4122f68d.png",
+                            "access": "public",
+                            "created": 1722423672.569672,
+                            "modified": 1722423672.569672,
+                            "user": {
+                              "username": "Sneha AK Team"
+                            },
+                            "id": "66aa1978eadd47b7360fc917",
+                            "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/2787334efaa1530ccf7bbd1f4122f68d.png",
+                            "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/2787334efaa1530ccf7bbd1f4122f68d.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                            "modifiedF": "2024-07-31 14:01:12"
+                          },
+                          "height": 58,
+                          "width": 181
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "optionNumbering": "none",
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_2_blockData_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_0_description_widgets_1": [],
+                "sections_0_blocks_2_blockData_options_1_description_widgets_1": [],
+                "sections_0_blocks_2_blockData_options_3_description_widgets_1": [],
+                "sections_0_blocks_2": []
+              }
+            }
+          },
+          {
+            "id": "mcImage66b74bb317e60",
+            "type": "mcImage",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bb317e65",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">Which of the following Venn Diagram will represent the best possible relationship among \n</p><div style=\"text-align: justify;\">Bus, Travellers, Train</div>"
+                    }
+                  }
+                ]
+              },
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-image-option66b74bb317e80",
+                  "type": "mc-image-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "image66b74bb317e87",
+                        "type": "image",
+                        "properties": {
+                          "hasLightbox": false,
+                          "imageData": {
+                            "title": "image",
+                            "tags": [],
+                            "width": 181,
+                            "height": 58,
+                            "size": 2,
+                            "name": "/eef195dfe5fe853a6283e98f42ecbe64.png",
+                            "access": "public",
+                            "created": 1722423786.787359,
+                            "modified": 1722423786.787359,
+                            "user": {
+                              "username": "Sneha AK Team"
+                            },
+                            "id": "66aa19ea49fc603dad0c6b55",
+                            "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/eef195dfe5fe853a6283e98f42ecbe64.png",
+                            "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/eef195dfe5fe853a6283e98f42ecbe64.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                            "modifiedF": "2024-07-31 14:03:06"
+                          },
+                          "height": null,
+                          "width": null
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-image-option66b74bb317eb1",
+                  "type": "mc-image-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "image66b74bb317eb8",
+                        "type": "image",
+                        "properties": {
+                          "hasLightbox": false,
+                          "imageData": {
+                            "title": "image",
+                            "tags": [],
+                            "width": 164,
+                            "height": 70,
+                            "size": 2,
+                            "name": "/9d20947471dc78d4878645610a9f1b05.png",
+                            "access": "public",
+                            "created": 1722423797.602647,
+                            "modified": 1722423797.602647,
+                            "user": {
+                              "username": "Sneha AK Team"
+                            },
+                            "id": "66aa19f5775cc2eb5c0cbb43",
+                            "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/9d20947471dc78d4878645610a9f1b05.png",
+                            "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/9d20947471dc78d4878645610a9f1b05.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                            "modifiedF": "2024-07-31 14:03:17"
+                          },
+                          "height": null,
+                          "width": null
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-image-option66b74bb317ee1",
+                  "type": "mc-image-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "image66b74bb317ee8",
+                        "type": "image",
+                        "properties": {
+                          "hasLightbox": false,
+                          "imageData": {
+                            "title": "image",
+                            "tags": [],
+                            "width": 176,
+                            "height": 91,
+                            "size": 2,
+                            "name": "/4e103b33330bd70e90421da0e6ec1fec.png",
+                            "access": "public",
+                            "created": 1722423809.091742,
+                            "modified": 1722423809.091742,
+                            "user": {
+                              "username": "Sneha AK Team"
+                            },
+                            "id": "66aa1a013afd1568e6010669",
+                            "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/4e103b33330bd70e90421da0e6ec1fec.png",
+                            "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/4e103b33330bd70e90421da0e6ec1fec.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                            "modifiedF": "2024-07-31 14:03:29"
+                          },
+                          "height": null,
+                          "width": null
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-image-option66b74bb317f13",
+                  "type": "mc-image-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "image66b74bb317f19",
+                        "type": "image",
+                        "properties": {
+                          "hasLightbox": false,
+                          "imageData": {
+                            "title": "image",
+                            "tags": [],
+                            "width": 120,
+                            "height": 119,
+                            "size": 2,
+                            "name": "/c48829ef5c7f17a2b2ba95635acf80ec.png",
+                            "access": "public",
+                            "created": 1722423820.678814,
+                            "modified": 1722423820.678814,
+                            "user": {
+                              "username": "Sneha AK Team"
+                            },
+                            "id": "66aa1a0c1b5a8e96aa009b85",
+                            "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/c48829ef5c7f17a2b2ba95635acf80ec.png",
+                            "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/c48829ef5c7f17a2b2ba95635acf80ec.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                            "modifiedF": "2024-07-31 14:03:40"
+                          },
+                          "height": 99,
+                          "width": 100
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "optionNumbering": "none",
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_3_blockData_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_1": [],
+                "sections_0_blocks_3_blockData_options_3_description_widgets_1": [],
+                "sections_0_blocks_3": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74bb317f50",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bb317f55",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">In the following representation, circle represents ‘cricket players’, square represents ‘volleyball players’ and rectangle represents ‘rugby players’. How many players are able to play rugby and cricket both but are not able to play volleyball?</p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/2e00fb6e20496c0330b8f80fe8920abd.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 250px;\"></p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74bb317f66",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74bb317f6d",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74bb317f74",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74bb317f93",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb317f99",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>15</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb317fa9",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb317faf",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>7</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb317fbe",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb317fc5",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>8</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb317fd4",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb317fdb",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>12</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_3_blockData_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4": []
+              }
+            }
+          },
+          {
+            "id": "mcImage66b74bb317ffe",
+            "type": "mcImage",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bb318003",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">Choose the best possible Venn Diagram, which will represent the relationship among \n</p><div style=\"text-align: justify;\">Uncles, Female, Relatives</div>"
+                    }
+                  }
+                ]
+              },
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-image-option66b74bb31801d",
+                  "type": "mc-image-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "image66b74bb318024",
+                        "type": "image",
+                        "properties": {
+                          "hasLightbox": false,
+                          "imageData": {
+                            "title": "image",
+                            "tags": [],
+                            "width": 120,
+                            "height": 119,
+                            "size": 2,
+                            "name": "/d4bb1d24f8fb9dbb29a27191ce64610e.png",
+                            "access": "public",
+                            "created": 1722424298.965023,
+                            "modified": 1722424298.965023,
+                            "user": {
+                              "username": "Sneha AK Team"
+                            },
+                            "id": "66aa1bea4efab1ca620077b5",
+                            "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/d4bb1d24f8fb9dbb29a27191ce64610e.png",
+                            "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/d4bb1d24f8fb9dbb29a27191ce64610e.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                            "modifiedF": "2024-07-31 14:11:38"
+                          },
+                          "height": null,
+                          "width": null
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-image-option66b74bb31804d",
+                  "type": "mc-image-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "image66b74bb318054",
+                        "type": "image",
+                        "properties": {
+                          "hasLightbox": false,
+                          "imageData": {
+                            "title": "image",
+                            "tags": [],
+                            "width": 164,
+                            "height": 70,
+                            "size": 2,
+                            "name": "/d0707e9ef1e75d485b8508549a7d4216.png",
+                            "access": "public",
+                            "created": 1722424312.661659,
+                            "modified": 1722424312.661659,
+                            "user": {
+                              "username": "Sneha AK Team"
+                            },
+                            "id": "66aa1bf82caa511f730bf815",
+                            "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/d0707e9ef1e75d485b8508549a7d4216.png",
+                            "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/d0707e9ef1e75d485b8508549a7d4216.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                            "modifiedF": "2024-07-31 14:11:52"
+                          },
+                          "height": null,
+                          "width": null
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-image-option66b74bb31807e",
+                  "type": "mc-image-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "image66b74bb318084",
+                        "type": "image",
+                        "properties": {
+                          "hasLightbox": false,
+                          "imageData": {
+                            "title": "image",
+                            "tags": [],
+                            "width": 179,
+                            "height": 103,
+                            "size": 2,
+                            "name": "/5686e48981e0e6a86b754b6284b0c663.png",
+                            "access": "public",
+                            "created": 1722424327.172755,
+                            "modified": 1722424327.172755,
+                            "user": {
+                              "username": "Sneha AK Team"
+                            },
+                            "id": "66aa1c07639aefdb80077de3",
+                            "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/5686e48981e0e6a86b754b6284b0c663.png",
+                            "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/5686e48981e0e6a86b754b6284b0c663.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                            "modifiedF": "2024-07-31 14:12:07"
+                          },
+                          "height": 86,
+                          "width": 150
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-image-option66b74bb3180ae",
+                  "type": "mc-image-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "image66b74bb3180b5",
+                        "type": "image",
+                        "properties": {
+                          "hasLightbox": false,
+                          "imageData": {
+                            "title": "image",
+                            "tags": [],
+                            "width": 173,
+                            "height": 103,
+                            "size": 2,
+                            "name": "/c0b562edb4610966c1e393691828759b.png",
+                            "access": "public",
+                            "created": 1722424342.21832,
+                            "modified": 1722424342.21832,
+                            "user": {
+                              "username": "Sneha AK Team"
+                            },
+                            "id": "66aa1c16427d082fb70602b7",
+                            "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/c0b562edb4610966c1e393691828759b.png",
+                            "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/c0b562edb4610966c1e393691828759b.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                            "modifiedF": "2024-07-31 14:12:22"
+                          },
+                          "height": 89,
+                          "width": 150
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "optionNumbering": "none",
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_5_blockData_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_0_description_widgets_1": [],
+                "sections_0_blocks_5_blockData_options_3_description_widgets_1": [],
+                "sections_0_blocks_5": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74bb3180ec",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bb3180f1",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">In the following diagram, triangle represents ‘villagers’, circle represents ‘Literate persons’, rectangle represents ‘unemployed persons’. How many villagers are unemployed though they are literate?</p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/05ddad3d1603fbf4a0a49200b27b359b.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 300px;\"></p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74bb318102",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74bb318109",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74bb318111",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74bb31812f",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb318136",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>9</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb31814a",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb318151",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>6</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb318160",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb318166",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>4</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb318175",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb31817c",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>3</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_6_blockData_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_6": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74bb31819c",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bb3181a1",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">In a small society, during a survey some data are extracted. In the following diagram shows how many persons in the society have their relatives in Srinagar, Shimla or Gangtok. How many persons have their relatives only in Gangtok &amp; Srinagar both and may or may not be in Shimla?</p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/c026f75f7ac7a33cbca13b50b35f1a8a.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 250px;\"></p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74bb3181b3",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74bb3181b9",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74bb3181c0",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74bb3181e1",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb3181e8",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>7</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb3181f7",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb3181fd",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>15</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb31820c",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb318213",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>16</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb318222",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb318228",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>22</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_7_blockData_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_7": []
+              }
+            }
+          },
+          {
+            "id": "mcImage66b74bb318253",
+            "type": "mcImage",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bb318258",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">Choose the proper Venn Diagram to represent the relationship among \n</p><div style=\"text-align: justify;\">Spices, Black pepper, Coriander</div>"
+                    }
+                  }
+                ]
+              },
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-image-option66b74bb318275",
+                  "type": "mc-image-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "image66b74bb31827c",
+                        "type": "image",
+                        "properties": {
+                          "hasLightbox": false,
+                          "imageData": {
+                            "title": "image",
+                            "tags": [],
+                            "width": 133,
+                            "height": 133,
+                            "size": 2,
+                            "name": "/da634aa2c830c37f235956d313c2baa7.png",
+                            "access": "public",
+                            "created": 1722424612.563637,
+                            "modified": 1722424612.563637,
+                            "user": {
+                              "username": "Sneha AK Team"
+                            },
+                            "id": "66aa1d24a90bdbadf4055b76",
+                            "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/da634aa2c830c37f235956d313c2baa7.png",
+                            "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/da634aa2c830c37f235956d313c2baa7.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                            "modifiedF": "2024-07-31 14:16:52"
+                          },
+                          "height": 100,
+                          "width": 100
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-image-option66b74bb3182a8",
+                  "type": "mc-image-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "image66b74bb3182af",
+                        "type": "image",
+                        "properties": {
+                          "hasLightbox": false,
+                          "imageData": {
+                            "title": "image",
+                            "tags": [],
+                            "width": 138,
+                            "height": 136,
+                            "size": 2,
+                            "name": "/2ac4ef419cd3ef23fa66a92d6c8ff781.png",
+                            "access": "public",
+                            "created": 1722424626.174669,
+                            "modified": 1722424626.174669,
+                            "user": {
+                              "username": "Sneha AK Team"
+                            },
+                            "id": "66aa1d32751c96bab306c116",
+                            "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/2ac4ef419cd3ef23fa66a92d6c8ff781.png",
+                            "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/2ac4ef419cd3ef23fa66a92d6c8ff781.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                            "modifiedF": "2024-07-31 14:17:06"
+                          },
+                          "height": 98,
+                          "width": 100
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-image-option66b74bb3182d9",
+                  "type": "mc-image-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "image66b74bb3182e0",
+                        "type": "image",
+                        "properties": {
+                          "hasLightbox": false,
+                          "imageData": {
+                            "title": "image",
+                            "tags": [],
+                            "width": 179,
+                            "height": 103,
+                            "size": 2,
+                            "name": "/83372e7f8b2ca8f9a13bd0a82f1b10ad.png",
+                            "access": "public",
+                            "created": 1722424638.118513,
+                            "modified": 1722424638.118513,
+                            "user": {
+                              "username": "Sneha AK Team"
+                            },
+                            "id": "66aa1d3e5c38be282405fec6",
+                            "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/83372e7f8b2ca8f9a13bd0a82f1b10ad.png",
+                            "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/83372e7f8b2ca8f9a13bd0a82f1b10ad.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                            "modifiedF": "2024-07-31 14:17:18"
+                          },
+                          "height": 86,
+                          "width": 150
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-image-option66b74bb318309",
+                  "type": "mc-image-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "image66b74bb318310",
+                        "type": "image",
+                        "properties": {
+                          "hasLightbox": false,
+                          "imageData": {
+                            "title": "image",
+                            "tags": [],
+                            "width": 164,
+                            "height": 70,
+                            "size": 2,
+                            "name": "/ccabbe0224b943092b04c6d542a8e463.png",
+                            "access": "public",
+                            "created": 1722424650.426293,
+                            "modified": 1722424650.426293,
+                            "user": {
+                              "username": "Sneha AK Team"
+                            },
+                            "id": "66aa1d4a9309fb5622068b46",
+                            "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/ccabbe0224b943092b04c6d542a8e463.png",
+                            "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/ccabbe0224b943092b04c6d542a8e463.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                            "modifiedF": "2024-07-31 14:17:30"
+                          },
+                          "height": null,
+                          "width": null
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "optionNumbering": "none",
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_8_blockData_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_2_description_widgets_1": [],
+                "sections_0_blocks_8_blockData_options_3_description_widgets_1": [],
+                "sections_0_blocks_8": []
+              }
+            }
+          },
+          {
+            "id": "mcImage66b74bb318346",
+            "type": "mcImage",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bb31834a",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">Which of the following Venn Diagram will represent the relationship among \n</p><p style=\"text-align: justify;\">Watch, Shoe, Socks</p>"
+                    }
+                  }
+                ]
+              },
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-image-option66b74bb318365",
+                  "type": "mc-image-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "image66b74bb31836b",
+                        "type": "image",
+                        "properties": {
+                          "hasLightbox": false,
+                          "imageData": {
+                            "title": "image",
+                            "tags": [],
+                            "width": 164,
+                            "height": 70,
+                            "size": 2,
+                            "name": "/5b42e1ba59a99048027e825da991cba1.png",
+                            "access": "public",
+                            "created": 1722424819.870972,
+                            "modified": 1722424819.870972,
+                            "user": {
+                              "username": "Sneha AK Team"
+                            },
+                            "id": "66aa1df3dd816d04cd055c85",
+                            "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/5b42e1ba59a99048027e825da991cba1.png",
+                            "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/5b42e1ba59a99048027e825da991cba1.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                            "modifiedF": "2024-07-31 14:20:19"
+                          },
+                          "height": null,
+                          "width": null
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-image-option66b74bb318395",
+                  "type": "mc-image-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "image66b74bb31839c",
+                        "type": "image",
+                        "properties": {
+                          "hasLightbox": false,
+                          "imageData": {
+                            "title": "image",
+                            "tags": [],
+                            "width": 176,
+                            "height": 91,
+                            "size": 2,
+                            "name": "/ba9f973dcda95ec5a0216fb0fb94c116.png",
+                            "access": "public",
+                            "created": 1722424830.911661,
+                            "modified": 1722424830.911661,
+                            "user": {
+                              "username": "Sneha AK Team"
+                            },
+                            "id": "66aa1dfe5856fb0cad052e26",
+                            "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/ba9f973dcda95ec5a0216fb0fb94c116.png",
+                            "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/ba9f973dcda95ec5a0216fb0fb94c116.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                            "modifiedF": "2024-07-31 14:20:30"
+                          },
+                          "height": null,
+                          "width": null
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-image-option66b74bb3183c5",
+                  "type": "mc-image-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "image66b74bb3183cc",
+                        "type": "image",
+                        "properties": {
+                          "hasLightbox": false,
+                          "imageData": {
+                            "title": "image",
+                            "tags": [],
+                            "width": 181,
+                            "height": 58,
+                            "size": 2,
+                            "name": "/c1bfb740de7a1dd80f3ccedf0cf8501a.png",
+                            "access": "public",
+                            "created": 1722424843.374169,
+                            "modified": 1722424843.374169,
+                            "user": {
+                              "username": "Sneha AK Team"
+                            },
+                            "id": "66aa1e0b78cd1bea8b0b5665",
+                            "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/c1bfb740de7a1dd80f3ccedf0cf8501a.png",
+                            "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/c1bfb740de7a1dd80f3ccedf0cf8501a.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                            "modifiedF": "2024-07-31 14:20:43"
+                          },
+                          "height": null,
+                          "width": null
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-image-option66b74bb3183f6",
+                  "type": "mc-image-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "image66b74bb3183fc",
+                        "type": "image",
+                        "properties": {
+                          "hasLightbox": false,
+                          "imageData": {
+                            "title": "image",
+                            "tags": [],
+                            "width": 120,
+                            "height": 119,
+                            "size": 2,
+                            "name": "/6f9c4288ca95aea3c1eefaf3a6531690.png",
+                            "access": "public",
+                            "created": 1722424854.875653,
+                            "modified": 1722424854.875653,
+                            "user": {
+                              "username": "Sneha AK Team"
+                            },
+                            "id": "66aa1e16e11d8eac03064048",
+                            "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/6f9c4288ca95aea3c1eefaf3a6531690.png",
+                            "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/6f9c4288ca95aea3c1eefaf3a6531690.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                            "modifiedF": "2024-07-31 14:20:54"
+                          },
+                          "height": 99,
+                          "width": 100
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "optionNumbering": "none",
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_8_blockData_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_2_description_widgets_1": [],
+                "sections_0_blocks_8_blockData_options_3_description_widgets_1": [],
+                "sections_0_blocks_9_blockData_description_widgets_0": [],
+                "sections_0_blocks_9": []
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "availabilityStatus": null,
+    "autoNavigationEnabled": false,
+    "displayBackButtonWhenNavigationPerBlock": true,
+    "saveAndResumeLaterEnabled": null,
+    "tagsAddedOnCompletion": [],
+    "tagsAddedOnPass": [],
+    "sendAnonymousSubmissionsToEmailLeads": false,
+    "afterSubmitActionEnabled": null,
+    "afterSubmitActionProperties": null,
+    "showWizardOnNextEdit": false,
+    "revisitAfterSubmissionAction": null,
+    "navigationTemplate": "HorizontalSpacedBetweenNavigationTemplate",
+    "learnerSearchBarEnabled": true,
+    "learnerUnansweredQuestionsEnabled": true,
+    "learnerFavouriteQuestionEnabled": true,
+    "learnerCompletionProgressEnabled": true,
+    "learnerShowIndexOfQuestionsEnabled": false,
+    "learnerTimeNotificationsEnabled": false,
+    "learnerAllowInterruptionsEnabled": true,
+    "learnerAllowInterruptionsTimeoutInMinutes": 30,
+    "learnerReclaimTryOnInterruptionTimeoutEnabled": false,
+    "learnerAskBeforeContinueToSaved": true,
+    "learnerAutoSaveEnabled": null,
+    "spellcheckDisabled": null,
+    "showPartialScoreOnSubmission": true,
+    "deliverableQuestionsSubsetType": "all",
+    "questionRandomizationType": "none",
+    "serveQuestionsBasedOnPreviousSubmission": null,
+    "scoringDisabled": false,
+    "isSelfAssessment": false,
+    "useDefaultCertificateTemplate": null,
+    "certificateTemplate": null,
+    "certificateSocialShare": null,
+    "migrationData": null,
+    "useAssessmentPassingGradeForOpenEndedCorrectness": true,
+    "openEndedCorrectnessPassingGrade": null,
+    "showScorePercentage": null,
+    "showScorePoints": null,
+    "showScoreCorrectAnswers": null,
+    "editorBehaviorSettings": null,
+    "manualReviewEnabled": null,
+    "resultsSummary": {
+      "enabled": true,
+      "showStatusIcon": true,
+      "showStatusText": true,
+      "showScorePercentage": true,
+      "showScorePoints": true,
+      "showScoreCorrectAnswers": false,
+      "showTimeTakenToComplete": true,
+      "showDateSubmitted": true,
+      "showAttemptCount": true
+    },
+    "meta": null,
+    "submissionsCount": 1972,
+    "fromMarketplace": null,
+    "aiFeedbackEnabled": null,
+    "numberOfFeedbackQuestions": null,
+    "created": 1723288499.533922,
+    "modified": 1723728901.880489,
+    "contentHash": "38555081ddba891a2102013a1ba1737c202ca314d01f9fa8b47cf5f18c762e79",
+    "id": "66b74bb37f809db010095225",
+    "objectType": "assessment",
+    "isEditBlockedDueToSync": false,
+    "variables": {
+      "submission": {
+        "self": {
+          "score": 0,
+          "points": 0,
+          "total_points": 10,
+          "correct_answers": 0,
+          "total_questions": 10,
+          "time_spent": "00:00:01",
+          "date_submitted": "11/08/26",
+          "attempt_count": 3,
+          "max_tries": null,
+          "pass_grade": 50,
+          "time_spent_seconds": 1,
+          "raw_start_date": 1786440556.940358
+        }
+      },
+      "school": {
+        "name": "Apna College",
+        "url": "www.apnacollege.in",
+        "description": "The most loved coding community of India ❤️"
+      },
+      "user": {
+        "username": "ram",
+        "email": "p4542639@gmail.com",
+        "cf_phonenumber": "7666690798"
+      }
+    }
+  },
+  "reclaimedTry": false,
+  "feedback": [
+    {
+      "title": "",
+      "id": "section66b74bb317bef",
+      "blocks": [
+        {
+          "id": "mc66b74bb317bf7",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Which of the following group is suitable to be represented by the given Venn diagram–",
+            "widgets": [
+              {
+                "id": "text66b74bb317bfc",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">Which of the following group is suitable to be represented by the given Venn diagram–</p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/0b52658f052bedc62049533276f18151.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 100px;\"></p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74bb317c3c",
+              "description": {
+                "text": "Instrument, Screw driver, Guitar",
+                "widgets": [
+                  {
+                    "id": "text66b74bb317c43",
+                    "type": "text",
+                    "properties": {
+                      "html": "Instrument, Screw driver, Guitar"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb317c52",
+              "description": {
+                "text": "Extrovert, Man, Handsome",
+                "widgets": [
+                  {
+                    "id": "text66b74bb317c59",
+                    "type": "text",
+                    "properties": {
+                      "html": "Extrovert, Man, Handsome"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb317c67",
+              "description": {
+                "text": "Mammal, Tiger, Lizard",
+                "widgets": [
+                  {
+                    "id": "text66b74bb317c6e",
+                    "type": "text",
+                    "properties": {
+                      "html": "Mammal, Tiger, Lizard"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb317c7d",
+              "description": {
+                "text": "Doctor, Male, Female",
+                "widgets": [
+                  {
+                    "id": "text66b74bb317c84",
+                    "type": "text",
+                    "properties": {
+                      "html": "Doctor, Male, Female"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74bb317c52",
+              "text": "Extrovert, Man, Handsome",
+              "widgets": [
+                {
+                  "id": "text66b74bb317c59",
+                  "type": "text",
+                  "properties": {
+                    "html": "Extrovert, Man, Handsome"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>It is evident, that all three should be in \n‘some’ relation to satisfy the given Venn \nDiagram\n<br>Therefore, correct answer is – option (B) \nExtrovert, Man, Handsome</p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74bb317ca0",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "In the following figure, the triangle represents ‘Doctor’, the circle represents ‘Engineer’ and the rectangle represents ‘Teacher’. How many people are Doctor and teacher both but not an engineer?",
+            "widgets": [
+              {
+                "id": "text66b74bb317ca5",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">In the following figure, the triangle represents ‘Doctor’, the circle represents ‘Engineer’ and the rectangle represents ‘Teacher’. How many people are Doctor and teacher both but not an engineer?</p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/3a9253aeb516468cfd6c30ad9204adb1.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 250px;\"></p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74bb317ce4",
+              "description": {
+                "text": "4",
+                "widgets": [
+                  {
+                    "id": "text66b74bb317ceb",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>4</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb317cfb",
+              "description": {
+                "text": "3",
+                "widgets": [
+                  {
+                    "id": "text66b74bb317d01",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>3</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb317d10",
+              "description": {
+                "text": "2",
+                "widgets": [
+                  {
+                    "id": "text66b74bb317d17",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>2</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb317d27",
+              "description": {
+                "text": "5",
+                "widgets": [
+                  {
+                    "id": "text66b74bb317d2d",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>5</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74bb317cfb",
+              "text": "3",
+              "widgets": [
+                {
+                  "id": "text66b74bb317d01",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>3</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>We should focus on the intersection of \ntriangle and rectangle and carefully avoid \nthe intersection of circle. <br>Therefore, correct answer is – option (B) 3</p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mcImage66b74bb317d4e",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mcImage",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Select the best possible Venn diagram, which will represent the relationship among Employed, Mothers, Women",
+            "widgets": [
+              {
+                "id": "text66b74bb317d53",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">Select the best possible Venn diagram, which will represent the relationship among \n</p><div style=\"text-align: justify;\">Employed, Mothers, Women</div>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-image-option66b74bb317d76",
+              "description": {
+                "text": "(Image)",
+                "widgets": [
+                  {
+                    "id": "image66b74bb317d7d",
+                    "type": "image",
+                    "properties": {
+                      "hasLightbox": false,
+                      "imageData": {
+                        "title": "image",
+                        "tags": [],
+                        "width": 137,
+                        "height": 96,
+                        "size": 2,
+                        "name": "/112b7ac2e9be12689bf4201750901764.png",
+                        "access": "public",
+                        "created": 1722423635.051844,
+                        "modified": 1722423635.051844,
+                        "user": {
+                          "username": "Sneha AK Team"
+                        },
+                        "id": "66aa1953b4bd88e2840eabda",
+                        "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/112b7ac2e9be12689bf4201750901764.png",
+                        "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/112b7ac2e9be12689bf4201750901764.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                        "modifiedF": "2024-07-31 14:00:35"
+                      },
+                      "height": 84,
+                      "width": 120
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-image-option66b74bb317db1",
+              "description": {
+                "text": "(Image)",
+                "widgets": [
+                  {
+                    "id": "image66b74bb317db8",
+                    "type": "image",
+                    "properties": {
+                      "hasLightbox": false,
+                      "imageData": {
+                        "title": "image",
+                        "tags": [],
+                        "width": 176,
+                        "height": 91,
+                        "size": 2,
+                        "name": "/3a69fbb869ded7bb216f7f40a798397b.png",
+                        "access": "public",
+                        "created": 1722423648.567207,
+                        "modified": 1722423648.567207,
+                        "user": {
+                          "username": "Sneha AK Team"
+                        },
+                        "id": "66aa19603afd1568e6010663",
+                        "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/3a69fbb869ded7bb216f7f40a798397b.png",
+                        "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/3a69fbb869ded7bb216f7f40a798397b.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                        "modifiedF": "2024-07-31 14:00:48"
+                      },
+                      "height": 82,
+                      "width": 160
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-image-option66b74bb317de2",
+              "description": {
+                "text": "(Image)",
+                "widgets": [
+                  {
+                    "id": "image66b74bb317dea",
+                    "type": "image",
+                    "properties": {
+                      "hasLightbox": false,
+                      "imageData": {
+                        "title": "image",
+                        "tags": [],
+                        "width": 120,
+                        "height": 119,
+                        "size": 2,
+                        "name": "/baa3a0cb77d90dbc1b2f20652999cfba.png",
+                        "access": "public",
+                        "created": 1722423660.421378,
+                        "modified": 1722423660.421378,
+                        "user": {
+                          "username": "Sneha AK Team"
+                        },
+                        "id": "66aa196cfa0c1a8a1d0b5f05",
+                        "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/baa3a0cb77d90dbc1b2f20652999cfba.png",
+                        "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/baa3a0cb77d90dbc1b2f20652999cfba.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                        "modifiedF": "2024-07-31 14:01:00"
+                      },
+                      "height": 109,
+                      "width": 110
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-image-option66b74bb317e15",
+              "description": {
+                "text": "(Image)",
+                "widgets": [
+                  {
+                    "id": "image66b74bb317e1c",
+                    "type": "image",
+                    "properties": {
+                      "hasLightbox": false,
+                      "imageData": {
+                        "title": "image",
+                        "tags": [],
+                        "width": 181,
+                        "height": 58,
+                        "size": 2,
+                        "name": "/2787334efaa1530ccf7bbd1f4122f68d.png",
+                        "access": "public",
+                        "created": 1722423672.569672,
+                        "modified": 1722423672.569672,
+                        "user": {
+                          "username": "Sneha AK Team"
+                        },
+                        "id": "66aa1978eadd47b7360fc917",
+                        "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/2787334efaa1530ccf7bbd1f4122f68d.png",
+                        "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/2787334efaa1530ccf7bbd1f4122f68d.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                        "modifiedF": "2024-07-31 14:01:12"
+                      },
+                      "height": 58,
+                      "width": 181
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-image-option66b74bb317d76",
+              "text": "(Image)",
+              "widgets": [
+                {
+                  "id": "image66b74bb317d7d",
+                  "type": "image",
+                  "properties": {
+                    "hasLightbox": false,
+                    "imageData": {
+                      "title": "image",
+                      "tags": [],
+                      "width": 137,
+                      "height": 96,
+                      "size": 2,
+                      "name": "/112b7ac2e9be12689bf4201750901764.png",
+                      "access": "public",
+                      "created": 1722423635.051844,
+                      "modified": 1722423635.051844,
+                      "user": {
+                        "username": "Sneha AK Team"
+                      },
+                      "id": "66aa1953b4bd88e2840eabda",
+                      "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/112b7ac2e9be12689bf4201750901764.png",
+                      "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/112b7ac2e9be12689bf4201750901764.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                      "modifiedF": "2024-07-31 14:00:35"
+                    },
+                    "height": 84,
+                    "width": 120
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br>Correct answer is option (A)<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/94369a7cea9f3f1b9a826e59bb2a8091.png\" style=\"width: 230px; height: 141px;\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mcImage66b74bb317e60",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mcImage",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Which of the following Venn Diagram will represent the best possible relationship among Bus, Travellers, Train",
+            "widgets": [
+              {
+                "id": "text66b74bb317e65",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">Which of the following Venn Diagram will represent the best possible relationship among \n</p><div style=\"text-align: justify;\">Bus, Travellers, Train</div>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-image-option66b74bb317e80",
+              "description": {
+                "text": "(Image)",
+                "widgets": [
+                  {
+                    "id": "image66b74bb317e87",
+                    "type": "image",
+                    "properties": {
+                      "hasLightbox": false,
+                      "imageData": {
+                        "title": "image",
+                        "tags": [],
+                        "width": 181,
+                        "height": 58,
+                        "size": 2,
+                        "name": "/eef195dfe5fe853a6283e98f42ecbe64.png",
+                        "access": "public",
+                        "created": 1722423786.787359,
+                        "modified": 1722423786.787359,
+                        "user": {
+                          "username": "Sneha AK Team"
+                        },
+                        "id": "66aa19ea49fc603dad0c6b55",
+                        "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/eef195dfe5fe853a6283e98f42ecbe64.png",
+                        "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/eef195dfe5fe853a6283e98f42ecbe64.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                        "modifiedF": "2024-07-31 14:03:06"
+                      },
+                      "height": null,
+                      "width": null
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-image-option66b74bb317eb1",
+              "description": {
+                "text": "(Image)",
+                "widgets": [
+                  {
+                    "id": "image66b74bb317eb8",
+                    "type": "image",
+                    "properties": {
+                      "hasLightbox": false,
+                      "imageData": {
+                        "title": "image",
+                        "tags": [],
+                        "width": 164,
+                        "height": 70,
+                        "size": 2,
+                        "name": "/9d20947471dc78d4878645610a9f1b05.png",
+                        "access": "public",
+                        "created": 1722423797.602647,
+                        "modified": 1722423797.602647,
+                        "user": {
+                          "username": "Sneha AK Team"
+                        },
+                        "id": "66aa19f5775cc2eb5c0cbb43",
+                        "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/9d20947471dc78d4878645610a9f1b05.png",
+                        "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/9d20947471dc78d4878645610a9f1b05.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                        "modifiedF": "2024-07-31 14:03:17"
+                      },
+                      "height": null,
+                      "width": null
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-image-option66b74bb317ee1",
+              "description": {
+                "text": "(Image)",
+                "widgets": [
+                  {
+                    "id": "image66b74bb317ee8",
+                    "type": "image",
+                    "properties": {
+                      "hasLightbox": false,
+                      "imageData": {
+                        "title": "image",
+                        "tags": [],
+                        "width": 176,
+                        "height": 91,
+                        "size": 2,
+                        "name": "/4e103b33330bd70e90421da0e6ec1fec.png",
+                        "access": "public",
+                        "created": 1722423809.091742,
+                        "modified": 1722423809.091742,
+                        "user": {
+                          "username": "Sneha AK Team"
+                        },
+                        "id": "66aa1a013afd1568e6010669",
+                        "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/4e103b33330bd70e90421da0e6ec1fec.png",
+                        "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/4e103b33330bd70e90421da0e6ec1fec.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                        "modifiedF": "2024-07-31 14:03:29"
+                      },
+                      "height": null,
+                      "width": null
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-image-option66b74bb317f13",
+              "description": {
+                "text": "(Image)",
+                "widgets": [
+                  {
+                    "id": "image66b74bb317f19",
+                    "type": "image",
+                    "properties": {
+                      "hasLightbox": false,
+                      "imageData": {
+                        "title": "image",
+                        "tags": [],
+                        "width": 120,
+                        "height": 119,
+                        "size": 2,
+                        "name": "/c48829ef5c7f17a2b2ba95635acf80ec.png",
+                        "access": "public",
+                        "created": 1722423820.678814,
+                        "modified": 1722423820.678814,
+                        "user": {
+                          "username": "Sneha AK Team"
+                        },
+                        "id": "66aa1a0c1b5a8e96aa009b85",
+                        "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/c48829ef5c7f17a2b2ba95635acf80ec.png",
+                        "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/c48829ef5c7f17a2b2ba95635acf80ec.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                        "modifiedF": "2024-07-31 14:03:40"
+                      },
+                      "height": 99,
+                      "width": 100
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-image-option66b74bb317eb1",
+              "text": "(Image)",
+              "widgets": [
+                {
+                  "id": "image66b74bb317eb8",
+                  "type": "image",
+                  "properties": {
+                    "hasLightbox": false,
+                    "imageData": {
+                      "title": "image",
+                      "tags": [],
+                      "width": 164,
+                      "height": 70,
+                      "size": 2,
+                      "name": "/9d20947471dc78d4878645610a9f1b05.png",
+                      "access": "public",
+                      "created": 1722423797.602647,
+                      "modified": 1722423797.602647,
+                      "user": {
+                        "username": "Sneha AK Team"
+                      },
+                      "id": "66aa19f5775cc2eb5c0cbb43",
+                      "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/9d20947471dc78d4878645610a9f1b05.png",
+                      "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/9d20947471dc78d4878645610a9f1b05.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                      "modifiedF": "2024-07-31 14:03:17"
+                    },
+                    "height": null,
+                    "width": null
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><span>Correct\nanswer is Option (B) –</span><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/f82a7dd3fa41684df075a54c656ecf68.png\" style=\"width: 230px; height: 86px;\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74bb317f50",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "In the following representation, circle represents ‘cricket players’, square represents ‘volleyball players’ and rectangle represents ‘rugby players’. How many players are able to play rugby and cricket both but are not able to play volleyball?",
+            "widgets": [
+              {
+                "id": "text66b74bb317f55",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">In the following representation, circle represents ‘cricket players’, square represents ‘volleyball players’ and rectangle represents ‘rugby players’. How many players are able to play rugby and cricket both but are not able to play volleyball?</p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/2e00fb6e20496c0330b8f80fe8920abd.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 250px;\"></p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74bb317f93",
+              "description": {
+                "text": "15",
+                "widgets": [
+                  {
+                    "id": "text66b74bb317f99",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>15</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb317fa9",
+              "description": {
+                "text": "7",
+                "widgets": [
+                  {
+                    "id": "text66b74bb317faf",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>7</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb317fbe",
+              "description": {
+                "text": "8",
+                "widgets": [
+                  {
+                    "id": "text66b74bb317fc5",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>8</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb317fd4",
+              "description": {
+                "text": "12",
+                "widgets": [
+                  {
+                    "id": "text66b74bb317fdb",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>12</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74bb317fbe",
+              "text": "8",
+              "widgets": [
+                {
+                  "id": "text66b74bb317fc5",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>8</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>We need the intersection of circle and \nrectangle and also carefully avoid the \nintersection of square. <br>So, correct answer is – (7+1) = 8 \n………….Option (C)</p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mcImage66b74bb317ffe",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mcImage",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Choose the best possible Venn Diagram, which will represent the relationship among Uncles, Female, Relatives",
+            "widgets": [
+              {
+                "id": "text66b74bb318003",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">Choose the best possible Venn Diagram, which will represent the relationship among \n</p><div style=\"text-align: justify;\">Uncles, Female, Relatives</div>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-image-option66b74bb31801d",
+              "description": {
+                "text": "(Image)",
+                "widgets": [
+                  {
+                    "id": "image66b74bb318024",
+                    "type": "image",
+                    "properties": {
+                      "hasLightbox": false,
+                      "imageData": {
+                        "title": "image",
+                        "tags": [],
+                        "width": 120,
+                        "height": 119,
+                        "size": 2,
+                        "name": "/d4bb1d24f8fb9dbb29a27191ce64610e.png",
+                        "access": "public",
+                        "created": 1722424298.965023,
+                        "modified": 1722424298.965023,
+                        "user": {
+                          "username": "Sneha AK Team"
+                        },
+                        "id": "66aa1bea4efab1ca620077b5",
+                        "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/d4bb1d24f8fb9dbb29a27191ce64610e.png",
+                        "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/d4bb1d24f8fb9dbb29a27191ce64610e.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                        "modifiedF": "2024-07-31 14:11:38"
+                      },
+                      "height": null,
+                      "width": null
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-image-option66b74bb31804d",
+              "description": {
+                "text": "(Image)",
+                "widgets": [
+                  {
+                    "id": "image66b74bb318054",
+                    "type": "image",
+                    "properties": {
+                      "hasLightbox": false,
+                      "imageData": {
+                        "title": "image",
+                        "tags": [],
+                        "width": 164,
+                        "height": 70,
+                        "size": 2,
+                        "name": "/d0707e9ef1e75d485b8508549a7d4216.png",
+                        "access": "public",
+                        "created": 1722424312.661659,
+                        "modified": 1722424312.661659,
+                        "user": {
+                          "username": "Sneha AK Team"
+                        },
+                        "id": "66aa1bf82caa511f730bf815",
+                        "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/d0707e9ef1e75d485b8508549a7d4216.png",
+                        "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/d0707e9ef1e75d485b8508549a7d4216.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                        "modifiedF": "2024-07-31 14:11:52"
+                      },
+                      "height": null,
+                      "width": null
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-image-option66b74bb31807e",
+              "description": {
+                "text": "(Image)",
+                "widgets": [
+                  {
+                    "id": "image66b74bb318084",
+                    "type": "image",
+                    "properties": {
+                      "hasLightbox": false,
+                      "imageData": {
+                        "title": "image",
+                        "tags": [],
+                        "width": 179,
+                        "height": 103,
+                        "size": 2,
+                        "name": "/5686e48981e0e6a86b754b6284b0c663.png",
+                        "access": "public",
+                        "created": 1722424327.172755,
+                        "modified": 1722424327.172755,
+                        "user": {
+                          "username": "Sneha AK Team"
+                        },
+                        "id": "66aa1c07639aefdb80077de3",
+                        "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/5686e48981e0e6a86b754b6284b0c663.png",
+                        "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/5686e48981e0e6a86b754b6284b0c663.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                        "modifiedF": "2024-07-31 14:12:07"
+                      },
+                      "height": 86,
+                      "width": 150
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-image-option66b74bb3180ae",
+              "description": {
+                "text": "(Image)",
+                "widgets": [
+                  {
+                    "id": "image66b74bb3180b5",
+                    "type": "image",
+                    "properties": {
+                      "hasLightbox": false,
+                      "imageData": {
+                        "title": "image",
+                        "tags": [],
+                        "width": 173,
+                        "height": 103,
+                        "size": 2,
+                        "name": "/c0b562edb4610966c1e393691828759b.png",
+                        "access": "public",
+                        "created": 1722424342.21832,
+                        "modified": 1722424342.21832,
+                        "user": {
+                          "username": "Sneha AK Team"
+                        },
+                        "id": "66aa1c16427d082fb70602b7",
+                        "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/c0b562edb4610966c1e393691828759b.png",
+                        "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/c0b562edb4610966c1e393691828759b.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                        "modifiedF": "2024-07-31 14:12:22"
+                      },
+                      "height": 89,
+                      "width": 150
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-image-option66b74bb31807e",
+              "text": "(Image)",
+              "widgets": [
+                {
+                  "id": "image66b74bb318084",
+                  "type": "image",
+                  "properties": {
+                    "hasLightbox": false,
+                    "imageData": {
+                      "title": "image",
+                      "tags": [],
+                      "width": 179,
+                      "height": 103,
+                      "size": 2,
+                      "name": "/5686e48981e0e6a86b754b6284b0c663.png",
+                      "access": "public",
+                      "created": 1722424327.172755,
+                      "modified": 1722424327.172755,
+                      "user": {
+                        "username": "Sneha AK Team"
+                      },
+                      "id": "66aa1c07639aefdb80077de3",
+                      "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/5686e48981e0e6a86b754b6284b0c663.png",
+                      "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/5686e48981e0e6a86b754b6284b0c663.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                      "modifiedF": "2024-07-31 14:12:07"
+                    },
+                    "height": 86,
+                    "width": 150
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><span>Correct\nanswer is option (C)</span><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/e78f35c215d8fde4fbfae93dd321d6da.png\" style=\"width: 280px; height: 159px;\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74bb3180ec",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "In the following diagram, triangle represents ‘villagers’, circle represents ‘Literate persons’, rectangle represents ‘unemployed persons’. How many villagers are unemployed though they are literate?",
+            "widgets": [
+              {
+                "id": "text66b74bb3180f1",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">In the following diagram, triangle represents ‘villagers’, circle represents ‘Literate persons’, rectangle represents ‘unemployed persons’. How many villagers are unemployed though they are literate?</p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/05ddad3d1603fbf4a0a49200b27b359b.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 300px;\"></p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74bb31812f",
+              "description": {
+                "text": "9",
+                "widgets": [
+                  {
+                    "id": "text66b74bb318136",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>9</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb31814a",
+              "description": {
+                "text": "6",
+                "widgets": [
+                  {
+                    "id": "text66b74bb318151",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>6</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb318160",
+              "description": {
+                "text": "4",
+                "widgets": [
+                  {
+                    "id": "text66b74bb318166",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>4</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb318175",
+              "description": {
+                "text": "3",
+                "widgets": [
+                  {
+                    "id": "text66b74bb31817c",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>3</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74bb318175",
+              "text": "3",
+              "widgets": [
+                {
+                  "id": "text66b74bb31817c",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>3</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>We need the intersection of triangle, rectangle & circle\n<br>Therefore, correct answer is option\n(D) – 3</p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74bb31819c",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "In a small society, during a survey some data are extracted. In the following diagram shows how many persons in the society have their relatives in Srinagar, Shimla or Gangtok. How many persons have their relatives only in Gangtok &amp; Srinagar both and may or may not be in Shimla?",
+            "widgets": [
+              {
+                "id": "text66b74bb3181a1",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">In a small society, during a survey some data are extracted. In the following diagram shows how many persons in the society have their relatives in Srinagar, Shimla or Gangtok. How many persons have their relatives only in Gangtok &amp; Srinagar both and may or may not be in Shimla?</p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/c026f75f7ac7a33cbca13b50b35f1a8a.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 250px;\"></p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74bb3181e1",
+              "description": {
+                "text": "7",
+                "widgets": [
+                  {
+                    "id": "text66b74bb3181e8",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>7</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb3181f7",
+              "description": {
+                "text": "15",
+                "widgets": [
+                  {
+                    "id": "text66b74bb3181fd",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>15</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb31820c",
+              "description": {
+                "text": "16",
+                "widgets": [
+                  {
+                    "id": "text66b74bb318213",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>16</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb318222",
+              "description": {
+                "text": "22",
+                "widgets": [
+                  {
+                    "id": "text66b74bb318228",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>22</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74bb318222",
+              "text": "22",
+              "widgets": [
+                {
+                  "id": "text66b74bb318228",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>22</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>We have to take the intersection of \nGangtok circle and Srinagar circle <br>Therefore, correct answer is – (15+7) = 22</p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mcImage66b74bb318253",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mcImage",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Choose the proper Venn Diagram to represent the relationship among Spices, Black pepper, Coriander",
+            "widgets": [
+              {
+                "id": "text66b74bb318258",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">Choose the proper Venn Diagram to represent the relationship among \n</p><div style=\"text-align: justify;\">Spices, Black pepper, Coriander</div>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-image-option66b74bb318275",
+              "description": {
+                "text": "(Image)",
+                "widgets": [
+                  {
+                    "id": "image66b74bb31827c",
+                    "type": "image",
+                    "properties": {
+                      "hasLightbox": false,
+                      "imageData": {
+                        "title": "image",
+                        "tags": [],
+                        "width": 133,
+                        "height": 133,
+                        "size": 2,
+                        "name": "/da634aa2c830c37f235956d313c2baa7.png",
+                        "access": "public",
+                        "created": 1722424612.563637,
+                        "modified": 1722424612.563637,
+                        "user": {
+                          "username": "Sneha AK Team"
+                        },
+                        "id": "66aa1d24a90bdbadf4055b76",
+                        "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/da634aa2c830c37f235956d313c2baa7.png",
+                        "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/da634aa2c830c37f235956d313c2baa7.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                        "modifiedF": "2024-07-31 14:16:52"
+                      },
+                      "height": 100,
+                      "width": 100
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-image-option66b74bb3182a8",
+              "description": {
+                "text": "(Image)",
+                "widgets": [
+                  {
+                    "id": "image66b74bb3182af",
+                    "type": "image",
+                    "properties": {
+                      "hasLightbox": false,
+                      "imageData": {
+                        "title": "image",
+                        "tags": [],
+                        "width": 138,
+                        "height": 136,
+                        "size": 2,
+                        "name": "/2ac4ef419cd3ef23fa66a92d6c8ff781.png",
+                        "access": "public",
+                        "created": 1722424626.174669,
+                        "modified": 1722424626.174669,
+                        "user": {
+                          "username": "Sneha AK Team"
+                        },
+                        "id": "66aa1d32751c96bab306c116",
+                        "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/2ac4ef419cd3ef23fa66a92d6c8ff781.png",
+                        "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/2ac4ef419cd3ef23fa66a92d6c8ff781.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                        "modifiedF": "2024-07-31 14:17:06"
+                      },
+                      "height": 98,
+                      "width": 100
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-image-option66b74bb3182d9",
+              "description": {
+                "text": "(Image)",
+                "widgets": [
+                  {
+                    "id": "image66b74bb3182e0",
+                    "type": "image",
+                    "properties": {
+                      "hasLightbox": false,
+                      "imageData": {
+                        "title": "image",
+                        "tags": [],
+                        "width": 179,
+                        "height": 103,
+                        "size": 2,
+                        "name": "/83372e7f8b2ca8f9a13bd0a82f1b10ad.png",
+                        "access": "public",
+                        "created": 1722424638.118513,
+                        "modified": 1722424638.118513,
+                        "user": {
+                          "username": "Sneha AK Team"
+                        },
+                        "id": "66aa1d3e5c38be282405fec6",
+                        "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/83372e7f8b2ca8f9a13bd0a82f1b10ad.png",
+                        "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/83372e7f8b2ca8f9a13bd0a82f1b10ad.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                        "modifiedF": "2024-07-31 14:17:18"
+                      },
+                      "height": 86,
+                      "width": 150
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-image-option66b74bb318309",
+              "description": {
+                "text": "(Image)",
+                "widgets": [
+                  {
+                    "id": "image66b74bb318310",
+                    "type": "image",
+                    "properties": {
+                      "hasLightbox": false,
+                      "imageData": {
+                        "title": "image",
+                        "tags": [],
+                        "width": 164,
+                        "height": 70,
+                        "size": 2,
+                        "name": "/ccabbe0224b943092b04c6d542a8e463.png",
+                        "access": "public",
+                        "created": 1722424650.426293,
+                        "modified": 1722424650.426293,
+                        "user": {
+                          "username": "Sneha AK Team"
+                        },
+                        "id": "66aa1d4a9309fb5622068b46",
+                        "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/ccabbe0224b943092b04c6d542a8e463.png",
+                        "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/ccabbe0224b943092b04c6d542a8e463.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                        "modifiedF": "2024-07-31 14:17:30"
+                      },
+                      "height": null,
+                      "width": null
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-image-option66b74bb318275",
+              "text": "(Image)",
+              "widgets": [
+                {
+                  "id": "image66b74bb31827c",
+                  "type": "image",
+                  "properties": {
+                    "hasLightbox": false,
+                    "imageData": {
+                      "title": "image",
+                      "tags": [],
+                      "width": 133,
+                      "height": 133,
+                      "size": 2,
+                      "name": "/da634aa2c830c37f235956d313c2baa7.png",
+                      "access": "public",
+                      "created": 1722424612.563637,
+                      "modified": 1722424612.563637,
+                      "user": {
+                        "username": "Sneha AK Team"
+                      },
+                      "id": "66aa1d24a90bdbadf4055b76",
+                      "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/da634aa2c830c37f235956d313c2baa7.png",
+                      "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/da634aa2c830c37f235956d313c2baa7.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                      "modifiedF": "2024-07-31 14:16:52"
+                    },
+                    "height": 100,
+                    "width": 100
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><span>Correct\nanswer is option (A)</span><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/00c1082ceb87133a205b7f75629eefce.png\" style=\"width: 200px; height: 200px;\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mcImage66b74bb318346",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mcImage",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Which of the following Venn Diagram will represent the relationship among Watch, Shoe, Socks",
+            "widgets": [
+              {
+                "id": "text66b74bb31834a",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">Which of the following Venn Diagram will represent the relationship among \n</p><p style=\"text-align: justify;\">Watch, Shoe, Socks</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-image-option66b74bb318365",
+              "description": {
+                "text": "(Image)",
+                "widgets": [
+                  {
+                    "id": "image66b74bb31836b",
+                    "type": "image",
+                    "properties": {
+                      "hasLightbox": false,
+                      "imageData": {
+                        "title": "image",
+                        "tags": [],
+                        "width": 164,
+                        "height": 70,
+                        "size": 2,
+                        "name": "/5b42e1ba59a99048027e825da991cba1.png",
+                        "access": "public",
+                        "created": 1722424819.870972,
+                        "modified": 1722424819.870972,
+                        "user": {
+                          "username": "Sneha AK Team"
+                        },
+                        "id": "66aa1df3dd816d04cd055c85",
+                        "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/5b42e1ba59a99048027e825da991cba1.png",
+                        "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/5b42e1ba59a99048027e825da991cba1.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                        "modifiedF": "2024-07-31 14:20:19"
+                      },
+                      "height": null,
+                      "width": null
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-image-option66b74bb318395",
+              "description": {
+                "text": "(Image)",
+                "widgets": [
+                  {
+                    "id": "image66b74bb31839c",
+                    "type": "image",
+                    "properties": {
+                      "hasLightbox": false,
+                      "imageData": {
+                        "title": "image",
+                        "tags": [],
+                        "width": 176,
+                        "height": 91,
+                        "size": 2,
+                        "name": "/ba9f973dcda95ec5a0216fb0fb94c116.png",
+                        "access": "public",
+                        "created": 1722424830.911661,
+                        "modified": 1722424830.911661,
+                        "user": {
+                          "username": "Sneha AK Team"
+                        },
+                        "id": "66aa1dfe5856fb0cad052e26",
+                        "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/ba9f973dcda95ec5a0216fb0fb94c116.png",
+                        "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/ba9f973dcda95ec5a0216fb0fb94c116.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                        "modifiedF": "2024-07-31 14:20:30"
+                      },
+                      "height": null,
+                      "width": null
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-image-option66b74bb3183c5",
+              "description": {
+                "text": "(Image)",
+                "widgets": [
+                  {
+                    "id": "image66b74bb3183cc",
+                    "type": "image",
+                    "properties": {
+                      "hasLightbox": false,
+                      "imageData": {
+                        "title": "image",
+                        "tags": [],
+                        "width": 181,
+                        "height": 58,
+                        "size": 2,
+                        "name": "/c1bfb740de7a1dd80f3ccedf0cf8501a.png",
+                        "access": "public",
+                        "created": 1722424843.374169,
+                        "modified": 1722424843.374169,
+                        "user": {
+                          "username": "Sneha AK Team"
+                        },
+                        "id": "66aa1e0b78cd1bea8b0b5665",
+                        "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/c1bfb740de7a1dd80f3ccedf0cf8501a.png",
+                        "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/c1bfb740de7a1dd80f3ccedf0cf8501a.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                        "modifiedF": "2024-07-31 14:20:43"
+                      },
+                      "height": null,
+                      "width": null
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-image-option66b74bb3183f6",
+              "description": {
+                "text": "(Image)",
+                "widgets": [
+                  {
+                    "id": "image66b74bb3183fc",
+                    "type": "image",
+                    "properties": {
+                      "hasLightbox": false,
+                      "imageData": {
+                        "title": "image",
+                        "tags": [],
+                        "width": 120,
+                        "height": 119,
+                        "size": 2,
+                        "name": "/6f9c4288ca95aea3c1eefaf3a6531690.png",
+                        "access": "public",
+                        "created": 1722424854.875653,
+                        "modified": 1722424854.875653,
+                        "user": {
+                          "username": "Sneha AK Team"
+                        },
+                        "id": "66aa1e16e11d8eac03064048",
+                        "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/6f9c4288ca95aea3c1eefaf3a6531690.png",
+                        "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/6f9c4288ca95aea3c1eefaf3a6531690.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                        "modifiedF": "2024-07-31 14:20:54"
+                      },
+                      "height": 99,
+                      "width": 100
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-image-option66b74bb3183c5",
+              "text": "(Image)",
+              "widgets": [
+                {
+                  "id": "image66b74bb3183cc",
+                  "type": "image",
+                  "properties": {
+                    "hasLightbox": false,
+                    "imageData": {
+                      "title": "image",
+                      "tags": [],
+                      "width": 181,
+                      "height": 58,
+                      "size": 2,
+                      "name": "/c1bfb740de7a1dd80f3ccedf0cf8501a.png",
+                      "access": "public",
+                      "created": 1722424843.374169,
+                      "modified": 1722424843.374169,
+                      "user": {
+                        "username": "Sneha AK Team"
+                      },
+                      "id": "66aa1e0b78cd1bea8b0b5665",
+                      "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/c1bfb740de7a1dd80f3ccedf0cf8501a.png",
+                      "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/c1bfb740de7a1dd80f3ccedf0cf8501a.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                      "modifiedF": "2024-07-31 14:20:43"
+                    },
+                    "height": null,
+                    "width": null
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br>Correct answer is option (C)<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/a6dc6f96982e08c8f2b6ffa0ca748b86.png\" style=\"width: 280px; height: 86px;\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        }
+      ]
+    }
+  ],
+  "submitted": true,
+  "updated": true,
+  "retryCount": 3,
+  "inlineFeedback": [],
+  "errors": [],
+  "success": true
+}

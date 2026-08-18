@@ -1,0 +1,4366 @@
+{
+  "submission": {
+    "anon_id": null,
+    "model": "assessment-submission",
+    "courseTitleId": "aptitude-teacher2",
+    "object_id": "66be191d75930bfcc2080a09",
+    "assessmentId": "66be191d75930bfcc2080a08",
+    "snapshotId": "66c0a73da454cf4863053657",
+    "questions": {
+      "section66be191c920a3": [
+        "mc66be191c920aa",
+        "mc66be191c9214f",
+        "mc66be191c921ee",
+        "mc66be191c92290",
+        "mc66be191c92333",
+        "mc66be191c923d4",
+        "mc66be191c92496",
+        "mc66be191c9253f",
+        "mc66be191c925e1",
+        "mc66be191c92686",
+        "mc66be191c9272a",
+        "mc66be191c927dd",
+        "mc66be191c928a5",
+        "mc66be191c92978",
+        "mc66be191c92a6a"
+      ]
+    },
+    "certificateAnswers": [],
+    "certificateId": null,
+    "questionData": {
+      "mc66be191c920aa": {
+        "deliveredOnTimestamp": 1786440600.419809,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66be191c9214f": {
+        "deliveredOnTimestamp": 1786440600.419834,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66be191c921ee": {
+        "deliveredOnTimestamp": 1786440600.419849,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66be191c92290": {
+        "deliveredOnTimestamp": 1786440600.419861,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66be191c92333": {
+        "deliveredOnTimestamp": 1786440600.419872,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66be191c923d4": {
+        "deliveredOnTimestamp": 1786440600.419883,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66be191c92496": {
+        "deliveredOnTimestamp": 1786440600.419894,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66be191c9253f": {
+        "deliveredOnTimestamp": 1786440600.419904,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66be191c925e1": {
+        "deliveredOnTimestamp": 1786440600.419917,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66be191c92686": {
+        "deliveredOnTimestamp": 1786440600.419939,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66be191c9272a": {
+        "deliveredOnTimestamp": 1786440600.419952,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66be191c927dd": {
+        "deliveredOnTimestamp": 1786440600.419966,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66be191c928a5": {
+        "deliveredOnTimestamp": 1786440600.419979,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66be191c92978": {
+        "deliveredOnTimestamp": 1786440600.419992,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66be191c92a6a": {
+        "deliveredOnTimestamp": 1786440600.420006,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      }
+    },
+    "answers": [
+      {
+        "blockId": "mc66be191c920aa",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66be191c9214f",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66be191c921ee",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66be191c92290",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66be191c92333",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66be191c923d4",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66be191c92496",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66be191c9253f",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66be191c925e1",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66be191c92686",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66be191c9272a",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66be191c927dd",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66be191c928a5",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66be191c92978",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66be191c92a6a",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      }
+    ],
+    "submittedTimestamp": 1786440600.674247,
+    "status": "submitted",
+    "grading_status": "grading_status_graded",
+    "access": "public",
+    "actual_score": null,
+    "score": {
+      "maxScore": 15,
+      "value": 0,
+      "pass": false,
+      "passGrade": 50,
+      "points": 0
+    },
+    "source": {
+      "type": "unit"
+    },
+    "isDefining": true,
+    "isAdminAutoGradedSubmission": null,
+    "listOfNonConsentedBlocks": [],
+    "created": 1786440600.427945,
+    "modified": 1786440600.82614,
+    "id": "6a7aeb98b3b8c8ce25020b45",
+    "passed": false
+  },
+  "assessment": {
+    "title": "TCS Digital Test 6 (Advanced-level)",
+    "access": "public",
+    "type": "assessment",
+    "model": "assessmentSnapshot",
+    "description": "Advanced TCS Digital recruitment assessment featuring 15 high-level quantitative aptitude, logical reasoning, and technical problem-solving problems.",
+    "isTimed": true,
+    "timerFor": "assessmentTimed",
+    "onTimerExpiration": "autoSubmit",
+    "assessmentTimeLimitInSeconds": 1500,
+    "questionTimeLimitInSeconds": 60,
+    "standaloneShareEnabled": null,
+    "customUrl": null,
+    "usesCustomUrl": null,
+    "allowAnonymous": true,
+    "randomizeQuestionOptions": false,
+    "disallowPartialSubmissions": false,
+    "submissionDueDateEnabled": false,
+    "submissionDueDate": 1626257823,
+    "makeFeedbackAvailableAfterDateEnabled": false,
+    "makeFeedbackAvailableAfterDate": 0,
+    "customStylesEnabled": true,
+    "customStyles": {
+      "assessmentPage": {
+        "background": {
+          "type": "color",
+          "colorData": {
+            "code": "",
+            "class": "lw-body-bg"
+          }
+        },
+        "dividers": {
+          "top": {
+            "orientation": "top",
+            "divider": "none"
+          },
+          "bottom": {
+            "orientation": "bottom",
+            "divider": "none"
+          }
+        }
+      },
+      "option": {
+        "radioEffect": "scribble",
+        "checkboxEffect": "scribble",
+        "size": "small"
+      },
+      "assessment": {
+        "transition": "none",
+        "background": {
+          "type": "color",
+          "colorData": {
+            "code": "",
+            "class": ""
+          }
+        },
+        "width": "normal",
+        "timerTemplate": "rectangle"
+      },
+      "linearRating": {
+        "labels": {
+          "size": "small"
+        }
+      },
+      "question": {
+        "description": {
+          "background": {
+            "type": "color",
+            "colorData": {
+              "code": "",
+              "class": ""
+            }
+          },
+          "type": "p",
+          "size": "small"
+        },
+        "answers": {
+          "background": {
+            "type": "color",
+            "colorData": {
+              "code": "",
+              "class": ""
+            }
+          }
+        },
+        "requiredAsterisk": {
+          "colorData": {
+            "code": "#ff0000",
+            "class": ""
+          }
+        },
+        "errorMessages": {
+          "size": "verySmall",
+          "colorData": {
+            "code": "#ff0000",
+            "class": ""
+          }
+        }
+      },
+      "input": {
+        "size": "small",
+        "type": "solidDark"
+      },
+      "textarea": {
+        "size": "small",
+        "type": "solidDark"
+      },
+      "dropdown": {
+        "size": "small",
+        "type": "solidDark"
+      }
+    },
+    "submissionMode": "all",
+    "startingDate": 1626765704,
+    "startingDateEnabled": false,
+    "showOnlyFailedQuestionsOnRetry": false,
+    "retryEnabled": true,
+    "retryOnFailOnly": false,
+    "gradingMethod": null,
+    "maxTries": null,
+    "onlyWrongOnRetake": null,
+    "isAmendable": false,
+    "feedbackShowOnScreen": true,
+    "feedbackDownloadPDF": false,
+    "feedbackShowInline": null,
+    "feedbackQuestionList": "all-questions",
+    "feedbackShowQuestionScore": true,
+    "feedbackShowFeedback": true,
+    "feedbackShowNumbering": false,
+    "feedbackShowSectionTitles": false,
+    "feedbackShowUserAnswers": true,
+    "feedbackShowCorrectAnswers": true,
+    "feedbackShowAnswerCorrectness": true,
+    "displayInlineFeedbackEnabled": false,
+    "displayBackButtonWhenSubmissionPerBlock": null,
+    "feedbackShowSectionResultSummary": false,
+    "askConfirmationBeforeSubmit": true,
+    "hasCustomConfirmationBeforeSubmitText": false,
+    "customConfirmationBeforeSubmitText": "Are you sure you want to submit the questionnaire?",
+    "customConfirmationBeforeSubmitTexts": {
+      "title": "Submit Assessment?",
+      "baseConfirmationMessage": "Are you sure you want to submit the questionnaire?",
+      "unansweredNotice": "You have not answered {X} questions."
+    },
+    "amendResubmissionMinutes": 30,
+    "passingGrade": null,
+    "navigationMode": "per-block",
+    "conditionalBlocks": {
+      "introContent": {
+        "id": "content66be191c91fda",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66be191c91fec",
+              "type": "text",
+              "insertedAsWidget": true,
+              "properties": {
+                "html": "TCS Digital Test 6",
+                "alignment": "center",
+                "customStyle": true,
+                "type": "h2",
+                "size": "normal"
+              }
+            },
+            {
+              "id": "text66be191c91ffd",
+              "type": "text",
+              "properties": {
+                "html": "Read carefully and answer the following questions. This Test contains <strong>Total 15 (Advanced Level) Questions</strong>",
+                "customStyle": true,
+                "alignment": "center"
+              }
+            },
+            {
+              "id": "spacer66be191c92007",
+              "type": "spacer",
+              "properties": {
+                "height": 20,
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            },
+            {
+              "id": "button66be191c92013",
+              "type": "button",
+              "properties": {
+                "buttonLabel": "<span>Ready to start</span>",
+                "buttonSize": "normal",
+                "buttonType": "solidBrand",
+                "alignment": "center",
+                "linkData": {
+                  "linkType": "goToFirst"
+                },
+                "iconColorData": {
+                  "code": "",
+                  "class": ""
+                },
+                "iconDisplay": false,
+                "iconSize": 26,
+                "iconClassName": " fas fa-angle-right",
+                "iconPosition": "right"
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "variables": {
+            "conditionalBlocks_introContent_blockData_widgets_0": [],
+            "conditionalBlocks_introContent_blockData_widgets_1": []
+          }
+        }
+      },
+      "submissionStartingDate": {
+        "id": "content66be191c92050",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66be191c92055",
+              "type": "text",
+              "properties": {
+                "html": "Sorry but this assessment hasn't started yet."
+              }
+            },
+            {
+              "id": "date66be191c9205b",
+              "type": "date",
+              "properties": {
+                "value": ""
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "displayConditions": ["startingDate"]
+        }
+      },
+      "submissionDueDate": {
+        "id": "content66be191c92067",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66be191c9206b",
+              "type": "text",
+              "properties": {
+                "html": "Sorry but this assessment date is due."
+              }
+            },
+            {
+              "id": "date66be191c92072",
+              "type": "date",
+              "properties": {
+                "value": ""
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "displayConditions": ["dateIsDue"]
+        }
+      },
+      "outroContent": {
+        "id": "content66be191c9207d",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "userResults66be191c92081",
+              "type": "userResults",
+              "properties": {
+                "layout": "template2",
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            },
+            {
+              "id": "feedback66be191c9208d",
+              "type": "feedback",
+              "properties": []
+            },
+            {
+              "id": "outroActions66be191c92093",
+              "type": "outroActions",
+              "properties": {
+                "layout": "",
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true
+        }
+      }
+    },
+    "systemSections": null,
+    "sections": [
+      {
+        "id": "section66be191c920a3",
+        "title": "",
+        "type": "section",
+        "navigationMode": "per-block",
+        "blocks": [
+          {
+            "id": "mc66be191c920aa",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66be191c920af",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">Two different solutions of alcohol, juice&nbsp;<span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">and water are mixed with each other three&nbsp;</span><span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">times in varying proportions. The&nbsp;</span><span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">concentration of alcohol and juice in the&nbsp;</span><span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">three resulting solutions are found to be&nbsp;</span><span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">(10%, 16%), (12%, 12%), and (16%, x %),&nbsp;</span><span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">respectively. What is the value of x?</span></p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66be191c920c0",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66be191c920c7",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66be191c920ce",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66be191c920ec",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66be191c920f3",
+                        "type": "text",
+                        "properties": {
+                          "html": "4&nbsp;"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66be191c92102",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66be191c92108",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>7</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66be191c92117",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66be191c9211d",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>8</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66be191c9212c",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66be191c92132",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>10\n</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_0": []
+              }
+            }
+          },
+          {
+            "id": "mc66be191c9214f",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66be191c92153",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">One-fourth portion of each of the two solid&nbsp;<span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">spheres having radii 4 units and 6 units are&nbsp;</span><span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">joined together such that the centres of the&nbsp;</span><span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">two spheres coincide as shown in the&nbsp;</span><span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">figure given below. What is the total&nbsp;</span><span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">surface area of the solid thus formed?</span></p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/3b8c9a9b9caedc88e0b93c8b17cfb31a.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 200px;\"></p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66be191c92164",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66be191c9216a",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66be191c92171",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66be191c9218e",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66be191c92195",
+                        "type": "text",
+                        "properties": {
+                          "html": "88 π sq. units"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66be191c921a3",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66be191c921a9",
+                        "type": "text",
+                        "properties": {
+                          "html": "83 π sq. units"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66be191c921b8",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66be191c921be",
+                        "type": "text",
+                        "properties": {
+                          "html": "78 π sq. units"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66be191c921cc",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66be191c921d2",
+                        "type": "text",
+                        "properties": {
+                          "html": "73 π sq. units"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_1_blockData_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_1": []
+              }
+            }
+          },
+          {
+            "id": "mc66be191c921ee",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66be191c921f4",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">On a corner of a street, there are 2 flashing&nbsp;<span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">lights, a red one and a green one. The red&nbsp;</span><span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">one flashes 5 times per minute and the&nbsp;</span><span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">green one flashes 4 times per minute. If the&nbsp;</span><span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">lights starts off flashing at the same time,&nbsp;</span><span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">how many times do they flash together in&nbsp;</span><span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">a day?</span></p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66be191c92204",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66be191c9220b",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66be191c92212",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66be191c92230",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66be191c92236",
+                        "type": "text",
+                        "properties": {
+                          "html": "1260&nbsp;"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66be191c92245",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66be191c9224b",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>1440</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66be191c92259",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66be191c92260",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>1445</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66be191c9226e",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66be191c92274",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>1530</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_2_blockData_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_2": []
+              }
+            }
+          },
+          {
+            "id": "mc66be191c92290",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66be191c92295",
+                    "type": "text",
+                    "properties": {
+                      "html": "For how many pairs (a, b) of natural&nbsp;<span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">numbers is the LCM of a and b is 2<sup>5</sup>5<sup>4</sup>7<sup>3</sup>?</span>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66be191c922a5",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66be191c922ab",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66be191c922b2",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66be191c922d0",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66be191c922d6",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>462</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66be191c922e5",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66be191c922eb",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>1386</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66be191c922fa",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66be191c92300",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>693</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66be191c9230f",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66be191c92315",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>1848</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_3_blockData_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3": []
+              }
+            }
+          },
+          {
+            "id": "mc66be191c92333",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66be191c92338",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">Aisha has two bags A and B with gems. Bag&nbsp;<span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">A has 3 rubies and 4 emeralds, the bag B&nbsp;</span><span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">has 4 rubies and 5 emeralds. She takes out&nbsp;</span><span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">one gem at random from bag A and places&nbsp;</span><span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">it into bag B. She again takes out one gem&nbsp;</span><span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">at random from bag B and places it in bag&nbsp;</span><span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">A. What is the probability that the ratio of&nbsp;</span><span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">rubies to emeralds in both the bags&nbsp;</span><span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">remains unaltered?</span></p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66be191c92348",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66be191c9234e",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66be191c92355",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66be191c92373",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66be191c92379",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>39/70</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66be191c92388",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66be191c9238f",
+                        "type": "text",
+                        "properties": {
+                          "html": "35/70&nbsp;"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66be191c9239d",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66be191c923a3",
+                        "type": "text",
+                        "properties": {
+                          "html": "24/70"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66be191c923b2",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66be191c923b8",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>16/70</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_4_blockData_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4": []
+              }
+            }
+          },
+          {
+            "id": "mc66be191c923d4",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66be191c923d8",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions:&nbsp;</strong></p><p style=\"text-align: justify;\">Nine persons – A, B, C, D, E, F, G, H and I – are sitting in a straight line facing north, but not necessarily in the same order.\n</p><div style=\"text-align: justify;\">C is fourth to the left of G; F is fourth to the right of A and second to the left of I, who is fifth to the right of D. B is not an immediate neighbour of either I or C. There are only three persons between E and D. G is second to the right of A.\n</div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">In a certain way H relates to D, G relates F. In the same way who relates to A?</div>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66be191c923e9",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66be191c923ef",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66be191c923f6",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66be191c9242c",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66be191c92438",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>C</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66be191c9244a",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66be191c92450",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>G</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66be191c9245f",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66be191c92465",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>B</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66be191c92473",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66be191c9247a",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>I</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_5_blockData_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5": []
+              }
+            }
+          },
+          {
+            "id": "mc66be191c92496",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66be191c9249a",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :&nbsp;</strong></p><p style=\"text-align: justify;\">Nine persons – A, B, C, D, E, F, G, H and I – are sitting in a straight line facing north, but not necessarily in the same order.\n</p><div style=\"text-align: justify;\">C is fourth to the left of G; F is fourth to the right of A and second to the left of I, who is fifth to the right of D. B is not an immediate neighbour of either I or C. There are only three persons between E and D. G is second to the right of A.\n</div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">Who sits to the fourth right of D?</div>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66be191c924ab",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66be191c924b1",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66be191c924b8",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66be191c924d6",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66be191c924dc",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>E</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66be191c924eb",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66be191c924f2",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>C</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66be191c92500",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66be191c92506",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>A</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66be191c92515",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66be191c9251b",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>H</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_5_blockData_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_6": []
+              }
+            }
+          },
+          {
+            "id": "mc66be191c9253f",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66be191c92544",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">Karan, the famous director, is selecting cast for his next movie “Student of IIM”. He has to select the cast from 5 star kids : Abram(A), Taimur (T), Ebrahim (E), Siddharth (S) and Varun (V). However the star kids have put up the following conditions to be casted for the movie:\n</p><div style=\"text-align: justify;\">i. Siddharth cannot be casted if Taimur is casted.\n</div><div style=\"text-align: justify;\">ii. Ebrahim will be casted only if Varun is also casted.\n</div><div style=\"text-align: justify;\">iii. Abram will be casted only if Taimur or Ebrahim is casted\n</div><div style=\"text-align: justify;\">iv. If Siddharth is not casted, Abram also cannot be casted\n</div><div style=\"text-align: justify;\">v. If Varun is casted then Abram must be casted but Taimur cannot be casted.\n</div><div style=\"text-align: justify;\">vi. If Siddharth is casted then Ebrahim must also be casted\n</div><div style=\"text-align: justify;\">If Varun is not to be casted, which of the following statements must be true?</div>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66be191c92554",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66be191c9255b",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66be191c92561",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66be191c9257f",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66be191c92585",
+                        "type": "text",
+                        "properties": {
+                          "html": "Taimur must be casted&nbsp;"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66be191c92594",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66be191c9259a",
+                        "type": "text",
+                        "properties": {
+                          "html": "Abram must be casted"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66be191c925a8",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66be191c925af",
+                        "type": "text",
+                        "properties": {
+                          "html": "Siddharth must be casted&nbsp;"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66be191c925bd",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66be191c925c4",
+                        "type": "text",
+                        "properties": {
+                          "html": "None of these"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_7_blockData_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_7": []
+              }
+            }
+          },
+          {
+            "id": "mc66be191c925e1",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66be191c925e5",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">In each of these questions, a logical sequence of numbers is given. It is followed by another series which starts with a number followed by (a), (b), (c), (d) and (e). You have to understand the pattern given in the number series and form a new series with the first number of the second series to get the values of (a), (b), (c), (d) and (e) and answer the questions below.\n</p><div style=\"text-align: justify;\">11&nbsp; 9&nbsp; &nbsp;35&nbsp; 53 \t79 97\n</div><div style=\"text-align: justify;\">14 \t(a) \t(b) \t(c) \t(d) \t(e)\n</div><div style=\"text-align: justify;\">Which of the following will come in place of (e)?</div>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66be191c925f6",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66be191c925fd",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66be191c92604",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66be191c92623",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66be191c92629",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>100</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66be191c92638",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66be191c9263f",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>118</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66be191c9264e",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66be191c92654",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>125</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66be191c92663",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66be191c92669",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>124</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_8_blockData_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_8": []
+              }
+            }
+          },
+          {
+            "id": "mc66be191c92686",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66be191c9268a",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :&nbsp;</strong></p><p style=\"text-align: justify;\">Ajay, Bikram, Chetan, Divyesh, Eshan, Farukh, Gopal and Hiten are eight friends whose birthdays are on the first day of a month and no two of them have their birthdays in the same month. None of them have their birthdays in the months of August and December. Chetan can celebrate his birthday on that exact day only once every four years and his birthday is the first to come in a year. The birthdays of Ajay and Gopal are separated by four months. Gopal’s birthday is in last quarter of the year and only Bikram’s birthday comes after that of Gopal. The number of people who have their birthdays after Divyesh’s birthday is one more than the number of people whose birthdays are before his birthday. Eshan and Hiten have their birthdays in consecutive months but not necessarily in the same order.\n</p><div style=\"text-align: justify;\"><span style=\"font-size: 1.6rem; letter-spacing: 0rem;\"><br></span></div><div style=\"text-align: justify;\"><span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">Among the eight friends, who has his birthday in the month of September?</span></div>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66be191c9269b",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66be191c926a1",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66be191c926a8",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66be191c926c6",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66be191c926cd",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Gopal</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66be191c926db",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66be191c926e2",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Farukh</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66be191c926f0",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66be191c926f6",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Bikram</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66be191c92706",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66be191c9270e",
+                        "type": "text",
+                        "properties": {
+                          "html": "Cannot be determined."
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_9_blockData_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_9": []
+              }
+            }
+          },
+          {
+            "id": "mc66be191c9272a",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66be191c9272f",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :&nbsp;</strong></p><p style=\"text-align: justify;\">Ajay, Bikram, Chetan, Divyesh, Eshan, Farukh, Gopal and Hiten are eight friends whose birthdays are on the first day of a month and no two of them have their birthdays in the same month. None of them have their birthdays in the months of August and December. Chetan can celebrate his birthday on that exact day only once every four years and his birthday is the first to come in a year. The birthdays of Ajay and Gopal are separated by four months. Gopal’s birthday is in last quarter of the year and only Bikram’s birthday comes after that of Gopal. The number of people who have their birthdays after Divyesh’s birthday is one more than the number of people whose birthdays are before his birthday. Eshan and Hiten have their birthdays in consecutive months but not necessarily in the same order.\n</p><div style=\"text-align: justify;\"><span style=\"font-size: 1.6rem; letter-spacing: 0rem;\"><br></span></div><div style=\"text-align: justify;\">For how many of them, it is possible to exactly identify the birthday month?</div>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66be191c92741",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66be191c92748",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66be191c9274f",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66be191c9276e",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66be191c92775",
+                        "type": "text",
+                        "properties": {
+                          "html": "4&nbsp;"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66be191c92785",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66be191c9278b",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>5</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66be191c9279b",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66be191c927a1",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>6</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66be191c927b0",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66be191c927b7",
+                        "type": "text",
+                        "properties": {
+                          "html": "None of them"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_9_blockData_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_10_blockData_description_widgets_0": [],
+                "sections_0_blocks_10_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_10_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_10_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_10_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_10": []
+              }
+            }
+          },
+          {
+            "id": "mc66be191c927dd",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66be191c927e2",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">There are ten houses on a street numbered House 1 to House 10. It is the festive season and the local politician wants to make these houses happy by sending them flowers and chocolates. At least five of the houses will get flowers and at least five of them will get chocolates. The following conditions apply:\n</p><div style=\"text-align: justify;\">I. At least four houses get both flowers and chocolates.\n</div><div style=\"text-align: justify;\">II. House 1 gets either flowers or chocolates, but not both.\n</div><div style=\"text-align: justify;\">III. House 8 gets flowers only.\n</div><div style=\"text-align: justify;\">IV. For at least one of the flowers and chocolates, House 5 and House 7 are both its recipients.\n</div><div style=\"text-align: justify;\">V. House 10 and House 2 get different products.\n</div><div style=\"text-align: justify;\">VI. House 4 and House 3 get both the products.\n</div><div style=\"text-align: justify;\">VII. If House 9 gets both the products, then House 5 and House 6 will also get both the products.\n</div><div style=\"text-align: justify;\">If 7 houses get chocolates then which of the following could be the list of houses who get chocolates?\n</div><div style=\"text-align: justify;\">I. Houses 1, 2, 3, 4, 5, 6 and 7\n</div><div style=\"text-align: justify;\">II. Houses 2, 3, 4, 5, 6, 9 and 7\n</div><div style=\"text-align: justify;\">III. Houses 3, 4, 5, 6, 7, 9 and 10\n</div><div style=\"text-align: justify;\">IV. Houses 1, 3, 4, 5, 7, 9 and 10</div>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66be191c927f3",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66be191c92815",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66be191c9281f",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66be191c9283f",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66be191c92846",
+                        "type": "text",
+                        "properties": {
+                          "html": "Only II and III&nbsp;"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66be191c92855",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66be191c9285c",
+                        "type": "text",
+                        "properties": {
+                          "html": "Only I, II and III"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66be191c9286b",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66be191c92872",
+                        "type": "text",
+                        "properties": {
+                          "html": "Only II and IV"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66be191c92881",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66be191c92888",
+                        "type": "text",
+                        "properties": {
+                          "html": "Al I, II, III and IV"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_11_blockData_description_widgets_0": [],
+                "sections_0_blocks_11_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_11_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_11_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_11_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_11": []
+              }
+            }
+          },
+          {
+            "id": "mc66be191c928a5",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66be191c928a9",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :&nbsp;</strong></p><p style=\"text-align: justify;\">Study the bar graph given below and answer the following questions:\n</p><div style=\"text-align: justify;\">The bar graph shows the percentage break-up of number of students for different films in a theatre.</div><div style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/eac9d0f2e7c60f12a4c4a5daa8036727.png\" class=\"block learnworlds-image learnworlds-element\" style=\"height: 193px; width: 325px;\"></div><div style=\"text-align: justify;\">Note: No student went to watch more than one movie.\n</div><div style=\"text-align: justify;\">The table below shows total number of students in classes X, XI and XII.</div><div style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/a0bbb78344c4e087d6d1954f147e2e2a.png\" class=\"block learnworlds-image learnworlds-element\" style=\"height: 77px; width: 200px;\"></div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">If all the students from class XII who did not go to watch any movie, later changed their mind and went to watch ‘Meri Pyari Bindu’, then calculate the % mark-up in the number of students who watched ‘Meri Pyari Bindu’?</div>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66be191c928bb",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66be191c928c2",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66be191c928c9",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66be191c928ed",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66be191c928f9",
+                        "type": "text",
+                        "properties": {
+                          "html": "30%&nbsp;"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66be191c92913",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66be191c9291d",
+                        "type": "text",
+                        "properties": {
+                          "html": "25.5%&nbsp;"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66be191c9292c",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66be191c92933",
+                        "type": "text",
+                        "properties": {
+                          "html": "35.5%&nbsp;"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66be191c92942",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66be191c92948",
+                        "type": "text",
+                        "properties": {
+                          "html": "42.6%&nbsp;"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_12_blockData_description_widgets_0": [],
+                "sections_0_blocks_12_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_12_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_12_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_12_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_12": []
+              }
+            }
+          },
+          {
+            "id": "mc66be191c92978",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66be191c9297f",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :&nbsp;</strong></p><p style=\"text-align: justify;\">Study the bar graph given below and answer the following questions:\n</p><div style=\"text-align: justify;\">The bar graph shows the percentage break-up of number of students for different films in a theatre.</div><div style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/eac9d0f2e7c60f12a4c4a5daa8036727.png\" class=\"block learnworlds-image learnworlds-element\" style=\"height: 193px; width: 325px;\"></div><div style=\"text-align: justify;\">Note: No student went to watch more than one movie.\n</div><div style=\"text-align: justify;\">The table below shows total number of students in classes X, XI and XII.</div><div style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/a0bbb78344c4e087d6d1954f147e2e2a.png\" class=\"block learnworlds-image learnworlds-element\" style=\"height: 77px; width: 200px;\"></div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">The number of students from class XI and XII who watched Raabta is what percent of the number of students from class X who watched Begum Jaan, Half girlfriend and Meri Pyari Bindu? (approximate)</div>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66be191c92992",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66be191c92999",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66be191c929a0",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66be191c929ce",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66be191c929d9",
+                        "type": "text",
+                        "properties": {
+                          "html": "81%&nbsp;"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66be191c929ef",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66be191c929f6",
+                        "type": "text",
+                        "properties": {
+                          "html": "72%"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66be191c92a06",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66be191c92a0d",
+                        "type": "text",
+                        "properties": {
+                          "html": "75%"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66be191c92a26",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66be191c92a31",
+                        "type": "text",
+                        "properties": {
+                          "html": "77%"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_12_blockData_description_widgets_0": [],
+                "sections_0_blocks_12_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_12_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_12_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_12_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_13_blockData_description_widgets_0": [],
+                "sections_0_blocks_13_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_13_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_13_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_13_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_13": []
+              }
+            }
+          },
+          {
+            "id": "mc66be191c92a6a",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66be191c92a70",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">A boat travels upstream, from point X to point Y, and then returns from point Y to point Z, mid-way between X and Y, and takes 14 hours for the entire trip. If the boat would take 6 hours to travel from X to Y in still water, find the time that the boat took to travel from Y to Z.</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66be191c92a8f",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66be191c92a99",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66be191c92aa5",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66be191c92ad6",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66be191c92ae3",
+                        "type": "text",
+                        "properties": {
+                          "html": "2 hours"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66be191c92afb",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66be191c92b05",
+                        "type": "text",
+                        "properties": {
+                          "html": "3 hours"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66be191c92b1d",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66be191c92b27",
+                        "type": "text",
+                        "properties": {
+                          "html": "4 hours"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66be191c92b40",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66be191c92b4b",
+                        "type": "text",
+                        "properties": {
+                          "html": "1 hours"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_14_blockData_description_widgets_0": [],
+                "sections_0_blocks_14_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_14_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_14_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_14_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_14": []
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "availabilityStatus": null,
+    "autoNavigationEnabled": false,
+    "displayBackButtonWhenNavigationPerBlock": true,
+    "saveAndResumeLaterEnabled": null,
+    "tagsAddedOnCompletion": [],
+    "tagsAddedOnPass": [],
+    "sendAnonymousSubmissionsToEmailLeads": false,
+    "afterSubmitActionEnabled": null,
+    "afterSubmitActionProperties": null,
+    "showWizardOnNextEdit": false,
+    "revisitAfterSubmissionAction": null,
+    "navigationTemplate": "HorizontalSpacedBetweenNavigationTemplate",
+    "learnerSearchBarEnabled": true,
+    "learnerUnansweredQuestionsEnabled": true,
+    "learnerFavouriteQuestionEnabled": true,
+    "learnerCompletionProgressEnabled": true,
+    "learnerShowIndexOfQuestionsEnabled": false,
+    "learnerTimeNotificationsEnabled": false,
+    "learnerAllowInterruptionsEnabled": true,
+    "learnerAllowInterruptionsTimeoutInMinutes": 30,
+    "learnerReclaimTryOnInterruptionTimeoutEnabled": false,
+    "learnerAskBeforeContinueToSaved": true,
+    "learnerAutoSaveEnabled": null,
+    "spellcheckDisabled": null,
+    "showPartialScoreOnSubmission": true,
+    "deliverableQuestionsSubsetType": "all",
+    "questionRandomizationType": "none",
+    "serveQuestionsBasedOnPreviousSubmission": null,
+    "scoringDisabled": false,
+    "isSelfAssessment": false,
+    "useDefaultCertificateTemplate": null,
+    "certificateTemplate": null,
+    "certificateSocialShare": null,
+    "migrationData": null,
+    "useAssessmentPassingGradeForOpenEndedCorrectness": true,
+    "openEndedCorrectnessPassingGrade": null,
+    "showScorePercentage": null,
+    "showScorePoints": null,
+    "showScoreCorrectAnswers": null,
+    "editorBehaviorSettings": null,
+    "manualReviewEnabled": null,
+    "resultsSummary": {
+      "enabled": true,
+      "showStatusIcon": true,
+      "showStatusText": true,
+      "showScorePercentage": true,
+      "showScorePoints": true,
+      "showScoreCorrectAnswers": false,
+      "showTimeTakenToComplete": true,
+      "showDateSubmitted": true,
+      "showAttemptCount": true
+    },
+    "meta": null,
+    "submissionsCount": 169,
+    "fromMarketplace": null,
+    "aiFeedbackEnabled": null,
+    "numberOfFeedbackQuestions": null,
+    "created": 1723734301.011048,
+    "modified": 1723901757.193824,
+    "contentHash": "5acd63060ee2f21bf5e568e07f15a0494b68b877ad0fb05233388832b04ed700",
+    "id": "66be191d75930bfcc2080a08",
+    "objectType": "assessment",
+    "isEditBlockedDueToSync": false,
+    "variables": {
+      "submission": {
+        "self": {
+          "score": 0,
+          "points": 0,
+          "total_points": 15,
+          "correct_answers": 0,
+          "total_questions": 15,
+          "time_spent": "00:00:00",
+          "date_submitted": "11/08/26",
+          "attempt_count": 4,
+          "max_tries": null,
+          "pass_grade": 50,
+          "time_spent_seconds": 0,
+          "raw_start_date": 1786440600.427945
+        }
+      },
+      "school": {
+        "name": "Apna College",
+        "url": "www.apnacollege.in",
+        "description": "The most loved coding community of India ❤️"
+      },
+      "user": {
+        "username": "ram",
+        "email": "p4542639@gmail.com",
+        "cf_phonenumber": "7666690798"
+      }
+    }
+  },
+  "reclaimedTry": false,
+  "feedback": [
+    {
+      "title": "",
+      "id": "section66be191c920a3",
+      "blocks": [
+        {
+          "id": "mc66be191c920aa",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Two different solutions of alcohol, juiceand water are mixed with each other threetimes in varying proportions. Theconcentration of alcohol and juice in thethree resulting solutions are found to be(10%, 16%), (12%, 12%), and (16%, x %),respectively. What is the value of x?",
+            "widgets": [
+              {
+                "id": "text66be191c920af",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">Two different solutions of alcohol, juice&nbsp;<span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">and water are mixed with each other three&nbsp;</span><span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">times in varying proportions. The&nbsp;</span><span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">concentration of alcohol and juice in the&nbsp;</span><span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">three resulting solutions are found to be&nbsp;</span><span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">(10%, 16%), (12%, 12%), and (16%, x %),&nbsp;</span><span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">respectively. What is the value of x?</span></p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66be191c920ec",
+              "description": {
+                "text": "4",
+                "widgets": [
+                  {
+                    "id": "text66be191c920f3",
+                    "type": "text",
+                    "properties": {
+                      "html": "4&nbsp;"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66be191c92102",
+              "description": {
+                "text": "7",
+                "widgets": [
+                  {
+                    "id": "text66be191c92108",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>7</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66be191c92117",
+              "description": {
+                "text": "8",
+                "widgets": [
+                  {
+                    "id": "text66be191c9211d",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>8</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66be191c9212c",
+              "description": {
+                "text": "10",
+                "widgets": [
+                  {
+                    "id": "text66be191c92132",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>10\n</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66be191c920ec",
+              "text": "4",
+              "widgets": [
+                {
+                  "id": "text66be191c920f3",
+                  "type": "text",
+                  "properties": {
+                    "html": "4&nbsp;"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/83b6e8693934068ad9ecf15c7edac28d.png\" style=\"width: 450px; height: 317px;\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66be191c9214f",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "One-fourth portion of each of the two solidspheres having radii 4 units and 6 units arejoined together such that the centres of thetwo spheres coincide as shown in thefigure given below. What is the totalsurface area of the solid thus formed?",
+            "widgets": [
+              {
+                "id": "text66be191c92153",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">One-fourth portion of each of the two solid&nbsp;<span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">spheres having radii 4 units and 6 units are&nbsp;</span><span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">joined together such that the centres of the&nbsp;</span><span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">two spheres coincide as shown in the&nbsp;</span><span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">figure given below. What is the total&nbsp;</span><span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">surface area of the solid thus formed?</span></p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/3b8c9a9b9caedc88e0b93c8b17cfb31a.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 200px;\"></p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66be191c9218e",
+              "description": {
+                "text": "88 π sq. units",
+                "widgets": [
+                  {
+                    "id": "text66be191c92195",
+                    "type": "text",
+                    "properties": {
+                      "html": "88 π sq. units"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66be191c921a3",
+              "description": {
+                "text": "83 π sq. units",
+                "widgets": [
+                  {
+                    "id": "text66be191c921a9",
+                    "type": "text",
+                    "properties": {
+                      "html": "83 π sq. units"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66be191c921b8",
+              "description": {
+                "text": "78 π sq. units",
+                "widgets": [
+                  {
+                    "id": "text66be191c921be",
+                    "type": "text",
+                    "properties": {
+                      "html": "78 π sq. units"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66be191c921cc",
+              "description": {
+                "text": "73 π sq. units",
+                "widgets": [
+                  {
+                    "id": "text66be191c921d2",
+                    "type": "text",
+                    "properties": {
+                      "html": "73 π sq. units"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66be191c921a3",
+              "text": "83 π sq. units",
+              "widgets": [
+                {
+                  "id": "text66be191c921a9",
+                  "type": "text",
+                  "properties": {
+                    "html": "83 π sq. units"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/7f1d84b36ead3c247eee082c99ca810f.png\" style=\"width: 450px; height: 297px;\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66be191c921ee",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "On a corner of a street, there are 2 flashinglights, a red one and a green one. The redone flashes 5 times per minute and thegreen one flashes 4 times per minute. If thelights starts off flashing at the same time,how many times do they flash together ina day?",
+            "widgets": [
+              {
+                "id": "text66be191c921f4",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">On a corner of a street, there are 2 flashing&nbsp;<span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">lights, a red one and a green one. The red&nbsp;</span><span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">one flashes 5 times per minute and the&nbsp;</span><span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">green one flashes 4 times per minute. If the&nbsp;</span><span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">lights starts off flashing at the same time,&nbsp;</span><span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">how many times do they flash together in&nbsp;</span><span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">a day?</span></p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66be191c92230",
+              "description": {
+                "text": "1260",
+                "widgets": [
+                  {
+                    "id": "text66be191c92236",
+                    "type": "text",
+                    "properties": {
+                      "html": "1260&nbsp;"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66be191c92245",
+              "description": {
+                "text": "1440",
+                "widgets": [
+                  {
+                    "id": "text66be191c9224b",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>1440</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66be191c92259",
+              "description": {
+                "text": "1445",
+                "widgets": [
+                  {
+                    "id": "text66be191c92260",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>1445</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66be191c9226e",
+              "description": {
+                "text": "1530",
+                "widgets": [
+                  {
+                    "id": "text66be191c92274",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>1530</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66be191c92245",
+              "text": "1440",
+              "widgets": [
+                {
+                  "id": "text66be191c9224b",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>1440</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "\n\n<p class=\"PreformattedText\" style=\"margin: 0cm 0cm 0cm 36pt; font-size: 10pt; font-family: \"Liberation Mono\"; line-height: 150%;\">Sorry, that's not correct.<br>Explanation:<br><br><span style=\"font-family: Cambria, serif; font-size: 12pt;\">The red light flashes 5 times/minute.</span><m:omath><span lang=\"EN-US\" style=\"font-size:12.0pt;line-height:150%;font-family:\"Cambria Math\",serif;\n mso-bidi-font-family:\"Times New Roman\";mso-bidi-font-style:italic\"><m:r><m:rpr><m:scr m:val=\"roman\"><m:sty m:val=\"p\"><br></m:sty></m:scr></m:rpr>∴</m:r></span></m:omath><!--[endif]----><span lang=\"EN-US\" style=\"font-size:12.0pt;line-height:107%;font-family:\"Cambria\",serif;\nmso-fareast-font-family:Calibri;mso-fareast-theme-font:minor-latin;mso-bidi-font-family:\n\"Times New Roman\";mso-bidi-theme-font:minor-bidi;position:relative;top:3.0pt;\nmso-text-raise:-3.0pt;mso-font-kerning:0pt;mso-ligatures:none;mso-ansi-language:\nEN-US;mso-fareast-language:EN-US;mso-bidi-language:AR-SA\"><v:shapetype id=\"_x0000_t75\" coordsize=\"21600,21600\" o:spt=\"75\" o:preferrelative=\"t\" path=\"m@4@5l@4@11@9@11@9@5xe\" filled=\"f\" stroked=\"f\">\n <v:stroke joinstyle=\"miter\">\n <v:formulas>\n  <v:f eqn=\"if lineDrawn pixelLineWidth 0\">\n  <v:f eqn=\"sum @0 1 0\">\n  <v:f eqn=\"sum 0 0 @1\">\n  <v:f eqn=\"prod @2 1 2\">\n  <v:f eqn=\"prod @3 21600 pixelWidth\">\n  <v:f eqn=\"prod @3 21600 pixelHeight\">\n  <v:f eqn=\"sum @0 0 1\">\n  <v:f eqn=\"prod @6 1 2\">\n  <v:f eqn=\"prod @7 21600 pixelWidth\">\n  <v:f eqn=\"sum @8 21600 0\">\n  <v:f eqn=\"prod @7 21600 pixelHeight\">\n  <v:f eqn=\"sum @10 21600 0\">\n </v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:formulas>\n <v:path o:extrusionok=\"f\" gradientshapeok=\"t\" o:connecttype=\"rect\">\n <o:lock v:ext=\"edit\" aspectratio=\"t\">\n</o:lock></v:path></v:stroke></v:shapetype><v:shape id=\"_x0000_i1025\" type=\"#_x0000_t75\" style=\"width:6.75pt;\n height:14.25pt\">\n <v:imagedata src=\"file:///C:/Users/TEST/AppData/Local/Temp/msohtmlclip1/01/clip_image001.png\" o:title=\"\" chromakey=\"white\">\n</v:imagedata></v:shape></span><span lang=\"EN-US\" style=\"font-size:12.0pt;line-height:\n150%;font-family:\"Cambria\",serif;mso-bidi-font-family:\"Times New Roman\"\"><span style=\"mso-spacerun:yes\"> </span>It flashes once every 12 seconds.</span></p>\n\n<p class=\"PreformattedText\" style=\"margin: 0cm 0cm 0cm 36pt; font-size: 10pt; font-family: \"Liberation Mono\"; line-height: 150%;\"><span lang=\"EN-US\" style=\"font-size:12.0pt;line-height:150%;font-family:\"Cambria\",serif;\nmso-bidi-font-family:\"Times New Roman\"\">The green light flashes 4 times/minute</span></p>\n\n<p class=\"PreformattedText\" style=\"margin: 0cm 0cm 0cm 36pt; font-size: 10pt; font-family: \"Liberation Mono\"; line-height: 150%;\"><m:omath><span lang=\"EN-US\" style=\"font-size:12.0pt;line-height:150%;font-family:\"Cambria Math\",serif;\n mso-bidi-font-family:\"Times New Roman\";mso-bidi-font-style:italic\"><m:r><m:rpr><m:scr m:val=\"roman\"><m:sty m:val=\"p\"></m:sty></m:scr></m:rpr>∴</m:r></span></m:omath><!--[endif]----><span lang=\"EN-US\" style=\"font-size:12.0pt;line-height:107%;font-family:\"Cambria\",serif;\nmso-fareast-font-family:Calibri;mso-fareast-theme-font:minor-latin;mso-bidi-font-family:\n\"Times New Roman\";mso-bidi-theme-font:minor-bidi;position:relative;top:3.0pt;\nmso-text-raise:-3.0pt;mso-font-kerning:0pt;mso-ligatures:none;mso-ansi-language:\nEN-US;mso-fareast-language:EN-US;mso-bidi-language:AR-SA\"><v:shape id=\"_x0000_i1025\" type=\"#_x0000_t75\" style=\"width:6.75pt;height:14.25pt\">\n <v:imagedata src=\"file:///C:/Users/TEST/AppData/Local/Temp/msohtmlclip1/01/clip_image001.png\" o:title=\"\" chromakey=\"white\">\n</v:imagedata></v:shape></span><span lang=\"EN-US\" style=\"font-size:12.0pt;line-height:\n150%;font-family:\"Cambria\",serif;mso-bidi-font-family:\"Times New Roman\"\">It\nflashes once every 15 seconds.</span></p>\n\n<p class=\"PreformattedText\" style=\"margin: 0cm 0cm 0cm 36pt; font-size: 10pt; font-family: \"Liberation Mono\"; line-height: 150%;\"><span lang=\"EN-US\" style=\"font-size:12.0pt;line-height:150%;font-family:\"Cambria\",serif;\nmso-bidi-font-family:\"Times New Roman\"\">LCM of 12 & 15 = 60 </span></p>\n\n<p class=\"PreformattedText\" style=\"margin: 0cm 0cm 0cm 36pt; font-size: 10pt; font-family: \"Liberation Mono\"; line-height: 150%;\"><m:omath><span lang=\"EN-US\" style=\"font-size:12.0pt;line-height:150%;font-family:\"Cambria Math\",serif;\n mso-bidi-font-family:\"Times New Roman\";mso-bidi-font-style:italic\"><m:r><m:rpr><m:scr m:val=\"roman\"><m:sty m:val=\"p\"></m:sty></m:scr></m:rpr>∴</m:r></span></m:omath><!--[endif]----><span lang=\"EN-US\" style=\"font-size:12.0pt;line-height:107%;font-family:\"Cambria\",serif;\nmso-fareast-font-family:Calibri;mso-fareast-theme-font:minor-latin;mso-bidi-font-family:\n\"Times New Roman\";mso-bidi-theme-font:minor-bidi;position:relative;top:3.0pt;\nmso-text-raise:-3.0pt;mso-font-kerning:0pt;mso-ligatures:none;mso-ansi-language:\nEN-US;mso-fareast-language:EN-US;mso-bidi-language:AR-SA\"><v:shape id=\"_x0000_i1025\" type=\"#_x0000_t75\" style=\"width:6.75pt;height:14.25pt\">\n <v:imagedata src=\"file:///C:/Users/TEST/AppData/Local/Temp/msohtmlclip1/01/clip_image001.png\" o:title=\"\" chromakey=\"white\">\n</v:imagedata></v:shape></span><span lang=\"EN-US\" style=\"font-size:12.0pt;line-height:\n150%;font-family:\"Cambria\",serif;mso-bidi-font-family:\"Times New Roman\"\">If the\nlight start off flashing at the same time, they flash together after every 60\nseconds i.e. 1 minute.<br></span><m:omath style=\"font-family: Helvetica, sans-serif, Arial; font-size: 14px;\"><span lang=\"EN-US\" style=\"font-size:12.0pt;\n line-height:107%;font-family:\"Cambria Math\",serif;mso-fareast-font-family:\n Calibri;mso-fareast-theme-font:minor-latin;mso-bidi-font-family:\"Times New Roman\";\n mso-ansi-language:EN-US;mso-fareast-language:EN-US;mso-bidi-language:AR-SA;\n mso-bidi-font-style:italic\"><m:r>∴</m:r></span></m:omath><span lang=\"EN-US\" style=\"font-size: 12pt; line-height: 107%; font-family: Cambria, serif; position: relative; top: 4pt;\"><v:shape id=\"_x0000_i1025\" type=\"#_x0000_t75\" style=\"width:6.75pt;height:15pt\">\n <v:imagedata src=\"file:///C:/Users/TEST/AppData/Local/Temp/msohtmlclip1/01/clip_image002.png\" o:title=\"\" chromakey=\"white\">\n</v:imagedata></v:shape></span><span lang=\"EN-US\" style=\"font-size: 12pt; line-height: 107%; font-family: Cambria, serif;\"> </span><span lang=\"EN-US\" style=\"font-size: 12pt; line-height: 107%; font-family: Cambria, serif;\">In\na day, they flash together (24 </span><span lang=\"EN-US\" style=\"font-size: 12pt; line-height: 107%; font-family: Symbol;\">´</span><span lang=\"EN-US\" style=\"font-size: 12pt; line-height: 107%; font-family: Cambria, serif;\"> 60) = 1440 times.</span></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66be191c92290",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "For how many pairs (a, b) of naturalnumbers is the LCM of a and b is 255473?",
+            "widgets": [
+              {
+                "id": "text66be191c92295",
+                "type": "text",
+                "properties": {
+                  "html": "For how many pairs (a, b) of natural&nbsp;<span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">numbers is the LCM of a and b is 2<sup>5</sup>5<sup>4</sup>7<sup>3</sup>?</span>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66be191c922d0",
+              "description": {
+                "text": "462",
+                "widgets": [
+                  {
+                    "id": "text66be191c922d6",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>462</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66be191c922e5",
+              "description": {
+                "text": "1386",
+                "widgets": [
+                  {
+                    "id": "text66be191c922eb",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>1386</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66be191c922fa",
+              "description": {
+                "text": "693",
+                "widgets": [
+                  {
+                    "id": "text66be191c92300",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>693</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66be191c9230f",
+              "description": {
+                "text": "1848",
+                "widgets": [
+                  {
+                    "id": "text66be191c92315",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>1848</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66be191c922fa",
+              "text": "693",
+              "widgets": [
+                {
+                  "id": "text66be191c92300",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>693</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/84cee3ed70c37397253170a60db54948.png\" style=\"width: 450px; height: 156px;\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66be191c92333",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Aisha has two bags A and B with gems. BagA has 3 rubies and 4 emeralds, the bag Bhas 4 rubies and 5 emeralds. She takes outone gem at random from bag A and placesit into bag B. She again takes out one gemat random from bag B and places it in bagA. What is the probability that the ratio ofrubies to emeralds in both the bagsremains unaltered?",
+            "widgets": [
+              {
+                "id": "text66be191c92338",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">Aisha has two bags A and B with gems. Bag&nbsp;<span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">A has 3 rubies and 4 emeralds, the bag B&nbsp;</span><span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">has 4 rubies and 5 emeralds. She takes out&nbsp;</span><span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">one gem at random from bag A and places&nbsp;</span><span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">it into bag B. She again takes out one gem&nbsp;</span><span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">at random from bag B and places it in bag&nbsp;</span><span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">A. What is the probability that the ratio of&nbsp;</span><span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">rubies to emeralds in both the bags&nbsp;</span><span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">remains unaltered?</span></p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66be191c92373",
+              "description": {
+                "text": "39/70",
+                "widgets": [
+                  {
+                    "id": "text66be191c92379",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>39/70</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66be191c92388",
+              "description": {
+                "text": "35/70",
+                "widgets": [
+                  {
+                    "id": "text66be191c9238f",
+                    "type": "text",
+                    "properties": {
+                      "html": "35/70&nbsp;"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66be191c9239d",
+              "description": {
+                "text": "24/70",
+                "widgets": [
+                  {
+                    "id": "text66be191c923a3",
+                    "type": "text",
+                    "properties": {
+                      "html": "24/70"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66be191c923b2",
+              "description": {
+                "text": "16/70",
+                "widgets": [
+                  {
+                    "id": "text66be191c923b8",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>16/70</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66be191c92373",
+              "text": "39/70",
+              "widgets": [
+                {
+                  "id": "text66be191c92379",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>39/70</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/2239bede9ecdd48f98bc3070bc9deb07.png\" style=\"width: 450px; height: 397px;\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66be191c923d4",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions:Nine persons – A, B, C, D, E, F, G, H and I – are sitting in a straight line facing north, but not necessarily in the same order. C is fourth to the left of G; F is fourth to the right of A and second to the left of I, who is fifth to the right of D. B is not an immediate neighbour of either I or C. There are only three persons between E and D. G is second to the right of A. In a certain way H relates to D, G relates F. In the same way who relates to A?",
+            "widgets": [
+              {
+                "id": "text66be191c923d8",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions:&nbsp;</strong></p><p style=\"text-align: justify;\">Nine persons – A, B, C, D, E, F, G, H and I – are sitting in a straight line facing north, but not necessarily in the same order.\n</p><div style=\"text-align: justify;\">C is fourth to the left of G; F is fourth to the right of A and second to the left of I, who is fifth to the right of D. B is not an immediate neighbour of either I or C. There are only three persons between E and D. G is second to the right of A.\n</div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">In a certain way H relates to D, G relates F. In the same way who relates to A?</div>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66be191c9242c",
+              "description": {
+                "text": "C",
+                "widgets": [
+                  {
+                    "id": "text66be191c92438",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>C</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66be191c9244a",
+              "description": {
+                "text": "G",
+                "widgets": [
+                  {
+                    "id": "text66be191c92450",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>G</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66be191c9245f",
+              "description": {
+                "text": "B",
+                "widgets": [
+                  {
+                    "id": "text66be191c92465",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>B</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66be191c92473",
+              "description": {
+                "text": "I",
+                "widgets": [
+                  {
+                    "id": "text66be191c9247a",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>I</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66be191c9242c",
+              "text": "C",
+              "widgets": [
+                {
+                  "id": "text66be191c92438",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>C</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/f4c160bcc2a069d5a0fbcd6ed2c5c818.png\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66be191c92496",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions :Nine persons – A, B, C, D, E, F, G, H and I – are sitting in a straight line facing north, but not necessarily in the same order. C is fourth to the left of G; F is fourth to the right of A and second to the left of I, who is fifth to the right of D. B is not an immediate neighbour of either I or C. There are only three persons between E and D. G is second to the right of A. Who sits to the fourth right of D?",
+            "widgets": [
+              {
+                "id": "text66be191c9249a",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :&nbsp;</strong></p><p style=\"text-align: justify;\">Nine persons – A, B, C, D, E, F, G, H and I – are sitting in a straight line facing north, but not necessarily in the same order.\n</p><div style=\"text-align: justify;\">C is fourth to the left of G; F is fourth to the right of A and second to the left of I, who is fifth to the right of D. B is not an immediate neighbour of either I or C. There are only three persons between E and D. G is second to the right of A.\n</div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">Who sits to the fourth right of D?</div>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66be191c924d6",
+              "description": {
+                "text": "E",
+                "widgets": [
+                  {
+                    "id": "text66be191c924dc",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>E</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66be191c924eb",
+              "description": {
+                "text": "C",
+                "widgets": [
+                  {
+                    "id": "text66be191c924f2",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>C</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66be191c92500",
+              "description": {
+                "text": "A",
+                "widgets": [
+                  {
+                    "id": "text66be191c92506",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>A</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66be191c92515",
+              "description": {
+                "text": "H",
+                "widgets": [
+                  {
+                    "id": "text66be191c9251b",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>H</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66be191c924d6",
+              "text": "E",
+              "widgets": [
+                {
+                  "id": "text66be191c924dc",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>E</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br>E sits fourth to the right of D."
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66be191c9253f",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Karan, the famous director, is selecting cast for his next movie “Student of IIM”. He has to select the cast from 5 star kids : Abram(A), Taimur (T), Ebrahim (E), Siddharth (S) and Varun (V). However the star kids have put up the following conditions to be casted for the movie: i. Siddharth cannot be casted if Taimur is casted. ii. Ebrahim will be casted only if Varun is also casted. iii. Abram will be casted only if Taimur or Ebrahim is casted iv. If Siddharth is not casted, Abram also cannot be casted v. If Varun is casted then Abram must be casted but Taimur cannot be casted. vi. If Siddharth is casted then Ebrahim must also be casted If Varun is not to be casted, which of the following statements must be true?",
+            "widgets": [
+              {
+                "id": "text66be191c92544",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">Karan, the famous director, is selecting cast for his next movie “Student of IIM”. He has to select the cast from 5 star kids : Abram(A), Taimur (T), Ebrahim (E), Siddharth (S) and Varun (V). However the star kids have put up the following conditions to be casted for the movie:\n</p><div style=\"text-align: justify;\">i. Siddharth cannot be casted if Taimur is casted.\n</div><div style=\"text-align: justify;\">ii. Ebrahim will be casted only if Varun is also casted.\n</div><div style=\"text-align: justify;\">iii. Abram will be casted only if Taimur or Ebrahim is casted\n</div><div style=\"text-align: justify;\">iv. If Siddharth is not casted, Abram also cannot be casted\n</div><div style=\"text-align: justify;\">v. If Varun is casted then Abram must be casted but Taimur cannot be casted.\n</div><div style=\"text-align: justify;\">vi. If Siddharth is casted then Ebrahim must also be casted\n</div><div style=\"text-align: justify;\">If Varun is not to be casted, which of the following statements must be true?</div>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66be191c9257f",
+              "description": {
+                "text": "Taimur must be casted",
+                "widgets": [
+                  {
+                    "id": "text66be191c92585",
+                    "type": "text",
+                    "properties": {
+                      "html": "Taimur must be casted&nbsp;"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66be191c92594",
+              "description": {
+                "text": "Abram must be casted",
+                "widgets": [
+                  {
+                    "id": "text66be191c9259a",
+                    "type": "text",
+                    "properties": {
+                      "html": "Abram must be casted"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66be191c925a8",
+              "description": {
+                "text": "Siddharth must be casted",
+                "widgets": [
+                  {
+                    "id": "text66be191c925af",
+                    "type": "text",
+                    "properties": {
+                      "html": "Siddharth must be casted&nbsp;"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66be191c925bd",
+              "description": {
+                "text": "None of these",
+                "widgets": [
+                  {
+                    "id": "text66be191c925c4",
+                    "type": "text",
+                    "properties": {
+                      "html": "None of these"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66be191c925bd",
+              "text": "None of these",
+              "widgets": [
+                {
+                  "id": "text66be191c925c4",
+                  "type": "text",
+                  "properties": {
+                    "html": "None of these"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>Following diagram shows the direct and the inferential conclusions that can be drawn from the \nconditions given:\n<br>From i From ii\n<br>If S then not T Only if V then E\n<br>If T then not S If E then V\n<br>If not V then not E\n<br>From iii From iv\n<br>Only if T or E then A If not S then not A<br>If A then T or E If A then S\n<br>Neither T nor E then not A\n<br>From v From vi\n<br>If V then A If S then E\n<br>If not A then not V If not E then not S\n<br>If V then not T\n<br>If T then not V\n<br>Only condition that can be inferred about V not casted, is E also not casted. Rest nothing is must \ntrue.</p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66be191c925e1",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "In each of these questions, a logical sequence of numbers is given. It is followed by another series which starts with a number followed by (a), (b), (c), (d) and (e). You have to understand the pattern given in the number series and form a new series with the first number of the second series to get the values of (a), (b), (c), (d) and (e) and answer the questions below. 11 9 35 53 79 97 14 (a) (b) (c) (d) (e) Which of the following will come in place of (e)?",
+            "widgets": [
+              {
+                "id": "text66be191c925e5",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">In each of these questions, a logical sequence of numbers is given. It is followed by another series which starts with a number followed by (a), (b), (c), (d) and (e). You have to understand the pattern given in the number series and form a new series with the first number of the second series to get the values of (a), (b), (c), (d) and (e) and answer the questions below.\n</p><div style=\"text-align: justify;\">11&nbsp; 9&nbsp; &nbsp;35&nbsp; 53 \t79 97\n</div><div style=\"text-align: justify;\">14 \t(a) \t(b) \t(c) \t(d) \t(e)\n</div><div style=\"text-align: justify;\">Which of the following will come in place of (e)?</div>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66be191c92623",
+              "description": {
+                "text": "100",
+                "widgets": [
+                  {
+                    "id": "text66be191c92629",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>100</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66be191c92638",
+              "description": {
+                "text": "118",
+                "widgets": [
+                  {
+                    "id": "text66be191c9263f",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>118</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66be191c9264e",
+              "description": {
+                "text": "125",
+                "widgets": [
+                  {
+                    "id": "text66be191c92654",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>125</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66be191c92663",
+              "description": {
+                "text": "124",
+                "widgets": [
+                  {
+                    "id": "text66be191c92669",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>124</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66be191c92663",
+              "text": "124",
+              "widgets": [
+                {
+                  "id": "text66be191c92669",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>124</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br>In the first series:\n<br>1st term = 11\n<br>2nd term = 11(1) – 2 = 9\n<br>3rd term = 11(3) +2 = 35\n<br>4th term = 11(5) – 2 = 53\n<br>5th term = 11(7) + 2 = 79\n<br>6th term = 11(9) – 2 = 97\n<br>In the second series:\n<br>1st term = 14\n<br>2nd term = 14(1) – 2 = 12\n<br>3rd term = 14(3) + 2 = 44\n<br>4th term = 14(5) – 2 = 68\n<br>5th term = 14(7) + 2 = 100\n<br>6th term = 14(9) – 2 = 124"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66be191c92686",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions :Ajay, Bikram, Chetan, Divyesh, Eshan, Farukh, Gopal and Hiten are eight friends whose birthdays are on the first day of a month and no two of them have their birthdays in the same month. None of them have their birthdays in the months of August and December. Chetan can celebrate his birthday on that exact day only once every four years and his birthday is the first to come in a year. The birthdays of Ajay and Gopal are separated by four months. Gopal’s birthday is in last quarter of the year and only Bikram’s birthday comes after that of Gopal. The number of people who have their birthdays after Divyesh’s birthday is one more than the number of people whose birthdays are before his birthday. Eshan and Hiten have their birthdays in consecutive months but not necessarily in the same order. Among the eight friends, who has his birthday in the month of September?",
+            "widgets": [
+              {
+                "id": "text66be191c9268a",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :&nbsp;</strong></p><p style=\"text-align: justify;\">Ajay, Bikram, Chetan, Divyesh, Eshan, Farukh, Gopal and Hiten are eight friends whose birthdays are on the first day of a month and no two of them have their birthdays in the same month. None of them have their birthdays in the months of August and December. Chetan can celebrate his birthday on that exact day only once every four years and his birthday is the first to come in a year. The birthdays of Ajay and Gopal are separated by four months. Gopal’s birthday is in last quarter of the year and only Bikram’s birthday comes after that of Gopal. The number of people who have their birthdays after Divyesh’s birthday is one more than the number of people whose birthdays are before his birthday. Eshan and Hiten have their birthdays in consecutive months but not necessarily in the same order.\n</p><div style=\"text-align: justify;\"><span style=\"font-size: 1.6rem; letter-spacing: 0rem;\"><br></span></div><div style=\"text-align: justify;\"><span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">Among the eight friends, who has his birthday in the month of September?</span></div>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66be191c926c6",
+              "description": {
+                "text": "Gopal",
+                "widgets": [
+                  {
+                    "id": "text66be191c926cd",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Gopal</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66be191c926db",
+              "description": {
+                "text": "Farukh",
+                "widgets": [
+                  {
+                    "id": "text66be191c926e2",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Farukh</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66be191c926f0",
+              "description": {
+                "text": "Bikram",
+                "widgets": [
+                  {
+                    "id": "text66be191c926f6",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Bikram</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66be191c92706",
+              "description": {
+                "text": "Cannot be determined.",
+                "widgets": [
+                  {
+                    "id": "text66be191c9270e",
+                    "type": "text",
+                    "properties": {
+                      "html": "Cannot be determined."
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66be191c92706",
+              "text": "Cannot be determined.",
+              "widgets": [
+                {
+                  "id": "text66be191c9270e",
+                  "type": "text",
+                  "properties": {
+                    "html": "Cannot be determined."
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/53efb434edabd702e62dc01ad54e90d1.png\"><br>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66be191c9272a",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions :Ajay, Bikram, Chetan, Divyesh, Eshan, Farukh, Gopal and Hiten are eight friends whose birthdays are on the first day of a month and no two of them have their birthdays in the same month. None of them have their birthdays in the months of August and December. Chetan can celebrate his birthday on that exact day only once every four years and his birthday is the first to come in a year. The birthdays of Ajay and Gopal are separated by four months. Gopal’s birthday is in last quarter of the year and only Bikram’s birthday comes after that of Gopal. The number of people who have their birthdays after Divyesh’s birthday is one more than the number of people whose birthdays are before his birthday. Eshan and Hiten have their birthdays in consecutive months but not necessarily in the same order. For how many of them, it is possible to exactly identify the birthday month?",
+            "widgets": [
+              {
+                "id": "text66be191c9272f",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :&nbsp;</strong></p><p style=\"text-align: justify;\">Ajay, Bikram, Chetan, Divyesh, Eshan, Farukh, Gopal and Hiten are eight friends whose birthdays are on the first day of a month and no two of them have their birthdays in the same month. None of them have their birthdays in the months of August and December. Chetan can celebrate his birthday on that exact day only once every four years and his birthday is the first to come in a year. The birthdays of Ajay and Gopal are separated by four months. Gopal’s birthday is in last quarter of the year and only Bikram’s birthday comes after that of Gopal. The number of people who have their birthdays after Divyesh’s birthday is one more than the number of people whose birthdays are before his birthday. Eshan and Hiten have their birthdays in consecutive months but not necessarily in the same order.\n</p><div style=\"text-align: justify;\"><span style=\"font-size: 1.6rem; letter-spacing: 0rem;\"><br></span></div><div style=\"text-align: justify;\">For how many of them, it is possible to exactly identify the birthday month?</div>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66be191c9276e",
+              "description": {
+                "text": "4",
+                "widgets": [
+                  {
+                    "id": "text66be191c92775",
+                    "type": "text",
+                    "properties": {
+                      "html": "4&nbsp;"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66be191c92785",
+              "description": {
+                "text": "5",
+                "widgets": [
+                  {
+                    "id": "text66be191c9278b",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>5</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66be191c9279b",
+              "description": {
+                "text": "6",
+                "widgets": [
+                  {
+                    "id": "text66be191c927a1",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>6</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66be191c927b0",
+              "description": {
+                "text": "None of them",
+                "widgets": [
+                  {
+                    "id": "text66be191c927b7",
+                    "type": "text",
+                    "properties": {
+                      "html": "None of them"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66be191c92785",
+              "text": "5",
+              "widgets": [
+                {
+                  "id": "text66be191c9278b",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>5</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>We can identify the exact birthday month for Chetan, Divyesh, Ajay, Gopal and Bikram.</p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66be191c927dd",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "There are ten houses on a street numbered House 1 to House 10. It is the festive season and the local politician wants to make these houses happy by sending them flowers and chocolates. At least five of the houses will get flowers and at least five of them will get chocolates. The following conditions apply: I. At least four houses get both flowers and chocolates. II. House 1 gets either flowers or chocolates, but not both. III. House 8 gets flowers only. IV. For at least one of the flowers and chocolates, House 5 and House 7 are both its recipients. V. House 10 and House 2 get different products. VI. House 4 and House 3 get both the products. VII. If House 9 gets both the products, then House 5 and House 6 will also get both the products. If 7 houses get chocolates then which of the following could be the list of houses who get chocolates? I. Houses 1, 2, 3, 4, 5, 6 and 7 II. Houses 2, 3, 4, 5, 6, 9 and 7 III. Houses 3, 4, 5, 6, 7, 9 and 10 IV. Houses 1, 3, 4, 5, 7, 9 and 10",
+            "widgets": [
+              {
+                "id": "text66be191c927e2",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">There are ten houses on a street numbered House 1 to House 10. It is the festive season and the local politician wants to make these houses happy by sending them flowers and chocolates. At least five of the houses will get flowers and at least five of them will get chocolates. The following conditions apply:\n</p><div style=\"text-align: justify;\">I. At least four houses get both flowers and chocolates.\n</div><div style=\"text-align: justify;\">II. House 1 gets either flowers or chocolates, but not both.\n</div><div style=\"text-align: justify;\">III. House 8 gets flowers only.\n</div><div style=\"text-align: justify;\">IV. For at least one of the flowers and chocolates, House 5 and House 7 are both its recipients.\n</div><div style=\"text-align: justify;\">V. House 10 and House 2 get different products.\n</div><div style=\"text-align: justify;\">VI. House 4 and House 3 get both the products.\n</div><div style=\"text-align: justify;\">VII. If House 9 gets both the products, then House 5 and House 6 will also get both the products.\n</div><div style=\"text-align: justify;\">If 7 houses get chocolates then which of the following could be the list of houses who get chocolates?\n</div><div style=\"text-align: justify;\">I. Houses 1, 2, 3, 4, 5, 6 and 7\n</div><div style=\"text-align: justify;\">II. Houses 2, 3, 4, 5, 6, 9 and 7\n</div><div style=\"text-align: justify;\">III. Houses 3, 4, 5, 6, 7, 9 and 10\n</div><div style=\"text-align: justify;\">IV. Houses 1, 3, 4, 5, 7, 9 and 10</div>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66be191c9283f",
+              "description": {
+                "text": "Only II and III",
+                "widgets": [
+                  {
+                    "id": "text66be191c92846",
+                    "type": "text",
+                    "properties": {
+                      "html": "Only II and III&nbsp;"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66be191c92855",
+              "description": {
+                "text": "Only I, II and III",
+                "widgets": [
+                  {
+                    "id": "text66be191c9285c",
+                    "type": "text",
+                    "properties": {
+                      "html": "Only I, II and III"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66be191c9286b",
+              "description": {
+                "text": "Only II and IV",
+                "widgets": [
+                  {
+                    "id": "text66be191c92872",
+                    "type": "text",
+                    "properties": {
+                      "html": "Only II and IV"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66be191c92881",
+              "description": {
+                "text": "Al I, II, III and IV",
+                "widgets": [
+                  {
+                    "id": "text66be191c92888",
+                    "type": "text",
+                    "properties": {
+                      "html": "Al I, II, III and IV"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66be191c92881",
+              "text": "Al I, II, III and IV",
+              "widgets": [
+                {
+                  "id": "text66be191c92888",
+                  "type": "text",
+                  "properties": {
+                    "html": "Al I, II, III and IV"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>In this LR set, we need to first find out the houses which receive one product and the ones which \nreceive two products. Then, as much as possible, we need to find the products being received by \nthe houses.\nFrom (VI), we know that Houses 4 and 3 get both the products. By (V), we know that Houses 2 and \n10 get a single product. House 8 gets only a single product which is flowers. Also, from (I) we \nknow that House 1 gets a single product.<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/a50a7e4d14215014d9ea9340899870a7.png\" style=\"width: 250px; height: 218px;\"><br>4) For this question, it is best to individually check each and every option. Each option that gets \napproved must fulfill all the constraints mentioned in the question. \nOn checking these options and the constraints mentioned in the question from (I) to (VII), we get to \nknow that all of them are possible.</p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66be191c928a5",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions :Study the bar graph given below and answer the following questions: The bar graph shows the percentage break-up of number of students for different films in a theatre.Note: No student went to watch more than one movie. The table below shows total number of students in classes X, XI and XII.If all the students from class XII who did not go to watch any movie, later changed their mind and went to watch ‘Meri Pyari Bindu’, then calculate the % mark-up in the number of students who watched ‘Meri Pyari Bindu’?",
+            "widgets": [
+              {
+                "id": "text66be191c928a9",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :&nbsp;</strong></p><p style=\"text-align: justify;\">Study the bar graph given below and answer the following questions:\n</p><div style=\"text-align: justify;\">The bar graph shows the percentage break-up of number of students for different films in a theatre.</div><div style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/eac9d0f2e7c60f12a4c4a5daa8036727.png\" class=\"block learnworlds-image learnworlds-element\" style=\"height: 193px; width: 325px;\"></div><div style=\"text-align: justify;\">Note: No student went to watch more than one movie.\n</div><div style=\"text-align: justify;\">The table below shows total number of students in classes X, XI and XII.</div><div style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/a0bbb78344c4e087d6d1954f147e2e2a.png\" class=\"block learnworlds-image learnworlds-element\" style=\"height: 77px; width: 200px;\"></div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">If all the students from class XII who did not go to watch any movie, later changed their mind and went to watch ‘Meri Pyari Bindu’, then calculate the % mark-up in the number of students who watched ‘Meri Pyari Bindu’?</div>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66be191c928ed",
+              "description": {
+                "text": "30%",
+                "widgets": [
+                  {
+                    "id": "text66be191c928f9",
+                    "type": "text",
+                    "properties": {
+                      "html": "30%&nbsp;"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66be191c92913",
+              "description": {
+                "text": "25.5%",
+                "widgets": [
+                  {
+                    "id": "text66be191c9291d",
+                    "type": "text",
+                    "properties": {
+                      "html": "25.5%&nbsp;"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66be191c9292c",
+              "description": {
+                "text": "35.5%",
+                "widgets": [
+                  {
+                    "id": "text66be191c92933",
+                    "type": "text",
+                    "properties": {
+                      "html": "35.5%&nbsp;"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66be191c92942",
+              "description": {
+                "text": "42.6%",
+                "widgets": [
+                  {
+                    "id": "text66be191c92948",
+                    "type": "text",
+                    "properties": {
+                      "html": "42.6%&nbsp;"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66be191c9292c",
+              "text": "35.5%",
+              "widgets": [
+                {
+                  "id": "text66be191c92933",
+                  "type": "text",
+                  "properties": {
+                    "html": "35.5%&nbsp;"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/5b89f7ea280fd2dacb82560a5188497e.png\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66be191c92978",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions :Study the bar graph given below and answer the following questions: The bar graph shows the percentage break-up of number of students for different films in a theatre.Note: No student went to watch more than one movie. The table below shows total number of students in classes X, XI and XII.The number of students from class XI and XII who watched Raabta is what percent of the number of students from class X who watched Begum Jaan, Half girlfriend and Meri Pyari Bindu? (approximate)",
+            "widgets": [
+              {
+                "id": "text66be191c9297f",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :&nbsp;</strong></p><p style=\"text-align: justify;\">Study the bar graph given below and answer the following questions:\n</p><div style=\"text-align: justify;\">The bar graph shows the percentage break-up of number of students for different films in a theatre.</div><div style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/eac9d0f2e7c60f12a4c4a5daa8036727.png\" class=\"block learnworlds-image learnworlds-element\" style=\"height: 193px; width: 325px;\"></div><div style=\"text-align: justify;\">Note: No student went to watch more than one movie.\n</div><div style=\"text-align: justify;\">The table below shows total number of students in classes X, XI and XII.</div><div style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/a0bbb78344c4e087d6d1954f147e2e2a.png\" class=\"block learnworlds-image learnworlds-element\" style=\"height: 77px; width: 200px;\"></div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">The number of students from class XI and XII who watched Raabta is what percent of the number of students from class X who watched Begum Jaan, Half girlfriend and Meri Pyari Bindu? (approximate)</div>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66be191c929ce",
+              "description": {
+                "text": "81%",
+                "widgets": [
+                  {
+                    "id": "text66be191c929d9",
+                    "type": "text",
+                    "properties": {
+                      "html": "81%&nbsp;"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66be191c929ef",
+              "description": {
+                "text": "72%",
+                "widgets": [
+                  {
+                    "id": "text66be191c929f6",
+                    "type": "text",
+                    "properties": {
+                      "html": "72%"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66be191c92a06",
+              "description": {
+                "text": "75%",
+                "widgets": [
+                  {
+                    "id": "text66be191c92a0d",
+                    "type": "text",
+                    "properties": {
+                      "html": "75%"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66be191c92a26",
+              "description": {
+                "text": "77%",
+                "widgets": [
+                  {
+                    "id": "text66be191c92a31",
+                    "type": "text",
+                    "properties": {
+                      "html": "77%"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66be191c92a26",
+              "text": "77%",
+              "widgets": [
+                {
+                  "id": "text66be191c92a31",
+                  "type": "text",
+                  "properties": {
+                    "html": "77%"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/224ff722c37b715b1f845a12bdc7d389.png\" style=\"width: 400px; height: 109px;\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66be191c92a6a",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "A boat travels upstream, from point X to point Y, and then returns from point Y to point Z, mid-way between X and Y, and takes 14 hours for the entire trip. If the boat would take 6 hours to travel from X to Y in still water, find the time that the boat took to travel from Y to Z.",
+            "widgets": [
+              {
+                "id": "text66be191c92a70",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">A boat travels upstream, from point X to point Y, and then returns from point Y to point Z, mid-way between X and Y, and takes 14 hours for the entire trip. If the boat would take 6 hours to travel from X to Y in still water, find the time that the boat took to travel from Y to Z.</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66be191c92ad6",
+              "description": {
+                "text": "2 hours",
+                "widgets": [
+                  {
+                    "id": "text66be191c92ae3",
+                    "type": "text",
+                    "properties": {
+                      "html": "2 hours"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66be191c92afb",
+              "description": {
+                "text": "3 hours",
+                "widgets": [
+                  {
+                    "id": "text66be191c92b05",
+                    "type": "text",
+                    "properties": {
+                      "html": "3 hours"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66be191c92b1d",
+              "description": {
+                "text": "4 hours",
+                "widgets": [
+                  {
+                    "id": "text66be191c92b27",
+                    "type": "text",
+                    "properties": {
+                      "html": "4 hours"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66be191c92b40",
+              "description": {
+                "text": "1 hours",
+                "widgets": [
+                  {
+                    "id": "text66be191c92b4b",
+                    "type": "text",
+                    "properties": {
+                      "html": "1 hours"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66be191c92ad6",
+              "text": "2 hours",
+              "widgets": [
+                {
+                  "id": "text66be191c92ae3",
+                  "type": "text",
+                  "properties": {
+                    "html": "2 hours"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/c5e964e1eac04bc8a944eb25c35f2ae2.png\" style=\"width: 450px; height: 320px;\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        }
+      ]
+    }
+  ],
+  "submitted": true,
+  "updated": true,
+  "retryCount": 4,
+  "inlineFeedback": [],
+  "errors": [],
+  "success": true
+}

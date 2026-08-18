@@ -1,0 +1,3049 @@
+{
+  "submission": {
+    "anon_id": null,
+    "model": "assessment-submission",
+    "courseTitleId": "aptitude-qs-library",
+    "object_id": "66a0a80c1b41b64c4a05c159",
+    "assessmentId": "66a0a80c1b41b64c4a05c158",
+    "snapshotId": "66bce3eb67fbdafe85006e96",
+    "questions": {
+      "section66a0a80c8d75c": [
+        "mc1721825321771_273",
+        "mc1721825693962_286",
+        "mc1721826062443_308",
+        "mc1721826290250_317",
+        "mc1721826483914_337",
+        "mc1721826673601_348",
+        "mc1721829714923_271",
+        "mc1721830102623_294",
+        "mc1721830334074_301",
+        "mc1721830511378_314"
+      ]
+    },
+    "certificateAnswers": [],
+    "certificateId": null,
+    "questionData": {
+      "mc1721825321771_273": {
+        "deliveredOnTimestamp": 1786440396.311662,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721825693962_286": {
+        "deliveredOnTimestamp": 1786440396.311682,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721826062443_308": {
+        "deliveredOnTimestamp": 1786440396.311694,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721826290250_317": {
+        "deliveredOnTimestamp": 1786440396.311705,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721826483914_337": {
+        "deliveredOnTimestamp": 1786440396.311714,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721826673601_348": {
+        "deliveredOnTimestamp": 1786440396.311724,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721829714923_271": {
+        "deliveredOnTimestamp": 1786440396.311734,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721830102623_294": {
+        "deliveredOnTimestamp": 1786440396.311743,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721830334074_301": {
+        "deliveredOnTimestamp": 1786440396.311752,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721830511378_314": {
+        "deliveredOnTimestamp": 1786440396.311762,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      }
+    },
+    "answers": [
+      {
+        "blockId": "mc1721825321771_273",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721825693962_286",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721826062443_308",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721826290250_317",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721826483914_337",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721826673601_348",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721829714923_271",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721830102623_294",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721830334074_301",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721830511378_314",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      }
+    ],
+    "submittedTimestamp": 1786440396.604037,
+    "status": "submitted",
+    "grading_status": "grading_status_no_grade",
+    "access": "public",
+    "actual_score": null,
+    "score": [],
+    "source": {
+      "type": "unit"
+    },
+    "isDefining": true,
+    "isAdminAutoGradedSubmission": null,
+    "listOfNonConsentedBlocks": [],
+    "created": 1786440396.316336,
+    "modified": 1786440396.698952,
+    "id": "6a7aeacc30f9c93dcb067fed",
+    "passed": null
+  },
+  "assessment": {
+    "title": "Practice Test Paper (Easy)",
+    "access": "public",
+    "type": "assessment",
+    "model": "assessmentSnapshot",
+    "description": "Foundational practice test paper containing 10 assessment questions covering Percentages, Profit, Loss & Discounts, Ratios & Proportions.",
+    "isTimed": false,
+    "timerFor": "assessmentTimed",
+    "onTimerExpiration": "autoSubmit",
+    "assessmentTimeLimitInSeconds": 600,
+    "questionTimeLimitInSeconds": 60,
+    "standaloneShareEnabled": null,
+    "customUrl": null,
+    "usesCustomUrl": null,
+    "allowAnonymous": true,
+    "randomizeQuestionOptions": false,
+    "disallowPartialSubmissions": false,
+    "submissionDueDateEnabled": false,
+    "submissionDueDate": 1626257823,
+    "makeFeedbackAvailableAfterDateEnabled": false,
+    "makeFeedbackAvailableAfterDate": 0,
+    "customStylesEnabled": true,
+    "customStyles": {
+      "assessmentPage": {
+        "background": {
+          "type": "color",
+          "colorData": {
+            "code": "",
+            "class": "lw-body-bg"
+          }
+        },
+        "dividers": {
+          "top": {
+            "orientation": "top",
+            "divider": "none"
+          },
+          "bottom": {
+            "orientation": "bottom",
+            "divider": "none"
+          }
+        }
+      },
+      "option": {
+        "radioEffect": "scribble",
+        "checkboxEffect": "scribble",
+        "size": "small"
+      },
+      "assessment": {
+        "transition": "none",
+        "background": {
+          "type": "color",
+          "colorData": {
+            "code": "",
+            "class": ""
+          }
+        },
+        "width": "normal",
+        "timerTemplate": "rectangle"
+      },
+      "linearRating": {
+        "labels": {
+          "size": "small"
+        }
+      },
+      "question": {
+        "description": {
+          "background": {
+            "type": "color",
+            "colorData": {
+              "code": "",
+              "class": ""
+            }
+          },
+          "type": "p",
+          "size": "small"
+        },
+        "answers": {
+          "background": {
+            "type": "color",
+            "colorData": {
+              "code": "",
+              "class": ""
+            }
+          }
+        },
+        "requiredAsterisk": {
+          "colorData": {
+            "code": "#ff0000",
+            "class": ""
+          }
+        },
+        "errorMessages": {
+          "size": "verySmall",
+          "colorData": {
+            "code": "#ff0000",
+            "class": ""
+          }
+        }
+      },
+      "input": {
+        "size": "small",
+        "type": "solidDark"
+      },
+      "textarea": {
+        "size": "small",
+        "type": "solidDark"
+      },
+      "dropdown": {
+        "size": "small",
+        "type": "solidDark"
+      }
+    },
+    "submissionMode": "all",
+    "startingDate": 1626765704,
+    "startingDateEnabled": false,
+    "showOnlyFailedQuestionsOnRetry": false,
+    "retryEnabled": true,
+    "retryOnFailOnly": false,
+    "gradingMethod": null,
+    "maxTries": null,
+    "onlyWrongOnRetake": null,
+    "isAmendable": false,
+    "feedbackShowOnScreen": false,
+    "feedbackDownloadPDF": false,
+    "feedbackShowInline": true,
+    "feedbackQuestionList": "all-questions",
+    "feedbackShowQuestionScore": false,
+    "feedbackShowFeedback": true,
+    "feedbackShowNumbering": false,
+    "feedbackShowSectionTitles": false,
+    "feedbackShowUserAnswers": true,
+    "feedbackShowCorrectAnswers": true,
+    "feedbackShowAnswerCorrectness": true,
+    "displayInlineFeedbackEnabled": true,
+    "displayBackButtonWhenSubmissionPerBlock": true,
+    "feedbackShowSectionResultSummary": false,
+    "askConfirmationBeforeSubmit": false,
+    "hasCustomConfirmationBeforeSubmitText": false,
+    "customConfirmationBeforeSubmitText": "Are you sure you want to submit the questionnaire?",
+    "customConfirmationBeforeSubmitTexts": {
+      "title": "Submit Assessment?",
+      "baseConfirmationMessage": "Are you sure you want to submit the questionnaire?",
+      "unansweredNotice": "You have not answered {X} questions."
+    },
+    "amendResubmissionMinutes": 30,
+    "passingGrade": null,
+    "navigationMode": "per-block",
+    "conditionalBlocks": {
+      "introContent": {
+        "id": "content66a0a80c8d613",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66a0a80c8d624",
+              "type": "text",
+              "insertedAsWidget": true,
+              "properties": {
+                "html": "Bar Charts PAPER LEVEL-1",
+                "alignment": "center",
+                "customStyle": true,
+                "type": "h2",
+                "size": "normal"
+              }
+            },
+            {
+              "id": "text66a0a80c8d641",
+              "type": "text",
+              "properties": {
+                "html": "<div><span style=\"font-size: 1.7rem; letter-spacing: 0rem;\">Self-assess your knowledge. Express yourself and get feedback from our instructors.</span><br></div>",
+                "customStyle": true,
+                "alignment": "center"
+              }
+            },
+            {
+              "id": "spacer66a0a80c8d652",
+              "type": "spacer",
+              "properties": {
+                "height": 25,
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            },
+            {
+              "id": "button66a0a80c8d668",
+              "type": "button",
+              "properties": {
+                "buttonLabel": "<span>Ready to start</span>",
+                "buttonSize": "normal",
+                "buttonType": "solidBrand",
+                "alignment": "center",
+                "linkData": {
+                  "linkType": "goToFirst"
+                },
+                "iconColorData": {
+                  "code": "",
+                  "class": ""
+                },
+                "iconDisplay": false,
+                "iconSize": 26,
+                "iconClassName": " fas fa-angle-right",
+                "iconPosition": "right"
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "variables": {
+            "conditionalBlocks_introContent_blockData_widgets_0": []
+          }
+        }
+      },
+      "submissionStartingDate": {
+        "id": "content66a0a80c8d6c7",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66a0a80c8d6d0",
+              "type": "text",
+              "properties": {
+                "html": "Sorry but this assessment hasn't started yet."
+              }
+            },
+            {
+              "id": "date66a0a80c8d6db",
+              "type": "date",
+              "properties": {
+                "value": ""
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "displayConditions": ["startingDate"]
+        }
+      },
+      "submissionDueDate": {
+        "id": "content66a0a80c8d6ef",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66a0a80c8d6f7",
+              "type": "text",
+              "properties": {
+                "html": "Sorry but this assessment date is due."
+              }
+            },
+            {
+              "id": "date66a0a80c8d702",
+              "type": "date",
+              "properties": {
+                "value": ""
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "displayConditions": ["dateIsDue"]
+        }
+      },
+      "outroContent": {
+        "id": "content66a0a80c8d717",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "userResults66a0a80c8d71e",
+              "type": "userResults",
+              "properties": {
+                "layout": "template2",
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            },
+            {
+              "id": "feedback66a0a80c8d733",
+              "type": "feedback",
+              "properties": []
+            },
+            {
+              "id": "outroActions66a0a80c8d73e",
+              "type": "outroActions",
+              "properties": {
+                "layout": "",
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true
+        }
+      }
+    },
+    "systemSections": null,
+    "sections": [
+      {
+        "id": "section66a0a80c8d75c",
+        "title": "",
+        "type": "section",
+        "navigationMode": "per-block",
+        "blocks": [
+          {
+            "id": "mc1721825321771_273",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721825321771_271",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">The bar graph shows the average number of doctors per hospital and the number of hospital in 5 different cities.</p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/ef58d0a869299e5137921c72024719d0.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 350px;\"></p><p style=\"text-align: justify;\">On a particular day 1000 patients from Noida were referred for Delhi due to which no hospital left with any bed in Delhi and each doctor was earlier treating 10 patients in Delhi then what is the average number of beds in each hospital of Delhi?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721825321771_275",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721825321771_280",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721825321771_277",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721825321771_270",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721825321771_279",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>283.33</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721825321771_281",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721825321771_274",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>200</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721825321771_272",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721825321771_282",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>116.67</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721825321771_278",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721825321771_276",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>253.55</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_0": []
+              }
+            }
+          },
+          {
+            "id": "mc1721825693962_286",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721825693962_284",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">The bar graph gives the details about the sales and net profit (in Cr. Rupees) of a company across five years.</p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/d692e8cc096f15a538e8ba281ad3adef.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 380px;\"></p><div style=\"text-align: justify;\">Net profit = Gross profit – Taxes\n</div><div style=\"text-align: justify;\">Gross profit = Sales – Expenses\n</div><div style=\"text-align: justify;\">Net profit % =(Net profit)/(Sales )×100\n</div><div style=\"text-align: justify;\">If the expenses of the company in the year 2011 were 600cr and it increased at the rate of 5% per year till the year 2014, then in which year the tax paid was the least?</div>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721825693962_293",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721825693962_294",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721825693962_296",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721825693962_289",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721825693962_295",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>2011</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721825693962_287",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721825693962_285",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>2012</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721825693962_288",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721825693962_290",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>2013</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721825693962_291",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721825693962_292",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>2014</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_1_blockData_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_1": []
+              }
+            }
+          },
+          {
+            "id": "mc1721826062443_308",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721826062443_306",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">The bar graph gives the breakup of the number of units of all the six products – A, B, C, D, E and F manufactured and sold by a company during the year 2018.</p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/0ac26e12d928edf8d6d9307304bf9831.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 380px;\"></p><div style=\"text-align: justify;\">At most what percentage of its production did the company Sell (overall)?</div>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721826062443_310",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721826062443_301",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721826062443_304",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721826062443_302",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721826062443_298",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>50%</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721826062443_309",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721826062443_299",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>95%</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721826062443_303",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721826062443_307",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>66.66%</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721826062443_305",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721826062443_300",
+                        "type": "text",
+                        "properties": {
+                          "html": "Cannot be determined"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_2_blockData_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_2": []
+              }
+            }
+          },
+          {
+            "id": "mc1721826290250_317",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721826290250_322",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">The bar graph shows the number of girls and boys drinking Coffee per day in the state of A.P.</p><div style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/c011d95f6edbcbaa83a48e22c65788b0.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 380px;\"></div><div style=\"text-align: justify;\">From the year 2000 to the year 2002, the average number of boys drinking Coffee per day is:</div>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721826290250_313",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721826290250_323",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721826290250_321",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721826290250_312",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721826290250_314",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>53.33</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721826290250_316",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721826290250_318",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>45</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721826290250_315",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721826290250_319",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>51</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721826290250_320",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721826290250_324",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>58</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_3_blockData_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3": []
+              }
+            }
+          },
+          {
+            "id": "mc1721826483914_337",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721826483914_329",
+                    "type": "text",
+                    "properties": {
+                      "html": "The bar graph provides the production of Mango in top 4 states: Maharashtra, Andhra Pradesh, Rajasthan and Haryana<div><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/be9b618ce88a412b97a090136da9794a.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 380px;\"></div><div>If ‘A’ is the average production of each state over the given period, then in how many instances, that particular state has produced more Mango than A?</div>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721826483914_333",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721826483914_326",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721826483914_338",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721826483914_327",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721826483914_330",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>8</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721826483914_335",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721826483914_328",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>10</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721826483914_334",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721826483914_332",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>9</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721826483914_336",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721826483914_331",
+                        "type": "text",
+                        "properties": {
+                          "html": "None of these"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_4_blockData_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4": []
+              }
+            }
+          },
+          {
+            "id": "mc1721826673601_348",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721826673601_342",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">David, who loves to eat biscuit, emptied some packets of each of the 5 biscuit brands Britannia, Mari, Gooday, Cadbury, Frontier in a large box. The brand of biscuit can’t be identified without the package. The following bar graphs provide information about the no. of packets of each brand David emptied in the box</p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/e13ebc5cb88f6913b1b7682abeb0ca56.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 380px;\"></p><p style=\"text-align: justify;\">Find the min possible no of biscuits that David must pick from the box in order to be sure of having picked at least one from each brand.&nbsp;</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721826673601_345",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721826673601_352",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721826673601_349",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721826673601_346",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721826673601_347",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>101</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721826673601_343",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721826673601_344",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>102</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721826673601_341",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721826673601_340",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>103</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721826673601_350",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721826673601_351",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>104</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_5_blockData_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5": []
+              }
+            }
+          },
+          {
+            "id": "mc1721829714923_271",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721829714923_274",
+                    "type": "text",
+                    "properties": {
+                      "html": "The following line graph represents the profit percentage of company A and B during the period 2012 to 2016.<div><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/116fdf2e94bf6546d437ee62d29944d0.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 350px;\"></div><div>The ratio of expenditure of company A to company B was 2 : 1 in year 2015. What was the ratio of income of company A to company B in some year?</div>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721829714923_276",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721829714923_282",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721829714923_277",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721829714923_281",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721829714923_273",
+                        "type": "text",
+                        "properties": {
+                          "html": "28 : 15"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721829714923_270",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721829714923_272",
+                        "type": "text",
+                        "properties": {
+                          "html": "25 : 18"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721829714923_279",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721829714923_280",
+                        "type": "text",
+                        "properties": {
+                          "html": "56 : 29"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721829714923_275",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721829714923_278",
+                        "type": "text",
+                        "properties": {
+                          "html": "46 : 29"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_6_blockData_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_6": []
+              }
+            }
+          },
+          {
+            "id": "mc1721830102623_294",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721830102623_291",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">The annual percentage returns of the stock of 3 companies – Large, MID and SMALL are shown in the bar chart below. Based on the data given below answer the questions that follow.</p><div style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/20f79dd24b588df953e28ef82c1a74a4.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 390px;\"></div><div style=\"text-align: justify;\">For example: If the price of a Large stock in 2008 is Rs. 100 then its value in 2009 is 180.\n</div><div style=\"text-align: justify;\">If all the 3 companies started with the same price in 2008, which of the following company (companies) had the maximum increase in prices by the end of 2012?</div>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721830102623_288",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721830102623_295",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721830102623_289",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721830102623_296",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721830102623_284",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>LARGE</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721830102623_285",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721830102623_286",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>MID</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721830102623_290",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721830102623_293",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>SMALL</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721830102623_292",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721830102623_287",
+                        "type": "text",
+                        "properties": {
+                          "html": "Both LARGE and SMALL"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_7_blockData_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_7": []
+              }
+            }
+          },
+          {
+            "id": "mc1721830334074_301",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721830334074_306",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">Quantity of rice (in thousands tones exported by three state over the years)</p><div style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/f74ce388d9f232530b3ce5f0e6169a81.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 390px;\"></div><div style=\"text-align: justify;\">Total exports of state B for all the years are approximately what percent of the total export of state C for all the years?</div>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721830334074_307",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721830334074_302",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721830334074_304",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721830334074_305",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721830334074_300",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>65%</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721830334074_308",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721830334074_303",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>75%</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721830334074_310",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721830334074_299",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>80%</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721830334074_311",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721830334074_309",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>85.71%</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_8_blockData_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_8": []
+              }
+            }
+          },
+          {
+            "id": "mc1721830511378_314",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721830511378_313",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">Raj invited 8 of his friends - Ravi, Manoj, Priya, Pranesh, Prajesh, Ishaan, Ruth and Tej - for the celebration of his birthday party. His parents had planned for 3 kinds of snacks for the party, Pastries (P), Cookies (C) and Chocolate (T). Each friend of Raj get at least one snack of each type and not more than 7 snacks of any type. The following diagram represents the distribution of three types of snacks to his 8 friends.</p><div style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/7d3d277e4417471e56301cb5b283ec84.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 400px;\"></div><div style=\"text-align: justify;\">Moreover Ravi, Manoj, Priya and Prajesh all received equal number of snacks in total. Interestingly, Raj distributed the toffees in such a way that the number of Pastries, Cookies and Chocolate for each of these four friends are in the form of three distinct natural numbers and the combination of these three numbers were identical but in any order for all the four friends.\n</div><div style=\"text-align: justify;\">If Tej and Ruth received equal number of snacks, then what is the maximum number of snacks received by them?</div>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721830511378_324",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721830511378_322",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721830511378_319",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721830511378_320",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721830511378_316",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>19</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721830511378_317",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721830511378_321",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>17</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721830511378_325",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721830511378_315",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>15</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721830511378_318",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721830511378_323",
+                        "type": "text",
+                        "properties": {
+                          "html": "None of these"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_9_blockData_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_9": []
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "availabilityStatus": null,
+    "autoNavigationEnabled": false,
+    "displayBackButtonWhenNavigationPerBlock": true,
+    "saveAndResumeLaterEnabled": null,
+    "tagsAddedOnCompletion": [],
+    "tagsAddedOnPass": [],
+    "sendAnonymousSubmissionsToEmailLeads": false,
+    "afterSubmitActionEnabled": null,
+    "afterSubmitActionProperties": null,
+    "showWizardOnNextEdit": false,
+    "revisitAfterSubmissionAction": null,
+    "navigationTemplate": "HorizontalSpacedBetweenNavigationTemplate",
+    "learnerSearchBarEnabled": true,
+    "learnerUnansweredQuestionsEnabled": true,
+    "learnerFavouriteQuestionEnabled": true,
+    "learnerCompletionProgressEnabled": true,
+    "learnerShowIndexOfQuestionsEnabled": false,
+    "learnerTimeNotificationsEnabled": false,
+    "learnerAllowInterruptionsEnabled": true,
+    "learnerAllowInterruptionsTimeoutInMinutes": 30,
+    "learnerReclaimTryOnInterruptionTimeoutEnabled": false,
+    "learnerAskBeforeContinueToSaved": true,
+    "learnerAutoSaveEnabled": null,
+    "spellcheckDisabled": null,
+    "showPartialScoreOnSubmission": true,
+    "deliverableQuestionsSubsetType": "all",
+    "questionRandomizationType": "none",
+    "serveQuestionsBasedOnPreviousSubmission": null,
+    "scoringDisabled": true,
+    "isSelfAssessment": true,
+    "useDefaultCertificateTemplate": null,
+    "certificateTemplate": null,
+    "certificateSocialShare": null,
+    "migrationData": null,
+    "useAssessmentPassingGradeForOpenEndedCorrectness": true,
+    "openEndedCorrectnessPassingGrade": null,
+    "showScorePercentage": null,
+    "showScorePoints": null,
+    "showScoreCorrectAnswers": null,
+    "editorBehaviorSettings": null,
+    "manualReviewEnabled": false,
+    "resultsSummary": {
+      "enabled": true,
+      "showStatusIcon": true,
+      "showStatusText": true,
+      "showScorePercentage": true,
+      "showScorePoints": true,
+      "showScoreCorrectAnswers": true,
+      "showTimeTakenToComplete": true,
+      "showDateSubmitted": true,
+      "showAttemptCount": true
+    },
+    "meta": null,
+    "submissionsCount": 650,
+    "fromMarketplace": null,
+    "aiFeedbackEnabled": null,
+    "numberOfFeedbackQuestions": null,
+    "created": 1721804812.955651,
+    "modified": 1723655147.582369,
+    "contentHash": "ba1c3d1f755cc8b22f77d4a9b8eb39cf2295725bd15d5dda88ad6d3d29ccee95",
+    "id": "66a0a80c1b41b64c4a05c158",
+    "objectType": "assessment",
+    "isEditBlockedDueToSync": false,
+    "variables": {
+      "submission": {
+        "self": {
+          "score": null,
+          "points": null,
+          "total_points": null,
+          "correct_answers": null,
+          "total_questions": 10,
+          "time_spent": "00:00:00",
+          "date_submitted": "11/08/26",
+          "attempt_count": 3,
+          "max_tries": null,
+          "pass_grade": null,
+          "time_spent_seconds": 0,
+          "raw_start_date": 1786440396.316336
+        }
+      },
+      "school": {
+        "name": "Apna College",
+        "url": "www.apnacollege.in",
+        "description": "The most loved coding community of India ❤️"
+      },
+      "user": {
+        "username": "ram",
+        "email": "p4542639@gmail.com",
+        "cf_phonenumber": "7666690798"
+      }
+    }
+  },
+  "reclaimedTry": false,
+  "feedback": [
+    {
+      "title": "",
+      "id": "section66a0a80c8d75c",
+      "blocks": [
+        {
+          "id": "mc1721825321771_273",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "The bar graph shows the average number of doctors per hospital and the number of hospital in 5 different cities.On a particular day 1000 patients from Noida were referred for Delhi due to which no hospital left with any bed in Delhi and each doctor was earlier treating 10 patients in Delhi then what is the average number of beds in each hospital of Delhi?",
+            "widgets": [
+              {
+                "id": "mc1721825321771_271",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">The bar graph shows the average number of doctors per hospital and the number of hospital in 5 different cities.</p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/ef58d0a869299e5137921c72024719d0.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 350px;\"></p><p style=\"text-align: justify;\">On a particular day 1000 patients from Noida were referred for Delhi due to which no hospital left with any bed in Delhi and each doctor was earlier treating 10 patients in Delhi then what is the average number of beds in each hospital of Delhi?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721825321771_270",
+              "description": {
+                "text": "283.33",
+                "widgets": [
+                  {
+                    "id": "mc1721825321771_279",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>283.33</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721825321771_281",
+              "description": {
+                "text": "200",
+                "widgets": [
+                  {
+                    "id": "mc1721825321771_274",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>200</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721825321771_272",
+              "description": {
+                "text": "116.67",
+                "widgets": [
+                  {
+                    "id": "mc1721825321771_282",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>116.67</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721825321771_278",
+              "description": {
+                "text": "253.55",
+                "widgets": [
+                  {
+                    "id": "mc1721825321771_276",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>253.55</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721825321771_270",
+              "text": "283.33",
+              "widgets": [
+                {
+                  "id": "mc1721825321771_279",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>283.33</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/d6d5f5f46e737bfb81f8ad5688961574.jpg\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721825693962_286",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "The bar graph gives the details about the sales and net profit (in Cr. Rupees) of a company across five years.Net profit = Gross profit – Taxes Gross profit = Sales – Expenses Net profit % =(Net profit)/(Sales )×100 If the expenses of the company in the year 2011 were 600cr and it increased at the rate of 5% per year till the year 2014, then in which year the tax paid was the least?",
+            "widgets": [
+              {
+                "id": "mc1721825693962_284",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">The bar graph gives the details about the sales and net profit (in Cr. Rupees) of a company across five years.</p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/d692e8cc096f15a538e8ba281ad3adef.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 380px;\"></p><div style=\"text-align: justify;\">Net profit = Gross profit – Taxes\n</div><div style=\"text-align: justify;\">Gross profit = Sales – Expenses\n</div><div style=\"text-align: justify;\">Net profit % =(Net profit)/(Sales )×100\n</div><div style=\"text-align: justify;\">If the expenses of the company in the year 2011 were 600cr and it increased at the rate of 5% per year till the year 2014, then in which year the tax paid was the least?</div>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721825693962_289",
+              "description": {
+                "text": "2011",
+                "widgets": [
+                  {
+                    "id": "mc1721825693962_295",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>2011</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721825693962_287",
+              "description": {
+                "text": "2012",
+                "widgets": [
+                  {
+                    "id": "mc1721825693962_285",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>2012</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721825693962_288",
+              "description": {
+                "text": "2013",
+                "widgets": [
+                  {
+                    "id": "mc1721825693962_290",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>2013</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721825693962_291",
+              "description": {
+                "text": "2014",
+                "widgets": [
+                  {
+                    "id": "mc1721825693962_292",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>2014</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721825693962_287",
+              "text": "2012",
+              "widgets": [
+                {
+                  "id": "mc1721825693962_285",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>2012</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/56952761e698f805fe8ce765b98725d5.jpg\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721826062443_308",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "The bar graph gives the breakup of the number of units of all the six products – A, B, C, D, E and F manufactured and sold by a company during the year 2018.At most what percentage of its production did the company Sell (overall)?",
+            "widgets": [
+              {
+                "id": "mc1721826062443_306",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">The bar graph gives the breakup of the number of units of all the six products – A, B, C, D, E and F manufactured and sold by a company during the year 2018.</p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/0ac26e12d928edf8d6d9307304bf9831.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 380px;\"></p><div style=\"text-align: justify;\">At most what percentage of its production did the company Sell (overall)?</div>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721826062443_302",
+              "description": {
+                "text": "50%",
+                "widgets": [
+                  {
+                    "id": "mc1721826062443_298",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>50%</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721826062443_309",
+              "description": {
+                "text": "95%",
+                "widgets": [
+                  {
+                    "id": "mc1721826062443_299",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>95%</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721826062443_303",
+              "description": {
+                "text": "66.66%",
+                "widgets": [
+                  {
+                    "id": "mc1721826062443_307",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>66.66%</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721826062443_305",
+              "description": {
+                "text": "Cannot be determined",
+                "widgets": [
+                  {
+                    "id": "mc1721826062443_300",
+                    "type": "text",
+                    "properties": {
+                      "html": "Cannot be determined"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721826062443_303",
+              "text": "66.66%",
+              "widgets": [
+                {
+                  "id": "mc1721826062443_307",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>66.66%</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/7f91bf1aae196e1b208451efd844191d.jpg\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721826290250_317",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "The bar graph shows the number of girls and boys drinking Coffee per day in the state of A.P.From the year 2000 to the year 2002, the average number of boys drinking Coffee per day is:",
+            "widgets": [
+              {
+                "id": "mc1721826290250_322",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">The bar graph shows the number of girls and boys drinking Coffee per day in the state of A.P.</p><div style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/c011d95f6edbcbaa83a48e22c65788b0.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 380px;\"></div><div style=\"text-align: justify;\">From the year 2000 to the year 2002, the average number of boys drinking Coffee per day is:</div>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721826290250_312",
+              "description": {
+                "text": "53.33",
+                "widgets": [
+                  {
+                    "id": "mc1721826290250_314",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>53.33</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721826290250_316",
+              "description": {
+                "text": "45",
+                "widgets": [
+                  {
+                    "id": "mc1721826290250_318",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>45</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721826290250_315",
+              "description": {
+                "text": "51",
+                "widgets": [
+                  {
+                    "id": "mc1721826290250_319",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>51</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721826290250_320",
+              "description": {
+                "text": "58",
+                "widgets": [
+                  {
+                    "id": "mc1721826290250_324",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>58</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721826290250_312",
+              "text": "53.33",
+              "widgets": [
+                {
+                  "id": "mc1721826290250_314",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>53.33</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/b0c2d789d9944047b6c33adb73353f7d.jpg\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721826483914_337",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "The bar graph provides the production of Mango in top 4 states: Maharashtra, Andhra Pradesh, Rajasthan and HaryanaIf ‘A’ is the average production of each state over the given period, then in how many instances, that particular state has produced more Mango than A?",
+            "widgets": [
+              {
+                "id": "mc1721826483914_329",
+                "type": "text",
+                "properties": {
+                  "html": "The bar graph provides the production of Mango in top 4 states: Maharashtra, Andhra Pradesh, Rajasthan and Haryana<div><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/be9b618ce88a412b97a090136da9794a.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 380px;\"></div><div>If ‘A’ is the average production of each state over the given period, then in how many instances, that particular state has produced more Mango than A?</div>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721826483914_327",
+              "description": {
+                "text": "8",
+                "widgets": [
+                  {
+                    "id": "mc1721826483914_330",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>8</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721826483914_335",
+              "description": {
+                "text": "10",
+                "widgets": [
+                  {
+                    "id": "mc1721826483914_328",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>10</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721826483914_334",
+              "description": {
+                "text": "9",
+                "widgets": [
+                  {
+                    "id": "mc1721826483914_332",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>9</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721826483914_336",
+              "description": {
+                "text": "None of these",
+                "widgets": [
+                  {
+                    "id": "mc1721826483914_331",
+                    "type": "text",
+                    "properties": {
+                      "html": "None of these"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721826483914_335",
+              "text": "10",
+              "widgets": [
+                {
+                  "id": "mc1721826483914_328",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>10</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/d4850315795987dbd43008923e5a6eb6.jpg\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721826673601_348",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "David, who loves to eat biscuit, emptied some packets of each of the 5 biscuit brands Britannia, Mari, Gooday, Cadbury, Frontier in a large box. The brand of biscuit can’t be identified without the package. The following bar graphs provide information about the no. of packets of each brand David emptied in the boxFind the min possible no of biscuits that David must pick from the box in order to be sure of having picked at least one from each brand.",
+            "widgets": [
+              {
+                "id": "mc1721826673601_342",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">David, who loves to eat biscuit, emptied some packets of each of the 5 biscuit brands Britannia, Mari, Gooday, Cadbury, Frontier in a large box. The brand of biscuit can’t be identified without the package. The following bar graphs provide information about the no. of packets of each brand David emptied in the box</p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/e13ebc5cb88f6913b1b7682abeb0ca56.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 380px;\"></p><p style=\"text-align: justify;\">Find the min possible no of biscuits that David must pick from the box in order to be sure of having picked at least one from each brand.&nbsp;</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721826673601_346",
+              "description": {
+                "text": "101",
+                "widgets": [
+                  {
+                    "id": "mc1721826673601_347",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>101</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721826673601_343",
+              "description": {
+                "text": "102",
+                "widgets": [
+                  {
+                    "id": "mc1721826673601_344",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>102</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721826673601_341",
+              "description": {
+                "text": "103",
+                "widgets": [
+                  {
+                    "id": "mc1721826673601_340",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>103</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721826673601_350",
+              "description": {
+                "text": "104",
+                "widgets": [
+                  {
+                    "id": "mc1721826673601_351",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>104</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721826673601_341",
+              "text": "103",
+              "widgets": [
+                {
+                  "id": "mc1721826673601_340",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>103</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/75332cb81c5135b58d4e8207d4e32aef.jpg\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721829714923_271",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "The following line graph represents the profit percentage of company A and B during the period 2012 to 2016.The ratio of expenditure of company A to company B was 2 : 1 in year 2015. What was the ratio of income of company A to company B in some year?",
+            "widgets": [
+              {
+                "id": "mc1721829714923_274",
+                "type": "text",
+                "properties": {
+                  "html": "The following line graph represents the profit percentage of company A and B during the period 2012 to 2016.<div><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/116fdf2e94bf6546d437ee62d29944d0.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 350px;\"></div><div>The ratio of expenditure of company A to company B was 2 : 1 in year 2015. What was the ratio of income of company A to company B in some year?</div>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721829714923_281",
+              "description": {
+                "text": "28 : 15",
+                "widgets": [
+                  {
+                    "id": "mc1721829714923_273",
+                    "type": "text",
+                    "properties": {
+                      "html": "28 : 15"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721829714923_270",
+              "description": {
+                "text": "25 : 18",
+                "widgets": [
+                  {
+                    "id": "mc1721829714923_272",
+                    "type": "text",
+                    "properties": {
+                      "html": "25 : 18"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721829714923_279",
+              "description": {
+                "text": "56 : 29",
+                "widgets": [
+                  {
+                    "id": "mc1721829714923_280",
+                    "type": "text",
+                    "properties": {
+                      "html": "56 : 29"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721829714923_275",
+              "description": {
+                "text": "46 : 29",
+                "widgets": [
+                  {
+                    "id": "mc1721829714923_278",
+                    "type": "text",
+                    "properties": {
+                      "html": "46 : 29"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721829714923_279",
+              "text": "56 : 29",
+              "widgets": [
+                {
+                  "id": "mc1721829714923_280",
+                  "type": "text",
+                  "properties": {
+                    "html": "56 : 29"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/54ec75b8e526e715fa0f5e649f06d51b.jpg\"><br>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721830102623_294",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "The annual percentage returns of the stock of 3 companies – Large, MID and SMALL are shown in the bar chart below. Based on the data given below answer the questions that follow.For example: If the price of a Large stock in 2008 is Rs. 100 then its value in 2009 is 180. If all the 3 companies started with the same price in 2008, which of the following company (companies) had the maximum increase in prices by the end of 2012?",
+            "widgets": [
+              {
+                "id": "mc1721830102623_291",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">The annual percentage returns of the stock of 3 companies – Large, MID and SMALL are shown in the bar chart below. Based on the data given below answer the questions that follow.</p><div style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/20f79dd24b588df953e28ef82c1a74a4.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 390px;\"></div><div style=\"text-align: justify;\">For example: If the price of a Large stock in 2008 is Rs. 100 then its value in 2009 is 180.\n</div><div style=\"text-align: justify;\">If all the 3 companies started with the same price in 2008, which of the following company (companies) had the maximum increase in prices by the end of 2012?</div>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721830102623_296",
+              "description": {
+                "text": "LARGE",
+                "widgets": [
+                  {
+                    "id": "mc1721830102623_284",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>LARGE</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721830102623_285",
+              "description": {
+                "text": "MID",
+                "widgets": [
+                  {
+                    "id": "mc1721830102623_286",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>MID</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721830102623_290",
+              "description": {
+                "text": "SMALL",
+                "widgets": [
+                  {
+                    "id": "mc1721830102623_293",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>SMALL</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721830102623_292",
+              "description": {
+                "text": "Both LARGE and SMALL",
+                "widgets": [
+                  {
+                    "id": "mc1721830102623_287",
+                    "type": "text",
+                    "properties": {
+                      "html": "Both LARGE and SMALL"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721830102623_285",
+              "text": "MID",
+              "widgets": [
+                {
+                  "id": "mc1721830102623_286",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>MID</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/59ad2ffc6419d252f37c18a9b3d562e4.jpg\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721830334074_301",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Quantity of rice (in thousands tones exported by three state over the years)Total exports of state B for all the years are approximately what percent of the total export of state C for all the years?",
+            "widgets": [
+              {
+                "id": "mc1721830334074_306",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">Quantity of rice (in thousands tones exported by three state over the years)</p><div style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/f74ce388d9f232530b3ce5f0e6169a81.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 390px;\"></div><div style=\"text-align: justify;\">Total exports of state B for all the years are approximately what percent of the total export of state C for all the years?</div>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721830334074_305",
+              "description": {
+                "text": "65%",
+                "widgets": [
+                  {
+                    "id": "mc1721830334074_300",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>65%</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721830334074_308",
+              "description": {
+                "text": "75%",
+                "widgets": [
+                  {
+                    "id": "mc1721830334074_303",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>75%</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721830334074_310",
+              "description": {
+                "text": "80%",
+                "widgets": [
+                  {
+                    "id": "mc1721830334074_299",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>80%</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721830334074_311",
+              "description": {
+                "text": "85.71%",
+                "widgets": [
+                  {
+                    "id": "mc1721830334074_309",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>85.71%</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721830334074_311",
+              "text": "85.71%",
+              "widgets": [
+                {
+                  "id": "mc1721830334074_309",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>85.71%</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/486dbac8e4b4e0726c10137321ec5027.jpg\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721830511378_314",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Raj invited 8 of his friends - Ravi, Manoj, Priya, Pranesh, Prajesh, Ishaan, Ruth and Tej - for the celebration of his birthday party. His parents had planned for 3 kinds of snacks for the party, Pastries (P), Cookies (C) and Chocolate (T). Each friend of Raj get at least one snack of each type and not more than 7 snacks of any type. The following diagram represents the distribution of three types of snacks to his 8 friends.Moreover Ravi, Manoj, Priya and Prajesh all received equal number of snacks in total. Interestingly, Raj distributed the toffees in such a way that the number of Pastries, Cookies and Chocolate for each of these four friends are in the form of three distinct natural numbers and the combination of these three numbers were identical but in any order for all the four friends. If Tej and Ruth received equal number of snacks, then what is the maximum number of snacks received by them?",
+            "widgets": [
+              {
+                "id": "mc1721830511378_313",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">Raj invited 8 of his friends - Ravi, Manoj, Priya, Pranesh, Prajesh, Ishaan, Ruth and Tej - for the celebration of his birthday party. His parents had planned for 3 kinds of snacks for the party, Pastries (P), Cookies (C) and Chocolate (T). Each friend of Raj get at least one snack of each type and not more than 7 snacks of any type. The following diagram represents the distribution of three types of snacks to his 8 friends.</p><div style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/7d3d277e4417471e56301cb5b283ec84.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 400px;\"></div><div style=\"text-align: justify;\">Moreover Ravi, Manoj, Priya and Prajesh all received equal number of snacks in total. Interestingly, Raj distributed the toffees in such a way that the number of Pastries, Cookies and Chocolate for each of these four friends are in the form of three distinct natural numbers and the combination of these three numbers were identical but in any order for all the four friends.\n</div><div style=\"text-align: justify;\">If Tej and Ruth received equal number of snacks, then what is the maximum number of snacks received by them?</div>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721830511378_320",
+              "description": {
+                "text": "19",
+                "widgets": [
+                  {
+                    "id": "mc1721830511378_316",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>19</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721830511378_317",
+              "description": {
+                "text": "17",
+                "widgets": [
+                  {
+                    "id": "mc1721830511378_321",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>17</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721830511378_325",
+              "description": {
+                "text": "15",
+                "widgets": [
+                  {
+                    "id": "mc1721830511378_315",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>15</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721830511378_318",
+              "description": {
+                "text": "None of these",
+                "widgets": [
+                  {
+                    "id": "mc1721830511378_323",
+                    "type": "text",
+                    "properties": {
+                      "html": "None of these"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721830511378_317",
+              "text": "17",
+              "widgets": [
+                {
+                  "id": "mc1721830511378_321",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>17</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/d9f81bb3f21212de42a61109da746650.jpg\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        }
+      ]
+    }
+  ],
+  "submitted": true,
+  "updated": true,
+  "retryCount": 3,
+  "inlineFeedback": [],
+  "errors": [],
+  "success": true
+}

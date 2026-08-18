@@ -1,0 +1,3367 @@
+{
+  "submission": {
+    "anon_id": null,
+    "model": "assessment-submission",
+    "courseTitleId": "aptitude-qs-library",
+    "object_id": "66a0a8b407bfd5a6770e0f49",
+    "assessmentId": "66a0a8b407bfd5a6770e0f48",
+    "snapshotId": "66cdf6c5f10f4769360b0d93",
+    "questions": {
+      "section66a0a8b416bed": [
+        "mc1721837587039_276",
+        "mc1721838335045_294",
+        "mcImage1721838563092_335",
+        "mc1721838899309_348",
+        "mc1721839207995_354",
+        "mc1721839293514_372",
+        "mc1721839354411_397",
+        "mc1721839625171_417",
+        "mc1721839717661_424",
+        "mc1721839856139_439"
+      ]
+    },
+    "certificateAnswers": [],
+    "certificateId": null,
+    "questionData": {
+      "mc1721837587039_276": {
+        "deliveredOnTimestamp": 1786440399.22666,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721838335045_294": {
+        "deliveredOnTimestamp": 1786440399.226691,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mcImage1721838563092_335": {
+        "deliveredOnTimestamp": 1786440399.226709,
+        "blockType": "mcImage",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721838899309_348": {
+        "deliveredOnTimestamp": 1786440399.226724,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721839207995_354": {
+        "deliveredOnTimestamp": 1786440399.22674,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721839293514_372": {
+        "deliveredOnTimestamp": 1786440399.226754,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721839354411_397": {
+        "deliveredOnTimestamp": 1786440399.226769,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721839625171_417": {
+        "deliveredOnTimestamp": 1786440399.226783,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721839717661_424": {
+        "deliveredOnTimestamp": 1786440399.226798,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721839856139_439": {
+        "deliveredOnTimestamp": 1786440399.226813,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      }
+    },
+    "answers": [
+      {
+        "blockId": "mc1721837587039_276",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721838335045_294",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mcImage1721838563092_335",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721838899309_348",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721839207995_354",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721839293514_372",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721839354411_397",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721839625171_417",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721839717661_424",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721839856139_439",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      }
+    ],
+    "submittedTimestamp": 1786440399.461681,
+    "status": "submitted",
+    "grading_status": "grading_status_no_grade",
+    "access": "public",
+    "actual_score": null,
+    "score": [],
+    "source": {
+      "type": "unit"
+    },
+    "isDefining": true,
+    "isAdminAutoGradedSubmission": null,
+    "listOfNonConsentedBlocks": [],
+    "created": 1786440399.233536,
+    "modified": 1786440399.557579,
+    "id": "6a7aeacf0a8bb17c4702d7ad",
+    "passed": null
+  },
+  "assessment": {
+    "title": "Practice Test Paper (Medium)",
+    "access": "public",
+    "type": "assessment",
+    "model": "assessmentSnapshot",
+    "description": "Intermediate practice test paper containing 10 assessment questions covering Percentages, Profit, Loss & Discounts, Mensuration & Geometry.",
+    "isTimed": false,
+    "timerFor": "assessmentTimed",
+    "onTimerExpiration": "autoSubmit",
+    "assessmentTimeLimitInSeconds": 600,
+    "questionTimeLimitInSeconds": 60,
+    "standaloneShareEnabled": null,
+    "customUrl": null,
+    "usesCustomUrl": null,
+    "allowAnonymous": true,
+    "randomizeQuestionOptions": false,
+    "disallowPartialSubmissions": false,
+    "submissionDueDateEnabled": false,
+    "submissionDueDate": 1626257823,
+    "makeFeedbackAvailableAfterDateEnabled": false,
+    "makeFeedbackAvailableAfterDate": 0,
+    "customStylesEnabled": true,
+    "customStyles": {
+      "assessmentPage": {
+        "background": {
+          "type": "color",
+          "colorData": {
+            "code": "",
+            "class": "lw-body-bg"
+          }
+        },
+        "dividers": {
+          "top": {
+            "orientation": "top",
+            "divider": "none"
+          },
+          "bottom": {
+            "orientation": "bottom",
+            "divider": "none"
+          }
+        }
+      },
+      "option": {
+        "radioEffect": "scribble",
+        "checkboxEffect": "scribble",
+        "size": "small"
+      },
+      "assessment": {
+        "transition": "none",
+        "background": {
+          "type": "color",
+          "colorData": {
+            "code": "",
+            "class": ""
+          }
+        },
+        "width": "normal",
+        "timerTemplate": "rectangle"
+      },
+      "linearRating": {
+        "labels": {
+          "size": "small"
+        }
+      },
+      "question": {
+        "description": {
+          "background": {
+            "type": "color",
+            "colorData": {
+              "code": "",
+              "class": ""
+            }
+          },
+          "type": "p",
+          "size": "small"
+        },
+        "answers": {
+          "background": {
+            "type": "color",
+            "colorData": {
+              "code": "",
+              "class": ""
+            }
+          }
+        },
+        "requiredAsterisk": {
+          "colorData": {
+            "code": "#ff0000",
+            "class": ""
+          }
+        },
+        "errorMessages": {
+          "size": "verySmall",
+          "colorData": {
+            "code": "#ff0000",
+            "class": ""
+          }
+        }
+      },
+      "input": {
+        "size": "small",
+        "type": "solidDark"
+      },
+      "textarea": {
+        "size": "small",
+        "type": "solidDark"
+      },
+      "dropdown": {
+        "size": "small",
+        "type": "solidDark"
+      }
+    },
+    "submissionMode": "all",
+    "startingDate": 1626765704,
+    "startingDateEnabled": false,
+    "showOnlyFailedQuestionsOnRetry": false,
+    "retryEnabled": true,
+    "retryOnFailOnly": false,
+    "gradingMethod": null,
+    "maxTries": null,
+    "onlyWrongOnRetake": null,
+    "isAmendable": false,
+    "feedbackShowOnScreen": false,
+    "feedbackDownloadPDF": false,
+    "feedbackShowInline": true,
+    "feedbackQuestionList": "all-questions",
+    "feedbackShowQuestionScore": false,
+    "feedbackShowFeedback": true,
+    "feedbackShowNumbering": false,
+    "feedbackShowSectionTitles": false,
+    "feedbackShowUserAnswers": true,
+    "feedbackShowCorrectAnswers": true,
+    "feedbackShowAnswerCorrectness": true,
+    "displayInlineFeedbackEnabled": true,
+    "displayBackButtonWhenSubmissionPerBlock": true,
+    "feedbackShowSectionResultSummary": false,
+    "askConfirmationBeforeSubmit": false,
+    "hasCustomConfirmationBeforeSubmitText": false,
+    "customConfirmationBeforeSubmitText": "Are you sure you want to submit the questionnaire?",
+    "customConfirmationBeforeSubmitTexts": {
+      "title": "Submit Assessment?",
+      "baseConfirmationMessage": "Are you sure you want to submit the questionnaire?",
+      "unansweredNotice": "You have not answered {X} questions."
+    },
+    "amendResubmissionMinutes": 30,
+    "passingGrade": null,
+    "navigationMode": "per-block",
+    "conditionalBlocks": {
+      "introContent": {
+        "id": "content66a0a8b416b04",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66a0a8b416b14",
+              "type": "text",
+              "insertedAsWidget": true,
+              "properties": {
+                "html": "Pie Charts PAPER LEVEL-2",
+                "alignment": "center",
+                "customStyle": true,
+                "type": "h2",
+                "size": "normal"
+              }
+            },
+            {
+              "id": "text66a0a8b416b2e",
+              "type": "text",
+              "properties": {
+                "html": "<div><span style=\"font-size: 1.7rem; letter-spacing: 0rem;\">Self-assess your knowledge. Express yourself and get feedback from our instructors.</span><br></div>",
+                "customStyle": true,
+                "alignment": "center"
+              }
+            },
+            {
+              "id": "spacer66a0a8b416b3f",
+              "type": "spacer",
+              "properties": {
+                "height": 25,
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            },
+            {
+              "id": "button66a0a8b416b52",
+              "type": "button",
+              "properties": {
+                "buttonLabel": "<span>Ready to start</span>",
+                "buttonSize": "normal",
+                "buttonType": "solidBrand",
+                "alignment": "center",
+                "linkData": {
+                  "linkType": "goToFirst"
+                },
+                "iconColorData": {
+                  "code": "",
+                  "class": ""
+                },
+                "iconDisplay": false,
+                "iconSize": 26,
+                "iconClassName": " fas fa-angle-right",
+                "iconPosition": "right"
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "variables": {
+            "conditionalBlocks_introContent_blockData_widgets_0": []
+          }
+        }
+      },
+      "submissionStartingDate": {
+        "id": "content66a0a8b416b8a",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66a0a8b416b93",
+              "type": "text",
+              "properties": {
+                "html": "Sorry but this assessment hasn't started yet."
+              }
+            },
+            {
+              "id": "date66a0a8b416b9e",
+              "type": "date",
+              "properties": {
+                "value": ""
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "displayConditions": ["startingDate"]
+        }
+      },
+      "submissionDueDate": {
+        "id": "content66a0a8b416bad",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66a0a8b416bb1",
+              "type": "text",
+              "properties": {
+                "html": "Sorry but this assessment date is due."
+              }
+            },
+            {
+              "id": "date66a0a8b416bb8",
+              "type": "date",
+              "properties": {
+                "value": ""
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "displayConditions": ["dateIsDue"]
+        }
+      },
+      "outroContent": {
+        "id": "content66a0a8b416bc4",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "userResults66a0a8b416bc8",
+              "type": "userResults",
+              "properties": {
+                "layout": "template2",
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            },
+            {
+              "id": "feedback66a0a8b416bd5",
+              "type": "feedback",
+              "properties": []
+            },
+            {
+              "id": "outroActions66a0a8b416bdb",
+              "type": "outroActions",
+              "properties": {
+                "layout": "",
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true
+        }
+      }
+    },
+    "systemSections": null,
+    "sections": [
+      {
+        "id": "section66a0a8b416bed",
+        "title": "",
+        "type": "section",
+        "navigationMode": "per-block",
+        "blocks": [
+          {
+            "id": "mc1721837587039_276",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721837587039_274",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Directions for questions:</strong>\n</p><div style=\"text-align: justify;\">Different varieties of product ‘P’ manufactured by company ‘XYZ’\n</div><div style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/daefa851217762c64b8abeeced569700.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 500px;\"></div><div style=\"text-align: justify;\">Assume that all the number of units which are produced are sold.</div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">When arranged in descending order of cost per unit, which of the following variety ranks second?</div>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721837587039_273",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721837587039_279",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721837587039_281",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721837587039_282",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721837587039_271",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>G</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721837587039_270",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721837587039_275",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>B</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721837587039_278",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721837587039_280",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>C</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721837587039_277",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721837587039_272",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>D</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_0": []
+              }
+            }
+          },
+          {
+            "id": "mc1721838335045_294",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721838335045_293",
+                    "type": "text",
+                    "properties": {
+                      "html": "<strong>Direction for questions:</strong>\n<div>Different varieties of product ‘P’ manufactured by company ‘XYZ’\n</div><div><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/daefa851217762c64b8abeeced569700.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 500px;\"></div><div>Assume that all the number of units which are produced are sold.</div><div><br></div><div>10% of the European tourists are less than 15 years of age. What percentage of tourists less than 15 years old are not Europeans?&nbsp;</div>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721838335045_286",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721838335045_288",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721838335045_284",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721838335045_292",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721838335045_289",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>20%</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721838335045_296",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721838335045_285",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>40%</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721838335045_290",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721838335045_295",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>60%</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721838335045_287",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721838335045_291",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>80%</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_1": []
+              }
+            }
+          },
+          {
+            "id": "mcImage1721838563092_335",
+            "type": "mcImage",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mcImage1721838563092_331",
+                    "type": "text",
+                    "properties": {
+                      "html": "<div style=\"text-align: justify;\"><strong>Direction for questions:</strong></div><div style=\"text-align: justify;\">Different varieties of product ‘P’ manufactured by company ‘XYZ’\n</div><div style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/daefa851217762c64b8abeeced569700.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 500px;\"></div><div style=\"text-align: justify;\">Assume that all the number of units which are produced are sold.</div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">If all the Chinese tourists are less than 25 years of age, then the Chinese tourists are what percentage of the total number of tourists less than 25 years of age?</div>"
+                    }
+                  }
+                ]
+              },
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-image-option1721838563092_332",
+                  "type": "mc-image-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mcImage1721838563092_334",
+                        "type": "image",
+                        "properties": {
+                          "hasLightbox": false,
+                          "imageData": {
+                            "title": "1",
+                            "tags": [],
+                            "width": 71,
+                            "height": 76,
+                            "size": 1,
+                            "name": "/fea10f771d060009203dd01e16a34576.png",
+                            "access": "public",
+                            "created": 1721818842.489246,
+                            "modified": 1721818842.489246,
+                            "user": {
+                              "username": "Sachin AK Team"
+                            },
+                            "id": "66a0deda1c8118c78c05f237",
+                            "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/fea10f771d060009203dd01e16a34576.png",
+                            "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/fea10f771d060009203dd01e16a34576.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                            "modifiedF": "2024-07-24 14:00:42"
+                          },
+                          "height": 64,
+                          "width": 60
+                        }
+                      },
+                      {
+                        "id": "mcImage1721838563092_333",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Option</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-image-option1721838563092_337",
+                  "type": "mc-image-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mcImage1721838563092_338",
+                        "type": "image",
+                        "properties": {
+                          "hasLightbox": false,
+                          "imageData": {
+                            "title": "3",
+                            "tags": [],
+                            "width": 59,
+                            "height": 35,
+                            "size": 1,
+                            "name": "/93a152534ee5885fc8ebbc2400267971.png",
+                            "access": "public",
+                            "created": 1721819030.065449,
+                            "modified": 1721819030.065449,
+                            "user": {
+                              "username": "Sachin AK Team"
+                            },
+                            "id": "66a0df96a1dcc94a5a053b86",
+                            "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/93a152534ee5885fc8ebbc2400267971.png",
+                            "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/93a152534ee5885fc8ebbc2400267971.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                            "modifiedF": "2024-07-24 14:03:50"
+                          },
+                          "height": 29,
+                          "width": 50
+                        }
+                      },
+                      {
+                        "id": "mcImage1721838563092_330",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Option</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-image-option1721838563092_336",
+                  "type": "mc-image-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mcImage1721838563092_327",
+                        "type": "image",
+                        "properties": {
+                          "hasLightbox": false,
+                          "imageData": {
+                            "title": "2",
+                            "tags": [],
+                            "width": 72,
+                            "height": 65,
+                            "size": 1,
+                            "name": "/6c2c41da358d79a79611fbd527df0e02.png",
+                            "access": "public",
+                            "created": 1721818901.4567,
+                            "modified": 1721818901.4567,
+                            "user": {
+                              "username": "Sachin AK Team"
+                            },
+                            "id": "66a0df15d8f97f7ac008cd88",
+                            "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/6c2c41da358d79a79611fbd527df0e02.png",
+                            "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/6c2c41da358d79a79611fbd527df0e02.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                            "modifiedF": "2024-07-24 14:01:41"
+                          },
+                          "height": 54,
+                          "width": 60
+                        }
+                      },
+                      {
+                        "id": "mcImage1721838563092_329",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Option</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-image-option1721838563092_328",
+                  "type": "mc-image-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mcImage1721838563092_326",
+                        "type": "image",
+                        "properties": {
+                          "hasLightbox": false,
+                          "imageData": {
+                            "title": "4",
+                            "tags": [],
+                            "width": 57,
+                            "height": 41,
+                            "size": 0,
+                            "name": "/1037015599ee8b82c028e7f6a7a1570e.png",
+                            "access": "public",
+                            "created": 1721819052.128403,
+                            "modified": 1721819052.128403,
+                            "user": {
+                              "username": "Sachin AK Team"
+                            },
+                            "id": "66a0dfac568b7cda0b062835",
+                            "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/1037015599ee8b82c028e7f6a7a1570e.png",
+                            "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/1037015599ee8b82c028e7f6a7a1570e.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                            "modifiedF": "2024-07-24 14:04:12"
+                          },
+                          "height": 35,
+                          "width": 50
+                        }
+                      },
+                      {
+                        "id": "mcImage1721838563092_325",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Option</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "optionNumbering": "none",
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_3_blockData_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_description_widgets_0": [],
+                "sections_0_blocks_2": []
+              }
+            }
+          },
+          {
+            "id": "mc1721838899309_348",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721838899309_349",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions:</strong>\n</p><div style=\"text-align: justify;\">The pie charts give the distribution of monthly expenditure of Mr. Shyamlal in two years.\n</div><div style=\"text-align: justify;\">A - Food\t\t\n</div><div style=\"text-align: justify;\">B – Rent\t\n</div><div style=\"text-align: justify;\">C – Provisions\t\n</div><div style=\"text-align: justify;\">D – Entertainment\t\n</div><div style=\"text-align: justify;\">E – Medical Expenses\n</div><div style=\"text-align: justify;\">F – Travelling \t\t\n</div><div style=\"text-align: justify;\">G – Clothes</div><div style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/b66f2f089f3a8be0c5403c8ec72a1dd4.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 500px;\"></div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">What is the percentage increase in Mr. Shyamlal’s expenditure on provisions from 2014 to 2015?</div>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721838899309_346",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721838899309_345",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721838899309_347",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721838899309_344",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721838899309_339",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>20%</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721838899309_341",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721838899309_340",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>68%</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721838899309_343",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721838899309_350",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>16.66%</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721838899309_342",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721838899309_351",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>40%</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_3_blockData_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3": []
+              }
+            }
+          },
+          {
+            "id": "mc1721839207995_354",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721839207995_365",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions:</strong>\n</p><div style=\"text-align: justify;\">The pie charts give the distribution of monthly expenditure of Mr. Shyamlal in two years.\n</div><div style=\"text-align: justify;\">A - Food\t\t\n</div><div style=\"text-align: justify;\">B – Rent\t\n</div><div style=\"text-align: justify;\">C – Provisions\t\n</div><div style=\"text-align: justify;\">D – Entertainment\t\n</div><div style=\"text-align: justify;\">E – Medical Expenses\n</div><div style=\"text-align: justify;\">F – Travelling \t\t\n</div><div style=\"text-align: justify;\">G – Clothes</div><div style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/b66f2f089f3a8be0c5403c8ec72a1dd4.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 500px;\"></div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">The expenditure under which of the following heads has shown the highest percentage change (increase/decrease) from 2014 to 2015?</div>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721839207995_353",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721839207995_363",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721839207995_359",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721839207995_361",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721839207995_360",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Entertainment</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721839207995_358",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721839207995_355",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Rent</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721839207995_364",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721839207995_362",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Clothes</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721839207995_357",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721839207995_356",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Travelling</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_3_blockData_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4": []
+              }
+            }
+          },
+          {
+            "id": "mc1721839293514_372",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721839293514_377",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions:</strong>\n</p><div style=\"text-align: justify;\">The pie charts give the distribution of monthly expenditure of Mr. Shyamlal in two years.\n</div><div style=\"text-align: justify;\">A - Food\t\t\n</div><div style=\"text-align: justify;\">B – Rent\t\n</div><div style=\"text-align: justify;\">C – Provisions\t\n</div><div style=\"text-align: justify;\">D – Entertainment\t\n</div><div style=\"text-align: justify;\">E – Medical Expenses\n</div><div style=\"text-align: justify;\">F – Travelling \t\t\n</div><div style=\"text-align: justify;\">G – Clothes</div><div style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/b66f2f089f3a8be0c5403c8ec72a1dd4.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 500px;\"><br></div><div style=\"text-align: justify;\">In 2016, the combined expenditure on food, rent, provisions and entertainment decreased by 20%, while the combined expenditure on travelling, medical expenses and clothes increase by 10%. Find the combined share of the expenditure on food and clothes.</div>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721839293514_371",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721839293514_366",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721839293514_370",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721839293514_376",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721839293514_378",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>12.25%</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721839293514_368",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721839293514_367",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>31.8%</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721839293514_369",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721839293514_374",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>16.5%</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721839293514_373",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721839293514_375",
+                        "type": "text",
+                        "properties": {
+                          "html": "Cannot be determined"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_3_blockData_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5": []
+              }
+            }
+          },
+          {
+            "id": "mc1721839354411_397",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721839354411_396",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions:</strong>\n</p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/a02b8ac19df172299b1e0f9e684aedab.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 340px;\"></p><div style=\"text-align: justify;\">A – Switches\t\t\n</div><div style=\"text-align: justify;\">B – Power Regulators\t\n</div><div style=\"text-align: justify;\">C – Fans\t\t\n</div><div style=\"text-align: justify;\">D – Pumps\t\n</div><div style=\"text-align: justify;\">E – Lightning\t\t\n</div><div style=\"text-align: justify;\">F – Industrial Lightning</div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">In 2016-17, the profit from industrial lighting increased by 16.66% over that of the previous year. What is the approximate profit from industrial lighting in 2016-17?</div>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721839354411_403",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721839354411_393",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721839354411_394",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721839354411_398",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721839354411_395",
+                        "type": "text",
+                        "properties": {
+                          "html": "₹24.5 lakh"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721839354411_400",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721839354411_392",
+                        "type": "text",
+                        "properties": {
+                          "html": "₹2.45 crore"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721839354411_399",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721839354411_404",
+                        "type": "text",
+                        "properties": {
+                          "html": "₹2.45 lakh<strong></strong>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721839354411_401",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721839354411_402",
+                        "type": "text",
+                        "properties": {
+                          "html": "₹21.00 lakh"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_3_blockData_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_6": []
+              }
+            }
+          },
+          {
+            "id": "mc1721839625171_417",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721839625171_415",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions:</strong>\n</p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/a02b8ac19df172299b1e0f9e684aedab.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 340px;\"></p><div style=\"text-align: justify;\">A – Switches\t\t\n</div><div style=\"text-align: justify;\">B – Power Regulators\t\n</div><div style=\"text-align: justify;\">C – Fans\t\t\n</div><div style=\"text-align: justify;\">D – Pumps\t\n</div><div style=\"text-align: justify;\">E – Lightning\t\t\n</div><div style=\"text-align: justify;\">F – Industrial Lightning</div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">From 2015-16 to 2016-17, the profit from switches increased by 25%, that from fans increased by 20%, that from pumps by 10%, while the profit from the remaining divisions remained the same. If a new pie chart is drawn for the profits for 2016-17, what would be the approximate angle of the fans division?&nbsp;</div>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721839625171_411",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721839625171_410",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721839625171_406",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721839625171_412",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721839625171_407",
+                        "type": "text",
+                        "properties": {
+                          "html": "75°"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721839625171_416",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721839625171_413",
+                        "type": "text",
+                        "properties": {
+                          "html": "92°"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721839625171_408",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721839625171_418",
+                        "type": "text",
+                        "properties": {
+                          "html": "82°<strong></strong>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721839625171_414",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721839625171_409",
+                        "type": "text",
+                        "properties": {
+                          "html": "cannot be determined"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_3_blockData_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_7": []
+              }
+            }
+          },
+          {
+            "id": "mc1721839717661_424",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721839717661_428",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions:</strong></p><p style=\"text-align: justify;\">Below given pie charts show the&nbsp;<span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">percentage population of wild animals and&nbsp;</span><span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">the percentage of land use under forest&nbsp;</span><span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">cover in different regions of the world in&nbsp;</span><span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">the year 2007.</span></p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/0e7b7870ea236bd3fea4503009932fa3.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 500px;\"></p><p style=\"text-align: justify;\">Following are the geographical regions:\n</p><p style=\"text-align: justify;\">Al – Asia, China, India\n</p><p style=\"text-align: justify;\">A2 – Australia \n</p><p style=\"text-align: justify;\">A3 – Africa\n</p><p style=\"text-align: justify;\">A4 – Europe\n</p><p style=\"text-align: justify;\">A5 – Russia \n</p><p style=\"text-align: justify;\">A6 – North &amp; South America \n</p><p style=\"text-align: justify;\">A7 – Antarctica. \n</p><p style=\"text-align: justify;\">Population density is obtained by dividing population by land.\n</p><p style=\"text-align: justify;\">Population density  \n</p><p style=\"text-align: justify;\">= (Percentage Number of Animals)/(Percentage Land Area Under Forest Cover)\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">Which among the following has the fourth highest population density of wild animals?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721839717661_426",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721839717661_425",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721839717660_419",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721839717661_423",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721839717661_420",
+                        "type": "text",
+                        "properties": {
+                          "html": "A5"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721839717661_430",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721839717661_427",
+                        "type": "text",
+                        "properties": {
+                          "html": "A7"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721839717661_422",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721839717661_431",
+                        "type": "text",
+                        "properties": {
+                          "html": "A3<strong></strong>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721839717661_421",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721839717661_429",
+                        "type": "text",
+                        "properties": {
+                          "html": "A2"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_3_blockData_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_8": []
+              }
+            }
+          },
+          {
+            "id": "mc1721839856139_439",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721839856139_435",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions:</strong></p><p style=\"text-align: justify;\">Below given pie charts show the percentage population of wild animals and the percentage of land use under forest cover in different regions of the world in the year 2007.</p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/0e7b7870ea236bd3fea4503009932fa3.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 500px;\"></p><p style=\"text-align: justify;\">Following are the geographical regions:\n</p><p style=\"text-align: justify;\">Al – Asia, China, India\n</p><p style=\"text-align: justify;\">A2 – Australia \n</p><p style=\"text-align: justify;\">A3 – Africa\n</p><p style=\"text-align: justify;\">A4 – Europe\n</p><p style=\"text-align: justify;\">A5 – Russia \n</p><p style=\"text-align: justify;\">A6 – North &amp; South America \n</p><p style=\"text-align: justify;\">A7 – Antarctica. \n</p><p style=\"text-align: justify;\">Population density is obtained by dividing population by land.\n</p><p style=\"text-align: justify;\">Population density  \n</p><p style=\"text-align: justify;\">= (Percentage Number of Animals)/(Percentage Land Area Under Forest Cover)\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">If in the next 10 years, the population of wild animals in Antarctica will increase by 2.5% more than that in the rest of the world, what will be the percentage population of wild animals in Antarctica after 10 years?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721839856139_436",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721839856139_444",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721839856139_438",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721839856139_445",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721839856139_433",
+                        "type": "text",
+                        "properties": {
+                          "html": "9.5%"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721839856139_440",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721839856139_441",
+                        "type": "text",
+                        "properties": {
+                          "html": "11.6%"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721839856139_443",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721839856139_437",
+                        "type": "text",
+                        "properties": {
+                          "html": "15.7%<strong></strong>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721839856139_434",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721839856139_442",
+                        "type": "text",
+                        "properties": {
+                          "html": "Cannot be determined"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_3_blockData_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_9": []
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "availabilityStatus": null,
+    "autoNavigationEnabled": false,
+    "displayBackButtonWhenNavigationPerBlock": true,
+    "saveAndResumeLaterEnabled": null,
+    "tagsAddedOnCompletion": [],
+    "tagsAddedOnPass": [],
+    "sendAnonymousSubmissionsToEmailLeads": false,
+    "afterSubmitActionEnabled": null,
+    "afterSubmitActionProperties": null,
+    "showWizardOnNextEdit": false,
+    "revisitAfterSubmissionAction": null,
+    "navigationTemplate": "HorizontalSpacedBetweenNavigationTemplate",
+    "learnerSearchBarEnabled": true,
+    "learnerUnansweredQuestionsEnabled": true,
+    "learnerFavouriteQuestionEnabled": true,
+    "learnerCompletionProgressEnabled": true,
+    "learnerShowIndexOfQuestionsEnabled": false,
+    "learnerTimeNotificationsEnabled": false,
+    "learnerAllowInterruptionsEnabled": true,
+    "learnerAllowInterruptionsTimeoutInMinutes": 30,
+    "learnerReclaimTryOnInterruptionTimeoutEnabled": false,
+    "learnerAskBeforeContinueToSaved": true,
+    "learnerAutoSaveEnabled": null,
+    "spellcheckDisabled": null,
+    "showPartialScoreOnSubmission": true,
+    "deliverableQuestionsSubsetType": "all",
+    "questionRandomizationType": "none",
+    "serveQuestionsBasedOnPreviousSubmission": null,
+    "scoringDisabled": true,
+    "isSelfAssessment": true,
+    "useDefaultCertificateTemplate": null,
+    "certificateTemplate": null,
+    "certificateSocialShare": null,
+    "migrationData": null,
+    "useAssessmentPassingGradeForOpenEndedCorrectness": true,
+    "openEndedCorrectnessPassingGrade": null,
+    "showScorePercentage": null,
+    "showScorePoints": null,
+    "showScoreCorrectAnswers": null,
+    "editorBehaviorSettings": null,
+    "manualReviewEnabled": false,
+    "resultsSummary": {
+      "enabled": true,
+      "showStatusIcon": true,
+      "showStatusText": true,
+      "showScorePercentage": true,
+      "showScorePoints": true,
+      "showScoreCorrectAnswers": true,
+      "showTimeTakenToComplete": true,
+      "showDateSubmitted": true,
+      "showAttemptCount": true
+    },
+    "meta": null,
+    "submissionsCount": 96,
+    "fromMarketplace": null,
+    "aiFeedbackEnabled": null,
+    "numberOfFeedbackQuestions": null,
+    "created": 1721804980.506888,
+    "modified": 1724774085.272687,
+    "contentHash": "573cececa9df1da20450291220d597a48040457471434e553d7bfbc5e7944e2a",
+    "id": "66a0a8b407bfd5a6770e0f48",
+    "objectType": "assessment",
+    "isEditBlockedDueToSync": false,
+    "variables": {
+      "submission": {
+        "self": {
+          "score": null,
+          "points": null,
+          "total_points": null,
+          "correct_answers": null,
+          "total_questions": 10,
+          "time_spent": "00:00:00",
+          "date_submitted": "11/08/26",
+          "attempt_count": 3,
+          "max_tries": null,
+          "pass_grade": null,
+          "time_spent_seconds": 0,
+          "raw_start_date": 1786440399.233536
+        }
+      },
+      "school": {
+        "name": "Apna College",
+        "url": "www.apnacollege.in",
+        "description": "The most loved coding community of India ❤️"
+      },
+      "user": {
+        "username": "ram",
+        "email": "p4542639@gmail.com",
+        "cf_phonenumber": "7666690798"
+      }
+    }
+  },
+  "reclaimedTry": false,
+  "feedback": [
+    {
+      "title": "",
+      "id": "section66a0a8b416bed",
+      "blocks": [
+        {
+          "id": "mc1721837587039_276",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Directions for questions: Different varieties of product ‘P’ manufactured by company ‘XYZ’ Assume that all the number of units which are produced are sold.When arranged in descending order of cost per unit, which of the following variety ranks second?",
+            "widgets": [
+              {
+                "id": "mc1721837587039_274",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Directions for questions:</strong>\n</p><div style=\"text-align: justify;\">Different varieties of product ‘P’ manufactured by company ‘XYZ’\n</div><div style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/daefa851217762c64b8abeeced569700.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 500px;\"></div><div style=\"text-align: justify;\">Assume that all the number of units which are produced are sold.</div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">When arranged in descending order of cost per unit, which of the following variety ranks second?</div>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721837587039_282",
+              "description": {
+                "text": "G",
+                "widgets": [
+                  {
+                    "id": "mc1721837587039_271",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>G</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721837587039_270",
+              "description": {
+                "text": "B",
+                "widgets": [
+                  {
+                    "id": "mc1721837587039_275",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>B</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721837587039_278",
+              "description": {
+                "text": "C",
+                "widgets": [
+                  {
+                    "id": "mc1721837587039_280",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>C</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721837587039_277",
+              "description": {
+                "text": "D",
+                "widgets": [
+                  {
+                    "id": "mc1721837587039_272",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>D</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721837587039_282",
+              "text": "G",
+              "widgets": [
+                {
+                  "id": "mc1721837587039_271",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>G</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/c4975b67347fceb9f89362ae568a3489.jpg\"><br>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721838335045_294",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions: Different varieties of product ‘P’ manufactured by company ‘XYZ’ Assume that all the number of units which are produced are sold.10% of the European tourists are less than 15 years of age. What percentage of tourists less than 15 years old are not Europeans?",
+            "widgets": [
+              {
+                "id": "mc1721838335045_293",
+                "type": "text",
+                "properties": {
+                  "html": "<strong>Direction for questions:</strong>\n<div>Different varieties of product ‘P’ manufactured by company ‘XYZ’\n</div><div><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/daefa851217762c64b8abeeced569700.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 500px;\"></div><div>Assume that all the number of units which are produced are sold.</div><div><br></div><div>10% of the European tourists are less than 15 years of age. What percentage of tourists less than 15 years old are not Europeans?&nbsp;</div>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721838335045_292",
+              "description": {
+                "text": "20%",
+                "widgets": [
+                  {
+                    "id": "mc1721838335045_289",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>20%</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721838335045_296",
+              "description": {
+                "text": "40%",
+                "widgets": [
+                  {
+                    "id": "mc1721838335045_285",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>40%</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721838335045_290",
+              "description": {
+                "text": "60%",
+                "widgets": [
+                  {
+                    "id": "mc1721838335045_295",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>60%</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721838335045_287",
+              "description": {
+                "text": "80%",
+                "widgets": [
+                  {
+                    "id": "mc1721838335045_291",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>80%</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721838335045_292",
+              "text": "20%",
+              "widgets": [
+                {
+                  "id": "mc1721838335045_289",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>20%</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/119a68e6542eb28dcba9caec3a69647f.jpg\"><br>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mcImage1721838563092_335",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mcImage",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions:Different varieties of product ‘P’ manufactured by company ‘XYZ’ Assume that all the number of units which are produced are sold.If all the Chinese tourists are less than 25 years of age, then the Chinese tourists are what percentage of the total number of tourists less than 25 years of age?",
+            "widgets": [
+              {
+                "id": "mcImage1721838563092_331",
+                "type": "text",
+                "properties": {
+                  "html": "<div style=\"text-align: justify;\"><strong>Direction for questions:</strong></div><div style=\"text-align: justify;\">Different varieties of product ‘P’ manufactured by company ‘XYZ’\n</div><div style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/daefa851217762c64b8abeeced569700.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 500px;\"></div><div style=\"text-align: justify;\">Assume that all the number of units which are produced are sold.</div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">If all the Chinese tourists are less than 25 years of age, then the Chinese tourists are what percentage of the total number of tourists less than 25 years of age?</div>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-image-option1721838563092_332",
+              "description": {
+                "text": "(Image) Option",
+                "widgets": [
+                  {
+                    "id": "mcImage1721838563092_334",
+                    "type": "image",
+                    "properties": {
+                      "hasLightbox": false,
+                      "imageData": {
+                        "title": "1",
+                        "tags": [],
+                        "width": 71,
+                        "height": 76,
+                        "size": 1,
+                        "name": "/fea10f771d060009203dd01e16a34576.png",
+                        "access": "public",
+                        "created": 1721818842.489246,
+                        "modified": 1721818842.489246,
+                        "user": {
+                          "username": "Sachin AK Team"
+                        },
+                        "id": "66a0deda1c8118c78c05f237",
+                        "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/fea10f771d060009203dd01e16a34576.png",
+                        "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/fea10f771d060009203dd01e16a34576.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                        "modifiedF": "2024-07-24 14:00:42"
+                      },
+                      "height": 64,
+                      "width": 60
+                    }
+                  },
+                  {
+                    "id": "mcImage1721838563092_333",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Option</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-image-option1721838563092_337",
+              "description": {
+                "text": "(Image) Option",
+                "widgets": [
+                  {
+                    "id": "mcImage1721838563092_338",
+                    "type": "image",
+                    "properties": {
+                      "hasLightbox": false,
+                      "imageData": {
+                        "title": "3",
+                        "tags": [],
+                        "width": 59,
+                        "height": 35,
+                        "size": 1,
+                        "name": "/93a152534ee5885fc8ebbc2400267971.png",
+                        "access": "public",
+                        "created": 1721819030.065449,
+                        "modified": 1721819030.065449,
+                        "user": {
+                          "username": "Sachin AK Team"
+                        },
+                        "id": "66a0df96a1dcc94a5a053b86",
+                        "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/93a152534ee5885fc8ebbc2400267971.png",
+                        "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/93a152534ee5885fc8ebbc2400267971.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                        "modifiedF": "2024-07-24 14:03:50"
+                      },
+                      "height": 29,
+                      "width": 50
+                    }
+                  },
+                  {
+                    "id": "mcImage1721838563092_330",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Option</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-image-option1721838563092_336",
+              "description": {
+                "text": "(Image) Option",
+                "widgets": [
+                  {
+                    "id": "mcImage1721838563092_327",
+                    "type": "image",
+                    "properties": {
+                      "hasLightbox": false,
+                      "imageData": {
+                        "title": "2",
+                        "tags": [],
+                        "width": 72,
+                        "height": 65,
+                        "size": 1,
+                        "name": "/6c2c41da358d79a79611fbd527df0e02.png",
+                        "access": "public",
+                        "created": 1721818901.4567,
+                        "modified": 1721818901.4567,
+                        "user": {
+                          "username": "Sachin AK Team"
+                        },
+                        "id": "66a0df15d8f97f7ac008cd88",
+                        "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/6c2c41da358d79a79611fbd527df0e02.png",
+                        "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/6c2c41da358d79a79611fbd527df0e02.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                        "modifiedF": "2024-07-24 14:01:41"
+                      },
+                      "height": 54,
+                      "width": 60
+                    }
+                  },
+                  {
+                    "id": "mcImage1721838563092_329",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Option</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-image-option1721838563092_328",
+              "description": {
+                "text": "(Image) Option",
+                "widgets": [
+                  {
+                    "id": "mcImage1721838563092_326",
+                    "type": "image",
+                    "properties": {
+                      "hasLightbox": false,
+                      "imageData": {
+                        "title": "4",
+                        "tags": [],
+                        "width": 57,
+                        "height": 41,
+                        "size": 0,
+                        "name": "/1037015599ee8b82c028e7f6a7a1570e.png",
+                        "access": "public",
+                        "created": 1721819052.128403,
+                        "modified": 1721819052.128403,
+                        "user": {
+                          "username": "Sachin AK Team"
+                        },
+                        "id": "66a0dfac568b7cda0b062835",
+                        "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/1037015599ee8b82c028e7f6a7a1570e.png",
+                        "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/1037015599ee8b82c028e7f6a7a1570e.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                        "modifiedF": "2024-07-24 14:04:12"
+                      },
+                      "height": 35,
+                      "width": 50
+                    }
+                  },
+                  {
+                    "id": "mcImage1721838563092_325",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Option</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-image-option1721838563092_336",
+              "text": "(Image) Option",
+              "widgets": [
+                {
+                  "id": "mcImage1721838563092_327",
+                  "type": "image",
+                  "properties": {
+                    "hasLightbox": false,
+                    "imageData": {
+                      "title": "2",
+                      "tags": [],
+                      "width": 72,
+                      "height": 65,
+                      "size": 1,
+                      "name": "/6c2c41da358d79a79611fbd527df0e02.png",
+                      "access": "public",
+                      "created": 1721818901.4567,
+                      "modified": 1721818901.4567,
+                      "user": {
+                        "username": "Sachin AK Team"
+                      },
+                      "id": "66a0df15d8f97f7ac008cd88",
+                      "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/6c2c41da358d79a79611fbd527df0e02.png",
+                      "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/6c2c41da358d79a79611fbd527df0e02.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                      "modifiedF": "2024-07-24 14:01:41"
+                    },
+                    "height": 54,
+                    "width": 60
+                  }
+                },
+                {
+                  "id": "mcImage1721838563092_329",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>Option</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/d9adfc7c823e26dc21318f589d324db8.jpg\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721838899309_348",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions: The pie charts give the distribution of monthly expenditure of Mr. Shyamlal in two years. A - Food B – Rent C – Provisions D – Entertainment E – Medical Expenses F – Travelling G – ClothesWhat is the percentage increase in Mr. Shyamlal’s expenditure on provisions from 2014 to 2015?",
+            "widgets": [
+              {
+                "id": "mc1721838899309_349",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions:</strong>\n</p><div style=\"text-align: justify;\">The pie charts give the distribution of monthly expenditure of Mr. Shyamlal in two years.\n</div><div style=\"text-align: justify;\">A - Food\t\t\n</div><div style=\"text-align: justify;\">B – Rent\t\n</div><div style=\"text-align: justify;\">C – Provisions\t\n</div><div style=\"text-align: justify;\">D – Entertainment\t\n</div><div style=\"text-align: justify;\">E – Medical Expenses\n</div><div style=\"text-align: justify;\">F – Travelling \t\t\n</div><div style=\"text-align: justify;\">G – Clothes</div><div style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/b66f2f089f3a8be0c5403c8ec72a1dd4.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 500px;\"></div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">What is the percentage increase in Mr. Shyamlal’s expenditure on provisions from 2014 to 2015?</div>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721838899309_344",
+              "description": {
+                "text": "20%",
+                "widgets": [
+                  {
+                    "id": "mc1721838899309_339",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>20%</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721838899309_341",
+              "description": {
+                "text": "68%",
+                "widgets": [
+                  {
+                    "id": "mc1721838899309_340",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>68%</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721838899309_343",
+              "description": {
+                "text": "16.66%",
+                "widgets": [
+                  {
+                    "id": "mc1721838899309_350",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>16.66%</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721838899309_342",
+              "description": {
+                "text": "40%",
+                "widgets": [
+                  {
+                    "id": "mc1721838899309_351",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>40%</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721838899309_341",
+              "text": "68%",
+              "widgets": [
+                {
+                  "id": "mc1721838899309_340",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>68%</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/9d3eedbf853e1a495c8215b5e6dd93f6.jpg\"><br>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721839207995_354",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions: The pie charts give the distribution of monthly expenditure of Mr. Shyamlal in two years. A - Food B – Rent C – Provisions D – Entertainment E – Medical Expenses F – Travelling G – ClothesThe expenditure under which of the following heads has shown the highest percentage change (increase/decrease) from 2014 to 2015?",
+            "widgets": [
+              {
+                "id": "mc1721839207995_365",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions:</strong>\n</p><div style=\"text-align: justify;\">The pie charts give the distribution of monthly expenditure of Mr. Shyamlal in two years.\n</div><div style=\"text-align: justify;\">A - Food\t\t\n</div><div style=\"text-align: justify;\">B – Rent\t\n</div><div style=\"text-align: justify;\">C – Provisions\t\n</div><div style=\"text-align: justify;\">D – Entertainment\t\n</div><div style=\"text-align: justify;\">E – Medical Expenses\n</div><div style=\"text-align: justify;\">F – Travelling \t\t\n</div><div style=\"text-align: justify;\">G – Clothes</div><div style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/b66f2f089f3a8be0c5403c8ec72a1dd4.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 500px;\"></div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">The expenditure under which of the following heads has shown the highest percentage change (increase/decrease) from 2014 to 2015?</div>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721839207995_361",
+              "description": {
+                "text": "Entertainment",
+                "widgets": [
+                  {
+                    "id": "mc1721839207995_360",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Entertainment</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721839207995_358",
+              "description": {
+                "text": "Rent",
+                "widgets": [
+                  {
+                    "id": "mc1721839207995_355",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Rent</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721839207995_364",
+              "description": {
+                "text": "Clothes",
+                "widgets": [
+                  {
+                    "id": "mc1721839207995_362",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Clothes</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721839207995_357",
+              "description": {
+                "text": "Travelling",
+                "widgets": [
+                  {
+                    "id": "mc1721839207995_356",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Travelling</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721839207995_364",
+              "text": "Clothes",
+              "widgets": [
+                {
+                  "id": "mc1721839207995_362",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>Clothes</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/04033b7b8ab62083675790dfc5062f43.jpg\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721839293514_372",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions: The pie charts give the distribution of monthly expenditure of Mr. Shyamlal in two years. A - Food B – Rent C – Provisions D – Entertainment E – Medical Expenses F – Travelling G – ClothesIn 2016, the combined expenditure on food, rent, provisions and entertainment decreased by 20%, while the combined expenditure on travelling, medical expenses and clothes increase by 10%. Find the combined share of the expenditure on food and clothes.",
+            "widgets": [
+              {
+                "id": "mc1721839293514_377",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions:</strong>\n</p><div style=\"text-align: justify;\">The pie charts give the distribution of monthly expenditure of Mr. Shyamlal in two years.\n</div><div style=\"text-align: justify;\">A - Food\t\t\n</div><div style=\"text-align: justify;\">B – Rent\t\n</div><div style=\"text-align: justify;\">C – Provisions\t\n</div><div style=\"text-align: justify;\">D – Entertainment\t\n</div><div style=\"text-align: justify;\">E – Medical Expenses\n</div><div style=\"text-align: justify;\">F – Travelling \t\t\n</div><div style=\"text-align: justify;\">G – Clothes</div><div style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/b66f2f089f3a8be0c5403c8ec72a1dd4.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 500px;\"><br></div><div style=\"text-align: justify;\">In 2016, the combined expenditure on food, rent, provisions and entertainment decreased by 20%, while the combined expenditure on travelling, medical expenses and clothes increase by 10%. Find the combined share of the expenditure on food and clothes.</div>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721839293514_376",
+              "description": {
+                "text": "12.25%",
+                "widgets": [
+                  {
+                    "id": "mc1721839293514_378",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>12.25%</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721839293514_368",
+              "description": {
+                "text": "31.8%",
+                "widgets": [
+                  {
+                    "id": "mc1721839293514_367",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>31.8%</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721839293514_369",
+              "description": {
+                "text": "16.5%",
+                "widgets": [
+                  {
+                    "id": "mc1721839293514_374",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>16.5%</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721839293514_373",
+              "description": {
+                "text": "Cannot be determined",
+                "widgets": [
+                  {
+                    "id": "mc1721839293514_375",
+                    "type": "text",
+                    "properties": {
+                      "html": "Cannot be determined"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721839293514_373",
+              "text": "Cannot be determined",
+              "widgets": [
+                {
+                  "id": "mc1721839293514_375",
+                  "type": "text",
+                  "properties": {
+                    "html": "Cannot be determined"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>Though the total expenditure for the year \n2016 is known, we do not know the exact \nchanges in the expenditure on food and \nclothes. <br>Hence we cannot answer the question.<br></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721839354411_397",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions: A – Switches B – Power Regulators C – Fans D – Pumps E – Lightning F – Industrial LightningIn 2016-17, the profit from industrial lighting increased by 16.66% over that of the previous year. What is the approximate profit from industrial lighting in 2016-17?",
+            "widgets": [
+              {
+                "id": "mc1721839354411_396",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions:</strong>\n</p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/a02b8ac19df172299b1e0f9e684aedab.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 340px;\"></p><div style=\"text-align: justify;\">A – Switches\t\t\n</div><div style=\"text-align: justify;\">B – Power Regulators\t\n</div><div style=\"text-align: justify;\">C – Fans\t\t\n</div><div style=\"text-align: justify;\">D – Pumps\t\n</div><div style=\"text-align: justify;\">E – Lightning\t\t\n</div><div style=\"text-align: justify;\">F – Industrial Lightning</div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">In 2016-17, the profit from industrial lighting increased by 16.66% over that of the previous year. What is the approximate profit from industrial lighting in 2016-17?</div>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721839354411_398",
+              "description": {
+                "text": "₹24.5 lakh",
+                "widgets": [
+                  {
+                    "id": "mc1721839354411_395",
+                    "type": "text",
+                    "properties": {
+                      "html": "₹24.5 lakh"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721839354411_400",
+              "description": {
+                "text": "₹2.45 crore",
+                "widgets": [
+                  {
+                    "id": "mc1721839354411_392",
+                    "type": "text",
+                    "properties": {
+                      "html": "₹2.45 crore"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721839354411_399",
+              "description": {
+                "text": "₹2.45 lakh",
+                "widgets": [
+                  {
+                    "id": "mc1721839354411_404",
+                    "type": "text",
+                    "properties": {
+                      "html": "₹2.45 lakh<strong></strong>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721839354411_401",
+              "description": {
+                "text": "₹21.00 lakh",
+                "widgets": [
+                  {
+                    "id": "mc1721839354411_402",
+                    "type": "text",
+                    "properties": {
+                      "html": "₹21.00 lakh"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721839354411_398",
+              "text": "₹24.5 lakh",
+              "widgets": [
+                {
+                  "id": "mc1721839354411_395",
+                  "type": "text",
+                  "properties": {
+                    "html": "₹24.5 lakh"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/57dc126f89431ee23786931bf16a8016.jpg\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721839625171_417",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions: A – Switches B – Power Regulators C – Fans D – Pumps E – Lightning F – Industrial LightningFrom 2015-16 to 2016-17, the profit from switches increased by 25%, that from fans increased by 20%, that from pumps by 10%, while the profit from the remaining divisions remained the same. If a new pie chart is drawn for the profits for 2016-17, what would be the approximate angle of the fans division?",
+            "widgets": [
+              {
+                "id": "mc1721839625171_415",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions:</strong>\n</p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/a02b8ac19df172299b1e0f9e684aedab.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 340px;\"></p><div style=\"text-align: justify;\">A – Switches\t\t\n</div><div style=\"text-align: justify;\">B – Power Regulators\t\n</div><div style=\"text-align: justify;\">C – Fans\t\t\n</div><div style=\"text-align: justify;\">D – Pumps\t\n</div><div style=\"text-align: justify;\">E – Lightning\t\t\n</div><div style=\"text-align: justify;\">F – Industrial Lightning</div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">From 2015-16 to 2016-17, the profit from switches increased by 25%, that from fans increased by 20%, that from pumps by 10%, while the profit from the remaining divisions remained the same. If a new pie chart is drawn for the profits for 2016-17, what would be the approximate angle of the fans division?&nbsp;</div>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721839625171_412",
+              "description": {
+                "text": "75°",
+                "widgets": [
+                  {
+                    "id": "mc1721839625171_407",
+                    "type": "text",
+                    "properties": {
+                      "html": "75°"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721839625171_416",
+              "description": {
+                "text": "92°",
+                "widgets": [
+                  {
+                    "id": "mc1721839625171_413",
+                    "type": "text",
+                    "properties": {
+                      "html": "92°"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721839625171_408",
+              "description": {
+                "text": "82°",
+                "widgets": [
+                  {
+                    "id": "mc1721839625171_418",
+                    "type": "text",
+                    "properties": {
+                      "html": "82°<strong></strong>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721839625171_414",
+              "description": {
+                "text": "cannot be determined",
+                "widgets": [
+                  {
+                    "id": "mc1721839625171_409",
+                    "type": "text",
+                    "properties": {
+                      "html": "cannot be determined"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721839625171_408",
+              "text": "82°",
+              "widgets": [
+                {
+                  "id": "mc1721839625171_418",
+                  "type": "text",
+                  "properties": {
+                    "html": "82°<strong></strong>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br>The value of the new profit is not required for the solution.\nAssume the total profit to be 360<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/ccd3c6ed4bfeffc103f2f1e610c146a2.jpg\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721839717661_424",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions:Below given pie charts show thepercentage population of wild animals andthe percentage of land use under forestcover in different regions of the world inthe year 2007.Following are the geographical regions: Al – Asia, China, India A2 – Australia A3 – Africa A4 – Europe A5 – Russia A6 – North &amp; South America A7 – Antarctica. Population density is obtained by dividing population by land. Population density = (Percentage Number of Animals)/(Percentage Land Area Under Forest Cover) Which among the following has the fourth highest population density of wild animals?",
+            "widgets": [
+              {
+                "id": "mc1721839717661_428",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions:</strong></p><p style=\"text-align: justify;\">Below given pie charts show the&nbsp;<span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">percentage population of wild animals and&nbsp;</span><span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">the percentage of land use under forest&nbsp;</span><span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">cover in different regions of the world in&nbsp;</span><span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">the year 2007.</span></p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/0e7b7870ea236bd3fea4503009932fa3.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 500px;\"></p><p style=\"text-align: justify;\">Following are the geographical regions:\n</p><p style=\"text-align: justify;\">Al – Asia, China, India\n</p><p style=\"text-align: justify;\">A2 – Australia \n</p><p style=\"text-align: justify;\">A3 – Africa\n</p><p style=\"text-align: justify;\">A4 – Europe\n</p><p style=\"text-align: justify;\">A5 – Russia \n</p><p style=\"text-align: justify;\">A6 – North &amp; South America \n</p><p style=\"text-align: justify;\">A7 – Antarctica. \n</p><p style=\"text-align: justify;\">Population density is obtained by dividing population by land.\n</p><p style=\"text-align: justify;\">Population density  \n</p><p style=\"text-align: justify;\">= (Percentage Number of Animals)/(Percentage Land Area Under Forest Cover)\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">Which among the following has the fourth highest population density of wild animals?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721839717661_423",
+              "description": {
+                "text": "A5",
+                "widgets": [
+                  {
+                    "id": "mc1721839717661_420",
+                    "type": "text",
+                    "properties": {
+                      "html": "A5"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721839717661_430",
+              "description": {
+                "text": "A7",
+                "widgets": [
+                  {
+                    "id": "mc1721839717661_427",
+                    "type": "text",
+                    "properties": {
+                      "html": "A7"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721839717661_422",
+              "description": {
+                "text": "A3",
+                "widgets": [
+                  {
+                    "id": "mc1721839717661_431",
+                    "type": "text",
+                    "properties": {
+                      "html": "A3<strong></strong>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721839717661_421",
+              "description": {
+                "text": "A2",
+                "widgets": [
+                  {
+                    "id": "mc1721839717661_429",
+                    "type": "text",
+                    "properties": {
+                      "html": "A2"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721839717661_422",
+              "text": "A3",
+              "widgets": [
+                {
+                  "id": "mc1721839717661_431",
+                  "type": "text",
+                  "properties": {
+                    "html": "A3<strong></strong>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/41c43473319cb15428db6ad86ae55557.jpg\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721839856139_439",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions:Below given pie charts show the percentage population of wild animals and the percentage of land use under forest cover in different regions of the world in the year 2007.Following are the geographical regions: Al – Asia, China, India A2 – Australia A3 – Africa A4 – Europe A5 – Russia A6 – North &amp; South America A7 – Antarctica. Population density is obtained by dividing population by land. Population density = (Percentage Number of Animals)/(Percentage Land Area Under Forest Cover) If in the next 10 years, the population of wild animals in Antarctica will increase by 2.5% more than that in the rest of the world, what will be the percentage population of wild animals in Antarctica after 10 years?",
+            "widgets": [
+              {
+                "id": "mc1721839856139_435",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions:</strong></p><p style=\"text-align: justify;\">Below given pie charts show the percentage population of wild animals and the percentage of land use under forest cover in different regions of the world in the year 2007.</p><p style=\"text-align: justify;\"><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/0e7b7870ea236bd3fea4503009932fa3.png\" alt=\"\" class=\"block learnworlds-image learnworlds-element\" style=\"height: auto; width: 500px;\"></p><p style=\"text-align: justify;\">Following are the geographical regions:\n</p><p style=\"text-align: justify;\">Al – Asia, China, India\n</p><p style=\"text-align: justify;\">A2 – Australia \n</p><p style=\"text-align: justify;\">A3 – Africa\n</p><p style=\"text-align: justify;\">A4 – Europe\n</p><p style=\"text-align: justify;\">A5 – Russia \n</p><p style=\"text-align: justify;\">A6 – North &amp; South America \n</p><p style=\"text-align: justify;\">A7 – Antarctica. \n</p><p style=\"text-align: justify;\">Population density is obtained by dividing population by land.\n</p><p style=\"text-align: justify;\">Population density  \n</p><p style=\"text-align: justify;\">= (Percentage Number of Animals)/(Percentage Land Area Under Forest Cover)\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">If in the next 10 years, the population of wild animals in Antarctica will increase by 2.5% more than that in the rest of the world, what will be the percentage population of wild animals in Antarctica after 10 years?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721839856139_445",
+              "description": {
+                "text": "9.5%",
+                "widgets": [
+                  {
+                    "id": "mc1721839856139_433",
+                    "type": "text",
+                    "properties": {
+                      "html": "9.5%"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721839856139_440",
+              "description": {
+                "text": "11.6%",
+                "widgets": [
+                  {
+                    "id": "mc1721839856139_441",
+                    "type": "text",
+                    "properties": {
+                      "html": "11.6%"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721839856139_443",
+              "description": {
+                "text": "15.7%",
+                "widgets": [
+                  {
+                    "id": "mc1721839856139_437",
+                    "type": "text",
+                    "properties": {
+                      "html": "15.7%<strong></strong>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721839856139_434",
+              "description": {
+                "text": "Cannot be determined",
+                "widgets": [
+                  {
+                    "id": "mc1721839856139_442",
+                    "type": "text",
+                    "properties": {
+                      "html": "Cannot be determined"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721839856139_434",
+              "text": "Cannot be determined",
+              "widgets": [
+                {
+                  "id": "mc1721839856139_442",
+                  "type": "text",
+                  "properties": {
+                    "html": "Cannot be determined"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>As the increase in the population of the rest of the world is not known, we cannot determine the \nincrease in Antarctica’s wild life population.<br></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        }
+      ]
+    }
+  ],
+  "submitted": true,
+  "updated": true,
+  "retryCount": 3,
+  "inlineFeedback": [],
+  "errors": [],
+  "success": true
+}

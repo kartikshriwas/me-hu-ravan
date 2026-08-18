@@ -1,0 +1,3433 @@
+{
+  "submission": {
+    "anon_id": null,
+    "model": "assessment-submission",
+    "courseTitleId": "aptitude-teacher2",
+    "object_id": "66b74bb87f809db01009523a",
+    "assessmentId": "66b74bb87f809db010095239",
+    "snapshotId": "66c21a9c062e1629850176a3",
+    "questions": {
+      "section66b74bb841993": [
+        "mc66b74bb84199a",
+        "mc66b74bb841a73",
+        "mc66b74bb841b3c",
+        "mc66b74bb841c06",
+        "mc66b74bb841cd0",
+        "mc66b74bb841da0",
+        "mc66b74bb841e7c",
+        "mc66b74bb841f4b",
+        "mc66b74bb84201e",
+        "mc66b74bb8420ef"
+      ]
+    },
+    "certificateAnswers": [],
+    "certificateId": null,
+    "questionData": {
+      "mc66b74bb84199a": {
+        "deliveredOnTimestamp": 1786440564.846659,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74bb841a73": {
+        "deliveredOnTimestamp": 1786440564.846687,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74bb841b3c": {
+        "deliveredOnTimestamp": 1786440564.846704,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74bb841c06": {
+        "deliveredOnTimestamp": 1786440564.846718,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74bb841cd0": {
+        "deliveredOnTimestamp": 1786440564.846733,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74bb841da0": {
+        "deliveredOnTimestamp": 1786440564.846748,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74bb841e7c": {
+        "deliveredOnTimestamp": 1786440564.846762,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74bb841f4b": {
+        "deliveredOnTimestamp": 1786440564.846776,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74bb84201e": {
+        "deliveredOnTimestamp": 1786440564.84679,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74bb8420ef": {
+        "deliveredOnTimestamp": 1786440564.846805,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      }
+    },
+    "answers": [
+      {
+        "blockId": "mc66b74bb84199a",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74bb841a73",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74bb841b3c",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74bb841c06",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74bb841cd0",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74bb841da0",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74bb841e7c",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74bb841f4b",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74bb84201e",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74bb8420ef",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      }
+    ],
+    "submittedTimestamp": 1786440565.069705,
+    "status": "submitted",
+    "grading_status": "grading_status_graded",
+    "access": "public",
+    "actual_score": null,
+    "score": {
+      "maxScore": 10,
+      "value": 0,
+      "pass": false,
+      "passGrade": 50,
+      "points": 0
+    },
+    "source": {
+      "type": "unit"
+    },
+    "isDefining": true,
+    "isAdminAutoGradedSubmission": null,
+    "listOfNonConsentedBlocks": [],
+    "created": 1786440564.852796,
+    "modified": 1786440565.203167,
+    "id": "6a7aeb74c61257c9230e1bf5",
+    "passed": false
+  },
+  "assessment": {
+    "title": "Practice Test Paper (Easy)",
+    "access": "public",
+    "type": "assessment",
+    "model": "assessmentSnapshot",
+    "description": "Foundational practice test paper containing 10 assessment questions covering Seating Arrangements.",
+    "isTimed": false,
+    "timerFor": "assessmentTimed",
+    "onTimerExpiration": "autoSubmit",
+    "assessmentTimeLimitInSeconds": 600,
+    "questionTimeLimitInSeconds": 60,
+    "standaloneShareEnabled": null,
+    "customUrl": null,
+    "usesCustomUrl": null,
+    "allowAnonymous": true,
+    "randomizeQuestionOptions": false,
+    "disallowPartialSubmissions": false,
+    "submissionDueDateEnabled": false,
+    "submissionDueDate": 1626257823,
+    "makeFeedbackAvailableAfterDateEnabled": false,
+    "makeFeedbackAvailableAfterDate": 0,
+    "customStylesEnabled": true,
+    "customStyles": {
+      "assessmentPage": {
+        "background": {
+          "type": "color",
+          "colorData": {
+            "code": "",
+            "class": "lw-body-bg"
+          }
+        },
+        "dividers": {
+          "top": {
+            "orientation": "top",
+            "divider": "none"
+          },
+          "bottom": {
+            "orientation": "bottom",
+            "divider": "none"
+          }
+        }
+      },
+      "option": {
+        "radioEffect": "scribble",
+        "checkboxEffect": "scribble",
+        "size": "small"
+      },
+      "assessment": {
+        "transition": "none",
+        "background": {
+          "type": "color",
+          "colorData": {
+            "code": "",
+            "class": ""
+          }
+        },
+        "width": "normal",
+        "timerTemplate": "rectangle"
+      },
+      "linearRating": {
+        "labels": {
+          "size": "small"
+        }
+      },
+      "question": {
+        "description": {
+          "background": {
+            "type": "color",
+            "colorData": {
+              "code": "",
+              "class": ""
+            }
+          },
+          "type": "p",
+          "size": "small"
+        },
+        "answers": {
+          "background": {
+            "type": "color",
+            "colorData": {
+              "code": "",
+              "class": ""
+            }
+          }
+        },
+        "requiredAsterisk": {
+          "colorData": {
+            "code": "#ff0000",
+            "class": ""
+          }
+        },
+        "errorMessages": {
+          "size": "verySmall",
+          "colorData": {
+            "code": "#ff0000",
+            "class": ""
+          }
+        }
+      },
+      "input": {
+        "size": "small",
+        "type": "solidDark"
+      },
+      "textarea": {
+        "size": "small",
+        "type": "solidDark"
+      },
+      "dropdown": {
+        "size": "small",
+        "type": "solidDark"
+      }
+    },
+    "submissionMode": "all",
+    "startingDate": 1626765704,
+    "startingDateEnabled": false,
+    "showOnlyFailedQuestionsOnRetry": false,
+    "retryEnabled": true,
+    "retryOnFailOnly": false,
+    "gradingMethod": null,
+    "maxTries": null,
+    "onlyWrongOnRetake": null,
+    "isAmendable": false,
+    "feedbackShowOnScreen": true,
+    "feedbackDownloadPDF": false,
+    "feedbackShowInline": null,
+    "feedbackQuestionList": "all-questions",
+    "feedbackShowQuestionScore": true,
+    "feedbackShowFeedback": true,
+    "feedbackShowNumbering": false,
+    "feedbackShowSectionTitles": false,
+    "feedbackShowUserAnswers": true,
+    "feedbackShowCorrectAnswers": true,
+    "feedbackShowAnswerCorrectness": true,
+    "displayInlineFeedbackEnabled": null,
+    "displayBackButtonWhenSubmissionPerBlock": null,
+    "feedbackShowSectionResultSummary": false,
+    "askConfirmationBeforeSubmit": true,
+    "hasCustomConfirmationBeforeSubmitText": false,
+    "customConfirmationBeforeSubmitText": "Are you sure you want to submit the questionnaire?",
+    "customConfirmationBeforeSubmitTexts": {
+      "title": "Submit Assessment?",
+      "baseConfirmationMessage": "Are you sure you want to submit the questionnaire?",
+      "unansweredNotice": "You have not answered {X} questions."
+    },
+    "amendResubmissionMinutes": 30,
+    "passingGrade": null,
+    "navigationMode": "per-block",
+    "conditionalBlocks": {
+      "introContent": {
+        "id": "content66b74bb8418d0",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66b74bb8418de",
+              "type": "text",
+              "insertedAsWidget": true,
+              "properties": {
+                "html": "Puzzles - Stack based PAPER LEVEL-1",
+                "alignment": "center",
+                "customStyle": true,
+                "type": "h2",
+                "size": "normal"
+              }
+            },
+            {
+              "id": "text66b74bb8418ef",
+              "type": "text",
+              "properties": {
+                "html": "Self-assess your knowledge. Express yourself and get feedback from our instructors.",
+                "customStyle": true,
+                "alignment": "center"
+              }
+            },
+            {
+              "id": "spacer66b74bb8418f9",
+              "type": "spacer",
+              "properties": {
+                "height": 20,
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            },
+            {
+              "id": "button66b74bb841906",
+              "type": "button",
+              "properties": {
+                "buttonLabel": "<span>Ready to start</span>",
+                "buttonSize": "normal",
+                "buttonType": "solidBrand",
+                "alignment": "center",
+                "linkData": {
+                  "linkType": "goToFirst"
+                },
+                "iconColorData": {
+                  "code": "",
+                  "class": ""
+                },
+                "iconDisplay": false,
+                "iconSize": 26,
+                "iconClassName": " fas fa-angle-right",
+                "iconPosition": "right"
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "variables": {
+            "conditionalBlocks_introContent_blockData_widgets_0": [],
+            "conditionalBlocks_introContent_blockData_widgets_1": []
+          }
+        }
+      },
+      "submissionStartingDate": {
+        "id": "content66b74bb841927",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66b74bb84192c",
+              "type": "text",
+              "properties": {
+                "html": "Sorry but this assessment hasn't started yet."
+              }
+            },
+            {
+              "id": "date66b74bb841934",
+              "type": "date",
+              "properties": {
+                "value": ""
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "displayConditions": ["startingDate"]
+        }
+      },
+      "submissionDueDate": {
+        "id": "content66b74bb841949",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66b74bb841957",
+              "type": "text",
+              "properties": {
+                "html": "Sorry but this assessment date is due."
+              }
+            },
+            {
+              "id": "date66b74bb84195e",
+              "type": "date",
+              "properties": {
+                "value": ""
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "displayConditions": ["dateIsDue"]
+        }
+      },
+      "outroContent": {
+        "id": "content66b74bb84196a",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "userResults66b74bb84196e",
+              "type": "userResults",
+              "properties": {
+                "layout": "template2",
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            },
+            {
+              "id": "feedback66b74bb84197b",
+              "type": "feedback",
+              "properties": []
+            },
+            {
+              "id": "outroActions66b74bb841981",
+              "type": "outroActions",
+              "properties": {
+                "layout": "",
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true
+        }
+      }
+    },
+    "systemSections": null,
+    "sections": [
+      {
+        "id": "section66b74bb841993",
+        "title": "",
+        "type": "section",
+        "navigationMode": "per-block",
+        "blocks": [
+          {
+            "id": "mc66b74bb84199a",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bb8419a0",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong>\n</p><div style=\"text-align: justify;\"><strong>Puzzle 1:</strong>\n</div><div style=\"text-align: justify;\">There are six boxes of different colors: Red, Blue, Green, Yellow, Black, and White. They are stacked on top of each other. Based on the clues below, can you determine the order of the boxes from top to bottom?\n</div><div style=\"text-align: justify;\">(i)\tThe Red box is somewhere above the Blue box but below the Green box.\n</div><div style=\"text-align: justify;\">(ii)\tThe Green box is not at the top.\n</div><div style=\"text-align: justify;\">(iii)\tThe Black box is directly below the Green box and directly above the Yellow box.\n</div><div style=\"text-align: justify;\">(iv)\tThe Blue box is not at the bottom.\n</div><div style=\"text-align: justify;\">(v)\tThe White box is between the Red and Blue boxes.\n</div><div style=\"text-align: justify;\">(vi)\tThe Yellow box is not directly below the Blue box.\n</div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">Which box is at the top?</div>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74bb8419b2",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74bb8419b9",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74bb8419c1",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74bb8419e1",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb8419e9",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Red</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb8419f9",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb841a00",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Blue</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb841a0f",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb841a16",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Green</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb841a25",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb841a2c",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Yellow</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb841a3b",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb841a42",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>White</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_4_description_widgets_0": [],
+                "sections_0_blocks_0": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74bb841a73",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bb841a78",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong>\n</p><div style=\"text-align: justify;\"><strong>Puzzle 1:</strong>\n</div><div style=\"text-align: justify;\">There are six boxes of different colors: Red, Blue, Green, Yellow, Black, and White. They are stacked on top of each other. Based on the clues below, can you determine the order of the boxes from top to bottom?\n</div><div style=\"text-align: justify;\">(i)\tThe Red box is somewhere above the Blue box but below the Green box.\n</div><div style=\"text-align: justify;\">(ii)\tThe Green box is not at the top.\n</div><div style=\"text-align: justify;\">(iii)\tThe Black box is directly below the Green box and directly above the Yellow box.\n</div><div style=\"text-align: justify;\">(iv)\tThe Blue box is not at the bottom.\n</div><div style=\"text-align: justify;\">(v)\tThe White box is between the Red and Blue boxes.\n</div><div style=\"text-align: justify;\">(vi)\tThe Yellow box is not directly below the Blue box.\n</div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">Which box is at the bottom?&nbsp;</div>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74bb841a8a",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74bb841a92",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74bb841a99",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74bb841ab9",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb841ac0",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Red</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb841acf",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb841ad6",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Blue</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb841ae5",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb841aec",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Green</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb841afc",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb841b02",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Yellow</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb841b12",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb841b19",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Black</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_4_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_4_description_widgets_0": [],
+                "sections_0_blocks_1": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74bb841b3c",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bb841b41",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong>\n</p><div style=\"text-align: justify;\"><strong>Puzzle 1:</strong>\n</div><div style=\"text-align: justify;\">There are six boxes of different colors: Red, Blue, Green, Yellow, Black, and White. They are stacked on top of each other. Based on the clues below, can you determine the order of the boxes from top to bottom?\n</div><div style=\"text-align: justify;\">(i)\tThe Red box is somewhere above the Blue box but below the Green box.\n</div><div style=\"text-align: justify;\">(ii)\tThe Green box is not at the top.\n</div><div style=\"text-align: justify;\">(iii)\tThe Black box is directly below the Green box and directly above the Yellow box.\n</div><div style=\"text-align: justify;\">(iv)\tThe Blue box is not at the bottom.\n</div><div style=\"text-align: justify;\">(v)\tThe White box is between the Red and Blue boxes.\n</div><div style=\"text-align: justify;\">(vi)\tThe Yellow box is not directly below the Blue box.\n</div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">Which box is in the middle?&nbsp;</div>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74bb841b53",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74bb841b5a",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74bb841b61",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74bb841b81",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb841b88",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Red</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb841b97",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb841b9e",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Blue</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb841bae",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb841bb4",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Green</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb841bc4",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb841bca",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Yellow</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb841bda",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb841be0",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>White</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_4_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_4_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_4_description_widgets_0": [],
+                "sections_0_blocks_2": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74bb841c06",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bb841c0b",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong>\n</p><div style=\"text-align: justify;\"><strong>Puzzle 1:</strong>\n</div><div style=\"text-align: justify;\">There are six boxes of different colors: Red, Blue, Green, Yellow, Black, and White. They are stacked on top of each other. Based on the clues below, can you determine the order of the boxes from top to bottom?\n</div><div style=\"text-align: justify;\">(i)\tThe Red box is somewhere above the Blue box but below the Green box.\n</div><div style=\"text-align: justify;\">(ii)\tThe Green box is not at the top.\n</div><div style=\"text-align: justify;\">(iii)\tThe Black box is directly below the Green box and directly above the Yellow box.\n</div><div style=\"text-align: justify;\">(iv)\tThe Blue box is not at the bottom.\n</div><div style=\"text-align: justify;\">(v)\tThe White box is between the Red and Blue boxes.\n</div><div style=\"text-align: justify;\">(vi)\tThe Yellow box is not directly below the Blue box.\n</div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">If the Green and Yellow boxes swap their positions, which box will be in the middle?&nbsp;</div>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74bb841c1d",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74bb841c24",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74bb841c2b",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74bb841c4a",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb841c52",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Red</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb841c61",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb841c68",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Blue</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb841c77",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb841c7e",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Green</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb841c8d",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb841c94",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Yellow</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb841ca4",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb841cab",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Black</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_4_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_4_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_description_widgets_0": [],
+                "sections_0_blocks_3": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74bb841cd0",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bb841cd5",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong>\n</p><div style=\"text-align: justify;\"><strong>Puzzle 1:</strong>\n</div><div style=\"text-align: justify;\">There are six boxes of different colors: Red, Blue, Green, Yellow, Black, and White. They are stacked on top of each other. Based on the clues below, can you determine the order of the boxes from top to bottom?\n</div><div style=\"text-align: justify;\">(i)\tThe Red box is somewhere above the Blue box but below the Green box.\n</div><div style=\"text-align: justify;\">(ii)\tThe Green box is not at the top.\n</div><div style=\"text-align: justify;\">(iii)\tThe Black box is directly below the Green box and directly above the Yellow box.\n</div><div style=\"text-align: justify;\">(iv)\tThe Blue box is not at the bottom.\n</div><div style=\"text-align: justify;\">(v)\tThe White box is between the Red and Blue boxes.\n</div><div style=\"text-align: justify;\">(vi)\tThe Yellow box is not directly below the Blue box.\n</div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">If the Red and White boxes swap their positions, which box will be below the White box?&nbsp;</div>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74bb841ce7",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74bb841ced",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74bb841cf5",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74bb841d14",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb841d1a",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Red</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb841d2a",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb841d30",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Blue</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb841d45",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb841d4b",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Green</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb841d5b",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb841d61",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Yellow</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb841d71",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb841d78",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Black</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_4_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_4_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_description_widgets_0": [],
+                "sections_0_blocks_4": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74bb841da0",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bb841da5",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :\n</strong></p><div style=\"text-align: justify;\"><strong>Puzzle 2:\n</strong></div><div style=\"text-align: justify;\">There are eight boxes of different colors: Red, Blue, Green, Yellow, Black, White, Pink, and Orange. They are placed in an almirah which has nine shelves, meaning one shelf is empty. Based on the clues below, can you determine the order of the boxes from top to bottom?\n</div><div style=\"text-align: justify;\">(i)\tThe Red box is somewhere above the Blue box but below the Green box.\n</div><div style=\"text-align: justify;\">(ii)\tThe Green box is not at the top.\n</div><div style=\"text-align: justify;\">(iii)\tThe Black box is directly below the Green box and directly above the Yellow box.\n</div><div style=\"text-align: justify;\">(iv)\tThe Blue box is not at the bottom.\n</div><div style=\"text-align: justify;\">(v)\tThe White box is between the Red and Blue boxes.\n</div><div style=\"text-align: justify;\">(vi)\tThe Yellow box is not directly below the Blue box.\n</div><div style=\"text-align: justify;\">(vii)\tThe Pink box is directly above the Orange box, and one of them is on the top shelf.\n</div><div style=\"text-align: justify;\">(viii)\tThe empty shelf is somewhere&nbsp;<span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">between the Green and Black boxes.</span></div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">Which box is at the top?</div>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74bb841db6",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74bb841dbd",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74bb841dc4",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74bb841de4",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb841deb",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Red</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb841dfa",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb841e01",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Blue</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb841e10",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb841e17",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Green</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb841e26",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb841e2d",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Yellow</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb841e49",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb841e50",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>white</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_4_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_4_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_description_widgets_0": [],
+                "sections_0_blocks_5": [],
+                "sections_0_blocks_5_blockData_options_4_description_widgets_0": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74bb841e7c",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bb841e81",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :\n</strong></p><div style=\"text-align: justify;\"><strong>Puzzle 2:\n</strong></div><div style=\"text-align: justify;\">There are eight boxes of different colors: Red, Blue, Green, Yellow, Black, White, Pink, and Orange. They are placed in an almirah which has nine shelves, meaning one shelf is empty. Based on the clues below, can you determine the order of the boxes from top to bottom?\n</div><div style=\"text-align: justify;\">(i)\tThe Red box is somewhere above the Blue box but below the Green box.\n</div><div style=\"text-align: justify;\">(ii)\tThe Green box is not at the top.\n</div><div style=\"text-align: justify;\">(iii)\tThe Black box is directly below the Green box and directly above the Yellow box.\n</div><div style=\"text-align: justify;\">(iv)\tThe Blue box is not at the bottom.\n</div><div style=\"text-align: justify;\">(v)\tThe White box is between the Red and Blue boxes.\n</div><div style=\"text-align: justify;\">(vi)\tThe Yellow box is not directly below the Blue box.\n</div><div style=\"text-align: justify;\">(vii)\tThe Pink box is directly above the Orange box, and one of them is on the top shelf.\n</div><div style=\"text-align: justify;\">(viii)\tThe empty shelf is somewhere&nbsp;<span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">between the Green and Black boxes.</span></div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">Which box is at the bottom?</div>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74bb841e92",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74bb841e99",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74bb841ea1",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74bb841ec0",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb841ec7",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Red</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb841ed6",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb841edd",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Blue</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb841eec",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb841ef3",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Green</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb841f03",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb841f09",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Yellow</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb841f18",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb841f1f",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Black</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_4_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_4_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_description_widgets_0": [],
+                "sections_0_blocks_6": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74bb841f4b",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bb841f50",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :\n</strong></p><div style=\"text-align: justify;\"><strong>Puzzle 2:\n</strong></div><div style=\"text-align: justify;\">There are eight boxes of different colors: Red, Blue, Green, Yellow, Black, White, Pink, and Orange. They are placed in an almirah which has nine shelves, meaning one shelf is empty. Based on the clues below, can you determine the order of the boxes from top to bottom?\n</div><div style=\"text-align: justify;\">(i)\tThe Red box is somewhere above the Blue box but below the Green box.\n</div><div style=\"text-align: justify;\">(ii)\tThe Green box is not at the top.\n</div><div style=\"text-align: justify;\">(iii)\tThe Black box is directly below the Green box and directly above the Yellow box.\n</div><div style=\"text-align: justify;\">(iv)\tThe Blue box is not at the bottom.\n</div><div style=\"text-align: justify;\">(v)\tThe White box is between the Red and Blue boxes.\n</div><div style=\"text-align: justify;\">(vi)\tThe Yellow box is not directly below the Blue box.\n</div><div style=\"text-align: justify;\">(vii)\tThe Pink box is directly above the Orange box, and one of them is on the top shelf.\n</div><div style=\"text-align: justify;\">(viii)\tThe empty shelf is somewhere&nbsp;<span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">between the Green and Black boxes.</span></div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">Which box is in the middle?</div>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74bb841f63",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74bb841f6a",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74bb841f72",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74bb841f90",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb841f97",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Red</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb841fa7",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb841fad",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Blue</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb841fbd",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb841fc3",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Green</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb841fd2",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb841fd9",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Yellow</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb841fe8",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb841fef",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Black</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_4_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_4_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_description_widgets_0": [],
+                "sections_0_blocks_7": [],
+                "sections_0_blocks_7_blockData_options_0_description_widgets_0": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74bb84201e",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bb842023",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :\n</strong></p><div style=\"text-align: justify;\"><strong>Puzzle 2:\n</strong></div><div style=\"text-align: justify;\">There are eight boxes of different colors: Red, Blue, Green, Yellow, Black, White, Pink, and Orange. They are placed in an almirah which has nine shelves, meaning one shelf is empty. Based on the clues below, can you determine the order of the boxes from top to bottom?\n</div><div style=\"text-align: justify;\">(i)\tThe Red box is somewhere above the Blue box but below the Green box.\n</div><div style=\"text-align: justify;\">(ii)\tThe Green box is not at the top.\n</div><div style=\"text-align: justify;\">(iii)\tThe Black box is directly below the Green box and directly above the Yellow box.\n</div><div style=\"text-align: justify;\">(iv)\tThe Blue box is not at the bottom.\n</div><div style=\"text-align: justify;\">(v)\tThe White box is between the Red and Blue boxes.\n</div><div style=\"text-align: justify;\">(vi)\tThe Yellow box is not directly below the Blue box.\n</div><div style=\"text-align: justify;\">(vii)\tThe Pink box is directly above the Orange box, and one of them is on the top shelf.\n</div><div style=\"text-align: justify;\">(viii)\tThe empty shelf is somewhere&nbsp;<span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">between the Green and Black boxes.</span></div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">If the Green and Yellow boxes swap their positions, which box will be in the middle?</div>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74bb842034",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74bb84203b",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74bb842042",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74bb842062",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb842068",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Red</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb842078",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb84207e",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Blue</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb84208d",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb842094",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Green</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb8420a3",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb8420aa",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Yellow</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb8420b9",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb8420c0",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Black</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_4_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_4_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_description_widgets_0": [],
+                "sections_0_blocks_8": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74bb8420ef",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bb8420f3",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :\n</strong></p><div style=\"text-align: justify;\"><strong>Puzzle 2:\n</strong></div><div style=\"text-align: justify;\">There are eight boxes of different colors: Red, Blue, Green, Yellow, Black, White, Pink, and Orange. They are placed in an almirah which has nine shelves, meaning one shelf is empty. Based on the clues below, can you determine the order of the boxes from top to bottom?\n</div><div style=\"text-align: justify;\">(i)\tThe Red box is somewhere above the Blue box but below the Green box.\n</div><div style=\"text-align: justify;\">(ii)\tThe Green box is not at the top.\n</div><div style=\"text-align: justify;\">(iii)\tThe Black box is directly below the Green box and directly above the Yellow box.\n</div><div style=\"text-align: justify;\">(iv)\tThe Blue box is not at the bottom.\n</div><div style=\"text-align: justify;\">(v)\tThe White box is between the Red and Blue boxes.\n</div><div style=\"text-align: justify;\">(vi)\tThe Yellow box is not directly below the Blue box.\n</div><div style=\"text-align: justify;\">(vii)\tThe Pink box is directly above the Orange box, and one of them is on the top shelf.\n</div><div style=\"text-align: justify;\">(viii)\tThe empty shelf is somewhere&nbsp;<span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">between the Green and Black boxes.</span></div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">If the Red and White boxes swap their positions, which box will be below the White box?</div>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74bb842105",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74bb84210b",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74bb842113",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74bb842136",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb84213d",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Red</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb84214c",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb842153",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Blue</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb842162",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb842169",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Green</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb842178",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb84217f",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Yellow</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb84218e",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb842194",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Black</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_4_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_4_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_description_widgets_0": [],
+                "sections_0_blocks_9": []
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "availabilityStatus": null,
+    "autoNavigationEnabled": false,
+    "displayBackButtonWhenNavigationPerBlock": true,
+    "saveAndResumeLaterEnabled": null,
+    "tagsAddedOnCompletion": [],
+    "tagsAddedOnPass": [],
+    "sendAnonymousSubmissionsToEmailLeads": false,
+    "afterSubmitActionEnabled": null,
+    "afterSubmitActionProperties": null,
+    "showWizardOnNextEdit": false,
+    "revisitAfterSubmissionAction": null,
+    "navigationTemplate": "HorizontalSpacedBetweenNavigationTemplate",
+    "learnerSearchBarEnabled": true,
+    "learnerUnansweredQuestionsEnabled": true,
+    "learnerFavouriteQuestionEnabled": true,
+    "learnerCompletionProgressEnabled": true,
+    "learnerShowIndexOfQuestionsEnabled": false,
+    "learnerTimeNotificationsEnabled": false,
+    "learnerAllowInterruptionsEnabled": true,
+    "learnerAllowInterruptionsTimeoutInMinutes": 30,
+    "learnerReclaimTryOnInterruptionTimeoutEnabled": false,
+    "learnerAskBeforeContinueToSaved": true,
+    "learnerAutoSaveEnabled": null,
+    "spellcheckDisabled": null,
+    "showPartialScoreOnSubmission": true,
+    "deliverableQuestionsSubsetType": "all",
+    "questionRandomizationType": "none",
+    "serveQuestionsBasedOnPreviousSubmission": null,
+    "scoringDisabled": false,
+    "isSelfAssessment": false,
+    "useDefaultCertificateTemplate": null,
+    "certificateTemplate": null,
+    "certificateSocialShare": null,
+    "migrationData": null,
+    "useAssessmentPassingGradeForOpenEndedCorrectness": true,
+    "openEndedCorrectnessPassingGrade": null,
+    "showScorePercentage": null,
+    "showScorePoints": null,
+    "showScoreCorrectAnswers": null,
+    "editorBehaviorSettings": null,
+    "manualReviewEnabled": null,
+    "resultsSummary": {
+      "enabled": true,
+      "showStatusIcon": true,
+      "showStatusText": true,
+      "showScorePercentage": true,
+      "showScorePoints": true,
+      "showScoreCorrectAnswers": false,
+      "showTimeTakenToComplete": true,
+      "showDateSubmitted": true,
+      "showAttemptCount": true
+    },
+    "meta": null,
+    "submissionsCount": 1023,
+    "fromMarketplace": null,
+    "aiFeedbackEnabled": null,
+    "numberOfFeedbackQuestions": null,
+    "created": 1723288504.778988,
+    "modified": 1723996828.37084,
+    "contentHash": "b697549ec12a8b13e34f30504559a47f3119e8dd38166a8ace67e76a72f23b92",
+    "id": "66b74bb87f809db010095239",
+    "objectType": "assessment",
+    "isEditBlockedDueToSync": false,
+    "variables": {
+      "submission": {
+        "self": {
+          "score": 0,
+          "points": 0,
+          "total_points": 10,
+          "correct_answers": 0,
+          "total_questions": 10,
+          "time_spent": "00:00:01",
+          "date_submitted": "11/08/26",
+          "attempt_count": 3,
+          "max_tries": null,
+          "pass_grade": 50,
+          "time_spent_seconds": 1,
+          "raw_start_date": 1786440564.852796
+        }
+      },
+      "school": {
+        "name": "Apna College",
+        "url": "www.apnacollege.in",
+        "description": "The most loved coding community of India ❤️"
+      },
+      "user": {
+        "username": "ram",
+        "email": "p4542639@gmail.com",
+        "cf_phonenumber": "7666690798"
+      }
+    }
+  },
+  "reclaimedTry": false,
+  "feedback": [
+    {
+      "title": "",
+      "id": "section66b74bb841993",
+      "blocks": [
+        {
+          "id": "mc66b74bb84199a",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions : Puzzle 1: There are six boxes of different colors: Red, Blue, Green, Yellow, Black, and White. They are stacked on top of each other. Based on the clues below, can you determine the order of the boxes from top to bottom? (i) The Red box is somewhere above the Blue box but below the Green box. (ii) The Green box is not at the top. (iii) The Black box is directly below the Green box and directly above the Yellow box. (iv) The Blue box is not at the bottom. (v) The White box is between the Red and Blue boxes. (vi) The Yellow box is not directly below the Blue box. Which box is at the top?",
+            "widgets": [
+              {
+                "id": "text66b74bb8419a0",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong>\n</p><div style=\"text-align: justify;\"><strong>Puzzle 1:</strong>\n</div><div style=\"text-align: justify;\">There are six boxes of different colors: Red, Blue, Green, Yellow, Black, and White. They are stacked on top of each other. Based on the clues below, can you determine the order of the boxes from top to bottom?\n</div><div style=\"text-align: justify;\">(i)\tThe Red box is somewhere above the Blue box but below the Green box.\n</div><div style=\"text-align: justify;\">(ii)\tThe Green box is not at the top.\n</div><div style=\"text-align: justify;\">(iii)\tThe Black box is directly below the Green box and directly above the Yellow box.\n</div><div style=\"text-align: justify;\">(iv)\tThe Blue box is not at the bottom.\n</div><div style=\"text-align: justify;\">(v)\tThe White box is between the Red and Blue boxes.\n</div><div style=\"text-align: justify;\">(vi)\tThe Yellow box is not directly below the Blue box.\n</div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">Which box is at the top?</div>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74bb8419e1",
+              "description": {
+                "text": "Red",
+                "widgets": [
+                  {
+                    "id": "text66b74bb8419e9",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Red</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb8419f9",
+              "description": {
+                "text": "Blue",
+                "widgets": [
+                  {
+                    "id": "text66b74bb841a00",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Blue</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb841a0f",
+              "description": {
+                "text": "Green",
+                "widgets": [
+                  {
+                    "id": "text66b74bb841a16",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Green</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb841a25",
+              "description": {
+                "text": "Yellow",
+                "widgets": [
+                  {
+                    "id": "text66b74bb841a2c",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Yellow</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb841a3b",
+              "description": {
+                "text": "White",
+                "widgets": [
+                  {
+                    "id": "text66b74bb841a42",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>White</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74bb841a3b",
+              "text": "White",
+              "widgets": [
+                {
+                  "id": "text66b74bb841a42",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>White</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<div style=\"text-align: justify;\"><br><strong>Puzzle 1:\n </strong>           <br>From\nclue 1, the Red box is above the Blue box but below the Green box. From clue 2,\nthe Green box is not at the top, so the only position left for it is the second\nfrom the top. From clue 3, the Black box is directly below the Green box and\ndirectly above the Yellow box, so the Black box is third from the top and the\nYellow box is fourth. From clue 4, the Blue box is not at the bottom, so it\nmust be fifth from the top. From clue 5, the White box is between the Red and\nBlue boxes, so the White box must be at the top and the Red box must be fourth\nfrom the top. The only position left is the bottom, so the sixth box from the\ntop is the Red box. Therefore, the order from top to bottom is: White, Green,\nBlack, Yellow, Blue, and Red.\nSo, the\nanswers to the questions are:<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/5eb7ec7b53dbecfb85c31e91b5c97744.png\" style=\"width: 80px; height: 193px;\"></div><div style=\"text-align: justify;\">(E) White</div>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74bb841a73",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions : Puzzle 1: There are six boxes of different colors: Red, Blue, Green, Yellow, Black, and White. They are stacked on top of each other. Based on the clues below, can you determine the order of the boxes from top to bottom? (i) The Red box is somewhere above the Blue box but below the Green box. (ii) The Green box is not at the top. (iii) The Black box is directly below the Green box and directly above the Yellow box. (iv) The Blue box is not at the bottom. (v) The White box is between the Red and Blue boxes. (vi) The Yellow box is not directly below the Blue box. Which box is at the bottom?",
+            "widgets": [
+              {
+                "id": "text66b74bb841a78",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong>\n</p><div style=\"text-align: justify;\"><strong>Puzzle 1:</strong>\n</div><div style=\"text-align: justify;\">There are six boxes of different colors: Red, Blue, Green, Yellow, Black, and White. They are stacked on top of each other. Based on the clues below, can you determine the order of the boxes from top to bottom?\n</div><div style=\"text-align: justify;\">(i)\tThe Red box is somewhere above the Blue box but below the Green box.\n</div><div style=\"text-align: justify;\">(ii)\tThe Green box is not at the top.\n</div><div style=\"text-align: justify;\">(iii)\tThe Black box is directly below the Green box and directly above the Yellow box.\n</div><div style=\"text-align: justify;\">(iv)\tThe Blue box is not at the bottom.\n</div><div style=\"text-align: justify;\">(v)\tThe White box is between the Red and Blue boxes.\n</div><div style=\"text-align: justify;\">(vi)\tThe Yellow box is not directly below the Blue box.\n</div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">Which box is at the bottom?&nbsp;</div>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74bb841ab9",
+              "description": {
+                "text": "Red",
+                "widgets": [
+                  {
+                    "id": "text66b74bb841ac0",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Red</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb841acf",
+              "description": {
+                "text": "Blue",
+                "widgets": [
+                  {
+                    "id": "text66b74bb841ad6",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Blue</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb841ae5",
+              "description": {
+                "text": "Green",
+                "widgets": [
+                  {
+                    "id": "text66b74bb841aec",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Green</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb841afc",
+              "description": {
+                "text": "Yellow",
+                "widgets": [
+                  {
+                    "id": "text66b74bb841b02",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Yellow</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb841b12",
+              "description": {
+                "text": "Black",
+                "widgets": [
+                  {
+                    "id": "text66b74bb841b19",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Black</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74bb841ab9",
+              "text": "Red",
+              "widgets": [
+                {
+                  "id": "text66b74bb841ac0",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>Red</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<div><br><strong>Puzzle 1:\n </strong>           <br>From\nclue 1, the Red box is above the Blue box but below the Green box. From clue 2,\nthe Green box is not at the top, so the only position left for it is the second\nfrom the top. From clue 3, the Black box is directly below the Green box and\ndirectly above the Yellow box, so the Black box is third from the top and the\nYellow box is fourth. From clue 4, the Blue box is not at the bottom, so it\nmust be fifth from the top. From clue 5, the White box is between the Red and\nBlue boxes, so the White box must be at the top and the Red box must be fourth\nfrom the top. The only position left is the bottom, so the sixth box from the\ntop is the Red box. Therefore, the order from top to bottom is: White, Green,\nBlack, Yellow, Blue, and Red.\nSo, the\nanswers to the questions are:<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/5eb7ec7b53dbecfb85c31e91b5c97744.png\" style=\"width: 80px; height: 193px;\"></div><div>(A) Red</div>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74bb841b3c",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions : Puzzle 1: There are six boxes of different colors: Red, Blue, Green, Yellow, Black, and White. They are stacked on top of each other. Based on the clues below, can you determine the order of the boxes from top to bottom? (i) The Red box is somewhere above the Blue box but below the Green box. (ii) The Green box is not at the top. (iii) The Black box is directly below the Green box and directly above the Yellow box. (iv) The Blue box is not at the bottom. (v) The White box is between the Red and Blue boxes. (vi) The Yellow box is not directly below the Blue box. Which box is in the middle?",
+            "widgets": [
+              {
+                "id": "text66b74bb841b41",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong>\n</p><div style=\"text-align: justify;\"><strong>Puzzle 1:</strong>\n</div><div style=\"text-align: justify;\">There are six boxes of different colors: Red, Blue, Green, Yellow, Black, and White. They are stacked on top of each other. Based on the clues below, can you determine the order of the boxes from top to bottom?\n</div><div style=\"text-align: justify;\">(i)\tThe Red box is somewhere above the Blue box but below the Green box.\n</div><div style=\"text-align: justify;\">(ii)\tThe Green box is not at the top.\n</div><div style=\"text-align: justify;\">(iii)\tThe Black box is directly below the Green box and directly above the Yellow box.\n</div><div style=\"text-align: justify;\">(iv)\tThe Blue box is not at the bottom.\n</div><div style=\"text-align: justify;\">(v)\tThe White box is between the Red and Blue boxes.\n</div><div style=\"text-align: justify;\">(vi)\tThe Yellow box is not directly below the Blue box.\n</div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">Which box is in the middle?&nbsp;</div>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74bb841b81",
+              "description": {
+                "text": "Red",
+                "widgets": [
+                  {
+                    "id": "text66b74bb841b88",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Red</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb841b97",
+              "description": {
+                "text": "Blue",
+                "widgets": [
+                  {
+                    "id": "text66b74bb841b9e",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Blue</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb841bae",
+              "description": {
+                "text": "Green",
+                "widgets": [
+                  {
+                    "id": "text66b74bb841bb4",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Green</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb841bc4",
+              "description": {
+                "text": "Yellow",
+                "widgets": [
+                  {
+                    "id": "text66b74bb841bca",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Yellow</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb841bda",
+              "description": {
+                "text": "White",
+                "widgets": [
+                  {
+                    "id": "text66b74bb841be0",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>White</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74bb841bae",
+              "text": "Green",
+              "widgets": [
+                {
+                  "id": "text66b74bb841bb4",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>Green</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<div><br><strong>Puzzle 1:\n </strong>           <br>From\nclue 1, the Red box is above the Blue box but below the Green box. From clue 2,\nthe Green box is not at the top, so the only position left for it is the second\nfrom the top. From clue 3, the Black box is directly below the Green box and\ndirectly above the Yellow box, so the Black box is third from the top and the\nYellow box is fourth. From clue 4, the Blue box is not at the bottom, so it\nmust be fifth from the top. From clue 5, the White box is between the Red and\nBlue boxes, so the White box must be at the top and the Red box must be fourth\nfrom the top. The only position left is the bottom, so the sixth box from the\ntop is the Red box. Therefore, the order from top to bottom is: White, Green,\nBlack, Yellow, Blue, and Red.\nSo, the\nanswers to the questions are:<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/5eb7ec7b53dbecfb85c31e91b5c97744.png\" style=\"width: 80px; height: 193px;\"><br>(C) Green</div>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74bb841c06",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions : Puzzle 1: There are six boxes of different colors: Red, Blue, Green, Yellow, Black, and White. They are stacked on top of each other. Based on the clues below, can you determine the order of the boxes from top to bottom? (i) The Red box is somewhere above the Blue box but below the Green box. (ii) The Green box is not at the top. (iii) The Black box is directly below the Green box and directly above the Yellow box. (iv) The Blue box is not at the bottom. (v) The White box is between the Red and Blue boxes. (vi) The Yellow box is not directly below the Blue box. If the Green and Yellow boxes swap their positions, which box will be in the middle?",
+            "widgets": [
+              {
+                "id": "text66b74bb841c0b",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong>\n</p><div style=\"text-align: justify;\"><strong>Puzzle 1:</strong>\n</div><div style=\"text-align: justify;\">There are six boxes of different colors: Red, Blue, Green, Yellow, Black, and White. They are stacked on top of each other. Based on the clues below, can you determine the order of the boxes from top to bottom?\n</div><div style=\"text-align: justify;\">(i)\tThe Red box is somewhere above the Blue box but below the Green box.\n</div><div style=\"text-align: justify;\">(ii)\tThe Green box is not at the top.\n</div><div style=\"text-align: justify;\">(iii)\tThe Black box is directly below the Green box and directly above the Yellow box.\n</div><div style=\"text-align: justify;\">(iv)\tThe Blue box is not at the bottom.\n</div><div style=\"text-align: justify;\">(v)\tThe White box is between the Red and Blue boxes.\n</div><div style=\"text-align: justify;\">(vi)\tThe Yellow box is not directly below the Blue box.\n</div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">If the Green and Yellow boxes swap their positions, which box will be in the middle?&nbsp;</div>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74bb841c4a",
+              "description": {
+                "text": "Red",
+                "widgets": [
+                  {
+                    "id": "text66b74bb841c52",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Red</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb841c61",
+              "description": {
+                "text": "Blue",
+                "widgets": [
+                  {
+                    "id": "text66b74bb841c68",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Blue</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb841c77",
+              "description": {
+                "text": "Green",
+                "widgets": [
+                  {
+                    "id": "text66b74bb841c7e",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Green</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb841c8d",
+              "description": {
+                "text": "Yellow",
+                "widgets": [
+                  {
+                    "id": "text66b74bb841c94",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Yellow</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb841ca4",
+              "description": {
+                "text": "Black",
+                "widgets": [
+                  {
+                    "id": "text66b74bb841cab",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Black</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74bb841c8d",
+              "text": "Yellow",
+              "widgets": [
+                {
+                  "id": "text66b74bb841c94",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>Yellow</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<div><br><strong>Puzzle 1:\n </strong>           <br>From\nclue 1, the Red box is above the Blue box but below the Green box. From clue 2,\nthe Green box is not at the top, so the only position left for it is the second\nfrom the top. From clue 3, the Black box is directly below the Green box and\ndirectly above the Yellow box, so the Black box is third from the top and the\nYellow box is fourth. From clue 4, the Blue box is not at the bottom, so it\nmust be fifth from the top. From clue 5, the White box is between the Red and\nBlue boxes, so the White box must be at the top and the Red box must be fourth\nfrom the top. The only position left is the bottom, so the sixth box from the\ntop is the Red box. Therefore, the order from top to bottom is: White, Green,\nBlack, Yellow, Blue, and Red.\nSo, the\nanswers to the questions are:<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/5eb7ec7b53dbecfb85c31e91b5c97744.png\" style=\"width: 80px; height: 193px;\"><br><span style=\"font-family: var(--font-family);\">(D)\nYellow</span><br></div>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74bb841cd0",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions : Puzzle 1: There are six boxes of different colors: Red, Blue, Green, Yellow, Black, and White. They are stacked on top of each other. Based on the clues below, can you determine the order of the boxes from top to bottom? (i) The Red box is somewhere above the Blue box but below the Green box. (ii) The Green box is not at the top. (iii) The Black box is directly below the Green box and directly above the Yellow box. (iv) The Blue box is not at the bottom. (v) The White box is between the Red and Blue boxes. (vi) The Yellow box is not directly below the Blue box. If the Red and White boxes swap their positions, which box will be below the White box?",
+            "widgets": [
+              {
+                "id": "text66b74bb841cd5",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong>\n</p><div style=\"text-align: justify;\"><strong>Puzzle 1:</strong>\n</div><div style=\"text-align: justify;\">There are six boxes of different colors: Red, Blue, Green, Yellow, Black, and White. They are stacked on top of each other. Based on the clues below, can you determine the order of the boxes from top to bottom?\n</div><div style=\"text-align: justify;\">(i)\tThe Red box is somewhere above the Blue box but below the Green box.\n</div><div style=\"text-align: justify;\">(ii)\tThe Green box is not at the top.\n</div><div style=\"text-align: justify;\">(iii)\tThe Black box is directly below the Green box and directly above the Yellow box.\n</div><div style=\"text-align: justify;\">(iv)\tThe Blue box is not at the bottom.\n</div><div style=\"text-align: justify;\">(v)\tThe White box is between the Red and Blue boxes.\n</div><div style=\"text-align: justify;\">(vi)\tThe Yellow box is not directly below the Blue box.\n</div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">If the Red and White boxes swap their positions, which box will be below the White box?&nbsp;</div>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74bb841d14",
+              "description": {
+                "text": "Red",
+                "widgets": [
+                  {
+                    "id": "text66b74bb841d1a",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Red</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb841d2a",
+              "description": {
+                "text": "Blue",
+                "widgets": [
+                  {
+                    "id": "text66b74bb841d30",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Blue</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb841d45",
+              "description": {
+                "text": "Green",
+                "widgets": [
+                  {
+                    "id": "text66b74bb841d4b",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Green</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb841d5b",
+              "description": {
+                "text": "Yellow",
+                "widgets": [
+                  {
+                    "id": "text66b74bb841d61",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Yellow</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb841d71",
+              "description": {
+                "text": "Black",
+                "widgets": [
+                  {
+                    "id": "text66b74bb841d78",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Black</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74bb841d2a",
+              "text": "Blue",
+              "widgets": [
+                {
+                  "id": "text66b74bb841d30",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>Blue</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<div><br><strong>Puzzle 1:\n </strong>           <br>From\nclue 1, the Red box is above the Blue box but below the Green box. From clue 2,\nthe Green box is not at the top, so the only position left for it is the second\nfrom the top. From clue 3, the Black box is directly below the Green box and\ndirectly above the Yellow box, so the Black box is third from the top and the\nYellow box is fourth. From clue 4, the Blue box is not at the bottom, so it\nmust be fifth from the top. From clue 5, the White box is between the Red and\nBlue boxes, so the White box must be at the top and the Red box must be fourth\nfrom the top. The only position left is the bottom, so the sixth box from the\ntop is the Red box. Therefore, the order from top to bottom is: White, Green,\nBlack, Yellow, Blue, and Red.\nSo, the\nanswers to the questions are:<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/5eb7ec7b53dbecfb85c31e91b5c97744.png\" style=\"width: 80px; height: 193px;\"><br>(B) Blue</div>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74bb841da0",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions : Puzzle 2: There are eight boxes of different colors: Red, Blue, Green, Yellow, Black, White, Pink, and Orange. They are placed in an almirah which has nine shelves, meaning one shelf is empty. Based on the clues below, can you determine the order of the boxes from top to bottom? (i) The Red box is somewhere above the Blue box but below the Green box. (ii) The Green box is not at the top. (iii) The Black box is directly below the Green box and directly above the Yellow box. (iv) The Blue box is not at the bottom. (v) The White box is between the Red and Blue boxes. (vi) The Yellow box is not directly below the Blue box. (vii) The Pink box is directly above the Orange box, and one of them is on the top shelf. (viii) The empty shelf is somewherebetween the Green and Black boxes.Which box is at the top?",
+            "widgets": [
+              {
+                "id": "text66b74bb841da5",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :\n</strong></p><div style=\"text-align: justify;\"><strong>Puzzle 2:\n</strong></div><div style=\"text-align: justify;\">There are eight boxes of different colors: Red, Blue, Green, Yellow, Black, White, Pink, and Orange. They are placed in an almirah which has nine shelves, meaning one shelf is empty. Based on the clues below, can you determine the order of the boxes from top to bottom?\n</div><div style=\"text-align: justify;\">(i)\tThe Red box is somewhere above the Blue box but below the Green box.\n</div><div style=\"text-align: justify;\">(ii)\tThe Green box is not at the top.\n</div><div style=\"text-align: justify;\">(iii)\tThe Black box is directly below the Green box and directly above the Yellow box.\n</div><div style=\"text-align: justify;\">(iv)\tThe Blue box is not at the bottom.\n</div><div style=\"text-align: justify;\">(v)\tThe White box is between the Red and Blue boxes.\n</div><div style=\"text-align: justify;\">(vi)\tThe Yellow box is not directly below the Blue box.\n</div><div style=\"text-align: justify;\">(vii)\tThe Pink box is directly above the Orange box, and one of them is on the top shelf.\n</div><div style=\"text-align: justify;\">(viii)\tThe empty shelf is somewhere&nbsp;<span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">between the Green and Black boxes.</span></div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">Which box is at the top?</div>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74bb841de4",
+              "description": {
+                "text": "Red",
+                "widgets": [
+                  {
+                    "id": "text66b74bb841deb",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Red</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb841dfa",
+              "description": {
+                "text": "Blue",
+                "widgets": [
+                  {
+                    "id": "text66b74bb841e01",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Blue</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb841e10",
+              "description": {
+                "text": "Green",
+                "widgets": [
+                  {
+                    "id": "text66b74bb841e17",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Green</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb841e26",
+              "description": {
+                "text": "Yellow",
+                "widgets": [
+                  {
+                    "id": "text66b74bb841e2d",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Yellow</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb841e49",
+              "description": {
+                "text": "white",
+                "widgets": [
+                  {
+                    "id": "text66b74bb841e50",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>white</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74bb841e49",
+              "text": "white",
+              "widgets": [
+                {
+                  "id": "text66b74bb841e50",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>white</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>Puzzle 2:\n<br>From\nclue 1, the Red box is above the Blue box but below the Green box. From clue 2,\nthe Green box is not at the top, so the only position left for it is the second\nfrom the top. From clue 3, the Black box is directly below the Green box and\ndirectly above the Yellow box, so the Black box is third from the top and the\nYellow box is fourth. From clue 4, the Blue box is not at the bottom, so it\nmust be fifth from the top. From clue 5, the White box is between the Red and\nBlue boxes, so the White box must be at the top and the Red box must be fourth\nfrom the top. From clue 7, the Pink box is directly above the Orange box, and\none of them is on the top shelf, so the Pink box must be sixth from the top and\nthe Orange box must be seventh. The only position left is the bottom, so the\neighth box from the top is the Red box. Therefore, the order from top to bottom\nis: White, Green, Empty Shelf, Black, Yellow, Blue, Pink, Orange, and Red.\nSo,\nthe answers to the questions are:<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/039946bcea9460332ac501fdf7ad14fb.png\" style=\"width: 80px; height: 393px;\"><br><span>(E)\nWhite</span></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74bb841e7c",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions : Puzzle 2: There are eight boxes of different colors: Red, Blue, Green, Yellow, Black, White, Pink, and Orange. They are placed in an almirah which has nine shelves, meaning one shelf is empty. Based on the clues below, can you determine the order of the boxes from top to bottom? (i) The Red box is somewhere above the Blue box but below the Green box. (ii) The Green box is not at the top. (iii) The Black box is directly below the Green box and directly above the Yellow box. (iv) The Blue box is not at the bottom. (v) The White box is between the Red and Blue boxes. (vi) The Yellow box is not directly below the Blue box. (vii) The Pink box is directly above the Orange box, and one of them is on the top shelf. (viii) The empty shelf is somewherebetween the Green and Black boxes.Which box is at the bottom?",
+            "widgets": [
+              {
+                "id": "text66b74bb841e81",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :\n</strong></p><div style=\"text-align: justify;\"><strong>Puzzle 2:\n</strong></div><div style=\"text-align: justify;\">There are eight boxes of different colors: Red, Blue, Green, Yellow, Black, White, Pink, and Orange. They are placed in an almirah which has nine shelves, meaning one shelf is empty. Based on the clues below, can you determine the order of the boxes from top to bottom?\n</div><div style=\"text-align: justify;\">(i)\tThe Red box is somewhere above the Blue box but below the Green box.\n</div><div style=\"text-align: justify;\">(ii)\tThe Green box is not at the top.\n</div><div style=\"text-align: justify;\">(iii)\tThe Black box is directly below the Green box and directly above the Yellow box.\n</div><div style=\"text-align: justify;\">(iv)\tThe Blue box is not at the bottom.\n</div><div style=\"text-align: justify;\">(v)\tThe White box is between the Red and Blue boxes.\n</div><div style=\"text-align: justify;\">(vi)\tThe Yellow box is not directly below the Blue box.\n</div><div style=\"text-align: justify;\">(vii)\tThe Pink box is directly above the Orange box, and one of them is on the top shelf.\n</div><div style=\"text-align: justify;\">(viii)\tThe empty shelf is somewhere&nbsp;<span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">between the Green and Black boxes.</span></div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">Which box is at the bottom?</div>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74bb841ec0",
+              "description": {
+                "text": "Red",
+                "widgets": [
+                  {
+                    "id": "text66b74bb841ec7",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Red</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb841ed6",
+              "description": {
+                "text": "Blue",
+                "widgets": [
+                  {
+                    "id": "text66b74bb841edd",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Blue</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb841eec",
+              "description": {
+                "text": "Green",
+                "widgets": [
+                  {
+                    "id": "text66b74bb841ef3",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Green</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb841f03",
+              "description": {
+                "text": "Yellow",
+                "widgets": [
+                  {
+                    "id": "text66b74bb841f09",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Yellow</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb841f18",
+              "description": {
+                "text": "Black",
+                "widgets": [
+                  {
+                    "id": "text66b74bb841f1f",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Black</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74bb841ec0",
+              "text": "Red",
+              "widgets": [
+                {
+                  "id": "text66b74bb841ec7",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>Red</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br>Puzzle 2:\n<br>From\nclue 1, the Red box is above the Blue box but below the Green box. From clue 2,\nthe Green box is not at the top, so the only position left for it is the second\nfrom the top. From clue 3, the Black box is directly below the Green box and\ndirectly above the Yellow box, so the Black box is third from the top and the\nYellow box is fourth. From clue 4, the Blue box is not at the bottom, so it\nmust be fifth from the top. From clue 5, the White box is between the Red and\nBlue boxes, so the White box must be at the top and the Red box must be fourth\nfrom the top. From clue 7, the Pink box is directly above the Orange box, and\none of them is on the top shelf, so the Pink box must be sixth from the top and\nthe Orange box must be seventh. The only position left is the bottom, so the\neighth box from the top is the Red box. Therefore, the order from top to bottom\nis: White, Green, Empty Shelf, Black, Yellow, Blue, Pink, Orange, and Red.\nSo,\nthe answers to the questions are:<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/039946bcea9460332ac501fdf7ad14fb.png\" style=\"width: 80px; height: 393px;\"><br><span>(A)\nRed</span><br><br>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74bb841f4b",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions : Puzzle 2: There are eight boxes of different colors: Red, Blue, Green, Yellow, Black, White, Pink, and Orange. They are placed in an almirah which has nine shelves, meaning one shelf is empty. Based on the clues below, can you determine the order of the boxes from top to bottom? (i) The Red box is somewhere above the Blue box but below the Green box. (ii) The Green box is not at the top. (iii) The Black box is directly below the Green box and directly above the Yellow box. (iv) The Blue box is not at the bottom. (v) The White box is between the Red and Blue boxes. (vi) The Yellow box is not directly below the Blue box. (vii) The Pink box is directly above the Orange box, and one of them is on the top shelf. (viii) The empty shelf is somewherebetween the Green and Black boxes.Which box is in the middle?",
+            "widgets": [
+              {
+                "id": "text66b74bb841f50",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :\n</strong></p><div style=\"text-align: justify;\"><strong>Puzzle 2:\n</strong></div><div style=\"text-align: justify;\">There are eight boxes of different colors: Red, Blue, Green, Yellow, Black, White, Pink, and Orange. They are placed in an almirah which has nine shelves, meaning one shelf is empty. Based on the clues below, can you determine the order of the boxes from top to bottom?\n</div><div style=\"text-align: justify;\">(i)\tThe Red box is somewhere above the Blue box but below the Green box.\n</div><div style=\"text-align: justify;\">(ii)\tThe Green box is not at the top.\n</div><div style=\"text-align: justify;\">(iii)\tThe Black box is directly below the Green box and directly above the Yellow box.\n</div><div style=\"text-align: justify;\">(iv)\tThe Blue box is not at the bottom.\n</div><div style=\"text-align: justify;\">(v)\tThe White box is between the Red and Blue boxes.\n</div><div style=\"text-align: justify;\">(vi)\tThe Yellow box is not directly below the Blue box.\n</div><div style=\"text-align: justify;\">(vii)\tThe Pink box is directly above the Orange box, and one of them is on the top shelf.\n</div><div style=\"text-align: justify;\">(viii)\tThe empty shelf is somewhere&nbsp;<span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">between the Green and Black boxes.</span></div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">Which box is in the middle?</div>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74bb841f90",
+              "description": {
+                "text": "Red",
+                "widgets": [
+                  {
+                    "id": "text66b74bb841f97",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Red</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb841fa7",
+              "description": {
+                "text": "Blue",
+                "widgets": [
+                  {
+                    "id": "text66b74bb841fad",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Blue</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb841fbd",
+              "description": {
+                "text": "Green",
+                "widgets": [
+                  {
+                    "id": "text66b74bb841fc3",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Green</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb841fd2",
+              "description": {
+                "text": "Yellow",
+                "widgets": [
+                  {
+                    "id": "text66b74bb841fd9",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Yellow</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb841fe8",
+              "description": {
+                "text": "Black",
+                "widgets": [
+                  {
+                    "id": "text66b74bb841fef",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Black</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74bb841fe8",
+              "text": "Black",
+              "widgets": [
+                {
+                  "id": "text66b74bb841fef",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>Black</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br>Puzzle 2:\n<br>From\nclue 1, the Red box is above the Blue box but below the Green box. From clue 2,\nthe Green box is not at the top, so the only position left for it is the second\nfrom the top. From clue 3, the Black box is directly below the Green box and\ndirectly above the Yellow box, so the Black box is third from the top and the\nYellow box is fourth. From clue 4, the Blue box is not at the bottom, so it\nmust be fifth from the top. From clue 5, the White box is between the Red and\nBlue boxes, so the White box must be at the top and the Red box must be fourth\nfrom the top. From clue 7, the Pink box is directly above the Orange box, and\none of them is on the top shelf, so the Pink box must be sixth from the top and\nthe Orange box must be seventh. The only position left is the bottom, so the\neighth box from the top is the Red box. Therefore, the order from top to bottom\nis: White, Green, Empty Shelf, Black, Yellow, Blue, Pink, Orange, and Red.\nSo,\nthe answers to the questions are:<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/039946bcea9460332ac501fdf7ad14fb.png\" style=\"width: 80px; height: 393px;\"><br>(E) Black<br>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74bb84201e",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions : Puzzle 2: There are eight boxes of different colors: Red, Blue, Green, Yellow, Black, White, Pink, and Orange. They are placed in an almirah which has nine shelves, meaning one shelf is empty. Based on the clues below, can you determine the order of the boxes from top to bottom? (i) The Red box is somewhere above the Blue box but below the Green box. (ii) The Green box is not at the top. (iii) The Black box is directly below the Green box and directly above the Yellow box. (iv) The Blue box is not at the bottom. (v) The White box is between the Red and Blue boxes. (vi) The Yellow box is not directly below the Blue box. (vii) The Pink box is directly above the Orange box, and one of them is on the top shelf. (viii) The empty shelf is somewherebetween the Green and Black boxes.If the Green and Yellow boxes swap their positions, which box will be in the middle?",
+            "widgets": [
+              {
+                "id": "text66b74bb842023",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :\n</strong></p><div style=\"text-align: justify;\"><strong>Puzzle 2:\n</strong></div><div style=\"text-align: justify;\">There are eight boxes of different colors: Red, Blue, Green, Yellow, Black, White, Pink, and Orange. They are placed in an almirah which has nine shelves, meaning one shelf is empty. Based on the clues below, can you determine the order of the boxes from top to bottom?\n</div><div style=\"text-align: justify;\">(i)\tThe Red box is somewhere above the Blue box but below the Green box.\n</div><div style=\"text-align: justify;\">(ii)\tThe Green box is not at the top.\n</div><div style=\"text-align: justify;\">(iii)\tThe Black box is directly below the Green box and directly above the Yellow box.\n</div><div style=\"text-align: justify;\">(iv)\tThe Blue box is not at the bottom.\n</div><div style=\"text-align: justify;\">(v)\tThe White box is between the Red and Blue boxes.\n</div><div style=\"text-align: justify;\">(vi)\tThe Yellow box is not directly below the Blue box.\n</div><div style=\"text-align: justify;\">(vii)\tThe Pink box is directly above the Orange box, and one of them is on the top shelf.\n</div><div style=\"text-align: justify;\">(viii)\tThe empty shelf is somewhere&nbsp;<span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">between the Green and Black boxes.</span></div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">If the Green and Yellow boxes swap their positions, which box will be in the middle?</div>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74bb842062",
+              "description": {
+                "text": "Red",
+                "widgets": [
+                  {
+                    "id": "text66b74bb842068",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Red</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb842078",
+              "description": {
+                "text": "Blue",
+                "widgets": [
+                  {
+                    "id": "text66b74bb84207e",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Blue</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb84208d",
+              "description": {
+                "text": "Green",
+                "widgets": [
+                  {
+                    "id": "text66b74bb842094",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Green</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb8420a3",
+              "description": {
+                "text": "Yellow",
+                "widgets": [
+                  {
+                    "id": "text66b74bb8420aa",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Yellow</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb8420b9",
+              "description": {
+                "text": "Black",
+                "widgets": [
+                  {
+                    "id": "text66b74bb8420c0",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Black</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74bb8420a3",
+              "text": "Yellow",
+              "widgets": [
+                {
+                  "id": "text66b74bb8420aa",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>Yellow</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br>Puzzle 2:\n<br>From\nclue 1, the Red box is above the Blue box but below the Green box. From clue 2,\nthe Green box is not at the top, so the only position left for it is the second\nfrom the top. From clue 3, the Black box is directly below the Green box and\ndirectly above the Yellow box, so the Black box is third from the top and the\nYellow box is fourth. From clue 4, the Blue box is not at the bottom, so it\nmust be fifth from the top. From clue 5, the White box is between the Red and\nBlue boxes, so the White box must be at the top and the Red box must be fourth\nfrom the top. From clue 7, the Pink box is directly above the Orange box, and\none of them is on the top shelf, so the Pink box must be sixth from the top and\nthe Orange box must be seventh. The only position left is the bottom, so the\neighth box from the top is the Red box. Therefore, the order from top to bottom\nis: White, Green, Empty Shelf, Black, Yellow, Blue, Pink, Orange, and Red.\nSo,\nthe answers to the questions are:<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/039946bcea9460332ac501fdf7ad14fb.png\" style=\"width: 80px; height: 393px;\"><br><span>(D)\nYellow</span><br>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74bb8420ef",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions : Puzzle 2: There are eight boxes of different colors: Red, Blue, Green, Yellow, Black, White, Pink, and Orange. They are placed in an almirah which has nine shelves, meaning one shelf is empty. Based on the clues below, can you determine the order of the boxes from top to bottom? (i) The Red box is somewhere above the Blue box but below the Green box. (ii) The Green box is not at the top. (iii) The Black box is directly below the Green box and directly above the Yellow box. (iv) The Blue box is not at the bottom. (v) The White box is between the Red and Blue boxes. (vi) The Yellow box is not directly below the Blue box. (vii) The Pink box is directly above the Orange box, and one of them is on the top shelf. (viii) The empty shelf is somewherebetween the Green and Black boxes.If the Red and White boxes swap their positions, which box will be below the White box?",
+            "widgets": [
+              {
+                "id": "text66b74bb8420f3",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :\n</strong></p><div style=\"text-align: justify;\"><strong>Puzzle 2:\n</strong></div><div style=\"text-align: justify;\">There are eight boxes of different colors: Red, Blue, Green, Yellow, Black, White, Pink, and Orange. They are placed in an almirah which has nine shelves, meaning one shelf is empty. Based on the clues below, can you determine the order of the boxes from top to bottom?\n</div><div style=\"text-align: justify;\">(i)\tThe Red box is somewhere above the Blue box but below the Green box.\n</div><div style=\"text-align: justify;\">(ii)\tThe Green box is not at the top.\n</div><div style=\"text-align: justify;\">(iii)\tThe Black box is directly below the Green box and directly above the Yellow box.\n</div><div style=\"text-align: justify;\">(iv)\tThe Blue box is not at the bottom.\n</div><div style=\"text-align: justify;\">(v)\tThe White box is between the Red and Blue boxes.\n</div><div style=\"text-align: justify;\">(vi)\tThe Yellow box is not directly below the Blue box.\n</div><div style=\"text-align: justify;\">(vii)\tThe Pink box is directly above the Orange box, and one of them is on the top shelf.\n</div><div style=\"text-align: justify;\">(viii)\tThe empty shelf is somewhere&nbsp;<span style=\"font-size: 1.6rem; letter-spacing: 0rem;\">between the Green and Black boxes.</span></div><div style=\"text-align: justify;\"><br></div><div style=\"text-align: justify;\">If the Red and White boxes swap their positions, which box will be below the White box?</div>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74bb842136",
+              "description": {
+                "text": "Red",
+                "widgets": [
+                  {
+                    "id": "text66b74bb84213d",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Red</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb84214c",
+              "description": {
+                "text": "Blue",
+                "widgets": [
+                  {
+                    "id": "text66b74bb842153",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Blue</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb842162",
+              "description": {
+                "text": "Green",
+                "widgets": [
+                  {
+                    "id": "text66b74bb842169",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Green</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb842178",
+              "description": {
+                "text": "Yellow",
+                "widgets": [
+                  {
+                    "id": "text66b74bb84217f",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Yellow</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb84218e",
+              "description": {
+                "text": "Black",
+                "widgets": [
+                  {
+                    "id": "text66b74bb842194",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Black</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74bb84214c",
+              "text": "Blue",
+              "widgets": [
+                {
+                  "id": "text66b74bb842153",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>Blue</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br>Puzzle 2:\n<br>From\nclue 1, the Red box is above the Blue box but below the Green box. From clue 2,\nthe Green box is not at the top, so the only position left for it is the second\nfrom the top. From clue 3, the Black box is directly below the Green box and\ndirectly above the Yellow box, so the Black box is third from the top and the\nYellow box is fourth. From clue 4, the Blue box is not at the bottom, so it\nmust be fifth from the top. From clue 5, the White box is between the Red and\nBlue boxes, so the White box must be at the top and the Red box must be fourth\nfrom the top. From clue 7, the Pink box is directly above the Orange box, and\none of them is on the top shelf, so the Pink box must be sixth from the top and\nthe Orange box must be seventh. The only position left is the bottom, so the\neighth box from the top is the Red box. Therefore, the order from top to bottom\nis: White, Green, Empty Shelf, Black, Yellow, Blue, Pink, Orange, and Red.\nSo,\nthe answers to the questions are:<br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/039946bcea9460332ac501fdf7ad14fb.png\" style=\"width: 80px; height: 393px;\"><br><span>(B)\nBlue</span><br>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        }
+      ]
+    }
+  ],
+  "submitted": true,
+  "updated": true,
+  "retryCount": 3,
+  "inlineFeedback": [],
+  "errors": [],
+  "success": true
+}

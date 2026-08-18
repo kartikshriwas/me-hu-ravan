@@ -1,0 +1,3105 @@
+{
+  "submission": {
+    "anon_id": null,
+    "model": "assessment-submission",
+    "courseTitleId": "aptitude-teacher2",
+    "object_id": "66b74bb97f809db01009523f",
+    "assessmentId": "66b74bb97f809db01009523e",
+    "snapshotId": "66ced9b20f9638108f088075",
+    "questions": {
+      "section66b74bb98759f": [
+        "mc66b74bb9875a6",
+        "mc66b74bb987654",
+        "mc66b74bb98770b",
+        "mc66b74bb9877e8",
+        "mc66b74bb987897",
+        "mc66b74bb98794a",
+        "mc66b74bb9879f4",
+        "mc66b74bb987aab",
+        "mc66b74bb987b60",
+        "mc66b74bb987c22"
+      ]
+    },
+    "certificateAnswers": [],
+    "certificateId": null,
+    "questionData": {
+      "mc66b74bb9875a6": {
+        "deliveredOnTimestamp": 1786440566.833071,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74bb987654": {
+        "deliveredOnTimestamp": 1786440566.833093,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74bb98770b": {
+        "deliveredOnTimestamp": 1786440566.833106,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74bb9877e8": {
+        "deliveredOnTimestamp": 1786440566.833117,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74bb987897": {
+        "deliveredOnTimestamp": 1786440566.833127,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74bb98794a": {
+        "deliveredOnTimestamp": 1786440566.833137,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74bb9879f4": {
+        "deliveredOnTimestamp": 1786440566.833148,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74bb987aab": {
+        "deliveredOnTimestamp": 1786440566.833158,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74bb987b60": {
+        "deliveredOnTimestamp": 1786440566.833168,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74bb987c22": {
+        "deliveredOnTimestamp": 1786440566.833178,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      }
+    },
+    "answers": [
+      {
+        "blockId": "mc66b74bb9875a6",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74bb987654",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74bb98770b",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74bb9877e8",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74bb987897",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74bb98794a",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74bb9879f4",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74bb987aab",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74bb987b60",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74bb987c22",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      }
+    ],
+    "submittedTimestamp": 1786440567.056536,
+    "status": "submitted",
+    "grading_status": "grading_status_graded",
+    "access": "public",
+    "actual_score": null,
+    "score": {
+      "maxScore": 10,
+      "value": 0,
+      "pass": false,
+      "passGrade": 50,
+      "points": 0
+    },
+    "source": {
+      "type": "unit"
+    },
+    "isDefining": true,
+    "isAdminAutoGradedSubmission": null,
+    "listOfNonConsentedBlocks": [],
+    "created": 1786440566.838773,
+    "modified": 1786440567.200302,
+    "id": "6a7aeb76de831fdb8c08cb99",
+    "passed": false
+  },
+  "assessment": {
+    "title": "Practice Test Paper (Easy)",
+    "access": "public",
+    "type": "assessment",
+    "model": "assessmentSnapshot",
+    "description": "Foundational practice test paper containing 10 assessment questions covering Seating Arrangements.",
+    "isTimed": false,
+    "timerFor": "assessmentTimed",
+    "onTimerExpiration": "autoSubmit",
+    "assessmentTimeLimitInSeconds": 600,
+    "questionTimeLimitInSeconds": 60,
+    "standaloneShareEnabled": null,
+    "customUrl": null,
+    "usesCustomUrl": null,
+    "allowAnonymous": true,
+    "randomizeQuestionOptions": false,
+    "disallowPartialSubmissions": false,
+    "submissionDueDateEnabled": false,
+    "submissionDueDate": 1626257823,
+    "makeFeedbackAvailableAfterDateEnabled": false,
+    "makeFeedbackAvailableAfterDate": 0,
+    "customStylesEnabled": true,
+    "customStyles": {
+      "assessmentPage": {
+        "background": {
+          "type": "color",
+          "colorData": {
+            "code": "",
+            "class": "lw-body-bg"
+          }
+        },
+        "dividers": {
+          "top": {
+            "orientation": "top",
+            "divider": "none"
+          },
+          "bottom": {
+            "orientation": "bottom",
+            "divider": "none"
+          }
+        }
+      },
+      "option": {
+        "radioEffect": "scribble",
+        "checkboxEffect": "scribble",
+        "size": "small"
+      },
+      "assessment": {
+        "transition": "none",
+        "background": {
+          "type": "color",
+          "colorData": {
+            "code": "",
+            "class": ""
+          }
+        },
+        "width": "normal",
+        "timerTemplate": "rectangle"
+      },
+      "linearRating": {
+        "labels": {
+          "size": "small"
+        }
+      },
+      "question": {
+        "description": {
+          "background": {
+            "type": "color",
+            "colorData": {
+              "code": "",
+              "class": ""
+            }
+          },
+          "type": "p",
+          "size": "small"
+        },
+        "answers": {
+          "background": {
+            "type": "color",
+            "colorData": {
+              "code": "",
+              "class": ""
+            }
+          }
+        },
+        "requiredAsterisk": {
+          "colorData": {
+            "code": "#ff0000",
+            "class": ""
+          }
+        },
+        "errorMessages": {
+          "size": "verySmall",
+          "colorData": {
+            "code": "#ff0000",
+            "class": ""
+          }
+        }
+      },
+      "input": {
+        "size": "small",
+        "type": "solidDark"
+      },
+      "textarea": {
+        "size": "small",
+        "type": "solidDark"
+      },
+      "dropdown": {
+        "size": "small",
+        "type": "solidDark"
+      }
+    },
+    "submissionMode": "all",
+    "startingDate": 1626765704,
+    "startingDateEnabled": false,
+    "showOnlyFailedQuestionsOnRetry": false,
+    "retryEnabled": true,
+    "retryOnFailOnly": false,
+    "gradingMethod": null,
+    "maxTries": null,
+    "onlyWrongOnRetake": null,
+    "isAmendable": false,
+    "feedbackShowOnScreen": true,
+    "feedbackDownloadPDF": false,
+    "feedbackShowInline": null,
+    "feedbackQuestionList": "all-questions",
+    "feedbackShowQuestionScore": true,
+    "feedbackShowFeedback": true,
+    "feedbackShowNumbering": false,
+    "feedbackShowSectionTitles": false,
+    "feedbackShowUserAnswers": true,
+    "feedbackShowCorrectAnswers": true,
+    "feedbackShowAnswerCorrectness": true,
+    "displayInlineFeedbackEnabled": null,
+    "displayBackButtonWhenSubmissionPerBlock": null,
+    "feedbackShowSectionResultSummary": false,
+    "askConfirmationBeforeSubmit": true,
+    "hasCustomConfirmationBeforeSubmitText": false,
+    "customConfirmationBeforeSubmitText": "Are you sure you want to submit the questionnaire?",
+    "customConfirmationBeforeSubmitTexts": {
+      "title": "Submit Assessment?",
+      "baseConfirmationMessage": "Are you sure you want to submit the questionnaire?",
+      "unansweredNotice": "You have not answered {X} questions."
+    },
+    "amendResubmissionMinutes": 30,
+    "passingGrade": null,
+    "navigationMode": "per-block",
+    "conditionalBlocks": {
+      "introContent": {
+        "id": "content66b74bb9874ef",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66b74bb9874ff",
+              "type": "text",
+              "insertedAsWidget": true,
+              "properties": {
+                "html": "Puzzles - Days/Months based PAPER LEVEL-1",
+                "alignment": "center",
+                "customStyle": true,
+                "type": "h2",
+                "size": "normal"
+              }
+            },
+            {
+              "id": "text66b74bb987510",
+              "type": "text",
+              "properties": {
+                "html": "Self-assess your knowledge. Express yourself and get feedback from our instructors.",
+                "customStyle": true,
+                "alignment": "center"
+              }
+            },
+            {
+              "id": "spacer66b74bb98751a",
+              "type": "spacer",
+              "properties": {
+                "height": 20,
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            },
+            {
+              "id": "button66b74bb987527",
+              "type": "button",
+              "properties": {
+                "buttonLabel": "<span>Ready to start</span>",
+                "buttonSize": "normal",
+                "buttonType": "solidBrand",
+                "alignment": "center",
+                "linkData": {
+                  "linkType": "goToFirst"
+                },
+                "iconColorData": {
+                  "code": "",
+                  "class": ""
+                },
+                "iconDisplay": false,
+                "iconSize": 26,
+                "iconClassName": " fas fa-angle-right",
+                "iconPosition": "right"
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "variables": {
+            "conditionalBlocks_introContent_blockData_widgets_0": [],
+            "conditionalBlocks_introContent_blockData_widgets_1": []
+          }
+        }
+      },
+      "submissionStartingDate": {
+        "id": "content66b74bb987548",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66b74bb98754d",
+              "type": "text",
+              "properties": {
+                "html": "Sorry but this assessment hasn't started yet."
+              }
+            },
+            {
+              "id": "date66b74bb987554",
+              "type": "date",
+              "properties": {
+                "value": ""
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "displayConditions": ["startingDate"]
+        }
+      },
+      "submissionDueDate": {
+        "id": "content66b74bb987560",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66b74bb987565",
+              "type": "text",
+              "properties": {
+                "html": "Sorry but this assessment date is due."
+              }
+            },
+            {
+              "id": "date66b74bb98756b",
+              "type": "date",
+              "properties": {
+                "value": ""
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "displayConditions": ["dateIsDue"]
+        }
+      },
+      "outroContent": {
+        "id": "content66b74bb987577",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "userResults66b74bb98757b",
+              "type": "userResults",
+              "properties": {
+                "layout": "template2",
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            },
+            {
+              "id": "feedback66b74bb987588",
+              "type": "feedback",
+              "properties": []
+            },
+            {
+              "id": "outroActions66b74bb98758e",
+              "type": "outroActions",
+              "properties": {
+                "layout": "",
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true
+        }
+      }
+    },
+    "systemSections": null,
+    "sections": [
+      {
+        "id": "section66b74bb98759f",
+        "title": "",
+        "type": "section",
+        "navigationMode": "per-block",
+        "blocks": [
+          {
+            "id": "mc66b74bb9875a6",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bb9875ac",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong></p><p style=\"text-align: justify;\"><strong>Set 1: Day-Based Puzzle</strong>\n</p><p style=\"text-align: justify;\">Five superheroes (Ironman, Thor, Hulk, Captain America, Black Widow) have meetings on different days of the week (Monday, Tuesday, Wednesday, Thursday, and Friday). Based on the following clues, can you figure out who has a meeting on which day?\n</p><p style=\"text-align: justify;\">1. \tIronman has a meeting the day before Hulk.\n</p><p style=\"text-align: justify;\">2. \tThor has a meeting sometime after Black Widow.\n</p><p style=\"text-align: justify;\">3. \tCaptain America does not have a meeting on Monday or Tuesday.\n</p><p style=\"text-align: justify;\">4. \tBlack Widow has a meeting the day after Ironman.\n</p><p style=\"text-align: justify;\">5. \tHulk has a meeting on Wednesday.\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">Who has a meeting on Monday?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74bb9875be",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74bb9875c5",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74bb9875cd",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74bb9875ed",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb9875f4",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Ironman</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb987604",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb98760b",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Thor</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb98761a",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb987621",
+                        "type": "text",
+                        "properties": {
+                          "html": "Captain America"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb987630",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb987637",
+                        "type": "text",
+                        "properties": {
+                          "html": "Black Widow"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74bb987654",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bb987659",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong></p><p style=\"text-align: justify;\"><strong>Set 1: Day-Based Puzzle</strong>\n</p><p style=\"text-align: justify;\">Five superheroes (Ironman, Thor, Hulk, Captain America, Black Widow) have meetings on different days of the week (Monday, Tuesday, Wednesday, Thursday, and Friday). Based on the following clues, can you figure out who has a meeting on which day?\n</p><p style=\"text-align: justify;\">1. \tIronman has a meeting the day before Hulk.\n</p><p style=\"text-align: justify;\">2. \tThor has a meeting sometime after Black Widow.\n</p><p style=\"text-align: justify;\">3. \tCaptain America does not have a meeting on Monday or Tuesday.\n</p><p style=\"text-align: justify;\">4. \tBlack Widow has a meeting the day after Ironman.\n</p><p style=\"text-align: justify;\">5. \tHulk has a meeting on Wednesday.\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">Who has a meeting on Tuesday?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74bb98766a",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74bb987671",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74bb987678",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74bb98769d",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb9876a4",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Ironman</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb9876b3",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb9876b9",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Thor</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb9876c8",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb9876cf",
+                        "type": "text",
+                        "properties": {
+                          "html": "Captain America"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb9876de",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb9876e5",
+                        "type": "text",
+                        "properties": {
+                          "html": "Black Widow"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_1": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74bb98770b",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bb98770f",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong></p><p style=\"text-align: justify;\"><strong>Set 1: Day-Based Puzzle</strong>\n</p><p style=\"text-align: justify;\">Five superheroes (Ironman, Thor, Hulk, Captain America, Black Widow) have meetings on different days of the week (Monday, Tuesday, Wednesday, Thursday, and Friday). Based on the following clues, can you figure out who has a meeting on which day?\n</p><p style=\"text-align: justify;\">1. \tIronman has a meeting the day before Hulk.\n</p><p style=\"text-align: justify;\">2. \tThor has a meeting sometime after Black Widow.\n</p><p style=\"text-align: justify;\">3. \tCaptain America does not have a meeting on Monday or Tuesday.\n</p><p style=\"text-align: justify;\">4. \tBlack Widow has a meeting the day after Ironman.\n</p><p style=\"text-align: justify;\">5. \tHulk has a meeting on Wednesday.\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">Who has a meeting on Thursday?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74bb987721",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74bb987727",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74bb98772f",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74bb98774e",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb987755",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Ironman</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb987764",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb98776b",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Thor</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb987779",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb98779a",
+                        "type": "text",
+                        "properties": {
+                          "html": "Captain America"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb9877b5",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb9877c1",
+                        "type": "text",
+                        "properties": {
+                          "html": "Black Widow"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_2": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74bb9877e8",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bb9877ed",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong></p><p style=\"text-align: justify;\"><strong>Set 1: Day-Based Puzzle</strong>\n</p><p style=\"text-align: justify;\">Five superheroes (Ironman, Thor, Hulk, Captain America, Black Widow) have meetings on different days of the week (Monday, Tuesday, Wednesday, Thursday, and Friday). Based on the following clues, can you figure out who has a meeting on which day?\n</p><p style=\"text-align: justify;\">1. \tIronman has a meeting the day before Hulk.\n</p><p style=\"text-align: justify;\">2. \tThor has a meeting sometime after Black Widow.\n</p><p style=\"text-align: justify;\">3. \tCaptain America does not have a meeting on Monday or Tuesday.\n</p><p style=\"text-align: justify;\">4. \tBlack Widow has a meeting the day after Ironman.\n</p><p style=\"text-align: justify;\">5. \tHulk has a meeting on Wednesday.\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">Who has a meeting on Friday?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74bb9877fe",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74bb987805",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74bb98780c",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74bb98782c",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb987832",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Ironman</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb987842",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb987849",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Thor</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb987858",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb98785f",
+                        "type": "text",
+                        "properties": {
+                          "html": "Captain America"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb98786e",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb987874",
+                        "type": "text",
+                        "properties": {
+                          "html": "Black Widow"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_description_widgets_0": [],
+                "sections_0_blocks_3": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74bb987897",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bb98789c",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong></p><p style=\"text-align: justify;\"><strong>Set 1: Day-Based Puzzle</strong>\n</p><p style=\"text-align: justify;\">Five superheroes (Ironman, Thor, Hulk, Captain America, Black Widow) have meetings on different days of the week (Monday, Tuesday, Wednesday, Thursday, and Friday). Based on the following clues, can you figure out who has a meeting on which day?\n</p><p style=\"text-align: justify;\">1. \tIronman has a meeting the day before Hulk.\n</p><p style=\"text-align: justify;\">2. \tThor has a meeting sometime after Black Widow.\n</p><p style=\"text-align: justify;\">3. \tCaptain America does not have a meeting on Monday or Tuesday.\n</p><p style=\"text-align: justify;\">4. \tBlack Widow has a meeting the day after Ironman.\n</p><p style=\"text-align: justify;\">5. \tHulk has a meeting on Wednesday.\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">Who has a meeting the day before Thor?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74bb9878ad",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74bb9878b4",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74bb9878bb",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74bb9878da",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb9878e1",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Ironman</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb9878f0",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb9878f7",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Hulk</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb987906",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb98790d",
+                        "type": "text",
+                        "properties": {
+                          "html": "Captain America"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb98791c",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb987923",
+                        "type": "text",
+                        "properties": {
+                          "html": "Black Widow"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74bb98794a",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bb98794f",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong></p><p style=\"text-align: justify;\"><strong>Set 2: Month-Based Puzzle</strong>\n</p><p style=\"text-align: justify;\">Four superheroes (Superman, Batman, Wonder Woman, Flash) were born in different months (January, February, March, April). Based on the following clues, can you figure out who was born in which month?\n</p><p style=\"text-align: justify;\">1. \tSuperman was born in a month before Wonder Woman.\n</p><p style=\"text-align: justify;\">2. \tBatman was not born in January or February.\n</p><p style=\"text-align: justify;\">3. \tFlash was born in the month after Batman.\n</p><p style=\"text-align: justify;\">4. \tWonder Woman was born in March.\n</p><p style=\"text-align: justify;\">5. \tSuperman was not born in January.\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">Who was born in January?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74bb987960",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74bb987967",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74bb98796e",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74bb98798c",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb987993",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Superman</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb9879a2",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb9879a9",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Batman</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb9879b8",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb9879be",
+                        "type": "text",
+                        "properties": {
+                          "html": "Wonder Woman"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb9879cd",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb9879d4",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Flash</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_5_blockData_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74bb9879f4",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bb9879f8",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong></p><p style=\"text-align: justify;\"><strong>Set 2: Month-Based Puzzle</strong>\n</p><p style=\"text-align: justify;\">Four superheroes (Superman, Batman, Wonder Woman, Flash) were born in different months (January, February, March, April). Based on the following clues, can you figure out who was born in which month?\n</p><p style=\"text-align: justify;\">1. \tSuperman was born in a month before Wonder Woman.\n</p><p style=\"text-align: justify;\">2. \tBatman was not born in January or February.\n</p><p style=\"text-align: justify;\">3. \tFlash was born in the month after Batman.\n</p><p style=\"text-align: justify;\">4. \tWonder Woman was born in March.\n</p><p style=\"text-align: justify;\">5. \tSuperman was not born in January.\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">Who was born in February?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74bb987a0a",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74bb987a10",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74bb987a18",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74bb987a37",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb987a3e",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Superman</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb987a4d",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb987a54",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Batman</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb987a63",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb987a6d",
+                        "type": "text",
+                        "properties": {
+                          "html": "Wonder Woman"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb987a7c",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb987a83",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Flash</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_5_blockData_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5": [],
+                "sections_0_blocks_6_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_6": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74bb987aab",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bb987ab0",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong></p><p style=\"text-align: justify;\"><strong>Set 2: Month-Based Puzzle</strong>\n</p><p style=\"text-align: justify;\">Four superheroes (Superman, Batman, Wonder Woman, Flash) were born in different months (January, February, March, April). Based on the following clues, can you figure out who was born in which month?\n</p><p style=\"text-align: justify;\">1. \tSuperman was born in a month before Wonder Woman.\n</p><p style=\"text-align: justify;\">2. \tBatman was not born in January or February.\n</p><p style=\"text-align: justify;\">3. \tFlash was born in the month after Batman.\n</p><p style=\"text-align: justify;\">4. \tWonder Woman was born in March.\n</p><p style=\"text-align: justify;\">5. \tSuperman was not born in January.\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">Who was born in March?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74bb987ac1",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74bb987ac8",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74bb987ad0",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74bb987aef",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb987af5",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Superman</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb987b04",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb987b0b",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Batman</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb987b1a",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb987b21",
+                        "type": "text",
+                        "properties": {
+                          "html": "Wonder Woman"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb987b30",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb987b36",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Flash</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_5_blockData_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5": [],
+                "sections_0_blocks_7_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_7": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74bb987b60",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bb987b73",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong></p><p style=\"text-align: justify;\"><strong>Set 2: Month-Based Puzzle</strong>\n</p><p style=\"text-align: justify;\">Four superheroes (Superman, Batman, Wonder Woman, Flash) were born in different months (January, February, March, April). Based on the following clues, can you figure out who was born in which month?\n</p><p style=\"text-align: justify;\">1. \tSuperman was born in a month before Wonder Woman.\n</p><p style=\"text-align: justify;\">2. \tBatman was not born in January or February.\n</p><p style=\"text-align: justify;\">3. \tFlash was born in the month after Batman.\n</p><p style=\"text-align: justify;\">4. \tWonder Woman was born in March.\n</p><p style=\"text-align: justify;\">5. \tSuperman was not born in January.\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">Who was born in April?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74bb987b84",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74bb987b8b",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74bb987b92",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74bb987bb1",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb987bb8",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Superman</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb987bc7",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb987bce",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Batman</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb987bdd",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb987be3",
+                        "type": "text",
+                        "properties": {
+                          "html": "Wonder Woman"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb987bf2",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb987bf9",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Flash</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_5_blockData_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5": [],
+                "sections_0_blocks_8_blockData_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_8": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74bb987c22",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bb987c27",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong></p><p style=\"text-align: justify;\"><strong>Set 2: Month-Based Puzzle</strong>\n</p><p style=\"text-align: justify;\">Four superheroes (Superman, Batman, Wonder Woman, Flash) were born in different months (January, February, March, April). Based on the following clues, can you figure out who was born in which month?\n</p><p style=\"text-align: justify;\">1. \tSuperman was born in a month before Wonder Woman.\n</p><p style=\"text-align: justify;\">2. \tBatman was not born in January or February.\n</p><p style=\"text-align: justify;\">3. \tFlash was born in the month after Batman.\n</p><p style=\"text-align: justify;\">4. \tWonder Woman was born in March.\n</p><p style=\"text-align: justify;\">5. \tSuperman was not born in January.\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">Who was born the month before Flash?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74bb987c38",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74bb987c3f",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74bb987c46",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74bb987c65",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb987c6b",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Superman</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb987c7a",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb987c81",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Batman</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb987c90",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb987c97",
+                        "type": "text",
+                        "properties": {
+                          "html": "Wonder Woman"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bb987ca6",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bb987cad",
+                        "type": "text",
+                        "properties": {
+                          "html": "Not applicable"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_5_blockData_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5": [],
+                "sections_0_blocks_9_blockData_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_9": []
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "availabilityStatus": null,
+    "autoNavigationEnabled": false,
+    "displayBackButtonWhenNavigationPerBlock": true,
+    "saveAndResumeLaterEnabled": null,
+    "tagsAddedOnCompletion": [],
+    "tagsAddedOnPass": [],
+    "sendAnonymousSubmissionsToEmailLeads": false,
+    "afterSubmitActionEnabled": null,
+    "afterSubmitActionProperties": null,
+    "showWizardOnNextEdit": false,
+    "revisitAfterSubmissionAction": null,
+    "navigationTemplate": "HorizontalSpacedBetweenNavigationTemplate",
+    "learnerSearchBarEnabled": true,
+    "learnerUnansweredQuestionsEnabled": true,
+    "learnerFavouriteQuestionEnabled": true,
+    "learnerCompletionProgressEnabled": true,
+    "learnerShowIndexOfQuestionsEnabled": false,
+    "learnerTimeNotificationsEnabled": false,
+    "learnerAllowInterruptionsEnabled": true,
+    "learnerAllowInterruptionsTimeoutInMinutes": 30,
+    "learnerReclaimTryOnInterruptionTimeoutEnabled": false,
+    "learnerAskBeforeContinueToSaved": true,
+    "learnerAutoSaveEnabled": null,
+    "spellcheckDisabled": null,
+    "showPartialScoreOnSubmission": true,
+    "deliverableQuestionsSubsetType": "all",
+    "questionRandomizationType": "none",
+    "serveQuestionsBasedOnPreviousSubmission": null,
+    "scoringDisabled": false,
+    "isSelfAssessment": false,
+    "useDefaultCertificateTemplate": null,
+    "certificateTemplate": null,
+    "certificateSocialShare": null,
+    "migrationData": null,
+    "useAssessmentPassingGradeForOpenEndedCorrectness": true,
+    "openEndedCorrectnessPassingGrade": null,
+    "showScorePercentage": null,
+    "showScorePoints": null,
+    "showScoreCorrectAnswers": null,
+    "editorBehaviorSettings": null,
+    "manualReviewEnabled": null,
+    "resultsSummary": {
+      "enabled": true,
+      "showStatusIcon": true,
+      "showStatusText": true,
+      "showScorePercentage": true,
+      "showScorePoints": true,
+      "showScoreCorrectAnswers": false,
+      "showTimeTakenToComplete": true,
+      "showDateSubmitted": true,
+      "showAttemptCount": true
+    },
+    "meta": null,
+    "submissionsCount": 814,
+    "fromMarketplace": null,
+    "aiFeedbackEnabled": null,
+    "numberOfFeedbackQuestions": null,
+    "created": 1723288505.978455,
+    "modified": 1724832178.42771,
+    "contentHash": "0d1d5953ae7bf303f1b2bd281124d8dfe0506d6b40fef296e2e91a78e6cd0b69",
+    "id": "66b74bb97f809db01009523e",
+    "objectType": "assessment",
+    "isEditBlockedDueToSync": false,
+    "variables": {
+      "submission": {
+        "self": {
+          "score": 0,
+          "points": 0,
+          "total_points": 10,
+          "correct_answers": 0,
+          "total_questions": 10,
+          "time_spent": "00:00:01",
+          "date_submitted": "11/08/26",
+          "attempt_count": 3,
+          "max_tries": null,
+          "pass_grade": 50,
+          "time_spent_seconds": 1,
+          "raw_start_date": 1786440566.838773
+        }
+      },
+      "school": {
+        "name": "Apna College",
+        "url": "www.apnacollege.in",
+        "description": "The most loved coding community of India ❤️"
+      },
+      "user": {
+        "username": "ram",
+        "email": "p4542639@gmail.com",
+        "cf_phonenumber": "7666690798"
+      }
+    }
+  },
+  "reclaimedTry": false,
+  "feedback": [
+    {
+      "title": "",
+      "id": "section66b74bb98759f",
+      "blocks": [
+        {
+          "id": "mc66b74bb9875a6",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions :Set 1: Day-Based Puzzle Five superheroes (Ironman, Thor, Hulk, Captain America, Black Widow) have meetings on different days of the week (Monday, Tuesday, Wednesday, Thursday, and Friday). Based on the following clues, can you figure out who has a meeting on which day? 1. Ironman has a meeting the day before Hulk. 2. Thor has a meeting sometime after Black Widow. 3. Captain America does not have a meeting on Monday or Tuesday. 4. Black Widow has a meeting the day after Ironman. 5. Hulk has a meeting on Wednesday. Who has a meeting on Monday?",
+            "widgets": [
+              {
+                "id": "text66b74bb9875ac",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong></p><p style=\"text-align: justify;\"><strong>Set 1: Day-Based Puzzle</strong>\n</p><p style=\"text-align: justify;\">Five superheroes (Ironman, Thor, Hulk, Captain America, Black Widow) have meetings on different days of the week (Monday, Tuesday, Wednesday, Thursday, and Friday). Based on the following clues, can you figure out who has a meeting on which day?\n</p><p style=\"text-align: justify;\">1. \tIronman has a meeting the day before Hulk.\n</p><p style=\"text-align: justify;\">2. \tThor has a meeting sometime after Black Widow.\n</p><p style=\"text-align: justify;\">3. \tCaptain America does not have a meeting on Monday or Tuesday.\n</p><p style=\"text-align: justify;\">4. \tBlack Widow has a meeting the day after Ironman.\n</p><p style=\"text-align: justify;\">5. \tHulk has a meeting on Wednesday.\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">Who has a meeting on Monday?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74bb9875ed",
+              "description": {
+                "text": "Ironman",
+                "widgets": [
+                  {
+                    "id": "text66b74bb9875f4",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Ironman</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb987604",
+              "description": {
+                "text": "Thor",
+                "widgets": [
+                  {
+                    "id": "text66b74bb98760b",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Thor</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb98761a",
+              "description": {
+                "text": "Captain America",
+                "widgets": [
+                  {
+                    "id": "text66b74bb987621",
+                    "type": "text",
+                    "properties": {
+                      "html": "Captain America"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb987630",
+              "description": {
+                "text": "Black Widow",
+                "widgets": [
+                  {
+                    "id": "text66b74bb987637",
+                    "type": "text",
+                    "properties": {
+                      "html": "Black Widow"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74bb9875ed",
+              "text": "Ironman",
+              "widgets": [
+                {
+                  "id": "text66b74bb9875f4",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>Ironman</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>Based on the clues, the schedule of \nmeetings is as follows:<br>- Monday: Ironman (From clues 1 and 4, \nIronman has a meeting the day before \nHulk, and Hulk has a meeting on \nWednesday. So, Ironman has a meeting on \nTuesday. But from clue 4, Black Widow has \na meeting the day after Ironman, which \nwould be Wednesday, but Wednesday is \nalready taken by Hulk. So, Ironman must \nhave a meeting on Monday.)\n<br>- Tuesday: Black Widow (From clue 4, \nBlack Widow has a meeting the day after \nIronman, so she has a meeting on \nTuesday.) <br>- Wednesday: Hulk (From clue 5, Hulk has \na meeting on Wednesday.)<br>- Thursday: Captain America (From clues 2 \nand 3, Thor has a meeting sometime after \nBlack Widow, and Captain America does \nnot have a meeting on Monday or Tuesday. \nSo, Captain America has a meeting on \nThursday.)\n<br>- Friday: Thor (From clues 2 and 3, Thor \nhas a meeting sometime after Black \nWidow, and since Thursday is taken by \nCaptain America, Thor has a meeting on \nFriday.)<br><span>(A)\nIronman</span></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74bb987654",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions :Set 1: Day-Based Puzzle Five superheroes (Ironman, Thor, Hulk, Captain America, Black Widow) have meetings on different days of the week (Monday, Tuesday, Wednesday, Thursday, and Friday). Based on the following clues, can you figure out who has a meeting on which day? 1. Ironman has a meeting the day before Hulk. 2. Thor has a meeting sometime after Black Widow. 3. Captain America does not have a meeting on Monday or Tuesday. 4. Black Widow has a meeting the day after Ironman. 5. Hulk has a meeting on Wednesday. Who has a meeting on Tuesday?",
+            "widgets": [
+              {
+                "id": "text66b74bb987659",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong></p><p style=\"text-align: justify;\"><strong>Set 1: Day-Based Puzzle</strong>\n</p><p style=\"text-align: justify;\">Five superheroes (Ironman, Thor, Hulk, Captain America, Black Widow) have meetings on different days of the week (Monday, Tuesday, Wednesday, Thursday, and Friday). Based on the following clues, can you figure out who has a meeting on which day?\n</p><p style=\"text-align: justify;\">1. \tIronman has a meeting the day before Hulk.\n</p><p style=\"text-align: justify;\">2. \tThor has a meeting sometime after Black Widow.\n</p><p style=\"text-align: justify;\">3. \tCaptain America does not have a meeting on Monday or Tuesday.\n</p><p style=\"text-align: justify;\">4. \tBlack Widow has a meeting the day after Ironman.\n</p><p style=\"text-align: justify;\">5. \tHulk has a meeting on Wednesday.\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">Who has a meeting on Tuesday?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74bb98769d",
+              "description": {
+                "text": "Ironman",
+                "widgets": [
+                  {
+                    "id": "text66b74bb9876a4",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Ironman</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb9876b3",
+              "description": {
+                "text": "Thor",
+                "widgets": [
+                  {
+                    "id": "text66b74bb9876b9",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Thor</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb9876c8",
+              "description": {
+                "text": "Captain America",
+                "widgets": [
+                  {
+                    "id": "text66b74bb9876cf",
+                    "type": "text",
+                    "properties": {
+                      "html": "Captain America"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb9876de",
+              "description": {
+                "text": "Black Widow",
+                "widgets": [
+                  {
+                    "id": "text66b74bb9876e5",
+                    "type": "text",
+                    "properties": {
+                      "html": "Black Widow"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74bb9876de",
+              "text": "Black Widow",
+              "widgets": [
+                {
+                  "id": "text66b74bb9876e5",
+                  "type": "text",
+                  "properties": {
+                    "html": "Black Widow"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>Based on the clues, the schedule of \nmeetings is as follows:<br>- Monday: Ironman (From clues 1 and 4, \nIronman has a meeting the day before \nHulk, and Hulk has a meeting on \nWednesday. So, Ironman has a meeting on \nTuesday. But from clue 4, Black Widow has \na meeting the day after Ironman, which \nwould be Wednesday, but Wednesday is \nalready taken by Hulk. So, Ironman must \nhave a meeting on Monday.)\n<br>- Tuesday: Black Widow (From clue 4, \nBlack Widow has a meeting the day after \nIronman, so she has a meeting on \nTuesday.) <br>- Wednesday: Hulk (From clue 5, Hulk has \na meeting on Wednesday.)<br>- Thursday: Captain America (From clues 2 \nand 3, Thor has a meeting sometime after \nBlack Widow, and Captain America does \nnot have a meeting on Monday or Tuesday. \nSo, Captain America has a meeting on \nThursday.)\n<br>- Friday: Thor (From clues 2 and 3, Thor \nhas a meeting sometime after Black \nWidow, and since Thursday is taken by \nCaptain America, Thor has a meeting on \nFriday.)<br><span>(D)\nBlack Widow</span></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74bb98770b",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions :Set 1: Day-Based Puzzle Five superheroes (Ironman, Thor, Hulk, Captain America, Black Widow) have meetings on different days of the week (Monday, Tuesday, Wednesday, Thursday, and Friday). Based on the following clues, can you figure out who has a meeting on which day? 1. Ironman has a meeting the day before Hulk. 2. Thor has a meeting sometime after Black Widow. 3. Captain America does not have a meeting on Monday or Tuesday. 4. Black Widow has a meeting the day after Ironman. 5. Hulk has a meeting on Wednesday. Who has a meeting on Thursday?",
+            "widgets": [
+              {
+                "id": "text66b74bb98770f",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong></p><p style=\"text-align: justify;\"><strong>Set 1: Day-Based Puzzle</strong>\n</p><p style=\"text-align: justify;\">Five superheroes (Ironman, Thor, Hulk, Captain America, Black Widow) have meetings on different days of the week (Monday, Tuesday, Wednesday, Thursday, and Friday). Based on the following clues, can you figure out who has a meeting on which day?\n</p><p style=\"text-align: justify;\">1. \tIronman has a meeting the day before Hulk.\n</p><p style=\"text-align: justify;\">2. \tThor has a meeting sometime after Black Widow.\n</p><p style=\"text-align: justify;\">3. \tCaptain America does not have a meeting on Monday or Tuesday.\n</p><p style=\"text-align: justify;\">4. \tBlack Widow has a meeting the day after Ironman.\n</p><p style=\"text-align: justify;\">5. \tHulk has a meeting on Wednesday.\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">Who has a meeting on Thursday?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74bb98774e",
+              "description": {
+                "text": "Ironman",
+                "widgets": [
+                  {
+                    "id": "text66b74bb987755",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Ironman</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb987764",
+              "description": {
+                "text": "Thor",
+                "widgets": [
+                  {
+                    "id": "text66b74bb98776b",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Thor</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb987779",
+              "description": {
+                "text": "Captain America",
+                "widgets": [
+                  {
+                    "id": "text66b74bb98779a",
+                    "type": "text",
+                    "properties": {
+                      "html": "Captain America"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb9877b5",
+              "description": {
+                "text": "Black Widow",
+                "widgets": [
+                  {
+                    "id": "text66b74bb9877c1",
+                    "type": "text",
+                    "properties": {
+                      "html": "Black Widow"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74bb987779",
+              "text": "Captain America",
+              "widgets": [
+                {
+                  "id": "text66b74bb98779a",
+                  "type": "text",
+                  "properties": {
+                    "html": "Captain America"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>Based on the clues, the schedule of \nmeetings is as follows:<br>- Monday: Ironman (From clues 1 and 4, \nIronman has a meeting the day before \nHulk, and Hulk has a meeting on \nWednesday. So, Ironman has a meeting on \nTuesday. But from clue 4, Black Widow has \na meeting the day after Ironman, which \nwould be Wednesday, but Wednesday is \nalready taken by Hulk. So, Ironman must \nhave a meeting on Monday.)\n<br>- Tuesday: Black Widow (From clue 4, \nBlack Widow has a meeting the day after \nIronman, so she has a meeting on \nTuesday.) <br>- Wednesday: Hulk (From clue 5, Hulk has \na meeting on Wednesday.)<br>- Thursday: Captain America (From clues 2 \nand 3, Thor has a meeting sometime after \nBlack Widow, and Captain America does \nnot have a meeting on Monday or Tuesday. \nSo, Captain America has a meeting on \nThursday.)\n<br>- Friday: Thor (From clues 2 and 3, Thor \nhas a meeting sometime after Black \nWidow, and since Thursday is taken by \nCaptain America, Thor has a meeting on \nFriday.)<br><span>(C)\nCaptain America</span></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74bb9877e8",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions :Set 1: Day-Based Puzzle Five superheroes (Ironman, Thor, Hulk, Captain America, Black Widow) have meetings on different days of the week (Monday, Tuesday, Wednesday, Thursday, and Friday). Based on the following clues, can you figure out who has a meeting on which day? 1. Ironman has a meeting the day before Hulk. 2. Thor has a meeting sometime after Black Widow. 3. Captain America does not have a meeting on Monday or Tuesday. 4. Black Widow has a meeting the day after Ironman. 5. Hulk has a meeting on Wednesday. Who has a meeting on Friday?",
+            "widgets": [
+              {
+                "id": "text66b74bb9877ed",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong></p><p style=\"text-align: justify;\"><strong>Set 1: Day-Based Puzzle</strong>\n</p><p style=\"text-align: justify;\">Five superheroes (Ironman, Thor, Hulk, Captain America, Black Widow) have meetings on different days of the week (Monday, Tuesday, Wednesday, Thursday, and Friday). Based on the following clues, can you figure out who has a meeting on which day?\n</p><p style=\"text-align: justify;\">1. \tIronman has a meeting the day before Hulk.\n</p><p style=\"text-align: justify;\">2. \tThor has a meeting sometime after Black Widow.\n</p><p style=\"text-align: justify;\">3. \tCaptain America does not have a meeting on Monday or Tuesday.\n</p><p style=\"text-align: justify;\">4. \tBlack Widow has a meeting the day after Ironman.\n</p><p style=\"text-align: justify;\">5. \tHulk has a meeting on Wednesday.\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">Who has a meeting on Friday?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74bb98782c",
+              "description": {
+                "text": "Ironman",
+                "widgets": [
+                  {
+                    "id": "text66b74bb987832",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Ironman</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb987842",
+              "description": {
+                "text": "Thor",
+                "widgets": [
+                  {
+                    "id": "text66b74bb987849",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Thor</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb987858",
+              "description": {
+                "text": "Captain America",
+                "widgets": [
+                  {
+                    "id": "text66b74bb98785f",
+                    "type": "text",
+                    "properties": {
+                      "html": "Captain America"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb98786e",
+              "description": {
+                "text": "Black Widow",
+                "widgets": [
+                  {
+                    "id": "text66b74bb987874",
+                    "type": "text",
+                    "properties": {
+                      "html": "Black Widow"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74bb987842",
+              "text": "Thor",
+              "widgets": [
+                {
+                  "id": "text66b74bb987849",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>Thor</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>Based on the clues, the schedule of \nmeetings is as follows:<br>- Monday: Ironman (From clues 1 and 4, \nIronman has a meeting the day before \nHulk, and Hulk has a meeting on \nWednesday. So, Ironman has a meeting on \nTuesday. But from clue 4, Black Widow has \na meeting the day after Ironman, which \nwould be Wednesday, but Wednesday is \nalready taken by Hulk. So, Ironman must \nhave a meeting on Monday.)\n<br>- Tuesday: Black Widow (From clue 4, \nBlack Widow has a meeting the day after \nIronman, so she has a meeting on \nTuesday.) <br>- Wednesday: Hulk (From clue 5, Hulk has \na meeting on Wednesday.)<br>- Thursday: Captain America (From clues 2 \nand 3, Thor has a meeting sometime after \nBlack Widow, and Captain America does \nnot have a meeting on Monday or Tuesday. \nSo, Captain America has a meeting on \nThursday.)\n<br>- Friday: Thor (From clues 2 and 3, Thor \nhas a meeting sometime after Black \nWidow, and since Thursday is taken by \nCaptain America, Thor has a meeting on \nFriday.)<br><span>(B)\nThor</span></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74bb987897",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions :Set 1: Day-Based Puzzle Five superheroes (Ironman, Thor, Hulk, Captain America, Black Widow) have meetings on different days of the week (Monday, Tuesday, Wednesday, Thursday, and Friday). Based on the following clues, can you figure out who has a meeting on which day? 1. Ironman has a meeting the day before Hulk. 2. Thor has a meeting sometime after Black Widow. 3. Captain America does not have a meeting on Monday or Tuesday. 4. Black Widow has a meeting the day after Ironman. 5. Hulk has a meeting on Wednesday. Who has a meeting the day before Thor?",
+            "widgets": [
+              {
+                "id": "text66b74bb98789c",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong></p><p style=\"text-align: justify;\"><strong>Set 1: Day-Based Puzzle</strong>\n</p><p style=\"text-align: justify;\">Five superheroes (Ironman, Thor, Hulk, Captain America, Black Widow) have meetings on different days of the week (Monday, Tuesday, Wednesday, Thursday, and Friday). Based on the following clues, can you figure out who has a meeting on which day?\n</p><p style=\"text-align: justify;\">1. \tIronman has a meeting the day before Hulk.\n</p><p style=\"text-align: justify;\">2. \tThor has a meeting sometime after Black Widow.\n</p><p style=\"text-align: justify;\">3. \tCaptain America does not have a meeting on Monday or Tuesday.\n</p><p style=\"text-align: justify;\">4. \tBlack Widow has a meeting the day after Ironman.\n</p><p style=\"text-align: justify;\">5. \tHulk has a meeting on Wednesday.\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">Who has a meeting the day before Thor?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74bb9878da",
+              "description": {
+                "text": "Ironman",
+                "widgets": [
+                  {
+                    "id": "text66b74bb9878e1",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Ironman</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb9878f0",
+              "description": {
+                "text": "Hulk",
+                "widgets": [
+                  {
+                    "id": "text66b74bb9878f7",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Hulk</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb987906",
+              "description": {
+                "text": "Captain America",
+                "widgets": [
+                  {
+                    "id": "text66b74bb98790d",
+                    "type": "text",
+                    "properties": {
+                      "html": "Captain America"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb98791c",
+              "description": {
+                "text": "Black Widow",
+                "widgets": [
+                  {
+                    "id": "text66b74bb987923",
+                    "type": "text",
+                    "properties": {
+                      "html": "Black Widow"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74bb987906",
+              "text": "Captain America",
+              "widgets": [
+                {
+                  "id": "text66b74bb98790d",
+                  "type": "text",
+                  "properties": {
+                    "html": "Captain America"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>Based on the clues, the schedule of \nmeetings is as follows:<br>- Monday: Ironman (From clues 1 and 4, \nIronman has a meeting the day before \nHulk, and Hulk has a meeting on \nWednesday. So, Ironman has a meeting on \nTuesday. But from clue 4, Black Widow has \na meeting the day after Ironman, which \nwould be Wednesday, but Wednesday is \nalready taken by Hulk. So, Ironman must \nhave a meeting on Monday.)\n<br>- Tuesday: Black Widow (From clue 4, \nBlack Widow has a meeting the day after \nIronman, so she has a meeting on \nTuesday.) <br>- Wednesday: Hulk (From clue 5, Hulk has \na meeting on Wednesday.)<br>- Thursday: Captain America (From clues 2 \nand 3, Thor has a meeting sometime after \nBlack Widow, and Captain America does \nnot have a meeting on Monday or Tuesday. \nSo, Captain America has a meeting on \nThursday.)\n<br>- Friday: Thor (From clues 2 and 3, Thor \nhas a meeting sometime after Black \nWidow, and since Thursday is taken by \nCaptain America, Thor has a meeting on \nFriday.)<br><span>(C)\nCaptain America</span></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74bb98794a",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions :Set 2: Month-Based Puzzle Four superheroes (Superman, Batman, Wonder Woman, Flash) were born in different months (January, February, March, April). Based on the following clues, can you figure out who was born in which month? 1. Superman was born in a month before Wonder Woman. 2. Batman was not born in January or February. 3. Flash was born in the month after Batman. 4. Wonder Woman was born in March. 5. Superman was not born in January. Who was born in January?",
+            "widgets": [
+              {
+                "id": "text66b74bb98794f",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong></p><p style=\"text-align: justify;\"><strong>Set 2: Month-Based Puzzle</strong>\n</p><p style=\"text-align: justify;\">Four superheroes (Superman, Batman, Wonder Woman, Flash) were born in different months (January, February, March, April). Based on the following clues, can you figure out who was born in which month?\n</p><p style=\"text-align: justify;\">1. \tSuperman was born in a month before Wonder Woman.\n</p><p style=\"text-align: justify;\">2. \tBatman was not born in January or February.\n</p><p style=\"text-align: justify;\">3. \tFlash was born in the month after Batman.\n</p><p style=\"text-align: justify;\">4. \tWonder Woman was born in March.\n</p><p style=\"text-align: justify;\">5. \tSuperman was not born in January.\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">Who was born in January?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74bb98798c",
+              "description": {
+                "text": "Superman",
+                "widgets": [
+                  {
+                    "id": "text66b74bb987993",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Superman</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb9879a2",
+              "description": {
+                "text": "Batman",
+                "widgets": [
+                  {
+                    "id": "text66b74bb9879a9",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Batman</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb9879b8",
+              "description": {
+                "text": "Wonder Woman",
+                "widgets": [
+                  {
+                    "id": "text66b74bb9879be",
+                    "type": "text",
+                    "properties": {
+                      "html": "Wonder Woman"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb9879cd",
+              "description": {
+                "text": "Flash",
+                "widgets": [
+                  {
+                    "id": "text66b74bb9879d4",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Flash</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74bb9879a2",
+              "text": "Batman",
+              "widgets": [
+                {
+                  "id": "text66b74bb9879a9",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>Batman</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>Based on the clues, the birth months of the \nsuperheroes are as follows:\n<br>- January: Batman (From clues 2 and 3, \nBatman was not born in January or \nFebruary, and Flash was born in the month \nafter Batman. So, Batman was born in \nJanuary.)\n<br>- February: Flash (From clue 3, Flash was \nborn in the month after Batman, so Flash \nwas born in February.)\n<br>- March: Wonder Woman (From clue 4, \nWonder Woman was born in March.)\n<br>- April: Superman (From clues 1 and 5, \nSuperman was born in a month before \nWonder Woman, and Superman was not \nborn in January. So, Superman was born in \nApril.)<br><span>(B)\nBatman</span></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74bb9879f4",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions :Set 2: Month-Based Puzzle Four superheroes (Superman, Batman, Wonder Woman, Flash) were born in different months (January, February, March, April). Based on the following clues, can you figure out who was born in which month? 1. Superman was born in a month before Wonder Woman. 2. Batman was not born in January or February. 3. Flash was born in the month after Batman. 4. Wonder Woman was born in March. 5. Superman was not born in January. Who was born in February?",
+            "widgets": [
+              {
+                "id": "text66b74bb9879f8",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong></p><p style=\"text-align: justify;\"><strong>Set 2: Month-Based Puzzle</strong>\n</p><p style=\"text-align: justify;\">Four superheroes (Superman, Batman, Wonder Woman, Flash) were born in different months (January, February, March, April). Based on the following clues, can you figure out who was born in which month?\n</p><p style=\"text-align: justify;\">1. \tSuperman was born in a month before Wonder Woman.\n</p><p style=\"text-align: justify;\">2. \tBatman was not born in January or February.\n</p><p style=\"text-align: justify;\">3. \tFlash was born in the month after Batman.\n</p><p style=\"text-align: justify;\">4. \tWonder Woman was born in March.\n</p><p style=\"text-align: justify;\">5. \tSuperman was not born in January.\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">Who was born in February?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74bb987a37",
+              "description": {
+                "text": "Superman",
+                "widgets": [
+                  {
+                    "id": "text66b74bb987a3e",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Superman</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb987a4d",
+              "description": {
+                "text": "Batman",
+                "widgets": [
+                  {
+                    "id": "text66b74bb987a54",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Batman</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb987a63",
+              "description": {
+                "text": "Wonder Woman",
+                "widgets": [
+                  {
+                    "id": "text66b74bb987a6d",
+                    "type": "text",
+                    "properties": {
+                      "html": "Wonder Woman"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb987a7c",
+              "description": {
+                "text": "Flash",
+                "widgets": [
+                  {
+                    "id": "text66b74bb987a83",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Flash</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74bb987a7c",
+              "text": "Flash",
+              "widgets": [
+                {
+                  "id": "text66b74bb987a83",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>Flash</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>Based on the clues, the birth months of the \nsuperheroes are as follows:\n<br>- January: Batman (From clues 2 and 3, \nBatman was not born in January or \nFebruary, and Flash was born in the month \nafter Batman. So, Batman was born in \nJanuary.)\n<br>- February: Flash (From clue 3, Flash was \nborn in the month after Batman, so Flash \nwas born in February.)\n<br>- March: Wonder Woman (From clue 4, \nWonder Woman was born in March.)\n<br>- April: Superman (From clues 1 and 5, \nSuperman was born in a month before \nWonder Woman, and Superman was not \nborn in January. So, Superman was born in \nApril.)<br><span>(D)\nFlash </span></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74bb987aab",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions :Set 2: Month-Based Puzzle Four superheroes (Superman, Batman, Wonder Woman, Flash) were born in different months (January, February, March, April). Based on the following clues, can you figure out who was born in which month? 1. Superman was born in a month before Wonder Woman. 2. Batman was not born in January or February. 3. Flash was born in the month after Batman. 4. Wonder Woman was born in March. 5. Superman was not born in January. Who was born in March?",
+            "widgets": [
+              {
+                "id": "text66b74bb987ab0",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong></p><p style=\"text-align: justify;\"><strong>Set 2: Month-Based Puzzle</strong>\n</p><p style=\"text-align: justify;\">Four superheroes (Superman, Batman, Wonder Woman, Flash) were born in different months (January, February, March, April). Based on the following clues, can you figure out who was born in which month?\n</p><p style=\"text-align: justify;\">1. \tSuperman was born in a month before Wonder Woman.\n</p><p style=\"text-align: justify;\">2. \tBatman was not born in January or February.\n</p><p style=\"text-align: justify;\">3. \tFlash was born in the month after Batman.\n</p><p style=\"text-align: justify;\">4. \tWonder Woman was born in March.\n</p><p style=\"text-align: justify;\">5. \tSuperman was not born in January.\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">Who was born in March?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74bb987aef",
+              "description": {
+                "text": "Superman",
+                "widgets": [
+                  {
+                    "id": "text66b74bb987af5",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Superman</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb987b04",
+              "description": {
+                "text": "Batman",
+                "widgets": [
+                  {
+                    "id": "text66b74bb987b0b",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Batman</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb987b1a",
+              "description": {
+                "text": "Wonder Woman",
+                "widgets": [
+                  {
+                    "id": "text66b74bb987b21",
+                    "type": "text",
+                    "properties": {
+                      "html": "Wonder Woman"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb987b30",
+              "description": {
+                "text": "Flash",
+                "widgets": [
+                  {
+                    "id": "text66b74bb987b36",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Flash</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74bb987b1a",
+              "text": "Wonder Woman",
+              "widgets": [
+                {
+                  "id": "text66b74bb987b21",
+                  "type": "text",
+                  "properties": {
+                    "html": "Wonder Woman"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>Based on the clues, the birth months of the \nsuperheroes are as follows:\n<br>- January: Batman (From clues 2 and 3, \nBatman was not born in January or \nFebruary, and Flash was born in the month \nafter Batman. So, Batman was born in \nJanuary.)\n<br>- February: Flash (From clue 3, Flash was \nborn in the month after Batman, so Flash \nwas born in February.)\n<br>- March: Wonder Woman (From clue 4, \nWonder Woman was born in March.)\n<br>- April: Superman (From clues 1 and 5, \nSuperman was born in a month before \nWonder Woman, and Superman was not \nborn in January. So, Superman was born in \nApril.)<br><span>(C)\nWonder Woman </span></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74bb987b60",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions :Set 2: Month-Based Puzzle Four superheroes (Superman, Batman, Wonder Woman, Flash) were born in different months (January, February, March, April). Based on the following clues, can you figure out who was born in which month? 1. Superman was born in a month before Wonder Woman. 2. Batman was not born in January or February. 3. Flash was born in the month after Batman. 4. Wonder Woman was born in March. 5. Superman was not born in January. Who was born in April?",
+            "widgets": [
+              {
+                "id": "text66b74bb987b73",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong></p><p style=\"text-align: justify;\"><strong>Set 2: Month-Based Puzzle</strong>\n</p><p style=\"text-align: justify;\">Four superheroes (Superman, Batman, Wonder Woman, Flash) were born in different months (January, February, March, April). Based on the following clues, can you figure out who was born in which month?\n</p><p style=\"text-align: justify;\">1. \tSuperman was born in a month before Wonder Woman.\n</p><p style=\"text-align: justify;\">2. \tBatman was not born in January or February.\n</p><p style=\"text-align: justify;\">3. \tFlash was born in the month after Batman.\n</p><p style=\"text-align: justify;\">4. \tWonder Woman was born in March.\n</p><p style=\"text-align: justify;\">5. \tSuperman was not born in January.\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">Who was born in April?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74bb987bb1",
+              "description": {
+                "text": "Superman",
+                "widgets": [
+                  {
+                    "id": "text66b74bb987bb8",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Superman</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb987bc7",
+              "description": {
+                "text": "Batman",
+                "widgets": [
+                  {
+                    "id": "text66b74bb987bce",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Batman</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb987bdd",
+              "description": {
+                "text": "Wonder Woman",
+                "widgets": [
+                  {
+                    "id": "text66b74bb987be3",
+                    "type": "text",
+                    "properties": {
+                      "html": "Wonder Woman"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb987bf2",
+              "description": {
+                "text": "Flash",
+                "widgets": [
+                  {
+                    "id": "text66b74bb987bf9",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Flash</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74bb987bb1",
+              "text": "Superman",
+              "widgets": [
+                {
+                  "id": "text66b74bb987bb8",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>Superman</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>Based on the clues, the birth months of the \nsuperheroes are as follows:\n<br>- January: Batman (From clues 2 and 3, \nBatman was not born in January or \nFebruary, and Flash was born in the month \nafter Batman. So, Batman was born in \nJanuary.)\n<br>- February: Flash (From clue 3, Flash was \nborn in the month after Batman, so Flash \nwas born in February.)\n<br>- March: Wonder Woman (From clue 4, \nWonder Woman was born in March.)\n<br>- April: Superman (From clues 1 and 5, \nSuperman was born in a month before \nWonder Woman, and Superman was not \nborn in January. So, Superman was born in \nApril.)<br><span>(A)\nSuperman</span></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74bb987c22",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions :Set 2: Month-Based Puzzle Four superheroes (Superman, Batman, Wonder Woman, Flash) were born in different months (January, February, March, April). Based on the following clues, can you figure out who was born in which month? 1. Superman was born in a month before Wonder Woman. 2. Batman was not born in January or February. 3. Flash was born in the month after Batman. 4. Wonder Woman was born in March. 5. Superman was not born in January. Who was born the month before Flash?",
+            "widgets": [
+              {
+                "id": "text66b74bb987c27",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong></p><p style=\"text-align: justify;\"><strong>Set 2: Month-Based Puzzle</strong>\n</p><p style=\"text-align: justify;\">Four superheroes (Superman, Batman, Wonder Woman, Flash) were born in different months (January, February, March, April). Based on the following clues, can you figure out who was born in which month?\n</p><p style=\"text-align: justify;\">1. \tSuperman was born in a month before Wonder Woman.\n</p><p style=\"text-align: justify;\">2. \tBatman was not born in January or February.\n</p><p style=\"text-align: justify;\">3. \tFlash was born in the month after Batman.\n</p><p style=\"text-align: justify;\">4. \tWonder Woman was born in March.\n</p><p style=\"text-align: justify;\">5. \tSuperman was not born in January.\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">Who was born the month before Flash?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74bb987c65",
+              "description": {
+                "text": "Superman",
+                "widgets": [
+                  {
+                    "id": "text66b74bb987c6b",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Superman</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb987c7a",
+              "description": {
+                "text": "Batman",
+                "widgets": [
+                  {
+                    "id": "text66b74bb987c81",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Batman</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb987c90",
+              "description": {
+                "text": "Wonder Woman",
+                "widgets": [
+                  {
+                    "id": "text66b74bb987c97",
+                    "type": "text",
+                    "properties": {
+                      "html": "Wonder Woman"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bb987ca6",
+              "description": {
+                "text": "Not applicable",
+                "widgets": [
+                  {
+                    "id": "text66b74bb987cad",
+                    "type": "text",
+                    "properties": {
+                      "html": "Not applicable"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74bb987c7a",
+              "text": "Batman",
+              "widgets": [
+                {
+                  "id": "text66b74bb987c81",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>Batman</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>Based on the clues, the birth months of the \nsuperheroes are as follows:\n<br>- January: Batman (From clues 2 and 3, \nBatman was not born in January or \nFebruary, and Flash was born in the month \nafter Batman. So, Batman was born in \nJanuary.)\n<br>- February: Flash (From clue 3, Flash was \nborn in the month after Batman, so Flash \nwas born in February.)\n<br>- March: Wonder Woman (From clue 4, \nWonder Woman was born in March.)\n<br>- April: Superman (From clues 1 and 5, \nSuperman was born in a month before \nWonder Woman, and Superman was not \nborn in January. So, Superman was born in \nApril.)<br><span>(B)\nBatman</span></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        }
+      ]
+    }
+  ],
+  "submitted": true,
+  "updated": true,
+  "retryCount": 3,
+  "inlineFeedback": [],
+  "errors": [],
+  "success": true
+}

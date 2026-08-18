@@ -1,0 +1,3247 @@
+{
+  "submission": {
+    "anon_id": null,
+    "model": "assessment-submission",
+    "courseTitleId": "aptitude-teacher2",
+    "object_id": "66b74b917f809db01009519a",
+    "assessmentId": "66b74b917f809db010095199",
+    "snapshotId": "66bdd23776afad82940a0e75",
+    "questions": {
+      "section66b74b91194e5": [
+        "mc66b74b91194ec",
+        "mc66b74b9119597",
+        "mc66b74b9119665",
+        "mc66b74b911971b",
+        "mc66b74b91197d7",
+        "mc66b74b911989a",
+        "mc66b74b9119962",
+        "mc66b74b9119a40",
+        "mc66b74b9119b16",
+        "mc66b74b9119bf6"
+      ]
+    },
+    "certificateAnswers": [],
+    "certificateId": null,
+    "questionData": {
+      "mc66b74b91194ec": {
+        "deliveredOnTimestamp": 1786440502.183152,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74b9119597": {
+        "deliveredOnTimestamp": 1786440502.183179,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74b9119665": {
+        "deliveredOnTimestamp": 1786440502.183196,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74b911971b": {
+        "deliveredOnTimestamp": 1786440502.183211,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74b91197d7": {
+        "deliveredOnTimestamp": 1786440502.183225,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74b911989a": {
+        "deliveredOnTimestamp": 1786440502.183239,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74b9119962": {
+        "deliveredOnTimestamp": 1786440502.183252,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74b9119a40": {
+        "deliveredOnTimestamp": 1786440502.183265,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74b9119b16": {
+        "deliveredOnTimestamp": 1786440502.183276,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74b9119bf6": {
+        "deliveredOnTimestamp": 1786440502.183286,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      }
+    },
+    "answers": [
+      {
+        "blockId": "mc66b74b91194ec",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74b9119597",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74b9119665",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74b911971b",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74b91197d7",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74b911989a",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74b9119962",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74b9119a40",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74b9119b16",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74b9119bf6",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      }
+    ],
+    "submittedTimestamp": 1786440502.414985,
+    "status": "submitted",
+    "grading_status": "grading_status_graded",
+    "access": "public",
+    "actual_score": null,
+    "score": {
+      "maxScore": 10,
+      "value": 0,
+      "pass": false,
+      "passGrade": 50,
+      "points": 0
+    },
+    "source": {
+      "type": "unit"
+    },
+    "isDefining": true,
+    "isAdminAutoGradedSubmission": null,
+    "listOfNonConsentedBlocks": [],
+    "created": 1786440502.189191,
+    "modified": 1786440502.555426,
+    "id": "6a7aeb365edd88ce0b043ebc",
+    "passed": false
+  },
+  "assessment": {
+    "title": "Practice Test Paper (Easy)",
+    "access": "public",
+    "type": "assessment",
+    "model": "assessmentSnapshot",
+    "description": "Foundational practice test paper containing 10 assessment questions covering Ratios & Proportions, Time & Work.",
+    "isTimed": false,
+    "timerFor": "assessmentTimed",
+    "onTimerExpiration": "autoSubmit",
+    "assessmentTimeLimitInSeconds": 600,
+    "questionTimeLimitInSeconds": 60,
+    "standaloneShareEnabled": null,
+    "customUrl": null,
+    "usesCustomUrl": null,
+    "allowAnonymous": true,
+    "randomizeQuestionOptions": false,
+    "disallowPartialSubmissions": false,
+    "submissionDueDateEnabled": false,
+    "submissionDueDate": 1626257823,
+    "makeFeedbackAvailableAfterDateEnabled": false,
+    "makeFeedbackAvailableAfterDate": 0,
+    "customStylesEnabled": true,
+    "customStyles": {
+      "assessmentPage": {
+        "background": {
+          "type": "color",
+          "colorData": {
+            "code": "",
+            "class": "lw-body-bg"
+          }
+        },
+        "dividers": {
+          "top": {
+            "orientation": "top",
+            "divider": "none"
+          },
+          "bottom": {
+            "orientation": "bottom",
+            "divider": "none"
+          }
+        }
+      },
+      "option": {
+        "radioEffect": "scribble",
+        "checkboxEffect": "scribble",
+        "size": "small"
+      },
+      "assessment": {
+        "transition": "none",
+        "background": {
+          "type": "color",
+          "colorData": {
+            "code": "",
+            "class": ""
+          }
+        },
+        "width": "normal",
+        "timerTemplate": "rectangle"
+      },
+      "linearRating": {
+        "labels": {
+          "size": "small"
+        }
+      },
+      "question": {
+        "description": {
+          "background": {
+            "type": "color",
+            "colorData": {
+              "code": "",
+              "class": ""
+            }
+          },
+          "type": "p",
+          "size": "small"
+        },
+        "answers": {
+          "background": {
+            "type": "color",
+            "colorData": {
+              "code": "",
+              "class": ""
+            }
+          }
+        },
+        "requiredAsterisk": {
+          "colorData": {
+            "code": "#ff0000",
+            "class": ""
+          }
+        },
+        "errorMessages": {
+          "size": "verySmall",
+          "colorData": {
+            "code": "#ff0000",
+            "class": ""
+          }
+        }
+      },
+      "input": {
+        "size": "small",
+        "type": "solidDark"
+      },
+      "textarea": {
+        "size": "small",
+        "type": "solidDark"
+      },
+      "dropdown": {
+        "size": "small",
+        "type": "solidDark"
+      }
+    },
+    "submissionMode": "all",
+    "startingDate": 1626765704,
+    "startingDateEnabled": false,
+    "showOnlyFailedQuestionsOnRetry": false,
+    "retryEnabled": true,
+    "retryOnFailOnly": false,
+    "gradingMethod": null,
+    "maxTries": null,
+    "onlyWrongOnRetake": null,
+    "isAmendable": false,
+    "feedbackShowOnScreen": true,
+    "feedbackDownloadPDF": false,
+    "feedbackShowInline": null,
+    "feedbackQuestionList": "all-questions",
+    "feedbackShowQuestionScore": true,
+    "feedbackShowFeedback": true,
+    "feedbackShowNumbering": false,
+    "feedbackShowSectionTitles": false,
+    "feedbackShowUserAnswers": true,
+    "feedbackShowCorrectAnswers": true,
+    "feedbackShowAnswerCorrectness": true,
+    "displayInlineFeedbackEnabled": null,
+    "displayBackButtonWhenSubmissionPerBlock": null,
+    "feedbackShowSectionResultSummary": false,
+    "askConfirmationBeforeSubmit": true,
+    "hasCustomConfirmationBeforeSubmitText": false,
+    "customConfirmationBeforeSubmitText": "Are you sure you want to submit the questionnaire?",
+    "customConfirmationBeforeSubmitTexts": {
+      "title": "Submit Assessment?",
+      "baseConfirmationMessage": "Are you sure you want to submit the questionnaire?",
+      "unansweredNotice": "You have not answered {X} questions."
+    },
+    "amendResubmissionMinutes": 30,
+    "passingGrade": null,
+    "navigationMode": "per-block",
+    "conditionalBlocks": {
+      "introContent": {
+        "id": "content66b74b9119430",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66b74b911943f",
+              "type": "text",
+              "insertedAsWidget": true,
+              "properties": {
+                "html": "Time and Work PAPER LEVEL-1",
+                "alignment": "center",
+                "customStyle": true,
+                "type": "h2",
+                "size": "normal"
+              }
+            },
+            {
+              "id": "text66b74b9119450",
+              "type": "text",
+              "properties": {
+                "html": "Self-assess your knowledge. Express yourself and get feedback from our instructors.",
+                "customStyle": true,
+                "alignment": "center"
+              }
+            },
+            {
+              "id": "spacer66b74b911945a",
+              "type": "spacer",
+              "properties": {
+                "height": 20,
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            },
+            {
+              "id": "button66b74b9119466",
+              "type": "button",
+              "properties": {
+                "buttonLabel": "<span>Ready to start</span>",
+                "buttonSize": "normal",
+                "buttonType": "solidBrand",
+                "alignment": "center",
+                "linkData": {
+                  "linkType": "goToFirst"
+                },
+                "iconColorData": {
+                  "code": "",
+                  "class": ""
+                },
+                "iconDisplay": false,
+                "iconSize": 26,
+                "iconClassName": " fas fa-angle-right",
+                "iconPosition": "right"
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "variables": {
+            "conditionalBlocks_introContent_blockData_widgets_0": [],
+            "conditionalBlocks_introContent_blockData_widgets_1": []
+          }
+        }
+      },
+      "submissionStartingDate": {
+        "id": "content66b74b9119487",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66b74b911948b",
+              "type": "text",
+              "properties": {
+                "html": "Sorry but this assessment hasn't started yet."
+              }
+            },
+            {
+              "id": "date66b74b9119492",
+              "type": "date",
+              "properties": {
+                "value": ""
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "displayConditions": ["startingDate"]
+        }
+      },
+      "submissionDueDate": {
+        "id": "content66b74b911949e",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66b74b91194a3",
+              "type": "text",
+              "properties": {
+                "html": "Sorry but this assessment date is due."
+              }
+            },
+            {
+              "id": "date66b74b91194a9",
+              "type": "date",
+              "properties": {
+                "value": ""
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "displayConditions": ["dateIsDue"]
+        }
+      },
+      "outroContent": {
+        "id": "content66b74b91194b5",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "userResults66b74b91194b9",
+              "type": "userResults",
+              "properties": {
+                "layout": "template2",
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            },
+            {
+              "id": "feedback66b74b91194c5",
+              "type": "feedback",
+              "properties": []
+            },
+            {
+              "id": "outroActions66b74b91194cb",
+              "type": "outroActions",
+              "properties": {
+                "layout": "",
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true
+        }
+      }
+    },
+    "systemSections": null,
+    "sections": [
+      {
+        "id": "section66b74b91194e5",
+        "title": "",
+        "type": "section",
+        "navigationMode": "per-block",
+        "blocks": [
+          {
+            "id": "mc66b74b91194ec",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74b91194f2",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">A can do a job in 6 days and B can do the same job in 18 days. If A's efficiency decreases by 1/3 times, then by how many times B has to increase his efficiency to complete the work by both of them in 3 days ?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74b9119503",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74b911950a",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74b9119512",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74b9119531",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b9119539",
+                        "type": "text",
+                        "properties": {
+                          "html": "2 times"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b9119548",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b911954f",
+                        "type": "text",
+                        "properties": {
+                          "html": "3 times"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b911955d",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b9119564",
+                        "type": "text",
+                        "properties": {
+                          "html": "4 times"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b9119573",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b911957a",
+                        "type": "text",
+                        "properties": {
+                          "html": "5 times"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_0": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74b9119597",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74b911959b",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">P is 40 % more efficient than Q and R is 20 % less efficient than Q. Working together, they can finish task in 15 days. In how many days will Q alone complete 75% of the task?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74b91195ad",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74b91195b4",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74b91195bb",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74b91195f8",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b91195ff",
+                        "type": "text",
+                        "properties": {
+                          "html": "40"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b911960e",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b9119615",
+                        "type": "text",
+                        "properties": {
+                          "html": "42"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b9119623",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b911962a",
+                        "type": "text",
+                        "properties": {
+                          "html": "35"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b9119639",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b911963f",
+                        "type": "text",
+                        "properties": {
+                          "html": "36"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_1_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_1": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74b9119665",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74b911966a",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">A works for 8 hours a day and gets Rs. 100 per hour. B works for 12 hours a day and gets Rs. 60 per hour. To earn an equal amount of money how many extra days will be required for B (minimum case)?&nbsp;</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74b911967b",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74b9119682",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74b9119689",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74b91196a8",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b91196ae",
+                        "type": "text",
+                        "properties": {
+                          "html": "1 day"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b91196bd",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b91196c4",
+                        "type": "text",
+                        "properties": {
+                          "html": "2 day<strong></strong>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b91196d3",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b91196d9",
+                        "type": "text",
+                        "properties": {
+                          "html": "3 day"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b91196e8",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b91196ef",
+                        "type": "text",
+                        "properties": {
+                          "html": "4 day"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_1_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_2": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74b911971b",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74b9119720",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">A and B can do a piece of work individually in 20 days and 15 days respectively. In how many days they both can complete the work together in an alternate basis starting from A?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74b9119731",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74b9119737",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74b911973e",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74b911975d",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b9119764",
+                        "type": "text",
+                        "properties": {
+                          "html": "16x1/2"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b9119773",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b911977a",
+                        "type": "text",
+                        "properties": {
+                          "html": "15x1/4<strong></strong>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b9119788",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b911978f",
+                        "type": "text",
+                        "properties": {
+                          "html": "17x1/4"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b911979e",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b91197a5",
+                        "type": "text",
+                        "properties": {
+                          "html": "18x1/2"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_1_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74b91197d7",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74b91197dc",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">Ratio of efficiency of M, N, O is 7:3:5 to do a specific work. Working together they can complete a work in 21 days. If M and O worked together for 15 days, the remaining work will be completed by N alone in :-</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74b91197ed",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74b91197f4",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74b91197fb",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74b911981a",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b9119821",
+                        "type": "text",
+                        "properties": {
+                          "html": "45 days"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b9119830",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b9119836",
+                        "type": "text",
+                        "properties": {
+                          "html": "40 days"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b9119845",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b911984c",
+                        "type": "text",
+                        "properties": {
+                          "html": "43 days"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b911985a",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b9119861",
+                        "type": "text",
+                        "properties": {
+                          "html": "41 days"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_1_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74b911989a",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74b911989f",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">Work done by A is double the work done by B in one day and work done by B in one day is thrice the work done by C in one day. If A,B and C  together can complete the work in 27 days then in how many days B alone can do the work?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74b91198b0",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74b91198b7",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74b91198be",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74b91198dc",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b91198e3",
+                        "type": "text",
+                        "properties": {
+                          "html": "85 Days"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b91198f1",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b91198f8",
+                        "type": "text",
+                        "properties": {
+                          "html": "80 days"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b9119906",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b911990d",
+                        "type": "text",
+                        "properties": {
+                          "html": "92 days"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b911991c",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b9119922",
+                        "type": "text",
+                        "properties": {
+                          "html": "90 days"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_1_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74b9119962",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74b9119967",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">If A can do 3/4<sup>th</sup> of a work in 27 days and B can do 4/9<sup>th</sup> of a work in 12 days. How much wage A will get if they both earns Rs. 9100 in all?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74b9119978",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74b911997e",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74b9119986",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74b91199a4",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b91199b6",
+                        "type": "text",
+                        "properties": {
+                          "html": "Rs. 4000"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b91199c6",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b91199cc",
+                        "type": "text",
+                        "properties": {
+                          "html": "Rs. 3900"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b91199db",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b91199e2",
+                        "type": "text",
+                        "properties": {
+                          "html": "Rs. 4100"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b91199f0",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b91199f7",
+                        "type": "text",
+                        "properties": {
+                          "html": "Rs. 4200"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_1_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_6": [],
+                "sections_0_blocks_6_blockData_description_widgets_0": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74b9119a40",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74b9119a45",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">Karan can do a work in 10 days less than the time taken by Arjun to do it. If both of them together take 12 days to complete the work, then the time taken by Arjun alone to do the same work (in days) is:-</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74b9119a56",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74b9119a5d",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74b9119a64",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74b9119a82",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b9119a89",
+                        "type": "text",
+                        "properties": {
+                          "html": "25 days"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b9119a97",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b9119a9e",
+                        "type": "text",
+                        "properties": {
+                          "html": "30 days"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b9119aac",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b9119ab3",
+                        "type": "text",
+                        "properties": {
+                          "html": "20 days"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b9119ac1",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b9119ac8",
+                        "type": "text",
+                        "properties": {
+                          "html": "35 days"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_1_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_7": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74b9119b16",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74b9119b1b",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">A can do 10% of work in 2 days. B can do 50% of the same work in 25 days. They started to work together but after 5 days A left and B continued to work. In how many days will B complete the remaining work?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74b9119b2c",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74b9119b32",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74b9119b3a",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74b9119b59",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b9119b5f",
+                        "type": "text",
+                        "properties": {
+                          "html": "30.5 days"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b9119b6e",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b9119b75",
+                        "type": "text",
+                        "properties": {
+                          "html": "32.5 days"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b9119b83",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b9119b8a",
+                        "type": "text",
+                        "properties": {
+                          "html": "33.5 days"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b9119b99",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b9119b9f",
+                        "type": "text",
+                        "properties": {
+                          "html": "35.5 days"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_1_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_8": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74b9119bf6",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74b9119bfa",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">Amar and Akbar can complete a work in 12 days, Akbar and Antony can complete the same work in 24 days, Antony and Amar can complete the work in 18 days. In how many days Akbar alone can do 12.5/9 part of work?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74b9119c0b",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74b9119c12",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74b9119c19",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74b9119c38",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b9119c3e",
+                        "type": "text",
+                        "properties": {
+                          "html": "40 days"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b9119c4d",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b9119c54",
+                        "type": "text",
+                        "properties": {
+                          "html": "30 days"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b9119c62",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b9119c69",
+                        "type": "text",
+                        "properties": {
+                          "html": "35 days"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b9119c77",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b9119c7e",
+                        "type": "text",
+                        "properties": {
+                          "html": "45 days"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_1_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_9": []
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "availabilityStatus": null,
+    "autoNavigationEnabled": false,
+    "displayBackButtonWhenNavigationPerBlock": true,
+    "saveAndResumeLaterEnabled": null,
+    "tagsAddedOnCompletion": [],
+    "tagsAddedOnPass": [],
+    "sendAnonymousSubmissionsToEmailLeads": false,
+    "afterSubmitActionEnabled": null,
+    "afterSubmitActionProperties": null,
+    "showWizardOnNextEdit": false,
+    "revisitAfterSubmissionAction": null,
+    "navigationTemplate": "HorizontalSpacedBetweenNavigationTemplate",
+    "learnerSearchBarEnabled": true,
+    "learnerUnansweredQuestionsEnabled": true,
+    "learnerFavouriteQuestionEnabled": true,
+    "learnerCompletionProgressEnabled": true,
+    "learnerShowIndexOfQuestionsEnabled": false,
+    "learnerTimeNotificationsEnabled": false,
+    "learnerAllowInterruptionsEnabled": true,
+    "learnerAllowInterruptionsTimeoutInMinutes": 30,
+    "learnerReclaimTryOnInterruptionTimeoutEnabled": false,
+    "learnerAskBeforeContinueToSaved": true,
+    "learnerAutoSaveEnabled": null,
+    "spellcheckDisabled": null,
+    "showPartialScoreOnSubmission": true,
+    "deliverableQuestionsSubsetType": "all",
+    "questionRandomizationType": "none",
+    "serveQuestionsBasedOnPreviousSubmission": null,
+    "scoringDisabled": false,
+    "isSelfAssessment": false,
+    "useDefaultCertificateTemplate": null,
+    "certificateTemplate": null,
+    "certificateSocialShare": null,
+    "migrationData": null,
+    "useAssessmentPassingGradeForOpenEndedCorrectness": true,
+    "openEndedCorrectnessPassingGrade": null,
+    "showScorePercentage": null,
+    "showScorePoints": null,
+    "showScoreCorrectAnswers": null,
+    "editorBehaviorSettings": null,
+    "manualReviewEnabled": null,
+    "resultsSummary": {
+      "enabled": true,
+      "showStatusIcon": true,
+      "showStatusText": true,
+      "showScorePercentage": true,
+      "showScorePoints": true,
+      "showScoreCorrectAnswers": false,
+      "showTimeTakenToComplete": true,
+      "showDateSubmitted": true,
+      "showAttemptCount": true
+    },
+    "meta": null,
+    "submissionsCount": 3776,
+    "fromMarketplace": null,
+    "aiFeedbackEnabled": null,
+    "numberOfFeedbackQuestions": null,
+    "created": 1723288465.557361,
+    "modified": 1723716151.830669,
+    "contentHash": "1721b5391f11069057ae7a09a088622c2feb80dbfb697c455490fe60ef62ae27",
+    "id": "66b74b917f809db010095199",
+    "objectType": "assessment",
+    "isEditBlockedDueToSync": false,
+    "variables": {
+      "submission": {
+        "self": {
+          "score": 0,
+          "points": 0,
+          "total_points": 10,
+          "correct_answers": 0,
+          "total_questions": 10,
+          "time_spent": "00:00:00",
+          "date_submitted": "11/08/26",
+          "attempt_count": 4,
+          "max_tries": null,
+          "pass_grade": 50,
+          "time_spent_seconds": 0,
+          "raw_start_date": 1786440502.189191
+        }
+      },
+      "school": {
+        "name": "Apna College",
+        "url": "www.apnacollege.in",
+        "description": "The most loved coding community of India ❤️"
+      },
+      "user": {
+        "username": "ram",
+        "email": "p4542639@gmail.com",
+        "cf_phonenumber": "7666690798"
+      }
+    }
+  },
+  "reclaimedTry": false,
+  "feedback": [
+    {
+      "title": "",
+      "id": "section66b74b91194e5",
+      "blocks": [
+        {
+          "id": "mc66b74b91194ec",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "A can do a job in 6 days and B can do the same job in 18 days. If A's efficiency decreases by 1/3 times, then by how many times B has to increase his efficiency to complete the work by both of them in 3 days ?",
+            "widgets": [
+              {
+                "id": "text66b74b91194f2",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">A can do a job in 6 days and B can do the same job in 18 days. If A's efficiency decreases by 1/3 times, then by how many times B has to increase his efficiency to complete the work by both of them in 3 days ?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74b9119531",
+              "description": {
+                "text": "2 times",
+                "widgets": [
+                  {
+                    "id": "text66b74b9119539",
+                    "type": "text",
+                    "properties": {
+                      "html": "2 times"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b9119548",
+              "description": {
+                "text": "3 times",
+                "widgets": [
+                  {
+                    "id": "text66b74b911954f",
+                    "type": "text",
+                    "properties": {
+                      "html": "3 times"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b911955d",
+              "description": {
+                "text": "4 times",
+                "widgets": [
+                  {
+                    "id": "text66b74b9119564",
+                    "type": "text",
+                    "properties": {
+                      "html": "4 times"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b9119573",
+              "description": {
+                "text": "5 times",
+                "widgets": [
+                  {
+                    "id": "text66b74b911957a",
+                    "type": "text",
+                    "properties": {
+                      "html": "5 times"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74b9119548",
+              "text": "3 times",
+              "widgets": [
+                {
+                  "id": "text66b74b911954f",
+                  "type": "text",
+                  "properties": {
+                    "html": "3 times"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>Let the total work is 18 unit (LCM of 6 & \n18). <br>So, A’s efficiency is 3 unit and B’s efficiency \nis 1 unit. <br>Now, A’s efficiency becomes 2 units (after \ndecreasing by 1/3 times) <br>To finish the work in 3 days combined \nefficiency of A and B is 6 units.\n<br>Therefore, B’s efficiency should be (6-2) =\n4 units. <br>So increases by 3 times.</p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74b9119597",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "P is 40 % more efficient than Q and R is 20 % less efficient than Q. Working together, they can finish task in 15 days. In how many days will Q alone complete 75% of the task?",
+            "widgets": [
+              {
+                "id": "text66b74b911959b",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">P is 40 % more efficient than Q and R is 20 % less efficient than Q. Working together, they can finish task in 15 days. In how many days will Q alone complete 75% of the task?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74b91195f8",
+              "description": {
+                "text": "40",
+                "widgets": [
+                  {
+                    "id": "text66b74b91195ff",
+                    "type": "text",
+                    "properties": {
+                      "html": "40"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b911960e",
+              "description": {
+                "text": "42",
+                "widgets": [
+                  {
+                    "id": "text66b74b9119615",
+                    "type": "text",
+                    "properties": {
+                      "html": "42"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b9119623",
+              "description": {
+                "text": "35",
+                "widgets": [
+                  {
+                    "id": "text66b74b911962a",
+                    "type": "text",
+                    "properties": {
+                      "html": "35"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b9119639",
+              "description": {
+                "text": "36",
+                "widgets": [
+                  {
+                    "id": "text66b74b911963f",
+                    "type": "text",
+                    "properties": {
+                      "html": "36"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74b9119639",
+              "text": "36",
+              "widgets": [
+                {
+                  "id": "text66b74b911963f",
+                  "type": "text",
+                  "properties": {
+                    "html": "36"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:</p><p>According to given information –P : Q : R\n<br>Efficiency - 7 : 4 : 5 <br>so, total work = 16*15\n<br>Therefore Q completes 75% work in <br>= (16∗15)/4\n∗\n3/4\n= 36 days.</p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74b9119665",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "A works for 8 hours a day and gets Rs. 100 per hour. B works for 12 hours a day and gets Rs. 60 per hour. To earn an equal amount of money how many extra days will be required for B (minimum case)?",
+            "widgets": [
+              {
+                "id": "text66b74b911966a",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">A works for 8 hours a day and gets Rs. 100 per hour. B works for 12 hours a day and gets Rs. 60 per hour. To earn an equal amount of money how many extra days will be required for B (minimum case)?&nbsp;</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74b91196a8",
+              "description": {
+                "text": "1 day",
+                "widgets": [
+                  {
+                    "id": "text66b74b91196ae",
+                    "type": "text",
+                    "properties": {
+                      "html": "1 day"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b91196bd",
+              "description": {
+                "text": "2 day",
+                "widgets": [
+                  {
+                    "id": "text66b74b91196c4",
+                    "type": "text",
+                    "properties": {
+                      "html": "2 day<strong></strong>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b91196d3",
+              "description": {
+                "text": "3 day",
+                "widgets": [
+                  {
+                    "id": "text66b74b91196d9",
+                    "type": "text",
+                    "properties": {
+                      "html": "3 day"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b91196e8",
+              "description": {
+                "text": "4 day",
+                "widgets": [
+                  {
+                    "id": "text66b74b91196ef",
+                    "type": "text",
+                    "properties": {
+                      "html": "4 day"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74b91196a8",
+              "text": "1 day",
+              "widgets": [
+                {
+                  "id": "text66b74b91196ae",
+                  "type": "text",
+                  "properties": {
+                    "html": "1 day"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>A earns 100*8 =Rs. 800 per day, B earns \n12*60 = Rs.720 per day <br>To find the equal amount of money (least \npossible case) – LCM of 800 and 720 = \n7200\n<br>To earn Rs. 7200, A need s 9 days and B \nneeds 10 days. <br>Therefore B needs 1 extra \nday.<br></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74b911971b",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "A and B can do a piece of work individually in 20 days and 15 days respectively. In how many days they both can complete the work together in an alternate basis starting from A?",
+            "widgets": [
+              {
+                "id": "text66b74b9119720",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">A and B can do a piece of work individually in 20 days and 15 days respectively. In how many days they both can complete the work together in an alternate basis starting from A?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74b911975d",
+              "description": {
+                "text": "16x1/2",
+                "widgets": [
+                  {
+                    "id": "text66b74b9119764",
+                    "type": "text",
+                    "properties": {
+                      "html": "16x1/2"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b9119773",
+              "description": {
+                "text": "15x1/4",
+                "widgets": [
+                  {
+                    "id": "text66b74b911977a",
+                    "type": "text",
+                    "properties": {
+                      "html": "15x1/4<strong></strong>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b9119788",
+              "description": {
+                "text": "17x1/4",
+                "widgets": [
+                  {
+                    "id": "text66b74b911978f",
+                    "type": "text",
+                    "properties": {
+                      "html": "17x1/4"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b911979e",
+              "description": {
+                "text": "18x1/2",
+                "widgets": [
+                  {
+                    "id": "text66b74b91197a5",
+                    "type": "text",
+                    "properties": {
+                      "html": "18x1/2"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74b9119788",
+              "text": "17x1/4",
+              "widgets": [
+                {
+                  "id": "text66b74b911978f",
+                  "type": "text",
+                  "properties": {
+                    "html": "17x1/4"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>Let the total work is 60 units. <br>So, A’s \nefficiency is 3 units and B’s efficiency is 4 \nunits.\n<br>They works in alternate basis – therefore \nIn each 2 days they will complete 7 units of \nwork<br>So, 56 units of work will be completed in \n16 days \nAnd in remaining 4 units of work, 3 units \nof work will be done by A in 1 day and \nfurther remaining 1 unit of work will be \ndone by B in 1/4 days. <br>Therefore, Total required time is \n(16+1+1/4) <br>= 17 x 1/4\ndays.<br></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74b91197d7",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Ratio of efficiency of M, N, O is 7:3:5 to do a specific work. Working together they can complete a work in 21 days. If M and O worked together for 15 days, the remaining work will be completed by N alone in :-",
+            "widgets": [
+              {
+                "id": "text66b74b91197dc",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">Ratio of efficiency of M, N, O is 7:3:5 to do a specific work. Working together they can complete a work in 21 days. If M and O worked together for 15 days, the remaining work will be completed by N alone in :-</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74b911981a",
+              "description": {
+                "text": "45 days",
+                "widgets": [
+                  {
+                    "id": "text66b74b9119821",
+                    "type": "text",
+                    "properties": {
+                      "html": "45 days"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b9119830",
+              "description": {
+                "text": "40 days",
+                "widgets": [
+                  {
+                    "id": "text66b74b9119836",
+                    "type": "text",
+                    "properties": {
+                      "html": "40 days"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b9119845",
+              "description": {
+                "text": "43 days",
+                "widgets": [
+                  {
+                    "id": "text66b74b911984c",
+                    "type": "text",
+                    "properties": {
+                      "html": "43 days"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b911985a",
+              "description": {
+                "text": "41 days",
+                "widgets": [
+                  {
+                    "id": "text66b74b9119861",
+                    "type": "text",
+                    "properties": {
+                      "html": "41 days"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74b911981a",
+              "text": "45 days",
+              "widgets": [
+                {
+                  "id": "text66b74b9119821",
+                  "type": "text",
+                  "properties": {
+                    "html": "45 days"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>Total work is = (15*21) = 315 units <br>In 15 days, M and O do (12*15) = 180 units \nof work, <br>remaining work = (315-180) = \n135 units\nN alone will do this remaining work in \n=\n135/3\n= 45 days.<br></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74b911989a",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Work done by A is double the work done by B in one day and work done by B in one day is thrice the work done by C in one day. If A,B and C together can complete the work in 27 days then in how many days B alone can do the work?",
+            "widgets": [
+              {
+                "id": "text66b74b911989f",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">Work done by A is double the work done by B in one day and work done by B in one day is thrice the work done by C in one day. If A,B and C  together can complete the work in 27 days then in how many days B alone can do the work?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74b91198dc",
+              "description": {
+                "text": "85 Days",
+                "widgets": [
+                  {
+                    "id": "text66b74b91198e3",
+                    "type": "text",
+                    "properties": {
+                      "html": "85 Days"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b91198f1",
+              "description": {
+                "text": "80 days",
+                "widgets": [
+                  {
+                    "id": "text66b74b91198f8",
+                    "type": "text",
+                    "properties": {
+                      "html": "80 days"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b9119906",
+              "description": {
+                "text": "92 days",
+                "widgets": [
+                  {
+                    "id": "text66b74b911990d",
+                    "type": "text",
+                    "properties": {
+                      "html": "92 days"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b911991c",
+              "description": {
+                "text": "90 days",
+                "widgets": [
+                  {
+                    "id": "text66b74b9119922",
+                    "type": "text",
+                    "properties": {
+                      "html": "90 days"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74b911991c",
+              "text": "90 days",
+              "widgets": [
+                {
+                  "id": "text66b74b9119922",
+                  "type": "text",
+                  "properties": {
+                    "html": "90 days"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>According to given information and after \ncombining two ratios, we got \n A : B : C\n<br>Efficiency- 6 : 3 : 1 , total work is \n=(10*27)=270 units\n<br>B alone will do the work in \n= \n270/3\n= 90 days.<br></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74b9119962",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "If A can do 3/4th of a work in 27 days and B can do 4/9th of a work in 12 days. How much wage A will get if they both earns Rs. 9100 in all?",
+            "widgets": [
+              {
+                "id": "text66b74b9119967",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">If A can do 3/4<sup>th</sup> of a work in 27 days and B can do 4/9<sup>th</sup> of a work in 12 days. How much wage A will get if they both earns Rs. 9100 in all?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74b91199a4",
+              "description": {
+                "text": "Rs. 4000",
+                "widgets": [
+                  {
+                    "id": "text66b74b91199b6",
+                    "type": "text",
+                    "properties": {
+                      "html": "Rs. 4000"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b91199c6",
+              "description": {
+                "text": "Rs. 3900",
+                "widgets": [
+                  {
+                    "id": "text66b74b91199cc",
+                    "type": "text",
+                    "properties": {
+                      "html": "Rs. 3900"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b91199db",
+              "description": {
+                "text": "Rs. 4100",
+                "widgets": [
+                  {
+                    "id": "text66b74b91199e2",
+                    "type": "text",
+                    "properties": {
+                      "html": "Rs. 4100"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b91199f0",
+              "description": {
+                "text": "Rs. 4200",
+                "widgets": [
+                  {
+                    "id": "text66b74b91199f7",
+                    "type": "text",
+                    "properties": {
+                      "html": "Rs. 4200"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74b91199c6",
+              "text": "Rs. 3900",
+              "widgets": [
+                {
+                  "id": "text66b74b91199cc",
+                  "type": "text",
+                  "properties": {
+                    "html": "Rs. 3900"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>A will complete the whole work in 36 days.\n<br>B will complete the whole work in 27 days. <br>Let, total work is 108 units\nTherefore, A’s efficiency is 3 units and B’s \nefficiency is 4 units. <br>Now, wages\n∝ efficiency\n<br>So, A will get = 9100/(4+3)\n∗ 3 = Rs. 3900<br></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74b9119a40",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Karan can do a work in 10 days less than the time taken by Arjun to do it. If both of them together take 12 days to complete the work, then the time taken by Arjun alone to do the same work (in days) is:-",
+            "widgets": [
+              {
+                "id": "text66b74b9119a45",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">Karan can do a work in 10 days less than the time taken by Arjun to do it. If both of them together take 12 days to complete the work, then the time taken by Arjun alone to do the same work (in days) is:-</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74b9119a82",
+              "description": {
+                "text": "25 days",
+                "widgets": [
+                  {
+                    "id": "text66b74b9119a89",
+                    "type": "text",
+                    "properties": {
+                      "html": "25 days"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b9119a97",
+              "description": {
+                "text": "30 days",
+                "widgets": [
+                  {
+                    "id": "text66b74b9119a9e",
+                    "type": "text",
+                    "properties": {
+                      "html": "30 days"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b9119aac",
+              "description": {
+                "text": "20 days",
+                "widgets": [
+                  {
+                    "id": "text66b74b9119ab3",
+                    "type": "text",
+                    "properties": {
+                      "html": "20 days"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b9119ac1",
+              "description": {
+                "text": "35 days",
+                "widgets": [
+                  {
+                    "id": "text66b74b9119ac8",
+                    "type": "text",
+                    "properties": {
+                      "html": "35 days"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74b9119a97",
+              "text": "30 days",
+              "widgets": [
+                {
+                  "id": "text66b74b9119a9e",
+                  "type": "text",
+                  "properties": {
+                    "html": "30 days"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>Simply by checking from options,\n<br>Option (A)………not satisfied\n<br>Option(B)………. Arjun can do the work in\n30 days, <br>so Karan can do the work in 20\nDays\n<br>Let, the total work is 60 units. <br>Therefore, \nArjun’s efficiency = 2 units & \nKaran’s efficiency is 3 units. <br>So, together\nwill complete the work in = 60/(2+3)\n= 12 days ……………satisfied.<br></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74b9119b16",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "A can do 10% of work in 2 days. B can do 50% of the same work in 25 days. They started to work together but after 5 days A left and B continued to work. In how many days will B complete the remaining work?",
+            "widgets": [
+              {
+                "id": "text66b74b9119b1b",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">A can do 10% of work in 2 days. B can do 50% of the same work in 25 days. They started to work together but after 5 days A left and B continued to work. In how many days will B complete the remaining work?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74b9119b59",
+              "description": {
+                "text": "30.5 days",
+                "widgets": [
+                  {
+                    "id": "text66b74b9119b5f",
+                    "type": "text",
+                    "properties": {
+                      "html": "30.5 days"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b9119b6e",
+              "description": {
+                "text": "32.5 days",
+                "widgets": [
+                  {
+                    "id": "text66b74b9119b75",
+                    "type": "text",
+                    "properties": {
+                      "html": "32.5 days"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b9119b83",
+              "description": {
+                "text": "33.5 days",
+                "widgets": [
+                  {
+                    "id": "text66b74b9119b8a",
+                    "type": "text",
+                    "properties": {
+                      "html": "33.5 days"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b9119b99",
+              "description": {
+                "text": "35.5 days",
+                "widgets": [
+                  {
+                    "id": "text66b74b9119b9f",
+                    "type": "text",
+                    "properties": {
+                      "html": "35.5 days"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74b9119b6e",
+              "text": "32.5 days",
+              "widgets": [
+                {
+                  "id": "text66b74b9119b75",
+                  "type": "text",
+                  "properties": {
+                    "html": "32.5 days"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>A can complete the work in 20 days.\n<br>B can complete the work in 50 days. <br>Let, \ntotal work is 100 units, so A’s efficiency is \n5 units\n & B’s efficiency is 2 units. <br>In 5 days, they both did = (5+2)*5=35 units \nof work, remaining work = (100-35)=65 \nunits\n<br>B will do this remaining work in \n= \n65/2\n= 32.5 days<br></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74b9119bf6",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Amar and Akbar can complete a work in 12 days, Akbar and Antony can complete the same work in 24 days, Antony and Amar can complete the work in 18 days. In how many days Akbar alone can do 12.5/9 part of work?",
+            "widgets": [
+              {
+                "id": "text66b74b9119bfa",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">Amar and Akbar can complete a work in 12 days, Akbar and Antony can complete the same work in 24 days, Antony and Amar can complete the work in 18 days. In how many days Akbar alone can do 12.5/9 part of work?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74b9119c38",
+              "description": {
+                "text": "40 days",
+                "widgets": [
+                  {
+                    "id": "text66b74b9119c3e",
+                    "type": "text",
+                    "properties": {
+                      "html": "40 days"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b9119c4d",
+              "description": {
+                "text": "30 days",
+                "widgets": [
+                  {
+                    "id": "text66b74b9119c54",
+                    "type": "text",
+                    "properties": {
+                      "html": "30 days"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b9119c62",
+              "description": {
+                "text": "35 days",
+                "widgets": [
+                  {
+                    "id": "text66b74b9119c69",
+                    "type": "text",
+                    "properties": {
+                      "html": "35 days"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b9119c77",
+              "description": {
+                "text": "45 days",
+                "widgets": [
+                  {
+                    "id": "text66b74b9119c7e",
+                    "type": "text",
+                    "properties": {
+                      "html": "45 days"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74b9119c38",
+              "text": "40 days",
+              "widgets": [
+                {
+                  "id": "text66b74b9119c3e",
+                  "type": "text",
+                  "properties": {
+                    "html": "40 days"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/5b49825c9a17fa8ddf7e094f8e3bef69.png\"><br></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        }
+      ]
+    }
+  ],
+  "submitted": true,
+  "updated": true,
+  "retryCount": 4,
+  "inlineFeedback": [],
+  "errors": [],
+  "success": true
+}

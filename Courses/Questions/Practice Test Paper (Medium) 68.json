@@ -1,0 +1,3337 @@
+{
+  "submission": {
+    "anon_id": null,
+    "model": "assessment-submission",
+    "courseTitleId": "aptitude-teacher2",
+    "object_id": "66b74bab7f809db010095205",
+    "assessmentId": "66b74bab7f809db010095204",
+    "snapshotId": "66bd8c7254024553bd005249",
+    "questions": {
+      "section66b74bab2e414": [
+        "mc66b74bab2e41c",
+        "mc66b74bab2e4d7",
+        "mc66b74bab2e589",
+        "mc66b74bab2e641",
+        "mc66b74bab2e701",
+        "mc66b74bab2e7cc",
+        "mc66b74bab2e89a",
+        "mc66b74bab2e96b",
+        "mc66b74bab2ea47",
+        "mc66b74bab2eb19"
+      ]
+    },
+    "certificateAnswers": [],
+    "certificateId": null,
+    "questionData": {
+      "mc66b74bab2e41c": {
+        "deliveredOnTimestamp": 1786440544.124654,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74bab2e4d7": {
+        "deliveredOnTimestamp": 1786440544.124697,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74bab2e589": {
+        "deliveredOnTimestamp": 1786440544.124716,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74bab2e641": {
+        "deliveredOnTimestamp": 1786440544.124733,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74bab2e701": {
+        "deliveredOnTimestamp": 1786440544.124748,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74bab2e7cc": {
+        "deliveredOnTimestamp": 1786440544.124763,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74bab2e89a": {
+        "deliveredOnTimestamp": 1786440544.124778,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74bab2e96b": {
+        "deliveredOnTimestamp": 1786440544.124793,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74bab2ea47": {
+        "deliveredOnTimestamp": 1786440544.124808,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74bab2eb19": {
+        "deliveredOnTimestamp": 1786440544.124823,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      }
+    },
+    "answers": [
+      {
+        "blockId": "mc66b74bab2e41c",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74bab2e4d7",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74bab2e589",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74bab2e641",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74bab2e701",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74bab2e7cc",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74bab2e89a",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74bab2e96b",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74bab2ea47",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74bab2eb19",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      }
+    ],
+    "submittedTimestamp": 1786440544.372372,
+    "status": "submitted",
+    "grading_status": "grading_status_graded",
+    "access": "public",
+    "actual_score": null,
+    "score": {
+      "maxScore": 10,
+      "value": 0,
+      "pass": false,
+      "passGrade": 50,
+      "points": 0
+    },
+    "source": {
+      "type": "unit"
+    },
+    "isDefining": true,
+    "isAdminAutoGradedSubmission": null,
+    "listOfNonConsentedBlocks": [],
+    "created": 1786440544.131215,
+    "modified": 1786440544.522488,
+    "id": "6a7aeb60e173c668810802b9",
+    "passed": false
+  },
+  "assessment": {
+    "title": "Practice Test Paper (Medium)",
+    "access": "public",
+    "type": "assessment",
+    "model": "assessmentSnapshot",
+    "description": "Intermediate practice test paper containing 10 assessment questions covering Coding-Decoding.",
+    "isTimed": false,
+    "timerFor": "assessmentTimed",
+    "onTimerExpiration": "autoSubmit",
+    "assessmentTimeLimitInSeconds": 600,
+    "questionTimeLimitInSeconds": 60,
+    "standaloneShareEnabled": null,
+    "customUrl": null,
+    "usesCustomUrl": null,
+    "allowAnonymous": true,
+    "randomizeQuestionOptions": false,
+    "disallowPartialSubmissions": false,
+    "submissionDueDateEnabled": false,
+    "submissionDueDate": 1626257823,
+    "makeFeedbackAvailableAfterDateEnabled": false,
+    "makeFeedbackAvailableAfterDate": 0,
+    "customStylesEnabled": true,
+    "customStyles": {
+      "assessmentPage": {
+        "background": {
+          "type": "color",
+          "colorData": {
+            "code": "",
+            "class": "lw-body-bg"
+          }
+        },
+        "dividers": {
+          "top": {
+            "orientation": "top",
+            "divider": "none"
+          },
+          "bottom": {
+            "orientation": "bottom",
+            "divider": "none"
+          }
+        }
+      },
+      "option": {
+        "radioEffect": "scribble",
+        "checkboxEffect": "scribble",
+        "size": "small"
+      },
+      "assessment": {
+        "transition": "none",
+        "background": {
+          "type": "color",
+          "colorData": {
+            "code": "",
+            "class": ""
+          }
+        },
+        "width": "normal",
+        "timerTemplate": "rectangle"
+      },
+      "linearRating": {
+        "labels": {
+          "size": "small"
+        }
+      },
+      "question": {
+        "description": {
+          "background": {
+            "type": "color",
+            "colorData": {
+              "code": "",
+              "class": ""
+            }
+          },
+          "type": "p",
+          "size": "small"
+        },
+        "answers": {
+          "background": {
+            "type": "color",
+            "colorData": {
+              "code": "",
+              "class": ""
+            }
+          }
+        },
+        "requiredAsterisk": {
+          "colorData": {
+            "code": "#ff0000",
+            "class": ""
+          }
+        },
+        "errorMessages": {
+          "size": "verySmall",
+          "colorData": {
+            "code": "#ff0000",
+            "class": ""
+          }
+        }
+      },
+      "input": {
+        "size": "small",
+        "type": "solidDark"
+      },
+      "textarea": {
+        "size": "small",
+        "type": "solidDark"
+      },
+      "dropdown": {
+        "size": "small",
+        "type": "solidDark"
+      }
+    },
+    "submissionMode": "all",
+    "startingDate": 1626765704,
+    "startingDateEnabled": false,
+    "showOnlyFailedQuestionsOnRetry": false,
+    "retryEnabled": true,
+    "retryOnFailOnly": false,
+    "gradingMethod": null,
+    "maxTries": null,
+    "onlyWrongOnRetake": null,
+    "isAmendable": false,
+    "feedbackShowOnScreen": true,
+    "feedbackDownloadPDF": false,
+    "feedbackShowInline": null,
+    "feedbackQuestionList": "all-questions",
+    "feedbackShowQuestionScore": true,
+    "feedbackShowFeedback": true,
+    "feedbackShowNumbering": false,
+    "feedbackShowSectionTitles": false,
+    "feedbackShowUserAnswers": true,
+    "feedbackShowCorrectAnswers": true,
+    "feedbackShowAnswerCorrectness": true,
+    "displayInlineFeedbackEnabled": null,
+    "displayBackButtonWhenSubmissionPerBlock": null,
+    "feedbackShowSectionResultSummary": false,
+    "askConfirmationBeforeSubmit": true,
+    "hasCustomConfirmationBeforeSubmitText": false,
+    "customConfirmationBeforeSubmitText": "Are you sure you want to submit the questionnaire?",
+    "customConfirmationBeforeSubmitTexts": {
+      "title": "Submit Assessment?",
+      "baseConfirmationMessage": "Are you sure you want to submit the questionnaire?",
+      "unansweredNotice": "You have not answered {X} questions."
+    },
+    "amendResubmissionMinutes": 30,
+    "passingGrade": null,
+    "navigationMode": "per-block",
+    "conditionalBlocks": {
+      "introContent": {
+        "id": "content66b74bab2e35a",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66b74bab2e36a",
+              "type": "text",
+              "insertedAsWidget": true,
+              "properties": {
+                "html": "Coding Decoding PAPER LEVEL-2",
+                "alignment": "center",
+                "customStyle": true,
+                "type": "h2",
+                "size": "normal"
+              }
+            },
+            {
+              "id": "text66b74bab2e37c",
+              "type": "text",
+              "properties": {
+                "html": "Self-assess your knowledge. Express yourself and get feedback from our instructors.",
+                "customStyle": true,
+                "alignment": "center"
+              }
+            },
+            {
+              "id": "spacer66b74bab2e387",
+              "type": "spacer",
+              "properties": {
+                "height": 20,
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            },
+            {
+              "id": "button66b74bab2e394",
+              "type": "button",
+              "properties": {
+                "buttonLabel": "<span>Ready to start</span>",
+                "buttonSize": "normal",
+                "buttonType": "solidBrand",
+                "alignment": "center",
+                "linkData": {
+                  "linkType": "goToFirst"
+                },
+                "iconColorData": {
+                  "code": "",
+                  "class": ""
+                },
+                "iconDisplay": false,
+                "iconSize": 26,
+                "iconClassName": " fas fa-angle-right",
+                "iconPosition": "right"
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "variables": {
+            "conditionalBlocks_introContent_blockData_widgets_0": [],
+            "conditionalBlocks_introContent_blockData_widgets_1": []
+          }
+        }
+      },
+      "submissionStartingDate": {
+        "id": "content66b74bab2e3b9",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66b74bab2e3be",
+              "type": "text",
+              "properties": {
+                "html": "Sorry but this assessment hasn't started yet."
+              }
+            },
+            {
+              "id": "date66b74bab2e3c5",
+              "type": "date",
+              "properties": {
+                "value": ""
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "displayConditions": ["startingDate"]
+        }
+      },
+      "submissionDueDate": {
+        "id": "content66b74bab2e3d2",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66b74bab2e3d7",
+              "type": "text",
+              "properties": {
+                "html": "Sorry but this assessment date is due."
+              }
+            },
+            {
+              "id": "date66b74bab2e3de",
+              "type": "date",
+              "properties": {
+                "value": ""
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "displayConditions": ["dateIsDue"]
+        }
+      },
+      "outroContent": {
+        "id": "content66b74bab2e3ea",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "userResults66b74bab2e3ef",
+              "type": "userResults",
+              "properties": {
+                "layout": "template2",
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            },
+            {
+              "id": "feedback66b74bab2e3fc",
+              "type": "feedback",
+              "properties": []
+            },
+            {
+              "id": "outroActions66b74bab2e403",
+              "type": "outroActions",
+              "properties": {
+                "layout": "",
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true
+        }
+      }
+    },
+    "systemSections": null,
+    "sections": [
+      {
+        "id": "section66b74bab2e414",
+        "title": "",
+        "type": "section",
+        "navigationMode": "per-block",
+        "blocks": [
+          {
+            "id": "mc66b74bab2e41c",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bab2e422",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">In a certain code language, 'CAT' is written as '3120'. If 'DOG' is written as '4157', how is 'BEAR' written in that code?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74bab2e435",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74bab2e43d",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74bab2e444",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74bab2e467",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bab2e46e",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>25118</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bab2e47f",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bab2e486",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>21518</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bab2e496",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bab2e49d",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>25181</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bab2e4ad",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bab2e4b5",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>21581</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74bab2e4d7",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bab2e4dc",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">In a certain code language, 'HELLO' is written as ‘19-22-15-15-12’. How is 'WORLD' written in that code?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74bab2e4ef",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74bab2e4f6",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74bab2e4fe",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74bab2e51f",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bab2e527",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>4-37-33-30-30</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bab2e536",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bab2e53d",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>4-37-33-30-29</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bab2e54c",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bab2e552",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>4-12-9-15-23</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bab2e561",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bab2e568",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>4-38-33-30-30</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_1_blockData_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_1": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74bab2e589",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bab2e58d",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">In a certain code language, 'CAT' is written as '9-1-400'. If 'DOG' is written as '16-225-49', how is 'BEAR' written in that code?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74bab2e59e",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74bab2e5a5",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74bab2e5ac",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74bab2e5d9",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bab2e5e0",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>4-25-1-289</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bab2e5ef",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bab2e5f5",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>2-25-1-289</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bab2e604",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bab2e60b",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>4-25-1-169</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bab2e61a",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bab2e620",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>2-25-1-169</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_2_blockData_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_2": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74bab2e641",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bab2e645",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong></p><p style=\"text-align: justify;\">In a certain code language,\n</p><p style=\"text-align: justify;\">1.\t'The sky is blue and clear' is written as \t'ka la na sa ta pa'.\n</p><p style=\"text-align: justify;\">2.\t'Clear and bright day today' is written as \t'pa ta ra ma ya da'.\n</p><p style=\"text-align: justify;\">3. 'Bright stars in the sky' is written as 'ra \tza ka na wa'.\n</p><p style=\"text-align: justify;\">4. 'Day and night are different' is written \tas 'da ta ba ca la ea'.\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">What does the code 'pa' stand for in the given code language?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74bab2e657",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74bab2e65d",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74bab2e664",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74bab2e683",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bab2e68a",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>The</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bab2e698",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bab2e69f",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>sky</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bab2e6ae",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bab2e6b4",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>is</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bab2e6c3",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bab2e6c9",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>blue</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bab2e6d8",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bab2e6df",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>clear</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_3_blockData_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_4_description_widgets_0": [],
+                "sections_0_blocks_3": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74bab2e701",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bab2e705",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong></p><p style=\"text-align: justify;\">In a certain code language,\n</p><p style=\"text-align: justify;\">1.\t'The sky is blue and clear' is written as \t'ka la na sa ta pa'.\n</p><p style=\"text-align: justify;\">2.\t'Clear and bright day today' is written as \t'pa ta ra ma ya da'.\n</p><p style=\"text-align: justify;\">3. 'Bright stars in the sky' is written as 'ra \tza ka na wa'.\n</p><p style=\"text-align: justify;\">4. 'Day and night are different' is written \tas 'da ta ba ca la ea'.\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">What is the code for 'bright'?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74bab2e716",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74bab2e71d",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74bab2e724",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74bab2e742",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bab2e749",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>ra</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bab2e758",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bab2e75f",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>za</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bab2e76e",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bab2e775",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>ka</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bab2e783",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bab2e78a",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>na</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bab2e799",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bab2e79f",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>wa</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_3_blockData_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_4_description_widgets_0": [],
+                "sections_0_blocks_3": [],
+                "sections_0_blocks_4_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_4_description_widgets_0": [],
+                "sections_0_blocks_4": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74bab2e7cc",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bab2e7d1",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong></p><p style=\"text-align: justify;\">In a certain code language,\n</p><p style=\"text-align: justify;\">1.\t'The sky is blue and clear' is written as \t'ka la na sa ta pa'.\n</p><p style=\"text-align: justify;\">2.\t'Clear and bright day today' is written as \t'pa ta ra ma ya da'.\n</p><p style=\"text-align: justify;\">3. 'Bright stars in the sky' is written as 'ra \tza ka na wa'.\n</p><p style=\"text-align: justify;\">4. 'Day and night are different' is written \tas 'da ta ba ca la ea'.\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">In the given code language, which of the following means 'bright and clear'?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74bab2e7e2",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74bab2e7e8",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74bab2e7ef",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74bab2e80e",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bab2e815",
+                        "type": "text",
+                        "properties": {
+                          "html": "pa ra"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bab2e824",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bab2e82b",
+                        "type": "text",
+                        "properties": {
+                          "html": "ta ra"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bab2e83a",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bab2e841",
+                        "type": "text",
+                        "properties": {
+                          "html": "ra za"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bab2e84f",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bab2e856",
+                        "type": "text",
+                        "properties": {
+                          "html": "ra ka"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bab2e865",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bab2e86c",
+                        "type": "text",
+                        "properties": {
+                          "html": "Cannot be determined"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_3_blockData_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_4_description_widgets_0": [],
+                "sections_0_blocks_3": [],
+                "sections_0_blocks_5_blockData_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_4_description_widgets_0": [],
+                "sections_0_blocks_5": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74bab2e89a",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bab2e89f",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong></p><p style=\"text-align: justify;\">In a certain code language,\n</p><p style=\"text-align: justify;\">1.\t'The sky is blue and clear' is written as \t'ka la na sa ta pa'.\n</p><p style=\"text-align: justify;\">2.\t'Clear and bright day today' is written as \t'pa ta ra ma ya da'.\n</p><p style=\"text-align: justify;\">3. 'Bright stars in the sky' is written as 'ra \tza ka na wa'.\n</p><p style=\"text-align: justify;\">4. 'Day and night are different' is written \tas 'da ta ba ca la ea'.\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">What does the code 'da' stand for?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74bab2e8b0",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74bab2e8b7",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74bab2e8be",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74bab2e8dd",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bab2e8e4",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>day</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bab2e8f4",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bab2e8fb",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>and</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bab2e90a",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bab2e911",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>night</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bab2e920",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bab2e927",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>are</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bab2e936",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bab2e93c",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>different</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_3_blockData_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_4_description_widgets_0": [],
+                "sections_0_blocks_3": [],
+                "sections_0_blocks_6_blockData_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_4_description_widgets_0": [],
+                "sections_0_blocks_6": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74bab2e96b",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bab2e970",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong></p><p style=\"text-align: justify;\">In a certain code language,\n</p><p style=\"text-align: justify;\">1.\t'The sky is blue and clear' is written as \t'ka la na sa ta pa'.\n</p><p style=\"text-align: justify;\">2.\t'Clear and bright day today' is written as \t'pa ta ra ma ya da'.\n</p><p style=\"text-align: justify;\">3. 'Bright stars in the sky' is written as 'ra \tza ka na wa'.\n</p><p style=\"text-align: justify;\">4. 'Day and night are different' is written \tas 'da ta ba ca la ea'.\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">What is the code for 'different' in the given code language?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74bab2e981",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74bab2e988",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74bab2e98f",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74bab2e9b9",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bab2e9c0",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>da</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bab2e9cf",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bab2e9d5",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>ta</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bab2e9e5",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bab2e9eb",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>ba</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bab2e9fa",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bab2ea01",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>la</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bab2ea10",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bab2ea17",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>ea</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_3_blockData_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_4_description_widgets_0": [],
+                "sections_0_blocks_3": [],
+                "sections_0_blocks_7_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_4_description_widgets_0": [],
+                "sections_0_blocks_7": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74bab2ea47",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bab2ea4c",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong></p><p style=\"text-align: justify;\">In a certain code language,\n</p><p style=\"text-align: justify;\">1.\t'The sky is blue and clear' is written as \t'ka la na sa ta pa'.\n</p><p style=\"text-align: justify;\">2.\t'Clear and bright day today' is written as \t'pa ta ra ma ya da'.\n</p><p style=\"text-align: justify;\">3. 'Bright stars in the sky' is written as 'ra \tza ka na wa'.\n</p><p style=\"text-align: justify;\">4. 'Day and night are different' is written \tas 'da ta ba ca la ea'.\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">What is the code for 'The sky is clear' in the given code language?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74bab2ea61",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74bab2ea68",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74bab2ea6f",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74bab2ea8e",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bab2ea95",
+                        "type": "text",
+                        "properties": {
+                          "html": "ka la na pa"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bab2eaa4",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bab2eaaa",
+                        "type": "text",
+                        "properties": {
+                          "html": "ka la sa pa"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bab2eab9",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bab2eac0",
+                        "type": "text",
+                        "properties": {
+                          "html": "ka la na ta"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bab2eacf",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bab2ead5",
+                        "type": "text",
+                        "properties": {
+                          "html": "ka la sa ta"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bab2eae4",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bab2eaea",
+                        "type": "text",
+                        "properties": {
+                          "html": "Cannot be determined"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_3_blockData_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_4_description_widgets_0": [],
+                "sections_0_blocks_3": [],
+                "sections_0_blocks_8_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_4_description_widgets_0": [],
+                "sections_0_blocks_8": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74bab2eb19",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74bab2eb1d",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong></p><p style=\"text-align: justify;\">In a certain code language,\n</p><p style=\"text-align: justify;\">1.\t'The sky is blue and clear' is written as \t'ka la na sa ta pa'.\n</p><p style=\"text-align: justify;\">2.\t'Clear and bright day today' is written as \t'pa ta ra ma ya da'.\n</p><p style=\"text-align: justify;\">3. 'Bright stars in the sky' is written as 'ra \tza ka na wa'.\n</p><p style=\"text-align: justify;\">4. 'Day and night are different' is written \tas 'da ta ba ca la ea'.\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">In the given code language, which of the following means 'day and night'?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74bab2eb2e",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74bab2eb35",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74bab2eb3c",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74bab2eb5b",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bab2eb61",
+                        "type": "text",
+                        "properties": {
+                          "html": "ma ta ba"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bab2eb70",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bab2eb77",
+                        "type": "text",
+                        "properties": {
+                          "html": "ma ta ca"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bab2eb86",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bab2eb8c",
+                        "type": "text",
+                        "properties": {
+                          "html": "ma ta da"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bab2eb9b",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bab2eba1",
+                        "type": "text",
+                        "properties": {
+                          "html": "ma ta ea"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74bab2ebb0",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74bab2ebb6",
+                        "type": "text",
+                        "properties": {
+                          "html": "Cannot be determined"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_3_blockData_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_4_description_widgets_0": [],
+                "sections_0_blocks_3": [],
+                "sections_0_blocks_9_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_4_description_widgets_0": [],
+                "sections_0_blocks_9": []
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "availabilityStatus": null,
+    "autoNavigationEnabled": false,
+    "displayBackButtonWhenNavigationPerBlock": true,
+    "saveAndResumeLaterEnabled": null,
+    "tagsAddedOnCompletion": [],
+    "tagsAddedOnPass": [],
+    "sendAnonymousSubmissionsToEmailLeads": false,
+    "afterSubmitActionEnabled": null,
+    "afterSubmitActionProperties": null,
+    "showWizardOnNextEdit": false,
+    "revisitAfterSubmissionAction": null,
+    "navigationTemplate": "HorizontalSpacedBetweenNavigationTemplate",
+    "learnerSearchBarEnabled": true,
+    "learnerUnansweredQuestionsEnabled": true,
+    "learnerFavouriteQuestionEnabled": true,
+    "learnerCompletionProgressEnabled": true,
+    "learnerShowIndexOfQuestionsEnabled": false,
+    "learnerTimeNotificationsEnabled": false,
+    "learnerAllowInterruptionsEnabled": true,
+    "learnerAllowInterruptionsTimeoutInMinutes": 30,
+    "learnerReclaimTryOnInterruptionTimeoutEnabled": false,
+    "learnerAskBeforeContinueToSaved": true,
+    "learnerAutoSaveEnabled": null,
+    "spellcheckDisabled": null,
+    "showPartialScoreOnSubmission": true,
+    "deliverableQuestionsSubsetType": "all",
+    "questionRandomizationType": "none",
+    "serveQuestionsBasedOnPreviousSubmission": null,
+    "scoringDisabled": false,
+    "isSelfAssessment": false,
+    "useDefaultCertificateTemplate": null,
+    "certificateTemplate": null,
+    "certificateSocialShare": null,
+    "migrationData": null,
+    "useAssessmentPassingGradeForOpenEndedCorrectness": true,
+    "openEndedCorrectnessPassingGrade": null,
+    "showScorePercentage": null,
+    "showScorePoints": null,
+    "showScoreCorrectAnswers": null,
+    "editorBehaviorSettings": null,
+    "manualReviewEnabled": null,
+    "resultsSummary": {
+      "enabled": true,
+      "showStatusIcon": true,
+      "showStatusText": true,
+      "showScorePercentage": true,
+      "showScorePoints": true,
+      "showScoreCorrectAnswers": false,
+      "showTimeTakenToComplete": true,
+      "showDateSubmitted": true,
+      "showAttemptCount": true
+    },
+    "meta": null,
+    "submissionsCount": 2402,
+    "fromMarketplace": null,
+    "aiFeedbackEnabled": null,
+    "numberOfFeedbackQuestions": null,
+    "created": 1723288491.678921,
+    "modified": 1723698290.261225,
+    "contentHash": "db1e6666e816998583cedc87c781fba2d36e16af5fa21188a1e2f2dace917add",
+    "id": "66b74bab7f809db010095204",
+    "objectType": "assessment",
+    "isEditBlockedDueToSync": false,
+    "variables": {
+      "submission": {
+        "self": {
+          "score": 0,
+          "points": 0,
+          "total_points": 10,
+          "correct_answers": 0,
+          "total_questions": 10,
+          "time_spent": "00:00:00",
+          "date_submitted": "11/08/26",
+          "attempt_count": 3,
+          "max_tries": null,
+          "pass_grade": 50,
+          "time_spent_seconds": 0,
+          "raw_start_date": 1786440544.131215
+        }
+      },
+      "school": {
+        "name": "Apna College",
+        "url": "www.apnacollege.in",
+        "description": "The most loved coding community of India ❤️"
+      },
+      "user": {
+        "username": "ram",
+        "email": "p4542639@gmail.com",
+        "cf_phonenumber": "7666690798"
+      }
+    }
+  },
+  "reclaimedTry": false,
+  "feedback": [
+    {
+      "title": "",
+      "id": "section66b74bab2e414",
+      "blocks": [
+        {
+          "id": "mc66b74bab2e41c",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "In a certain code language, 'CAT' is written as '3120'. If 'DOG' is written as '4157', how is 'BEAR' written in that code?",
+            "widgets": [
+              {
+                "id": "text66b74bab2e422",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">In a certain code language, 'CAT' is written as '3120'. If 'DOG' is written as '4157', how is 'BEAR' written in that code?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74bab2e467",
+              "description": {
+                "text": "25118",
+                "widgets": [
+                  {
+                    "id": "text66b74bab2e46e",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>25118</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bab2e47f",
+              "description": {
+                "text": "21518",
+                "widgets": [
+                  {
+                    "id": "text66b74bab2e486",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>21518</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bab2e496",
+              "description": {
+                "text": "25181",
+                "widgets": [
+                  {
+                    "id": "text66b74bab2e49d",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>25181</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bab2e4ad",
+              "description": {
+                "text": "21581",
+                "widgets": [
+                  {
+                    "id": "text66b74bab2e4b5",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>21581</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74bab2e467",
+              "text": "25118",
+              "widgets": [
+                {
+                  "id": "text66b74bab2e46e",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>25118</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br><span>In this code, each letter is replaced by its position\nin the alphabet, but the position is reversed. So, 'B' becomes '2', 'E' becomes\n'5', 'A' becomes '1', and 'R' becomes '18'. Therefore, 'BEAR' is written as\n'25118' in that code. <br>So, the correct answer is Option A: 25118.</span></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74bab2e4d7",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "In a certain code language, 'HELLO' is written as ‘19-22-15-15-12’. How is 'WORLD' written in that code?",
+            "widgets": [
+              {
+                "id": "text66b74bab2e4dc",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">In a certain code language, 'HELLO' is written as ‘19-22-15-15-12’. How is 'WORLD' written in that code?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74bab2e51f",
+              "description": {
+                "text": "4-37-33-30-30",
+                "widgets": [
+                  {
+                    "id": "text66b74bab2e527",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>4-37-33-30-30</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bab2e536",
+              "description": {
+                "text": "4-37-33-30-29",
+                "widgets": [
+                  {
+                    "id": "text66b74bab2e53d",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>4-37-33-30-29</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bab2e54c",
+              "description": {
+                "text": "4-12-9-15-23",
+                "widgets": [
+                  {
+                    "id": "text66b74bab2e552",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>4-12-9-15-23</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bab2e561",
+              "description": {
+                "text": "4-38-33-30-30",
+                "widgets": [
+                  {
+                    "id": "text66b74bab2e568",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>4-38-33-30-30</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74bab2e54c",
+              "text": "4-12-9-15-23",
+              "widgets": [
+                {
+                  "id": "text66b74bab2e552",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>4-12-9-15-23</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>In the given code language, each letter is replaced by\nthe reverse of its position in the alphabet (Z=1, Y=2, X=3, etc.).<br>So, ‘H’\nbecomes ‘19’, ‘E’ becomes ‘22’, ‘L’ becomes ‘15’, and ‘O’ becomes ‘12’.\nTherefore, 'W' becomes '4', 'O' becomes '12', 'R' becomes '9', 'L' becomes\n'15', and 'D' becomes '23'. <br>Therefore, 'WORLD' should be written as\n'4-12-9-15-23' in that code.</p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74bab2e589",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "In a certain code language, 'CAT' is written as '9-1-400'. If 'DOG' is written as '16-225-49', how is 'BEAR' written in that code?",
+            "widgets": [
+              {
+                "id": "text66b74bab2e58d",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">In a certain code language, 'CAT' is written as '9-1-400'. If 'DOG' is written as '16-225-49', how is 'BEAR' written in that code?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74bab2e5d9",
+              "description": {
+                "text": "4-25-1-289",
+                "widgets": [
+                  {
+                    "id": "text66b74bab2e5e0",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>4-25-1-289</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bab2e5ef",
+              "description": {
+                "text": "2-25-1-289",
+                "widgets": [
+                  {
+                    "id": "text66b74bab2e5f5",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>2-25-1-289</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bab2e604",
+              "description": {
+                "text": "4-25-1-169",
+                "widgets": [
+                  {
+                    "id": "text66b74bab2e60b",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>4-25-1-169</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bab2e61a",
+              "description": {
+                "text": "2-25-1-169",
+                "widgets": [
+                  {
+                    "id": "text66b74bab2e620",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>2-25-1-169</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74bab2e5d9",
+              "text": "4-25-1-289",
+              "widgets": [
+                {
+                  "id": "text66b74bab2e5e0",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>4-25-1-289</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br><span>In this code, each letter is replaced by the square of\nits position in the alphabet. So, 'B' becomes '4', 'E' becomes '25', 'A'\nbecomes '1', and 'R' becomes '289'. Therefore, 'BEAR' is written as\n'4-25-1-289' in that code. <br>So, the correct answer is Option A: 4-25-1-289.</span></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74bab2e641",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions :In a certain code language, 1. 'The sky is blue and clear' is written as 'ka la na sa ta pa'. 2. 'Clear and bright day today' is written as 'pa ta ra ma ya da'. 3. 'Bright stars in the sky' is written as 'ra za ka na wa'. 4. 'Day and night are different' is written as 'da ta ba ca la ea'. What does the code 'pa' stand for in the given code language?",
+            "widgets": [
+              {
+                "id": "text66b74bab2e645",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong></p><p style=\"text-align: justify;\">In a certain code language,\n</p><p style=\"text-align: justify;\">1.\t'The sky is blue and clear' is written as \t'ka la na sa ta pa'.\n</p><p style=\"text-align: justify;\">2.\t'Clear and bright day today' is written as \t'pa ta ra ma ya da'.\n</p><p style=\"text-align: justify;\">3. 'Bright stars in the sky' is written as 'ra \tza ka na wa'.\n</p><p style=\"text-align: justify;\">4. 'Day and night are different' is written \tas 'da ta ba ca la ea'.\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">What does the code 'pa' stand for in the given code language?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74bab2e683",
+              "description": {
+                "text": "The",
+                "widgets": [
+                  {
+                    "id": "text66b74bab2e68a",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>The</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bab2e698",
+              "description": {
+                "text": "sky",
+                "widgets": [
+                  {
+                    "id": "text66b74bab2e69f",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>sky</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bab2e6ae",
+              "description": {
+                "text": "is",
+                "widgets": [
+                  {
+                    "id": "text66b74bab2e6b4",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>is</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bab2e6c3",
+              "description": {
+                "text": "blue",
+                "widgets": [
+                  {
+                    "id": "text66b74bab2e6c9",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>blue</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bab2e6d8",
+              "description": {
+                "text": "clear",
+                "widgets": [
+                  {
+                    "id": "text66b74bab2e6df",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>clear</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74bab2e6d8",
+              "text": "clear",
+              "widgets": [
+                {
+                  "id": "text66b74bab2e6df",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>clear</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>Let's\nmatch common words with common codes:<br>The word 'clear'\nappears in both sentence 1 and 2. <br>The common code in both sentences is 'pa'.\n<br>Therefore, 'pa' = 'clear'.<br>The word 'and'\nappears in both sentence 1 and 4. <br>The common code in both sentences is 'ta'.\n<br>Therefore, 'ta' = 'and'.<br>The word 'bright'\nappears in sentence 2 and 3. <br>The common code in both sentences is 'ra'.\n<br>Therefore, 'ra' = 'bright'.<br>The word 'day'\nappears in sentence 2 and 4. <br>The common code in both sentences is 'da'.\n<br>Therefore, 'da' = 'day'.<br>Based\non our decoding:<br>Answer: (E) clear<br><br></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74bab2e701",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions :In a certain code language, 1. 'The sky is blue and clear' is written as 'ka la na sa ta pa'. 2. 'Clear and bright day today' is written as 'pa ta ra ma ya da'. 3. 'Bright stars in the sky' is written as 'ra za ka na wa'. 4. 'Day and night are different' is written as 'da ta ba ca la ea'. What is the code for 'bright'?",
+            "widgets": [
+              {
+                "id": "text66b74bab2e705",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong></p><p style=\"text-align: justify;\">In a certain code language,\n</p><p style=\"text-align: justify;\">1.\t'The sky is blue and clear' is written as \t'ka la na sa ta pa'.\n</p><p style=\"text-align: justify;\">2.\t'Clear and bright day today' is written as \t'pa ta ra ma ya da'.\n</p><p style=\"text-align: justify;\">3. 'Bright stars in the sky' is written as 'ra \tza ka na wa'.\n</p><p style=\"text-align: justify;\">4. 'Day and night are different' is written \tas 'da ta ba ca la ea'.\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">What is the code for 'bright'?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74bab2e742",
+              "description": {
+                "text": "ra",
+                "widgets": [
+                  {
+                    "id": "text66b74bab2e749",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>ra</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bab2e758",
+              "description": {
+                "text": "za",
+                "widgets": [
+                  {
+                    "id": "text66b74bab2e75f",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>za</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bab2e76e",
+              "description": {
+                "text": "ka",
+                "widgets": [
+                  {
+                    "id": "text66b74bab2e775",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>ka</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bab2e783",
+              "description": {
+                "text": "na",
+                "widgets": [
+                  {
+                    "id": "text66b74bab2e78a",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>na</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bab2e799",
+              "description": {
+                "text": "wa",
+                "widgets": [
+                  {
+                    "id": "text66b74bab2e79f",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>wa</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74bab2e742",
+              "text": "ra",
+              "widgets": [
+                {
+                  "id": "text66b74bab2e749",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>ra</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>Let's\nmatch common words with common codes:<br>The word 'clear'\nappears in both sentence 1 and 2. <br>The common code in both sentences is 'pa'.\n<br>Therefore, 'pa' = 'clear'.<br>The word 'and'\nappears in both sentence 1 and 4. <br>The common code in both sentences is 'ta'.\n<br>Therefore, 'ta' = 'and'.<br>The word 'bright'\nappears in sentence 2 and 3. <br>The common code in both sentences is 'ra'.\n<br>Therefore, 'ra' = 'bright'.<br>The word 'day'\nappears in sentence 2 and 4. <br>The common code in both sentences is 'da'.\n<br>Therefore, 'da' = 'day'.<br>Based\non our decoding:<br>Answer: (A) ra<br></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74bab2e7cc",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions :In a certain code language, 1. 'The sky is blue and clear' is written as 'ka la na sa ta pa'. 2. 'Clear and bright day today' is written as 'pa ta ra ma ya da'. 3. 'Bright stars in the sky' is written as 'ra za ka na wa'. 4. 'Day and night are different' is written as 'da ta ba ca la ea'. In the given code language, which of the following means 'bright and clear'?",
+            "widgets": [
+              {
+                "id": "text66b74bab2e7d1",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong></p><p style=\"text-align: justify;\">In a certain code language,\n</p><p style=\"text-align: justify;\">1.\t'The sky is blue and clear' is written as \t'ka la na sa ta pa'.\n</p><p style=\"text-align: justify;\">2.\t'Clear and bright day today' is written as \t'pa ta ra ma ya da'.\n</p><p style=\"text-align: justify;\">3. 'Bright stars in the sky' is written as 'ra \tza ka na wa'.\n</p><p style=\"text-align: justify;\">4. 'Day and night are different' is written \tas 'da ta ba ca la ea'.\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">In the given code language, which of the following means 'bright and clear'?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74bab2e80e",
+              "description": {
+                "text": "pa ra",
+                "widgets": [
+                  {
+                    "id": "text66b74bab2e815",
+                    "type": "text",
+                    "properties": {
+                      "html": "pa ra"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bab2e824",
+              "description": {
+                "text": "ta ra",
+                "widgets": [
+                  {
+                    "id": "text66b74bab2e82b",
+                    "type": "text",
+                    "properties": {
+                      "html": "ta ra"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bab2e83a",
+              "description": {
+                "text": "ra za",
+                "widgets": [
+                  {
+                    "id": "text66b74bab2e841",
+                    "type": "text",
+                    "properties": {
+                      "html": "ra za"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bab2e84f",
+              "description": {
+                "text": "ra ka",
+                "widgets": [
+                  {
+                    "id": "text66b74bab2e856",
+                    "type": "text",
+                    "properties": {
+                      "html": "ra ka"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bab2e865",
+              "description": {
+                "text": "Cannot be determined",
+                "widgets": [
+                  {
+                    "id": "text66b74bab2e86c",
+                    "type": "text",
+                    "properties": {
+                      "html": "Cannot be determined"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74bab2e80e",
+              "text": "pa ra",
+              "widgets": [
+                {
+                  "id": "text66b74bab2e815",
+                  "type": "text",
+                  "properties": {
+                    "html": "pa ra"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>Let's\nmatch common words with common codes:<br>The word 'clear'\nappears in both sentence 1 and 2. <br>The common code in both sentences is 'pa'.\n<br>Therefore, 'pa' = 'clear'.<br>The word 'and'\nappears in both sentence 1 and 4. <br>The common code in both sentences is 'ta'.\n<br>Therefore, 'ta' = 'and'.<br>The word 'bright'\nappears in sentence 2 and 3. <br>The common code in both sentences is 'ra'.\n<br>Therefore, 'ra' = 'bright'.<br>The word 'day'\nappears in sentence 2 and 4. <br>The common code in both sentences is 'da'.\n<br>Therefore, 'da' = 'day'.<br>We already decoded 'bright' as 'ra' and 'clear' as 'pa'. Therefore,\n'bright and clear' would be 'ra pa'.<br>Answer: (A) pa ra<br></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74bab2e89a",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions :In a certain code language, 1. 'The sky is blue and clear' is written as 'ka la na sa ta pa'. 2. 'Clear and bright day today' is written as 'pa ta ra ma ya da'. 3. 'Bright stars in the sky' is written as 'ra za ka na wa'. 4. 'Day and night are different' is written as 'da ta ba ca la ea'. What does the code 'da' stand for?",
+            "widgets": [
+              {
+                "id": "text66b74bab2e89f",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong></p><p style=\"text-align: justify;\">In a certain code language,\n</p><p style=\"text-align: justify;\">1.\t'The sky is blue and clear' is written as \t'ka la na sa ta pa'.\n</p><p style=\"text-align: justify;\">2.\t'Clear and bright day today' is written as \t'pa ta ra ma ya da'.\n</p><p style=\"text-align: justify;\">3. 'Bright stars in the sky' is written as 'ra \tza ka na wa'.\n</p><p style=\"text-align: justify;\">4. 'Day and night are different' is written \tas 'da ta ba ca la ea'.\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">What does the code 'da' stand for?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74bab2e8dd",
+              "description": {
+                "text": "day",
+                "widgets": [
+                  {
+                    "id": "text66b74bab2e8e4",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>day</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bab2e8f4",
+              "description": {
+                "text": "and",
+                "widgets": [
+                  {
+                    "id": "text66b74bab2e8fb",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>and</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bab2e90a",
+              "description": {
+                "text": "night",
+                "widgets": [
+                  {
+                    "id": "text66b74bab2e911",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>night</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bab2e920",
+              "description": {
+                "text": "are",
+                "widgets": [
+                  {
+                    "id": "text66b74bab2e927",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>are</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bab2e936",
+              "description": {
+                "text": "different",
+                "widgets": [
+                  {
+                    "id": "text66b74bab2e93c",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>different</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74bab2e8dd",
+              "text": "day",
+              "widgets": [
+                {
+                  "id": "text66b74bab2e8e4",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>day</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>Let's\nmatch common words with common codes:<br>The word 'clear'\nappears in both sentence 1 and 2. <br>The common code in both sentences is 'pa'.\n<br>Therefore, 'pa' = 'clear'.<br>The word 'and'\nappears in both sentence 1 and 4. <br>The common code in both sentences is 'ta'.\n<br>Therefore, 'ta' = 'and'.<br>The word 'bright'\nappears in sentence 2 and 3. <br>The common code in both sentences is 'ra'.\n<br>Therefore, 'ra' = 'bright'.<br>The word 'day'\nappears in sentence 2 and 4. <br>The common code in both sentences is 'da'.\n<br>Therefore, 'da' = 'day'.<br>Based\non our decoding:<br>Answer: (A) day<br></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74bab2e96b",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions :In a certain code language, 1. 'The sky is blue and clear' is written as 'ka la na sa ta pa'. 2. 'Clear and bright day today' is written as 'pa ta ra ma ya da'. 3. 'Bright stars in the sky' is written as 'ra za ka na wa'. 4. 'Day and night are different' is written as 'da ta ba ca la ea'. What is the code for 'different' in the given code language?",
+            "widgets": [
+              {
+                "id": "text66b74bab2e970",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong></p><p style=\"text-align: justify;\">In a certain code language,\n</p><p style=\"text-align: justify;\">1.\t'The sky is blue and clear' is written as \t'ka la na sa ta pa'.\n</p><p style=\"text-align: justify;\">2.\t'Clear and bright day today' is written as \t'pa ta ra ma ya da'.\n</p><p style=\"text-align: justify;\">3. 'Bright stars in the sky' is written as 'ra \tza ka na wa'.\n</p><p style=\"text-align: justify;\">4. 'Day and night are different' is written \tas 'da ta ba ca la ea'.\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">What is the code for 'different' in the given code language?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74bab2e9b9",
+              "description": {
+                "text": "da",
+                "widgets": [
+                  {
+                    "id": "text66b74bab2e9c0",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>da</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bab2e9cf",
+              "description": {
+                "text": "ta",
+                "widgets": [
+                  {
+                    "id": "text66b74bab2e9d5",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>ta</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bab2e9e5",
+              "description": {
+                "text": "ba",
+                "widgets": [
+                  {
+                    "id": "text66b74bab2e9eb",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>ba</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bab2e9fa",
+              "description": {
+                "text": "la",
+                "widgets": [
+                  {
+                    "id": "text66b74bab2ea01",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>la</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bab2ea10",
+              "description": {
+                "text": "ea",
+                "widgets": [
+                  {
+                    "id": "text66b74bab2ea17",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>ea</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74bab2ea10",
+              "text": "ea",
+              "widgets": [
+                {
+                  "id": "text66b74bab2ea17",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>ea</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>Let's\nmatch common words with common codes:<br>The word 'clear'\nappears in both sentence 1 and 2. <br>The common code in both sentences is 'pa'.\n<br>Therefore, 'pa' = 'clear'.<br>The word 'and'\nappears in both sentence 1 and 4. <br>The common code in both sentences is 'ta'.\n<br>Therefore, 'ta' = 'and'.<br>The word 'bright'\nappears in sentence 2 and 3. <br>The common code in both sentences is 'ra'.\n<br>Therefore, 'ra' = 'bright'.<br>The word 'day'\nappears in sentence 2 and 4. <br>The common code in both sentences is 'da'.\n<br>Therefore, 'da' = 'day'.<br>In sentence 4, the word 'different' doesn't appear in the other\nsentences, so its code must be unique to sentence 4. The unique codes in\nsentence 4 are 'ba', 'ca', and 'ea'. We already identified 'day', 'and',\n'night', and 'are'. <br>Therefore, Answer: (E) ea<br></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74bab2ea47",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions :In a certain code language, 1. 'The sky is blue and clear' is written as 'ka la na sa ta pa'. 2. 'Clear and bright day today' is written as 'pa ta ra ma ya da'. 3. 'Bright stars in the sky' is written as 'ra za ka na wa'. 4. 'Day and night are different' is written as 'da ta ba ca la ea'. What is the code for 'The sky is clear' in the given code language?",
+            "widgets": [
+              {
+                "id": "text66b74bab2ea4c",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong></p><p style=\"text-align: justify;\">In a certain code language,\n</p><p style=\"text-align: justify;\">1.\t'The sky is blue and clear' is written as \t'ka la na sa ta pa'.\n</p><p style=\"text-align: justify;\">2.\t'Clear and bright day today' is written as \t'pa ta ra ma ya da'.\n</p><p style=\"text-align: justify;\">3. 'Bright stars in the sky' is written as 'ra \tza ka na wa'.\n</p><p style=\"text-align: justify;\">4. 'Day and night are different' is written \tas 'da ta ba ca la ea'.\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">What is the code for 'The sky is clear' in the given code language?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74bab2ea8e",
+              "description": {
+                "text": "ka la na pa",
+                "widgets": [
+                  {
+                    "id": "text66b74bab2ea95",
+                    "type": "text",
+                    "properties": {
+                      "html": "ka la na pa"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bab2eaa4",
+              "description": {
+                "text": "ka la sa pa",
+                "widgets": [
+                  {
+                    "id": "text66b74bab2eaaa",
+                    "type": "text",
+                    "properties": {
+                      "html": "ka la sa pa"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bab2eab9",
+              "description": {
+                "text": "ka la na ta",
+                "widgets": [
+                  {
+                    "id": "text66b74bab2eac0",
+                    "type": "text",
+                    "properties": {
+                      "html": "ka la na ta"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bab2eacf",
+              "description": {
+                "text": "ka la sa ta",
+                "widgets": [
+                  {
+                    "id": "text66b74bab2ead5",
+                    "type": "text",
+                    "properties": {
+                      "html": "ka la sa ta"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bab2eae4",
+              "description": {
+                "text": "Cannot be determined",
+                "widgets": [
+                  {
+                    "id": "text66b74bab2eaea",
+                    "type": "text",
+                    "properties": {
+                      "html": "Cannot be determined"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74bab2ea8e",
+              "text": "ka la na pa",
+              "widgets": [
+                {
+                  "id": "text66b74bab2ea95",
+                  "type": "text",
+                  "properties": {
+                    "html": "ka la na pa"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>Let's\nmatch common words with common codes:<br>The word 'clear'\nappears in both sentence 1 and 2. <br>The common code in both sentences is 'pa'.\n<br>Therefore, 'pa' = 'clear'.<br>The word 'and'\nappears in both sentence 1 and 4. <br>The common code in both sentences is 'ta'.\n<br>Therefore, 'ta' = 'and'.<br>The word 'bright'\nappears in sentence 2 and 3. <br>The common code in both sentences is 'ra'.\n<br>Therefore, 'ra' = 'bright'.<br>The word 'day'\nappears in sentence 2 and 4. <br>The common code in both sentences is 'da'.\n<br>Therefore, 'da' = 'day'.<br>We\ndecoded 'clear' as 'pa'. From sentence 1, the codes left for\n'The sky is clear' are 'ka', 'la', 'na', and 'pa'. Since 'pa' is 'clear', 'ka', 'la',\nand 'na' must be 'The', 'sky', and 'is'. <br>Thus: Answer: (A) ka la na pa<br></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74bab2eb19",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Direction for questions :In a certain code language, 1. 'The sky is blue and clear' is written as 'ka la na sa ta pa'. 2. 'Clear and bright day today' is written as 'pa ta ra ma ya da'. 3. 'Bright stars in the sky' is written as 'ra za ka na wa'. 4. 'Day and night are different' is written as 'da ta ba ca la ea'. In the given code language, which of the following means 'day and night'?",
+            "widgets": [
+              {
+                "id": "text66b74bab2eb1d",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\"><strong>Direction for questions :</strong></p><p style=\"text-align: justify;\">In a certain code language,\n</p><p style=\"text-align: justify;\">1.\t'The sky is blue and clear' is written as \t'ka la na sa ta pa'.\n</p><p style=\"text-align: justify;\">2.\t'Clear and bright day today' is written as \t'pa ta ra ma ya da'.\n</p><p style=\"text-align: justify;\">3. 'Bright stars in the sky' is written as 'ra \tza ka na wa'.\n</p><p style=\"text-align: justify;\">4. 'Day and night are different' is written \tas 'da ta ba ca la ea'.\n</p><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\">In the given code language, which of the following means 'day and night'?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74bab2eb5b",
+              "description": {
+                "text": "ma ta ba",
+                "widgets": [
+                  {
+                    "id": "text66b74bab2eb61",
+                    "type": "text",
+                    "properties": {
+                      "html": "ma ta ba"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bab2eb70",
+              "description": {
+                "text": "ma ta ca",
+                "widgets": [
+                  {
+                    "id": "text66b74bab2eb77",
+                    "type": "text",
+                    "properties": {
+                      "html": "ma ta ca"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bab2eb86",
+              "description": {
+                "text": "ma ta da",
+                "widgets": [
+                  {
+                    "id": "text66b74bab2eb8c",
+                    "type": "text",
+                    "properties": {
+                      "html": "ma ta da"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bab2eb9b",
+              "description": {
+                "text": "ma ta ea",
+                "widgets": [
+                  {
+                    "id": "text66b74bab2eba1",
+                    "type": "text",
+                    "properties": {
+                      "html": "ma ta ea"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74bab2ebb0",
+              "description": {
+                "text": "Cannot be determined",
+                "widgets": [
+                  {
+                    "id": "text66b74bab2ebb6",
+                    "type": "text",
+                    "properties": {
+                      "html": "Cannot be determined"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74bab2ebb0",
+              "text": "Cannot be determined",
+              "widgets": [
+                {
+                  "id": "text66b74bab2ebb6",
+                  "type": "text",
+                  "properties": {
+                    "html": "Cannot be determined"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>Let's\nmatch common words with common codes:<br>The word 'clear'\nappears in both sentence 1 and 2. <br>The common code in both sentences is 'pa'.\n<br>Therefore, 'pa' = 'clear'.<br>The word 'and'\nappears in both sentence 1 and 4. <br>The common code in both sentences is 'ta'.\n<br>Therefore, 'ta' = 'and'.<br>The word 'bright'\nappears in sentence 2 and 3. <br>The common code in both sentences is 'ra'.\n<br>Therefore, 'ra' = 'bright'.<br>The word 'day'\nappears in sentence 2 and 4. <br>The common code in both sentences is 'da'.\n<br>Therefore, 'da' = 'day'.<br>We decoded 'day' as 'da', 'and' as 'ta'. In sentence 4, 'night' is\nleft as the remaining common word among 'ba', 'ca', and 'ea'. Since 'ea' is\n'different':\n<br>Therefore, 'night'\nmust be 'ba' or 'ca'. <br>Given options, the\nanswer is: Answer: (E) Cannot be determined because we cannot\ndefinitively decode 'night' between 'ba' and 'ca' without more information.<br></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        }
+      ]
+    }
+  ],
+  "submitted": true,
+  "updated": true,
+  "retryCount": 3,
+  "inlineFeedback": [],
+  "errors": [],
+  "success": true
+}

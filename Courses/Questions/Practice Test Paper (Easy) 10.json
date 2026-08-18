@@ -1,0 +1,3195 @@
+{
+  "submission": {
+    "anon_id": null,
+    "model": "assessment-submission",
+    "courseTitleId": "aptitude-qs-library",
+    "object_id": "66a0ee2130ab7ba7e808cb56",
+    "assessmentId": "66a0ee2130ab7ba7e808cb55",
+    "snapshotId": "66be431f7f5137577e01f7a7",
+    "questions": {
+      "section66a0ee20d0c6a": [
+        "mc1721850386567_270",
+        "mc1721850447486_284",
+        "mc1721850496782_301",
+        "mc1721850562198_311",
+        "mc1721850615983_328",
+        "mc1721850683113_338",
+        "mcImage1721850793895_361",
+        "mc1721851045751_379",
+        "mc1721851089734_393",
+        "mc1721851131102_407"
+      ]
+    },
+    "certificateAnswers": [],
+    "certificateId": null,
+    "questionData": {
+      "mc1721850386567_270": {
+        "deliveredOnTimestamp": 1786440381.480342,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721850447486_284": {
+        "deliveredOnTimestamp": 1786440381.480365,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721850496782_301": {
+        "deliveredOnTimestamp": 1786440381.480388,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721850562198_311": {
+        "deliveredOnTimestamp": 1786440381.480404,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721850615983_328": {
+        "deliveredOnTimestamp": 1786440381.480422,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721850683113_338": {
+        "deliveredOnTimestamp": 1786440381.480436,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mcImage1721850793895_361": {
+        "deliveredOnTimestamp": 1786440381.480451,
+        "blockType": "mcImage",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721851045751_379": {
+        "deliveredOnTimestamp": 1786440381.480464,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721851089734_393": {
+        "deliveredOnTimestamp": 1786440381.480478,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721851131102_407": {
+        "deliveredOnTimestamp": 1786440381.48049,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      }
+    },
+    "answers": [
+      {
+        "blockId": "mc1721850386567_270",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721850447486_284",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721850496782_301",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721850562198_311",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721850615983_328",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721850683113_338",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mcImage1721850793895_361",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721851045751_379",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721851089734_393",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721851131102_407",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      }
+    ],
+    "submittedTimestamp": 1786440381.710472,
+    "status": "submitted",
+    "grading_status": "grading_status_no_grade",
+    "access": "public",
+    "actual_score": null,
+    "score": [],
+    "source": {
+      "type": "unit"
+    },
+    "isDefining": true,
+    "isAdminAutoGradedSubmission": null,
+    "listOfNonConsentedBlocks": [],
+    "created": 1786440381.486053,
+    "modified": 1786440381.803927,
+    "id": "6a7aeabdc61a81fe590d8e00",
+    "passed": null
+  },
+  "assessment": {
+    "title": "Practice Test Paper (Easy)",
+    "access": "public",
+    "type": "assessment",
+    "model": "assessmentSnapshot",
+    "description": "Foundational practice test paper containing 10 assessment questions covering Ratios & Proportions, Speed, Distance & Time.",
+    "isTimed": false,
+    "timerFor": "assessmentTimed",
+    "onTimerExpiration": "autoSubmit",
+    "assessmentTimeLimitInSeconds": 600,
+    "questionTimeLimitInSeconds": 60,
+    "standaloneShareEnabled": null,
+    "customUrl": null,
+    "usesCustomUrl": null,
+    "allowAnonymous": true,
+    "randomizeQuestionOptions": false,
+    "disallowPartialSubmissions": false,
+    "submissionDueDateEnabled": false,
+    "submissionDueDate": 1626257823,
+    "makeFeedbackAvailableAfterDateEnabled": false,
+    "makeFeedbackAvailableAfterDate": 0,
+    "customStylesEnabled": true,
+    "customStyles": {
+      "assessmentPage": {
+        "background": {
+          "type": "color",
+          "colorData": {
+            "code": "",
+            "class": "lw-body-bg"
+          }
+        },
+        "dividers": {
+          "top": {
+            "orientation": "top",
+            "divider": "none"
+          },
+          "bottom": {
+            "orientation": "bottom",
+            "divider": "none"
+          }
+        }
+      },
+      "option": {
+        "radioEffect": "scribble",
+        "checkboxEffect": "scribble",
+        "size": "small"
+      },
+      "assessment": {
+        "transition": "none",
+        "background": {
+          "type": "color",
+          "colorData": {
+            "code": "",
+            "class": ""
+          }
+        },
+        "width": "normal",
+        "timerTemplate": "rectangle"
+      },
+      "linearRating": {
+        "labels": {
+          "size": "small"
+        }
+      },
+      "question": {
+        "description": {
+          "background": {
+            "type": "color",
+            "colorData": {
+              "code": "",
+              "class": ""
+            }
+          },
+          "type": "p",
+          "size": "small"
+        },
+        "answers": {
+          "background": {
+            "type": "color",
+            "colorData": {
+              "code": "",
+              "class": ""
+            }
+          }
+        },
+        "requiredAsterisk": {
+          "colorData": {
+            "code": "#ff0000",
+            "class": ""
+          }
+        },
+        "errorMessages": {
+          "size": "verySmall",
+          "colorData": {
+            "code": "#ff0000",
+            "class": ""
+          }
+        }
+      },
+      "input": {
+        "size": "small",
+        "type": "solidDark"
+      },
+      "textarea": {
+        "size": "small",
+        "type": "solidDark"
+      },
+      "dropdown": {
+        "size": "small",
+        "type": "solidDark"
+      }
+    },
+    "submissionMode": "all",
+    "startingDate": 1626765704,
+    "startingDateEnabled": false,
+    "showOnlyFailedQuestionsOnRetry": false,
+    "retryEnabled": true,
+    "retryOnFailOnly": false,
+    "gradingMethod": null,
+    "maxTries": null,
+    "onlyWrongOnRetake": null,
+    "isAmendable": false,
+    "feedbackShowOnScreen": false,
+    "feedbackDownloadPDF": false,
+    "feedbackShowInline": true,
+    "feedbackQuestionList": "all-questions",
+    "feedbackShowQuestionScore": false,
+    "feedbackShowFeedback": true,
+    "feedbackShowNumbering": false,
+    "feedbackShowSectionTitles": false,
+    "feedbackShowUserAnswers": true,
+    "feedbackShowCorrectAnswers": true,
+    "feedbackShowAnswerCorrectness": true,
+    "displayInlineFeedbackEnabled": true,
+    "displayBackButtonWhenSubmissionPerBlock": true,
+    "feedbackShowSectionResultSummary": false,
+    "askConfirmationBeforeSubmit": false,
+    "hasCustomConfirmationBeforeSubmitText": false,
+    "customConfirmationBeforeSubmitText": "Are you sure you want to submit the questionnaire?",
+    "customConfirmationBeforeSubmitTexts": {
+      "title": "Submit Assessment?",
+      "baseConfirmationMessage": "Are you sure you want to submit the questionnaire?",
+      "unansweredNotice": "You have not answered {X} questions."
+    },
+    "amendResubmissionMinutes": 30,
+    "passingGrade": null,
+    "navigationMode": "per-block",
+    "conditionalBlocks": {
+      "introContent": {
+        "id": "content66a0ee20d0b9e",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66a0ee20d0bab",
+              "type": "text",
+              "insertedAsWidget": true,
+              "properties": {
+                "html": "Time, Speed and Distance PAPER LEVEL-1",
+                "alignment": "center",
+                "customStyle": true,
+                "type": "h2",
+                "size": "normal"
+              }
+            },
+            {
+              "id": "text66a0ee20d0bbe",
+              "type": "text",
+              "properties": {
+                "html": "<div><span style=\"font-size: 1.7rem; letter-spacing: 0rem;\">Self-assess your knowledge. Express yourself and get feedback from our instructors.</span><br></div>",
+                "customStyle": true,
+                "alignment": "center"
+              }
+            },
+            {
+              "id": "spacer66a0ee20d0bcf",
+              "type": "spacer",
+              "properties": {
+                "height": 25,
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            },
+            {
+              "id": "button66a0ee20d0be5",
+              "type": "button",
+              "properties": {
+                "buttonLabel": "<span>Ready to start</span>",
+                "buttonSize": "normal",
+                "buttonType": "solidBrand",
+                "alignment": "center",
+                "linkData": {
+                  "linkType": "goToFirst"
+                },
+                "iconColorData": {
+                  "code": "",
+                  "class": ""
+                },
+                "iconDisplay": false,
+                "iconSize": 26,
+                "iconClassName": " fas fa-angle-right",
+                "iconPosition": "right"
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "variables": {
+            "conditionalBlocks_introContent_blockData_widgets_0": []
+          }
+        }
+      },
+      "submissionStartingDate": {
+        "id": "content66a0ee20d0c12",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66a0ee20d0c17",
+              "type": "text",
+              "properties": {
+                "html": "Sorry but this assessment hasn't started yet."
+              }
+            },
+            {
+              "id": "date66a0ee20d0c1e",
+              "type": "date",
+              "properties": {
+                "value": ""
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "displayConditions": ["startingDate"]
+        }
+      },
+      "submissionDueDate": {
+        "id": "content66a0ee20d0c2a",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66a0ee20d0c2f",
+              "type": "text",
+              "properties": {
+                "html": "Sorry but this assessment date is due."
+              }
+            },
+            {
+              "id": "date66a0ee20d0c36",
+              "type": "date",
+              "properties": {
+                "value": ""
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "displayConditions": ["dateIsDue"]
+        }
+      },
+      "outroContent": {
+        "id": "content66a0ee20d0c42",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "userResults66a0ee20d0c46",
+              "type": "userResults",
+              "properties": {
+                "layout": "template2",
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            },
+            {
+              "id": "feedback66a0ee20d0c52",
+              "type": "feedback",
+              "properties": []
+            },
+            {
+              "id": "outroActions66a0ee20d0c59",
+              "type": "outroActions",
+              "properties": {
+                "layout": "",
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true
+        }
+      }
+    },
+    "systemSections": null,
+    "sections": [
+      {
+        "id": "section66a0ee20d0c6a",
+        "title": "",
+        "type": "section",
+        "navigationMode": "per-block",
+        "blocks": [
+          {
+            "id": "mc1721850386567_270",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721850386567_279",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">In a 400 m, Alex beats David by 8m and David beats Justin by 20 m. What head start Alex should give to Justin in a 200 m race so that they finish the race at the same time?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721850386567_276",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721850386567_274",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721850386567_275",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721850386567_278",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721850386567_272",
+                        "type": "text",
+                        "properties": {
+                          "html": "15.2 m"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721850386567_280",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721850386567_281",
+                        "type": "text",
+                        "properties": {
+                          "html": "14.4 m"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721850386567_273",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721850386567_271",
+                        "type": "text",
+                        "properties": {
+                          "html": "13.8 m"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721850386567_277",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721850386567_282",
+                        "type": "text",
+                        "properties": {
+                          "html": "17 m"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_0": []
+              }
+            }
+          },
+          {
+            "id": "mc1721850447486_284",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721850447486_295",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">In a race of 600 m, Rajesh beats Vijay by 60 m and in a race of 500 m, Vijay beats Tirth by 25 m. By how many metres will Rajesh beat Tirth in a race of 400 m?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721850447486_286",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721850447486_288",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721850447486_292",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721850447486_293",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721850447486_290",
+                        "type": "text",
+                        "properties": {
+                          "html": "48 m"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721850447486_283",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721850447486_289",
+                        "type": "text",
+                        "properties": {
+                          "html": "52 m"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721850447486_294",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721850447486_285",
+                        "type": "text",
+                        "properties": {
+                          "html": "56 m"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721850447486_291",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721850447486_287",
+                        "type": "text",
+                        "properties": {
+                          "html": "58 m"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_1_blockData_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_1": []
+              }
+            }
+          },
+          {
+            "id": "mc1721850496782_301",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721850496782_307",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">X and Y are running on a circular track of length 180 m in the same direction at speeds of 20 m/s and 18 m/s, respectively. When will X and Y meet for the first time, and at how many points they will meet?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721850496782_306",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721850496782_300",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721850496782_296",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721850496782_303",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721850496782_297",
+                        "type": "text",
+                        "properties": {
+                          "html": "30 seconds and 2 points"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721850496782_298",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721850496782_304",
+                        "type": "text",
+                        "properties": {
+                          "html": "60 seconds and 1 point"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721850496782_299",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721850496782_308",
+                        "type": "text",
+                        "properties": {
+                          "html": "90 seconds and 2 points"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721850496782_302",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721850496782_305",
+                        "type": "text",
+                        "properties": {
+                          "html": "90 seconds and 1 point&nbsp;"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_2_blockData_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_2": []
+              }
+            }
+          },
+          {
+            "id": "mc1721850562198_311",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721850562198_313",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">Being very confident of winning the 900 m racing competition, Dhaval started some distance behind the starting point. He finished the race in 28 seconds. 16 seconds after the start, he was exactly at the mid-point of the 900 m track. How far behind the starting point did Dhaval start from?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721850562198_310",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721850562198_318",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721850562198_319",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721850562198_312",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721850562198_309",
+                        "type": "text",
+                        "properties": {
+                          "html": "125 m"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721850562198_314",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721850562198_321",
+                        "type": "text",
+                        "properties": {
+                          "html": "200 m"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721850562198_315",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721850562198_317",
+                        "type": "text",
+                        "properties": {
+                          "html": "100 m"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721850562198_316",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721850562198_320",
+                        "type": "text",
+                        "properties": {
+                          "html": "150 m"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_3_blockData_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3": []
+              }
+            }
+          },
+          {
+            "id": "mc1721850615983_328",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721850615983_332",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">Shiva started walking from point X to point Y and Vishal started walking from point Y to point X. Both start walking together at 7.00 am. After walking for 2 hours, they met each other and discuss something serious. The discussion was of two hours. Then, they continued their journey to reach Y and X respectively. However, after meeting their speeds reduced to half of their initial speeds. After one hour, Vishal turns around and walks at 2.5 times his present speed to meet Shiva. If the ratio of Shiva's and Vishal's initial speeds was 3:2, at what time would Vishal meet Shiva?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721850615983_333",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721850615983_324",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721850615983_329",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721850615983_330",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721850615983_334",
+                        "type": "text",
+                        "properties": {
+                          "html": "2 : 30 pm"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721850615983_331",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721850615983_322",
+                        "type": "text",
+                        "properties": {
+                          "html": "1 : 30 pm"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721850615983_326",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721850615983_325",
+                        "type": "text",
+                        "properties": {
+                          "html": "3 : 30 pm"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721850615983_323",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721850615983_327",
+                        "type": "text",
+                        "properties": {
+                          "html": "Cannot be determined"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_4_blockData_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4": []
+              }
+            }
+          },
+          {
+            "id": "mc1721850683113_338",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721850683113_339",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">Fred is chasing his friend Mohin. Mohin takes three jumps for every two jumps that Fred makes but each of Fred's jumps is twice as long as a jump of Mohin. Mohin had made 10 jumps when Fred started. The total number of Mohin's jumps when Fred caught Mohin?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721850683113_335",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721850683113_340",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721850683113_345",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721850683113_343",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721850683113_341",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>20</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721850683113_346",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721850683113_344",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>40</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721850683113_337",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721850683113_342",
+                        "type": "text",
+                        "properties": {
+                          "html": "25"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721850683113_347",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721850683113_336",
+                        "type": "text",
+                        "properties": {
+                          "html": "None of these"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_5_blockData_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5": []
+              }
+            }
+          },
+          {
+            "id": "mcImage1721850793895_361",
+            "type": "mcImage",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mcImage1721850793895_366",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">In a relay running race, 3 men representing the same team, who have to run equal distances, can complete the team race in 14 minutes with each of them running at the same speed. If one of them runs at 33 1/3%  of his actual speed due to ill health, in how much time will they complete the race?</p>"
+                    }
+                  }
+                ]
+              },
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-image-option1721850793895_374",
+                  "type": "mc-image-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mcImage1721850793895_363",
+                        "type": "image",
+                        "properties": {
+                          "hasLightbox": false,
+                          "imageData": {
+                            "title": "Picture23",
+                            "tags": [],
+                            "width": 128,
+                            "height": 42,
+                            "size": 1,
+                            "name": "/415f2ca251de00ab681de4cc85138b36.png",
+                            "access": "public",
+                            "created": 1721831150.096375,
+                            "modified": 1721831150.096375,
+                            "user": {
+                              "username": "Lakhan AK Team"
+                            },
+                            "id": "66a10eee3c51d4da7b0297a5",
+                            "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/415f2ca251de00ab681de4cc85138b36.png",
+                            "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/415f2ca251de00ab681de4cc85138b36.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                            "modifiedF": "2024-07-24 17:25:50"
+                          },
+                          "height": 32,
+                          "width": 100
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-image-option1721850793895_365",
+                  "type": "mc-image-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mcImage1721850793895_367",
+                        "type": "image",
+                        "properties": {
+                          "hasLightbox": false,
+                          "imageData": {
+                            "title": "Picture24",
+                            "tags": [],
+                            "width": 125,
+                            "height": 39,
+                            "size": 1,
+                            "name": "/e284a4d96ae877a7db0eed1ff450b5ac.png",
+                            "access": "public",
+                            "created": 1721831166.453281,
+                            "modified": 1721831166.453281,
+                            "user": {
+                              "username": "Lakhan AK Team"
+                            },
+                            "id": "66a10efe3d8915e18b0e1d03",
+                            "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/e284a4d96ae877a7db0eed1ff450b5ac.png",
+                            "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/e284a4d96ae877a7db0eed1ff450b5ac.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                            "modifiedF": "2024-07-24 17:26:06"
+                          },
+                          "height": 31,
+                          "width": 100
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-image-option1721850793895_372",
+                  "type": "mc-image-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mcImage1721850793895_371",
+                        "type": "image",
+                        "properties": {
+                          "hasLightbox": false,
+                          "imageData": {
+                            "title": "Picture25",
+                            "tags": [],
+                            "width": 138,
+                            "height": 50,
+                            "size": 1,
+                            "name": "/4827fd4c6b03c397070cd05997233568.png",
+                            "access": "public",
+                            "created": 1721831183.530863,
+                            "modified": 1721831183.530863,
+                            "user": {
+                              "username": "Lakhan AK Team"
+                            },
+                            "id": "66a10f0fc626475eba047716",
+                            "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/4827fd4c6b03c397070cd05997233568.png",
+                            "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/4827fd4c6b03c397070cd05997233568.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                            "modifiedF": "2024-07-24 17:26:23"
+                          },
+                          "height": 39,
+                          "width": 110
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-image-option1721850793895_370",
+                  "type": "mc-image-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mcImage1721850793895_362",
+                        "type": "image",
+                        "properties": {
+                          "hasLightbox": false,
+                          "imageData": {
+                            "title": "Picture26",
+                            "tags": [],
+                            "width": 142,
+                            "height": 52,
+                            "size": 1,
+                            "name": "/f29b2b1b65f5abfa208b00eeb6b21c26.png",
+                            "access": "public",
+                            "created": 1721831204.121994,
+                            "modified": 1721831204.121994,
+                            "user": {
+                              "username": "Lakhan AK Team"
+                            },
+                            "id": "66a10f24803dfb17970c7223",
+                            "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/f29b2b1b65f5abfa208b00eeb6b21c26.png",
+                            "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/f29b2b1b65f5abfa208b00eeb6b21c26.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                            "modifiedF": "2024-07-24 17:26:44"
+                          },
+                          "height": 40,
+                          "width": 110
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "optionNumbering": "none",
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_6_blockData_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_0_description_widgets_1": [],
+                "sections_0_blocks_6_blockData_options_1_description_widgets_1": [],
+                "sections_0_blocks_6": []
+              }
+            }
+          },
+          {
+            "id": "mc1721851045751_379",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721851045751_382",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">Two men P and Q started walking towards each other simultaneously from two places L and M respectively, which are 72 km apart. They met after 9 hours. After their meeting, P reduced his speed by 2 kmph and Q increased his speed by 2 kmph. They arrived at M and L respectively at the same time. Find the speed of P.</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721851045751_380",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721851045751_384",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721851045751_387",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721851045751_385",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721851045751_390",
+                        "type": "text",
+                        "properties": {
+                          "html": "10 kmph"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721851045751_391",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721851045751_386",
+                        "type": "text",
+                        "properties": {
+                          "html": "8 kmph"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721851045751_388",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721851045751_389",
+                        "type": "text",
+                        "properties": {
+                          "html": "6 kmph"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721851045751_383",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721851045751_381",
+                        "type": "text",
+                        "properties": {
+                          "html": "5 kmph"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_7_blockData_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_7": []
+              }
+            }
+          },
+          {
+            "id": "mc1721851089734_393",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721851089734_401",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">A and B both starts walking simultaneously from the point P towards point Q. The ratio of the speeds of A and B are in the ratio 13 : 7. After reaching Q, A starts walking back towards P and meets B. If PQ = 500 m. Find the distance of their meeting point from point P (in meters).</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721851089734_399",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721851089734_397",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721851089734_404",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721851089734_396",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721851089734_394",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>300</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721851089734_398",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721851089734_403",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>275</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721851089734_400",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721851089734_395",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>250</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721851089734_392",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721851089734_402",
+                        "type": "text",
+                        "properties": {
+                          "html": "None of the above&nbsp;"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_8_blockData_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_8": []
+              }
+            }
+          },
+          {
+            "id": "mc1721851131102_407",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721851131102_409",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">Cities P and Q are 3600 km apart. Bus A starts from city P towards Q at 8 AM and bus B starts from city Q towards P at the same time. Bus A travels the first one-fourth of the distance at a speed of 30 kmph, the second one-fourth at 40 kmph, the third one-fourth at 50 kmph and the fourth one-fourth at a speed of 60 kmph. Bus B travels the first one- fourth of the total time taken at a speed of 30 kmph, the second one-fourth of the total time at 40 kmph, the third one-fourth of the total time at 50 kmph and remaining one- fourth of the total time at 60 kmph. Where will the two buses cross each other?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721851131102_412",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721851131102_416",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721851131102_414",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721851131102_410",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721851131102_411",
+                        "type": "text",
+                        "properties": {
+                          "html": "1900 km from P"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721851131102_405",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721851131102_417",
+                        "type": "text",
+                        "properties": {
+                          "html": "1800 km from P"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721851131102_406",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721851131102_413",
+                        "type": "text",
+                        "properties": {
+                          "html": "1700 km from Q"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721851131102_415",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721851131102_408",
+                        "type": "text",
+                        "properties": {
+                          "html": "None of these"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_9_blockData_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_9": []
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "availabilityStatus": null,
+    "autoNavigationEnabled": false,
+    "displayBackButtonWhenNavigationPerBlock": true,
+    "saveAndResumeLaterEnabled": null,
+    "tagsAddedOnCompletion": [],
+    "tagsAddedOnPass": [],
+    "sendAnonymousSubmissionsToEmailLeads": false,
+    "afterSubmitActionEnabled": null,
+    "afterSubmitActionProperties": null,
+    "showWizardOnNextEdit": false,
+    "revisitAfterSubmissionAction": null,
+    "navigationTemplate": "HorizontalSpacedBetweenNavigationTemplate",
+    "learnerSearchBarEnabled": true,
+    "learnerUnansweredQuestionsEnabled": true,
+    "learnerFavouriteQuestionEnabled": true,
+    "learnerCompletionProgressEnabled": true,
+    "learnerShowIndexOfQuestionsEnabled": false,
+    "learnerTimeNotificationsEnabled": false,
+    "learnerAllowInterruptionsEnabled": true,
+    "learnerAllowInterruptionsTimeoutInMinutes": 30,
+    "learnerReclaimTryOnInterruptionTimeoutEnabled": false,
+    "learnerAskBeforeContinueToSaved": true,
+    "learnerAutoSaveEnabled": null,
+    "spellcheckDisabled": null,
+    "showPartialScoreOnSubmission": true,
+    "deliverableQuestionsSubsetType": "all",
+    "questionRandomizationType": "none",
+    "serveQuestionsBasedOnPreviousSubmission": null,
+    "scoringDisabled": true,
+    "isSelfAssessment": true,
+    "useDefaultCertificateTemplate": null,
+    "certificateTemplate": null,
+    "certificateSocialShare": null,
+    "migrationData": null,
+    "useAssessmentPassingGradeForOpenEndedCorrectness": true,
+    "openEndedCorrectnessPassingGrade": null,
+    "showScorePercentage": null,
+    "showScorePoints": null,
+    "showScoreCorrectAnswers": null,
+    "editorBehaviorSettings": null,
+    "manualReviewEnabled": false,
+    "resultsSummary": {
+      "enabled": true,
+      "showStatusIcon": true,
+      "showStatusText": true,
+      "showScorePercentage": true,
+      "showScorePoints": true,
+      "showScoreCorrectAnswers": true,
+      "showTimeTakenToComplete": true,
+      "showDateSubmitted": true,
+      "showAttemptCount": true
+    },
+    "meta": null,
+    "submissionsCount": 292,
+    "fromMarketplace": null,
+    "aiFeedbackEnabled": null,
+    "numberOfFeedbackQuestions": null,
+    "created": 1721822753.249066,
+    "modified": 1723745055.121443,
+    "contentHash": "872afa6e3ec5b53f0755142a9a104dbe3435a4dd5065acec5571b0ee5157e559",
+    "id": "66a0ee2130ab7ba7e808cb55",
+    "objectType": "assessment",
+    "isEditBlockedDueToSync": false,
+    "variables": {
+      "submission": {
+        "self": {
+          "score": null,
+          "points": null,
+          "total_points": null,
+          "correct_answers": null,
+          "total_questions": 10,
+          "time_spent": "00:00:00",
+          "date_submitted": "11/08/26",
+          "attempt_count": 3,
+          "max_tries": null,
+          "pass_grade": null,
+          "time_spent_seconds": 0,
+          "raw_start_date": 1786440381.486053
+        }
+      },
+      "school": {
+        "name": "Apna College",
+        "url": "www.apnacollege.in",
+        "description": "The most loved coding community of India ❤️"
+      },
+      "user": {
+        "username": "ram",
+        "email": "p4542639@gmail.com",
+        "cf_phonenumber": "7666690798"
+      }
+    }
+  },
+  "reclaimedTry": false,
+  "feedback": [
+    {
+      "title": "",
+      "id": "section66a0ee20d0c6a",
+      "blocks": [
+        {
+          "id": "mc1721850386567_270",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "In a 400 m, Alex beats David by 8m and David beats Justin by 20 m. What head start Alex should give to Justin in a 200 m race so that they finish the race at the same time?",
+            "widgets": [
+              {
+                "id": "mc1721850386567_279",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">In a 400 m, Alex beats David by 8m and David beats Justin by 20 m. What head start Alex should give to Justin in a 200 m race so that they finish the race at the same time?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721850386567_278",
+              "description": {
+                "text": "15.2 m",
+                "widgets": [
+                  {
+                    "id": "mc1721850386567_272",
+                    "type": "text",
+                    "properties": {
+                      "html": "15.2 m"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721850386567_280",
+              "description": {
+                "text": "14.4 m",
+                "widgets": [
+                  {
+                    "id": "mc1721850386567_281",
+                    "type": "text",
+                    "properties": {
+                      "html": "14.4 m"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721850386567_273",
+              "description": {
+                "text": "13.8 m",
+                "widgets": [
+                  {
+                    "id": "mc1721850386567_271",
+                    "type": "text",
+                    "properties": {
+                      "html": "13.8 m"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721850386567_277",
+              "description": {
+                "text": "17 m",
+                "widgets": [
+                  {
+                    "id": "mc1721850386567_282",
+                    "type": "text",
+                    "properties": {
+                      "html": "17 m"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721850386567_273",
+              "text": "13.8 m",
+              "widgets": [
+                {
+                  "id": "mc1721850386567_271",
+                  "type": "text",
+                  "properties": {
+                    "html": "13.8 m"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/44fb3fb5317d7df70044db4daad07878.jpg\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721850447486_284",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "In a race of 600 m, Rajesh beats Vijay by 60 m and in a race of 500 m, Vijay beats Tirth by 25 m. By how many metres will Rajesh beat Tirth in a race of 400 m?",
+            "widgets": [
+              {
+                "id": "mc1721850447486_295",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">In a race of 600 m, Rajesh beats Vijay by 60 m and in a race of 500 m, Vijay beats Tirth by 25 m. By how many metres will Rajesh beat Tirth in a race of 400 m?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721850447486_293",
+              "description": {
+                "text": "48 m",
+                "widgets": [
+                  {
+                    "id": "mc1721850447486_290",
+                    "type": "text",
+                    "properties": {
+                      "html": "48 m"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721850447486_283",
+              "description": {
+                "text": "52 m",
+                "widgets": [
+                  {
+                    "id": "mc1721850447486_289",
+                    "type": "text",
+                    "properties": {
+                      "html": "52 m"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721850447486_294",
+              "description": {
+                "text": "56 m",
+                "widgets": [
+                  {
+                    "id": "mc1721850447486_285",
+                    "type": "text",
+                    "properties": {
+                      "html": "56 m"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721850447486_291",
+              "description": {
+                "text": "58 m",
+                "widgets": [
+                  {
+                    "id": "mc1721850447486_287",
+                    "type": "text",
+                    "properties": {
+                      "html": "58 m"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721850447486_291",
+              "text": "58 m",
+              "widgets": [
+                {
+                  "id": "mc1721850447486_287",
+                  "type": "text",
+                  "properties": {
+                    "html": "58 m"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/2c50ec7c8f24e2bb225d76c59416a689.jpg\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721850496782_301",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "X and Y are running on a circular track of length 180 m in the same direction at speeds of 20 m/s and 18 m/s, respectively. When will X and Y meet for the first time, and at how many points they will meet?",
+            "widgets": [
+              {
+                "id": "mc1721850496782_307",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">X and Y are running on a circular track of length 180 m in the same direction at speeds of 20 m/s and 18 m/s, respectively. When will X and Y meet for the first time, and at how many points they will meet?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721850496782_303",
+              "description": {
+                "text": "30 seconds and 2 points",
+                "widgets": [
+                  {
+                    "id": "mc1721850496782_297",
+                    "type": "text",
+                    "properties": {
+                      "html": "30 seconds and 2 points"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721850496782_298",
+              "description": {
+                "text": "60 seconds and 1 point",
+                "widgets": [
+                  {
+                    "id": "mc1721850496782_304",
+                    "type": "text",
+                    "properties": {
+                      "html": "60 seconds and 1 point"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721850496782_299",
+              "description": {
+                "text": "90 seconds and 2 points",
+                "widgets": [
+                  {
+                    "id": "mc1721850496782_308",
+                    "type": "text",
+                    "properties": {
+                      "html": "90 seconds and 2 points"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721850496782_302",
+              "description": {
+                "text": "90 seconds and 1 point",
+                "widgets": [
+                  {
+                    "id": "mc1721850496782_305",
+                    "type": "text",
+                    "properties": {
+                      "html": "90 seconds and 1 point&nbsp;"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721850496782_302",
+              "text": "90 seconds and 1 point",
+              "widgets": [
+                {
+                  "id": "mc1721850496782_305",
+                  "type": "text",
+                  "properties": {
+                    "html": "90 seconds and 1 point&nbsp;"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/790ed46b1e6337db4c14dae764715446.jpg\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721850562198_311",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Being very confident of winning the 900 m racing competition, Dhaval started some distance behind the starting point. He finished the race in 28 seconds. 16 seconds after the start, he was exactly at the mid-point of the 900 m track. How far behind the starting point did Dhaval start from?",
+            "widgets": [
+              {
+                "id": "mc1721850562198_313",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">Being very confident of winning the 900 m racing competition, Dhaval started some distance behind the starting point. He finished the race in 28 seconds. 16 seconds after the start, he was exactly at the mid-point of the 900 m track. How far behind the starting point did Dhaval start from?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721850562198_312",
+              "description": {
+                "text": "125 m",
+                "widgets": [
+                  {
+                    "id": "mc1721850562198_309",
+                    "type": "text",
+                    "properties": {
+                      "html": "125 m"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721850562198_314",
+              "description": {
+                "text": "200 m",
+                "widgets": [
+                  {
+                    "id": "mc1721850562198_321",
+                    "type": "text",
+                    "properties": {
+                      "html": "200 m"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721850562198_315",
+              "description": {
+                "text": "100 m",
+                "widgets": [
+                  {
+                    "id": "mc1721850562198_317",
+                    "type": "text",
+                    "properties": {
+                      "html": "100 m"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721850562198_316",
+              "description": {
+                "text": "150 m",
+                "widgets": [
+                  {
+                    "id": "mc1721850562198_320",
+                    "type": "text",
+                    "properties": {
+                      "html": "150 m"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721850562198_316",
+              "text": "150 m",
+              "widgets": [
+                {
+                  "id": "mc1721850562198_320",
+                  "type": "text",
+                  "properties": {
+                    "html": "150 m"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/7d41c42d85a25af7b82e712b95c7e193.jpg\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721850615983_328",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Shiva started walking from point X to point Y and Vishal started walking from point Y to point X. Both start walking together at 7.00 am. After walking for 2 hours, they met each other and discuss something serious. The discussion was of two hours. Then, they continued their journey to reach Y and X respectively. However, after meeting their speeds reduced to half of their initial speeds. After one hour, Vishal turns around and walks at 2.5 times his present speed to meet Shiva. If the ratio of Shiva's and Vishal's initial speeds was 3:2, at what time would Vishal meet Shiva?",
+            "widgets": [
+              {
+                "id": "mc1721850615983_332",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">Shiva started walking from point X to point Y and Vishal started walking from point Y to point X. Both start walking together at 7.00 am. After walking for 2 hours, they met each other and discuss something serious. The discussion was of two hours. Then, they continued their journey to reach Y and X respectively. However, after meeting their speeds reduced to half of their initial speeds. After one hour, Vishal turns around and walks at 2.5 times his present speed to meet Shiva. If the ratio of Shiva's and Vishal's initial speeds was 3:2, at what time would Vishal meet Shiva?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721850615983_330",
+              "description": {
+                "text": "2 : 30 pm",
+                "widgets": [
+                  {
+                    "id": "mc1721850615983_334",
+                    "type": "text",
+                    "properties": {
+                      "html": "2 : 30 pm"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721850615983_331",
+              "description": {
+                "text": "1 : 30 pm",
+                "widgets": [
+                  {
+                    "id": "mc1721850615983_322",
+                    "type": "text",
+                    "properties": {
+                      "html": "1 : 30 pm"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721850615983_326",
+              "description": {
+                "text": "3 : 30 pm",
+                "widgets": [
+                  {
+                    "id": "mc1721850615983_325",
+                    "type": "text",
+                    "properties": {
+                      "html": "3 : 30 pm"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721850615983_323",
+              "description": {
+                "text": "Cannot be determined",
+                "widgets": [
+                  {
+                    "id": "mc1721850615983_327",
+                    "type": "text",
+                    "properties": {
+                      "html": "Cannot be determined"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721850615983_330",
+              "text": "2 : 30 pm",
+              "widgets": [
+                {
+                  "id": "mc1721850615983_334",
+                  "type": "text",
+                  "properties": {
+                    "html": "2 : 30 pm"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/4ed813b42195d56e127c921454cf303a.jpg\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721850683113_338",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Fred is chasing his friend Mohin. Mohin takes three jumps for every two jumps that Fred makes but each of Fred's jumps is twice as long as a jump of Mohin. Mohin had made 10 jumps when Fred started. The total number of Mohin's jumps when Fred caught Mohin?",
+            "widgets": [
+              {
+                "id": "mc1721850683113_339",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">Fred is chasing his friend Mohin. Mohin takes three jumps for every two jumps that Fred makes but each of Fred's jumps is twice as long as a jump of Mohin. Mohin had made 10 jumps when Fred started. The total number of Mohin's jumps when Fred caught Mohin?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721850683113_343",
+              "description": {
+                "text": "20",
+                "widgets": [
+                  {
+                    "id": "mc1721850683113_341",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>20</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721850683113_346",
+              "description": {
+                "text": "40",
+                "widgets": [
+                  {
+                    "id": "mc1721850683113_344",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>40</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721850683113_337",
+              "description": {
+                "text": "25",
+                "widgets": [
+                  {
+                    "id": "mc1721850683113_342",
+                    "type": "text",
+                    "properties": {
+                      "html": "25"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721850683113_347",
+              "description": {
+                "text": "None of these",
+                "widgets": [
+                  {
+                    "id": "mc1721850683113_336",
+                    "type": "text",
+                    "properties": {
+                      "html": "None of these"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721850683113_346",
+              "text": "40",
+              "widgets": [
+                {
+                  "id": "mc1721850683113_344",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>40</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/c19de64083b968014b8e768bb362c0a1.jpg\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mcImage1721850793895_361",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mcImage",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "In a relay running race, 3 men representing the same team, who have to run equal distances, can complete the team race in 14 minutes with each of them running at the same speed. If one of them runs at 33 1/3% of his actual speed due to ill health, in how much time will they complete the race?",
+            "widgets": [
+              {
+                "id": "mcImage1721850793895_366",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">In a relay running race, 3 men representing the same team, who have to run equal distances, can complete the team race in 14 minutes with each of them running at the same speed. If one of them runs at 33 1/3%  of his actual speed due to ill health, in how much time will they complete the race?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-image-option1721850793895_374",
+              "description": {
+                "text": "(Image)",
+                "widgets": [
+                  {
+                    "id": "mcImage1721850793895_363",
+                    "type": "image",
+                    "properties": {
+                      "hasLightbox": false,
+                      "imageData": {
+                        "title": "Picture23",
+                        "tags": [],
+                        "width": 128,
+                        "height": 42,
+                        "size": 1,
+                        "name": "/415f2ca251de00ab681de4cc85138b36.png",
+                        "access": "public",
+                        "created": 1721831150.096375,
+                        "modified": 1721831150.096375,
+                        "user": {
+                          "username": "Lakhan AK Team"
+                        },
+                        "id": "66a10eee3c51d4da7b0297a5",
+                        "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/415f2ca251de00ab681de4cc85138b36.png",
+                        "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/415f2ca251de00ab681de4cc85138b36.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                        "modifiedF": "2024-07-24 17:25:50"
+                      },
+                      "height": 32,
+                      "width": 100
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-image-option1721850793895_365",
+              "description": {
+                "text": "(Image)",
+                "widgets": [
+                  {
+                    "id": "mcImage1721850793895_367",
+                    "type": "image",
+                    "properties": {
+                      "hasLightbox": false,
+                      "imageData": {
+                        "title": "Picture24",
+                        "tags": [],
+                        "width": 125,
+                        "height": 39,
+                        "size": 1,
+                        "name": "/e284a4d96ae877a7db0eed1ff450b5ac.png",
+                        "access": "public",
+                        "created": 1721831166.453281,
+                        "modified": 1721831166.453281,
+                        "user": {
+                          "username": "Lakhan AK Team"
+                        },
+                        "id": "66a10efe3d8915e18b0e1d03",
+                        "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/e284a4d96ae877a7db0eed1ff450b5ac.png",
+                        "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/e284a4d96ae877a7db0eed1ff450b5ac.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                        "modifiedF": "2024-07-24 17:26:06"
+                      },
+                      "height": 31,
+                      "width": 100
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-image-option1721850793895_372",
+              "description": {
+                "text": "(Image)",
+                "widgets": [
+                  {
+                    "id": "mcImage1721850793895_371",
+                    "type": "image",
+                    "properties": {
+                      "hasLightbox": false,
+                      "imageData": {
+                        "title": "Picture25",
+                        "tags": [],
+                        "width": 138,
+                        "height": 50,
+                        "size": 1,
+                        "name": "/4827fd4c6b03c397070cd05997233568.png",
+                        "access": "public",
+                        "created": 1721831183.530863,
+                        "modified": 1721831183.530863,
+                        "user": {
+                          "username": "Lakhan AK Team"
+                        },
+                        "id": "66a10f0fc626475eba047716",
+                        "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/4827fd4c6b03c397070cd05997233568.png",
+                        "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/4827fd4c6b03c397070cd05997233568.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                        "modifiedF": "2024-07-24 17:26:23"
+                      },
+                      "height": 39,
+                      "width": 110
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-image-option1721850793895_370",
+              "description": {
+                "text": "(Image)",
+                "widgets": [
+                  {
+                    "id": "mcImage1721850793895_362",
+                    "type": "image",
+                    "properties": {
+                      "hasLightbox": false,
+                      "imageData": {
+                        "title": "Picture26",
+                        "tags": [],
+                        "width": 142,
+                        "height": 52,
+                        "size": 1,
+                        "name": "/f29b2b1b65f5abfa208b00eeb6b21c26.png",
+                        "access": "public",
+                        "created": 1721831204.121994,
+                        "modified": 1721831204.121994,
+                        "user": {
+                          "username": "Lakhan AK Team"
+                        },
+                        "id": "66a10f24803dfb17970c7223",
+                        "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/f29b2b1b65f5abfa208b00eeb6b21c26.png",
+                        "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/f29b2b1b65f5abfa208b00eeb6b21c26.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                        "modifiedF": "2024-07-24 17:26:44"
+                      },
+                      "height": 40,
+                      "width": 110
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-image-option1721850793895_370",
+              "text": "(Image)",
+              "widgets": [
+                {
+                  "id": "mcImage1721850793895_362",
+                  "type": "image",
+                  "properties": {
+                    "hasLightbox": false,
+                    "imageData": {
+                      "title": "Picture26",
+                      "tags": [],
+                      "width": 142,
+                      "height": 52,
+                      "size": 1,
+                      "name": "/f29b2b1b65f5abfa208b00eeb6b21c26.png",
+                      "access": "public",
+                      "created": 1721831204.121994,
+                      "modified": 1721831204.121994,
+                      "user": {
+                        "username": "Lakhan AK Team"
+                      },
+                      "id": "66a10f24803dfb17970c7223",
+                      "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/f29b2b1b65f5abfa208b00eeb6b21c26.png",
+                      "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/f29b2b1b65f5abfa208b00eeb6b21c26.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                      "modifiedF": "2024-07-24 17:26:44"
+                    },
+                    "height": 40,
+                    "width": 110
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/daeeeeef9dd89497ceb8bbd20f2e7232.jpg\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721851045751_379",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Two men P and Q started walking towards each other simultaneously from two places L and M respectively, which are 72 km apart. They met after 9 hours. After their meeting, P reduced his speed by 2 kmph and Q increased his speed by 2 kmph. They arrived at M and L respectively at the same time. Find the speed of P.",
+            "widgets": [
+              {
+                "id": "mc1721851045751_382",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">Two men P and Q started walking towards each other simultaneously from two places L and M respectively, which are 72 km apart. They met after 9 hours. After their meeting, P reduced his speed by 2 kmph and Q increased his speed by 2 kmph. They arrived at M and L respectively at the same time. Find the speed of P.</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721851045751_385",
+              "description": {
+                "text": "10 kmph",
+                "widgets": [
+                  {
+                    "id": "mc1721851045751_390",
+                    "type": "text",
+                    "properties": {
+                      "html": "10 kmph"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721851045751_391",
+              "description": {
+                "text": "8 kmph",
+                "widgets": [
+                  {
+                    "id": "mc1721851045751_386",
+                    "type": "text",
+                    "properties": {
+                      "html": "8 kmph"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721851045751_388",
+              "description": {
+                "text": "6 kmph",
+                "widgets": [
+                  {
+                    "id": "mc1721851045751_389",
+                    "type": "text",
+                    "properties": {
+                      "html": "6 kmph"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721851045751_383",
+              "description": {
+                "text": "5 kmph",
+                "widgets": [
+                  {
+                    "id": "mc1721851045751_381",
+                    "type": "text",
+                    "properties": {
+                      "html": "5 kmph"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721851045751_383",
+              "text": "5 kmph",
+              "widgets": [
+                {
+                  "id": "mc1721851045751_381",
+                  "type": "text",
+                  "properties": {
+                    "html": "5 kmph"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/79f50c498ee90bdafd7c1f7fd9949ce7.jpg\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721851089734_393",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "A and B both starts walking simultaneously from the point P towards point Q. The ratio of the speeds of A and B are in the ratio 13 : 7. After reaching Q, A starts walking back towards P and meets B. If PQ = 500 m. Find the distance of their meeting point from point P (in meters).",
+            "widgets": [
+              {
+                "id": "mc1721851089734_401",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">A and B both starts walking simultaneously from the point P towards point Q. The ratio of the speeds of A and B are in the ratio 13 : 7. After reaching Q, A starts walking back towards P and meets B. If PQ = 500 m. Find the distance of their meeting point from point P (in meters).</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721851089734_396",
+              "description": {
+                "text": "300",
+                "widgets": [
+                  {
+                    "id": "mc1721851089734_394",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>300</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721851089734_398",
+              "description": {
+                "text": "275",
+                "widgets": [
+                  {
+                    "id": "mc1721851089734_403",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>275</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721851089734_400",
+              "description": {
+                "text": "250",
+                "widgets": [
+                  {
+                    "id": "mc1721851089734_395",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>250</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721851089734_392",
+              "description": {
+                "text": "None of the above",
+                "widgets": [
+                  {
+                    "id": "mc1721851089734_402",
+                    "type": "text",
+                    "properties": {
+                      "html": "None of the above&nbsp;"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721851089734_392",
+              "text": "None of the above",
+              "widgets": [
+                {
+                  "id": "mc1721851089734_402",
+                  "type": "text",
+                  "properties": {
+                    "html": "None of the above&nbsp;"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/fee18f5c9f74c1cfa20db5627ab50f47.jpg\">Sorry, that's not correct.<br>Explanation:<br><br>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721851131102_407",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Cities P and Q are 3600 km apart. Bus A starts from city P towards Q at 8 AM and bus B starts from city Q towards P at the same time. Bus A travels the first one-fourth of the distance at a speed of 30 kmph, the second one-fourth at 40 kmph, the third one-fourth at 50 kmph and the fourth one-fourth at a speed of 60 kmph. Bus B travels the first one- fourth of the total time taken at a speed of 30 kmph, the second one-fourth of the total time at 40 kmph, the third one-fourth of the total time at 50 kmph and remaining one- fourth of the total time at 60 kmph. Where will the two buses cross each other?",
+            "widgets": [
+              {
+                "id": "mc1721851131102_409",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">Cities P and Q are 3600 km apart. Bus A starts from city P towards Q at 8 AM and bus B starts from city Q towards P at the same time. Bus A travels the first one-fourth of the distance at a speed of 30 kmph, the second one-fourth at 40 kmph, the third one-fourth at 50 kmph and the fourth one-fourth at a speed of 60 kmph. Bus B travels the first one- fourth of the total time taken at a speed of 30 kmph, the second one-fourth of the total time at 40 kmph, the third one-fourth of the total time at 50 kmph and remaining one- fourth of the total time at 60 kmph. Where will the two buses cross each other?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721851131102_410",
+              "description": {
+                "text": "1900 km from P",
+                "widgets": [
+                  {
+                    "id": "mc1721851131102_411",
+                    "type": "text",
+                    "properties": {
+                      "html": "1900 km from P"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721851131102_405",
+              "description": {
+                "text": "1800 km from P",
+                "widgets": [
+                  {
+                    "id": "mc1721851131102_417",
+                    "type": "text",
+                    "properties": {
+                      "html": "1800 km from P"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721851131102_406",
+              "description": {
+                "text": "1700 km from Q",
+                "widgets": [
+                  {
+                    "id": "mc1721851131102_413",
+                    "type": "text",
+                    "properties": {
+                      "html": "1700 km from Q"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721851131102_415",
+              "description": {
+                "text": "None of these",
+                "widgets": [
+                  {
+                    "id": "mc1721851131102_408",
+                    "type": "text",
+                    "properties": {
+                      "html": "None of these"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721851131102_415",
+              "text": "None of these",
+              "widgets": [
+                {
+                  "id": "mc1721851131102_408",
+                  "type": "text",
+                  "properties": {
+                    "html": "None of these"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/e1fccd6cbcc73f42b7e142ca657bb2ad.jpg\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        }
+      ]
+    }
+  ],
+  "submitted": true,
+  "updated": true,
+  "retryCount": 3,
+  "inlineFeedback": [],
+  "errors": [],
+  "success": true
+}

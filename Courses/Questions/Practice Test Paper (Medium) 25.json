@@ -1,0 +1,3340 @@
+{
+  "submission": {
+    "anon_id": null,
+    "model": "assessment-submission",
+    "courseTitleId": "aptitude-qs-library",
+    "object_id": "66a1cba933f4c34e5b063dc6",
+    "assessmentId": "66a1cba933f4c34e5b063dc5",
+    "snapshotId": "66c1a0be9433fa5db9064313",
+    "questions": {
+      "section66a1cba8c5a59": [
+        "mc1721928677800_277",
+        "mc1721928783080_288",
+        "mc1721928900072_296",
+        "mc1721929034327_310",
+        "mc1721929135512_333",
+        "mc1721929229496_347",
+        "mcImage1721929422790_368",
+        "mc1721929599192_386",
+        "mcImage1721929906512_270",
+        "mc1721930578017_298"
+      ]
+    },
+    "certificateAnswers": [],
+    "certificateId": null,
+    "questionData": {
+      "mc1721928677800_277": {
+        "deliveredOnTimestamp": 1786440408.698076,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721928783080_288": {
+        "deliveredOnTimestamp": 1786440408.698099,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721928900072_296": {
+        "deliveredOnTimestamp": 1786440408.698112,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721929034327_310": {
+        "deliveredOnTimestamp": 1786440408.698123,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721929135512_333": {
+        "deliveredOnTimestamp": 1786440408.698134,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721929229496_347": {
+        "deliveredOnTimestamp": 1786440408.698144,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mcImage1721929422790_368": {
+        "deliveredOnTimestamp": 1786440408.698155,
+        "blockType": "mcImage",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721929599192_386": {
+        "deliveredOnTimestamp": 1786440408.698165,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mcImage1721929906512_270": {
+        "deliveredOnTimestamp": 1786440408.698176,
+        "blockType": "mcImage",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc1721930578017_298": {
+        "deliveredOnTimestamp": 1786440408.698185,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      }
+    },
+    "answers": [
+      {
+        "blockId": "mc1721928677800_277",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721928783080_288",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721928900072_296",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721929034327_310",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721929135512_333",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721929229496_347",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mcImage1721929422790_368",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721929599192_386",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mcImage1721929906512_270",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc1721930578017_298",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      }
+    ],
+    "submittedTimestamp": 1786440408.941058,
+    "status": "submitted",
+    "grading_status": "grading_status_no_grade",
+    "access": "public",
+    "actual_score": null,
+    "score": [],
+    "source": {
+      "type": "unit"
+    },
+    "isDefining": true,
+    "isAdminAutoGradedSubmission": null,
+    "listOfNonConsentedBlocks": [],
+    "created": 1786440408.704135,
+    "modified": 1786440409.026511,
+    "id": "6a7aead83f54749222070ee4",
+    "passed": null
+  },
+  "assessment": {
+    "title": "Practice Test Paper (Medium)",
+    "access": "public",
+    "type": "assessment",
+    "model": "assessmentSnapshot",
+    "description": "Intermediate practice test paper containing 10 assessment questions covering Time & Work.",
+    "isTimed": false,
+    "timerFor": "assessmentTimed",
+    "onTimerExpiration": "autoSubmit",
+    "assessmentTimeLimitInSeconds": 600,
+    "questionTimeLimitInSeconds": 60,
+    "standaloneShareEnabled": null,
+    "customUrl": null,
+    "usesCustomUrl": null,
+    "allowAnonymous": true,
+    "randomizeQuestionOptions": false,
+    "disallowPartialSubmissions": false,
+    "submissionDueDateEnabled": false,
+    "submissionDueDate": 1626257823,
+    "makeFeedbackAvailableAfterDateEnabled": false,
+    "makeFeedbackAvailableAfterDate": 0,
+    "customStylesEnabled": true,
+    "customStyles": {
+      "assessmentPage": {
+        "background": {
+          "type": "color",
+          "colorData": {
+            "code": "",
+            "class": "lw-body-bg"
+          }
+        },
+        "dividers": {
+          "top": {
+            "orientation": "top",
+            "divider": "none"
+          },
+          "bottom": {
+            "orientation": "bottom",
+            "divider": "none"
+          }
+        }
+      },
+      "option": {
+        "radioEffect": "scribble",
+        "checkboxEffect": "scribble",
+        "size": "small"
+      },
+      "assessment": {
+        "transition": "none",
+        "background": {
+          "type": "color",
+          "colorData": {
+            "code": "",
+            "class": ""
+          }
+        },
+        "width": "normal",
+        "timerTemplate": "rectangle"
+      },
+      "linearRating": {
+        "labels": {
+          "size": "small"
+        }
+      },
+      "question": {
+        "description": {
+          "background": {
+            "type": "color",
+            "colorData": {
+              "code": "",
+              "class": ""
+            }
+          },
+          "type": "p",
+          "size": "small"
+        },
+        "answers": {
+          "background": {
+            "type": "color",
+            "colorData": {
+              "code": "",
+              "class": ""
+            }
+          }
+        },
+        "requiredAsterisk": {
+          "colorData": {
+            "code": "#ff0000",
+            "class": ""
+          }
+        },
+        "errorMessages": {
+          "size": "verySmall",
+          "colorData": {
+            "code": "#ff0000",
+            "class": ""
+          }
+        }
+      },
+      "input": {
+        "size": "small",
+        "type": "solidDark"
+      },
+      "textarea": {
+        "size": "small",
+        "type": "solidDark"
+      },
+      "dropdown": {
+        "size": "small",
+        "type": "solidDark"
+      }
+    },
+    "submissionMode": "all",
+    "startingDate": 1626765704,
+    "startingDateEnabled": false,
+    "showOnlyFailedQuestionsOnRetry": false,
+    "retryEnabled": true,
+    "retryOnFailOnly": false,
+    "gradingMethod": null,
+    "maxTries": null,
+    "onlyWrongOnRetake": null,
+    "isAmendable": false,
+    "feedbackShowOnScreen": false,
+    "feedbackDownloadPDF": false,
+    "feedbackShowInline": true,
+    "feedbackQuestionList": "all-questions",
+    "feedbackShowQuestionScore": false,
+    "feedbackShowFeedback": true,
+    "feedbackShowNumbering": false,
+    "feedbackShowSectionTitles": false,
+    "feedbackShowUserAnswers": true,
+    "feedbackShowCorrectAnswers": true,
+    "feedbackShowAnswerCorrectness": true,
+    "displayInlineFeedbackEnabled": true,
+    "displayBackButtonWhenSubmissionPerBlock": true,
+    "feedbackShowSectionResultSummary": false,
+    "askConfirmationBeforeSubmit": false,
+    "hasCustomConfirmationBeforeSubmitText": false,
+    "customConfirmationBeforeSubmitText": "Are you sure you want to submit the questionnaire?",
+    "customConfirmationBeforeSubmitTexts": {
+      "title": "Submit Assessment?",
+      "baseConfirmationMessage": "Are you sure you want to submit the questionnaire?",
+      "unansweredNotice": "You have not answered {X} questions."
+    },
+    "amendResubmissionMinutes": 30,
+    "passingGrade": null,
+    "navigationMode": "per-block",
+    "conditionalBlocks": {
+      "introContent": {
+        "id": "content66a1cba8c599e",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66a1cba8c59a9",
+              "type": "text",
+              "insertedAsWidget": true,
+              "properties": {
+                "html": "Clocks and Calendars PAPER LEVEL-2",
+                "alignment": "center",
+                "customStyle": true,
+                "type": "h2",
+                "size": "normal"
+              }
+            },
+            {
+              "id": "text66a1cba8c59bc",
+              "type": "text",
+              "properties": {
+                "html": "<div><span style=\"font-size: 1.7rem; letter-spacing: 0rem;\">Self-assess your knowledge. Express yourself and get feedback from our instructors.</span><br></div>",
+                "customStyle": true,
+                "alignment": "center"
+              }
+            },
+            {
+              "id": "spacer66a1cba8c59c7",
+              "type": "spacer",
+              "properties": {
+                "height": 25,
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            },
+            {
+              "id": "button66a1cba8c59d5",
+              "type": "button",
+              "properties": {
+                "buttonLabel": "<span>Ready to start</span>",
+                "buttonSize": "normal",
+                "buttonType": "solidBrand",
+                "alignment": "center",
+                "linkData": {
+                  "linkType": "goToFirst"
+                },
+                "iconColorData": {
+                  "code": "",
+                  "class": ""
+                },
+                "iconDisplay": false,
+                "iconSize": 26,
+                "iconClassName": " fas fa-angle-right",
+                "iconPosition": "right"
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "variables": {
+            "conditionalBlocks_introContent_blockData_widgets_0": []
+          }
+        }
+      },
+      "submissionStartingDate": {
+        "id": "content66a1cba8c59fa",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66a1cba8c59ff",
+              "type": "text",
+              "properties": {
+                "html": "Sorry but this assessment hasn't started yet."
+              }
+            },
+            {
+              "id": "date66a1cba8c5a07",
+              "type": "date",
+              "properties": {
+                "value": ""
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "displayConditions": ["startingDate"]
+        }
+      },
+      "submissionDueDate": {
+        "id": "content66a1cba8c5a13",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66a1cba8c5a18",
+              "type": "text",
+              "properties": {
+                "html": "Sorry but this assessment date is due."
+              }
+            },
+            {
+              "id": "date66a1cba8c5a1f",
+              "type": "date",
+              "properties": {
+                "value": ""
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "displayConditions": ["dateIsDue"]
+        }
+      },
+      "outroContent": {
+        "id": "content66a1cba8c5a2d",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "userResults66a1cba8c5a31",
+              "type": "userResults",
+              "properties": {
+                "layout": "template2",
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            },
+            {
+              "id": "feedback66a1cba8c5a3f",
+              "type": "feedback",
+              "properties": []
+            },
+            {
+              "id": "outroActions66a1cba8c5a46",
+              "type": "outroActions",
+              "properties": {
+                "layout": "",
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true
+        }
+      }
+    },
+    "systemSections": null,
+    "sections": [
+      {
+        "id": "section66a1cba8c5a59",
+        "title": "",
+        "type": "section",
+        "navigationMode": "per-block",
+        "blocks": [
+          {
+            "id": "mc1721928677800_277",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721928677800_270",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">Rimjim and her grandson have the same birthday. For six consecutive birthdays, her age is an integral multiple of his age. How old is the Rimjim when her grandson is 6 years old?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721928677800_278",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721928677800_282",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721928677800_274",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721928677800_275",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721928677800_272",
+                        "type": "text",
+                        "properties": {
+                          "html": "88 years"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721928677800_276",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721928677800_279",
+                        "type": "text",
+                        "properties": {
+                          "html": "66 years"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721928677800_271",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721928677800_281",
+                        "type": "text",
+                        "properties": {
+                          "html": "56 years"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721928677800_280",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721928677800_273",
+                        "type": "text",
+                        "properties": {
+                          "html": "65 years"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_0": []
+              }
+            }
+          },
+          {
+            "id": "mc1721928783080_288",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721928783080_293",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">A faulty watch gains 8 minutes every hour. It was set right on 25<sup>th</sup> February at 7 : 30 AM. When will it show the correct time again?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721928783080_291",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721928783080_285",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721928783080_292",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721928783080_284",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721928783080_294",
+                        "type": "text",
+                        "properties": {
+                          "html": "28<sup>th</sup> February 1 : 30 Am"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721928783080_295",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721928783080_290",
+                        "type": "text",
+                        "properties": {
+                          "html": "1<sup>st</sup> March 1 : 30 PM"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721928783080_289",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721928783080_287",
+                        "type": "text",
+                        "properties": {
+                          "html": "28<sup>th</sup> February 1 : 30 PM"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721928783080_286",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721928783080_283",
+                        "type": "text",
+                        "properties": {
+                          "html": "Cannot be determined"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_1_blockData_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_1": []
+              }
+            }
+          },
+          {
+            "id": "mc1721928900072_296",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721928900072_301",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">A faulty clock is continuously gaining time. It was found to be 10 min slow at 4 : 00 am. In the morning and 10 min fast at 6 : 00 pm. in the evening of the same day. When did the clock show the correct time?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721928900072_307",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721928900072_308",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721928900072_304",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721928900072_300",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721928900072_305",
+                        "type": "text",
+                        "properties": {
+                          "html": "9 : 00 am"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721928900072_297",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721928900072_298",
+                        "type": "text",
+                        "properties": {
+                          "html": "10 : 00 am"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721928900072_302",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721928900072_299",
+                        "type": "text",
+                        "properties": {
+                          "html": "11 : 00 am"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721928900072_303",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721928900072_306",
+                        "type": "text",
+                        "properties": {
+                          "html": "12 : 00 am"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_2_blockData_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_2": []
+              }
+            }
+          },
+          {
+            "id": "mc1721929034327_310",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721929034327_316",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">Each day on Planet M is of 10 hours, each hour equal to 60 minutes and each minute equal to 40 seconds. The inhabitants of Planet M use 10 hour analog clock with an hour hand, a minutes hand and a second hand. If one such clock shows 3 hours 42 minutes and 20 seconds in a mirror what will be the time in Planet M exactly after 5 minutes?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721929034328_318",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721929034327_314",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721929034327_313",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721929034328_317",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721929034328_319",
+                        "type": "text",
+                        "properties": {
+                          "html": "6 hours 18 minutes 20 seconds"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721929034327_309",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721929034328_320",
+                        "type": "text",
+                        "properties": {
+                          "html": "6 hours 22 minutes 20 seconds"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721929034327_311",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721929034327_312",
+                        "type": "text",
+                        "properties": {
+                          "html": "6 hours 23 minutes 20 seconds"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721929034328_321",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721929034327_315",
+                        "type": "text",
+                        "properties": {
+                          "html": "7 hours 17 minutes 20 seconds"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_3_blockData_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3": []
+              }
+            }
+          },
+          {
+            "id": "mc1721929135512_333",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721929135512_331",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">A clock strikes once at 1 O’clock, twice at 2 O’clock, three times at 3 O’clock and so on. If it takes 10 seconds to strike at 6 O’clock, find the time taken by it to strike at 12 O’clock.</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721929135512_326",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721929135512_332",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721929135512_327",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721929135512_330",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721929135512_325",
+                        "type": "text",
+                        "properties": {
+                          "html": "18 seconds"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721929135512_328",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721929135512_329",
+                        "type": "text",
+                        "properties": {
+                          "html": "22 seconds"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721929135512_334",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721929135512_322",
+                        "type": "text",
+                        "properties": {
+                          "html": "24 seconds"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721929135512_324",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721929135512_323",
+                        "type": "text",
+                        "properties": {
+                          "html": "26 seconds"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_4_blockData_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4": []
+              }
+            }
+          },
+          {
+            "id": "mc1721929229496_347",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721929229496_337",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">A clock is kept horizontally on a table in such a way that at 6:12 AM, its minute hand points towards South – East. At what time will the hour hand point exactly towards North?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721929229496_343",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721929229496_336",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721929229496_335",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721929229496_346",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721929229496_341",
+                        "type": "text",
+                        "properties": {
+                          "html": "9:48 AM"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721929229496_345",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721929229496_339",
+                        "type": "text",
+                        "properties": {
+                          "html": "9:54 AM"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721929229496_338",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721929229496_344",
+                        "type": "text",
+                        "properties": {
+                          "html": "11:06 AM"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721929229496_340",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721929229496_342",
+                        "type": "text",
+                        "properties": {
+                          "html": "1:48 PM"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_5_blockData_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5": []
+              }
+            }
+          },
+          {
+            "id": "mcImage1721929422790_368",
+            "type": "mcImage",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mcImage1721929422790_366",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">Ganesh started his work between 4 p.m. and 5 p.m. when the two hands of the clock were at the same position and finished it between 6 p.m. and 7 p.m. when the two hands of the clock were again at the same position. How long was Ganesh working?&nbsp;</p>"
+                    }
+                  }
+                ]
+              },
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-image-option1721929422790_374",
+                  "type": "mc-image-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mcImage1721929422790_369",
+                        "type": "image",
+                        "properties": {
+                          "hasLightbox": false,
+                          "imageData": {
+                            "title": "Picture1",
+                            "tags": [],
+                            "width": 248,
+                            "height": 51,
+                            "size": 1,
+                            "name": "/43a61754fb5cbf2890bd5ca01574f8f5.png",
+                            "access": "public",
+                            "created": 1721909648.48544,
+                            "modified": 1721909648.48544,
+                            "user": {
+                              "username": "Sneha AK Team"
+                            },
+                            "id": "66a24190be871734fc05afb8",
+                            "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/43a61754fb5cbf2890bd5ca01574f8f5.png",
+                            "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/43a61754fb5cbf2890bd5ca01574f8f5.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                            "modifiedF": "2024-07-25 15:14:08"
+                          },
+                          "height": 35,
+                          "width": 175
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-image-option1721929422790_373",
+                  "type": "mc-image-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mcImage1721929422790_362",
+                        "type": "image",
+                        "properties": {
+                          "hasLightbox": false,
+                          "imageData": {
+                            "title": "Picture2",
+                            "tags": [],
+                            "width": 263,
+                            "height": 50,
+                            "size": 1,
+                            "name": "/fc4b37d5dbf097520afd58063a781aa4.png",
+                            "access": "public",
+                            "created": 1721909659.765513,
+                            "modified": 1721909659.765513,
+                            "user": {
+                              "username": "Sneha AK Team"
+                            },
+                            "id": "66a2419b916cb11cf404d425",
+                            "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/fc4b37d5dbf097520afd58063a781aa4.png",
+                            "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/fc4b37d5dbf097520afd58063a781aa4.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                            "modifiedF": "2024-07-25 15:14:19"
+                          },
+                          "height": 33,
+                          "width": 175
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-image-option1721929422790_363",
+                  "type": "mc-image-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mcImage1721929422790_372",
+                        "type": "image",
+                        "properties": {
+                          "hasLightbox": false,
+                          "imageData": {
+                            "title": "Picture3",
+                            "tags": [],
+                            "width": 259,
+                            "height": 55,
+                            "size": 1,
+                            "name": "/c31789b3d61fb102b85fd13a425351d2.png",
+                            "access": "public",
+                            "created": 1721909671.650389,
+                            "modified": 1721909671.650389,
+                            "user": {
+                              "username": "Sneha AK Team"
+                            },
+                            "id": "66a241a75684cd2f93055835",
+                            "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/c31789b3d61fb102b85fd13a425351d2.png",
+                            "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/c31789b3d61fb102b85fd13a425351d2.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                            "modifiedF": "2024-07-25 15:14:31"
+                          },
+                          "height": 37,
+                          "width": 175
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-image-option1721929422790_367",
+                  "type": "mc-image-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mcImage1721929422790_371",
+                        "type": "image",
+                        "properties": {
+                          "hasLightbox": false,
+                          "imageData": {
+                            "title": "Picture4",
+                            "tags": [],
+                            "width": 229,
+                            "height": 57,
+                            "size": 1,
+                            "name": "/209460d5c3e6548f68aa8c44eca11c88.png",
+                            "access": "public",
+                            "created": 1721909683.343401,
+                            "modified": 1721909683.343401,
+                            "user": {
+                              "username": "Sneha AK Team"
+                            },
+                            "id": "66a241b325804635e2095456",
+                            "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/209460d5c3e6548f68aa8c44eca11c88.png",
+                            "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/209460d5c3e6548f68aa8c44eca11c88.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                            "modifiedF": "2024-07-25 15:14:43"
+                          },
+                          "height": 42,
+                          "width": 170
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "optionNumbering": "none",
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_6_blockData_description_widgets_0": [],
+                "sections_0_blocks_6": []
+              }
+            }
+          },
+          {
+            "id": "mc1721929599192_386",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721929599192_379",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">If 17<sup>th</sup> March, 2007 is a Monday then which day of the week falls on 28<sup>th</sup> April 2016?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721929599192_382",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721929599192_390",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721929599192_385",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721929599192_391",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721929599192_389",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Friday</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721929599192_383",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721929599192_381",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Saturday</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721929599192_388",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721929599192_387",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Thursday</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721929599192_380",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721929599192_384",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Sunday</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_7_blockData_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_7": []
+              }
+            }
+          },
+          {
+            "id": "mcImage1721929906512_270",
+            "type": "mcImage",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mcImage1721929906512_281",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">At what time will the hour and minute hand of a clock point in opposite directions between 8 to 9 o’clock?</p>"
+                    }
+                  }
+                ]
+              },
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-image-option1721929906512_273",
+                  "type": "mc-image-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mcImage1721929906512_276",
+                        "type": "image",
+                        "properties": {
+                          "hasLightbox": false,
+                          "imageData": {
+                            "title": "Picture5",
+                            "tags": [],
+                            "width": 195,
+                            "height": 52,
+                            "size": 1,
+                            "name": "/1ae88fa41c4e6b922182259a4bcb8b68.png",
+                            "access": "public",
+                            "created": 1721910260.238529,
+                            "modified": 1721910260.238529,
+                            "user": {
+                              "username": "Sneha AK Team"
+                            },
+                            "id": "66a243f4c8076d9a4f06e6c5",
+                            "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/1ae88fa41c4e6b922182259a4bcb8b68.png",
+                            "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/1ae88fa41c4e6b922182259a4bcb8b68.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                            "modifiedF": "2024-07-25 15:24:20"
+                          },
+                          "height": 40,
+                          "width": 150
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-image-option1721929906512_272",
+                  "type": "mc-image-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mcImage1721929906512_282",
+                        "type": "image",
+                        "properties": {
+                          "hasLightbox": false,
+                          "imageData": {
+                            "title": "Picture6",
+                            "tags": [],
+                            "width": 184,
+                            "height": 54,
+                            "size": 1,
+                            "name": "/21381dfbca6b3128028c70922d4ea62f.png",
+                            "access": "public",
+                            "created": 1721910270.868952,
+                            "modified": 1721910270.868952,
+                            "user": {
+                              "username": "Sneha AK Team"
+                            },
+                            "id": "66a243fe2654108daa0b297b",
+                            "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/21381dfbca6b3128028c70922d4ea62f.png",
+                            "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/21381dfbca6b3128028c70922d4ea62f.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                            "modifiedF": "2024-07-25 15:24:30"
+                          },
+                          "height": 44,
+                          "width": 150
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-image-option1721929906512_271",
+                  "type": "mc-image-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mcImage1721929906512_283",
+                        "type": "image",
+                        "properties": {
+                          "hasLightbox": false,
+                          "imageData": {
+                            "title": "Picture7",
+                            "tags": [],
+                            "width": 198,
+                            "height": 57,
+                            "size": 1,
+                            "name": "/1cad5cddaf06f6cd7b672b7af2a4c2dc.png",
+                            "access": "public",
+                            "created": 1721910281.851239,
+                            "modified": 1721910281.851239,
+                            "user": {
+                              "username": "Sneha AK Team"
+                            },
+                            "id": "66a24409419f2974a80081e6",
+                            "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/1cad5cddaf06f6cd7b672b7af2a4c2dc.png",
+                            "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/1cad5cddaf06f6cd7b672b7af2a4c2dc.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                            "modifiedF": "2024-07-25 15:24:41"
+                          },
+                          "height": 43,
+                          "width": 150
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-image-option1721929906512_279",
+                  "type": "mc-image-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mcImage1721929906512_274",
+                        "type": "image",
+                        "properties": {
+                          "hasLightbox": false,
+                          "imageData": {
+                            "title": "Picture8",
+                            "tags": [],
+                            "width": 196,
+                            "height": 54,
+                            "size": 1,
+                            "name": "/d4ab2cb2709f365be3347612f9eef1b8.png",
+                            "access": "public",
+                            "created": 1721910292.577516,
+                            "modified": 1721910292.577516,
+                            "user": {
+                              "username": "Sneha AK Team"
+                            },
+                            "id": "66a2441450c1f211ba092045",
+                            "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/d4ab2cb2709f365be3347612f9eef1b8.png",
+                            "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/d4ab2cb2709f365be3347612f9eef1b8.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                            "modifiedF": "2024-07-25 15:24:52"
+                          },
+                          "height": 41,
+                          "width": 150
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "optionNumbering": "none",
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_8_blockData_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_0_description_widgets_1": [],
+                "sections_0_blocks_8": [],
+                "sections_0_blocks_8_blockData_options_3_description_widgets_1": [],
+                "sections_0_blocks_8_blockData_options_2_description_widgets_1": []
+              }
+            }
+          },
+          {
+            "id": "mc1721930578017_298",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "mc1721930578017_297",
+                    "type": "text",
+                    "properties": {
+                      "html": "What will be the day of the week on 30th May 2034?"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other1721930578017_289",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "mc1721930578017_290",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "mc1721930578017_292",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option1721930578017_288",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721930578017_293",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Sunday</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721930578017_291",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721930578017_286",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Tuesday</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721930578017_294",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721930578017_295",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Saturday</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option1721930578017_287",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "mc1721930578017_296",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Wednesday</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_9_blockData_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_9": []
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "availabilityStatus": null,
+    "autoNavigationEnabled": false,
+    "displayBackButtonWhenNavigationPerBlock": true,
+    "saveAndResumeLaterEnabled": null,
+    "tagsAddedOnCompletion": [],
+    "tagsAddedOnPass": [],
+    "sendAnonymousSubmissionsToEmailLeads": false,
+    "afterSubmitActionEnabled": null,
+    "afterSubmitActionProperties": null,
+    "showWizardOnNextEdit": false,
+    "revisitAfterSubmissionAction": null,
+    "navigationTemplate": "HorizontalSpacedBetweenNavigationTemplate",
+    "learnerSearchBarEnabled": true,
+    "learnerUnansweredQuestionsEnabled": true,
+    "learnerFavouriteQuestionEnabled": true,
+    "learnerCompletionProgressEnabled": true,
+    "learnerShowIndexOfQuestionsEnabled": false,
+    "learnerTimeNotificationsEnabled": false,
+    "learnerAllowInterruptionsEnabled": true,
+    "learnerAllowInterruptionsTimeoutInMinutes": 30,
+    "learnerReclaimTryOnInterruptionTimeoutEnabled": false,
+    "learnerAskBeforeContinueToSaved": true,
+    "learnerAutoSaveEnabled": null,
+    "spellcheckDisabled": null,
+    "showPartialScoreOnSubmission": true,
+    "deliverableQuestionsSubsetType": "all",
+    "questionRandomizationType": "none",
+    "serveQuestionsBasedOnPreviousSubmission": null,
+    "scoringDisabled": true,
+    "isSelfAssessment": true,
+    "useDefaultCertificateTemplate": null,
+    "certificateTemplate": null,
+    "certificateSocialShare": null,
+    "migrationData": null,
+    "useAssessmentPassingGradeForOpenEndedCorrectness": true,
+    "openEndedCorrectnessPassingGrade": null,
+    "showScorePercentage": null,
+    "showScorePoints": null,
+    "showScoreCorrectAnswers": null,
+    "editorBehaviorSettings": null,
+    "manualReviewEnabled": false,
+    "resultsSummary": {
+      "enabled": true,
+      "showStatusIcon": true,
+      "showStatusText": true,
+      "showScorePercentage": true,
+      "showScorePoints": true,
+      "showScoreCorrectAnswers": true,
+      "showTimeTakenToComplete": true,
+      "showDateSubmitted": true,
+      "showAttemptCount": true
+    },
+    "meta": null,
+    "submissionsCount": 188,
+    "fromMarketplace": null,
+    "aiFeedbackEnabled": null,
+    "numberOfFeedbackQuestions": null,
+    "created": 1721879465.213038,
+    "modified": 1723965630.61047,
+    "contentHash": "6dbccffbe78029530d7be1632067fad3d5641c7d0481d40720e907bec67a5feb",
+    "id": "66a1cba933f4c34e5b063dc5",
+    "objectType": "assessment",
+    "isEditBlockedDueToSync": false,
+    "variables": {
+      "submission": {
+        "self": {
+          "score": null,
+          "points": null,
+          "total_points": null,
+          "correct_answers": null,
+          "total_questions": 10,
+          "time_spent": "00:00:00",
+          "date_submitted": "11/08/26",
+          "attempt_count": 3,
+          "max_tries": null,
+          "pass_grade": null,
+          "time_spent_seconds": 0,
+          "raw_start_date": 1786440408.704135
+        }
+      },
+      "school": {
+        "name": "Apna College",
+        "url": "www.apnacollege.in",
+        "description": "The most loved coding community of India ❤️"
+      },
+      "user": {
+        "username": "ram",
+        "email": "p4542639@gmail.com",
+        "cf_phonenumber": "7666690798"
+      }
+    }
+  },
+  "reclaimedTry": false,
+  "feedback": [
+    {
+      "title": "",
+      "id": "section66a1cba8c5a59",
+      "blocks": [
+        {
+          "id": "mc1721928677800_277",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Rimjim and her grandson have the same birthday. For six consecutive birthdays, her age is an integral multiple of his age. How old is the Rimjim when her grandson is 6 years old?",
+            "widgets": [
+              {
+                "id": "mc1721928677800_270",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">Rimjim and her grandson have the same birthday. For six consecutive birthdays, her age is an integral multiple of his age. How old is the Rimjim when her grandson is 6 years old?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721928677800_275",
+              "description": {
+                "text": "88 years",
+                "widgets": [
+                  {
+                    "id": "mc1721928677800_272",
+                    "type": "text",
+                    "properties": {
+                      "html": "88 years"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721928677800_276",
+              "description": {
+                "text": "66 years",
+                "widgets": [
+                  {
+                    "id": "mc1721928677800_279",
+                    "type": "text",
+                    "properties": {
+                      "html": "66 years"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721928677800_271",
+              "description": {
+                "text": "56 years",
+                "widgets": [
+                  {
+                    "id": "mc1721928677800_281",
+                    "type": "text",
+                    "properties": {
+                      "html": "56 years"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721928677800_280",
+              "description": {
+                "text": "65 years",
+                "widgets": [
+                  {
+                    "id": "mc1721928677800_273",
+                    "type": "text",
+                    "properties": {
+                      "html": "65 years"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721928677800_276",
+              "text": "66 years",
+              "widgets": [
+                {
+                  "id": "mc1721928677800_279",
+                  "type": "text",
+                  "properties": {
+                    "html": "66 years"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/d0a2d0b4abc82ae4154a589745b2bd5a.jpg\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721928783080_288",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "A faulty watch gains 8 minutes every hour. It was set right on 25th February at 7 : 30 AM. When will it show the correct time again?",
+            "widgets": [
+              {
+                "id": "mc1721928783080_293",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">A faulty watch gains 8 minutes every hour. It was set right on 25<sup>th</sup> February at 7 : 30 AM. When will it show the correct time again?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721928783080_284",
+              "description": {
+                "text": "28th February 1 : 30 Am",
+                "widgets": [
+                  {
+                    "id": "mc1721928783080_294",
+                    "type": "text",
+                    "properties": {
+                      "html": "28<sup>th</sup> February 1 : 30 Am"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721928783080_295",
+              "description": {
+                "text": "1st March 1 : 30 PM",
+                "widgets": [
+                  {
+                    "id": "mc1721928783080_290",
+                    "type": "text",
+                    "properties": {
+                      "html": "1<sup>st</sup> March 1 : 30 PM"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721928783080_289",
+              "description": {
+                "text": "28th February 1 : 30 PM",
+                "widgets": [
+                  {
+                    "id": "mc1721928783080_287",
+                    "type": "text",
+                    "properties": {
+                      "html": "28<sup>th</sup> February 1 : 30 PM"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721928783080_286",
+              "description": {
+                "text": "Cannot be determined",
+                "widgets": [
+                  {
+                    "id": "mc1721928783080_283",
+                    "type": "text",
+                    "properties": {
+                      "html": "Cannot be determined"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721928783080_286",
+              "text": "Cannot be determined",
+              "widgets": [
+                {
+                  "id": "mc1721928783080_283",
+                  "type": "text",
+                  "properties": {
+                    "html": "Cannot be determined"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/e123285bdcb386110d644da567d71dce.jpg\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721928900072_296",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "A faulty clock is continuously gaining time. It was found to be 10 min slow at 4 : 00 am. In the morning and 10 min fast at 6 : 00 pm. in the evening of the same day. When did the clock show the correct time?",
+            "widgets": [
+              {
+                "id": "mc1721928900072_301",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">A faulty clock is continuously gaining time. It was found to be 10 min slow at 4 : 00 am. In the morning and 10 min fast at 6 : 00 pm. in the evening of the same day. When did the clock show the correct time?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721928900072_300",
+              "description": {
+                "text": "9 : 00 am",
+                "widgets": [
+                  {
+                    "id": "mc1721928900072_305",
+                    "type": "text",
+                    "properties": {
+                      "html": "9 : 00 am"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721928900072_297",
+              "description": {
+                "text": "10 : 00 am",
+                "widgets": [
+                  {
+                    "id": "mc1721928900072_298",
+                    "type": "text",
+                    "properties": {
+                      "html": "10 : 00 am"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721928900072_302",
+              "description": {
+                "text": "11 : 00 am",
+                "widgets": [
+                  {
+                    "id": "mc1721928900072_299",
+                    "type": "text",
+                    "properties": {
+                      "html": "11 : 00 am"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721928900072_303",
+              "description": {
+                "text": "12 : 00 am",
+                "widgets": [
+                  {
+                    "id": "mc1721928900072_306",
+                    "type": "text",
+                    "properties": {
+                      "html": "12 : 00 am"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721928900072_302",
+              "text": "11 : 00 am",
+              "widgets": [
+                {
+                  "id": "mc1721928900072_299",
+                  "type": "text",
+                  "properties": {
+                    "html": "11 : 00 am"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/a0d67e6da4824f086aa5544a782e3cc8.jpg\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721929034327_310",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Each day on Planet M is of 10 hours, each hour equal to 60 minutes and each minute equal to 40 seconds. The inhabitants of Planet M use 10 hour analog clock with an hour hand, a minutes hand and a second hand. If one such clock shows 3 hours 42 minutes and 20 seconds in a mirror what will be the time in Planet M exactly after 5 minutes?",
+            "widgets": [
+              {
+                "id": "mc1721929034327_316",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">Each day on Planet M is of 10 hours, each hour equal to 60 minutes and each minute equal to 40 seconds. The inhabitants of Planet M use 10 hour analog clock with an hour hand, a minutes hand and a second hand. If one such clock shows 3 hours 42 minutes and 20 seconds in a mirror what will be the time in Planet M exactly after 5 minutes?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721929034328_317",
+              "description": {
+                "text": "6 hours 18 minutes 20 seconds",
+                "widgets": [
+                  {
+                    "id": "mc1721929034328_319",
+                    "type": "text",
+                    "properties": {
+                      "html": "6 hours 18 minutes 20 seconds"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721929034327_309",
+              "description": {
+                "text": "6 hours 22 minutes 20 seconds",
+                "widgets": [
+                  {
+                    "id": "mc1721929034328_320",
+                    "type": "text",
+                    "properties": {
+                      "html": "6 hours 22 minutes 20 seconds"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721929034327_311",
+              "description": {
+                "text": "6 hours 23 minutes 20 seconds",
+                "widgets": [
+                  {
+                    "id": "mc1721929034327_312",
+                    "type": "text",
+                    "properties": {
+                      "html": "6 hours 23 minutes 20 seconds"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721929034328_321",
+              "description": {
+                "text": "7 hours 17 minutes 20 seconds",
+                "widgets": [
+                  {
+                    "id": "mc1721929034327_315",
+                    "type": "text",
+                    "properties": {
+                      "html": "7 hours 17 minutes 20 seconds"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721929034327_309",
+              "text": "6 hours 22 minutes 20 seconds",
+              "widgets": [
+                {
+                  "id": "mc1721929034328_320",
+                  "type": "text",
+                  "properties": {
+                    "html": "6 hours 22 minutes 20 seconds"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/8199b970d84a1e2684fb4d3b1a76db6e.jpg\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721929135512_333",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "A clock strikes once at 1 O’clock, twice at 2 O’clock, three times at 3 O’clock and so on. If it takes 10 seconds to strike at 6 O’clock, find the time taken by it to strike at 12 O’clock.",
+            "widgets": [
+              {
+                "id": "mc1721929135512_331",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">A clock strikes once at 1 O’clock, twice at 2 O’clock, three times at 3 O’clock and so on. If it takes 10 seconds to strike at 6 O’clock, find the time taken by it to strike at 12 O’clock.</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721929135512_330",
+              "description": {
+                "text": "18 seconds",
+                "widgets": [
+                  {
+                    "id": "mc1721929135512_325",
+                    "type": "text",
+                    "properties": {
+                      "html": "18 seconds"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721929135512_328",
+              "description": {
+                "text": "22 seconds",
+                "widgets": [
+                  {
+                    "id": "mc1721929135512_329",
+                    "type": "text",
+                    "properties": {
+                      "html": "22 seconds"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721929135512_334",
+              "description": {
+                "text": "24 seconds",
+                "widgets": [
+                  {
+                    "id": "mc1721929135512_322",
+                    "type": "text",
+                    "properties": {
+                      "html": "24 seconds"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721929135512_324",
+              "description": {
+                "text": "26 seconds",
+                "widgets": [
+                  {
+                    "id": "mc1721929135512_323",
+                    "type": "text",
+                    "properties": {
+                      "html": "26 seconds"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721929135512_328",
+              "text": "22 seconds",
+              "widgets": [
+                {
+                  "id": "mc1721929135512_329",
+                  "type": "text",
+                  "properties": {
+                    "html": "22 seconds"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/29678f4e3b6d9b957a2001ba42883a84.jpg\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721929229496_347",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "A clock is kept horizontally on a table in such a way that at 6:12 AM, its minute hand points towards South – East. At what time will the hour hand point exactly towards North?",
+            "widgets": [
+              {
+                "id": "mc1721929229496_337",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">A clock is kept horizontally on a table in such a way that at 6:12 AM, its minute hand points towards South – East. At what time will the hour hand point exactly towards North?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721929229496_346",
+              "description": {
+                "text": "9:48 AM",
+                "widgets": [
+                  {
+                    "id": "mc1721929229496_341",
+                    "type": "text",
+                    "properties": {
+                      "html": "9:48 AM"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721929229496_345",
+              "description": {
+                "text": "9:54 AM",
+                "widgets": [
+                  {
+                    "id": "mc1721929229496_339",
+                    "type": "text",
+                    "properties": {
+                      "html": "9:54 AM"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721929229496_338",
+              "description": {
+                "text": "11:06 AM",
+                "widgets": [
+                  {
+                    "id": "mc1721929229496_344",
+                    "type": "text",
+                    "properties": {
+                      "html": "11:06 AM"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721929229496_340",
+              "description": {
+                "text": "1:48 PM",
+                "widgets": [
+                  {
+                    "id": "mc1721929229496_342",
+                    "type": "text",
+                    "properties": {
+                      "html": "1:48 PM"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721929229496_345",
+              "text": "9:54 AM",
+              "widgets": [
+                {
+                  "id": "mc1721929229496_339",
+                  "type": "text",
+                  "properties": {
+                    "html": "9:54 AM"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/fd583e38df0066689ca51b165e087fda.jpg\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mcImage1721929422790_368",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mcImage",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Ganesh started his work between 4 p.m. and 5 p.m. when the two hands of the clock were at the same position and finished it between 6 p.m. and 7 p.m. when the two hands of the clock were again at the same position. How long was Ganesh working?",
+            "widgets": [
+              {
+                "id": "mcImage1721929422790_366",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">Ganesh started his work between 4 p.m. and 5 p.m. when the two hands of the clock were at the same position and finished it between 6 p.m. and 7 p.m. when the two hands of the clock were again at the same position. How long was Ganesh working?&nbsp;</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-image-option1721929422790_374",
+              "description": {
+                "text": "(Image)",
+                "widgets": [
+                  {
+                    "id": "mcImage1721929422790_369",
+                    "type": "image",
+                    "properties": {
+                      "hasLightbox": false,
+                      "imageData": {
+                        "title": "Picture1",
+                        "tags": [],
+                        "width": 248,
+                        "height": 51,
+                        "size": 1,
+                        "name": "/43a61754fb5cbf2890bd5ca01574f8f5.png",
+                        "access": "public",
+                        "created": 1721909648.48544,
+                        "modified": 1721909648.48544,
+                        "user": {
+                          "username": "Sneha AK Team"
+                        },
+                        "id": "66a24190be871734fc05afb8",
+                        "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/43a61754fb5cbf2890bd5ca01574f8f5.png",
+                        "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/43a61754fb5cbf2890bd5ca01574f8f5.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                        "modifiedF": "2024-07-25 15:14:08"
+                      },
+                      "height": 35,
+                      "width": 175
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-image-option1721929422790_373",
+              "description": {
+                "text": "(Image)",
+                "widgets": [
+                  {
+                    "id": "mcImage1721929422790_362",
+                    "type": "image",
+                    "properties": {
+                      "hasLightbox": false,
+                      "imageData": {
+                        "title": "Picture2",
+                        "tags": [],
+                        "width": 263,
+                        "height": 50,
+                        "size": 1,
+                        "name": "/fc4b37d5dbf097520afd58063a781aa4.png",
+                        "access": "public",
+                        "created": 1721909659.765513,
+                        "modified": 1721909659.765513,
+                        "user": {
+                          "username": "Sneha AK Team"
+                        },
+                        "id": "66a2419b916cb11cf404d425",
+                        "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/fc4b37d5dbf097520afd58063a781aa4.png",
+                        "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/fc4b37d5dbf097520afd58063a781aa4.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                        "modifiedF": "2024-07-25 15:14:19"
+                      },
+                      "height": 33,
+                      "width": 175
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-image-option1721929422790_363",
+              "description": {
+                "text": "(Image)",
+                "widgets": [
+                  {
+                    "id": "mcImage1721929422790_372",
+                    "type": "image",
+                    "properties": {
+                      "hasLightbox": false,
+                      "imageData": {
+                        "title": "Picture3",
+                        "tags": [],
+                        "width": 259,
+                        "height": 55,
+                        "size": 1,
+                        "name": "/c31789b3d61fb102b85fd13a425351d2.png",
+                        "access": "public",
+                        "created": 1721909671.650389,
+                        "modified": 1721909671.650389,
+                        "user": {
+                          "username": "Sneha AK Team"
+                        },
+                        "id": "66a241a75684cd2f93055835",
+                        "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/c31789b3d61fb102b85fd13a425351d2.png",
+                        "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/c31789b3d61fb102b85fd13a425351d2.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                        "modifiedF": "2024-07-25 15:14:31"
+                      },
+                      "height": 37,
+                      "width": 175
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-image-option1721929422790_367",
+              "description": {
+                "text": "(Image)",
+                "widgets": [
+                  {
+                    "id": "mcImage1721929422790_371",
+                    "type": "image",
+                    "properties": {
+                      "hasLightbox": false,
+                      "imageData": {
+                        "title": "Picture4",
+                        "tags": [],
+                        "width": 229,
+                        "height": 57,
+                        "size": 1,
+                        "name": "/209460d5c3e6548f68aa8c44eca11c88.png",
+                        "access": "public",
+                        "created": 1721909683.343401,
+                        "modified": 1721909683.343401,
+                        "user": {
+                          "username": "Sneha AK Team"
+                        },
+                        "id": "66a241b325804635e2095456",
+                        "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/209460d5c3e6548f68aa8c44eca11c88.png",
+                        "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/209460d5c3e6548f68aa8c44eca11c88.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                        "modifiedF": "2024-07-25 15:14:43"
+                      },
+                      "height": 42,
+                      "width": 170
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-image-option1721929422790_363",
+              "text": "(Image)",
+              "widgets": [
+                {
+                  "id": "mcImage1721929422790_372",
+                  "type": "image",
+                  "properties": {
+                    "hasLightbox": false,
+                    "imageData": {
+                      "title": "Picture3",
+                      "tags": [],
+                      "width": 259,
+                      "height": 55,
+                      "size": 1,
+                      "name": "/c31789b3d61fb102b85fd13a425351d2.png",
+                      "access": "public",
+                      "created": 1721909671.650389,
+                      "modified": 1721909671.650389,
+                      "user": {
+                        "username": "Sneha AK Team"
+                      },
+                      "id": "66a241a75684cd2f93055835",
+                      "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/c31789b3d61fb102b85fd13a425351d2.png",
+                      "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/c31789b3d61fb102b85fd13a425351d2.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                      "modifiedF": "2024-07-25 15:14:31"
+                    },
+                    "height": 37,
+                    "width": 175
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/4fe3cfe0adaba39f51a80c949885ea72.jpg\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721929599192_386",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "If 17th March, 2007 is a Monday then which day of the week falls on 28th April 2016?",
+            "widgets": [
+              {
+                "id": "mc1721929599192_379",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">If 17<sup>th</sup> March, 2007 is a Monday then which day of the week falls on 28<sup>th</sup> April 2016?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721929599192_391",
+              "description": {
+                "text": "Friday",
+                "widgets": [
+                  {
+                    "id": "mc1721929599192_389",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Friday</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721929599192_383",
+              "description": {
+                "text": "Saturday",
+                "widgets": [
+                  {
+                    "id": "mc1721929599192_381",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Saturday</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721929599192_388",
+              "description": {
+                "text": "Thursday",
+                "widgets": [
+                  {
+                    "id": "mc1721929599192_387",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Thursday</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721929599192_380",
+              "description": {
+                "text": "Sunday",
+                "widgets": [
+                  {
+                    "id": "mc1721929599192_384",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Sunday</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721929599192_383",
+              "text": "Saturday",
+              "widgets": [
+                {
+                  "id": "mc1721929599192_381",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>Saturday</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/5b778aacbf782253b0d8b9818aeeffbc.jpg\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mcImage1721929906512_270",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mcImage",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "At what time will the hour and minute hand of a clock point in opposite directions between 8 to 9 o’clock?",
+            "widgets": [
+              {
+                "id": "mcImage1721929906512_281",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">At what time will the hour and minute hand of a clock point in opposite directions between 8 to 9 o’clock?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-image-option1721929906512_273",
+              "description": {
+                "text": "(Image)",
+                "widgets": [
+                  {
+                    "id": "mcImage1721929906512_276",
+                    "type": "image",
+                    "properties": {
+                      "hasLightbox": false,
+                      "imageData": {
+                        "title": "Picture5",
+                        "tags": [],
+                        "width": 195,
+                        "height": 52,
+                        "size": 1,
+                        "name": "/1ae88fa41c4e6b922182259a4bcb8b68.png",
+                        "access": "public",
+                        "created": 1721910260.238529,
+                        "modified": 1721910260.238529,
+                        "user": {
+                          "username": "Sneha AK Team"
+                        },
+                        "id": "66a243f4c8076d9a4f06e6c5",
+                        "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/1ae88fa41c4e6b922182259a4bcb8b68.png",
+                        "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/1ae88fa41c4e6b922182259a4bcb8b68.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                        "modifiedF": "2024-07-25 15:24:20"
+                      },
+                      "height": 40,
+                      "width": 150
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-image-option1721929906512_272",
+              "description": {
+                "text": "(Image)",
+                "widgets": [
+                  {
+                    "id": "mcImage1721929906512_282",
+                    "type": "image",
+                    "properties": {
+                      "hasLightbox": false,
+                      "imageData": {
+                        "title": "Picture6",
+                        "tags": [],
+                        "width": 184,
+                        "height": 54,
+                        "size": 1,
+                        "name": "/21381dfbca6b3128028c70922d4ea62f.png",
+                        "access": "public",
+                        "created": 1721910270.868952,
+                        "modified": 1721910270.868952,
+                        "user": {
+                          "username": "Sneha AK Team"
+                        },
+                        "id": "66a243fe2654108daa0b297b",
+                        "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/21381dfbca6b3128028c70922d4ea62f.png",
+                        "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/21381dfbca6b3128028c70922d4ea62f.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                        "modifiedF": "2024-07-25 15:24:30"
+                      },
+                      "height": 44,
+                      "width": 150
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-image-option1721929906512_271",
+              "description": {
+                "text": "(Image)",
+                "widgets": [
+                  {
+                    "id": "mcImage1721929906512_283",
+                    "type": "image",
+                    "properties": {
+                      "hasLightbox": false,
+                      "imageData": {
+                        "title": "Picture7",
+                        "tags": [],
+                        "width": 198,
+                        "height": 57,
+                        "size": 1,
+                        "name": "/1cad5cddaf06f6cd7b672b7af2a4c2dc.png",
+                        "access": "public",
+                        "created": 1721910281.851239,
+                        "modified": 1721910281.851239,
+                        "user": {
+                          "username": "Sneha AK Team"
+                        },
+                        "id": "66a24409419f2974a80081e6",
+                        "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/1cad5cddaf06f6cd7b672b7af2a4c2dc.png",
+                        "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/1cad5cddaf06f6cd7b672b7af2a4c2dc.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                        "modifiedF": "2024-07-25 15:24:41"
+                      },
+                      "height": 43,
+                      "width": 150
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-image-option1721929906512_279",
+              "description": {
+                "text": "(Image)",
+                "widgets": [
+                  {
+                    "id": "mcImage1721929906512_274",
+                    "type": "image",
+                    "properties": {
+                      "hasLightbox": false,
+                      "imageData": {
+                        "title": "Picture8",
+                        "tags": [],
+                        "width": 196,
+                        "height": 54,
+                        "size": 1,
+                        "name": "/d4ab2cb2709f365be3347612f9eef1b8.png",
+                        "access": "public",
+                        "created": 1721910292.577516,
+                        "modified": 1721910292.577516,
+                        "user": {
+                          "username": "Sneha AK Team"
+                        },
+                        "id": "66a2441450c1f211ba092045",
+                        "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/d4ab2cb2709f365be3347612f9eef1b8.png",
+                        "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/d4ab2cb2709f365be3347612f9eef1b8.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                        "modifiedF": "2024-07-25 15:24:52"
+                      },
+                      "height": 41,
+                      "width": 150
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-image-option1721929906512_271",
+              "text": "(Image)",
+              "widgets": [
+                {
+                  "id": "mcImage1721929906512_283",
+                  "type": "image",
+                  "properties": {
+                    "hasLightbox": false,
+                    "imageData": {
+                      "title": "Picture7",
+                      "tags": [],
+                      "width": 198,
+                      "height": 57,
+                      "size": 1,
+                      "name": "/1cad5cddaf06f6cd7b672b7af2a4c2dc.png",
+                      "access": "public",
+                      "created": 1721910281.851239,
+                      "modified": 1721910281.851239,
+                      "user": {
+                        "username": "Sneha AK Team"
+                      },
+                      "id": "66a24409419f2974a80081e6",
+                      "link": "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/1cad5cddaf06f6cd7b672b7af2a4c2dc.png",
+                      "link_small": "https://api.asia-se1.learnworlds.com/imagefile/https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/1cad5cddaf06f6cd7b672b7af2a4c2dc.png?client_id=62a6cd5e1e9e2fbf212d608d&width=350&height=0",
+                      "modifiedF": "2024-07-25 15:24:41"
+                    },
+                    "height": 43,
+                    "width": 150
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/1f964c28b0ed9b4bcfd9fe705c9af25f.jpg\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc1721930578017_298",
+          "grade": null,
+          "blockMaxScore": null,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "What will be the day of the week on 30th May 2034?",
+            "widgets": [
+              {
+                "id": "mc1721930578017_297",
+                "type": "text",
+                "properties": {
+                  "html": "What will be the day of the week on 30th May 2034?"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option1721930578017_288",
+              "description": {
+                "text": "Sunday",
+                "widgets": [
+                  {
+                    "id": "mc1721930578017_293",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Sunday</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721930578017_291",
+              "description": {
+                "text": "Tuesday",
+                "widgets": [
+                  {
+                    "id": "mc1721930578017_286",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Tuesday</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721930578017_294",
+              "description": {
+                "text": "Saturday",
+                "widgets": [
+                  {
+                    "id": "mc1721930578017_295",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Saturday</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option1721930578017_287",
+              "description": {
+                "text": "Wednesday",
+                "widgets": [
+                  {
+                    "id": "mc1721930578017_296",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Wednesday</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option1721930578017_291",
+              "text": "Tuesday",
+              "widgets": [
+                {
+                  "id": "mc1721930578017_286",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>Tuesday</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/6bdca1b1101ffd66dcbad70792e52c8c.jpg\">"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        }
+      ]
+    }
+  ],
+  "submitted": true,
+  "updated": true,
+  "retryCount": 3,
+  "inlineFeedback": [],
+  "errors": [],
+  "success": true
+}

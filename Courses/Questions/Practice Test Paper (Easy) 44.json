@@ -1,0 +1,1769 @@
+{
+  "submission": {
+    "anon_id": null,
+    "model": "assessment-submission",
+    "courseTitleId": "aptitude-teacher2",
+    "object_id": "66b74b8f7f809db010095190",
+    "assessmentId": "66b74b8f7f809db01009518f",
+    "snapshotId": "66bde56c25be45b3c702c387",
+    "questions": {
+      "section66b74b8eb9239": [
+        "mc66b74b8eb9240",
+        "mc66b74b8eb92f3",
+        "mc66b74b8eb93a4",
+        "mc66b74b8eb944d",
+        "mc66b74b8eb9509"
+      ]
+    },
+    "certificateAnswers": [],
+    "certificateId": null,
+    "questionData": {
+      "mc66b74b8eb9240": {
+        "deliveredOnTimestamp": 1786440498.348261,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74b8eb92f3": {
+        "deliveredOnTimestamp": 1786440498.348287,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74b8eb93a4": {
+        "deliveredOnTimestamp": 1786440498.348302,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74b8eb944d": {
+        "deliveredOnTimestamp": 1786440498.348314,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74b8eb9509": {
+        "deliveredOnTimestamp": 1786440498.348325,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      }
+    },
+    "answers": [
+      {
+        "blockId": "mc66b74b8eb9240",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74b8eb92f3",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74b8eb93a4",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74b8eb944d",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74b8eb9509",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      }
+    ],
+    "submittedTimestamp": 1786440498.56684,
+    "status": "submitted",
+    "grading_status": "grading_status_graded",
+    "access": "public",
+    "actual_score": null,
+    "score": {
+      "maxScore": 5,
+      "value": 0,
+      "pass": false,
+      "passGrade": 50,
+      "points": 0
+    },
+    "source": {
+      "type": "unit"
+    },
+    "isDefining": true,
+    "isAdminAutoGradedSubmission": null,
+    "listOfNonConsentedBlocks": [],
+    "created": 1786440498.353298,
+    "modified": 1786440498.686299,
+    "id": "6a7aeb326202b54d07096769",
+    "passed": false
+  },
+  "assessment": {
+    "title": "Practice Test Paper (Easy)",
+    "access": "public",
+    "type": "assessment",
+    "model": "assessmentSnapshot",
+    "description": "Foundational practice test paper containing 5 assessment questions covering Percentages, Profit, Loss & Discounts, Ratios & Proportions.",
+    "isTimed": false,
+    "timerFor": "assessmentTimed",
+    "onTimerExpiration": "autoSubmit",
+    "assessmentTimeLimitInSeconds": 600,
+    "questionTimeLimitInSeconds": 60,
+    "standaloneShareEnabled": null,
+    "customUrl": null,
+    "usesCustomUrl": null,
+    "allowAnonymous": true,
+    "randomizeQuestionOptions": false,
+    "disallowPartialSubmissions": false,
+    "submissionDueDateEnabled": false,
+    "submissionDueDate": 1626257823,
+    "makeFeedbackAvailableAfterDateEnabled": false,
+    "makeFeedbackAvailableAfterDate": 0,
+    "customStylesEnabled": true,
+    "customStyles": {
+      "assessmentPage": {
+        "background": {
+          "type": "color",
+          "colorData": {
+            "code": "",
+            "class": "lw-body-bg"
+          }
+        },
+        "dividers": {
+          "top": {
+            "orientation": "top",
+            "divider": "none"
+          },
+          "bottom": {
+            "orientation": "bottom",
+            "divider": "none"
+          }
+        }
+      },
+      "option": {
+        "radioEffect": "scribble",
+        "checkboxEffect": "scribble",
+        "size": "small"
+      },
+      "assessment": {
+        "transition": "none",
+        "background": {
+          "type": "color",
+          "colorData": {
+            "code": "",
+            "class": ""
+          }
+        },
+        "width": "normal",
+        "timerTemplate": "rectangle"
+      },
+      "linearRating": {
+        "labels": {
+          "size": "small"
+        }
+      },
+      "question": {
+        "description": {
+          "background": {
+            "type": "color",
+            "colorData": {
+              "code": "",
+              "class": ""
+            }
+          },
+          "type": "p",
+          "size": "small"
+        },
+        "answers": {
+          "background": {
+            "type": "color",
+            "colorData": {
+              "code": "",
+              "class": ""
+            }
+          }
+        },
+        "requiredAsterisk": {
+          "colorData": {
+            "code": "#ff0000",
+            "class": ""
+          }
+        },
+        "errorMessages": {
+          "size": "verySmall",
+          "colorData": {
+            "code": "#ff0000",
+            "class": ""
+          }
+        }
+      },
+      "input": {
+        "size": "small",
+        "type": "solidDark"
+      },
+      "textarea": {
+        "size": "small",
+        "type": "solidDark"
+      },
+      "dropdown": {
+        "size": "small",
+        "type": "solidDark"
+      }
+    },
+    "submissionMode": "all",
+    "startingDate": 1626765704,
+    "startingDateEnabled": false,
+    "showOnlyFailedQuestionsOnRetry": false,
+    "retryEnabled": true,
+    "retryOnFailOnly": false,
+    "gradingMethod": null,
+    "maxTries": null,
+    "onlyWrongOnRetake": null,
+    "isAmendable": false,
+    "feedbackShowOnScreen": true,
+    "feedbackDownloadPDF": false,
+    "feedbackShowInline": null,
+    "feedbackQuestionList": "all-questions",
+    "feedbackShowQuestionScore": true,
+    "feedbackShowFeedback": true,
+    "feedbackShowNumbering": false,
+    "feedbackShowSectionTitles": false,
+    "feedbackShowUserAnswers": true,
+    "feedbackShowCorrectAnswers": true,
+    "feedbackShowAnswerCorrectness": true,
+    "displayInlineFeedbackEnabled": null,
+    "displayBackButtonWhenSubmissionPerBlock": null,
+    "feedbackShowSectionResultSummary": false,
+    "askConfirmationBeforeSubmit": true,
+    "hasCustomConfirmationBeforeSubmitText": false,
+    "customConfirmationBeforeSubmitText": "Are you sure you want to submit the questionnaire?",
+    "customConfirmationBeforeSubmitTexts": {
+      "title": "Submit Assessment?",
+      "baseConfirmationMessage": "Are you sure you want to submit the questionnaire?",
+      "unansweredNotice": "You have not answered {X} questions."
+    },
+    "amendResubmissionMinutes": 30,
+    "passingGrade": null,
+    "navigationMode": "per-block",
+    "conditionalBlocks": {
+      "introContent": {
+        "id": "content66b74b8eb918f",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66b74b8eb919b",
+              "type": "text",
+              "insertedAsWidget": true,
+              "properties": {
+                "html": "Partnership PAPER LEVEL-1",
+                "alignment": "center",
+                "customStyle": true,
+                "type": "h2",
+                "size": "normal"
+              }
+            },
+            {
+              "id": "text66b74b8eb91ac",
+              "type": "text",
+              "properties": {
+                "html": "Self-assess your knowledge. Express yourself and get feedback from our instructors.",
+                "customStyle": true,
+                "alignment": "center"
+              }
+            },
+            {
+              "id": "spacer66b74b8eb91b6",
+              "type": "spacer",
+              "properties": {
+                "height": 20,
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            },
+            {
+              "id": "button66b74b8eb91c3",
+              "type": "button",
+              "properties": {
+                "buttonLabel": "<span>Ready to start</span>",
+                "buttonSize": "normal",
+                "buttonType": "solidBrand",
+                "alignment": "center",
+                "linkData": {
+                  "linkType": "goToFirst"
+                },
+                "iconColorData": {
+                  "code": "",
+                  "class": ""
+                },
+                "iconDisplay": false,
+                "iconSize": 26,
+                "iconClassName": " fas fa-angle-right",
+                "iconPosition": "right"
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "variables": {
+            "conditionalBlocks_introContent_blockData_widgets_0": [],
+            "conditionalBlocks_introContent_blockData_widgets_1": []
+          }
+        }
+      },
+      "submissionStartingDate": {
+        "id": "content66b74b8eb91e3",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66b74b8eb91e8",
+              "type": "text",
+              "properties": {
+                "html": "Sorry but this assessment hasn't started yet."
+              }
+            },
+            {
+              "id": "date66b74b8eb91ef",
+              "type": "date",
+              "properties": {
+                "value": ""
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "displayConditions": ["startingDate"]
+        }
+      },
+      "submissionDueDate": {
+        "id": "content66b74b8eb91fb",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66b74b8eb9200",
+              "type": "text",
+              "properties": {
+                "html": "Sorry but this assessment date is due."
+              }
+            },
+            {
+              "id": "date66b74b8eb9206",
+              "type": "date",
+              "properties": {
+                "value": ""
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "displayConditions": ["dateIsDue"]
+        }
+      },
+      "outroContent": {
+        "id": "content66b74b8eb9212",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "userResults66b74b8eb9216",
+              "type": "userResults",
+              "properties": {
+                "layout": "template2",
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            },
+            {
+              "id": "feedback66b74b8eb9222",
+              "type": "feedback",
+              "properties": []
+            },
+            {
+              "id": "outroActions66b74b8eb9229",
+              "type": "outroActions",
+              "properties": {
+                "layout": "",
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true
+        }
+      }
+    },
+    "systemSections": null,
+    "sections": [
+      {
+        "id": "section66b74b8eb9239",
+        "title": "",
+        "type": "section",
+        "navigationMode": "per-block",
+        "blocks": [
+          {
+            "id": "mc66b74b8eb9240",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74b8eb9246",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">Rehman and Salim invested in a partnership business in the ratio of 1 : 2. If the total profit at the end of two consecutive financial year is Rs. 3,24,000, then Rehman’s share is :</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74b8eb9258",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74b8eb925f",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74b8eb9266",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74b8eb9286",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b8eb928d",
+                        "type": "text",
+                        "properties": {
+                          "html": "Rs. 1,08,000"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b8eb929c",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b8eb92a3",
+                        "type": "text",
+                        "properties": {
+                          "html": "Rs. 60,000"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b8eb92b2",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b8eb92b8",
+                        "type": "text",
+                        "properties": {
+                          "html": "Rs. 54,000"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b8eb92c7",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b8eb92ce",
+                        "type": "text",
+                        "properties": {
+                          "html": "Rs. 95,000"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74b8eb92f3",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74b8eb92f8",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">In a corporate business, profit is distributed between Aman and Namita in the ratio of 1 : 6. If they invested for 3 months and 10 months respectively, then what is the investment amount of Aman, where total investment is Rs. 21,00,000?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74b8eb930a",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74b8eb9311",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74b8eb9318",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74b8eb9337",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b8eb933e",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Rs. 750000</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b8eb934d",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b8eb9353",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Rs. 800000</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b8eb9362",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b8eb936f",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Rs. 850000</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b8eb937e",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b8eb9385",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Rs. 900000</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_1_blockData_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_1": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74b8eb93a4",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74b8eb93a9",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">A, B, and C form a partnership with shares in the ratio 1/2 : 1/3 : 1/4. After two months, B withdraws half of his capital, and after 12 months, if a profit of Rs. 1,00,000 is distributed among them, then by how much percentage B’s share is lesser than C’s share?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74b8eb93ba",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74b8eb93c1",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74b8eb93c8",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74b8eb93e7",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b8eb93ed",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>25.25%</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b8eb93fc",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b8eb9403",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>22.22%</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b8eb9411",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b8eb9418",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>20.34%</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b8eb9427",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b8eb942d",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>21.51%</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_2_blockData_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_2": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74b8eb944d",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74b8eb9451",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">In a startup, three sharks invested in the ratio of 3 : 4 : 7. If the profit for that year is Rs. 1,10,166 before the owner claims his share i.e. 30%, then what is second shark’s share?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74b8eb9477",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74b8eb947d",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74b8eb9485",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74b8eb94a3",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b8eb94aa",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Rs. 22516.2</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b8eb94b9",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b8eb94bf",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Rs. 22065.2</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b8eb94ce",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b8eb94d5",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Rs. 22104.3</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b8eb94e3",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b8eb94ea",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Rs. 22033.2</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_3_blockData_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74b8eb9509",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74b8eb950e",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">In establishing a gaming company, Jack invested thrice the amount of Oliver. Jack also invested for a double period of time than Oliver. If Oliver takes a profit share of Rs.4000, what was the total profit of this company, in that fiscal year?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74b8eb951f",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74b8eb9526",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74b8eb952d",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74b8eb954c",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b8eb9553",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Rs. 30000</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b8eb9561",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b8eb9568",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Rs. 28000</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b8eb9576",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b8eb957d",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Rs. 35000</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b8eb958b",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b8eb9592",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>Rs. 33000</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_4_blockData_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4": []
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "availabilityStatus": null,
+    "autoNavigationEnabled": false,
+    "displayBackButtonWhenNavigationPerBlock": true,
+    "saveAndResumeLaterEnabled": null,
+    "tagsAddedOnCompletion": [],
+    "tagsAddedOnPass": [],
+    "sendAnonymousSubmissionsToEmailLeads": false,
+    "afterSubmitActionEnabled": null,
+    "afterSubmitActionProperties": null,
+    "showWizardOnNextEdit": false,
+    "revisitAfterSubmissionAction": null,
+    "navigationTemplate": "HorizontalSpacedBetweenNavigationTemplate",
+    "learnerSearchBarEnabled": true,
+    "learnerUnansweredQuestionsEnabled": true,
+    "learnerFavouriteQuestionEnabled": true,
+    "learnerCompletionProgressEnabled": true,
+    "learnerShowIndexOfQuestionsEnabled": false,
+    "learnerTimeNotificationsEnabled": false,
+    "learnerAllowInterruptionsEnabled": true,
+    "learnerAllowInterruptionsTimeoutInMinutes": 30,
+    "learnerReclaimTryOnInterruptionTimeoutEnabled": false,
+    "learnerAskBeforeContinueToSaved": true,
+    "learnerAutoSaveEnabled": null,
+    "spellcheckDisabled": null,
+    "showPartialScoreOnSubmission": true,
+    "deliverableQuestionsSubsetType": "all",
+    "questionRandomizationType": "none",
+    "serveQuestionsBasedOnPreviousSubmission": null,
+    "scoringDisabled": false,
+    "isSelfAssessment": false,
+    "useDefaultCertificateTemplate": null,
+    "certificateTemplate": null,
+    "certificateSocialShare": null,
+    "migrationData": null,
+    "useAssessmentPassingGradeForOpenEndedCorrectness": true,
+    "openEndedCorrectnessPassingGrade": null,
+    "showScorePercentage": null,
+    "showScorePoints": null,
+    "showScoreCorrectAnswers": null,
+    "editorBehaviorSettings": null,
+    "manualReviewEnabled": null,
+    "resultsSummary": {
+      "enabled": true,
+      "showStatusIcon": true,
+      "showStatusText": true,
+      "showScorePercentage": true,
+      "showScorePoints": true,
+      "showScoreCorrectAnswers": false,
+      "showTimeTakenToComplete": true,
+      "showDateSubmitted": true,
+      "showAttemptCount": true
+    },
+    "meta": null,
+    "submissionsCount": 2450,
+    "fromMarketplace": null,
+    "aiFeedbackEnabled": null,
+    "numberOfFeedbackQuestions": null,
+    "created": 1723288463.144847,
+    "modified": 1723721068.770818,
+    "contentHash": "25b6aadbffb9b89e28348a738f5e7f62eeb141288bf640ec25256aebb339f813",
+    "id": "66b74b8f7f809db01009518f",
+    "objectType": "assessment",
+    "isEditBlockedDueToSync": false,
+    "variables": {
+      "submission": {
+        "self": {
+          "score": 0,
+          "points": 0,
+          "total_points": 5,
+          "correct_answers": 0,
+          "total_questions": 5,
+          "time_spent": "00:00:00",
+          "date_submitted": "11/08/26",
+          "attempt_count": 4,
+          "max_tries": null,
+          "pass_grade": 50,
+          "time_spent_seconds": 0,
+          "raw_start_date": 1786440498.353298
+        }
+      },
+      "school": {
+        "name": "Apna College",
+        "url": "www.apnacollege.in",
+        "description": "The most loved coding community of India ❤️"
+      },
+      "user": {
+        "username": "ram",
+        "email": "p4542639@gmail.com",
+        "cf_phonenumber": "7666690798"
+      }
+    }
+  },
+  "reclaimedTry": false,
+  "feedback": [
+    {
+      "title": "",
+      "id": "section66b74b8eb9239",
+      "blocks": [
+        {
+          "id": "mc66b74b8eb9240",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Rehman and Salim invested in a partnership business in the ratio of 1 : 2. If the total profit at the end of two consecutive financial year is Rs. 3,24,000, then Rehman’s share is :",
+            "widgets": [
+              {
+                "id": "text66b74b8eb9246",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">Rehman and Salim invested in a partnership business in the ratio of 1 : 2. If the total profit at the end of two consecutive financial year is Rs. 3,24,000, then Rehman’s share is :</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74b8eb9286",
+              "description": {
+                "text": "Rs. 1,08,000",
+                "widgets": [
+                  {
+                    "id": "text66b74b8eb928d",
+                    "type": "text",
+                    "properties": {
+                      "html": "Rs. 1,08,000"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b8eb929c",
+              "description": {
+                "text": "Rs. 60,000",
+                "widgets": [
+                  {
+                    "id": "text66b74b8eb92a3",
+                    "type": "text",
+                    "properties": {
+                      "html": "Rs. 60,000"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b8eb92b2",
+              "description": {
+                "text": "Rs. 54,000",
+                "widgets": [
+                  {
+                    "id": "text66b74b8eb92b8",
+                    "type": "text",
+                    "properties": {
+                      "html": "Rs. 54,000"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b8eb92c7",
+              "description": {
+                "text": "Rs. 95,000",
+                "widgets": [
+                  {
+                    "id": "text66b74b8eb92ce",
+                    "type": "text",
+                    "properties": {
+                      "html": "Rs. 95,000"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74b8eb9286",
+              "text": "Rs. 1,08,000",
+              "widgets": [
+                {
+                  "id": "text66b74b8eb928d",
+                  "type": "text",
+                  "properties": {
+                    "html": "Rs. 1,08,000"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>Rehman : Suleman <br>(1 : 2)*2 [for 2 years]\n<br>(2 : 4) …. (2+4) = 6<span lang=\"EN-US\" style=\"line-height: 107%; font-family: Cambria, serif; font-size: 12pt;\"><v:shapetype id=\"_x0000_t75\" coordsize=\"21600,21600\" o:spt=\"75\" o:preferrelative=\"t\" path=\"m@4@5l@4@11@9@11@9@5xe\" filled=\"f\" stroked=\"f\" style=\"\"><span lang=\"EN-US\" style=\"line-height: 107%; font-family: Cambria, serif; font-size: 12pt;\"><v:shapetype id=\"_x0000_t75\" coordsize=\"21600,21600\" o:spt=\"75\" o:preferrelative=\"t\" path=\"m@4@5l@4@11@9@11@9@5xe\" filled=\"f\" stroked=\"f\" style=\"\"> <m:omathpara style=\"\"><m:omath style=\"\"><span lang=\"EN-US\" style=\"line-height: 107%; font-family: \"Cambria Math\", serif; font-size: 12pt;\"><m:r style=\"\"><m:rpr style=\"\"><m:scr m:val=\"roman\"><m:sty m:val=\"p\"></m:sty></m:scr></m:rpr>⟶</m:r></span></m:omath></m:omathpara><!--[endif]----><span lang=\"EN-US\" style=\"font-size: 12pt; line-height: 107%; font-family: Cambria, serif;\"><v:shapetype id=\"_x0000_t75\" coordsize=\"21600,21600\" o:spt=\"75\" o:preferrelative=\"t\" path=\"m@4@5l@4@11@9@11@9@5xe\" filled=\"f\" stroked=\"f\">\n <v:stroke joinstyle=\"miter\">\n <v:formulas>\n  <v:f eqn=\"if lineDrawn pixelLineWidth 0\">\n  <v:f eqn=\"sum @0 1 0\">\n  <v:f eqn=\"sum 0 0 @1\">\n  <v:f eqn=\"prod @2 1 2\">\n  <v:f eqn=\"prod @3 21600 pixelWidth\">\n  <v:f eqn=\"prod @3 21600 pixelHeight\">\n  <v:f eqn=\"sum @0 0 1\">\n  <v:f eqn=\"prod @6 1 2\">\n  <v:f eqn=\"prod @7 21600 pixelWidth\">\n  <v:f eqn=\"sum @8 21600 0\">\n  <v:f eqn=\"prod @7 21600 pixelHeight\">\n  <v:f eqn=\"sum @10 21600 0\">\n </v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:formulas>\n <v:path o:extrusionok=\"f\" gradientshapeok=\"t\" o:connecttype=\"rect\">\n <o:lock v:ext=\"edit\" aspectratio=\"t\">\n</o:lock></v:path></v:stroke></v:shapetype><v:shape id=\"_x0000_i1025\" type=\"#_x0000_t75\" style=\"width:14.25pt;\n height:15pt\">\n <v:imagedata src=\"file:///C:/Users/TEST/AppData/Local/Temp/msohtmlclip1/01/clip_image001.png\" o:title=\"\" chromakey=\"white\">\n</v:imagedata></v:shape></span>\n\n\n<v:stroke joinstyle=\"miter\" style=\"font-size: 12pt;\"><v:formulas><v:f eqn=\"if lineDrawn pixelLineWidth 0\"><v:f eqn=\"sum @0 1 0\"><v:f eqn=\"sum 0 0 @1\"><v:f eqn=\"prod @2 1 2\"><v:f eqn=\"prod @3 21600 pixelWidth\"><v:f eqn=\"prod @3 21600 pixelHeight\"><v:f eqn=\"sum @0 0 1\"><v:f eqn=\"prod @6 1 2\"><v:f eqn=\"prod @7 21600 pixelWidth\"><v:f eqn=\"sum @8 21600 0\"><v:f eqn=\"prod @7 21600 pixelHeight\"><v:f eqn=\"sum @10 21600 0\"></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:formulas><v:path o:extrusionok=\"f\" gradientshapeok=\"t\" o:connecttype=\"rect\"><o:lock v:ext=\"edit\" aspectratio=\"t\"></o:lock></v:path></v:stroke></v:shapetype><v:shape id=\"_x0000_i1025\" type=\"#_x0000_t75\" style=\"font-size: 12pt; width: 9.75pt; height: 15pt;\"><v:imagedata src=\"file:///C:/Users/TEST/AppData/Local/Temp/msohtmlclip1/01/clip_image001.png\" o:title=\"\" chromakey=\"white\"></v:imagedata></v:shape></span><v:stroke joinstyle=\"miter\" style=\"font-size: 12pt;\"><v:formulas><v:f eqn=\"if lineDrawn pixelLineWidth 0\"><v:f eqn=\"sum @0 1 0\"><v:f eqn=\"sum 0 0 @1\"><v:f eqn=\"prod @2 1 2\"><v:f eqn=\"prod @3 21600 pixelWidth\"><v:f eqn=\"prod @3 21600 pixelHeight\"><v:f eqn=\"sum @0 0 1\"><v:f eqn=\"prod @6 1 2\"><v:f eqn=\"prod @7 21600 pixelWidth\"><v:f eqn=\"sum @8 21600 0\"><v:f eqn=\"prod @7 21600 pixelHeight\"><v:f eqn=\"sum @10 21600 0\"></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:formulas><v:path o:extrusionok=\"f\" gradientshapeok=\"t\" o:connecttype=\"rect\"><o:lock v:ext=\"edit\" aspectratio=\"t\"></o:lock></v:path></v:stroke></v:shapetype><v:shape id=\"_x0000_i1025\" type=\"#_x0000_t75\" style=\"font-size: 12pt; width: 9.75pt; height: 15pt;\"><v:imagedata src=\"file:///C:/Users/TEST/AppData/Local/Temp/msohtmlclip1/01/clip_image001.png\" o:title=\"\" chromakey=\"white\"></v:imagedata></v:shape></span>324000 <br>Therefore, Rehman’s share in 1 year is <br>= \n324000/6 × 2 = 108000.</p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74b8eb92f3",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "In a corporate business, profit is distributed between Aman and Namita in the ratio of 1 : 6. If they invested for 3 months and 10 months respectively, then what is the investment amount of Aman, where total investment is Rs. 21,00,000?",
+            "widgets": [
+              {
+                "id": "text66b74b8eb92f8",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">In a corporate business, profit is distributed between Aman and Namita in the ratio of 1 : 6. If they invested for 3 months and 10 months respectively, then what is the investment amount of Aman, where total investment is Rs. 21,00,000?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74b8eb9337",
+              "description": {
+                "text": "Rs. 750000",
+                "widgets": [
+                  {
+                    "id": "text66b74b8eb933e",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Rs. 750000</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b8eb934d",
+              "description": {
+                "text": "Rs. 800000",
+                "widgets": [
+                  {
+                    "id": "text66b74b8eb9353",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Rs. 800000</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b8eb9362",
+              "description": {
+                "text": "Rs. 850000",
+                "widgets": [
+                  {
+                    "id": "text66b74b8eb936f",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Rs. 850000</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b8eb937e",
+              "description": {
+                "text": "Rs. 900000",
+                "widgets": [
+                  {
+                    "id": "text66b74b8eb9385",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Rs. 900000</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74b8eb9337",
+              "text": "Rs. 750000",
+              "widgets": [
+                {
+                  "id": "text66b74b8eb933e",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>Rs. 750000</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>Aman : Namita\n<br>Profit share 1   :  6\n<br>Time            3 : 10\n<br>(÷)\n<br>Investment  5 : 9 <br>Therefore investment of aman <br>= 2100000/((9 + 5)) × 5 = 750000</p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74b8eb93a4",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "A, B, and C form a partnership with shares in the ratio 1/2 : 1/3 : 1/4. After two months, B withdraws half of his capital, and after 12 months, if a profit of Rs. 1,00,000 is distributed among them, then by how much percentage B’s share is lesser than C’s share?",
+            "widgets": [
+              {
+                "id": "text66b74b8eb93a9",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">A, B, and C form a partnership with shares in the ratio 1/2 : 1/3 : 1/4. After two months, B withdraws half of his capital, and after 12 months, if a profit of Rs. 1,00,000 is distributed among them, then by how much percentage B’s share is lesser than C’s share?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74b8eb93e7",
+              "description": {
+                "text": "25.25%",
+                "widgets": [
+                  {
+                    "id": "text66b74b8eb93ed",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>25.25%</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b8eb93fc",
+              "description": {
+                "text": "22.22%",
+                "widgets": [
+                  {
+                    "id": "text66b74b8eb9403",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>22.22%</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b8eb9411",
+              "description": {
+                "text": "20.34%",
+                "widgets": [
+                  {
+                    "id": "text66b74b8eb9418",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>20.34%</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b8eb9427",
+              "description": {
+                "text": "21.51%",
+                "widgets": [
+                  {
+                    "id": "text66b74b8eb942d",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>21.51%</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74b8eb93fc",
+              "text": "22.22%",
+              "widgets": [
+                {
+                  "id": "text66b74b8eb9403",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>22.22%</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>A : B : C\n<br>Share ( 1/2 : 1/3 : 1/4 ) * 12\n<br>6 : 4 : 3 <br>1st two months (6 : 4 :3 ) * 2\n<br>Next 10 months (6 : 2 : 3) * 10\n<br>1 year 72 : 28 : 36\n<br>18 : 7 : 9\n<br>Therefore, B’s share is lesser than C’s \nshare by -<br>(9-7)/9 ×100 % = 22.22 %</p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74b8eb944d",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "In a startup, three sharks invested in the ratio of 3 : 4 : 7. If the profit for that year is Rs. 1,10,166 before the owner claims his share i.e. 30%, then what is second shark’s share?",
+            "widgets": [
+              {
+                "id": "text66b74b8eb9451",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">In a startup, three sharks invested in the ratio of 3 : 4 : 7. If the profit for that year is Rs. 1,10,166 before the owner claims his share i.e. 30%, then what is second shark’s share?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74b8eb94a3",
+              "description": {
+                "text": "Rs. 22516.2",
+                "widgets": [
+                  {
+                    "id": "text66b74b8eb94aa",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Rs. 22516.2</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b8eb94b9",
+              "description": {
+                "text": "Rs. 22065.2",
+                "widgets": [
+                  {
+                    "id": "text66b74b8eb94bf",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Rs. 22065.2</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b8eb94ce",
+              "description": {
+                "text": "Rs. 22104.3",
+                "widgets": [
+                  {
+                    "id": "text66b74b8eb94d5",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Rs. 22104.3</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b8eb94e3",
+              "description": {
+                "text": "Rs. 22033.2",
+                "widgets": [
+                  {
+                    "id": "text66b74b8eb94ea",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Rs. 22033.2</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74b8eb94e3",
+              "text": "Rs. 22033.2",
+              "widgets": [
+                {
+                  "id": "text66b74b8eb94ea",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>Rs. 22033.2</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>after owner claims, remaining profit = \n110166 * 70 %\n<br>Therefore , share of second shark is <br>= \n(110166 ×70 %)/14 × 4 = 22033.2</p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74b8eb9509",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "In establishing a gaming company, Jack invested thrice the amount of Oliver. Jack also invested for a double period of time than Oliver. If Oliver takes a profit share of Rs.4000, what was the total profit of this company, in that fiscal year?",
+            "widgets": [
+              {
+                "id": "text66b74b8eb950e",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">In establishing a gaming company, Jack invested thrice the amount of Oliver. Jack also invested for a double period of time than Oliver. If Oliver takes a profit share of Rs.4000, what was the total profit of this company, in that fiscal year?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74b8eb954c",
+              "description": {
+                "text": "Rs. 30000",
+                "widgets": [
+                  {
+                    "id": "text66b74b8eb9553",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Rs. 30000</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b8eb9561",
+              "description": {
+                "text": "Rs. 28000",
+                "widgets": [
+                  {
+                    "id": "text66b74b8eb9568",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Rs. 28000</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b8eb9576",
+              "description": {
+                "text": "Rs. 35000",
+                "widgets": [
+                  {
+                    "id": "text66b74b8eb957d",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Rs. 35000</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b8eb958b",
+              "description": {
+                "text": "Rs. 33000",
+                "widgets": [
+                  {
+                    "id": "text66b74b8eb9592",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>Rs. 33000</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74b8eb9561",
+              "text": "Rs. 28000",
+              "widgets": [
+                {
+                  "id": "text66b74b8eb9568",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>Rs. 28000</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>Jack : Oliver\n<br>Investment 3 : 1\n<br><u>Time period 2 : 1                               </u><br>Profit share 6 : 1 ⟶ 4000\n<br>Total profit 7 ⟶ 4000 * 7 = 28000</p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        }
+      ]
+    }
+  ],
+  "submitted": true,
+  "updated": true,
+  "retryCount": 4,
+  "inlineFeedback": [],
+  "errors": [],
+  "success": true
+}

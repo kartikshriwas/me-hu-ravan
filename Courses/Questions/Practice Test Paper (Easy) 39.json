@@ -1,0 +1,3065 @@
+{
+  "submission": {
+    "anon_id": null,
+    "model": "assessment-submission",
+    "courseTitleId": "aptitude-teacher2",
+    "object_id": "66b74b897f809db010095177",
+    "assessmentId": "66b74b897f809db010095176",
+    "snapshotId": "66dad2ca5c280bfbc40945f6",
+    "questions": {
+      "section66b74b891e43b": [
+        "mc66b74b891e443",
+        "mc66b74b891e4fe",
+        "mc66b74b891e5c3",
+        "mc66b74b891e674",
+        "mc66b74b891e724",
+        "mc66b74b891e7e0",
+        "mc66b74b891e88d",
+        "mc66b74b891e938",
+        "mc66b74b891e9e3",
+        "mc66b74b891ea8d"
+      ]
+    },
+    "certificateAnswers": [],
+    "certificateId": null,
+    "questionData": {
+      "mc66b74b891e443": {
+        "deliveredOnTimestamp": 1786440488.587789,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74b891e4fe": {
+        "deliveredOnTimestamp": 1786440488.58782,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74b891e5c3": {
+        "deliveredOnTimestamp": 1786440488.587839,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74b891e674": {
+        "deliveredOnTimestamp": 1786440488.587854,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74b891e724": {
+        "deliveredOnTimestamp": 1786440488.587891,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74b891e7e0": {
+        "deliveredOnTimestamp": 1786440488.587906,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74b891e88d": {
+        "deliveredOnTimestamp": 1786440488.587921,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74b891e938": {
+        "deliveredOnTimestamp": 1786440488.587935,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74b891e9e3": {
+        "deliveredOnTimestamp": 1786440488.587949,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      },
+      "mc66b74b891ea8d": {
+        "deliveredOnTimestamp": 1786440488.587964,
+        "blockType": "mc",
+        "isGraded": true,
+        "gradedBy": "auto",
+        "blockMaxScore": 1
+      }
+    },
+    "answers": [
+      {
+        "blockId": "mc66b74b891e443",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74b891e4fe",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74b891e5c3",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74b891e674",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74b891e724",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74b891e7e0",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74b891e88d",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74b891e938",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74b891e9e3",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      },
+      {
+        "blockId": "mc66b74b891ea8d",
+        "answer": {
+          "id": ""
+        },
+        "correct": false,
+        "graded": false,
+        "blockMaxScore": 1,
+        "grade": 0
+      }
+    ],
+    "submittedTimestamp": 1786440488.833142,
+    "status": "submitted",
+    "grading_status": "grading_status_graded",
+    "access": "public",
+    "actual_score": null,
+    "score": {
+      "maxScore": 10,
+      "value": 0,
+      "pass": false,
+      "passGrade": 50,
+      "points": 0
+    },
+    "source": {
+      "type": "unit"
+    },
+    "isDefining": true,
+    "isAdminAutoGradedSubmission": null,
+    "listOfNonConsentedBlocks": [],
+    "created": 1786440488.594995,
+    "modified": 1786440488.977905,
+    "id": "6a7aeb280fac798f8e0d2b5e",
+    "passed": false
+  },
+  "assessment": {
+    "title": "Practice Test Paper (Easy)",
+    "access": "public",
+    "type": "assessment",
+    "model": "assessmentSnapshot",
+    "description": "Foundational practice test paper containing 10 assessment questions covering Simple & Compound Interest.",
+    "isTimed": false,
+    "timerFor": "assessmentTimed",
+    "onTimerExpiration": "autoSubmit",
+    "assessmentTimeLimitInSeconds": 600,
+    "questionTimeLimitInSeconds": 60,
+    "standaloneShareEnabled": null,
+    "customUrl": null,
+    "usesCustomUrl": null,
+    "allowAnonymous": true,
+    "randomizeQuestionOptions": false,
+    "disallowPartialSubmissions": false,
+    "submissionDueDateEnabled": false,
+    "submissionDueDate": 1626257823,
+    "makeFeedbackAvailableAfterDateEnabled": false,
+    "makeFeedbackAvailableAfterDate": 0,
+    "customStylesEnabled": true,
+    "customStyles": {
+      "assessmentPage": {
+        "background": {
+          "type": "color",
+          "colorData": {
+            "code": "",
+            "class": "lw-body-bg"
+          }
+        },
+        "dividers": {
+          "top": {
+            "orientation": "top",
+            "divider": "none"
+          },
+          "bottom": {
+            "orientation": "bottom",
+            "divider": "none"
+          }
+        }
+      },
+      "option": {
+        "radioEffect": "scribble",
+        "checkboxEffect": "scribble",
+        "size": "small"
+      },
+      "assessment": {
+        "transition": "none",
+        "background": {
+          "type": "color",
+          "colorData": {
+            "code": "",
+            "class": ""
+          }
+        },
+        "width": "normal",
+        "timerTemplate": "rectangle"
+      },
+      "linearRating": {
+        "labels": {
+          "size": "small"
+        }
+      },
+      "question": {
+        "description": {
+          "background": {
+            "type": "color",
+            "colorData": {
+              "code": "",
+              "class": ""
+            }
+          },
+          "type": "p",
+          "size": "small"
+        },
+        "answers": {
+          "background": {
+            "type": "color",
+            "colorData": {
+              "code": "",
+              "class": ""
+            }
+          }
+        },
+        "requiredAsterisk": {
+          "colorData": {
+            "code": "#ff0000",
+            "class": ""
+          }
+        },
+        "errorMessages": {
+          "size": "verySmall",
+          "colorData": {
+            "code": "#ff0000",
+            "class": ""
+          }
+        }
+      },
+      "input": {
+        "size": "small",
+        "type": "solidDark"
+      },
+      "textarea": {
+        "size": "small",
+        "type": "solidDark"
+      },
+      "dropdown": {
+        "size": "small",
+        "type": "solidDark"
+      }
+    },
+    "submissionMode": "all",
+    "startingDate": 1626765704,
+    "startingDateEnabled": false,
+    "showOnlyFailedQuestionsOnRetry": false,
+    "retryEnabled": true,
+    "retryOnFailOnly": false,
+    "gradingMethod": null,
+    "maxTries": null,
+    "onlyWrongOnRetake": null,
+    "isAmendable": false,
+    "feedbackShowOnScreen": true,
+    "feedbackDownloadPDF": false,
+    "feedbackShowInline": null,
+    "feedbackQuestionList": "all-questions",
+    "feedbackShowQuestionScore": true,
+    "feedbackShowFeedback": true,
+    "feedbackShowNumbering": false,
+    "feedbackShowSectionTitles": false,
+    "feedbackShowUserAnswers": true,
+    "feedbackShowCorrectAnswers": true,
+    "feedbackShowAnswerCorrectness": true,
+    "displayInlineFeedbackEnabled": null,
+    "displayBackButtonWhenSubmissionPerBlock": null,
+    "feedbackShowSectionResultSummary": false,
+    "askConfirmationBeforeSubmit": true,
+    "hasCustomConfirmationBeforeSubmitText": false,
+    "customConfirmationBeforeSubmitText": "Are you sure you want to submit the questionnaire?",
+    "customConfirmationBeforeSubmitTexts": {
+      "title": "Submit Assessment?",
+      "baseConfirmationMessage": "Are you sure you want to submit the questionnaire?",
+      "unansweredNotice": "You have not answered {X} questions."
+    },
+    "amendResubmissionMinutes": 30,
+    "passingGrade": null,
+    "navigationMode": "per-block",
+    "conditionalBlocks": {
+      "introContent": {
+        "id": "content66b74b891e367",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66b74b891e37b",
+              "type": "text",
+              "insertedAsWidget": true,
+              "properties": {
+                "html": "Compound Interest PAPER LEVEL-1",
+                "alignment": "center",
+                "customStyle": true,
+                "type": "h2",
+                "size": "normal"
+              }
+            },
+            {
+              "id": "text66b74b891e38d",
+              "type": "text",
+              "properties": {
+                "html": "Self-assess your knowledge. Express yourself and get feedback from our instructors.",
+                "customStyle": true,
+                "alignment": "center"
+              }
+            },
+            {
+              "id": "spacer66b74b891e399",
+              "type": "spacer",
+              "properties": {
+                "height": 20,
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            },
+            {
+              "id": "button66b74b891e3a6",
+              "type": "button",
+              "properties": {
+                "buttonLabel": "<span>Ready to start</span>",
+                "buttonSize": "normal",
+                "buttonType": "solidBrand",
+                "alignment": "center",
+                "linkData": {
+                  "linkType": "goToFirst"
+                },
+                "iconColorData": {
+                  "code": "",
+                  "class": ""
+                },
+                "iconDisplay": false,
+                "iconSize": 26,
+                "iconClassName": " fas fa-angle-right",
+                "iconPosition": "right"
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "variables": {
+            "conditionalBlocks_introContent_blockData_widgets_0": [],
+            "conditionalBlocks_introContent_blockData_widgets_1": []
+          }
+        }
+      },
+      "submissionStartingDate": {
+        "id": "content66b74b891e3cb",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66b74b891e3d0",
+              "type": "text",
+              "properties": {
+                "html": "Sorry but this assessment hasn't started yet."
+              }
+            },
+            {
+              "id": "date66b74b891e3d7",
+              "type": "date",
+              "properties": {
+                "value": ""
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "displayConditions": ["startingDate"]
+        }
+      },
+      "submissionDueDate": {
+        "id": "content66b74b891e3f7",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "text66b74b891e3fc",
+              "type": "text",
+              "properties": {
+                "html": "Sorry but this assessment date is due."
+              }
+            },
+            {
+              "id": "date66b74b891e403",
+              "type": "date",
+              "properties": {
+                "value": ""
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true,
+          "displayConditions": ["dateIsDue"]
+        }
+      },
+      "outroContent": {
+        "id": "content66b74b891e410",
+        "type": "content",
+        "blockData": {
+          "widgets": [
+            {
+              "id": "userResults66b74b891e415",
+              "type": "userResults",
+              "properties": {
+                "layout": "template2",
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            },
+            {
+              "id": "feedback66b74b891e422",
+              "type": "feedback",
+              "properties": []
+            },
+            {
+              "id": "outroActions66b74b891e429",
+              "type": "outroActions",
+              "properties": {
+                "layout": "",
+                "media": {
+                  "type": "color",
+                  "colorData": [],
+                  "imageData": []
+                }
+              }
+            }
+          ],
+          "hiddenOnPlayer": false,
+          "forceNavigationHidden": true
+        }
+      }
+    },
+    "systemSections": null,
+    "sections": [
+      {
+        "id": "section66b74b891e43b",
+        "title": "",
+        "type": "section",
+        "navigationMode": "per-block",
+        "blocks": [
+          {
+            "id": "mc66b74b891e443",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74b891e449",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">If a principal amount of ₹10,000 is invested at a compound interest rate of 6% per annum for 2 years, what is the total amount received at the end of 2 years?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74b891e45c",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74b891e464",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74b891e46c",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74b891e48f",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b891e497",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>₹10,500</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b891e4a8",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b891e4af",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>₹10,600</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b891e4c0",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b891e4c7",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>₹10,800</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b891e4d7",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b891e4de",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>₹11,236</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_0_blockData_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_0_blockData_options_3_description_widgets_0": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74b891e4fe",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74b891e504",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">Riya invested ₹15,000 in a fixed deposit account that offers a compound interest rate of 5% per annum. If the interest is compounded annually, what will be the total amount after 3 years?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74b891e517",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74b891e51f",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74b891e526",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74b891e552",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b891e559",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>₹17,364.38</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b891e569",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b891e571",
+                        "type": "text",
+                        "properties": {
+                          "html": "₹16,500.00&nbsp;"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b891e581",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b891e588",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>₹16,722.75</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b891e598",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b891e59f",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>₹16,950.00</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_1_blockData_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_1_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_1": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74b891e5c3",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74b891e5c8",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">A sum of money is invested in a bank at a compound interest rate of 8% per annum. If the amount doubles itself in 10 years, what is the rate of simple interest for the same amount over 5 years?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74b891e5db",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74b891e5e3",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74b891e5eb",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74b891e60d",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b891e614",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>4%</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b891e623",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b891e62a",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>5%</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b891e639",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b891e640",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>6%</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b891e64e",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b891e655",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>7%</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_2_blockData_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_2_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_2": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74b891e674",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74b891e679",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">If the compound interest on a certain sum of money for 2 years at 12% per annum is ₹6,480, what will be the compound interest on the same sum of money for 3 years at 8% per annum?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74b891e68a",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74b891e691",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74b891e698",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74b891e6b7",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b891e6bf",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>₹4,224</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b891e6ce",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b891e6d9",
+                        "type": "text",
+                        "properties": {
+                          "html": "₹4,320&nbsp;&nbsp;"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b891e6e9",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b891e6ef",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>₹6,592</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b891e6fe",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b891e705",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>₹4,489</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_3_blockData_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_3_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_3": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74b891e724",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74b891e729",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">If the total amount after 2 years on a certain sum of money invested at a compound interest rate of 12% per annum is ₹15,680, what was the principal amount invested?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74b891e73b",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74b891e742",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74b891e749",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74b891e769",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b891e770",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>₹12,500</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b891e77f",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b891e786",
+                        "type": "text",
+                        "properties": {
+                          "html": "₹13,000&nbsp;"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b891e795",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b891e79b",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>₹14,000</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b891e7ab",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b891e7b1",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>₹15,000</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_4_blockData_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_4_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_4": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74b891e7e0",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74b891e7e5",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">If the principal amount is ₹20,000 and the total amount received after 2 years at a compound interest rate of 6% per annum is ₹22,464, what is the rate of interest?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74b891e7f7",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74b891e7fe",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74b891e805",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74b891e825",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b891e82c",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>5%</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b891e83b",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b891e842",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>6%</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b891e851",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b891e858",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>7%</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b891e867",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b891e86e",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>8%</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_5_blockData_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_5_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_5": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74b891e88d",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74b891e892",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">If the principal amount is ₹25,000 and the total amount received after 3 years at a compound interest rate of 8% per annum, what is the compound interest earned?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74b891e8a4",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74b891e8ab",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74b891e8b2",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74b891e8d1",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b891e8d8",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>₹5,680</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b891e8e7",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b891e8ee",
+                        "type": "text",
+                        "properties": {
+                          "html": "₹6,680"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b891e8fd",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b891e903",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>₹7,680</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b891e912",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b891e919",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>₹8,680</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_6_blockData_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_6_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_6": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74b891e938",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74b891e93d",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">A sum of ₹30,000 is invested at a compound interest rate of 7% per annum. If the total amount received after 2 years is ₹32,489.50, what is the compound interest earned?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74b891e94f",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74b891e956",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74b891e95d",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74b891e97c",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b891e983",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>₹2,000.50</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b891e992",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b891e999",
+                        "type": "text",
+                        "properties": {
+                          "html": "₹2,489.50&nbsp;"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b891e9a8",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b891e9ae",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>₹2,789.50</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b891e9bd",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b891e9c4",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>₹3,000.50</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_7_blockData_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_7_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_7": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74b891e9e3",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74b891e9e8",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">If the amount after 3 years on a certain principal sum at a compound interest rate of 6% per annum is ₹15,408, what was the principal amount?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74b891e9fa",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74b891ea01",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74b891ea08",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74b891ea27",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b891ea2e",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>₹12,920</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b891ea3d",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b891ea44",
+                        "type": "text",
+                        "properties": {
+                          "html": "₹12,500&nbsp;&nbsp;"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b891ea53",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b891ea59",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>₹13,000</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b891ea68",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b891ea6f",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>₹13,500</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_8_blockData_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_8_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_8": []
+              }
+            }
+          },
+          {
+            "id": "mc66b74b891ea8d",
+            "type": "mc",
+            "blockData": {
+              "description": {
+                "widgets": [
+                  {
+                    "id": "text66b74b891ea92",
+                    "type": "text",
+                    "properties": {
+                      "html": "<p style=\"text-align: justify;\">If the principal amount is ₹50,000 and the total amount received after 4 years at a compound interest rate of 10% per annum is ₹73,856, what is the compound interest earned?</p>"
+                    }
+                  }
+                ]
+              },
+              "optionsPerRow": "",
+              "hiddenOnPlayer": false,
+              "isRequired": false,
+              "isGraded": true,
+              "hasShuffleChoices": false,
+              "hasOptionOther": false,
+              "optionOther": {
+                "id": "mc-option-other66b74b891eaa4",
+                "correct": false,
+                "type": "mc-option-other",
+                "description": {
+                  "widgets": [
+                    {
+                      "id": "text66b74b891eaaa",
+                      "type": "text",
+                      "properties": {
+                        "html": "<span>Other</span>"
+                      }
+                    },
+                    {
+                      "id": "input66b74b891eab2",
+                      "type": "input",
+                      "properties": {
+                        "value": "",
+                        "placeholder": ""
+                      }
+                    }
+                  ]
+                },
+                "feedbackData": {
+                  "multimedia": [],
+                  "feedbackText": ""
+                },
+                "tagsAddedWhenSelected": []
+              },
+              "optionNumbering": "none",
+              "gradedBy": "auto",
+              "scoringMode": "simple",
+              "blockMaxScore": 1,
+              "scoringData": {
+                "correct": 1,
+                "wrong": 0
+              },
+              "feedbackType": "default",
+              "options": [
+                {
+                  "id": "mc-option66b74b891ead5",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b891eadc",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>₹21,856</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b891eaec",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b891eaf2",
+                        "type": "text",
+                        "properties": {
+                          "html": "₹23,856&nbsp;&nbsp;"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b891eb01",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b891eb08",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>₹25,856</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                },
+                {
+                  "id": "mc-option66b74b891eb17",
+                  "type": "mc-option",
+                  "description": {
+                    "widgets": [
+                      {
+                        "id": "text66b74b891eb1e",
+                        "type": "text",
+                        "properties": {
+                          "html": "<span>₹27,856</span>"
+                        }
+                      }
+                    ]
+                  },
+                  "tagsAddedWhenSelected": []
+                }
+              ],
+              "hasCallout": false,
+              "calloutText": "You can put your call text here",
+              "variables": {
+                "sections_0_blocks_0": [],
+                "sections_0_blocks_9_blockData_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_0_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_1_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_2_description_widgets_0": [],
+                "sections_0_blocks_9_blockData_options_3_description_widgets_0": [],
+                "sections_0_blocks_9": []
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "availabilityStatus": null,
+    "autoNavigationEnabled": false,
+    "displayBackButtonWhenNavigationPerBlock": true,
+    "saveAndResumeLaterEnabled": null,
+    "tagsAddedOnCompletion": [],
+    "tagsAddedOnPass": [],
+    "sendAnonymousSubmissionsToEmailLeads": false,
+    "afterSubmitActionEnabled": null,
+    "afterSubmitActionProperties": null,
+    "showWizardOnNextEdit": false,
+    "revisitAfterSubmissionAction": null,
+    "navigationTemplate": "HorizontalSpacedBetweenNavigationTemplate",
+    "learnerSearchBarEnabled": true,
+    "learnerUnansweredQuestionsEnabled": true,
+    "learnerFavouriteQuestionEnabled": true,
+    "learnerCompletionProgressEnabled": true,
+    "learnerShowIndexOfQuestionsEnabled": false,
+    "learnerTimeNotificationsEnabled": false,
+    "learnerAllowInterruptionsEnabled": true,
+    "learnerAllowInterruptionsTimeoutInMinutes": 30,
+    "learnerReclaimTryOnInterruptionTimeoutEnabled": false,
+    "learnerAskBeforeContinueToSaved": true,
+    "learnerAutoSaveEnabled": null,
+    "spellcheckDisabled": null,
+    "showPartialScoreOnSubmission": true,
+    "deliverableQuestionsSubsetType": "all",
+    "questionRandomizationType": "none",
+    "serveQuestionsBasedOnPreviousSubmission": null,
+    "scoringDisabled": false,
+    "isSelfAssessment": false,
+    "useDefaultCertificateTemplate": null,
+    "certificateTemplate": null,
+    "certificateSocialShare": null,
+    "migrationData": null,
+    "useAssessmentPassingGradeForOpenEndedCorrectness": true,
+    "openEndedCorrectnessPassingGrade": null,
+    "showScorePercentage": null,
+    "showScorePoints": null,
+    "showScoreCorrectAnswers": null,
+    "editorBehaviorSettings": null,
+    "manualReviewEnabled": null,
+    "resultsSummary": {
+      "enabled": true,
+      "showStatusIcon": true,
+      "showStatusText": true,
+      "showScorePercentage": true,
+      "showScorePoints": true,
+      "showScoreCorrectAnswers": false,
+      "showTimeTakenToComplete": true,
+      "showDateSubmitted": true,
+      "showAttemptCount": true
+    },
+    "meta": null,
+    "submissionsCount": 6576,
+    "fromMarketplace": null,
+    "aiFeedbackEnabled": null,
+    "numberOfFeedbackQuestions": null,
+    "created": 1723288457.555602,
+    "modified": 1725616842.124592,
+    "contentHash": "98e5960e4bdf38c1560533ab55752df44e8360c09fffba65d4d211d78bec1931",
+    "id": "66b74b897f809db010095176",
+    "objectType": "assessment",
+    "isEditBlockedDueToSync": false,
+    "variables": {
+      "submission": {
+        "self": {
+          "score": 0,
+          "points": 0,
+          "total_points": 10,
+          "correct_answers": 0,
+          "total_questions": 10,
+          "time_spent": "00:00:00",
+          "date_submitted": "11/08/26",
+          "attempt_count": 4,
+          "max_tries": null,
+          "pass_grade": 50,
+          "time_spent_seconds": 0,
+          "raw_start_date": 1786440488.594995
+        }
+      },
+      "school": {
+        "name": "Apna College",
+        "url": "www.apnacollege.in",
+        "description": "The most loved coding community of India ❤️"
+      },
+      "user": {
+        "username": "ram",
+        "email": "p4542639@gmail.com",
+        "cf_phonenumber": "7666690798"
+      }
+    }
+  },
+  "reclaimedTry": false,
+  "feedback": [
+    {
+      "title": "",
+      "id": "section66b74b891e43b",
+      "blocks": [
+        {
+          "id": "mc66b74b891e443",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "If a principal amount of ₹10,000 is invested at a compound interest rate of 6% per annum for 2 years, what is the total amount received at the end of 2 years?",
+            "widgets": [
+              {
+                "id": "text66b74b891e449",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">If a principal amount of ₹10,000 is invested at a compound interest rate of 6% per annum for 2 years, what is the total amount received at the end of 2 years?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74b891e48f",
+              "description": {
+                "text": "₹10,500",
+                "widgets": [
+                  {
+                    "id": "text66b74b891e497",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>₹10,500</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b891e4a8",
+              "description": {
+                "text": "₹10,600",
+                "widgets": [
+                  {
+                    "id": "text66b74b891e4af",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>₹10,600</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b891e4c0",
+              "description": {
+                "text": "₹10,800",
+                "widgets": [
+                  {
+                    "id": "text66b74b891e4c7",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>₹10,800</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b891e4d7",
+              "description": {
+                "text": "₹11,236",
+                "widgets": [
+                  {
+                    "id": "text66b74b891e4de",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>₹11,236</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74b891e4d7",
+              "text": "₹11,236",
+              "widgets": [
+                {
+                  "id": "text66b74b891e4de",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>₹11,236</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br>Given: <br>Principal Amount = ₹10,000 <br>Rate = 6% per annum <br>Time = 2 years <br>Compound Interest is calculated as CI = P (1 + r/100)^n - P <br>Using the compound interest formula: <br>Total Amount = Principal + Compound Interest <br>Total Amount = ₹10,000 + ₹10,000[(1 + 6/100)^2 - 1] <br>Total Amount = ₹10,000 + ₹10,000[(1.06)^2 - 1] <br>Total Amount = ₹10,000 + ₹10,000(1.1236 - 1) <br>Total Amount = ₹10,000 + ₹1,236 <br>Total Amount = ₹11,236 <br>Therefore, the total amount received at the end of 2 years is ₹11,236. <br><br><br>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74b891e4fe",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "Riya invested ₹15,000 in a fixed deposit account that offers a compound interest rate of 5% per annum. If the interest is compounded annually, what will be the total amount after 3 years?",
+            "widgets": [
+              {
+                "id": "text66b74b891e504",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">Riya invested ₹15,000 in a fixed deposit account that offers a compound interest rate of 5% per annum. If the interest is compounded annually, what will be the total amount after 3 years?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74b891e552",
+              "description": {
+                "text": "₹17,364.38",
+                "widgets": [
+                  {
+                    "id": "text66b74b891e559",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>₹17,364.38</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b891e569",
+              "description": {
+                "text": "₹16,500.00",
+                "widgets": [
+                  {
+                    "id": "text66b74b891e571",
+                    "type": "text",
+                    "properties": {
+                      "html": "₹16,500.00&nbsp;"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b891e581",
+              "description": {
+                "text": "₹16,722.75",
+                "widgets": [
+                  {
+                    "id": "text66b74b891e588",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>₹16,722.75</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b891e598",
+              "description": {
+                "text": "₹16,950.00",
+                "widgets": [
+                  {
+                    "id": "text66b74b891e59f",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>₹16,950.00</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74b891e552",
+              "text": "₹17,364.38",
+              "widgets": [
+                {
+                  "id": "text66b74b891e559",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>₹17,364.38</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br>Given: <br>Principal Amount = ₹15,000 <br>Rate = 5% per annum <br>Time = 3 years <br>Compound Interest is calculated as CI = P(1 + r/100)n- P <br>Using the compound interest formula: <br>Total Amount = Principal \n* (1 + Rate/100)time\n<br>Total Amount = ₹15,000 * (1 + 5/100)3 <br>Total Amount = ₹15,000 * (1.05)3 <br>Total Amount = ₹15,000 * 1.157625 <br>Total Amount = ₹17,364.38 <br>Therefore, the total amount after 3 years will be ₹17,364.38. <br>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74b891e5c3",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "A sum of money is invested in a bank at a compound interest rate of 8% per annum. If the amount doubles itself in 10 years, what is the rate of simple interest for the same amount over 5 years?",
+            "widgets": [
+              {
+                "id": "text66b74b891e5c8",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">A sum of money is invested in a bank at a compound interest rate of 8% per annum. If the amount doubles itself in 10 years, what is the rate of simple interest for the same amount over 5 years?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74b891e60d",
+              "description": {
+                "text": "4%",
+                "widgets": [
+                  {
+                    "id": "text66b74b891e614",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>4%</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b891e623",
+              "description": {
+                "text": "5%",
+                "widgets": [
+                  {
+                    "id": "text66b74b891e62a",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>5%</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b891e639",
+              "description": {
+                "text": "6%",
+                "widgets": [
+                  {
+                    "id": "text66b74b891e640",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>6%</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b891e64e",
+              "description": {
+                "text": "7%",
+                "widgets": [
+                  {
+                    "id": "text66b74b891e655",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>7%</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74b891e60d",
+              "text": "4%",
+              "widgets": [
+                {
+                  "id": "text66b74b891e614",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>4%</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>Given that the amount doubles in 10 years at a compound interest rate of 8% per annum, we can \nset up the equation as follows:\n<br>2P = P (1 + 0.08 / 1)^(1*10)\n<br>Solving this gives us P, which is the initial principal amount.\n<br>Now, we need to find the simple interest rate that would yield the same amount (P) over 5 years. <br>The formula for simple interest is:\n<br>A = P + Prt\n<br>where:\n<br>• A is the total amount after interest.\n<br>• P is the principal amount.\n<br>• r is the rate of interest per period.\n<br>• t is the time the money is invested or borrowed for in years.\n<br>We know that the total amount after 5 years should be the same as the initial principal amount (P), \nso we can set up the equation as follows:\n<br>P = P + P*r*5\n<br>Solving this equation will give us the rate of simple interest that would yield the same amount over \n5 years.\n<br>Let’s solve this:\n<br>From the compound interest equation, we find that P cancels out, and we are left with:\n<br>2 = (1 + 0.08 / 1)^(10)\n<br>This confirms that the amount does indeed double in 10 years with an 8% compound interest rate.\nNow, substituting into the simple interest equation, we get:\n<br>1 = r*5\n<br>Solving for r, we get:\n<br>r = 1 / 5 = 0.20 = 20%\n<br>However, this is the rate for 5 years. The annual simple interest rate is therefore 20%/5 = 4%.\n<br>So, the answer is (A) 4%. This is the rate of simple interest for the same amount over 5 years.<br></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74b891e674",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "If the compound interest on a certain sum of money for 2 years at 12% per annum is ₹6,480, what will be the compound interest on the same sum of money for 3 years at 8% per annum?",
+            "widgets": [
+              {
+                "id": "text66b74b891e679",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">If the compound interest on a certain sum of money for 2 years at 12% per annum is ₹6,480, what will be the compound interest on the same sum of money for 3 years at 8% per annum?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74b891e6b7",
+              "description": {
+                "text": "₹4,224",
+                "widgets": [
+                  {
+                    "id": "text66b74b891e6bf",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>₹4,224</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b891e6ce",
+              "description": {
+                "text": "₹4,320",
+                "widgets": [
+                  {
+                    "id": "text66b74b891e6d9",
+                    "type": "text",
+                    "properties": {
+                      "html": "₹4,320&nbsp;&nbsp;"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b891e6e9",
+              "description": {
+                "text": "₹6,592",
+                "widgets": [
+                  {
+                    "id": "text66b74b891e6ef",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>₹6,592</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b891e6fe",
+              "description": {
+                "text": "₹4,489",
+                "widgets": [
+                  {
+                    "id": "text66b74b891e705",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>₹4,489</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74b891e6e9",
+              "text": "₹6,592",
+              "widgets": [
+                {
+                  "id": "text66b74b891e6ef",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>₹6,592</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br><img src=\"https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/1a6e3f74d89eaabea3215c4eb6320a85.png\"><br>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74b891e724",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "If the total amount after 2 years on a certain sum of money invested at a compound interest rate of 12% per annum is ₹15,680, what was the principal amount invested?",
+            "widgets": [
+              {
+                "id": "text66b74b891e729",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">If the total amount after 2 years on a certain sum of money invested at a compound interest rate of 12% per annum is ₹15,680, what was the principal amount invested?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74b891e769",
+              "description": {
+                "text": "₹12,500",
+                "widgets": [
+                  {
+                    "id": "text66b74b891e770",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>₹12,500</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b891e77f",
+              "description": {
+                "text": "₹13,000",
+                "widgets": [
+                  {
+                    "id": "text66b74b891e786",
+                    "type": "text",
+                    "properties": {
+                      "html": "₹13,000&nbsp;"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b891e795",
+              "description": {
+                "text": "₹14,000",
+                "widgets": [
+                  {
+                    "id": "text66b74b891e79b",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>₹14,000</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b891e7ab",
+              "description": {
+                "text": "₹15,000",
+                "widgets": [
+                  {
+                    "id": "text66b74b891e7b1",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>₹15,000</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74b891e769",
+              "text": "₹12,500",
+              "widgets": [
+                {
+                  "id": "text66b74b891e770",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>₹12,500</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br>Given: <br>Rate = 12% per annum <br>Time = 2 years <br>Total Amount = ₹15,680 <br>Using the compound interest formula: <br>Total Amount = Principal * (1 + Rate/100)<sup>time</sup>\n₹15,680 = Principal * (1 + 12/100)<sup>2</sup> <br>₹15,680 = Principal * (1.12)<sup>2</sup> <br>₹15,680 = Principal * 1.2544 <br>Principal = ₹15,680 / 1.2544 <br>Principal = ₹12,500 <br>Therefore, the principal amount invested was ₹12,500. <br><br>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74b891e7e0",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "If the principal amount is ₹20,000 and the total amount received after 2 years at a compound interest rate of 6% per annum is ₹22,464, what is the rate of interest?",
+            "widgets": [
+              {
+                "id": "text66b74b891e7e5",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">If the principal amount is ₹20,000 and the total amount received after 2 years at a compound interest rate of 6% per annum is ₹22,464, what is the rate of interest?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74b891e825",
+              "description": {
+                "text": "5%",
+                "widgets": [
+                  {
+                    "id": "text66b74b891e82c",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>5%</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b891e83b",
+              "description": {
+                "text": "6%",
+                "widgets": [
+                  {
+                    "id": "text66b74b891e842",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>6%</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b891e851",
+              "description": {
+                "text": "7%",
+                "widgets": [
+                  {
+                    "id": "text66b74b891e858",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>7%</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b891e867",
+              "description": {
+                "text": "8%",
+                "widgets": [
+                  {
+                    "id": "text66b74b891e86e",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>8%</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74b891e83b",
+              "text": "6%",
+              "widgets": [
+                {
+                  "id": "text66b74b891e842",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>6%</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br>Given:\n<br>Principal Amount = ₹20,000 <br>Total Amount = ₹22,464 <br>Time = 2 years <br>Using the compound interest formula: <br>Total Amount = Principal * (1 + Rate/100)^Time \n₹22,464 = ₹20,000 * (1 + Rate/100)^2 <br>₹22,464 = ₹20,000 * (1 + Rate/100)^2 <br>1.1232 = (1 + Rate/100)^2 <br>(1 + Rate/100) = √1.1232 <br>(1 + Rate/100) = 1.06 <br>Rate = 6% <br>Therefore, the rate of interest is 6%. <br>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74b891e88d",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "If the principal amount is ₹25,000 and the total amount received after 3 years at a compound interest rate of 8% per annum, what is the compound interest earned?",
+            "widgets": [
+              {
+                "id": "text66b74b891e892",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">If the principal amount is ₹25,000 and the total amount received after 3 years at a compound interest rate of 8% per annum, what is the compound interest earned?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74b891e8d1",
+              "description": {
+                "text": "₹5,680",
+                "widgets": [
+                  {
+                    "id": "text66b74b891e8d8",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>₹5,680</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b891e8e7",
+              "description": {
+                "text": "₹6,680",
+                "widgets": [
+                  {
+                    "id": "text66b74b891e8ee",
+                    "type": "text",
+                    "properties": {
+                      "html": "₹6,680"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b891e8fd",
+              "description": {
+                "text": "₹7,680",
+                "widgets": [
+                  {
+                    "id": "text66b74b891e903",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>₹7,680</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b891e912",
+              "description": {
+                "text": "₹8,680",
+                "widgets": [
+                  {
+                    "id": "text66b74b891e919",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>₹8,680</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74b891e8e7",
+              "text": "₹6,680",
+              "widgets": [
+                {
+                  "id": "text66b74b891e8ee",
+                  "type": "text",
+                  "properties": {
+                    "html": "₹6,680"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br>Using the compound interest formula: <br>Total Amount = Principal * (1 + Rate/100)<sup>time\n<br></sup>Total Amount = 25000 * (1 + 8/100)<sup>3\n</sup><br>Total Amount = 31680\n<br>Compound Interest = Total Amount - Principal Amount <br>Compound Interest = ₹31,680 - ₹25,000 <br>Compound Interest = ₹6,680 <br>Therefore, the compound interest earned is ₹6,680.<br>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74b891e938",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "A sum of ₹30,000 is invested at a compound interest rate of 7% per annum. If the total amount received after 2 years is ₹32,489.50, what is the compound interest earned?",
+            "widgets": [
+              {
+                "id": "text66b74b891e93d",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">A sum of ₹30,000 is invested at a compound interest rate of 7% per annum. If the total amount received after 2 years is ₹32,489.50, what is the compound interest earned?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74b891e97c",
+              "description": {
+                "text": "₹2,000.50",
+                "widgets": [
+                  {
+                    "id": "text66b74b891e983",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>₹2,000.50</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b891e992",
+              "description": {
+                "text": "₹2,489.50",
+                "widgets": [
+                  {
+                    "id": "text66b74b891e999",
+                    "type": "text",
+                    "properties": {
+                      "html": "₹2,489.50&nbsp;"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b891e9a8",
+              "description": {
+                "text": "₹2,789.50",
+                "widgets": [
+                  {
+                    "id": "text66b74b891e9ae",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>₹2,789.50</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b891e9bd",
+              "description": {
+                "text": "₹3,000.50",
+                "widgets": [
+                  {
+                    "id": "text66b74b891e9c4",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>₹3,000.50</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74b891e992",
+              "text": "₹2,489.50",
+              "widgets": [
+                {
+                  "id": "text66b74b891e999",
+                  "type": "text",
+                  "properties": {
+                    "html": "₹2,489.50&nbsp;"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br>Given: <br>Principal Amount = ₹30,000 <br>Total Amount = ₹32,489.50 <br>Time = 2 years <br>Using the compound interest formula: <br>Compound Interest = Total Amount - Principal Amount <br>Compound Interest = ₹32,489.50 - ₹30,000 \nCompound Interest = ₹2,489.50 <br>Therefore, the compound interest earned is ₹2,489.50. <br>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74b891e9e3",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "If the amount after 3 years on a certain principal sum at a compound interest rate of 6% per annum is ₹15,408, what was the principal amount?",
+            "widgets": [
+              {
+                "id": "text66b74b891e9e8",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">If the amount after 3 years on a certain principal sum at a compound interest rate of 6% per annum is ₹15,408, what was the principal amount?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74b891ea27",
+              "description": {
+                "text": "₹12,920",
+                "widgets": [
+                  {
+                    "id": "text66b74b891ea2e",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>₹12,920</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b891ea3d",
+              "description": {
+                "text": "₹12,500",
+                "widgets": [
+                  {
+                    "id": "text66b74b891ea44",
+                    "type": "text",
+                    "properties": {
+                      "html": "₹12,500&nbsp;&nbsp;"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b891ea53",
+              "description": {
+                "text": "₹13,000",
+                "widgets": [
+                  {
+                    "id": "text66b74b891ea59",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>₹13,000</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b891ea68",
+              "description": {
+                "text": "₹13,500",
+                "widgets": [
+                  {
+                    "id": "text66b74b891ea6f",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>₹13,500</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74b891ea27",
+              "text": "₹12,920",
+              "widgets": [
+                {
+                  "id": "text66b74b891ea2e",
+                  "type": "text",
+                  "properties": {
+                    "html": "<span>₹12,920</span>"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "Sorry, that's not correct.<br>Explanation:<br><br>Given: <br>Total Amount after 3 years = ₹15,408 <br>Rate = 6% per annum <br>Time = 3 years <br>Using the compound interest formula: <br>Total Amount = Principal <br>* (1 + Rate/100)<sup>time</sup>\n<br>₹15,408 = Principal * (1 + 6/100)<sup>3\n</sup><br>₹15,408 = Principal * 1.191016 <br>Principal = ₹15,408 / 1.191016 <br>Principal = ₹12,920 <br>Therefore, the principal amount was ₹12,920<br><br>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        },
+        {
+          "id": "mc66b74b891ea8d",
+          "grade": 0,
+          "blockMaxScore": 1,
+          "type": "mc",
+          "description": {
+            "visibilityOnReports": true,
+            "text": "If the principal amount is ₹50,000 and the total amount received after 4 years at a compound interest rate of 10% per annum is ₹73,856, what is the compound interest earned?",
+            "widgets": [
+              {
+                "id": "text66b74b891ea92",
+                "type": "text",
+                "properties": {
+                  "html": "<p style=\"text-align: justify;\">If the principal amount is ₹50,000 and the total amount received after 4 years at a compound interest rate of 10% per annum is ₹73,856, what is the compound interest earned?</p>"
+                }
+              }
+            ]
+          },
+          "options": [
+            {
+              "id": "mc-option66b74b891ead5",
+              "description": {
+                "text": "₹21,856",
+                "widgets": [
+                  {
+                    "id": "text66b74b891eadc",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>₹21,856</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b891eaec",
+              "description": {
+                "text": "₹23,856",
+                "widgets": [
+                  {
+                    "id": "text66b74b891eaf2",
+                    "type": "text",
+                    "properties": {
+                      "html": "₹23,856&nbsp;&nbsp;"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b891eb01",
+              "description": {
+                "text": "₹25,856",
+                "widgets": [
+                  {
+                    "id": "text66b74b891eb08",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>₹25,856</span>"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mc-option66b74b891eb17",
+              "description": {
+                "text": "₹27,856",
+                "widgets": [
+                  {
+                    "id": "text66b74b891eb1e",
+                    "type": "text",
+                    "properties": {
+                      "html": "<span>₹27,856</span>"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "hasOptionOther": false,
+          "correctAnswers": [
+            {
+              "id": "mc-option66b74b891eaec",
+              "text": "₹23,856",
+              "widgets": [
+                {
+                  "id": "text66b74b891eaf2",
+                  "type": "text",
+                  "properties": {
+                    "html": "₹23,856&nbsp;&nbsp;"
+                  }
+                }
+              ]
+            }
+          ],
+          "answer": [],
+          "isAnswerCorrect": false,
+          "questionFeedback": [
+            "<p style=\"text-align: justify;\">Sorry, that's not correct.<br>Explanation:<br><br>Compound Interest = Total Amount - Principal Amount <br>Compound Interest = ₹73,856 - ₹50,000 <br>Compound Interest = ₹23,856 <br>Therefore, the compound interest earned is ₹23,856.<br></p>"
+          ],
+          "gradingFiles": [],
+          "gradingRecordFiles": []
+        }
+      ]
+    }
+  ],
+  "submitted": true,
+  "updated": true,
+  "retryCount": 4,
+  "inlineFeedback": [],
+  "errors": [],
+  "success": true
+}
