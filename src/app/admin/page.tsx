@@ -93,6 +93,20 @@ interface TopActiveUserItem {
   idleSeconds: number;
   focusSeconds: number;
   lastActivePath: string;
+  totalScore?: number;
+  testsCompleted?: number;
+}
+
+interface TopUsersByTimeframe {
+  today: TopActiveUserItem[];
+  yesterday: TopActiveUserItem[];
+  thisWeek: TopActiveUserItem[];
+  lastWeek: TopActiveUserItem[];
+  thisMonth: TopActiveUserItem[];
+  lastMonth: TopActiveUserItem[];
+  thisYear: TopActiveUserItem[];
+  lastYear: TopActiveUserItem[];
+  allTime: TopActiveUserItem[];
 }
 
 interface TopPageItem {
@@ -177,6 +191,8 @@ export default function AdminDashboardPage() {
   const [activeStats, setActiveStats] = useState<ActiveSessionStats | null>(null);
   const [topPagesRightNow, setTopPagesRightNow] = useState<TopPageItem[]>([]);
   const [topActiveUsers, setTopActiveUsers] = useState<TopActiveUserItem[]>([]);
+  const [topUsersByTimeframe, setTopUsersByTimeframe] = useState<TopUsersByTimeframe | null>(null);
+  const [topUsersTimeframeFilter, setTopUsersTimeframeFilter] = useState<'today' | 'yesterday' | 'thisWeek' | 'lastWeek' | 'thisMonth' | 'lastMonth' | 'thisYear' | 'lastYear' | 'allTime'>('today');
   const [refreshingSessions, setRefreshingSessions] = useState(false);
   const [sessionSearchQuery, setSessionSearchQuery] = useState('');
   const [sessionStateFilter, setSessionStateFilter] = useState<'all' | 'active' | 'idle' | 'background' | 'registered' | 'guest'>('all');
@@ -264,6 +280,7 @@ export default function AdminDashboardPage() {
             setActiveStats(json.stats);
             if (json.topPagesRightNow) setTopPagesRightNow(json.topPagesRightNow);
             if (json.topActiveUsersToday) setTopActiveUsers(json.topActiveUsersToday);
+            if (json.topUsersByTimeframe) setTopUsersByTimeframe(json.topUsersByTimeframe);
           }
         }
       } catch (err) {
@@ -290,6 +307,7 @@ export default function AdminDashboardPage() {
           setActiveStats(json.stats);
           if (json.topPagesRightNow) setTopPagesRightNow(json.topPagesRightNow);
           if (json.topActiveUsersToday) setTopActiveUsers(json.topActiveUsersToday);
+          if (json.topUsersByTimeframe) setTopUsersByTimeframe(json.topUsersByTimeframe);
         }
       } catch (e) {
         // ignore
@@ -962,51 +980,112 @@ export default function AdminDashboardPage() {
             </div>
           </div>
 
-          {/* Most Active Candidates Today (Usage Leaderboard) */}
-          {topActiveUsers.length > 0 && (
-            <div className="glass-panel rounded-3xl border border-amber-500/20 p-5 space-y-4 bg-amber-950/10">
-              <div className="flex items-center justify-between">
-                <h4 className="text-xs font-bold uppercase tracking-wider text-amber-400 flex items-center gap-1.5">
-                  <Crown className="w-4 h-4 text-amber-400" />
-                  <span>Most Active Candidates Today ({topActiveUsers.length})</span>
-                </h4>
-                <span className="text-[11px] text-slate-400">Total time spent on platform today</span>
-              </div>
+          {/* Most Active Candidates Usage Leaderboard (Multi-timeframe) */}
+          {(() => {
+            const activeTimeframeList = topUsersByTimeframe
+              ? topUsersByTimeframe[topUsersTimeframeFilter] || []
+              : topActiveUsers;
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
-                {topActiveUsers.slice(0, 6).map((u, idx) => {
-                  const activeMins = Math.floor(u.activeSeconds / 60);
-                  const activeSecs = u.activeSeconds % 60;
-                  const rankBadge = idx === 0 ? '🥇' : idx === 1 ? '🥈' : idx === 2 ? '🥉' : `#${idx + 1}`;
+            const timeframeLabels = {
+              today: 'Today',
+              yesterday: 'Yesterday',
+              thisWeek: 'This Week',
+              lastWeek: 'Last Week',
+              thisMonth: 'This Month',
+              lastMonth: 'Last Month',
+              thisYear: 'This Year',
+              lastYear: 'Last Year',
+              allTime: 'All Time',
+            };
 
-                  return (
-                    <div
-                      key={u.userEmail}
-                      className="p-3.5 rounded-2xl bg-slate-900/80 border border-slate-800 flex items-center justify-between gap-3 hover:border-amber-500/40 transition-all shadow-md"
-                    >
-                      <div className="flex items-center gap-2.5 min-w-0">
-                        <span className="text-sm font-black w-6 text-center text-amber-300 shrink-0">{rankBadge}</span>
-                        <UserAvatar name={u.userName} email={u.userEmail} image={u.userImage} size="sm" />
-                        <div className="min-w-0">
-                          <p className="text-xs font-bold text-white truncate">{u.userName}</p>
-                          <p className="text-[10px] text-slate-400 truncate">{u.userEmail}</p>
-                        </div>
-                      </div>
-
-                      <div className="text-right shrink-0">
-                        <span className="text-xs font-mono font-bold text-amber-300 block">
-                          {activeMins}m {activeSecs}s
-                        </span>
-                        <span className="text-[9px] text-slate-500 font-mono truncate block max-w-[90px]" title={u.lastActivePath}>
-                          {u.lastActivePath}
-                        </span>
-                      </div>
+            return (
+              <div className="glass-panel rounded-3xl border border-amber-500/20 p-5 space-y-4 bg-amber-950/10">
+                <div className="flex items-center justify-between flex-wrap gap-3">
+                  <div className="flex items-center gap-2">
+                    <Crown className="w-5 h-5 text-amber-400" />
+                    <div>
+                      <h4 className="text-sm font-black text-white">
+                        Top Candidates Leaderboard ({activeTimeframeList.length})
+                      </h4>
+                      <p className="text-[10px] text-slate-400 font-medium">
+                        Showing top candidates for <span className="text-amber-400 font-bold">{timeframeLabels[topUsersTimeframeFilter]}</span>
+                      </p>
                     </div>
-                  );
-                })}
+                  </div>
+
+                  {/* Timeframe selector dropdown */}
+                  <div className="relative shrink-0">
+                    <select
+                      value={topUsersTimeframeFilter}
+                      onChange={(e) => setTopUsersTimeframeFilter(e.target.value as any)}
+                      className="px-3.5 py-2 rounded-xl bg-slate-900 border border-amber-500/30 text-amber-300 font-bold text-xs focus:outline-none focus:border-amber-400 focus:ring-1 focus:ring-amber-400 transition-all shadow-md cursor-pointer appearance-none pr-8"
+                    >
+                      <option value="today" className="bg-slate-950 text-slate-200">📅 Today</option>
+                      <option value="yesterday" className="bg-slate-950 text-slate-200">⏮️ Yesterday</option>
+                      <option value="thisWeek" className="bg-slate-950 text-slate-200">📅 This Week</option>
+                      <option value="lastWeek" className="bg-slate-950 text-slate-200">⏮️ Last Week</option>
+                      <option value="thisMonth" className="bg-slate-950 text-slate-200">📅 This Month</option>
+                      <option value="lastMonth" className="bg-slate-950 text-slate-200">⏮️ Last Month</option>
+                      <option value="thisYear" className="bg-slate-950 text-slate-200">🗓️ This Year</option>
+                      <option value="lastYear" className="bg-slate-950 text-slate-200">⏮️ Last Year</option>
+                      <option value="allTime" className="bg-slate-950 text-amber-300 font-bold">🏆 All Time</option>
+                    </select>
+                    <div className="absolute right-2.5 top-1/2 -translate-y-1/2 pointer-events-none text-amber-400 text-[10px]">
+                      ▼
+                    </div>
+                  </div>
+                </div>
+
+                {activeTimeframeList.length === 0 ? (
+                  <div className="p-6 text-center bg-slate-900/40 rounded-2xl border border-slate-800/80">
+                    <p className="text-xs font-bold text-slate-400">No candidate activity logged for {timeframeLabels[topUsersTimeframeFilter]}</p>
+                    <p className="text-[10px] text-slate-500 mt-0.5">As candidates study or take practice tests, their usage metrics will populate here.</p>
+                  </div>
+                ) : (
+                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+                    {activeTimeframeList.slice(0, 9).map((u, idx) => {
+                      const activeMins = Math.floor(u.activeSeconds / 60);
+                      const activeSecs = u.activeSeconds % 60;
+                      const activeHours = Math.floor(activeMins / 60);
+                      const activeMinsRemainder = activeMins % 60;
+
+                      const timeDisplay =
+                        activeHours > 0
+                          ? `${activeHours}h ${activeMinsRemainder}m`
+                          : `${activeMins}m ${activeSecs}s`;
+
+                      const rankBadge = idx === 0 ? '🥇' : idx === 1 ? '🥈' : idx === 2 ? '🥉' : `#${idx + 1}`;
+
+                      return (
+                        <div
+                          key={u.userEmail}
+                          className="p-3.5 rounded-2xl bg-slate-900/80 border border-slate-800 flex items-center justify-between gap-3 hover:border-amber-500/40 transition-all shadow-md"
+                        >
+                          <div className="flex items-center gap-2.5 min-w-0">
+                            <span className="text-sm font-black w-6 text-center text-amber-300 shrink-0">{rankBadge}</span>
+                            <UserAvatar name={u.userName} email={u.userEmail} image={u.userImage} size="sm" />
+                            <div className="min-w-0">
+                              <p className="text-xs font-bold text-white truncate">{u.userName}</p>
+                              <p className="text-[10px] text-slate-400 truncate">{u.userEmail}</p>
+                            </div>
+                          </div>
+
+                          <div className="text-right shrink-0">
+                            <span className="text-xs font-mono font-bold text-amber-300 block">
+                              {timeDisplay}
+                            </span>
+                            <span className="text-[9px] text-slate-500 font-mono truncate block max-w-[90px]" title={u.lastActivePath}>
+                              {u.lastActivePath || '/'}
+                            </span>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                )}
               </div>
-            </div>
-          )}
+            );
+          })()}
 
           {/* Top Active Pages Heatmap Right Now */}
           {topPagesRightNow.length > 0 && (

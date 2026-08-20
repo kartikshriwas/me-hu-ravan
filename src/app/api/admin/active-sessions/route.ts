@@ -56,23 +56,183 @@ export async function GET(request: Request) {
     // Sessions active within last 2.5 minutes (150,000 ms)
     const activeCutoff = new Date(Date.now() - 150000);
 
-    const [activeSessions, todayLogs] = await Promise.all([
+    const now = new Date();
+    const formatDateStr = (d: Date) => d.toISOString().split('T')[0];
+
+    const todayStr = formatDateStr(now);
+
+    // Yesterday
+    const yesterdayDate = new Date(now);
+    yesterdayDate.setDate(now.getDate() - 1);
+    const yesterdayStr = formatDateStr(yesterdayDate);
+
+    // Monday of current week
+    const currentDayOfWeek = now.getDay();
+    const diffToMonday = currentDayOfWeek === 0 ? -6 : 1 - currentDayOfWeek;
+    const mondayThisWeek = new Date(now);
+    mondayThisWeek.setDate(now.getDate() + diffToMonday);
+    const mondayThisWeekStr = formatDateStr(mondayThisWeek);
+
+    // Last week (Monday to Sunday)
+    const mondayLastWeek = new Date(mondayThisWeek);
+    mondayLastWeek.setDate(mondayThisWeek.getDate() - 7);
+    const mondayLastWeekStr = formatDateStr(mondayLastWeek);
+
+    const sundayLastWeek = new Date(mondayThisWeek);
+    sundayLastWeek.setDate(mondayThisWeek.getDate() - 1);
+    const sundayLastWeekStr = formatDateStr(sundayLastWeek);
+
+    // First day of current month
+    const yearNow = now.getFullYear();
+    const monthNow = now.getMonth();
+    const firstDayThisMonthStr = `${yearNow}-${String(monthNow + 1).padStart(2, '0')}-01`;
+
+    // Last Month (1st to last day of previous month)
+    const firstDayLastMonth = new Date(yearNow, monthNow - 1, 1);
+    const lastDayLastMonth = new Date(yearNow, monthNow, 0);
+    const firstDayLastMonthStr = formatDateStr(firstDayLastMonth);
+    const lastDayLastMonthStr = formatDateStr(lastDayLastMonth);
+
+    // This Year (Jan 1 to today)
+    const firstDayThisYearStr = `${yearNow}-01-01`;
+
+    // Last Year (Jan 1 to Dec 31 of previous year)
+    const firstDayLastYearStr = `${yearNow - 1}-01-01`;
+    const lastDayLastYearStr = `${yearNow - 1}-12-31`;
+
+    const aggregateUserActivity = async (matchFilter: any) => {
+      return UserActivityLog.aggregate([
+        { $match: matchFilter },
+        {
+          $group: {
+            _id: '$userEmail',
+            activeSeconds: { $sum: '$activeSeconds' },
+            idleSeconds: { $sum: '$idleSeconds' },
+            focusSeconds: { $sum: '$focusSeconds' },
+            lastActivePath: { $last: '$lastActivePath' },
+          },
+        },
+        { $sort: { activeSeconds: -1 } },
+        { $limit: 20 },
+      ]);
+    };
+
+    const [
+      activeSessions,
+      todayLogsAgg,
+      yesterdayLogsAgg,
+      thisWeekLogsAgg,
+      lastWeekLogsAgg,
+      thisMonthLogsAgg,
+      lastMonthLogsAgg,
+      thisYearLogsAgg,
+      lastYearLogsAgg,
+      allTimeLogsAgg,
+      allTimeTopUsersFromDb,
+    ] = await Promise.all([
       UserSession.find({ lastHeartbeat: { $gte: activeCutoff }, terminated: { $ne: true } })
         .sort({ lastHeartbeat: -1 })
         .limit(150)
         .lean(),
-      UserActivityLog.find({ dateStr: new Date().toISOString().split('T')[0] })
-        .sort({ activeSeconds: -1 })
-        .limit(50)
-        .lean(),
+      aggregateUserActivity({ dateStr: todayStr }),
+      aggregateUserActivity({ dateStr: yesterdayStr }),
+      aggregateUserActivity({ dateStr: { $gte: mondayThisWeekStr, $lte: todayStr } }),
+      aggregateUserActivity({ dateStr: { $gte: mondayLastWeekStr, $lte: sundayLastWeekStr } }),
+      aggregateUserActivity({ dateStr: { $gte: firstDayThisMonthStr, $lte: todayStr } }),
+      aggregateUserActivity({ dateStr: { $gte: firstDayLastMonthStr, $lte: lastDayLastMonthStr } }),
+      aggregateUserActivity({ dateStr: { $gte: firstDayThisYearStr, $lte: todayStr } }),
+      aggregateUserActivity({ dateStr: { $gte: firstDayLastYearStr, $lte: lastDayLastYearStr } }),
+      aggregateUserActivity({}),
+      User.find().sort({ totalScore: -1, testsCompleted: -1 }).limit(20).select('email name image totalScore testsCompleted').lean(),
     ]);
 
-    // Query names & avatars for top active candidates today
-    const topEmails = todayLogs.map((l) => l.userEmail);
-    const topUserProfiles = await User.find({ email: { $in: topEmails } })
-      .select('email name image')
+    // Query profiles for candidates across all timeframes
+    const allEmails = Array.from(
+      new Set([
+        ...todayLogsAgg.map((l) => l._id),
+        ...yesterdayLogsAgg.map((l) => l._id),
+        ...thisWeekLogsAgg.map((l) => l._id),
+        ...lastWeekLogsAgg.map((l) => l._id),
+        ...thisMonthLogsAgg.map((l) => l._id),
+        ...lastMonthLogsAgg.map((l) => l._id),
+        ...thisYearLogsAgg.map((l) => l._id),
+        ...lastYearLogsAgg.map((l) => l._id),
+        ...allTimeLogsAgg.map((l) => l._id),
+        ...allTimeTopUsersFromDb.map((u) => u.email),
+      ])
+    );
+
+    const topUserProfiles = await User.find({ email: { $in: allEmails } })
+      .select('email name image totalScore testsCompleted')
       .lean();
     const userProfileMap = new Map(topUserProfiles.map((u) => [u.email.toLowerCase(), u]));
+
+    const formatAggList = (list: any[]) =>
+      list.map((l) => {
+        const u = userProfileMap.get(l._id.toLowerCase());
+        return {
+          userEmail: l._id,
+          userName: u?.name || l._id.split('@')[0],
+          userImage: u?.image || '',
+          activeSeconds: l.activeSeconds || 0,
+          idleSeconds: l.idleSeconds || 0,
+          focusSeconds: l.focusSeconds || 0,
+          lastActivePath: l.lastActivePath || '/',
+          totalScore: u?.totalScore || 0,
+          testsCompleted: u?.testsCompleted || 0,
+        };
+      });
+
+    // Build All-Time list: combine activity logs with overall user scores
+    const allTimeCombinedMap = new Map<string, any>();
+    allTimeLogsAgg.forEach((l) => {
+      const u = userProfileMap.get(l._id.toLowerCase());
+      allTimeCombinedMap.set(l._id.toLowerCase(), {
+        userEmail: l._id,
+        userName: u?.name || l._id.split('@')[0],
+        userImage: u?.image || '',
+        activeSeconds: l.activeSeconds || 0,
+        idleSeconds: l.idleSeconds || 0,
+        focusSeconds: l.focusSeconds || 0,
+        lastActivePath: l.lastActivePath || '/',
+        totalScore: u?.totalScore || 0,
+        testsCompleted: u?.testsCompleted || 0,
+      });
+    });
+
+    allTimeTopUsersFromDb.forEach((u) => {
+      const existing = allTimeCombinedMap.get(u.email.toLowerCase());
+      if (!existing) {
+        allTimeCombinedMap.set(u.email.toLowerCase(), {
+          userEmail: u.email,
+          userName: u.name || u.email.split('@')[0],
+          userImage: u.image || '',
+          activeSeconds: 0,
+          idleSeconds: 0,
+          focusSeconds: 0,
+          lastActivePath: '/',
+          totalScore: u.totalScore || 0,
+          testsCompleted: u.testsCompleted || 0,
+        });
+      }
+    });
+
+    const allTimeList = Array.from(allTimeCombinedMap.values()).sort((a, b) => {
+      if (b.activeSeconds !== a.activeSeconds) return b.activeSeconds - a.activeSeconds;
+      return (b.totalScore || 0) - (a.totalScore || 0);
+    });
+
+    const topUsersByTimeframe = {
+      today: formatAggList(todayLogsAgg),
+      yesterday: formatAggList(yesterdayLogsAgg),
+      thisWeek: formatAggList(thisWeekLogsAgg),
+      lastWeek: formatAggList(lastWeekLogsAgg),
+      thisMonth: formatAggList(thisMonthLogsAgg),
+      lastMonth: formatAggList(lastMonthLogsAgg),
+      thisYear: formatAggList(thisYearLogsAgg),
+      lastYear: formatAggList(lastYearLogsAgg),
+      allTime: allTimeList,
+    };
 
     // Active, Idle, and Device counts
     let activeNowCount = 0;
@@ -133,11 +293,11 @@ export async function GET(request: Request) {
     const topPagesRightNow = Object.values(pageHitsMap).sort((a, b) => b.count - a.count);
 
     // Summary usage analytics for today
-    const totalActiveSecondsToday = todayLogs.reduce((sum, l) => sum + (l.activeSeconds || 0), 0);
-    const totalIdleSecondsToday = todayLogs.reduce((sum, l) => sum + (l.idleSeconds || 0), 0);
-    const totalFocusSecondsToday = todayLogs.reduce((sum, l) => sum + (l.focusSeconds || 0), 0);
+    const totalActiveSecondsToday = todayLogsAgg.reduce((sum, l) => sum + (l.activeSeconds || 0), 0);
+    const totalIdleSecondsToday = todayLogsAgg.reduce((sum, l) => sum + (l.idleSeconds || 0), 0);
+    const totalFocusSecondsToday = todayLogsAgg.reduce((sum, l) => sum + (l.focusSeconds || 0), 0);
 
-    const candidateCountToday = todayLogs.length;
+    const candidateCountToday = todayLogsAgg.length;
     const avgActiveSecondsPerUser = candidateCountToday > 0 ? Math.round(totalActiveSecondsToday / candidateCountToday) : 0;
     const avgFocusSecondsPerUser = candidateCountToday > 0 ? Math.round(totalFocusSecondsToday / candidateCountToday) : 0;
 
@@ -160,18 +320,8 @@ export async function GET(request: Request) {
         avgFocusSecondsPerUser,
       },
       topPagesRightNow,
-      topActiveUsersToday: todayLogs.map((l) => {
-        const u = userProfileMap.get(l.userEmail.toLowerCase());
-        return {
-          userEmail: l.userEmail,
-          userName: u?.name || l.userEmail.split('@')[0],
-          userImage: u?.image || '',
-          activeSeconds: l.activeSeconds || 0,
-          idleSeconds: l.idleSeconds || 0,
-          focusSeconds: l.focusSeconds || 0,
-          lastActivePath: l.lastActivePath || '/',
-        };
-      }),
+      topActiveUsersToday: topUsersByTimeframe.today,
+      topUsersByTimeframe,
     });
   } catch (error) {
     return NextResponse.json({
