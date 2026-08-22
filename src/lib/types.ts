@@ -70,6 +70,8 @@ export interface AssessmentMeta {
   id: string;
   title: string;
   quizId: string;
+  assessmentId?: string;
+  objectId?: string;
   description: string;
   timeLimitSeconds: number;
   questionTimeLimitSeconds: number;

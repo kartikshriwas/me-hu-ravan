@@ -1,64 +1,35 @@
 import { NextResponse } from 'next/server';
 import { getSessionFromRequest } from '@/lib/session';
-import { connectToDatabase } from '@/lib/db';
-import { User } from '@/models/User';
+import { verifyAdminPermission } from '@/lib/adminAuth';
 import { isPlatformGlobalFree, setGlobalFreeDays } from '@/lib/globalSetting';
-
-const SUPERADMIN_EMAIL = 'fykartik@gmail.com';
-
-async function checkAdminPermission(request: Request, permKey: string) {
-  const session = getSessionFromRequest(request);
-  if (!session?.email) {
-    return { authorized: false, status: 401, error: 'Unauthorized', email: '' };
-  }
-
-  const cleanEmail = session.email.toLowerCase().trim();
-  const isSuperadmin = cleanEmail === SUPERADMIN_EMAIL;
-  if (isSuperadmin) {
-    return { authorized: true, status: 200, error: null, email: cleanEmail };
-  }
-
-  await connectToDatabase();
-  const user = await User.findOne({ email: cleanEmail }).select('role adminPermissions').lean();
-
-  const isAdmin = user?.role === 'superadmin' || user?.role === 'admin';
-  if (!isAdmin) {
-    return { authorized: false, status: 403, error: 'Admin access required', email: cleanEmail };
-  }
-
-  const hasPerm = user?.adminPermissions?.includes(permKey) || user?.adminPermissions?.includes('*');
-  if (!hasPerm) {
-    return { authorized: false, status: 403, error: `Permission missing: ${permKey}`, email: cleanEmail };
-  }
-
-  return { authorized: true, status: 200, error: null, email: cleanEmail };
-}
 
 export async function GET(request: Request) {
   try {
-    const auth = await checkAdminPermission(request, 'manage_global_free');
-    if (!auth.authorized) {
-      return NextResponse.json({ error: auth.error }, { status: auth.status });
+    const sessionUser = getSessionFromRequest(request);
+    const auth = await verifyAdminPermission(sessionUser?.email, 'manage_global_free');
+    if (!auth.isAuthorized) {
+      return NextResponse.json({ success: false, error: auth.error }, { status: auth.statusCode || 403 });
     }
 
     const status = await isPlatformGlobalFree();
     return NextResponse.json({ success: true, ...status });
   } catch (err: any) {
-    return NextResponse.json({ error: err.message || 'Server Error' }, { status: 500 });
+    return NextResponse.json({ success: false, error: err.message || 'Server Error' }, { status: 500 });
   }
 }
 
 export async function POST(request: Request) {
   try {
-    const auth = await checkAdminPermission(request, 'manage_global_free');
-    if (!auth.authorized) {
-      return NextResponse.json({ error: auth.error }, { status: auth.status });
+    const sessionUser = getSessionFromRequest(request);
+    const auth = await verifyAdminPermission(sessionUser?.email, 'manage_global_free');
+    if (!auth.isAuthorized) {
+      return NextResponse.json({ success: false, error: auth.error }, { status: auth.statusCode || 403 });
     }
 
     const body = await request.json();
     const days = typeof body.days === 'number' ? body.days : Number(body.days || 0);
 
-    const result = await setGlobalFreeDays(days, auth.email);
+    const result = await setGlobalFreeDays(days, sessionUser!.email.toLowerCase().trim());
 
     return NextResponse.json({
       success: true,
@@ -68,6 +39,6 @@ export async function POST(request: Request) {
       ...result,
     });
   } catch (err: any) {
-    return NextResponse.json({ error: err.message || 'Server Error' }, { status: 500 });
+    return NextResponse.json({ success: false, error: err.message || 'Server Error' }, { status: 500 });
   }
 }

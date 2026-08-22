@@ -15,6 +15,7 @@ export async function GET(request: Request) {
     }
 
     const cleanEmail = sessionUser.email.toLowerCase().trim();
+    const isSuperadmin = cleanEmail === SUPERADMIN_EMAIL;
     const conn = await connectToDatabase();
 
     if (!conn) {
@@ -28,17 +29,24 @@ export async function GET(request: Request) {
       isPlatformGlobalFree(),
     ]);
 
-    // Calculate global rank concurrently only if user has score
+    // Calculate accurate global rank matching leaderboard rules (sorted by totalScore desc, averageAccuracy desc)
     let userRank = 0;
-    const isSuperadmin = cleanEmail === SUPERADMIN_EMAIL;
+    if (dbUser) {
+      const userScore = dbUser.totalScore || 0;
+      const userAccuracy = dbUser.averageAccuracy || 0;
 
-    if (dbUser && (dbUser.totalScore || 0) > 0) {
-      const higherScorers = await User.countDocuments({
-        totalScore: { $gt: dbUser.totalScore },
-      });
-      userRank = higherScorers + 1;
-    } else if (dbUser) {
-      userRank = 1;
+      if (userScore > 0) {
+        const higherScorers = await User.countDocuments({
+          $or: [
+            { totalScore: { $gt: userScore } },
+            { totalScore: userScore, averageAccuracy: { $gt: userAccuracy } }
+          ]
+        });
+        userRank = higherScorers + 1;
+      } else {
+        const usersWithPoints = await User.countDocuments({ totalScore: { $gt: 0 } });
+        userRank = usersWithPoints + 1;
+      }
     }
 
     const isGlobalFree = globalFreeConfig.isGlobalFree;
@@ -49,6 +57,10 @@ export async function GET(request: Request) {
       isPremium = false;
     }
 
+    const userRole = dbUser?.role || (isSuperadmin ? 'superadmin' : 'user');
+    const userPerms: string[] = dbUser?.adminPermissions || [];
+    const hasCourseAccess = isSuperadmin || userRole === 'superadmin' || userRole === 'admin' || isPremium || userPerms.includes('access_courses') || userPerms.includes('*');
+
     return NextResponse.json({
       success: true,
       user: {
@@ -56,9 +68,10 @@ export async function GET(request: Request) {
         name: dbUser?.name || sessionUser.name,
         email: cleanEmail,
         image: dbUser?.image || sessionUser.image,
-        role: dbUser?.role || (isSuperadmin ? 'superadmin' : 'user'),
-        adminPermissions: dbUser?.adminPermissions || [],
+        role: userRole,
+        adminPermissions: userPerms,
         isPremium,
+        hasCourseAccess,
         premiumExpiresAt: premiumExpiresAt ? new Date(premiumExpiresAt).toISOString() : null,
         premiumPlan: dbUser?.premiumPlan || (isSuperadmin ? 'superadmin' : 'free'),
         totalScore: dbUser?.totalScore || 0,

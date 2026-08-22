@@ -215,6 +215,8 @@ export function getAllAssessments(): AssessmentMeta[] {
           id: parsed.quizId,
           title: parsed.title,
           quizId: parsed.quizId,
+          assessmentId: parsed.assessmentId,
+          objectId: parsed.objectId,
           description: parsed.description,
           timeLimitSeconds: parsed.timeLimitSeconds,
           questionTimeLimitSeconds: parsed.questionTimeLimitSeconds,
@@ -320,9 +322,14 @@ function parseAssessmentFile(filePath: string, quizId: string): AssessmentDetail
 
     const totalScore = questions.reduce((acc, q) => acc + q.score, 0);
 
+    const objectId = data.submission?.object_id || data.object_id || data.objectId || assessment.unitId || assessment.objectId;
+    const assessmentId = data.submission?.assessmentId || data.assessmentId || assessment.id || quizId;
+
     const resultData: AssessmentDetail = {
       id: quizId,
       quizId,
+      assessmentId,
+      objectId,
       title,
       description: assessment.description || 'Test paper assessment for practice and learning.',
       timeLimitSeconds: assessment.timeLimitSeconds || (questions.length * 60),

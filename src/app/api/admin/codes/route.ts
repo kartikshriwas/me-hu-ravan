@@ -1,10 +1,7 @@
 import { NextResponse } from 'next/server';
 import { getSessionFromRequest } from '@/lib/session';
-import { connectToDatabase } from '@/lib/db';
-import { User } from '@/models/User';
+import { verifyAdminPermission } from '@/lib/adminAuth';
 import { RedeemCode } from '@/models/RedeemCode';
-
-const SUPERADMIN_EMAIL = 'fykartik@gmail.com';
 
 function generateRandomCode(prefix: string): string {
   const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
@@ -22,26 +19,9 @@ function generateRandomCode(prefix: string): string {
 export async function GET(request: Request) {
   try {
     const sessionUser = getSessionFromRequest(request);
-    if (!sessionUser) {
-      return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 });
-    }
-
-    const cleanEmail = sessionUser.email.toLowerCase().trim();
-    const isSuperadmin = cleanEmail === SUPERADMIN_EMAIL;
-
-    const conn = await connectToDatabase();
-    if (!conn) {
-      return NextResponse.json({ success: false, error: 'Database error' }, { status: 500 });
-    }
-
-    let isAdmin = isSuperadmin;
-    if (!isAdmin) {
-      const currentUser = await User.findOne({ email: cleanEmail }).select('role').lean();
-      isAdmin = currentUser?.role === 'superadmin' || currentUser?.role === 'admin';
-    }
-
-    if (!isAdmin) {
-      return NextResponse.json({ success: false, error: 'Admin access required' }, { status: 403 });
+    const auth = await verifyAdminPermission(sessionUser?.email, 'manage_codes');
+    if (!auth.isAuthorized) {
+      return NextResponse.json({ success: false, error: auth.error }, { status: auth.statusCode || 403 });
     }
 
     const codes = await RedeemCode.find().sort({ createdAt: -1 }).limit(200).lean();
@@ -56,6 +36,8 @@ export async function GET(request: Request) {
         usedCount: c.usedCount,
         usedBy: c.usedBy || [],
         expiresAt: c.expiresAt ? new Date(c.expiresAt).toISOString() : null,
+        grantType: c.grantType || 'all_premium',
+        grantedCourses: c.grantedCourses || [],
         createdBy: c.createdBy,
         batchName: c.batchName || 'General',
         isActive: c.isActive,
@@ -71,27 +53,22 @@ export async function GET(request: Request) {
 export async function POST(request: Request) {
   try {
     const sessionUser = getSessionFromRequest(request);
-    if (!sessionUser) {
-      return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 });
-    }
-
-    const cleanEmail = sessionUser.email.toLowerCase().trim();
-    const isSuperadmin = cleanEmail === SUPERADMIN_EMAIL;
-
-    const conn = await connectToDatabase();
-    if (!conn) {
-      return NextResponse.json({ success: false, error: 'Database error' }, { status: 500 });
-    }
-
-    const currentUser = await User.findOne({ email: cleanEmail }).lean();
-    const isAdmin = isSuperadmin || currentUser?.role === 'superadmin' || currentUser?.role === 'admin';
-
-    if (!isAdmin) {
-      return NextResponse.json({ success: false, error: 'Admin access required' }, { status: 403 });
+    const auth = await verifyAdminPermission(sessionUser?.email, 'manage_codes');
+    if (!auth.isAuthorized) {
+      return NextResponse.json({ success: false, error: auth.error }, { status: auth.statusCode || 403 });
     }
 
     const body = await request.json();
-    const { count = 1, durationDays = 365, maxUses = 1, prefix = 'PREPTEA', batchName = 'General', expiresDays } = body;
+    const {
+      count = 1,
+      durationDays = 365,
+      maxUses = 1,
+      prefix = 'PREPTEA',
+      batchName = 'General',
+      expiresDays,
+      grantType = 'all_premium',
+      grantedCourses = [],
+    } = body;
 
     const numCount = Math.min(Math.max(parseInt(count) || 1, 1), 100);
     const numDuration = parseInt(durationDays) || 365;
@@ -119,7 +96,9 @@ export async function POST(request: Request) {
         usedCount: 0,
         usedBy: [],
         expiresAt,
-        createdBy: cleanEmail,
+        grantType,
+        grantedCourses: Array.isArray(grantedCourses) ? grantedCourses : [],
+        createdBy: sessionUser!.email.toLowerCase().trim(),
         batchName: batchName || 'General',
         isActive: true,
       });
@@ -129,7 +108,7 @@ export async function POST(request: Request) {
 
     return NextResponse.json({
       success: true,
-      message: `Generated ${createdCodes.length} redeem codes successfully!`,
+      message: `Generated ${createdCodes.length} custom redeem code(s) successfully!`,
       codes: createdCodes,
     });
   } catch (error) {

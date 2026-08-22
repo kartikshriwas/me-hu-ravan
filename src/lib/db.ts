@@ -50,9 +50,9 @@ export async function connectToDatabase(): Promise<typeof mongoose> {
   try {
     cached.conn = await cached.promise;
     
-    // Ensure the readyState is actually 1 (connected) before proceeding
     if (cached.conn.connection.readyState !== 1) {
-      throw new Error(`Mongoose connection state is ${cached.conn.connection.readyState} instead of 1 (connected)`);
+      cached.promise = null;
+      throw new Error(`MongoDB connection state is ${cached.conn.connection.readyState} (not connected)`);
     }
   } catch (e) {
     console.error('Failed to connect to MongoDB:', e);

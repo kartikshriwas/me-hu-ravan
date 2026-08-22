@@ -25,6 +25,7 @@ interface AuthContextType {
   handleGoogleSuccess: (credential: string) => Promise<void>;
   handleGoogleUserInfo: (userInfo: any) => Promise<void>;
   logout: () => void;
+  refreshUser: () => Promise<void>;
   getAvatarUrl: (user?: AuthUser | null) => string;
 }
 
@@ -34,6 +35,7 @@ const AuthContext = createContext<AuthContextType>({
   handleGoogleSuccess: async () => {},
   handleGoogleUserInfo: async () => {},
   logout: () => {},
+  refreshUser: async () => {},
   getAvatarUrl: () => '',
 });
 
@@ -144,6 +146,19 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     }
   };
 
+  const refreshUser = async () => {
+    try {
+      const res = await fetch('/api/auth/me');
+      const json = await res.json();
+      if (json.success && json.user) {
+        setUser(json.user);
+        localStorage.setItem(USER_STORAGE_KEY, JSON.stringify(json.user));
+      }
+    } catch (err) {
+      console.error('Error refreshing session:', err);
+    }
+  };
+
   const clientId =
     process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID ||
     process.env.GOOGLE_CLIENT_ID ||
@@ -151,7 +166,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
   return (
     <GoogleOAuthProvider clientId={clientId}>
-      <AuthContext.Provider value={{ user, loading, handleGoogleSuccess, handleGoogleUserInfo, logout, getAvatarUrl }}>
+      <AuthContext.Provider value={{ user, loading, handleGoogleSuccess, handleGoogleUserInfo, logout, refreshUser, getAvatarUrl }}>
         {children}
       </AuthContext.Provider>
     </GoogleOAuthProvider>

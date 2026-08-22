@@ -1,57 +1,18 @@
 import { NextResponse } from 'next/server';
 import { getSessionFromRequest } from '@/lib/session';
-import { connectToDatabase } from '@/lib/db';
-import { User } from '@/models/User';
+import { verifyAdminPermission } from '@/lib/adminAuth';
 import { UserSession } from '@/models/UserSession';
 import { UserActivityLog } from '@/models/UserActivityLog';
-
-const SUPERADMIN_EMAIL = 'fykartik@gmail.com';
+import { User } from '@/models/User';
 
 export async function GET(request: Request) {
   try {
     const sessionUser = getSessionFromRequest(request);
-    if (!sessionUser) {
-      return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 });
+    const auth = await verifyAdminPermission(sessionUser?.email, 'manage_users');
+    if (!auth.isAuthorized) {
+      return NextResponse.json({ success: false, error: auth.error }, { status: auth.statusCode || 403 });
     }
-
-    const cleanEmail = sessionUser.email.toLowerCase().trim();
-    const isSuperadmin = cleanEmail === SUPERADMIN_EMAIL;
-
-    const conn = await connectToDatabase();
-    if (!conn || conn.connection.readyState !== 1) {
-      return NextResponse.json({
-        success: true,
-        sessions: [],
-        stats: {
-          onlineNowCount: 0,
-          activeNowCount: 0,
-          idleNowCount: 0,
-          backgroundCount: 0,
-          desktopCount: 0,
-          mobileCount: 0,
-          tabletCount: 0,
-          totalActiveSecondsToday: 0,
-          totalIdleSecondsToday: 0,
-          totalFocusSecondsToday: 0,
-          candidateCountToday: 0,
-          avgActiveSecondsPerUser: 0,
-          avgFocusSecondsPerUser: 0,
-        },
-        topPagesRightNow: [],
-        topActiveUsersToday: [],
-      });
-    }
-
-    // Fast-path: Check superadmin / admin role
-    let isAdmin = isSuperadmin;
-    if (!isAdmin) {
-      const currentUser = await User.findOne({ email: cleanEmail }).select('role').lean();
-      isAdmin = currentUser?.role === 'superadmin' || currentUser?.role === 'admin';
-    }
-
-    if (!isAdmin) {
-      return NextResponse.json({ success: false, error: 'Admin access required' }, { status: 403 });
-    }
+    // Sessions active within last 2.5 minutes (150,000 ms)
 
     // Sessions active within last 2.5 minutes (150,000 ms)
     const activeCutoff = new Date(Date.now() - 150000);
@@ -351,26 +312,9 @@ export async function GET(request: Request) {
 export async function POST(request: Request) {
   try {
     const sessionUser = getSessionFromRequest(request);
-    if (!sessionUser) {
-      return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 });
-    }
-
-    const cleanEmail = sessionUser.email.toLowerCase().trim();
-    const isSuperadmin = cleanEmail === SUPERADMIN_EMAIL;
-
-    const conn = await connectToDatabase();
-    if (!conn || conn.connection.readyState !== 1) {
-      return NextResponse.json({ success: false, error: 'Database connection offline' }, { status: 503 });
-    }
-
-    let isAdmin = isSuperadmin;
-    if (!isAdmin) {
-      const currentUser = await User.findOne({ email: cleanEmail }).select('role').lean();
-      isAdmin = currentUser?.role === 'superadmin' || currentUser?.role === 'admin';
-    }
-
-    if (!isAdmin) {
-      return NextResponse.json({ success: false, error: 'Admin access required' }, { status: 403 });
+    const auth = await verifyAdminPermission(sessionUser?.email, 'manage_users');
+    if (!auth.isAuthorized) {
+      return NextResponse.json({ success: false, error: auth.error }, { status: auth.statusCode || 403 });
     }
 
     const body = await request.json();

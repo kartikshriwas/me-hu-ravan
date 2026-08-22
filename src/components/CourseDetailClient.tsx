@@ -112,7 +112,7 @@ function getUnitMetaConfig(unit: CourseSectionUnit) {
       icon: FileCheck2,
       colorClass: 'bg-indigo-600/20 text-indigo-400 border-indigo-500/30',
       isActionableVideo: false,
-      isActionableExam: false
+      isActionableExam: true
     };
   }
   if (type === 'quizinformal') {
@@ -122,7 +122,7 @@ function getUnitMetaConfig(unit: CourseSectionUnit) {
       icon: HelpCircle,
       colorClass: 'bg-purple-600/20 text-purple-400 border-purple-500/30',
       isActionableVideo: false,
-      isActionableExam: false
+      isActionableExam: true
     };
   }
   if (type === 'quizformal') {
@@ -132,7 +132,7 @@ function getUnitMetaConfig(unit: CourseSectionUnit) {
       icon: FileCheck2,
       colorClass: 'bg-indigo-600/20 text-indigo-400 border-indigo-500/30',
       isActionableVideo: false,
-      isActionableExam: false
+      isActionableExam: true
     };
   }
   if (type === 'quizwritten') {
@@ -142,7 +142,7 @@ function getUnitMetaConfig(unit: CourseSectionUnit) {
       icon: FileEdit,
       colorClass: 'bg-violet-600/20 text-violet-400 border-violet-500/30',
       isActionableVideo: false,
-      isActionableExam: false
+      isActionableExam: true
     };
   }
   if (type === 'quizfiles') {
@@ -463,13 +463,40 @@ export function CourseDetailClient({ course, availableTests }: CourseDetailClien
                   // Read fileUrl directly from unit (parsed from course JSON)
                   const downloadUrl = unit.fileUrl;
 
-                  // Match existing practice tests if actionable assessmentV2
                   const matchingTest = config.isActionableExam
-                    ? availableTests.find(
-                        (t) =>
-                          t.quizId.toLowerCase() === `q${uIdx + 1}` ||
-                          (unit.unitTitle ? t.title.toLowerCase().includes(unit.unitTitle.toLowerCase()) : false)
-                      ) || availableTests[0]
+                    ? availableTests.find((t) => {
+                        // Priority 1: Exact object_id match (unit.id === t.objectId)
+                        if (unit.id && (t.objectId === unit.id || t.assessmentId === unit.id)) {
+                          return true;
+                        }
+                        // Priority 2: Exact assessmentId match (unit.data.assessmentId === t.assessmentId)
+                        if (unit.data?.assessmentId && (t.assessmentId === unit.data.assessmentId || t.objectId === unit.data.assessmentId)) {
+                          return true;
+                        }
+                        return false;
+                      }) ||
+                      availableTests.find((t) => {
+                        // Priority 3: Exact title/quizId match
+                        const cleanUnitTitle = (unit.unitTitle || '').toLowerCase().trim();
+                        const cleanQuizId = t.quizId.toLowerCase().trim();
+                        return cleanUnitTitle && cleanQuizId === cleanUnitTitle;
+                      }) ||
+                      availableTests.find((t) => {
+                        // Priority 4: Number extraction match (e.g. if unitTitle has "13" and quizId has "13")
+                        const cleanUnitTitle = (unit.unitTitle || '').toLowerCase().trim();
+                        const cleanQuizId = t.quizId.toLowerCase().trim();
+                        const unitNum = cleanUnitTitle.match(/\d+/)?.[0];
+                        const quizNum = cleanQuizId.match(/\d+/)?.[0];
+                        if (unitNum && quizNum && unitNum === quizNum) {
+                          const baseUnit = cleanUnitTitle.replace(/\d+/g, '').trim();
+                          const baseQuiz = cleanQuizId.replace(/\d+/g, '').trim();
+                          if (baseUnit && baseQuiz && (baseUnit.includes(baseQuiz) || baseQuiz.includes(baseUnit))) {
+                            return true;
+                          }
+                        }
+                        return false;
+                      }) ||
+                      availableTests[0]
                     : null;
 
                   return (
@@ -486,9 +513,9 @@ export function CourseDetailClient({ course, availableTests }: CourseDetailClien
                           <p className="text-sm font-semibold text-slate-200">
                             {unit.unitTitle !== 'Untitled' ? unit.unitTitle : `${section.title} Lesson ${uIdx + 1}`}
                           </p>
-                          <span className="text-[11px] text-slate-400 capitalize flex items-center gap-1.5 mt-0.5">
+                          {/* <span className="text-[11px] text-slate-400 capitalize flex items-center gap-1.5 mt-0.5">
                             <span>{config.typeLabel}</span>
-                          </span>
+                          </span> */}
                         </div>
                       </div>
 

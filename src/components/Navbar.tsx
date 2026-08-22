@@ -310,7 +310,7 @@ export function Navbar() {
                         className="w-full flex items-center gap-2.5 px-3 py-2 rounded-xl text-xs font-bold text-amber-300 bg-amber-500/10 border border-amber-500/20 hover:bg-amber-500/20 transition-all group 2xl:hidden"
                       >
                         <ShieldCheck className="w-4 h-4 text-amber-400 group-hover:scale-110 transition-transform" />
-                        <span>Admin Control Panel</span>
+                        <span>Admin Panel</span>
                       </Link>
                     )}
 

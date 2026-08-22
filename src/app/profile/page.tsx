@@ -18,7 +18,8 @@ import {
   ArrowRight,
   CheckCircle2,
   Lock,
-  RotateCcw
+  RotateCcw,
+  BookOpen
 } from 'lucide-react';
 
 interface ProfileData {
@@ -30,6 +31,7 @@ interface ProfileData {
     role: 'superadmin' | 'admin' | 'user';
     adminPermissions: string[];
     isPremium: boolean;
+    hasCourseAccess?: boolean;
     premiumExpiresAt?: string | null;
     premiumPlan?: string;
     totalScore: number;
@@ -161,11 +163,14 @@ export default function ProfilePage() {
   }
 
   const u = profile?.user || {
+    id: '',
     name: authUser.name,
     email: authUser.email,
     image: authUser.image,
     role: authUser.role || 'user',
+    adminPermissions: authUser.adminPermissions || [],
     isPremium: !!authUser.isPremium,
+    hasCourseAccess: !!authUser.isPremium || authUser.role === 'admin' || authUser.role === 'superadmin' || authUser.adminPermissions?.includes('access_courses'),
     premiumExpiresAt: authUser.premiumExpiresAt,
     premiumPlan: authUser.premiumPlan || 'free',
     totalScore: authUser.totalScore || 0,
@@ -211,6 +216,12 @@ export default function ProfilePage() {
                     Free Plan
                   </span>
                 )}
+
+                {u.hasCourseAccess && (
+                  <span className="px-2.5 py-0.5 rounded-full text-xs font-bold bg-purple-500/20 text-purple-300 border border-purple-500/40 flex items-center gap-1 shadow-sm">
+                    <BookOpen className="w-3.5 h-3.5 text-purple-400" /> Full Course Access
+                  </span>
+                )}
               </div>
 
               <p className="text-xs text-slate-300 font-medium">{u.email}</p>
@@ -230,16 +241,7 @@ export default function ProfilePage() {
           </div>
 
           {/* Admin Control Panel Access CTA Button */}
-          {isAdmin && (
-            <Link
-              href="/admin"
-              className="px-5 py-3 rounded-2xl bg-gradient-to-r from-amber-500 via-indigo-600 to-purple-600 hover:from-amber-400 hover:to-indigo-500 text-white font-black text-xs shadow-xl shadow-indigo-600/30 transition-all flex items-center gap-2 shrink-0 group"
-            >
-              <ShieldCheck className="w-4 h-4 text-amber-300 group-hover:rotate-12 transition-transform" />
-              <span>Admin Control Panel</span>
-              <ArrowRight className="w-4 h-4" />
-            </Link>
-          )}
+
         </div>
       </div>
 

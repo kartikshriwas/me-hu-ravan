@@ -12,6 +12,8 @@ export interface IRedeemCode extends Document {
   usedCount: number;
   usedBy: IRedeemCodeUserUsage[];
   expiresAt?: Date | null;
+  grantType: 'all_premium' | 'quizzes_only' | 'specific_courses';
+  grantedCourses: string[];
   createdBy: string;
   batchName?: string;
   isActive: boolean;
@@ -32,6 +34,8 @@ const RedeemCodeSchema: Schema<IRedeemCode> = new Schema(
       },
     ],
     expiresAt: { type: Date, default: null },
+    grantType: { type: String, enum: ['all_premium', 'quizzes_only', 'specific_courses'], default: 'all_premium' },
+    grantedCourses: { type: [String], default: [] },
     createdBy: { type: String, required: true },
     batchName: { type: String, default: 'General' },
     isActive: { type: Boolean, default: true },

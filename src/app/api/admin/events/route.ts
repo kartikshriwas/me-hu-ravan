@@ -1,34 +1,14 @@
 import { NextResponse } from 'next/server';
 import { getSessionFromRequest } from '@/lib/session';
-import { connectToDatabase } from '@/lib/db';
-import { User } from '@/models/User';
+import { verifyAdminPermission } from '@/lib/adminAuth';
 import { LaunchEvent } from '@/models/LaunchEvent';
-
-const SUPERADMIN_EMAIL = 'fykartik@gmail.com';
 
 export async function GET(request: Request) {
   try {
     const sessionUser = getSessionFromRequest(request);
-    if (!sessionUser) {
-      return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 });
-    }
-
-    const cleanEmail = sessionUser.email.toLowerCase().trim();
-    const isSuperadmin = cleanEmail === SUPERADMIN_EMAIL;
-
-    const conn = await connectToDatabase();
-    if (!conn) {
-      return NextResponse.json({ success: false, error: 'Database error' }, { status: 500 });
-    }
-
-    let isAdmin = isSuperadmin;
-    if (!isAdmin) {
-      const currentUser = await User.findOne({ email: cleanEmail }).select('role').lean();
-      isAdmin = currentUser?.role === 'superadmin' || currentUser?.role === 'admin';
-    }
-
-    if (!isAdmin) {
-      return NextResponse.json({ success: false, error: 'Admin access required' }, { status: 403 });
+    const auth = await verifyAdminPermission(sessionUser?.email, 'manage_events');
+    if (!auth.isAuthorized) {
+      return NextResponse.json({ success: false, error: auth.error }, { status: auth.statusCode || 403 });
     }
 
     const events = await LaunchEvent.find().sort({ createdAt: -1 }).lean();
@@ -56,23 +36,9 @@ export async function GET(request: Request) {
 export async function POST(request: Request) {
   try {
     const sessionUser = getSessionFromRequest(request);
-    if (!sessionUser) {
-      return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 });
-    }
-
-    const cleanEmail = sessionUser.email.toLowerCase().trim();
-    const isSuperadmin = cleanEmail === SUPERADMIN_EMAIL;
-
-    const conn = await connectToDatabase();
-    if (!conn) {
-      return NextResponse.json({ success: false, error: 'Database error' }, { status: 500 });
-    }
-
-    const currentUser = await User.findOne({ email: cleanEmail }).lean();
-    const isAdmin = isSuperadmin || currentUser?.role === 'superadmin' || currentUser?.role === 'admin';
-
-    if (!isAdmin) {
-      return NextResponse.json({ success: false, error: 'Admin access required' }, { status: 403 });
+    const auth = await verifyAdminPermission(sessionUser?.email, 'manage_events');
+    if (!auth.isAuthorized) {
+      return NextResponse.json({ success: false, error: auth.error }, { status: auth.statusCode || 403 });
     }
 
     const body = await request.json();
@@ -102,7 +68,7 @@ export async function POST(request: Request) {
       durationDays: parseInt(durationDays) || 365,
       isActive: Boolean(isActive),
       claimedUsers: [],
-      createdBy: cleanEmail,
+      createdBy: sessionUser!.email.toLowerCase().trim(),
     });
 
     return NextResponse.json({

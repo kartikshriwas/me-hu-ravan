@@ -1,38 +1,18 @@
 import { NextResponse } from 'next/server';
 import { getSessionFromRequest } from '@/lib/session';
-import { connectToDatabase } from '@/lib/db';
+import { verifyAdminPermission, SUPERADMIN_EMAIL } from '@/lib/adminAuth';
 import { User } from '@/models/User';
-
-const SUPERADMIN_EMAIL = 'fykartik@gmail.com';
 
 export async function GET(request: Request) {
   try {
     const sessionUser = getSessionFromRequest(request);
-    if (!sessionUser) {
-      return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 });
-    }
-
-    const cleanEmail = sessionUser.email.toLowerCase().trim();
-    const isSuperadmin = cleanEmail === SUPERADMIN_EMAIL;
-
-    const conn = await connectToDatabase();
-    if (!conn) {
-      return NextResponse.json({ success: false, error: 'Database error' }, { status: 500 });
-    }
-
-    // Fast-path: Superadmin bypasses extra User lookup query
-    let isAdmin = isSuperadmin;
-    if (!isAdmin) {
-      const currentUser = await User.findOne({ email: cleanEmail }).select('role').lean();
-      isAdmin = currentUser?.role === 'superadmin' || currentUser?.role === 'admin';
-    }
-
-    if (!isAdmin) {
-      return NextResponse.json({ success: false, error: 'Admin access required' }, { status: 403 });
+    const auth = await verifyAdminPermission(sessionUser?.email, 'manage_users');
+    if (!auth.isAuthorized) {
+      return NextResponse.json({ success: false, error: auth.error }, { status: auth.statusCode || 403 });
     }
 
     const users = await User.find()
-      .select('_id name email image role adminPermissions isPremium premiumExpiresAt premiumPlan totalScore testsCompleted createdAt')
+      .select('_id name email image role adminPermissions isPremium premiumExpiresAt premiumPlan grantedCourses totalScore testsCompleted createdAt')
       .sort({ createdAt: -1 })
       .limit(200)
       .lean();
@@ -49,6 +29,7 @@ export async function GET(request: Request) {
         isPremium: !!u.isPremium,
         premiumExpiresAt: u.premiumExpiresAt ? new Date(u.premiumExpiresAt).toISOString() : null,
         premiumPlan: u.premiumPlan || 'free',
+        grantedCourses: u.grantedCourses || [],
         totalScore: u.totalScore || 0,
         testsCompleted: u.testsCompleted || 0,
         createdAt: new Date(u.createdAt).toISOString(),
@@ -63,37 +44,25 @@ export async function GET(request: Request) {
 export async function POST(request: Request) {
   try {
     const sessionUser = getSessionFromRequest(request);
-    if (!sessionUser) {
-      return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 });
-    }
-
-    const cleanEmail = sessionUser.email.toLowerCase().trim();
-    const isSuperadmin = cleanEmail === SUPERADMIN_EMAIL;
-
-    const conn = await connectToDatabase();
-    if (!conn) {
-      return NextResponse.json({ success: false, error: 'Database error' }, { status: 500 });
-    }
-
-    let isSuperOrAdmin = isSuperadmin;
-    if (!isSuperOrAdmin) {
-      const currentUser = await User.findOne({ email: cleanEmail }).select('role').lean();
-      isSuperOrAdmin = currentUser?.role === 'superadmin';
-    }
-
-    // Only Superadmin can grant/revoke Admin role or permissions
-    if (!isSuperOrAdmin) {
-      return NextResponse.json({ success: false, error: 'Only Super Admin can manage admin permissions' }, { status: 403 });
+    const auth = await verifyAdminPermission(sessionUser?.email, 'manage_users');
+    if (!auth.isAuthorized) {
+      return NextResponse.json({ success: false, error: auth.error }, { status: auth.statusCode || 403 });
     }
 
     const body = await request.json();
-    const { targetEmail, role, adminPermissions, isPremium, durationDays } = body;
+    const { targetEmail, role, adminPermissions, isPremium, durationDays, grantedCourses } = body;
 
     if (!targetEmail || typeof targetEmail !== 'string') {
       return NextResponse.json({ success: false, error: 'Target email is required' }, { status: 400 });
     }
 
     const cleanTarget = targetEmail.toLowerCase().trim();
+
+    // Modifying role or granular admin permissions requires Superadmin privileges
+    const isAssigningAdmin = (role && role !== 'user') || (Array.isArray(adminPermissions) && adminPermissions.length > 0);
+    if (isAssigningAdmin && !auth.isSuperadmin) {
+      return NextResponse.json({ success: false, error: 'Only Superadmin can assign Admin roles or permissions' }, { status: 403 });
+    }
 
     // Prevent demoting primary superadmin
     if (cleanTarget === SUPERADMIN_EMAIL && role && role !== 'superadmin') {
@@ -113,13 +82,17 @@ export async function POST(request: Request) {
       targetUser.adminPermissions = adminPermissions;
     }
 
+    if (Array.isArray(grantedCourses)) {
+      targetUser.grantedCourses = grantedCourses;
+    }
+
     if (typeof isPremium === 'boolean') {
       targetUser.isPremium = isPremium;
       if (isPremium) {
         const numDur = parseInt(durationDays) || 365;
         targetUser.premiumExpiresAt = numDur < 3650 ? new Date(Date.now() + numDur * 24 * 60 * 60 * 1000) : null;
         targetUser.premiumPlan = 'admin_role_grant';
-        targetUser.grantedBy = cleanEmail;
+        targetUser.grantedBy = sessionUser!.email.toLowerCase().trim();
       }
     }
 
@@ -127,7 +100,7 @@ export async function POST(request: Request) {
 
     return NextResponse.json({
       success: true,
-      message: `User ${targetUser.email} permissions updated successfully!`,
+      message: `User ${targetUser.email} profile & course access updated successfully!`,
       user: {
         id: targetUser._id.toString(),
         name: targetUser.name,
@@ -135,6 +108,7 @@ export async function POST(request: Request) {
         role: targetUser.role,
         adminPermissions: targetUser.adminPermissions,
         isPremium: targetUser.isPremium,
+        grantedCourses: targetUser.grantedCourses,
       },
     });
   } catch (error) {

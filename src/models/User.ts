@@ -11,6 +11,7 @@ export interface IUser extends Document {
   premiumExpiresAt?: Date | null;
   premiumPlan?: string;
   grantedBy?: string;
+  grantedCourses: string[];
   totalScore: number;
   testsCompleted: number;
   averageAccuracy: number;
@@ -30,6 +31,7 @@ const UserSchema: Schema<IUser> = new Schema(
     premiumExpiresAt: { type: Date, default: null },
     premiumPlan: { type: String, default: 'free' },
     grantedBy: { type: String, default: '' },
+    grantedCourses: { type: [String], default: [] },
     totalScore: { type: Number, default: 0 },
     testsCompleted: { type: Number, default: 0 },
     averageAccuracy: { type: Number, default: 0 },
