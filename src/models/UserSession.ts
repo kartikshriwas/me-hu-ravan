@@ -53,7 +53,7 @@ const UserSessionSchema: Schema<IUserSession> = new Schema(
     activeSeconds: { type: Number, default: 0 },
     idleSeconds: { type: Number, default: 0 },
     focusSeconds: { type: Number, default: 0 },
-    lastHeartbeat: { type: Date, default: Date.now, index: true },
+    lastHeartbeat: { type: Date, default: Date.now },
     startedAt: { type: Date, default: Date.now },
     deviceType: { type: String, enum: ['desktop', 'mobile', 'tablet'], default: 'desktop' },
     browser: { type: String, default: 'Chrome' },
