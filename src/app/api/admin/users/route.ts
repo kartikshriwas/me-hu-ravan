@@ -12,7 +12,7 @@ export async function GET(request: Request) {
     }
 
     const users = await User.find()
-      .select('_id name email image role adminPermissions isPremium premiumExpiresAt premiumPlan totalScore testsCompleted createdAt')
+      .select('_id name email image role adminPermissions allowedBatches isPremium premiumExpiresAt premiumPlan totalScore testsCompleted createdAt')
       .sort({ createdAt: -1 })
       .limit(200)
       .lean();
@@ -26,6 +26,7 @@ export async function GET(request: Request) {
         image: u.image,
         role: u.role || (u.email === SUPERADMIN_EMAIL ? 'superadmin' : 'user'),
         adminPermissions: u.adminPermissions || [],
+        allowedBatches: u.allowedBatches || [],
         isPremium: !!u.isPremium,
         premiumExpiresAt: u.premiumExpiresAt ? new Date(u.premiumExpiresAt).toISOString() : null,
         premiumPlan: u.premiumPlan || 'free',
@@ -49,7 +50,7 @@ export async function POST(request: Request) {
     }
 
     const body = await request.json();
-    const { targetEmail, role, adminPermissions, isPremium, durationDays } = body;
+    const { targetEmail, role, adminPermissions, allowedBatches, isPremium, durationDays } = body;
 
     if (!targetEmail || typeof targetEmail !== 'string') {
       return NextResponse.json({ success: false, error: 'Target email is required' }, { status: 400 });
@@ -81,6 +82,10 @@ export async function POST(request: Request) {
       targetUser.adminPermissions = adminPermissions;
     }
 
+    if (Array.isArray(allowedBatches)) {
+      targetUser.allowedBatches = allowedBatches;
+    }
+
     if (typeof isPremium === 'boolean') {
       targetUser.isPremium = isPremium;
       if (isPremium) {
@@ -102,6 +107,7 @@ export async function POST(request: Request) {
         email: targetUser.email,
         role: targetUser.role,
         adminPermissions: targetUser.adminPermissions,
+        allowedBatches: targetUser.allowedBatches,
         isPremium: targetUser.isPremium,
       },
     });

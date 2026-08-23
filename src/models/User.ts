@@ -7,6 +7,7 @@ export interface IUser extends Document {
   googleId?: string;
   role: 'superadmin' | 'admin' | 'user';
   adminPermissions: string[];
+  allowedBatches?: string[];
   isPremium: boolean;
   premiumExpiresAt?: Date | null;
   premiumPlan?: string;
@@ -26,6 +27,7 @@ const UserSchema: Schema<IUser> = new Schema(
     googleId: { type: String, default: '' },
     role: { type: String, enum: ['superadmin', 'admin', 'user'], default: 'user' },
     adminPermissions: { type: [String], default: [] },
+    allowedBatches: { type: [String], default: [] },
     isPremium: { type: Boolean, default: false },
     premiumExpiresAt: { type: Date, default: null },
     premiumPlan: { type: String, default: 'free' },

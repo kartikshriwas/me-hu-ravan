@@ -24,7 +24,7 @@ export async function GET(request: Request) {
 
     // Execute User query, recent Attempts fetch, and GlobalFree check in parallel
     const [dbUser, attempts, globalFreeConfig] = await Promise.all([
-      User.findOne({ email: cleanEmail }).select('_id name email image role adminPermissions isPremium premiumExpiresAt premiumPlan totalScore testsCompleted averageAccuracy createdAt').lean(),
+      User.findOne({ email: cleanEmail }).select('_id name email image role adminPermissions allowedBatches isPremium premiumExpiresAt premiumPlan totalScore testsCompleted averageAccuracy createdAt').lean(),
       Attempt.find({ userEmail: cleanEmail }).select('_id quizId quizTitle score maxScore accuracy isFirstAttempt timestamp createdAt').sort({ createdAt: -1 }).limit(50).lean(),
       isPlatformGlobalFree(),
     ]);
@@ -70,7 +70,9 @@ export async function GET(request: Request) {
 
     const userRole = dbUser?.role || (isSuperadmin ? 'superadmin' : 'user');
     const userPerms: string[] = dbUser?.adminPermissions || [];
-    const hasCourseAccess = isSuperadmin || userRole === 'superadmin' || userRole === 'admin' || isPremium || userPerms.includes('access_courses') || userPerms.includes('*');
+    const userBatches: string[] = dbUser?.allowedBatches || [];
+    const courseBatches = userBatches.filter(b => !b.toLowerCase().includes('quiz'));
+    const hasCourseAccess = isSuperadmin || userRole === 'superadmin' || userRole === 'admin' || userPerms.includes('access_courses') || userPerms.includes('*') || courseBatches.length > 0;
 
     return NextResponse.json({
       success: true,
@@ -81,6 +83,7 @@ export async function GET(request: Request) {
         image: dbUser?.image || sessionUser.image,
         role: userRole,
         adminPermissions: userPerms,
+        allowedBatches: userBatches,
         isPremium,
         hasCourseAccess,
         premiumExpiresAt: premiumExpiresAt ? new Date(premiumExpiresAt).toISOString() : null,

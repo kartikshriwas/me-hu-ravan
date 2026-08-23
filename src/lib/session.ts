@@ -11,6 +11,7 @@ export interface SessionUser {
   image?: string;
   role?: 'superadmin' | 'admin' | 'user';
   adminPermissions?: string[];
+  allowedBatches?: string[];
   isPremium?: boolean;
   premiumExpiresAt?: string | null;
   premiumPlan?: string;
@@ -25,6 +26,7 @@ export function createSessionToken(user: SessionUser): string {
     image: user.image || '',
     role: user.role || 'user',
     adminPermissions: user.adminPermissions || [],
+    allowedBatches: user.allowedBatches || [],
     isPremium: !!user.isPremium,
     premiumExpiresAt: user.premiumExpiresAt || null,
     premiumPlan: user.premiumPlan || 'free',
@@ -72,6 +74,7 @@ export function verifySessionToken(token: string | undefined | null): SessionUse
       image: data.image,
       role: data.role || 'user',
       adminPermissions: data.adminPermissions || [],
+      allowedBatches: data.allowedBatches || [],
       isPremium: !!data.isPremium,
       premiumExpiresAt: data.premiumExpiresAt || null,
       premiumPlan: data.premiumPlan || 'free',

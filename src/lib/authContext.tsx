@@ -12,6 +12,7 @@ export interface AuthUser {
   image?: string;
   role?: 'superadmin' | 'admin' | 'user';
   adminPermissions?: string[];
+  allowedBatches?: string[];
   isPremium?: boolean;
   premiumExpiresAt?: string | null;
   premiumPlan?: string;

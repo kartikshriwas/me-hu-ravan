@@ -13,12 +13,12 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ s
   const sessionCookie = cookieStore.get('preptea_session')?.value;
   const sessionUser = verifySessionToken(sessionCookie);
 
-  const allowed = await hasCoursesAccess(sessionUser);
+  const { slug } = await params;
+  const allowed = await hasCoursesAccess(sessionUser, slug);
   if (!allowed) {
     notFound();
   }
 
-  const { slug } = await params;
   const course = getCourseBySlug(slug);
   const availableTests = getAllAssessments();
 

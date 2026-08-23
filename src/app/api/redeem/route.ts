@@ -59,6 +59,8 @@ export async function POST(request: Request) {
       newExpiresAt = new Date(now.getTime() + durationDays * 24 * 60 * 60 * 1000);
     }
 
+    const batchNameToGrant = redeemRecord.batchName || 'General';
+
     // Update User premium status in DB
     const updatedUser = await User.findOneAndUpdate(
       { email: userEmail },
@@ -69,6 +71,9 @@ export async function POST(request: Request) {
           premiumPlan: `code:${cleanCode}`,
           grantedBy: `code:${cleanCode}`,
           lastActiveAt: new Date(),
+        },
+        $addToSet: {
+          allowedBatches: batchNameToGrant,
         },
       },
       { returnDocument: 'after' }
@@ -90,6 +95,7 @@ export async function POST(request: Request) {
       image: updatedUser.image,
       role: updatedUser.role || 'user',
       adminPermissions: updatedUser.adminPermissions || [],
+      allowedBatches: updatedUser.allowedBatches || [],
       isPremium: true,
       premiumExpiresAt: newExpiresAt ? newExpiresAt.toISOString() : null,
       premiumPlan: updatedUser.premiumPlan,

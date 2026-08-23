@@ -47,6 +47,7 @@ export async function GET(request: Request) {
           image: user.image,
           role: user.role || (isSuperadmin ? 'superadmin' : 'user'),
           adminPermissions: user.adminPermissions || [],
+          allowedBatches: user.allowedBatches || [],
           isPremium,
           premiumExpiresAt: premiumExpiresAt ? new Date(premiumExpiresAt).toISOString() : null,
           premiumPlan,
