@@ -36,8 +36,6 @@ export async function GET(request: Request) {
         usedCount: c.usedCount,
         usedBy: c.usedBy || [],
         expiresAt: c.expiresAt ? new Date(c.expiresAt).toISOString() : null,
-        grantType: c.grantType || 'all_premium',
-        grantedCourses: c.grantedCourses || [],
         createdBy: c.createdBy,
         batchName: c.batchName || 'General',
         isActive: c.isActive,
@@ -59,16 +57,7 @@ export async function POST(request: Request) {
     }
 
     const body = await request.json();
-    const {
-      count = 1,
-      durationDays = 365,
-      maxUses = 1,
-      prefix = 'PREPTEA',
-      batchName = 'General',
-      expiresDays,
-      grantType = 'all_premium',
-      grantedCourses = [],
-    } = body;
+    const { count = 1, durationDays = 365, maxUses = 1, prefix = 'PREPTEA', batchName = 'General', expiresDays } = body;
 
     const numCount = Math.min(Math.max(parseInt(count) || 1, 1), 100);
     const numDuration = parseInt(durationDays) || 365;
@@ -96,8 +85,6 @@ export async function POST(request: Request) {
         usedCount: 0,
         usedBy: [],
         expiresAt,
-        grantType,
-        grantedCourses: Array.isArray(grantedCourses) ? grantedCourses : [],
         createdBy: sessionUser!.email.toLowerCase().trim(),
         batchName: batchName || 'General',
         isActive: true,
@@ -108,7 +95,7 @@ export async function POST(request: Request) {
 
     return NextResponse.json({
       success: true,
-      message: `Generated ${createdCodes.length} custom redeem code(s) successfully!`,
+      message: `Generated ${createdCodes.length} redeem codes successfully!`,
       codes: createdCodes,
     });
   } catch (error) {

@@ -25,7 +25,7 @@ export default async function VideoPlayerPage({ params }: PageProps) {
   const sessionCookie = cookieStore.get('preptea_session')?.value;
   const sessionUser = verifySessionToken(sessionCookie);
 
-  const allowed = await hasCoursesAccess(sessionUser, slug);
+  const allowed = await hasCoursesAccess(sessionUser);
   if (!allowed) {
     notFound();
   }

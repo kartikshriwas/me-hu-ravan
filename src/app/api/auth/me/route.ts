@@ -21,9 +21,19 @@ export async function GET(request: Request) {
 
       const user = await User.findOne({ email: cleanEmail }).lean();
       if (user) {
-        const { isGlobalFree } = await isPlatformGlobalFree();
+        const { isGlobalFree, freeUntil } = await isPlatformGlobalFree();
         let isPremium = user.isPremium || isSuperadmin || isGlobalFree;
         let premiumExpiresAt = user.premiumExpiresAt || null;
+        let premiumPlan = user.premiumPlan || (isSuperadmin ? 'superadmin' : 'free');
+
+        if (!user.isPremium && !isSuperadmin && isGlobalFree) {
+          if (freeUntil) {
+            premiumExpiresAt = freeUntil;
+          }
+          if (premiumPlan === 'free') {
+            premiumPlan = 'Global Free Access';
+          }
+        }
 
         // Check if premium expired
         if (isPremium && !isSuperadmin && !isGlobalFree && premiumExpiresAt && new Date(premiumExpiresAt) < new Date()) {
@@ -39,7 +49,7 @@ export async function GET(request: Request) {
           adminPermissions: user.adminPermissions || [],
           isPremium,
           premiumExpiresAt: premiumExpiresAt ? new Date(premiumExpiresAt).toISOString() : null,
-          premiumPlan: user.premiumPlan || 'free',
+          premiumPlan,
           totalScore: user.totalScore || 0,
           testsCompleted: user.testsCompleted || 0,
         };

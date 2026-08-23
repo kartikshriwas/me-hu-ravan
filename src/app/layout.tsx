@@ -3,8 +3,6 @@ import './globals.css';
 import { Navbar } from '@/components/Navbar';
 import { ActivityTracker } from '@/components/ActivityTracker';
 import { AuthProvider } from '@/lib/authContext';
-import { AutoRedeemHandler } from '@/components/AutoRedeemHandler';
-
 export const metadata: Metadata = {
   title: 'PrepTea',
   description: 'Master quantitative aptitude, logical reasoning, and and much more with dynamic test papers.',
@@ -20,7 +18,6 @@ export default function RootLayout({
       <body suppressHydrationWarning className="antialiased bg-[#0b0f19] text-slate-100 flex flex-col min-h-screen">
         <AuthProvider>
           <ActivityTracker />
-          <AutoRedeemHandler />
           <Navbar />
           <main className="flex-1 max-w-7xl w-full mx-auto px-3 sm:px-6 lg:px-8 py-4 sm:py-8">
             {children}

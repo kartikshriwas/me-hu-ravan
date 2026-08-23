@@ -279,7 +279,7 @@ export default function ProfilePage() {
                 </p>
                 <div className="pt-2 text-xs text-slate-400 border-t border-emerald-500/20 flex items-center justify-between">
                   <span>Plan: <strong className="text-slate-200 capitalize">{u.premiumPlan}</strong></span>
-                  <span>Expires: <strong className="text-amber-300">{u.premiumExpiresAt ? new Date(u.premiumExpiresAt).toLocaleDateString() : 'Lifetime Pass'}</strong></span>
+                  <span>Expires: <strong className="text-amber-300">{u.premiumExpiresAt ? new Date(u.premiumExpiresAt).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) : 'Lifetime Pass'}</strong></span>
                 </div>
               </div>
             ) : (
@@ -291,13 +291,6 @@ export default function ProfilePage() {
               </div>
             )}
           </div>
-
-          <div className="pt-2">
-            <div className="flex items-center gap-2 text-xs text-slate-400">
-              <Sparkles className="w-4 h-4 text-indigo-400 shrink-0" />
-              <span>Need help with batch access? Contact your administrator.</span>
-            </div>
-          </div>
         </div>
 
         {/* Redeem Code Input Box */}
@@ -307,10 +300,6 @@ export default function ProfilePage() {
               <Key className="w-5 h-5 text-indigo-400" />
               <span>Redeem Promo Code</span>
             </h2>
-            <p className="text-xs text-slate-400">
-              Enter your access key or batch code to activate your Premium Candidate Pass.
-            </p>
-
             <form onSubmit={handleRedeemCode} className="space-y-3">
               <div className="flex items-center gap-2">
                 <input
@@ -343,10 +332,6 @@ export default function ProfilePage() {
                 </p>
               )}
             </form>
-          </div>
-
-          <div className="pt-2 text-[11px] text-slate-500">
-            Codes are one-time use or multi-claim depending on your batch issuer.
           </div>
         </div>
 

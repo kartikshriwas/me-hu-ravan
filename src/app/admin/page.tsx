@@ -133,8 +133,6 @@ interface RedeemCodeItem {
   usedCount: number;
   usedBy: Array<{ userEmail: string; usedAt: string }>;
   expiresAt: string | null;
-  grantType?: 'all_premium' | 'quizzes_only' | 'specific_courses';
-  grantedCourses?: string[];
   createdBy: string;
   batchName: string;
   isActive: boolean;
@@ -173,7 +171,6 @@ interface AdminUserItem {
   isPremium: boolean;
   premiumExpiresAt: string | null;
   premiumPlan: string;
-  grantedCourses: string[];
   totalScore: number;
   testsCompleted: number;
   createdAt: string;
@@ -211,10 +208,7 @@ export default function AdminDashboardPage() {
   const [codeDuration, setCodeDuration] = useState(365);
   const [codeMaxUses, setCodeMaxUses] = useState(1);
   const [codeBatchName, setCodeBatchName] = useState('Batch Access');
-  const [codeGrantType, setCodeGrantType] = useState<'all_premium' | 'quizzes_only' | 'specific_courses'>('all_premium');
-  const [codeSelectedCourses, setCodeSelectedCourses] = useState<string[]>([]);
   const [generatingCodes, setGeneratingCodes] = useState(false);
-  const [availableCoursesList, setAvailableCoursesList] = useState<{ title: string; slug: string }[]>([]);
 
   // Event Creator Form
   const [eventTitle, setEventTitle] = useState('Launch Promo - Next 100 Free Premium');
@@ -358,23 +352,6 @@ export default function AdminDashboardPage() {
     }
   };
 
-  // Load Available Courses Catalog for selection
-  useEffect(() => {
-    if (!authUser || !isAdmin) return;
-    async function loadCoursesCatalog() {
-      try {
-        const res = await fetch('/api/courses');
-        const json = await res.json();
-        if (json.success && Array.isArray(json.data)) {
-          setAvailableCoursesList(json.data.map((c: any) => ({ title: c.title, slug: c.slug })));
-        }
-      } catch (err) {
-        console.error('Failed to load courses catalog:', err);
-      }
-    }
-    loadCoursesCatalog();
-  }, [authUser?.email, isAdmin]);
-
   // Code Generator Submit
   const handleGenerateCodes = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -392,14 +369,13 @@ export default function AdminDashboardPage() {
           durationDays: codeDuration,
           maxUses: codeMaxUses,
           batchName: codeBatchName,
-          grantType: codeGrantType,
-          grantedCourses: codeGrantType === 'specific_courses' ? codeSelectedCourses : [],
         }),
       });
 
       const json = await res.json();
       if (json.success) {
-        setFeedbackMsg(json.message || `Generated ${json.codes?.length || 1} code(s)!`);
+        setFeedbackMsg(json.message || `Generated ${json.codes.length} codes!`);
+        // reload codes
         const codeRes = await fetch('/api/admin/codes');
         const codeJson = await codeRes.json();
         if (codeJson.success) setCodes(codeJson.codes);
@@ -573,16 +549,9 @@ export default function AdminDashboardPage() {
 
   const [editingUserForPerms, setEditingUserForPerms] = useState<AdminUserItem | null>(null);
   const [selectedPerms, setSelectedPerms] = useState<string[]>([]);
-  const [selectedCoursesForUser, setSelectedCoursesForUser] = useState<string[]>([]);
 
-  // User Role, Permissions & Course Access Submit
-  const handleUpdateUser = async (
-    targetEmail: string,
-    role: string,
-    isPremium: boolean,
-    adminPermissions?: string[],
-    grantedCourses?: string[]
-  ) => {
+  // User Role & Permissions Submit
+  const handleUpdateUser = async (targetEmail: string, role: string, isPremium: boolean, adminPermissions?: string[]) => {
     try {
       setErrorMsg('');
       setFeedbackMsg('');
@@ -595,7 +564,6 @@ export default function AdminDashboardPage() {
           role,
           isPremium,
           adminPermissions: adminPermissions ?? [],
-          grantedCourses: grantedCourses ?? [],
           durationDays: 365,
         }),
       });
@@ -616,19 +584,14 @@ export default function AdminDashboardPage() {
 
   const openPermissionModal = (u: AdminUserItem) => {
     setEditingUserForPerms(u);
-    setSelectedPerms(u.adminPermissions && u.adminPermissions.length > 0 ? u.adminPermissions : []);
-    setSelectedCoursesForUser(u.grantedCourses && u.grantedCourses.length > 0 ? u.grantedCourses : []);
+    setSelectedPerms(u.adminPermissions && u.adminPermissions.length > 0
+      ? u.adminPermissions
+      : []);
   };
 
   const handleSavePermissions = async () => {
     if (!editingUserForPerms) return;
-    await handleUpdateUser(
-      editingUserForPerms.email,
-      editingUserForPerms.role,
-      editingUserForPerms.isPremium,
-      selectedPerms,
-      selectedCoursesForUser
-    );
+    await handleUpdateUser(editingUserForPerms.email, editingUserForPerms.role, editingUserForPerms.isPremium, selectedPerms);
     setEditingUserForPerms(null);
   };
 
@@ -775,7 +738,6 @@ export default function AdminDashboardPage() {
             >
               <Icon className="w-4 h-4" />
               <span>{tab.label}</span>
-              {!isAllowed && <span className="text-[9px] px-1.5 py-0.5 rounded bg-slate-800 text-slate-500 font-semibold ml-1">Locked</span>}
             </button>
           );
         })}
@@ -1563,62 +1525,7 @@ export default function AdminDashboardPage() {
                 />
               </div>
 
-              <div className="sm:col-span-2">
-                <label className="block text-[11px] font-semibold text-slate-400 mb-1">Access Grant Type</label>
-                <select
-                  value={codeGrantType}
-                  onChange={(e: any) => setCodeGrantType(e.target.value)}
-                  className="w-full px-3 py-2 rounded-xl bg-slate-900 border border-slate-800 text-xs font-bold text-white"
-                >
-                  <option value="all_premium">🌟 Full Premium</option>
-                  <option value="quizzes_only">🎯 Quizzes Only</option>
-                  <option value="specific_courses">📚 Course Access</option>
-                </select>
-              </div>
-
-              {codeGrantType === 'specific_courses' && (
-                <div className="sm:col-span-3 lg:col-span-5 space-y-2 p-3.5 rounded-2xl bg-slate-950 border border-purple-500/30">
-                  <div className="flex items-center justify-between">
-                    <label className="text-[11px] font-bold text-purple-300 flex items-center gap-1.5">
-                      <BookOpen className="w-3.5 h-3.5 text-purple-400" />
-                      <span>Select Unlocked Course(s):</span>
-                    </label>
-                    <button
-                      type="button"
-                      onClick={() => setCodeSelectedCourses(codeSelectedCourses.length === availableCoursesList.length ? [] : availableCoursesList.map(c => c.slug))}
-                      className="px-2.5 py-0.5 rounded-lg text-[10px] font-bold bg-slate-800 hover:bg-slate-700 text-purple-300 border border-purple-500/20"
-                    >
-                      {codeSelectedCourses.length === availableCoursesList.length ? 'Deselect All' : 'Select All Courses'}
-                    </button>
-                  </div>
-                  <div className="flex flex-wrap gap-2 max-h-36 overflow-y-auto pt-1">
-                    {availableCoursesList.map((course) => {
-                      const isSelected = codeSelectedCourses.includes(course.slug);
-                      return (
-                        <button
-                          key={course.slug}
-                          type="button"
-                          onClick={() => {
-                            setCodeSelectedCourses(prev =>
-                              prev.includes(course.slug) ? prev.filter(s => s !== course.slug) : [...prev, course.slug]
-                            );
-                          }}
-                          className={`px-3 py-1 rounded-xl text-xs font-bold transition-all border flex items-center gap-1.5 ${
-                            isSelected
-                              ? 'bg-purple-600 text-white border-purple-400 shadow-md shadow-purple-900/40'
-                              : 'bg-slate-900 text-slate-400 border-slate-800 hover:border-slate-700'
-                          }`}
-                        >
-                          <BookOpen className="w-3 h-3" />
-                          <span>{course.title}</span>
-                        </button>
-                      );
-                    })}
-                  </div>
-                </div>
-              )}
-
-              <div className="flex items-end sm:col-span-2 lg:col-span-1">
+              <div className="flex items-end">
                 <button
                   type="submit"
                   disabled={generatingCodes}
@@ -1659,14 +1566,27 @@ export default function AdminDashboardPage() {
                     <th className="py-3 px-4 text-center">Duration</th>
                     <th className="py-3 px-4 text-center">Uses</th>
                     <th className="py-3 px-4 text-center">Status</th>
-                    <th className="py-3 px-4 text-right">Actions</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-slate-800/60">
                   {codes.map((c) => (
                     <tr key={c.id} className="hover:bg-slate-900/40 text-slate-200 transition-colors">
-                      <td className="py-3 px-4 font-mono font-bold text-amber-300">
-                        {c.code}
+                      <td className="py-3 px-4">
+                        <button
+                          type="button"
+                          onClick={() => copyToClipboard(c.code, c.id)}
+                          className="font-mono font-bold text-amber-300 hover:text-amber-200 flex items-center gap-1.5 cursor-pointer text-left transition-colors group"
+                          title="Click to copy code"
+                        >
+                          <span>{c.code}</span>
+                          {copiedCodeId === c.id ? (
+                            <span className="text-[10px] text-emerald-400 font-semibold flex items-center gap-0.5 bg-emerald-950/60 px-1.5 py-0.5 rounded border border-emerald-500/30">
+                              <Check className="w-3 h-3 text-emerald-400" /> Copied!
+                            </span>
+                          ) : (
+                            <Copy className="w-3.5 h-3.5 text-slate-500 group-hover:text-amber-300 transition-colors opacity-70 group-hover:opacity-100" />
+                          )}
+                        </button>
                       </td>
                       <td className="py-3 px-4 text-slate-300 font-medium">
                         {c.batchName}
@@ -1687,24 +1607,6 @@ export default function AdminDashboardPage() {
                             Active
                           </span>
                         )}
-                      </td>
-                      <td className="py-3 px-4 text-right">
-                        <button
-                          onClick={() => copyToClipboard(c.code, c.id)}
-                          className="px-2.5 py-1 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-700 text-slate-300 hover:text-white font-bold text-[11px] inline-flex items-center gap-1 transition-colors"
-                        >
-                          {copiedCodeId === c.id ? (
-                            <>
-                              <Check className="w-3.5 h-3.5 text-emerald-400" />
-                              <span className="text-emerald-400">Copied!</span>
-                            </>
-                          ) : (
-                            <>
-                              <Copy className="w-3.5 h-3.5" />
-                              <span>Copy</span>
-                            </>
-                          )}
-                        </button>
                       </td>
                     </tr>
                   ))}
@@ -2003,7 +1905,6 @@ export default function AdminDashboardPage() {
                   <tr>
                     <th className="py-3 px-4">User</th>
                     <th className="py-3 px-4 text-center">Role</th>
-                    <th className="py-3 px-4 text-center">Course Grants</th>
                     <th className="py-3 px-4 text-center">Admin Rights</th>
                     <th className="py-3 px-4 text-right">Actions</th>
                   </tr>
@@ -2012,7 +1913,6 @@ export default function AdminDashboardPage() {
                   {filteredUsers.map((u) => {
                     const isSuper = u.email.toLowerCase() === 'fykartik@gmail.com';
                     const permCount = u.adminPermissions ? u.adminPermissions.length : 0;
-                    const courseGrantCount = u.grantedCourses ? u.grantedCourses.length : 0;
 
                     return (
                       <tr key={u.id} className="hover:bg-slate-900/40 text-slate-200 transition-colors">
@@ -2032,27 +1932,13 @@ export default function AdminDashboardPage() {
                           ) : (
                             <select
                               value={u.role}
-                              onChange={(e) => handleUpdateUser(u.email, e.target.value, u.isPremium, u.adminPermissions, u.grantedCourses)}
+                              onChange={(e) => handleUpdateUser(u.email, e.target.value, u.isPremium, u.adminPermissions)}
                               disabled={!isSuperadmin}
                               className="px-2 py-1 rounded-lg bg-slate-900 border border-slate-700 text-xs font-bold text-slate-200"
                             >
                               <option value="user">User</option>
                               <option value="admin">Admin</option>
                             </select>
-                          )}
-                        </td>
-
-                        <td className="py-3 px-4 text-center">
-                          {isSuper ? (
-                            <span className="text-[11px] font-bold text-purple-400">All Courses</span>
-                          ) : courseGrantCount > 0 ? (
-                            <span className="px-2.5 py-0.5 rounded-xl bg-purple-500/20 text-purple-300 border border-purple-500/30 text-[11px] font-bold">
-                              {u.grantedCourses.includes('*') || u.grantedCourses.includes('all') ? 'All Courses' : `${courseGrantCount} Courses`}
-                            </span>
-                          ) : u.isPremium && u.premiumPlan !== 'quizzes_only' ? (
-                            <span className="text-[11px] font-semibold text-emerald-400">Full Premium</span>
-                          ) : (
-                            <span className="text-[11px] text-slate-500">None</span>
                           )}
                         </td>
 
@@ -2077,7 +1963,7 @@ export default function AdminDashboardPage() {
   
 
                               <button
-                                onClick={() => handleUpdateUser(u.email, u.role, !u.isPremium, u.adminPermissions, u.grantedCourses)}
+                                onClick={() => handleUpdateUser(u.email, u.role, !u.isPremium, u.adminPermissions)}
                                 className={`px-3 py-1.5 rounded-xl text-[11px] font-bold transition-all ${
                                   u.isPremium
                                     ? 'bg-rose-950/40 text-rose-300 border border-rose-500/30 hover:bg-rose-900/60'
@@ -2177,52 +2063,6 @@ export default function AdminDashboardPage() {
                       </div>
                     );
                   })}
-                </div>
-
-                {/* Course Access Grants Section */}
-                <div className="pt-3 border-t border-slate-800 space-y-2">
-                  <div className="flex items-center justify-between">
-                    <label className="text-xs font-bold text-indigo-300 flex items-center gap-1.5">
-                      <BookOpen className="w-4 h-4 text-indigo-400" />
-                      <span>Specific Course Access Grants:</span>
-                    </label>
-                    <button
-                      type="button"
-                      onClick={() =>
-                        setSelectedCoursesForUser(
-                          selectedCoursesForUser.length === availableCoursesList.length ? [] : availableCoursesList.map((c) => c.slug)
-                        )
-                      }
-                      className="px-2 py-0.5 rounded-lg text-[10px] font-bold bg-slate-800 hover:bg-slate-700 text-indigo-300 border border-indigo-500/30"
-                    >
-                      {selectedCoursesForUser.length === availableCoursesList.length ? 'Deselect All' : 'Grant All Courses'}
-                    </button>
-                  </div>
-
-                  <div className="flex flex-wrap gap-1.5 max-h-36 overflow-y-auto pt-1">
-                    {availableCoursesList.map((course) => {
-                      const isGranted = selectedCoursesForUser.includes(course.slug);
-                      return (
-                        <button
-                          key={course.slug}
-                          type="button"
-                          onClick={() => {
-                            setSelectedCoursesForUser((prev) =>
-                              prev.includes(course.slug) ? prev.filter((s) => s !== course.slug) : [...prev, course.slug]
-                            );
-                          }}
-                          className={`px-2.5 py-1 rounded-xl text-xs font-bold transition-all border flex items-center gap-1 ${
-                            isGranted
-                              ? 'bg-indigo-600 text-white border-indigo-400 shadow-md shadow-indigo-900/40'
-                              : 'bg-slate-900/80 text-slate-400 border-slate-800 hover:border-slate-700'
-                          }`}
-                        >
-                          <BookOpen className="w-3 h-3 text-indigo-300" />
-                          <span>{course.title}</span>
-                        </button>
-                      );
-                    })}
-                  </div>
                 </div>
 
                 <div className="flex items-center justify-end gap-2 pt-2 border-t border-slate-800">

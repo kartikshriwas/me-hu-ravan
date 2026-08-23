@@ -12,7 +12,7 @@ export async function GET(request: Request) {
     }
 
     const users = await User.find()
-      .select('_id name email image role adminPermissions isPremium premiumExpiresAt premiumPlan grantedCourses totalScore testsCompleted createdAt')
+      .select('_id name email image role adminPermissions isPremium premiumExpiresAt premiumPlan totalScore testsCompleted createdAt')
       .sort({ createdAt: -1 })
       .limit(200)
       .lean();
@@ -29,7 +29,6 @@ export async function GET(request: Request) {
         isPremium: !!u.isPremium,
         premiumExpiresAt: u.premiumExpiresAt ? new Date(u.premiumExpiresAt).toISOString() : null,
         premiumPlan: u.premiumPlan || 'free',
-        grantedCourses: u.grantedCourses || [],
         totalScore: u.totalScore || 0,
         testsCompleted: u.testsCompleted || 0,
         createdAt: new Date(u.createdAt).toISOString(),
@@ -50,7 +49,7 @@ export async function POST(request: Request) {
     }
 
     const body = await request.json();
-    const { targetEmail, role, adminPermissions, isPremium, durationDays, grantedCourses } = body;
+    const { targetEmail, role, adminPermissions, isPremium, durationDays } = body;
 
     if (!targetEmail || typeof targetEmail !== 'string') {
       return NextResponse.json({ success: false, error: 'Target email is required' }, { status: 400 });
@@ -58,7 +57,7 @@ export async function POST(request: Request) {
 
     const cleanTarget = targetEmail.toLowerCase().trim();
 
-    // Modifying role or granular admin permissions requires Superadmin privileges
+    // Modifying role or granular permissions requires Superadmin privileges
     const isAssigningAdmin = (role && role !== 'user') || (Array.isArray(adminPermissions) && adminPermissions.length > 0);
     if (isAssigningAdmin && !auth.isSuperadmin) {
       return NextResponse.json({ success: false, error: 'Only Superadmin can assign Admin roles or permissions' }, { status: 403 });
@@ -82,10 +81,6 @@ export async function POST(request: Request) {
       targetUser.adminPermissions = adminPermissions;
     }
 
-    if (Array.isArray(grantedCourses)) {
-      targetUser.grantedCourses = grantedCourses;
-    }
-
     if (typeof isPremium === 'boolean') {
       targetUser.isPremium = isPremium;
       if (isPremium) {
@@ -100,7 +95,7 @@ export async function POST(request: Request) {
 
     return NextResponse.json({
       success: true,
-      message: `User ${targetUser.email} profile & course access updated successfully!`,
+      message: `User ${targetUser.email} permissions updated successfully!`,
       user: {
         id: targetUser._id.toString(),
         name: targetUser.name,
@@ -108,7 +103,6 @@ export async function POST(request: Request) {
         role: targetUser.role,
         adminPermissions: targetUser.adminPermissions,
         isPremium: targetUser.isPremium,
-        grantedCourses: targetUser.grantedCourses,
       },
     });
   } catch (error) {

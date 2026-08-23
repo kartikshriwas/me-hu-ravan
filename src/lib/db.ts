@@ -23,42 +23,66 @@ export async function connectToDatabase(): Promise<typeof mongoose> {
     throw new Error('MONGODB_URI is not defined in environment variables.');
   }
 
-  // If connection exists and is ready (readyState 1)
+  // 1. If active connection exists and readyState is 1 (connected), return immediately
   if (cached.conn && cached.conn.connection.readyState === 1) {
     return cached.conn;
   }
 
-  // Check if we need to start a new connection promise.
-  // We only reuse an existing promise if it exists AND the connection state is either 1 (connected) or 2 (connecting).
-  const readyState = cached.conn ? cached.conn.connection.readyState : 0;
-  const isConnectingOrConnected = readyState === 1 || readyState === 2;
+  // 2. If connection is in a failed/disconnected state (0 or 3), reset cached promise
+  const currentReadyState = cached.conn ? cached.conn.connection.readyState : mongoose.connection.readyState;
+  if (currentReadyState === 0 || currentReadyState === 3) {
+    cached.promise = null;
+    cached.conn = null;
+  }
 
-  if (!cached.promise || !isConnectingOrConnected) {
+  // 3. Initiate a single connection promise if none is currently pending
+  if (!cached.promise) {
     const opts: mongoose.ConnectOptions = {
       bufferCommands: false,
       maxPoolSize: 15,
       minPoolSize: 2,
-      serverSelectionTimeoutMS: 5000, // 5s timeout when cluster/network is down
-      connectTimeoutMS: 5000,
-      socketTimeoutMS: 15000,
-      family: 4, // Force IPv4 DNS lookup to prevent 5-10 second IPv6 timeout delays
+      serverSelectionTimeoutMS: 10000,
+      connectTimeoutMS: 10000,
+      socketTimeoutMS: 20000,
+      family: 4, // Force IPv4 DNS lookup to prevent IPv6 timeout delays
     };
 
-    cached.promise = mongoose.connect(MONGODB_URI, opts).then((m) => m);
+    cached.promise = mongoose.connect(MONGODB_URI, opts).then((m) => {
+      cached.conn = m;
+      return m;
+    }).catch((err) => {
+      cached.promise = null;
+      cached.conn = null;
+      throw err;
+    });
   }
 
   try {
     cached.conn = await cached.promise;
-    
-    if (cached.conn.connection.readyState !== 1) {
-      cached.promise = null;
-      throw new Error(`MongoDB connection state is ${cached.conn.connection.readyState} (not connected)`);
-    }
   } catch (e) {
-    console.error('Failed to connect to MongoDB:', e);
     cached.promise = null;
     cached.conn = null;
     throw e;
+  }
+
+  // 4. Verify connection is connected (readyState 1). If state 2 (connecting), wait briefly for open event
+  if (!cached.conn || cached.conn.connection.readyState !== 1) {
+    if (cached.conn && cached.conn.connection.readyState === 2) {
+      await new Promise<void>((resolve) => {
+        const timeout = setTimeout(() => resolve(), 3000);
+        cached.conn?.connection.once('open', () => {
+          clearTimeout(timeout);
+          resolve();
+        });
+      });
+    }
+
+    const state = cached.conn ? cached.conn.connection.readyState : 0;
+    if (state !== 1) {
+      cached.promise = null;
+      cached.conn = null;
+      throw new Error(`MongoDB connection failed (readyState: ${state})`);
+    }
   }
 
   return cached.conn;

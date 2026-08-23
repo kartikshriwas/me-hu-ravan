@@ -50,8 +50,19 @@ export async function GET(request: Request) {
     }
 
     const isGlobalFree = globalFreeConfig.isGlobalFree;
+    const globalFreeUntil = globalFreeConfig.freeUntil;
     let isPremium = dbUser?.isPremium || isSuperadmin || isGlobalFree;
     let premiumExpiresAt = dbUser?.premiumExpiresAt || null;
+    let premiumPlan = dbUser?.premiumPlan || (isSuperadmin ? 'superadmin' : 'free');
+
+    if (!dbUser?.isPremium && !isSuperadmin && isGlobalFree) {
+      if (globalFreeUntil) {
+        premiumExpiresAt = globalFreeUntil;
+      }
+      if (premiumPlan === 'free') {
+        premiumPlan = 'Global Free Access';
+      }
+    }
 
     if (isPremium && !isSuperadmin && !isGlobalFree && premiumExpiresAt && new Date(premiumExpiresAt) < new Date()) {
       isPremium = false;
@@ -73,7 +84,7 @@ export async function GET(request: Request) {
         isPremium,
         hasCourseAccess,
         premiumExpiresAt: premiumExpiresAt ? new Date(premiumExpiresAt).toISOString() : null,
-        premiumPlan: dbUser?.premiumPlan || (isSuperadmin ? 'superadmin' : 'free'),
+        premiumPlan,
         totalScore: dbUser?.totalScore || 0,
         testsCompleted: dbUser?.testsCompleted || 0,
         averageAccuracy: dbUser?.averageAccuracy || 0,
