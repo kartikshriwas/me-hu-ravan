@@ -4,6 +4,7 @@ import { connectToDatabase } from '@/lib/db';
 import { User } from '@/models/User';
 import { Attempt } from '@/models/Attempt';
 import { isPlatformGlobalFree } from '@/lib/globalSetting';
+import { isCourseBatch } from '@/lib/batchAccess';
 
 const SUPERADMIN_EMAIL = 'fykartik@gmail.com';
 
@@ -11,16 +12,13 @@ export async function GET(request: Request) {
   try {
     const sessionUser = getSessionFromRequest(request);
     if (!sessionUser) {
-      return NextResponse.json({ success: false, error: 'Sign in required' }, { status: 401 });
+      return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 });
     }
 
     const cleanEmail = sessionUser.email.toLowerCase().trim();
     const isSuperadmin = cleanEmail === SUPERADMIN_EMAIL;
-    const conn = await connectToDatabase();
 
-    if (!conn) {
-      return NextResponse.json({ success: false, error: 'Database connection failed' }, { status: 500 });
-    }
+    await connectToDatabase();
 
     // Execute User query, recent Attempts fetch, and GlobalFree check in parallel
     const [dbUser, attempts, globalFreeConfig] = await Promise.all([
@@ -71,7 +69,7 @@ export async function GET(request: Request) {
     const userRole = dbUser?.role || (isSuperadmin ? 'superadmin' : 'user');
     const userPerms: string[] = dbUser?.adminPermissions || [];
     const userBatches: string[] = dbUser?.allowedBatches || [];
-    const courseBatches = userBatches.filter(b => !b.toLowerCase().includes('quiz'));
+    const courseBatches = userBatches.filter(isCourseBatch);
     const hasCourseAccess = isSuperadmin || userRole === 'superadmin' || userRole === 'admin' || userPerms.includes('access_courses') || userPerms.includes('*') || courseBatches.length > 0;
 
     return NextResponse.json({

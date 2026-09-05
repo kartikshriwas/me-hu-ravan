@@ -4,7 +4,7 @@ import { BookOpen, Layers, Brain, ArrowRight, Lock, Unlock } from 'lucide-react'
 import { cookies } from 'next/headers';
 import { notFound } from 'next/navigation';
 import { verifySessionToken } from '@/lib/session';
-import { hasCoursesAccess } from '@/lib/coursesAuth';
+import { hasCoursesAccess, isCourseSlugUnlocked } from '@/lib/coursesAuth';
 
 export const revalidate = 0;
 
@@ -22,7 +22,7 @@ export default async function CoursesCatalogPage() {
 
   const courses = await Promise.all(
     allCourses.map(async (course) => {
-      const isUnlocked = await hasCoursesAccess(sessionUser, course.slug);
+      const isUnlocked = await isCourseSlugUnlocked(sessionUser, course.slug);
       return { ...course, isUnlocked };
     })
   );

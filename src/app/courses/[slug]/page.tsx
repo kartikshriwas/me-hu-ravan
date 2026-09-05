@@ -3,7 +3,7 @@ import { getCourseBySlug } from '@/lib/coursesData';
 import { getAllAssessments } from '@/lib/questionsData';
 import { cookies } from 'next/headers';
 import { verifySessionToken } from '@/lib/session';
-import { hasCoursesAccess } from '@/lib/coursesAuth';
+import { hasCoursesAccess, isCourseSlugUnlocked } from '@/lib/coursesAuth';
 import { CourseDetailClient } from '@/components/CourseDetailClient';
 
 export const revalidate = 0;
@@ -13,12 +13,12 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ s
   const sessionCookie = cookieStore.get('preptea_session')?.value;
   const sessionUser = verifySessionToken(sessionCookie);
 
-  const { slug } = await params;
-  const allowed = await hasCoursesAccess(sessionUser, slug);
+  const allowed = await hasCoursesAccess(sessionUser);
   if (!allowed) {
     notFound();
   }
 
+  const { slug } = await params;
   const course = getCourseBySlug(slug);
   const availableTests = getAllAssessments();
 
@@ -26,5 +26,7 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ s
     notFound();
   }
 
-  return <CourseDetailClient course={course} availableTests={availableTests} />;
+  const isUnlocked = await isCourseSlugUnlocked(sessionUser, slug);
+
+  return <CourseDetailClient course={course} availableTests={availableTests} isUnlocked={isUnlocked} />;
 }

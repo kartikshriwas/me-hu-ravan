@@ -3,9 +3,9 @@ import Link from 'next/link';
 import { getCourseBySlug } from '@/lib/coursesData';
 import { cookies } from 'next/headers';
 import { verifySessionToken } from '@/lib/session';
-import { hasCoursesAccess } from '@/lib/coursesAuth';
+import { hasCoursesAccess, isCourseSlugUnlocked } from '@/lib/coursesAuth';
 import { CustomVideoPlayer } from '@/components/CustomVideoPlayer';
-import { ArrowLeft } from 'lucide-react';
+import { ArrowLeft, Lock } from 'lucide-react';
 import { CourseSectionUnit } from '@/lib/types';
 
 export const revalidate = 0;
@@ -25,15 +25,44 @@ export default async function VideoPlayerPage({ params }: PageProps) {
   const sessionCookie = cookieStore.get('preptea_session')?.value;
   const sessionUser = verifySessionToken(sessionCookie);
 
-  const allowed = await hasCoursesAccess(sessionUser, slug);
+  const allowed = await hasCoursesAccess(sessionUser);
   if (!allowed) {
     notFound();
   }
 
-  // 2. Load course details to find matching unit title
+  // 2. Load course details
   const course = getCourseBySlug(slug);
   if (!course) {
     notFound();
+  }
+
+  // 3. Verify if video playback for this batch is unlocked
+  const isUnlocked = await isCourseSlugUnlocked(sessionUser, slug);
+  if (!isUnlocked) {
+    return (
+      <div className="max-w-3xl mx-auto space-y-6 py-12 px-4 text-center">
+        <div className="glass-panel rounded-3xl p-8 sm:p-12 border border-amber-500/30 space-y-6 bg-amber-950/20">
+          <div className="w-16 h-16 rounded-full bg-amber-500/20 text-amber-400 flex items-center justify-center mx-auto border border-amber-500/30">
+            <Lock className="w-8 h-8" />
+          </div>
+          <div className="space-y-2">
+            <h2 className="text-2xl font-bold text-white">Video Playback Locked</h2>
+            <p className="text-xs text-amber-300/90 max-w-md mx-auto leading-relaxed">
+              You do not have access to play videos in the <span className="font-bold text-white">{course.title}</span> batch. Contact your platform administrator or activate a redeem code for this batch to unlock video playback.
+            </p>
+          </div>
+          <div>
+            <Link
+              href={`/courses/${slug}`}
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-amber-600 hover:bg-amber-500 text-white font-bold text-xs shadow-lg transition-all"
+            >
+              <ArrowLeft className="w-4 h-4" />
+              <span>Back to Course Syllabus</span>
+            </Link>
+          </div>
+        </div>
+      </div>
+    );
   }
 
   // Find all playable video units in curriculum order (both Wistia sourceid and YouTube embed units)

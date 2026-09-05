@@ -7,6 +7,7 @@ import { GoogleLoginButton } from '@/components/GoogleLoginButton';
 import { UserAvatar } from '@/components/UserAvatar';
 import { FileCheck2, Trophy, Sparkles, Bookmark, History, LogOut, User as UserIcon, ShieldCheck, Crown, X, Coffee, BookOpen } from 'lucide-react';
 import { useState, useRef, useEffect } from 'react';
+import { isCourseBatch } from '@/lib/batchAccess';
 
 export function Navbar() {
   const pathname = usePathname();
@@ -16,7 +17,8 @@ export function Navbar() {
   const menuRef = useRef<HTMLDivElement>(null);
 
   const isAdmin = user?.email?.toLowerCase().trim() === 'fykartik@gmail.com' || user?.role === 'superadmin' || user?.role === 'admin';
-  const hasCourseAccess = isAdmin || user?.adminPermissions?.includes('access_courses');
+  const courseBatches = (user?.allowedBatches || []).filter(isCourseBatch);
+  const hasCourseAccess = isAdmin || !!user?.hasCourseAccess || courseBatches.length > 0 || user?.adminPermissions?.includes('access_courses') || user?.adminPermissions?.includes('*');
 
   // Global Keyboard Section Switcher Shortcuts (Shift + Right/Left or [ / ])
   useEffect(() => {

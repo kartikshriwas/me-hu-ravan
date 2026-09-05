@@ -16,14 +16,14 @@ export async function GET(
       );
     }
 
-    const { slug } = await params;
-    const allowed = await hasCoursesAccess(session, slug);
+    const allowed = await hasCoursesAccess(session);
     if (!allowed) {
       return NextResponse.json(
-        { success: false, error: 'Access Declined: You do not have access to this course batch' },
-        { status: 403 }
+        { success: false, error: 'Course catalog access denied' },
+        { status: 404 }
       );
     }
+    const { slug } = await params;
     const course = getCourseBySlug(slug);
 
     if (!course) {

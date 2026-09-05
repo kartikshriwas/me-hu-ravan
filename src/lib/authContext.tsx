@@ -14,6 +14,7 @@ export interface AuthUser {
   adminPermissions?: string[];
   allowedBatches?: string[];
   isPremium?: boolean;
+  hasCourseAccess?: boolean;
   premiumExpiresAt?: string | null;
   premiumPlan?: string;
   totalScore?: number;

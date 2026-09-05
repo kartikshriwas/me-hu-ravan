@@ -95,6 +95,15 @@ export function normalizeBatchName(batch: string): string {
 }
 
 /**
+ * Checks if a batch string represents a valid video course batch (excludes free, quiz-only, global free, etc.)
+ */
+export function isCourseBatch(batch: string): boolean {
+  if (!batch || typeof batch !== 'string') return false;
+  const norm = normalizeBatchName(batch);
+  return ['sigmax', 'sigma 6.0', 'sigma 8.0', 'sigma 11.0', 'prime', 'delta', 'alpha'].includes(norm) || batch === '*';
+}
+
+/**
  * Resolves all authorized course slugs for a list of user batches
  */
 export function getAllowedSlugsForBatches(userBatches: string[]): string[] {

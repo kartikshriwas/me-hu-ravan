@@ -30,12 +30,14 @@ import {
   User,
   ClipboardList,
   Link2,
-  Download
+  Download,
+  Lock
 } from 'lucide-react';
 
 interface CourseDetailClientProps {
   course: CourseDetail;
   availableTests: AssessmentMeta[];
+  isUnlocked?: boolean;
 }
 
 /**
@@ -311,7 +313,7 @@ function getUnitMetaConfig(unit: CourseSectionUnit) {
   };
 }
 
-export function CourseDetailClient({ course, availableTests }: CourseDetailClientProps) {
+export function CourseDetailClient({ course, availableTests, isUnlocked = true }: CourseDetailClientProps) {
   // Calculate specific content type breakdown (Videos, Quizzes, PDFs, eBooks, Certificates, Audio, Live, Interactive, Other)
   const contentCounts = useMemo(() => {
     return course.sections.reduce(
@@ -344,6 +346,19 @@ export function CourseDetailClient({ course, availableTests }: CourseDetailClien
         <ArrowLeft className="w-4 h-4" />
         <span>Back to Courses</span>
       </Link>
+
+      {/* Locked Course Banner Notice */}
+      {!isUnlocked && (
+        <div className="p-4 rounded-2xl bg-amber-950/40 border border-amber-500/30 text-amber-300 text-xs font-semibold flex items-center gap-3">
+          <Lock className="w-5 h-5 text-amber-400 shrink-0" />
+          <div>
+            <p className="font-bold text-amber-200">Batch Locked</p>
+            <p className="text-[11px] text-amber-400/80 mt-0.5">
+              You are viewing the course syllabus and unit list. Video playback for this batch requires batch authorization from admin or redeem code activation.
+            </p>
+          </div>
+        </div>
+      )}
 
       {/* Course Banner Header */}
       <div className="glass-panel rounded-3xl p-6 sm:p-10 border border-slate-800 space-y-6 relative overflow-hidden">
@@ -545,13 +560,23 @@ export function CourseDetailClient({ course, availableTests }: CourseDetailClien
                       )}
 
                       {config.isActionableVideo && !downloadUrl && (
-                        <Link
-                          href={`/courses/${course.slug}/video/${unit.sourceid || unit.id}`}
-                          className="px-3.5 py-1.5 rounded-lg bg-indigo-600/20 hover:bg-indigo-600 text-indigo-300 hover:text-white text-xs font-bold transition-all border border-indigo-500/30 hover:border-transparent flex items-center gap-1.5 shrink-0"
-                        >
-                          <Play className="w-3.5 h-3.5 fill-current" />
-                          <span>Watch Lesson</span>
-                        </Link>
+                        isUnlocked ? (
+                          <Link
+                            href={`/courses/${course.slug}/video/${unit.sourceid || unit.id}`}
+                            className="px-3.5 py-1.5 rounded-lg bg-indigo-600/20 hover:bg-indigo-600 text-indigo-300 hover:text-white text-xs font-bold transition-all border border-indigo-500/30 hover:border-transparent flex items-center gap-1.5 shrink-0"
+                          >
+                            <Play className="w-3.5 h-3.5 fill-current" />
+                            <span>Watch Lesson</span>
+                          </Link>
+                        ) : (
+                          <Link
+                            href={`/courses/${course.slug}/video/${unit.sourceid || unit.id}`}
+                            className="px-3.5 py-1.5 rounded-lg bg-amber-950/40 hover:bg-amber-900/60 text-amber-400 text-xs font-bold transition-all border border-amber-500/30 flex items-center gap-1.5 shrink-0"
+                          >
+                            <Lock className="w-3.5 h-3.5" />
+                            <span>Locked Video</span>
+                          </Link>
+                        )
                       )}
                     </div>
                   );

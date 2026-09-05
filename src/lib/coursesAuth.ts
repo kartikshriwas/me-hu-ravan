@@ -1,20 +1,23 @@
 import { SessionUser } from '@/lib/session';
 import { connectToDatabase } from '@/lib/db';
 import { User } from '@/models/User';
-import { isPlatformGlobalFree } from '@/lib/globalSetting';
-import { isCourseSlugAllowed } from '@/lib/batchAccess';
+import { isCourseSlugAllowed, isCourseBatch } from '@/lib/batchAccess';
 
 const SUPERADMIN_EMAIL = 'fykartik@gmail.com';
 
-export async function hasCoursesAccess(sessionUser: SessionUser | null, courseSlug?: string): Promise<boolean> {
+/**
+ * Checks if a user has access to the Course section at all.
+ * Returns true ONLY if user is superadmin/admin, has access_courses permission, or has >= 1 course batch.
+ * If this returns false, accessing any /courses route throws 404.
+ */
+export async function hasCoursesAccess(sessionUser: SessionUser | null): Promise<boolean> {
   if (!sessionUser) return false;
-  
+
   const email = sessionUser.email.toLowerCase().trim();
   if (email === SUPERADMIN_EMAIL || sessionUser.role === 'superadmin' || sessionUser.role === 'admin') {
     return true;
   }
 
-  // Fetch full user record to get exact allowedBatches and permissions
   let userBatches: string[] = sessionUser.allowedBatches || [];
   let isSuper = false;
   let isAdmin = false;
@@ -23,16 +26,16 @@ export async function hasCoursesAccess(sessionUser: SessionUser | null, courseSl
   try {
     const conn = await connectToDatabase();
     if (conn) {
-      const userDoc = await User.findOne({ email }).select('role isPremium adminPermissions allowedBatches premiumPlan').lean();
+      const userDoc = await User.findOne({ email }).select('role adminPermissions allowedBatches premiumPlan').lean();
       if (userDoc) {
         isSuper = userDoc.role === 'superadmin';
         isAdmin = userDoc.role === 'admin';
         hasPerm = userDoc.adminPermissions?.includes('access_courses') || userDoc.adminPermissions?.includes('*') || false;
-        
+
         if (Array.isArray(userDoc.allowedBatches)) {
           userBatches = Array.from(new Set([...userBatches, ...userDoc.allowedBatches]));
         }
-        if (userDoc.premiumPlan) {
+        if (userDoc.premiumPlan && isCourseBatch(userDoc.premiumPlan)) {
           userBatches.push(userDoc.premiumPlan);
         }
       }
@@ -43,27 +46,50 @@ export async function hasCoursesAccess(sessionUser: SessionUser | null, courseSl
 
   if (isSuper || isAdmin || hasPerm) return true;
 
-  // Filter out Quiz-Only batches (quiz access only, no video courses)
-  const courseBatches = userBatches.filter(b => {
-    const norm = b.toLowerCase();
-    return !norm.includes('quiz');
-  });
+  const validCourseBatches = userBatches.filter(isCourseBatch);
+  return validCourseBatches.length > 0;
+}
 
-  if (courseBatches.length === 0) {
-    return false;
-  }
+/**
+ * Checks if a specific course slug is unlocked for video playback for a user with course access.
+ * Returns true if the user's batch unlocks this course.
+ * Returns false if the course curriculum is viewable but video playback is locked.
+ */
+export async function isCourseSlugUnlocked(sessionUser: SessionUser | null, courseSlug: string): Promise<boolean> {
+  if (!sessionUser || !courseSlug) return false;
 
-  // General catalog access check (when no specific courseSlug requested)
-  if (!courseSlug) {
+  const email = sessionUser.email.toLowerCase().trim();
+  if (email === SUPERADMIN_EMAIL || sessionUser.role === 'superadmin' || sessionUser.role === 'admin') {
     return true;
   }
 
-  // Specific course slug check
-  // If user has SigmaX or '*', grant access to all courses
-  if (courseBatches.some(b => b.toLowerCase().includes('sigmax') || b === '*')) {
+  let userBatches: string[] = sessionUser.allowedBatches || [];
+
+  try {
+    const conn = await connectToDatabase();
+    if (conn) {
+      const userDoc = await User.findOne({ email }).select('role adminPermissions allowedBatches premiumPlan').lean();
+      if (userDoc) {
+        if (userDoc.role === 'superadmin' || userDoc.role === 'admin') return true;
+        if (userDoc.adminPermissions?.includes('access_courses') || userDoc.adminPermissions?.includes('*')) return true;
+
+        if (Array.isArray(userDoc.allowedBatches)) {
+          userBatches = Array.from(new Set([...userBatches, ...userDoc.allowedBatches]));
+        }
+        if (userDoc.premiumPlan && isCourseBatch(userDoc.premiumPlan)) {
+          userBatches.push(userDoc.premiumPlan);
+        }
+      }
+    }
+  } catch (error) {
+    console.error('Error checking course slug unlock:', error);
+  }
+
+  const validCourseBatches = userBatches.filter(isCourseBatch);
+
+  if (validCourseBatches.some(b => b.toLowerCase().includes('sigmax') || b === '*')) {
     return true;
   }
 
-  // Otherwise check if specific course slug is authorized for the user's batches
-  return isCourseSlugAllowed(courseBatches, courseSlug);
+  return isCourseSlugAllowed(validCourseBatches, courseSlug);
 }

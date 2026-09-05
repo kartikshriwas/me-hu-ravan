@@ -13,6 +13,7 @@ export interface SessionUser {
   adminPermissions?: string[];
   allowedBatches?: string[];
   isPremium?: boolean;
+  hasCourseAccess?: boolean;
   premiumExpiresAt?: string | null;
   premiumPlan?: string;
 }
@@ -28,6 +29,7 @@ export function createSessionToken(user: SessionUser): string {
     adminPermissions: user.adminPermissions || [],
     allowedBatches: user.allowedBatches || [],
     isPremium: !!user.isPremium,
+    hasCourseAccess: !!user.hasCourseAccess,
     premiumExpiresAt: user.premiumExpiresAt || null,
     premiumPlan: user.premiumPlan || 'free',
     iat: Math.floor(Date.now() / 1000),
@@ -76,6 +78,7 @@ export function verifySessionToken(token: string | undefined | null): SessionUse
       adminPermissions: data.adminPermissions || [],
       allowedBatches: data.allowedBatches || [],
       isPremium: !!data.isPremium,
+      hasCourseAccess: !!data.hasCourseAccess,
       premiumExpiresAt: data.premiumExpiresAt || null,
       premiumPlan: data.premiumPlan || 'free',
     };

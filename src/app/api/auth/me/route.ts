@@ -4,6 +4,7 @@ import { connectToDatabase } from '@/lib/db';
 import { User } from '@/models/User';
 
 import { isPlatformGlobalFree } from '@/lib/globalSetting';
+import { isCourseBatch } from '@/lib/batchAccess';
 
 const SUPERADMIN_EMAIL = 'fykartik@gmail.com';
 
@@ -40,15 +41,22 @@ export async function GET(request: Request) {
           isPremium = false;
         }
 
+        const userRole = user.role || (isSuperadmin ? 'superadmin' : 'user');
+        const userPerms: string[] = user.adminPermissions || [];
+        const userBatches: string[] = user.allowedBatches || [];
+        const courseBatches = userBatches.filter(isCourseBatch);
+        const hasCourseAccess = isSuperadmin || userRole === 'superadmin' || userRole === 'admin' || userPerms.includes('access_courses') || userPerms.includes('*') || courseBatches.length > 0;
+
         const freshData = {
           id: user._id.toString(),
           name: user.name,
           email: user.email,
           image: user.image,
-          role: user.role || (isSuperadmin ? 'superadmin' : 'user'),
-          adminPermissions: user.adminPermissions || [],
-          allowedBatches: user.allowedBatches || [],
+          role: userRole,
+          adminPermissions: userPerms,
+          allowedBatches: userBatches,
           isPremium,
+          hasCourseAccess,
           premiumExpiresAt: premiumExpiresAt ? new Date(premiumExpiresAt).toISOString() : null,
           premiumPlan,
           totalScore: user.totalScore || 0,
