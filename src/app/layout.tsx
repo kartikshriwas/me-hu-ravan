@@ -4,6 +4,7 @@ import { Navbar } from '@/components/Navbar';
 import { ActivityTracker } from '@/components/ActivityTracker';
 import { AuthProvider } from '@/lib/authContext';
 import { Analytics } from '@vercel/analytics/next';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 export const metadata: Metadata = {
   title: 'PrepTea',
   description: 'Master quantitative aptitude, logical reasoning, and and much more with dynamic test papers.',
@@ -30,6 +31,7 @@ export default function RootLayout({
           </footer>
         </AuthProvider>
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
