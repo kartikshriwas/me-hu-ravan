@@ -63,7 +63,12 @@ export async function GET(request: Request) {
 
     const aggregateUserActivity = async (matchFilter: any) => {
       return UserActivityLog.aggregate([
-        { $match: matchFilter },
+        {
+          $match: {
+            ...matchFilter,
+            lastActivePath: { $not: /^\/admin/i },
+          },
+        },
         {
           $group: {
             _id: '$userEmail',

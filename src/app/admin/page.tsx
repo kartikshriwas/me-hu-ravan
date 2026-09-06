@@ -36,7 +36,8 @@ import {
   Smartphone,
   Tablet,
   Trash2,
-  History
+  History,
+  Loader2
 } from 'lucide-react';
 
 interface SessionEventItem {
@@ -555,6 +556,60 @@ export default function AdminDashboardPage() {
 
   const [editingUserForBatches, setEditingUserForBatches] = useState<AdminUserItem | null>(null);
   const [selectedUserBatches, setSelectedUserBatches] = useState<string[]>([]);
+
+  // Candidate 360° Inspector Modal state
+  const [inspectingUserEmail, setInspectingUserEmail] = useState<string | null>(null);
+  const [inspectData, setInspectData] = useState<any | null>(null);
+  const [loadingInspectData, setLoadingInspectData] = useState(false);
+  const [inspectActiveTab, setInspectActiveTab] = useState<'overview' | 'activity' | 'attempts' | 'promos' | 'raw_json'>('overview');
+
+  // ESC key listener to close active popups / modals
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        if (inspectingUserEmail) {
+          setInspectingUserEmail(null);
+          setInspectData(null);
+        } else if (inspectingSession) {
+          setInspectingSession(null);
+        } else if (editingUserForPerms) {
+          setEditingUserForPerms(null);
+        } else if (editingUserForBatches) {
+          setEditingUserForBatches(null);
+        }
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [inspectingUserEmail, inspectingSession, editingUserForPerms, editingUserForBatches]);
+
+  const openCandidateInspector = async (email: string) => {
+    setInspectingUserEmail(email);
+    setLoadingInspectData(true);
+    setInspectData(null);
+    setInspectActiveTab('overview');
+
+    try {
+      const res = await fetch(`/api/admin/user-details?email=${encodeURIComponent(email)}`);
+      const json = await res.json();
+      if (json.success) {
+        setInspectData(json);
+      }
+    } catch {
+      // ignore
+    } finally {
+      setLoadingInspectData(false);
+    }
+  };
+
+  const formatInspectDuration = (seconds?: number) => {
+    if (!seconds) return '0m 0s';
+    const hrs = Math.floor(seconds / 3600);
+    const mins = Math.floor((seconds % 3600) / 60);
+    const secs = Math.floor(seconds % 60);
+    if (hrs > 0) return `${hrs}h ${mins}m`;
+    return `${mins}m ${secs}s`;
+  };
 
   // User Role & Permissions Submit
   const handleUpdateUser = async (targetEmail: string, role: string, isPremium: boolean, adminPermissions?: string[], allowedBatches?: string[]) => {
@@ -1106,7 +1161,8 @@ export default function AdminDashboardPage() {
                       return (
                         <div
                           key={u.userEmail}
-                          className="p-3.5 rounded-2xl bg-slate-900/80 border border-slate-800 flex items-center justify-between gap-3 hover:border-amber-500/40 transition-all shadow-md"
+                          onClick={() => openCandidateInspector(u.userEmail)}
+                          className="p-3.5 rounded-2xl bg-slate-900/80 border border-slate-800 flex items-center justify-between gap-3 hover:border-amber-500/40 transition-all shadow-md cursor-pointer group"
                         >
                           <div className="flex items-center gap-2.5 min-w-0">
                             <span className="text-sm font-black w-6 text-center text-amber-300 shrink-0">{rankBadge}</span>
@@ -1117,12 +1173,12 @@ export default function AdminDashboardPage() {
                             </div>
                           </div>
 
-                          <div className="text-right shrink-0">
+                          <div className="text-right shrink-0 flex flex-col items-end gap-1">
                             <span className="text-xs font-mono font-bold text-amber-300 block">
                               {timeDisplay}
                             </span>
-                            <span className="text-[9px] text-slate-500 font-mono truncate block max-w-[90px]" title={u.lastActivePath}>
-                              {u.lastActivePath || '/'}
+                            <span className="text-[9px] text-slate-400 font-mono bg-slate-950/80 px-1.5 py-0.5 rounded-md border border-slate-800/80 truncate block max-w-[110px]" title={u.lastActivePath}>
+                              {u.lastActivePath || "/"}
                             </span>
                           </div>
                         </div>
@@ -1168,14 +1224,15 @@ export default function AdminDashboardPage() {
             {/* LEFT AREA: Live Candidates Grid (Spans 2 columns) */}
             <div className="lg:col-span-2 space-y-4">
               {/* Filters & Search */}
-              <div className="flex items-center justify-between flex-wrap gap-4 glass-card p-4 rounded-2xl border border-slate-800">
+              <div className="flex items-center justify-between flex-wrap gap-4 glass-panel p-4 rounded-2xl border border-slate-800">
                 <div className="flex items-center gap-1.5 overflow-x-auto no-scrollbar">
                   {[
                     { id: 'all', label: `All (${activeSessions.length})` },
                     { id: 'active', label: `🟢 Active (${activeSessions.filter(s => s.state === 'active').length})` },
                     { id: 'idle', label: `🟡 Idle (${activeSessions.filter(s => s.state === 'idle').length})` },
                     { id: 'background', label: `⚪ Bg (${activeSessions.filter(s => s.state === 'background').length})` },
-                    { id: 'registered', label: `Users` },
+                    { id: 'registered', label: `👤 Registered (${activeSessions.filter(s => !s.userEmail.startsWith('guest_')).length})` },
+                    { id: 'guest', label: `👻 Guests (${activeSessions.filter(s => s.userEmail.startsWith('guest_')).length})` },
                   ].map((f) => (
                     <button
                       key={f.id}
@@ -1303,9 +1360,16 @@ export default function AdminDashboardPage() {
                             {/* Subtle background glow based on state */}
                             <div className={`absolute top-0 right-0 w-32 h-32 blur-3xl rounded-full pointer-events-none ${sConf.bgGlow}`}></div>
 
-                            <div className="flex items-start justify-between gap-3 relative z-10">
-                              <div className="flex items-center gap-3 min-w-0">
-                                <div className="relative">
+                             <div className="flex items-start justify-between gap-3 relative z-10">
+                              <div
+                                className="flex items-center gap-3 min-w-0 cursor-pointer group/prof hover:opacity-90 transition-opacity"
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  openCandidateInspector(session.userEmail);
+                                }}
+                                title="Click profile to view 360° Candidate Inspector"
+                              >
+                                <div className="relative shrink-0">
                                   <UserAvatar name={session.userName} email={session.userEmail} image={session.userImage} size="md" />
                                   <span className="absolute -bottom-1 -right-1 flex h-3.5 w-3.5">
                                     <span className={`animate-ping absolute inline-flex h-full w-full rounded-full ${sConf.pingClass} opacity-75`}></span>
@@ -1313,7 +1377,10 @@ export default function AdminDashboardPage() {
                                   </span>
                                 </div>
                                 <div className="min-w-0">
-                                  <p className="text-sm font-black text-white truncate">{session.userName}</p>
+                                  <p className="text-sm font-black text-white group-hover/prof:text-indigo-400 group-hover/prof:underline transition-colors truncate flex items-center gap-1">
+                                    <span>{session.userName}</span>
+                                    <Search className="w-3 h-3 text-indigo-400 opacity-0 group-hover/prof:opacity-100 transition-opacity shrink-0" />
+                                  </p>
                                   <p className="text-[10px] text-slate-400 font-medium truncate">{session.userEmail}</p>
                                 </div>
                               </div>
@@ -1388,7 +1455,14 @@ export default function AdminDashboardPage() {
                         </div>
                         <div className="flex-1 min-w-0 py-1 border-b border-slate-800/40 group-last:border-0">
                           <p className="text-[11px] font-medium text-slate-300">
-                            <span className="font-bold text-white">{evt.user}</span> {evt.type === 'navigation' ? 'navigated to' : 'interacted with'} 
+                            <span
+                              onClick={() => openCandidateInspector(evt.email)}
+                              className="font-bold text-white hover:text-indigo-400 hover:underline cursor-pointer transition-colors"
+                              title="Click profile to open Candidate 360° Inspector"
+                            >
+                              {evt.user}
+                            </span>{' '}
+                            {evt.type === 'navigation' ? 'navigated to' : 'interacted with'}{' '}
                             <span className="text-indigo-300 font-mono ml-1">{evt.details}</span>
                           </p>
                           <p className="text-[9px] text-slate-500 font-bold mt-0.5">
@@ -1405,14 +1479,30 @@ export default function AdminDashboardPage() {
 
           {/* Session Telemetry & Audit Log Inspection Modal */}
           {inspectingSession && (
-            <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/60 backdrop-blur-md animate-fade-in">
-              <div className="glass-panel w-full max-w-3xl rounded-3xl p-0 border border-slate-700/80 overflow-hidden shadow-2xl relative bg-slate-950/90">
+            <div
+              className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/60 backdrop-blur-md animate-fade-in cursor-pointer"
+              onClick={() => setInspectingSession(null)}
+            >
+              <div
+                className="glass-panel w-full max-w-3xl rounded-3xl p-0 border border-slate-700/80 overflow-hidden shadow-2xl relative bg-slate-950/90 cursor-default"
+                onClick={(e) => e.stopPropagation()}
+              >
                 {/* Modal Header */}
                 <div className="p-6 border-b border-slate-800 bg-gradient-to-r from-indigo-900/40 to-transparent flex items-center justify-between">
-                  <div className="flex items-center gap-4">
+                  <div
+                    className="flex items-center gap-4 cursor-pointer group/modalprof"
+                    onClick={() => {
+                      setInspectingSession(null);
+                      openCandidateInspector(inspectingSession.userEmail);
+                    }}
+                    title="Click profile to open Candidate 360° Inspector"
+                  >
                     <UserAvatar name={inspectingSession.userName} email={inspectingSession.userEmail} image={inspectingSession.userImage} size="lg" />
                     <div>
-                      <h3 className="text-lg font-black text-white">{inspectingSession.userName}</h3>
+                      <h3 className="text-lg font-black text-white group-hover/modalprof:text-indigo-400 group-hover/modalprof:underline transition-colors flex items-center gap-1.5">
+                        <span>{inspectingSession.userName}</span>
+                        <Search className="w-4 h-4 text-indigo-400" />
+                      </h3>
                       <p className="text-xs text-indigo-300 font-medium">{inspectingSession.userEmail}</p>
                     </div>
                   </div>
@@ -1879,7 +1969,13 @@ export default function AdminDashboardPage() {
                 <tbody className="divide-y divide-slate-800/60">
                   {emails.map((m) => (
                     <tr key={m.id} className="hover:bg-slate-900/40 text-slate-200 transition-colors">
-                      <td className="py-3 px-4 font-bold text-white">{m.email}</td>
+                      <td
+                        className="py-3 px-4 font-bold text-white cursor-pointer hover:text-indigo-400 hover:underline transition-colors"
+                        onClick={() => openCandidateInspector(m.email)}
+                        title="Click to open Candidate 360° Inspector"
+                      >
+                        {m.email}
+                      </td>
                       <td className="py-3 px-4 text-center font-semibold">
                         {m.durationDays >= 3650 ? 'Lifetime' : `${m.durationDays} Days`}
                       </td>
@@ -1949,11 +2045,18 @@ export default function AdminDashboardPage() {
 
                     return (
                       <tr key={u.id} className="hover:bg-slate-900/40 text-slate-200 transition-colors">
-                        <td className="py-3 px-4 flex items-center gap-3">
+                        <td
+                          className="py-3 px-4 flex items-center gap-3 cursor-pointer group/user"
+                          onClick={() => openCandidateInspector(u.email)}
+                          title="Click profile to open Candidate 360° Inspector"
+                        >
                           <UserAvatar name={u.name} email={u.email} image={u.image} size="sm" />
                           <div>
-                            <p className="font-bold text-white">{u.name}</p>
-                            <p className="text-[10px] text-slate-400">{u.email}</p>
+                            <p className="font-bold text-white group-hover/user:text-indigo-400 group-hover/user:underline transition-colors flex items-center gap-1.5">
+                              <span>{u.name}</span>
+                              <Search className="w-3 h-3 text-indigo-400 opacity-0 group-hover/user:opacity-100 transition-opacity shrink-0" />
+                            </p>
+                            <p className="text-[10px] text-slate-400 font-mono">{u.email}</p>
                           </div>
                         </td>
 
@@ -2005,8 +2108,8 @@ export default function AdminDashboardPage() {
                         </td>
 
                         <td className="py-3 px-4 text-right">
-                          {!isSuper && (
-                            <div className="flex items-center justify-end gap-2">
+                          <div className="flex items-center justify-end gap-2">
+                            {!isSuper && (
                               <button
                                 onClick={() => handleUpdateUser(u.email, u.role, !u.isPremium, u.adminPermissions, u.allowedBatches)}
                                 className={`px-3 py-1.5 rounded-xl text-[11px] font-bold transition-all ${
@@ -2017,8 +2120,8 @@ export default function AdminDashboardPage() {
                               >
                                 {u.isPremium ? 'Revoke Premium' : 'Grant Premium'}
                               </button>
-                            </div>
-                          )}
+                            )}
+                          </div>
                         </td>
                       </tr>
                     );
@@ -2030,8 +2133,14 @@ export default function AdminDashboardPage() {
 
           {/* Admin Permission Management Modal */}
           {editingUserForPerms && (
-            <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md animate-fade-in">
-              <div className="w-full max-w-lg glass-panel rounded-3xl p-6 border border-purple-500/30 shadow-2xl space-y-5 bg-slate-900/95">
+            <div
+              className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md animate-fade-in cursor-pointer"
+              onClick={() => setEditingUserForPerms(null)}
+            >
+              <div
+                className="w-full max-w-lg glass-panel rounded-3xl p-6 border border-purple-500/30 shadow-2xl space-y-5 bg-slate-900/95 cursor-default"
+                onClick={(e) => e.stopPropagation()}
+              >
                 <div className="flex items-center justify-between pb-3 border-b border-slate-800">
                   <div className="flex items-center gap-2.5">
                     <ShieldCheck className="w-5 h-5 text-purple-400" />
@@ -2133,8 +2242,14 @@ export default function AdminDashboardPage() {
 
           {/* Admin Batch Access Management Modal */}
           {editingUserForBatches && (
-            <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md animate-fade-in">
-              <div className="w-full max-w-lg glass-panel rounded-3xl p-6 border border-indigo-500/30 shadow-2xl space-y-5 bg-slate-900/95">
+            <div
+              className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md animate-fade-in cursor-pointer"
+              onClick={() => setEditingUserForBatches(null)}
+            >
+              <div
+                className="w-full max-w-lg glass-panel rounded-3xl p-6 border border-indigo-500/30 shadow-2xl space-y-5 bg-slate-900/95 cursor-default"
+                onClick={(e) => e.stopPropagation()}
+              >
                 <div className="flex items-center justify-between pb-3 border-b border-slate-800">
                   <div className="flex items-center gap-2.5">
                     <BookOpen className="w-5 h-5 text-indigo-400" />
@@ -2213,6 +2328,377 @@ export default function AdminDashboardPage() {
         </div>
       )}
 
+      {/* Candidate 360° Deep Inspector Modal */}
+      {inspectingUserEmail && (
+        <div
+          className="fixed inset-0 z-50 bg-black/80 backdrop-blur-md flex items-center justify-center p-4 animate-fade-in cursor-pointer"
+          onClick={() => {
+            setInspectingUserEmail(null);
+            setInspectData(null);
+          }}
+        >
+          <div
+            className="bg-slate-950 border border-slate-800 rounded-3xl max-w-4xl w-full max-h-[90vh] flex flex-col overflow-hidden shadow-2xl cursor-default"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Modal Header */}
+            <div className="p-6 border-b border-slate-800 flex items-center justify-between bg-slate-900/60">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-2xl bg-indigo-600/20 border border-indigo-500/30 text-indigo-400 flex items-center justify-center font-bold text-lg">
+                  🔍
+                </div>
+                <div>
+                  <h3 className="text-lg font-black text-white flex items-center gap-2">
+                    Candidate 360° Inspector
+                    <span className="text-xs px-2 py-0.5 rounded-md bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 font-mono font-normal">
+                      {inspectingUserEmail}
+                    </span>
+                  </h3>
+                  <p className="text-xs text-slate-400">
+                    Complete MongoDB database dump, live session telemetry, study activity, and test history.
+                  </p>
+                </div>
+              </div>
+              <button
+                onClick={() => {
+                  setInspectingUserEmail(null);
+                  setInspectData(null);
+                }}
+                className="p-2 rounded-xl text-slate-400 hover:text-white hover:bg-slate-800 transition-all"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+
+            {loadingInspectData ? (
+              <div className="p-12 text-center space-y-3 flex-1 flex flex-col items-center justify-center">
+                <Loader2 className="w-8 h-8 text-indigo-500 animate-spin" />
+                <p className="text-xs font-bold text-slate-400">Fetching complete MongoDB records for {inspectingUserEmail}...</p>
+              </div>
+            ) : !inspectData ? (
+              <div className="p-12 text-center text-rose-400 text-xs font-bold">Failed to load candidate details.</div>
+            ) : (
+              <div className="flex-1 flex flex-col min-h-0">
+                {/* Modal Tab Navigation */}
+                <div className="flex items-center gap-2 px-6 pt-4 border-b border-slate-800/80 bg-slate-900/30 overflow-x-auto">
+                  <button
+                    onClick={() => setInspectActiveTab('overview')}
+                    className={`px-4 py-2 rounded-t-xl text-xs font-bold transition-all border-b-2 ${
+                      inspectActiveTab === 'overview'
+                        ? 'border-indigo-500 text-indigo-400 bg-indigo-500/10'
+                        : 'border-transparent text-slate-400 hover:text-white'
+                    }`}
+                  >
+                    📊 Overview & Profile
+                  </button>
+                  <button
+                    onClick={() => setInspectActiveTab('activity')}
+                    className={`px-4 py-2 rounded-t-xl text-xs font-bold transition-all border-b-2 ${
+                      inspectActiveTab === 'activity'
+                        ? 'border-indigo-500 text-indigo-400 bg-indigo-500/10'
+                        : 'border-transparent text-slate-400 hover:text-white'
+                    }`}
+                  >
+                    📅 Daily Study Logs ({inspectData.activityLogs?.length || 0})
+                  </button>
+                  <button
+                    onClick={() => setInspectActiveTab('attempts')}
+                    className={`px-4 py-2 rounded-t-xl text-xs font-bold transition-all border-b-2 ${
+                      inspectActiveTab === 'attempts'
+                        ? 'border-indigo-500 text-indigo-400 bg-indigo-500/10'
+                        : 'border-transparent text-slate-400 hover:text-white'
+                    }`}
+                  >
+                    📝 Quiz Attempts ({inspectData.attempts?.length || 0})
+                  </button>
+                  <button
+                    onClick={() => setInspectActiveTab('promos')}
+                    className={`px-4 py-2 rounded-t-xl text-xs font-bold transition-all border-b-2 ${
+                      inspectActiveTab === 'promos'
+                        ? 'border-indigo-500 text-indigo-400 bg-indigo-500/10'
+                        : 'border-transparent text-slate-400 hover:text-white'
+                    }`}
+                  >
+                    🎁 Promos & Claims ({(inspectData.redeemCodes?.length || 0) + (inspectData.claimedEvents?.length || 0) + (inspectData.preApprovedRecord ? 1 : 0)})
+                  </button>
+                  <button
+                    onClick={() => setInspectActiveTab('raw_json')}
+                    className={`px-4 py-2 rounded-t-xl text-xs font-bold transition-all border-b-2 ${
+                      inspectActiveTab === 'raw_json'
+                        ? 'border-emerald-500 text-emerald-400 bg-emerald-500/10'
+                        : 'border-transparent text-slate-400 hover:text-white'
+                    }`}
+                  >
+                    ⚡ Raw MongoDB JSON Dump
+                  </button>
+                </div>
+
+                {/* Modal Body Content */}
+                <div className="flex-1 overflow-y-auto p-6 space-y-6">
+                  {/* TAB 1: OVERVIEW */}
+                  {inspectActiveTab === 'overview' && (
+                    <div className="space-y-6">
+                      {/* Top Metric Cards */}
+                      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                        <div className="p-3.5 rounded-2xl bg-indigo-950/30 border border-indigo-500/30">
+                          <p className="text-[10px] text-indigo-400 font-bold uppercase tracking-wider">Total Active Study</p>
+                          <p className="text-lg font-black text-white mt-1">
+                            {Math.floor((inspectData.stats?.lifetimeActiveSeconds || 0) / 3600)}h{' '}
+                            {Math.floor(((inspectData.stats?.lifetimeActiveSeconds || 0) % 3600) / 60)}m
+                          </p>
+                        </div>
+                        <div className="p-3.5 rounded-2xl bg-emerald-950/30 border border-emerald-500/30">
+                          <p className="text-[10px] text-emerald-400 font-bold uppercase tracking-wider">Focus Reading Time</p>
+                          <p className="text-lg font-black text-white mt-1">
+                            {Math.floor((inspectData.stats?.lifetimeFocusSeconds || 0) / 3600)}h{' '}
+                            {Math.floor(((inspectData.stats?.lifetimeFocusSeconds || 0) % 3600) / 60)}m
+                          </p>
+                        </div>
+                        <div className="p-3.5 rounded-2xl bg-amber-950/30 border border-amber-500/30">
+                          <p className="text-[10px] text-amber-400 font-bold uppercase tracking-wider">Total Quiz Attempts</p>
+                          <p className="text-lg font-black text-white mt-1">{inspectData.stats?.totalAttempts || 0}</p>
+                        </div>
+                        <div className="p-3.5 rounded-2xl bg-cyan-950/30 border border-cyan-500/30">
+                          <p className="text-[10px] text-cyan-400 font-bold uppercase tracking-wider">Days Active</p>
+                          <p className="text-lg font-black text-white mt-1">{inspectData.stats?.totalDaysActive || 0} Days</p>
+                        </div>
+                      </div>
+
+                      {/* Profile Details Grid */}
+                      <div className="glass-panel p-5 rounded-2xl border border-slate-800 space-y-4">
+                        <h4 className="text-xs font-bold uppercase tracking-wider text-slate-400">Candidate Profile Record</h4>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+                          <div>
+                            <span className="text-slate-500 block">Full Name</span>
+                            <span className="font-bold text-white">{inspectData.user.name}</span>
+                          </div>
+                          <div>
+                            <span className="text-slate-500 block">Email Address</span>
+                            <span className="font-bold text-white font-mono">{inspectData.user.email}</span>
+                          </div>
+                          <div>
+                            <span className="text-slate-500 block">Platform Role</span>
+                            <span className="font-bold text-indigo-400 uppercase">{inspectData.user.role || 'user'}</span>
+                          </div>
+                          <div>
+                            <span className="text-slate-500 block">Premium Status</span>
+                            <span className={`font-bold ${inspectData.user.isPremium ? 'text-amber-400' : 'text-slate-400'}`}>
+                              {inspectData.user.isPremium ? 'Premium Candidate' : 'Standard Candidate'}
+                            </span>
+                          </div>
+                          <div>
+                            <span className="text-slate-500 block">Allowed Batches</span>
+                            <span className="font-bold text-white">
+                              {inspectData.user.allowedBatches?.length > 0 ? inspectData.user.allowedBatches.join(', ') : 'None'}
+                            </span>
+                          </div>
+                          <div>
+                            <span className="text-slate-500 block">Registered At</span>
+                            <span className="font-bold text-slate-300">
+                              {inspectData.user.createdAt ? new Date(inspectData.user.createdAt).toLocaleString() : 'N/A'}
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Recent Live Sessions */}
+                      <div className="glass-panel p-5 rounded-2xl border border-slate-800 space-y-3">
+                        <h4 className="text-xs font-bold uppercase tracking-wider text-slate-400">
+                          Recent Live Sessions Telemetry ({inspectData.sessions?.length || 0})
+                        </h4>
+                        {inspectData.sessions?.length === 0 ? (
+                          <p className="text-xs text-slate-500">No active browser session records found.</p>
+                        ) : (
+                          <div className="space-y-2">
+                            {inspectData.sessions.slice(0, 5).map((s: any) => (
+                              <div key={s._id} className="p-3 rounded-xl bg-slate-900/60 border border-slate-800 text-xs flex items-center justify-between gap-3">
+                                <div className="min-w-0">
+                                  <p className="font-bold text-white truncate">{s.currentPath || "/"}</p>
+                                  <p className="text-[10px] text-slate-400 font-mono">
+                                    {s.browser} • {s.os} • {s.deviceType} • IP: {s.ipAddress || 'Unknown'}
+                                  </p>
+                                </div>
+                                <div className="text-right shrink-0">
+                                  <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-indigo-500/20 text-indigo-300">
+                                    {s.state}
+                                  </span>
+                                  <p className="text-[10px] text-slate-500 mt-0.5">
+                                    {new Date(s.lastHeartbeat).toLocaleTimeString()}
+                                  </p>
+                                </div>
+                              </div>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  )}
+
+                  {/* TAB 2: DAILY ACTIVITY LOGS */}
+                  {inspectActiveTab === 'activity' && (
+                    <div className="space-y-3">
+                      {inspectData.activityLogs?.length === 0 ? (
+                        <p className="text-xs text-slate-500 text-center py-8">No daily activity logs recorded yet.</p>
+                      ) : (
+                        <div className="overflow-x-auto rounded-2xl border border-slate-800">
+                          <table className="w-full text-left text-xs">
+                            <thead className="bg-slate-900 text-slate-400 font-bold border-b border-slate-800">
+                              <tr>
+                                <th className="p-3">Date</th>
+                                <th className="p-3">Active Study Time</th>
+                                <th className="p-3">Focus Reading</th>
+                                <th className="p-3">Idle Time</th>
+                                <th className="p-3">Heartbeats</th>
+                                <th className="p-3">Last Page Visited</th>
+                              </tr>
+                            </thead>
+                            <tbody className="divide-y divide-slate-800/60 text-slate-300">
+                              {inspectData.activityLogs.map((log: any) => (
+                                <tr key={log._id} className="hover:bg-slate-900/40 font-mono">
+                                  <td className="p-3 font-bold text-amber-300">{log.dateStr}</td>
+                                  <td className="p-3 font-bold text-emerald-400">
+                                    {formatInspectDuration(log.activeSeconds)}
+                                  </td>
+                                  <td className="p-3 text-indigo-300">
+                                    {formatInspectDuration(log.focusSeconds)}
+                                  </td>
+                                  <td className="p-3 text-slate-500">
+                                    {formatInspectDuration(log.idleSeconds)}
+                                  </td>
+                                  <td className="p-3">{log.heartbeatsCount}</td>
+                                  <td className="p-3 text-slate-400 truncate max-w-[150px]">{log.lastActivePath}</td>
+                                </tr>
+                              ))}
+                            </tbody>
+                          </table>
+                        </div>
+                      )}
+                    </div>
+                  )}
+
+                  {/* TAB 3: QUIZ ATTEMPTS */}
+                  {inspectActiveTab === 'attempts' && (
+                    <div className="space-y-3">
+                      {inspectData.attempts?.length === 0 ? (
+                        <p className="text-xs text-slate-500 text-center py-8">No test or quiz attempts recorded yet.</p>
+                      ) : (
+                        <div className="overflow-x-auto rounded-2xl border border-slate-800">
+                          <table className="w-full text-left text-xs">
+                            <thead className="bg-slate-900 text-slate-400 font-bold border-b border-slate-800">
+                              <tr>
+                                <th className="p-3">Quiz & Test Title</th>
+                                <th className="p-3">Score</th>
+                                <th className="p-3">Accuracy</th>
+                                <th className="p-3">Time Spent</th>
+                                <th className="p-3">First Attempt?</th>
+                                <th className="p-3">Date</th>
+                              </tr>
+                            </thead>
+                            <tbody className="divide-y divide-slate-800/60 text-slate-300">
+                              {inspectData.attempts.map((att: any) => (
+                                <tr key={att._id} className="hover:bg-slate-900/40 font-mono">
+                                  <td className="p-3 font-bold text-white">{att.quizTitle}</td>
+                                  <td className="p-3 font-bold text-emerald-400">
+                                    {`${att.score} / ${att.maxScore}`}
+                                  </td>
+                                  <td className="p-3 font-bold text-amber-300">{att.accuracy}%</td>
+                                  <td className="p-3 text-indigo-300">
+                                    {formatInspectDuration(att.timeSpentSeconds)}
+                                  </td>
+                                  <td className="p-3">
+                                    <span className={`px-2 py-0.5 rounded text-[10px] font-bold ${att.isFirstAttempt ? 'bg-emerald-500/20 text-emerald-300' : 'bg-slate-800 text-slate-400'}`}>
+                                      {att.isFirstAttempt ? 'YES' : 'RETAKE'}
+                                    </span>
+                                  </td>
+                                  <td className="p-3 text-slate-400">
+                                    {new Date(att.createdAt || att.timestamp).toLocaleDateString()}
+                                  </td>
+                                </tr>
+                              ))}
+                            </tbody>
+                          </table>
+                        </div>
+                      )}
+                    </div>
+                  )}
+
+                  {/* TAB 4: PROMOS & CLAIMS */}
+                  {inspectActiveTab === 'promos' && (
+                    <div className="space-y-6">
+                      {/* Pre-Approved Status */}
+                      <div className="glass-panel p-5 rounded-2xl border border-slate-800 space-y-2">
+                        <h4 className="text-xs font-bold uppercase tracking-wider text-slate-400">Pre-Approved Email Access</h4>
+                        {inspectData.preApprovedRecord ? (
+                          <div className="p-3 rounded-xl bg-emerald-950/30 border border-emerald-500/30 text-xs flex items-center justify-between">
+                            <div>
+                              <p className="font-bold text-emerald-300">Pre-Approved Candidate ({inspectData.preApprovedRecord.durationDays} Days Access)</p>
+                              <p className="text-[10px] text-slate-400">Added By: {inspectData.preApprovedRecord.addedBy}</p>
+                            </div>
+                            <span className={`px-2 py-0.5 rounded text-[10px] font-bold ${inspectData.preApprovedRecord.isActivated ? 'bg-emerald-500/20 text-emerald-300' : 'bg-amber-500/20 text-amber-300'}`}>
+                              {inspectData.preApprovedRecord.isActivated ? 'ACTIVATED' : 'PENDING'}
+                            </span>
+                          </div>
+                        ) : (
+                          <p className="text-xs text-slate-500">Not in pre-approved email whitelist.</p>
+                        )}
+                      </div>
+
+                      {/* Redeem Code History */}
+                      <div className="glass-panel p-5 rounded-2xl border border-slate-800 space-y-3">
+                        <h4 className="text-xs font-bold uppercase tracking-wider text-slate-400">Redeemed Promo Codes ({inspectData.redeemCodes?.length || 0})</h4>
+                        {inspectData.redeemCodes?.length === 0 ? (
+                          <p className="text-xs text-slate-500">No promo codes redeemed by this candidate.</p>
+                        ) : (
+                          <div className="space-y-2">
+                            {inspectData.redeemCodes.map((c: any) => (
+                              <div key={c._id} className="p-3 rounded-xl bg-slate-900/60 border border-slate-800 text-xs flex items-center justify-between font-mono">
+                                <div>
+                                  <span className="font-bold text-amber-300">{c.code}</span>
+                                  <span className="text-[10px] text-slate-400 ml-2">Batch: {c.batchName} ({c.durationDays} Days)</span>
+                                </div>
+                                <span className="text-[10px] text-slate-500">Created By: {c.createdBy}</span>
+                              </div>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+
+                      {/* Launch Event Claims */}
+                      <div className="glass-panel p-5 rounded-2xl border border-slate-800 space-y-3">
+                        <h4 className="text-xs font-bold uppercase tracking-wider text-slate-400">Claimed Launch Events ({inspectData.claimedEvents?.length || 0})</h4>
+                        {inspectData.claimedEvents?.length === 0 ? (
+                          <p className="text-xs text-slate-500">No launch events claimed by this candidate.</p>
+                        ) : (
+                          <div className="space-y-2">
+                            {inspectData.claimedEvents.map((ev: any) => (
+                              <div key={ev._id} className="p-3 rounded-xl bg-slate-900/60 border border-slate-800 text-xs flex items-center justify-between">
+                                <span className="font-bold text-white">{ev.title} ({ev.durationDays} Days)</span>
+                                <span className="text-[10px] text-slate-500 font-mono">Created By: {ev.createdBy}</span>
+                              </div>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  )}
+
+                  {/* TAB 5: RAW MONGODB JSON DUMP */}
+                  {inspectActiveTab === 'raw_json' && (
+                    <div className="space-y-4">
+                      <p className="text-xs text-slate-400">
+                        Below is the raw, unedited MongoDB JSON dump for candidate <span className="text-emerald-400 font-mono">{inspectingUserEmail}</span> across all 9 database collections.
+                      </p>
+                      <pre className="p-4 rounded-2xl bg-slate-900/90 border border-slate-800 text-emerald-300 font-mono text-[11px] overflow-x-auto max-h-[500px]">
+                        {JSON.stringify(inspectData, null, 2)}
+                      </pre>
+                    </div>
+                  )}
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+      )}
     </div>
   );
 }

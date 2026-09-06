@@ -64,7 +64,10 @@ export function ActivityTracker() {
   // 3. Track user activity input & media playback events
   useEffect(() => {
     const handleUserInteraction = () => {
-      lastActivityTimeRef.current = Date.now();
+      const now = Date.now();
+      if (now - lastActivityTimeRef.current > 1000) {
+        lastActivityTimeRef.current = now;
+      }
     };
 
     const interactionEvents = [

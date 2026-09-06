@@ -27,8 +27,5 @@ const UserActivityLogSchema: Schema<IUserActivityLog> = new Schema(
 // Compound index for fast user daily usage lookup
 UserActivityLogSchema.index({ userEmail: 1, dateStr: 1 }, { unique: true });
 
-// Auto-delete daily activity logs older than 30 days (2,592,000s) to keep MongoDB storage minimal
-UserActivityLogSchema.index({ updatedAt: 1 }, { expireAfterSeconds: 2592000 });
-
 export const UserActivityLog: Model<IUserActivityLog> =
   mongoose.models.UserActivityLog || mongoose.model<IUserActivityLog>('UserActivityLog', UserActivityLogSchema);

@@ -116,8 +116,9 @@ export async function POST(request: Request) {
       { upsert: true, returnDocument: 'after' }
     );
 
-    // 2. Aggregate daily usage logs if user is logged in
-    if (sessionUser?.email) {
+    // 2. Aggregate daily usage logs if user is logged in (excluding /admin panel routes from student study metrics)
+    const isAdminPath = currentPath && currentPath.startsWith('/admin');
+    if (sessionUser?.email && !isAdminPath) {
       const dateStr = now.toISOString().split('T')[0]; // YYYY-MM-DD
       await UserActivityLog.findOneAndUpdate(
         { userEmail, dateStr },
