@@ -7,7 +7,12 @@ import { Analytics } from '@vercel/analytics/next';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 export const metadata: Metadata = {
   title: 'PrepTea',
-  description: 'Master quantitative aptitude, logical reasoning, and and much more with dynamic test papers.',
+  description: 'Master quantitative aptitude, logical reasoning, and much more with dynamic test papers.',
+  icons: {
+    icon: '/favicon.png',
+    shortcut: '/favicon.png',
+    apple: '/favicon.png',
+  },
 };
 
 export default function RootLayout({
