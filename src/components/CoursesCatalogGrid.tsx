@@ -3,20 +3,9 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { Layers, Brain, ArrowRight, Lock, Unlock, PlayCircle } from 'lucide-react';
+import { CourseMeta } from '@/lib/types';
 
-interface CourseItem {
-  title: string;
-  slug: string;
-  filename: string;
-  keywords: string | null;
-  description: string | null;
-  access: string;
-  price: number;
-  courseImage: string | null;
-  sectionsCount: number;
-  unitsCount: number;
-  isUnlocked: boolean;
-}
+export type CourseItem = CourseMeta & { isUnlocked: boolean };
 
 interface LastVideoInfo {
   videoId: string;
