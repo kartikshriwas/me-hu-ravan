@@ -1,24 +1,25 @@
 'use client';
 
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState, useCallback } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import {
   Play,
   Pause,
-  Volume2,
-  VolumeX,
   Maximize,
   Minimize,
   Settings,
-  Tv,
   RotateCcw,
   FastForward,
   Loader2,
   AlertCircle,
   ChevronLeft,
   ChevronRight,
-  X
+  X,
+  PictureInPicture2,
+  Check,
+  Sparkles,
+  SlidersHorizontal
 } from 'lucide-react';
 
 interface VideoAsset {
@@ -66,19 +67,24 @@ export function CustomVideoPlayer({
   const [loading, setLoading] = useState<boolean>(!embedHtml);
   const [error, setError] = useState<string | null>(null);
 
-  // Playing / Controls State
+  // Playing State
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
   const [playbackRate, setPlaybackRate] = useState(1);
   const [showControls, setShowControls] = useState(true);
-  
+
+  // Gesture & Ripple feedback
+  const [seekFeedback, setSeekFeedback] = useState<{ type: 'rewind' | 'forward'; id: number } | null>(null);
+  const [scrubHoverTime, setScrubHoverTime] = useState<number | null>(null);
+  const [scrubHoverPos, setScrubHoverPos] = useState<number>(0);
+
   // Custom Menu Popovers
   const [activeAsset, setActiveAsset] = useState<VideoAsset | null>(null);
   const [selectedAsset, setSelectedAsset] = useState<VideoAsset | null>(null);
   const [showSettings, setShowSettings] = useState(false);
   const [settingsTab, setSettingsTab] = useState<'main' | 'quality' | 'speed'>('main');
-  const [pendingQualityMessage, setPendingQualityMessage] = useState<string | null>(null);
+  const [isFullscreen, setIsFullscreen] = useState(false);
 
   // Buffering & Auto-Play states
   const [bufferedEnd, setBufferedEnd] = useState(0);
@@ -96,6 +102,7 @@ export function CustomVideoPlayer({
   const isSwitchingQualityRef = useRef<boolean>(false);
   const preloadingVideoRef = useRef<HTMLVideoElement>(null);
   const isPreloadReadyRef = useRef<boolean>(false);
+  const lastTapRef = useRef<{ time: number; x: number }>({ time: 0, x: 0 });
 
   // 1. Fetch Video Metadata from API Proxy (only if not an iframe embed)
   useEffect(() => {
@@ -118,18 +125,14 @@ export function CustomVideoPlayer({
           const video: WistiaVideoData = json.video;
           setVideoData(video);
           
-          // Read preferred quality from localStorage
           let preferredHeight: number | null = null;
           try {
             const stored = localStorage.getItem('preptea_preferred_quality');
-            if (stored) {
-              preferredHeight = parseInt(stored, 10);
-            }
+            if (stored) preferredHeight = parseInt(stored, 10);
           } catch (e) {
             // ignore
           }
 
-          // Select default asset matching preferred quality, or fall back
           let defaultAsset = null;
           if (preferredHeight) {
             defaultAsset = video.assets.find((a) => a.height === preferredHeight);
@@ -137,6 +140,7 @@ export function CustomVideoPlayer({
 
           if (!defaultAsset) {
             defaultAsset =
+              video.assets.find((a) => a.height === 1080) ||
               video.assets.find((a) => a.height === 720) ||
               video.assets.find((a) => a.height === 540) ||
               video.assets[0] ||
@@ -161,112 +165,27 @@ export function CustomVideoPlayer({
     };
   }, [videoId, embedHtml]);
 
-  // If YouTube embed HTML is provided, render YouTube Embed Player
-  if (embedHtml) {
-    const srcMatch = embedHtml.match(/src=["']([^"']+)["']/i);
-    let embedSrc = srcMatch ? srcMatch[1] : '';
-    
-    // Add autoplay parameter
-    if (embedSrc) {
-      const sep = embedSrc.includes('?') ? '&' : '?';
-      embedSrc += `${sep}autoplay=1`;
-    }
-
-    return (
-      <div className="w-full space-y-3">
-        {/* Player Frame header */}
-        <div className="flex items-center justify-between">
-          <div className="min-w-0">
-            <span className="text-[10px] uppercase tracking-wider font-extrabold text-red-400">YouTube Video</span>
-            <h3 className="text-sm font-bold text-white truncate">{title || 'YouTube Video'}</h3>
-          </div>
-          <div className="flex items-center gap-2 shrink-0">
-            {prevVideoUrl && (
-              <Link
-                href={prevVideoUrl}
-                className="text-xs font-bold text-slate-400 hover:text-white px-3 py-1.5 rounded-xl bg-slate-900 border border-slate-800 hover:border-slate-700 transition-all flex items-center gap-1"
-              >
-                <ChevronLeft className="w-3.5 h-3.5" />
-                <span>Prev</span>
-              </Link>
-            )}
-            {nextVideoUrl && (
-              <Link
-                href={nextVideoUrl}
-                className="text-xs font-bold text-slate-400 hover:text-white px-3 py-1.5 rounded-xl bg-slate-900 border border-slate-800 hover:border-slate-700 transition-all flex items-center gap-1"
-              >
-                <span>Next</span>
-                <ChevronRight className="w-3.5 h-3.5" />
-              </Link>
-            )}
-            {onClose && (
-              <button
-                onClick={onClose}
-                className="text-xs font-bold text-slate-400 hover:text-white px-3 py-1.5 rounded-xl bg-slate-900 border border-slate-800 hover:border-slate-700 transition-all"
-              >
-                Close Player
-              </button>
-            )}
-          </div>
-        </div>
-
-        {/* Responsive YouTube Embed Container */}
-        <div className="relative w-full aspect-video bg-black rounded-3xl overflow-hidden border border-slate-800/80 shadow-2xl">
-          {embedSrc ? (
-            <iframe
-              src={embedSrc}
-              title={title || 'YouTube Video'}
-              className="w-full h-full border-0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-            />
-          ) : (
-            <div dangerouslySetInnerHTML={{ __html: embedHtml }} className="w-full h-full flex items-center justify-center" />
-          )}
-        </div>
-
-        {/* Bottom Navigation Cards */}
-        {(prevVideoUrl || nextVideoUrl) && (
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4 pt-4 border-t border-slate-800/80">
-            {prevVideoUrl ? (
-              <Link href={prevVideoUrl} className="glass-card p-4 rounded-2xl border border-slate-800 hover:border-indigo-500/30 transition-all flex flex-col items-start text-left gap-1 group w-full">
-                <span className="text-[10px] font-extrabold uppercase text-indigo-400">Previous Lesson</span>
-                <span className="text-sm font-bold text-white group-hover:text-indigo-300 transition-colors line-clamp-1">{prevTitle || "Previous"}</span>
-              </Link>
-            ) : <div />}
-
-            {nextVideoUrl ? (
-              <Link href={nextVideoUrl} className="glass-card p-4 rounded-2xl border border-slate-800 hover:border-indigo-500/30 transition-all flex flex-col items-end text-right gap-1 group w-full">
-                <span className="text-[10px] font-extrabold uppercase text-indigo-400">Next Lesson</span>
-                <span className="text-sm font-bold text-white group-hover:text-indigo-300 transition-colors line-clamp-1">{nextTitle || "Next"}</span>
-              </Link>
-            ) : <div />}
-          </div>
-        )}
-      </div>
-    );
-  }
-
-  // Sync background preloading video element time with main video element
+  // Fullscreen change listener
   useEffect(() => {
-    if (preloadingAsset && videoRef.current && preloadingVideoRef.current) {
-      preloadingVideoRef.current.currentTime = videoRef.current.currentTime;
-    }
-  }, [preloadingAsset]);
+    const handleFsChange = () => {
+      setIsFullscreen(!!document.fullscreenElement);
+    };
+    document.addEventListener('fullscreenchange', handleFsChange);
+    return () => document.removeEventListener('fullscreenchange', handleFsChange);
+  }, []);
 
-  // 2. Hide controls automatically on mouse idle
-  const handleMouseMove = () => {
+  // 2. Hide controls automatically on mouse/touch idle
+  const resetControlsTimeout = useCallback(() => {
     setShowControls(true);
-    if (controlsTimeoutRef.current) {
-      clearTimeout(controlsTimeoutRef.current);
-    }
+    if (controlsTimeoutRef.current) clearTimeout(controlsTimeoutRef.current);
+
     controlsTimeoutRef.current = setTimeout(() => {
       if (isPlaying) {
         setShowControls(false);
         setShowSettings(false);
       }
-    }, 3000);
-  };
+    }, 3500);
+  }, [isPlaying]);
 
   useEffect(() => {
     return () => {
@@ -274,13 +193,59 @@ export function CustomVideoPlayer({
     };
   }, []);
 
-  // 3. Sync media state
+  // 3. Play/Pause Action
   const handlePlayPause = () => {
     if (!videoRef.current) return;
     if (isPlaying) {
       videoRef.current.pause();
     } else {
       videoRef.current.play().catch(() => {});
+    }
+  };
+
+  // Skip video +/- seconds
+  const seekRelative = (seconds: number) => {
+    if (!videoRef.current) return;
+    const newTime = Math.max(0, Math.min(videoRef.current.duration || 0, videoRef.current.currentTime + seconds));
+    videoRef.current.currentTime = newTime;
+    setCurrentTime(newTime);
+
+    setSeekFeedback({
+      type: seconds < 0 ? 'rewind' : 'forward',
+      id: Date.now()
+    });
+
+    setTimeout(() => {
+      setSeekFeedback(null);
+    }, 650);
+  };
+
+  // Double tap gesture handler for mobile devices & video overlay clicks
+  const handleContainerTap = (e: React.MouseEvent<HTMLDivElement> | React.TouchEvent<HTMLDivElement>) => {
+    const now = Date.now();
+    const rect = containerRef.current?.getBoundingClientRect();
+    if (!rect) return;
+
+    let clientX = 0;
+    if ('touches' in e && e.touches.length > 0) {
+      clientX = e.touches[0].clientX;
+    } else if ('clientX' in e) {
+      clientX = e.clientX;
+    }
+
+    const clickX = clientX - rect.left;
+    const isLeftHalf = clickX < rect.width / 2;
+
+    if (now - lastTapRef.current.time < 300) {
+      if (isLeftHalf) {
+        seekRelative(-10);
+      } else {
+        seekRelative(10);
+      }
+      lastTapRef.current = { time: 0, x: 0 };
+    } else {
+      lastTapRef.current = { time: now, x: clickX };
+      resetControlsTimeout();
     }
   };
 
@@ -297,23 +262,16 @@ export function CustomVideoPlayer({
 
   const executeQualitySwitch = (asset: VideoAsset) => {
     if (!videoRef.current) return;
-    
-    // Save playback state
     wasPlayingBeforeSwitchRef.current = !videoRef.current.paused;
     pendingSeekTimeRef.current = videoRef.current.currentTime;
     isSwitchingQualityRef.current = true;
-
-    // Update active asset
     setActiveAsset(asset);
     setSelectedAsset(asset);
   };
 
   const handlePreloadCanPlay = () => {
     if (!preloadingAsset) return;
-    
     isPreloadReadyRef.current = true;
-
-    // If there is no pending high-to-low switch, execute the switch immediately!
     if (!pendingQualityTargetRef.current) {
       const asset = preloadingAsset;
       setPreloadingAsset(null);
@@ -346,10 +304,8 @@ export function CustomVideoPlayer({
     setCurrentTime(currentTimeVal);
     handleProgress();
 
-    // Check if we have a pending high-to-low quality switch AND the preload is ready
     if (pendingQualityTargetRef.current && isPreloadReadyRef.current) {
       const { asset, switchTime } = pendingQualityTargetRef.current;
-      // Switch when we reach the switchTime (or if we seek past it)
       if (currentTimeVal >= switchTime - 0.5) {
         pendingQualityTargetRef.current = null;
         setPreloadingAsset(null);
@@ -357,7 +313,6 @@ export function CustomVideoPlayer({
       }
     }
 
-    // Auto Play Countdown Check (last 10 seconds of video)
     if (nextVideoUrl && !autoPlayCancelled && duration > 0) {
       const remaining = duration - currentTimeVal;
       if (remaining <= 10 && remaining > 0) {
@@ -372,22 +327,17 @@ export function CustomVideoPlayer({
   const handleLoadedMetadata = () => {
     if (!videoRef.current) return;
     setDuration(videoRef.current.duration);
-    
-    // Reset quality switching flag
     isSwitchingQualityRef.current = false;
 
-    // Seek to previous position if we just switched quality
     if (pendingSeekTimeRef.current > 0) {
       videoRef.current.currentTime = pendingSeekTimeRef.current;
       pendingSeekTimeRef.current = 0;
-      
       if (wasPlayingBeforeSwitchRef.current) {
         videoRef.current.play().catch(() => {});
       }
     }
   };
 
-  // 4. Scrub / Timeline click
   const handleScrubChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (!videoRef.current) return;
     const seekTo = parseFloat(e.target.value);
@@ -395,7 +345,17 @@ export function CustomVideoPlayer({
     setCurrentTime(seekTo);
   };
 
-  // 6. Playback speed control
+  const handleScrubMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    const pos = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
+    setScrubHoverPos(pos * 100);
+    setScrubHoverTime(pos * duration);
+  };
+
+  const handleScrubMouseLeave = () => {
+    setScrubHoverTime(null);
+  };
+
   const handleSpeedChange = (rate: number) => {
     setPlaybackRate(rate);
     if (videoRef.current) {
@@ -404,39 +364,42 @@ export function CustomVideoPlayer({
     setShowSettings(false);
   };
 
-  // 7. Custom Quality switching with seamless state restoration
   const handleQualityChange = (asset: VideoAsset) => {
     if (!videoRef.current || !activeAsset) return;
-
-    // Update the selected asset state immediately for correct UI selection highlight
     setSelectedAsset(asset);
 
-    // Save preferred quality to localStorage for all future videos
     try {
       localStorage.setItem('preptea_preferred_quality', asset.height.toString());
     } catch (e) {
-      // ignore localStorage errors
+      // ignore
     }
 
     const isHighToLow = asset.height < activeAsset.height;
-
-    // Start preloading the new asset in the background
     isPreloadReadyRef.current = false;
     setPreloadingAsset(asset);
 
     if (isHighToLow) {
-      const bufferedEnd = getBufferedEnd(videoRef.current);
-      // Wait until current buffer is consumed
-      pendingQualityTargetRef.current = { asset, switchTime: bufferedEnd };
+      const bufferedEndVal = getBufferedEnd(videoRef.current);
+      pendingQualityTargetRef.current = { asset, switchTime: bufferedEndVal };
     } else {
-      // Low to High is immediate (once preloader is ready)
       pendingQualityTargetRef.current = null;
     }
-    
     setShowSettings(false);
   };
 
-  // 8. Fullscreen control
+  const togglePictureInPicture = async () => {
+    if (!videoRef.current) return;
+    try {
+      if (document.pictureInPictureElement) {
+        await document.exitPictureInPicture();
+      } else if (document.pictureInPictureEnabled) {
+        await videoRef.current.requestPictureInPicture();
+      }
+    } catch (err) {
+      // ignore
+    }
+  };
+
   const handleToggleFullscreen = () => {
     if (!containerRef.current) return;
     if (!document.fullscreenElement) {
@@ -446,19 +409,17 @@ export function CustomVideoPlayer({
     }
   };
 
-  // 9. Format duration string helper
   const formatTime = (secs: number) => {
+    if (isNaN(secs)) return '0:00';
     const h = Math.floor(secs / 3600);
     const m = Math.floor((secs % 3600) / 60);
     const s = Math.floor(secs % 60);
-    
     if (h > 0) {
       return `${h}:${m < 10 ? '0' : ''}${m}:${s < 10 ? '0' : ''}${s}`;
     }
     return `${m}:${s < 10 ? '0' : ''}${s}`;
   };
 
-  // Keybindings for standard video player shortcuts
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       const activeEl = document.activeElement;
@@ -475,13 +436,17 @@ export function CustomVideoPlayer({
           e.preventDefault();
           handleToggleFullscreen();
           break;
+        case 'p':
+          e.preventDefault();
+          togglePictureInPicture();
+          break;
         case 'arrowright':
           e.preventDefault();
-          videoRef.current.currentTime = Math.min(videoRef.current.duration, videoRef.current.currentTime + 10);
+          seekRelative(10);
           break;
         case 'arrowleft':
           e.preventDefault();
-          videoRef.current.currentTime = Math.max(0, videoRef.current.currentTime - 10);
+          seekRelative(-10);
           break;
       }
     };
@@ -490,21 +455,86 @@ export function CustomVideoPlayer({
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [isPlaying]);
 
+  // YouTube Embed Renderer fallback
+  if (embedHtml) {
+    const srcMatch = embedHtml.match(/src=["']([^"']+)["']/i);
+    let embedSrc = srcMatch ? srcMatch[1] : '';
+    if (embedSrc) {
+      const sep = embedSrc.includes('?') ? '&' : '?';
+      embedSrc += `${sep}autoplay=1`;
+    }
+
+    return (
+      <div className="w-full space-y-3">
+        <div className="flex items-center justify-between gap-2 px-1">
+          <div className="min-w-0">
+            <span className="text-[10px] uppercase tracking-wider font-extrabold text-red-400 flex items-center gap-1">
+              <Sparkles className="w-3 h-3" /> YouTube Video
+            </span>
+            <h3 className="text-xs sm:text-sm font-bold text-white truncate">{title || 'YouTube Video'}</h3>
+          </div>
+          <div className="flex items-center gap-2 shrink-0">
+            {prevVideoUrl && (
+              <Link
+                href={prevVideoUrl}
+                className="text-xs font-bold text-slate-300 hover:text-white px-2.5 sm:px-3 py-1.5 rounded-xl bg-slate-800/80 border border-slate-700/60 hover:border-indigo-500/50 transition-all flex items-center gap-1 touch-manipulation"
+              >
+                <ChevronLeft className="w-4 h-4" />
+                <span className="hidden sm:inline">Prev</span>
+              </Link>
+            )}
+            {nextVideoUrl && (
+              <Link
+                href={nextVideoUrl}
+                className="text-xs font-bold text-slate-300 hover:text-white px-2.5 sm:px-3 py-1.5 rounded-xl bg-slate-800/80 border border-slate-700/60 hover:border-indigo-500/50 transition-all flex items-center gap-1 touch-manipulation"
+              >
+                <span className="hidden sm:inline">Next</span>
+                <ChevronRight className="w-4 h-4" />
+              </Link>
+            )}
+            {onClose && (
+              <button
+                onClick={onClose}
+                className="text-xs font-bold text-slate-400 hover:text-white px-2.5 sm:px-3 py-1.5 rounded-xl bg-slate-800/80 border border-slate-700/60 transition-all"
+              >
+                Close
+              </button>
+            )}
+          </div>
+        </div>
+
+        <div className="relative w-full aspect-[16/10] sm:aspect-video min-h-[220px] sm:min-h-0 bg-black rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-800 shadow-2xl">
+          {embedSrc ? (
+            <iframe
+              src={embedSrc}
+              title={title || 'YouTube Video'}
+              className="w-full h-full border-0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            />
+          ) : (
+            <div dangerouslySetInnerHTML={{ __html: embedHtml }} className="w-full h-full flex items-center justify-center" />
+          )}
+        </div>
+      </div>
+    );
+  }
+
   if (loading) {
     return (
-      <div className="w-full aspect-video flex flex-col items-center justify-center bg-slate-950 border border-slate-800 rounded-3xl p-6">
+      <div className="w-full aspect-[16/10] sm:aspect-video min-h-[220px] sm:min-h-0 flex flex-col items-center justify-center bg-slate-950/90 border border-slate-800/80 rounded-2xl sm:rounded-3xl p-6">
         <Loader2 className="w-8 h-8 text-indigo-400 animate-spin" />
-        <p className="text-xs text-slate-400 mt-2.5 font-semibold">Loading secure player stream...</p>
+        <p className="text-xs text-slate-400 mt-3 font-medium">Loading high-definition stream...</p>
       </div>
     );
   }
 
   if (error || !videoData || !activeAsset) {
     return (
-      <div className="w-full aspect-video flex flex-col items-center justify-center bg-slate-950 border border-slate-800 rounded-3xl p-6 text-center space-y-3">
+      <div className="w-full aspect-[16/10] sm:aspect-video min-h-[220px] sm:min-h-0 flex flex-col items-center justify-center bg-slate-950/90 border border-slate-800/80 rounded-2xl sm:rounded-3xl p-6 text-center space-y-3">
         <AlertCircle className="w-10 h-10 text-rose-500" />
         <div className="space-y-1">
-          <p className="text-sm font-bold text-white">Video Load Error</p>
+          <p className="text-sm font-bold text-white">Playback Stream Error</p>
           <p className="text-xs text-slate-400 max-w-sm">{error || 'Could not load video source stream.'}</p>
         </div>
       </div>
@@ -512,55 +542,55 @@ export function CustomVideoPlayer({
   }
 
   return (
-    <div className="w-full space-y-3">
-      {/* Player Frame header */}
-      <div className="flex items-center justify-between">
+    <div className="w-full space-y-2.5">
+      {/* Player Header */}
+      <div className="flex items-center justify-between gap-2 px-1">
         <div className="min-w-0">
-          <span className="text-[10px] uppercase tracking-wider font-extrabold text-indigo-400">Now Watching</span>
-          <h3 className="text-sm font-bold text-white truncate">{title || videoData.name}</h3>
+
+          <h3 className="text-xs sm:text-sm font-bold text-white truncate">{title || videoData.name}</h3>
         </div>
-        <div className="flex items-center gap-2 shrink-0">
+        <div className="flex items-center gap-1.5 sm:gap-2 shrink-0">
           {prevVideoUrl && (
             <Link
               href={prevVideoUrl}
-              className="text-xs font-bold text-slate-400 hover:text-white px-3 py-1.5 rounded-xl bg-slate-900 border border-slate-800 hover:border-slate-700 transition-all flex items-center gap-1"
+              className="text-xs font-bold text-slate-300 hover:text-white px-2.5 sm:px-3 py-1.5 rounded-xl bg-slate-800/80 border border-slate-700/60 hover:border-indigo-500/50 transition-all flex items-center gap-1 touch-manipulation"
             >
-              <ChevronLeft className="w-3.5 h-3.5" />
-              <span>Prev</span>
+              <ChevronLeft className="w-4 h-4" />
+              <span className="hidden sm:inline">Prev</span>
             </Link>
           )}
           {nextVideoUrl && (
             <Link
               href={nextVideoUrl}
-              className="text-xs font-bold text-slate-400 hover:text-white px-3 py-1.5 rounded-xl bg-slate-900 border border-slate-800 hover:border-slate-700 transition-all flex items-center gap-1"
+              className="text-xs font-bold text-slate-300 hover:text-white px-2.5 sm:px-3 py-1.5 rounded-xl bg-slate-800/80 border border-slate-700/60 hover:border-indigo-500/50 transition-all flex items-center gap-1 touch-manipulation"
             >
-              <span>Next</span>
-              <ChevronRight className="w-3.5 h-3.5" />
+              <span className="hidden sm:inline">Next</span>
+              <ChevronRight className="w-4 h-4" />
             </Link>
           )}
           {onClose && (
             <button
               onClick={onClose}
-              className="text-xs font-bold text-slate-400 hover:text-white px-3 py-1.5 rounded-xl bg-slate-900 border border-slate-800 hover:border-slate-700 transition-all"
+              className="text-xs font-bold text-slate-400 hover:text-white px-2.5 sm:px-3 py-1.5 rounded-xl bg-slate-800/80 border border-slate-700/60 transition-all"
             >
-              Close Player
+              Close
             </button>
           )}
         </div>
       </div>
 
-      {/* Main Video Container Frame */}
+      {/* Main Video Container */}
       <div
         ref={containerRef}
-        onMouseMove={handleMouseMove}
+        onMouseMove={resetControlsTimeout}
         onMouseLeave={() => isPlaying && setShowControls(false)}
-        className="relative w-full aspect-video bg-black rounded-3xl overflow-hidden border border-slate-800/80 shadow-2xl group select-none"
+        onClick={handleContainerTap}
+        className="relative w-full aspect-[16/10] sm:aspect-video min-h-[220px] sm:min-h-0 bg-black rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-800/80 shadow-2xl group select-none touch-none"
       >
         <video
           ref={videoRef}
           src={activeAsset.url}
-          className="w-full h-full object-contain cursor-pointer"
-          onClick={handlePlayPause}
+          className="w-full h-full object-contain cursor-pointer transition-all"
           onTimeUpdate={handleTimeUpdate}
           onLoadedMetadata={handleLoadedMetadata}
           onProgress={handleProgress}
@@ -574,48 +604,84 @@ export function CustomVideoPlayer({
           playsInline
         />
 
-        {/* Pending Quality switch notification */}
-        {pendingQualityMessage && (
-          <div className="absolute top-4 left-1/2 -translate-x-1/2 bg-slate-900/90 border border-indigo-500/30 px-3.5 py-1.5 rounded-xl text-[11px] font-semibold text-indigo-300 shadow-xl backdrop-blur-md animate-fade-in z-20 flex items-center gap-1.5">
-            <Loader2 className="w-3.5 h-3.5 animate-spin text-indigo-400" />
-            <span>{pendingQualityMessage}</span>
+        {/* Double Tap Seek Feedback Ripple Overlay */}
+        {seekFeedback && (
+          <div
+            className={`absolute top-1/2 -translate-y-1/2 z-30 pointer-events-none flex flex-col items-center justify-center p-5 sm:p-6 rounded-full bg-indigo-600/40 backdrop-blur-md border border-indigo-400/50 text-white animate-ping duration-500 ${
+              seekFeedback.type === 'rewind' ? 'left-8 sm:left-12' : 'right-8 sm:right-12'
+            }`}
+          >
+            {seekFeedback.type === 'rewind' ? (
+              <RotateCcw className="w-7 h-7 sm:w-8 sm:h-8 text-white" />
+            ) : (
+              <FastForward className="w-7 h-7 sm:w-8 sm:h-8 text-white" />
+            )}
+            <span className="text-xs font-extrabold mt-1">
+              {seekFeedback.type === 'rewind' ? '-10s' : '+10s'}
+            </span>
           </div>
         )}
 
-        {/* Hover overlay/Controls gradient */}
+        {/* Centered Play/Pause Toggle Button */}
+        {showControls && (
+          <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-10">
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                handlePlayPause();
+              }}
+              className="pointer-events-auto w-14 h-14 sm:w-18 sm:h-18 rounded-full bg-slate-950/80 border border-slate-700/60 text-white flex items-center justify-center backdrop-blur-md shadow-2xl hover:scale-110 hover:bg-indigo-600 hover:border-indigo-400 transition-all duration-200"
+              aria-label={isPlaying ? 'Pause' : 'Play'}
+            >
+              {isPlaying ? (
+                <Pause className="w-6 h-6 sm:w-8 sm:h-8 fill-white ml-0" />
+              ) : (
+                <Play className="w-6 h-6 sm:w-8 sm:h-8 fill-white ml-1" />
+              )}
+            </button>
+          </div>
+        )}
+
+        {/* Controls Gradient Mask */}
         <div
-          className={`absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/30 transition-opacity duration-300 pointer-events-none ${
+          className={`absolute inset-0 bg-gradient-to-t from-slate-950/95 via-transparent to-slate-950/40 transition-opacity duration-300 pointer-events-none ${
             showControls ? 'opacity-100' : 'opacity-0'
           }`}
         />
 
-        {/* Settings Popover Overlay */}
+        {/* Settings Popover UX Modal - Fits perfectly inside player bounds */}
         {showSettings && (
-          <div className="absolute right-4 bottom-14 z-20 w-56 rounded-2xl bg-slate-950/95 border border-slate-800 p-2.5 shadow-xl text-slate-200 text-xs backdrop-blur-xl animate-fade-in">
+          <div 
+            onClick={(e) => e.stopPropagation()}
+            className="absolute right-2 sm:right-6 bottom-14 sm:bottom-16 z-40 w-56 sm:w-60 max-h-[75%] overflow-y-auto rounded-2xl bg-slate-950/95 border border-slate-800 p-2.5 shadow-2xl text-slate-200 text-xs backdrop-blur-2xl custom-scrollbar animate-in fade-in zoom-in-95 duration-150"
+          >
+
+
             {settingsTab === 'main' && (
-              <div className="space-y-1">
+              <div className="space-y-0.5">
                 <button
                   onClick={() => setSettingsTab('quality')}
-                  className="w-full flex items-center justify-between p-2 rounded-xl hover:bg-slate-900 transition-all font-semibold"
+                  className="w-full flex items-center justify-between p-2 rounded-xl hover:bg-slate-900/90 transition-all font-semibold"
                 >
-                  <span>Quality</span>
+                  <span className="text-slate-300">Stream Quality</span>
                   <span className="text-indigo-400 font-bold">{selectedAsset?.displayName || activeAsset?.displayName}</span>
                 </button>
+
                 <button
                   onClick={() => setSettingsTab('speed')}
-                  className="w-full flex items-center justify-between p-2 rounded-xl hover:bg-slate-900 transition-all font-semibold"
+                  className="w-full flex items-center justify-between p-2 rounded-xl hover:bg-slate-900/90 transition-all font-semibold"
                 >
-                  <span>Speed</span>
+                  <span className="text-slate-300">Playback Speed</span>
                   <span className="text-indigo-400 font-bold">{playbackRate === 1 ? 'Normal' : `${playbackRate}x`}</span>
                 </button>
               </div>
             )}
 
             {settingsTab === 'quality' && (
-              <div className="space-y-1">
-                <div className="flex items-center justify-between border-b border-slate-900 pb-1.5 mb-1 px-1 font-bold text-slate-400 text-[10px] uppercase">
+              <div className="space-y-0.5">
+                <div className="flex items-center justify-between border-b border-slate-800/60 pb-1.5 mb-1 px-1 font-bold text-slate-400 text-[10px] uppercase tracking-wider">
                   <span>Select Quality</span>
-                  <button onClick={() => setSettingsTab('main')} className="text-indigo-400 hover:text-indigo-300">
+                  <button onClick={() => setSettingsTab('main')} className="text-indigo-400 hover:text-indigo-300 font-bold">
                     Back
                   </button>
                 </div>
@@ -623,34 +689,38 @@ export function CustomVideoPlayer({
                   <button
                     key={asset.slug}
                     onClick={() => handleQualityChange(asset)}
-                    className={`w-full text-left p-2 rounded-xl hover:bg-slate-900 transition-all flex items-center justify-between font-semibold ${
-                      selectedAsset?.slug === asset.slug ? 'text-indigo-400 bg-indigo-950/20' : ''
+                    className={`w-full text-left p-2 rounded-xl hover:bg-slate-900/90 transition-all flex items-center justify-between font-semibold ${
+                      selectedAsset?.slug === asset.slug ? 'text-indigo-400 bg-indigo-950/40 border border-indigo-500/20' : 'text-slate-300'
                     }`}
                   >
-                    <span>{asset.displayName}</span>
-                    <span className="text-[10px] text-slate-500">{(asset.sizeBytes / (1024 * 1024)).toFixed(1)} MB</span>
+                    <div className="flex items-center gap-2">
+                      {selectedAsset?.slug === asset.slug && <Check className="w-3.5 h-3.5 text-indigo-400" />}
+                      <span>{asset.displayName}</span>
+                    </div>
+                    <span className="text-[10px] font-mono text-slate-500">{(asset.sizeBytes / (1024 * 1024)).toFixed(1)} MB</span>
                   </button>
                 ))}
               </div>
             )}
 
             {settingsTab === 'speed' && (
-              <div className="space-y-1">
-                <div className="flex items-center justify-between border-b border-slate-900 pb-1.5 mb-1 px-1 font-bold text-slate-400 text-[10px] uppercase">
-                  <span>Playback Speed</span>
-                  <button onClick={() => setSettingsTab('main')} className="text-indigo-400 hover:text-indigo-300">
+              <div className="space-y-0.5">
+                <div className="flex items-center justify-between border-b border-slate-800/60 pb-1.5 mb-1 px-1 font-bold text-slate-400 text-[10px] uppercase tracking-wider">
+                  <span>Select Speed</span>
+                  <button onClick={() => setSettingsTab('main')} className="text-indigo-400 hover:text-indigo-300 font-bold">
                     Back
                   </button>
                 </div>
-                {[0.5, 0.75, 1, 1.25, 1.5, 2].map((rate) => (
+                {[0.5, 0.75, 1, 1.25, 1.5, 1.75, 2].map((rate) => (
                   <button
                     key={rate}
                     onClick={() => handleSpeedChange(rate)}
-                    className={`w-full text-left p-2 rounded-xl hover:bg-slate-900 transition-all font-semibold ${
-                      playbackRate === rate ? 'text-indigo-400 bg-indigo-950/20' : ''
+                    className={`w-full text-left p-2 rounded-xl hover:bg-slate-900/90 transition-all flex items-center justify-between font-semibold ${
+                      playbackRate === rate ? 'text-indigo-400 bg-indigo-950/40 border border-indigo-500/20' : 'text-slate-300'
                     }`}
                   >
-                    {rate === 1 ? 'Normal (1.0x)' : `${rate}x`}
+                    <span>{rate === 1 ? 'Normal (1.0x)' : `${rate}x`}</span>
+                    {playbackRate === rate && <Check className="w-3.5 h-3.5 text-indigo-400" />}
                   </button>
                 ))}
               </div>
@@ -658,86 +728,134 @@ export function CustomVideoPlayer({
           </div>
         )}
 
-        {/* Video Control Bar Panel */}
+        {/* Video Controls Bottom Bar */}
         <div
-          className={`absolute bottom-0 inset-x-0 p-4 flex flex-col gap-3 transition-opacity duration-300 z-10 ${
+          onClick={(e) => e.stopPropagation()}
+          className={`absolute bottom-0 inset-x-0 p-2.5 sm:p-4 flex flex-col gap-2 transition-opacity duration-300 z-30 ${
             showControls ? 'opacity-100' : 'opacity-0 pointer-events-none'
           }`}
         >
-          {/* Timeline progress scrub line with buffer visualization */}
-          <div className="relative w-full h-4 flex items-center group/timeline">
-            {/* Background Track */}
-            <div className="absolute inset-x-0 h-1 rounded-full bg-slate-800/80 group-hover/timeline:h-1.5 transition-all pointer-events-none" />
+          {/* Interactive Touch Progress Bar */}
+          <div 
+            className="relative w-full h-7 flex items-center group/timeline cursor-pointer touch-none"
+            onMouseMove={handleScrubMouseMove}
+            onMouseLeave={handleScrubMouseLeave}
+          >
+            <div className="absolute inset-x-0 h-1.5 rounded-full bg-slate-800/90 group-hover/timeline:h-2.5 transition-all" />
             
-            {/* Buffered Range Track */}
             <div 
               style={{ width: `${duration > 0 ? (bufferedEnd / duration) * 100 : 0}%` }} 
-              className="absolute left-0 h-1 rounded-full bg-slate-600/40 group-hover/timeline:h-1.5 transition-all pointer-events-none" 
+              className="absolute left-0 h-1.5 rounded-full bg-slate-600/50 group-hover/timeline:h-2.5 transition-all" 
             />
             
-            {/* Played Range Track */}
             <div 
               style={{ width: `${duration > 0 ? (currentTime / duration) * 100 : 0}%` }} 
-              className="absolute left-0 h-1 rounded-full bg-indigo-600 group-hover/timeline:h-1.5 transition-all pointer-events-none" 
+              className="absolute left-0 h-1.5 rounded-full bg-indigo-500 group-hover/timeline:h-2.5 transition-all shadow-[0_0_12px_rgba(99,102,241,0.6)]" 
             />
-            
-            {/* Slider Input overlay */}
+
+            {scrubHoverTime !== null && (
+              <div
+                style={{ left: `${scrubHoverPos}%` }}
+                className="absolute bottom-6 -translate-x-1/2 bg-slate-900 border border-slate-700 px-2 py-1 rounded-md text-[10px] font-mono text-white shadow-xl pointer-events-none z-40"
+              >
+                {formatTime(scrubHoverTime)}
+              </div>
+            )}
+
             <input
               type="range"
               min={0}
               max={duration || 100}
+              step="any"
               value={currentTime}
               onChange={handleScrubChange}
-              className="absolute inset-x-0 w-full h-full opacity-0 group-hover/timeline:opacity-100 accent-indigo-500 cursor-pointer z-10"
+              className="absolute inset-x-0 w-full h-full opacity-0 accent-indigo-500 cursor-pointer z-20"
               style={{ background: 'none' }}
             />
           </div>
 
-          {/* Buttons & options row */}
-          <div className="flex items-center justify-between text-white">
-            <div className="flex items-center gap-3">
-              {/* Play / Pause button */}
+          {/* Buttons & Options Row */}
+          <div className="flex items-center justify-between text-white gap-2">
+            <div className="flex items-center gap-1.5 sm:gap-3">
               <button
                 onClick={handlePlayPause}
-                className="p-1.5 rounded-xl hover:bg-white/10 transition-colors text-white"
+                className="p-1.5 sm:p-2 rounded-xl hover:bg-white/10 active:scale-95 transition-all text-white touch-manipulation"
+                aria-label={isPlaying ? 'Pause' : 'Play'}
               >
-                {isPlaying ? <Pause className="w-5 h-5 fill-white" /> : <Play className="w-5 h-5 fill-white" />}
+                {isPlaying ? <Pause className="w-5 h-5 sm:w-6 sm:h-6 fill-white" /> : <Play className="w-5 h-5 sm:w-6 sm:h-6 fill-white" />}
               </button>
 
-              {/* Live playback position */}
-              <span className="text-[11px] font-mono text-slate-300 ml-1.5">
-                {formatTime(currentTime)} / {formatTime(duration)}
+              <button
+                onClick={() => seekRelative(-10)}
+                className="p-1.5 rounded-xl hover:bg-white/10 text-slate-300 hover:text-white transition-all hidden sm:flex items-center"
+                title="-10 Seconds"
+              >
+                <RotateCcw className="w-4 h-4" />
+              </button>
+
+              <button
+                onClick={() => seekRelative(10)}
+                className="p-1.5 rounded-xl hover:bg-white/10 text-slate-300 hover:text-white transition-all hidden sm:flex items-center"
+                title="+10 Seconds"
+              >
+                <FastForward className="w-4 h-4" />
+              </button>
+
+              <span className="text-[10px] sm:text-xs font-mono text-slate-300 tracking-tight">
+                {formatTime(currentTime)} <span className="text-slate-500">/</span> {formatTime(duration)}
               </span>
             </div>
 
-            <div className="flex items-center gap-2">
-              {/* Settings gear toggle */}
+            <div className="flex items-center gap-1 sm:gap-2">
+              {selectedAsset && (
+                <span className="hidden sm:inline-block text-[10px] font-bold tracking-wider uppercase px-2 py-0.5 rounded-md bg-indigo-950/80 border border-indigo-500/30 text-indigo-300">
+                  {selectedAsset.displayName}
+                </span>
+              )}
+
               <button
                 onClick={() => {
                   setShowSettings(!showSettings);
                   setSettingsTab('main');
                 }}
-                className={`p-2 rounded-xl hover:bg-white/10 transition-all ${showSettings ? 'bg-white/15' : ''}`}
+                className={`p-1.5 sm:p-2 rounded-xl hover:bg-white/10 transition-all text-slate-200 ${showSettings ? 'bg-white/20 text-white' : ''}`}
+                aria-label="Settings"
               >
-                <Settings className="w-4.5 h-4.5" />
+                <Settings className="w-4.5 h-4.5 sm:w-5 sm:h-5" />
               </button>
 
-              {/* Maximize / Minimize fullscreen trigger */}
-              <button onClick={handleToggleFullscreen} className="p-2 rounded-xl hover:bg-white/10 transition-colors">
-                <Maximize className="w-4.5 h-4.5" />
+              {document.pictureInPictureEnabled && (
+                <button
+                  onClick={togglePictureInPicture}
+                  className="p-1.5 sm:p-2 rounded-xl hover:bg-white/10 text-slate-200 transition-colors hidden md:inline-flex"
+                  title="Picture-in-Picture"
+                >
+                  <PictureInPicture2 className="w-4.5 h-4.5 sm:w-5 sm:h-5" />
+                </button>
+              )}
+
+              <button 
+                onClick={handleToggleFullscreen} 
+                className="p-1.5 sm:p-2 rounded-xl hover:bg-white/10 text-slate-200 transition-colors"
+                aria-label="Fullscreen"
+              >
+                {isFullscreen ? <Minimize className="w-4.5 h-4.5 sm:w-5 sm:h-5" /> : <Maximize className="w-4.5 h-4.5 sm:w-5 sm:h-5" />}
               </button>
             </div>
           </div>
         </div>
 
-        {/* Next Video Auto-Play Countdown Popup */}
+        {/* Auto-Play Next Overlay */}
         {showAutoPlayOverlay && nextVideoUrl && (
-          <div className="absolute bottom-16 right-4 z-20 max-w-xs sm:max-w-sm p-4 rounded-2xl bg-slate-950/95 border border-indigo-500/30 shadow-2xl backdrop-blur-xl animate-fade-in flex flex-col gap-2.5 text-left text-white">
-            <div className="flex items-start justify-between gap-4">
+          <div 
+            onClick={(e) => e.stopPropagation()}
+            className="absolute bottom-16 right-2 sm:right-6 z-40 max-w-[260px] sm:max-w-xs p-3.5 rounded-2xl bg-slate-950/95 border border-indigo-500/30 shadow-2xl backdrop-blur-xl animate-in fade-in flex flex-col gap-2 text-left text-white"
+          >
+            <div className="flex items-start justify-between gap-3">
               <div>
                 <span className="text-[10px] font-extrabold uppercase text-indigo-400 tracking-wider">Up Next</span>
-                <p className="text-xs font-bold text-slate-100 line-clamp-1 mt-0.5">{nextTitle || "Next Lesson"}</p>
-                <p className="text-[11px] text-slate-400 mt-1">Playing in <span className="font-bold text-white text-xs">{autoPlayCountdown}s</span>...</p>
+                <p className="text-xs font-bold text-slate-100 line-clamp-1 mt-0.5">{nextTitle || "Next Video"}</p>
+                <p className="text-[11px] text-slate-400 mt-0.5">Playing in <span className="font-bold text-white text-xs">{autoPlayCountdown}s</span>...</p>
               </div>
               <button 
                 onClick={() => {
@@ -747,16 +865,14 @@ export function CustomVideoPlayer({
                 className="p-1 rounded-lg hover:bg-white/10 text-slate-400 hover:text-white transition-colors"
                 title="Cancel Auto-play"
               >
-                <X className="w-3.5 h-3.5" />
+                <X className="w-4 h-4" />
               </button>
             </div>
             
             <div className="flex gap-2">
               <button
-                onClick={() => {
-                  router.push(nextVideoUrl);
-                }}
-                className="flex-1 py-1.5 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-xs font-bold text-white transition-colors text-center"
+                onClick={() => router.push(nextVideoUrl)}
+                className="flex-1 py-1.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-xs font-bold text-white transition-colors text-center shadow-lg shadow-indigo-600/30"
               >
                 Play Now
               </button>
@@ -765,7 +881,7 @@ export function CustomVideoPlayer({
                   setAutoPlayCancelled(true);
                   setShowAutoPlayOverlay(false);
                 }}
-                className="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs font-bold text-slate-300 transition-colors"
+                className="px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-xs font-bold text-slate-300 transition-colors"
               >
                 Cancel
               </button>
@@ -773,7 +889,7 @@ export function CustomVideoPlayer({
           </div>
         )}
 
-        {/* Background Preloader Video Element */}
+        {/* Preloader background element */}
         {preloadingAsset && (
           <video
             ref={preloadingVideoRef}
@@ -785,25 +901,6 @@ export function CustomVideoPlayer({
           />
         )}
       </div>
-
-      {/* Bottom Navigation Cards */}
-      {(prevVideoUrl || nextVideoUrl) && (
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4 pt-4 border-t border-slate-800/80">
-          {prevVideoUrl ? (
-            <Link href={prevVideoUrl} className="glass-card p-4 rounded-2xl border border-slate-800 hover:border-indigo-500/30 transition-all flex flex-col items-start text-left gap-1 group w-full">
-              <span className="text-[10px] font-extrabold uppercase text-indigo-400">Previous Lesson</span>
-              <span className="text-sm font-bold text-white group-hover:text-indigo-300 transition-colors line-clamp-1">{prevTitle || "Previous"}</span>
-            </Link>
-          ) : <div />}
-
-          {nextVideoUrl ? (
-            <Link href={nextVideoUrl} className="glass-card p-4 rounded-2xl border border-slate-800 hover:border-indigo-500/30 transition-all flex flex-col items-end text-right gap-1 group w-full">
-              <span className="text-[10px] font-extrabold uppercase text-indigo-400">Next Lesson</span>
-              <span className="text-sm font-bold text-white group-hover:text-indigo-300 transition-colors line-clamp-1">{nextTitle || "Next"}</span>
-            </Link>
-          ) : <div />}
-        </div>
-      )}
     </div>
   );
 }

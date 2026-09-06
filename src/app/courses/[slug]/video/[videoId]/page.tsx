@@ -5,6 +5,7 @@ import { cookies } from 'next/headers';
 import { verifySessionToken } from '@/lib/session';
 import { hasCoursesAccess, isCourseSlugUnlocked } from '@/lib/coursesAuth';
 import { CustomVideoPlayer } from '@/components/CustomVideoPlayer';
+import { VideoPlaylistSidebar } from '@/components/VideoPlaylistSidebar';
 import { ArrowLeft, Lock } from 'lucide-react';
 import { CourseSectionUnit } from '@/lib/types';
 
@@ -41,7 +42,7 @@ export default async function VideoPlayerPage({ params }: PageProps) {
   if (!isUnlocked) {
     return (
       <div className="max-w-3xl mx-auto space-y-6 py-12 px-4 text-center">
-        <div className="glass-panel rounded-3xl p-8 sm:p-12 border border-amber-500/30 space-y-6 bg-amber-950/20">
+        <div className="glass-panel rounded-3xl p-8 sm:p-12 border border-amber-500/30 space-y-6 bg-amber-950/20 shadow-2xl">
           <div className="w-16 h-16 rounded-full bg-amber-500/20 text-amber-400 flex items-center justify-center mx-auto border border-amber-500/30">
             <Lock className="w-8 h-8" />
           </div>
@@ -108,27 +109,42 @@ export default async function VideoPlayerPage({ params }: PageProps) {
   const embedHtml = currentUnit?.data?.embed;
 
   return (
-    <div className="max-w-5xl mx-auto space-y-6 py-4 px-2 sm:px-6">
-      {/* Back Button */}
-      <Link
-        href={`/courses/${slug}`}
-        className="inline-flex items-center gap-2 text-xs font-semibold text-slate-400 hover:text-slate-200 transition-colors"
-      >
-        <ArrowLeft className="w-4 h-4" />
-        <span>Back to {course.title}</span>
-      </Link>
+    <div className="max-w-7xl mx-auto space-y-3 py-2 sm:py-3 px-1.5 sm:px-6 lg:max-h-[calc(100vh-5rem)] lg:overflow-hidden flex flex-col">
+      {/* Navigation Top Header */}
+      <div className="flex items-center justify-between px-1 shrink-0">
+        <Link
+          href={`/courses/${slug}`}
+          className="inline-flex items-center gap-2 text-xs font-semibold text-slate-400 hover:text-white transition-colors py-1 px-3 rounded-xl bg-slate-900/60 border border-slate-800/80 hover:border-slate-700"
+        >
+          <ArrowLeft className="w-4 h-4" />
+          <span>Back to {course.title} Syllabus</span>
+        </Link>
+      </div>
 
-      {/* Cinematic Custom Video Player Container */}
-      <div className="glass-panel rounded-3xl p-4 sm:p-6 border border-indigo-500/20 shadow-2xl bg-slate-900/90">
-        <CustomVideoPlayer
-          videoId={videoId}
-          title={unitTitle}
-          embedHtml={embedHtml}
-          prevVideoUrl={prevVideoUrl || undefined}
-          nextVideoUrl={nextVideoUrl || undefined}
-          prevTitle={prevTitle || undefined}
-          nextTitle={nextTitle || undefined}
-        />
+      {/* Responsive Grid Layout (Main Player + Playlist Drawer) */}
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 sm:gap-6 items-start lg:flex-1 lg:min-h-0">
+        {/* Main Video Player Container */}
+        <div className="lg:col-span-2 glass-panel rounded-2xl sm:rounded-3xl p-1.5 sm:p-5 border border-indigo-500/20 shadow-2xl bg-slate-900/90 space-y-4 shrink-0">
+          <CustomVideoPlayer
+            videoId={videoId}
+            title={unitTitle}
+            embedHtml={embedHtml}
+            prevVideoUrl={prevVideoUrl || undefined}
+            nextVideoUrl={nextVideoUrl || undefined}
+            prevTitle={prevTitle || undefined}
+            nextTitle={nextTitle || undefined}
+          />
+        </div>
+
+        {/* Course Video Playlist Sidebar */}
+        <div className="lg:col-span-1 lg:h-full lg:overflow-hidden">
+          <VideoPlaylistSidebar
+            courseTitle={course.title}
+            courseSlug={slug}
+            currentVideoId={videoId}
+            sections={course.sections}
+          />
+        </div>
       </div>
     </div>
   );

@@ -3,8 +3,8 @@ import './globals.css';
 import { Navbar } from '@/components/Navbar';
 import { ActivityTracker } from '@/components/ActivityTracker';
 import { AuthProvider } from '@/lib/authContext';
-import { Analytics } from '@vercel/analytics/next';
-import { SpeedInsights } from '@vercel/speed-insights/next';
+// import { Analytics } from '@vercel/analytics/next';
+// import { SpeedInsights } from '@vercel/speed-insights/next';
 export const metadata: Metadata = {
   title: 'PrepTea',
   description: 'Master quantitative aptitude, logical reasoning, and and much more with dynamic test papers.',
@@ -26,12 +26,12 @@ export default function RootLayout({
           </main>
           <footer className="border-t border-slate-800/80 bg-slate-950/60 py-6 mt-12">
             <div className="max-w-7xl mx-auto px-4 text-center text-xs text-slate-500">
-              <p suppressHydrationWarning>© {new Date().getFullYear()} PrepTea. Aptitude & Course Learning Platform. Dynamic test papers supported.</p>
+              <p suppressHydrationWarning>© {new Date().getFullYear()} PrepTea.</p>
             </div>
           </footer>
         </AuthProvider>
-        <Analytics />
-        <SpeedInsights />
+        {/* <Analytics />
+        <SpeedInsights /> */}
       </body>
     </html>
   );
