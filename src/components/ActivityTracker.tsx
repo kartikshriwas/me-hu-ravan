@@ -19,6 +19,24 @@ export function ActivityTracker() {
   const prevStateRef = useRef<string>('active');
   const eventBufferRef = useRef<SessionEvent[]>([]);
 
+  // Helper to check if video or audio is actively playing on the page
+  const checkIsMediaPlaying = () => {
+    try {
+      if (typeof window !== 'undefined' && (window as any).__preptea_media_playing) {
+        return true;
+      }
+      if (typeof document !== 'undefined') {
+        const mediaElements = Array.from(
+          document.querySelectorAll('video, audio')
+        ) as (HTMLVideoElement | HTMLAudioElement)[];
+        return mediaElements.some((m) => !m.paused && !m.ended && m.readyState > 2);
+      }
+    } catch (e) {
+      // ignore
+    }
+    return false;
+  };
+
   // 1. Initialize or restore session ID
   useEffect(() => {
     let sid = sessionStorage.getItem('preptea_session_id');
@@ -37,43 +55,84 @@ export function ActivityTracker() {
         type: 'navigation',
         details: `Navigated to ${pathname}`,
       });
-      // Cap buffer size to 5 events max to save network bandwidth & storage
       if (eventBufferRef.current.length > 5) {
         eventBufferRef.current = eventBufferRef.current.slice(-5);
       }
     }
   }, [pathname]);
 
-  // 3. Track user activity input events
+  // 3. Track user activity input & media playback events
   useEffect(() => {
     const handleUserInteraction = () => {
       lastActivityTimeRef.current = Date.now();
     };
 
-    const events = ['mousemove', 'keydown', 'click', 'scroll', 'touchstart'];
-    events.forEach((evt) => window.addEventListener(evt, handleUserInteraction, { passive: true }));
+    const interactionEvents = [
+      'mousemove',
+      'keydown',
+      'click',
+      'scroll',
+      'touchstart',
+      'pointermove',
+      'wheel',
+      'focus',
+    ];
+    interactionEvents.forEach((evt) =>
+      window.addEventListener(evt, handleUserInteraction, { passive: true })
+    );
+
+    // Media playback events (keep active timestamp updated continuously when playing media)
+    const mediaEvents = ['timeupdate', 'playing', 'play'];
+    mediaEvents.forEach((evt) =>
+      window.addEventListener(evt, handleUserInteraction, { capture: true, passive: true })
+    );
 
     return () => {
-      events.forEach((evt) => window.removeEventListener(evt, handleUserInteraction));
+      interactionEvents.forEach((evt) =>
+        window.removeEventListener(evt, handleUserInteraction)
+      );
+      mediaEvents.forEach((evt) =>
+        window.removeEventListener(evt, handleUserInteraction, { capture: true })
+      );
     };
   }, []);
 
-  // 4. Heartbeat Loop with dynamic interval (15s active / 30s idle)
+  // 4. Heartbeat Loop (every 15s)
   useEffect(() => {
     const sendHeartbeat = async (isFinal = false) => {
       if (!sessionIdRef.current) return;
 
       const now = Date.now();
-      const secondsSinceInteraction = Math.floor((now - lastActivityTimeRef.current) / 1000);
-      const isDocumentFocused = document.hasFocus();
+      const isMedia = checkIsMediaPlaying();
+
+      // If media is actively playing, continuously refresh last activity timestamp
+      if (isMedia) {
+        lastActivityTimeRef.current = now;
+      }
+
+      const secondsSinceInteraction = Math.floor(
+        (now - lastActivityTimeRef.current) / 1000
+      );
+      const isDocumentHidden =
+        typeof document !== 'undefined' && document.visibilityState === 'hidden';
 
       let currentState: 'active' | 'idle' | 'focus' | 'background' = 'active';
-      if (!isDocumentFocused) {
+
+      if (isMedia) {
+        // Video lecture / audio actively playing -> Active watching state
+        currentState = 'active';
+      } else if (isDocumentHidden) {
+        // Tab is hidden / minimized and NO video is playing -> Background
         currentState = 'background';
-      } else if (secondsSinceInteraction > 60) {
+      } else if (secondsSinceInteraction > 180) {
+        // Candidate has been away (> 3 mins) with no video playing -> Idle
         currentState = 'idle';
-      } else if (secondsSinceInteraction > 15) {
+      } else if (secondsSinceInteraction > 30) {
+        // Candidate is reading / studying on screen without mouse movement -> Focus
         currentState = 'focus';
+      } else {
+        // Active mouse / keyboard input within last 30s -> Active
+        currentState = 'active';
       }
 
       // Log state changes to event buffer
@@ -91,22 +150,27 @@ export function ActivityTracker() {
 
       // 15s interval delta accounting
       const intervalSecs = 15;
-      if (currentState === 'active') {
+      if (currentState === 'active' || currentState === 'focus') {
+        // BOTH Active and Focus count towards candidate's active usage time on site!
         activeSecondsAccumRef.current += intervalSecs;
-        focusSecondsAccumRef.current += intervalSecs;
-      } else if (currentState === 'focus') {
         focusSecondsAccumRef.current += intervalSecs;
       } else if (currentState === 'idle') {
         idleSecondsAccumRef.current += intervalSecs;
       }
 
-      const screenRes = typeof window !== 'undefined' ? `${window.innerWidth}x${window.innerHeight}` : '1920x1080';
-      const netInfo = typeof navigator !== 'undefined' ? (navigator as any).connection?.effectiveType || '4g' : '4g';
+      const screenRes =
+        typeof window !== 'undefined'
+          ? `${window.innerWidth}x${window.innerHeight}`
+          : '1920x1080';
+      const netInfo =
+        typeof navigator !== 'undefined'
+          ? (navigator as any).connection?.effectiveType || '4g'
+          : '4g';
 
       const payload = {
         sessionId: sessionIdRef.current,
         currentPath: pathname || '/',
-        pageTitle: document.title || 'PrepTea',
+        pageTitle: (typeof document !== 'undefined' && document.title) || 'PrepTea',
         state: currentState,
         activeDeltaSeconds: activeSecondsAccumRef.current,
         idleDeltaSeconds: idleSecondsAccumRef.current,
@@ -123,7 +187,9 @@ export function ActivityTracker() {
 
       try {
         if (isFinal && typeof navigator !== 'undefined' && navigator.sendBeacon) {
-          const blob = new Blob([JSON.stringify(payload)], { type: 'application/json' });
+          const blob = new Blob([JSON.stringify(payload)], {
+            type: 'application/json',
+          });
           navigator.sendBeacon('/api/analytics/heartbeat', blob);
         } else {
           const res = await fetch('/api/analytics/heartbeat', {

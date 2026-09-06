@@ -208,6 +208,18 @@ export function CustomVideoPlayer({
     return () => document.removeEventListener('fullscreenchange', handleFsChange);
   }, []);
 
+  // Sync global media playing status for ActivityTracker telemetry
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      (window as any).__preptea_media_playing = isPlaying;
+    }
+    return () => {
+      if (typeof window !== 'undefined') {
+        (window as any).__preptea_media_playing = false;
+      }
+    };
+  }, [isPlaying]);
+
   // 2. Hide controls automatically on mouse/touch idle
   const resetControlsTimeout = useCallback(() => {
     setShowControls(true);
