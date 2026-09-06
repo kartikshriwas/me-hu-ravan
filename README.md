@@ -1,1 +1,1 @@
-...me ravan hu re
+me ravan hu re
