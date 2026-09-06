@@ -1,17 +1,58 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import './globals.css';
 import { Navbar } from '@/components/Navbar';
 import { ActivityTracker } from '@/components/ActivityTracker';
 import { AuthProvider } from '@/lib/authContext';
 import { Analytics } from '@vercel/analytics/next';
 import { SpeedInsights } from '@vercel/speed-insights/next';
+
+const siteUrl = process.env.NEXT_PUBLIC_APP_URL || 'https://preptea.vercel.app';
+
+export const viewport: Viewport = {
+  themeColor: '#0b0f19',
+  colorScheme: 'dark',
+};
+
 export const metadata: Metadata = {
-  title: 'PrepTea',
-  description: 'Master quantitative aptitude, logical reasoning, and much more with dynamic test papers.',
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: 'PrepTea - Master Quantitative Aptitude & Logical Reasoning',
+    template: '%s | PrepTea',
+  },
+  description: 'Master quantitative aptitude, logical reasoning, data interpretation, and practice tests with real-time telemetry and solution explanations.',
+  keywords: ['PrepTea', 'Aptitude', 'Logical Reasoning', 'Quantitative Aptitude', 'DSA', 'Practice Tests', 'Placement Preparation'],
+  authors: [{ name: 'PrepTea Team' }],
   icons: {
-    icon: '/favicon.png',
-    shortcut: '/favicon.png',
-    apple: '/favicon.png',
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/favicon.png', type: 'image/png' },
+    ],
+    shortcut: '/favicon.svg',
+    apple: '/favicon.svg',
+  },
+  openGraph: {
+    title: 'PrepTea - Master Quantitative Aptitude & Logical Reasoning',
+    description: 'Master quantitative aptitude, logical reasoning, and practice tests with interactive analytics and solution explanations.',
+    url: siteUrl,
+    siteName: 'PrepTea',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'PrepTea - Master Quantitative Aptitude & Logical Reasoning',
+        type: 'image/png',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'PrepTea - Master Quantitative Aptitude & Logical Reasoning',
+    description: 'Master quantitative aptitude, logical reasoning, and practice tests with interactive analytics.',
+    images: ['/og-image.png'],
+    creator: '@preptea',
   },
 };
 
