@@ -16,7 +16,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: 'PrepTea - Master Quantitative Aptitude & Logical Reasoning',
+    default: 'PrepTea',
     template: '%s | PrepTea',
   },
   description: 'Master quantitative aptitude, logical reasoning, data interpretation, and practice tests with real-time telemetry and solution explanations.',
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     apple: '/favicon.svg',
   },
   openGraph: {
-    title: 'PrepTea - Master Quantitative Aptitude & Logical Reasoning',
+    title: 'PrepTea',
     description: 'Master quantitative aptitude, logical reasoning, and practice tests with interactive analytics and solution explanations.',
     url: siteUrl,
     siteName: 'PrepTea',
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'PrepTea - Master Quantitative Aptitude & Logical Reasoning',
+        alt: 'PrepTea',
         type: 'image/png',
       },
     ],
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'PrepTea - Master Quantitative Aptitude & Logical Reasoning',
+    title: 'PrepTea',
     description: 'Master quantitative aptitude, logical reasoning, and practice tests with interactive analytics.',
     images: ['/og-image.png'],
     creator: '@preptea',
