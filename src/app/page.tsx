@@ -28,8 +28,6 @@ import {
   X
 } from 'lucide-react';
 
-import { StudentDashboard } from '@/components/StudentDashboard';
-
 export default function HomePage() {
   const router = useRouter();
   const { user } = useAuth();
@@ -172,9 +170,6 @@ export default function HomePage() {
 
   return (
     <div className="space-y-8">
-      {/* Student Dashboard: Targets, Recent Progress, Saved Lectures & Batches */}
-      <StudentDashboard />
-
       {/* Active Events / Promos Banner for Non-Premium & Guests */}
       <EventPromoBanner />
       
