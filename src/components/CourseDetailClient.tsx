@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useMemo } from 'react';
+import React, { useMemo, useState, useEffect } from 'react';
 import Link from 'next/link';
 import { CourseDetail, CourseSectionUnit } from '@/lib/types';
 import { AssessmentMeta } from '@/lib/types';
@@ -314,6 +314,19 @@ function getUnitMetaConfig(unit: CourseSectionUnit) {
 }
 
 export function CourseDetailClient({ course, availableTests, isUnlocked = true }: CourseDetailClientProps) {
+  const [lastVideoInfo, setLastVideoInfo] = useState<{ videoId: string; title?: string; timestamp?: number } | null>(null);
+
+  useEffect(() => {
+    try {
+      const stored = localStorage.getItem(`preptea_last_video_${course.slug}`);
+      if (stored) {
+        setLastVideoInfo(JSON.parse(stored));
+      }
+    } catch (e) {
+      // ignore
+    }
+  }, [course.slug]);
+
   // Calculate specific content type breakdown (Videos, Quizzes, PDFs, eBooks, Certificates, Audio, Live, Interactive, Other)
   const contentCounts = useMemo(() => {
     return course.sections.reduce(
@@ -370,6 +383,23 @@ export function CourseDetailClient({ course, availableTests, isUnlocked = true }
           <p className="text-sm text-slate-300 max-w-3xl leading-relaxed">
             {course.keywords}
           </p>
+        )}
+
+        {lastVideoInfo && isUnlocked && (
+          <div className="pt-1">
+            <Link
+              href={`/courses/${course.slug}/video/${lastVideoInfo.videoId}`}
+              className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white font-bold text-xs shadow-lg shadow-indigo-600/30 transition-all active:scale-95 group max-w-full"
+            >
+              <Play className="w-4 h-4 fill-white shrink-0 group-hover:scale-110 transition-transform" />
+              <div className="flex items-center gap-1.5 min-w-0 flex-wrap">
+                <span className="font-extrabold shrink-0">Resume Learning:</span>
+                <span className="text-[11px] font-medium text-indigo-200 truncate max-w-[240px] sm:max-w-[360px]">
+                  {lastVideoInfo.title || 'Video Lesson'} ({Math.floor((lastVideoInfo.timestamp || 0) / 60)}:{(Math.floor((lastVideoInfo.timestamp || 0) % 60) < 10 ? '0' : '') + Math.floor((lastVideoInfo.timestamp || 0) % 60)})
+                </span>
+              </div>
+            </Link>
+          </div>
         )}
 
         {/* Course Breakdown Header Stats Bar */}

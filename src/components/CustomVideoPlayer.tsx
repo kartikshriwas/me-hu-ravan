@@ -43,6 +43,7 @@ interface WistiaVideoData {
 
 interface CustomVideoPlayerProps {
   videoId: string; // Wistia sourceid or unit id
+  courseSlug?: string;
   title?: string;
   embedHtml?: string;
   onClose?: () => void;
@@ -54,6 +55,7 @@ interface CustomVideoPlayerProps {
 
 export function CustomVideoPlayer({ 
   videoId, 
+  courseSlug,
   title, 
   embedHtml,
   onClose, 
@@ -96,6 +98,7 @@ export function CustomVideoPlayer({
   const videoRef = useRef<HTMLVideoElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const controlsTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const singleTapTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const pendingSeekTimeRef = useRef<number>(0);
   const wasPlayingBeforeSwitchRef = useRef<boolean>(false);
   const pendingQualityTargetRef = useRef<{ asset: VideoAsset; switchTime: number } | null>(null);
@@ -103,6 +106,12 @@ export function CustomVideoPlayer({
   const preloadingVideoRef = useRef<HTMLVideoElement>(null);
   const isPreloadReadyRef = useRef<boolean>(false);
   const lastTapRef = useRef<{ time: number; x: number }>({ time: 0, x: 0 });
+  const lastSaveTimeRef = useRef<number>(0);
+  const hasRestoredTimeRef = useRef<boolean>(false);
+
+  useEffect(() => {
+    hasRestoredTimeRef.current = false;
+  }, [videoId]);
 
   // 1. Fetch Video Metadata from API Proxy (only if not an iframe embed)
   useEffect(() => {
@@ -126,16 +135,26 @@ export function CustomVideoPlayer({
           setVideoData(video);
           
           let preferredHeight: number | null = null;
+          let preferredName: string | null = null;
+          let preferredSlug: string | null = null;
           try {
-            const stored = localStorage.getItem('preptea_preferred_quality');
-            if (stored) preferredHeight = parseInt(stored, 10);
+            const storedHeight = localStorage.getItem('preptea_preferred_quality');
+            if (storedHeight) preferredHeight = parseInt(storedHeight, 10);
+            preferredName = localStorage.getItem('preptea_preferred_quality_name');
+            preferredSlug = localStorage.getItem('preptea_preferred_quality_slug');
           } catch (e) {
             // ignore
           }
 
-          let defaultAsset = null;
+          let defaultAsset: VideoAsset | null = null;
           if (preferredHeight) {
-            defaultAsset = video.assets.find((a) => a.height === preferredHeight);
+            defaultAsset = video.assets.find((a) => a.height === preferredHeight) || null;
+          }
+          if (!defaultAsset && preferredName) {
+            defaultAsset = video.assets.find((a) => a.displayName.toLowerCase() === preferredName.toLowerCase()) || null;
+          }
+          if (!defaultAsset && preferredSlug) {
+            defaultAsset = video.assets.find((a) => a.slug === preferredSlug) || null;
           }
 
           if (!defaultAsset) {
@@ -165,6 +184,21 @@ export function CustomVideoPlayer({
     };
   }, [videoId, embedHtml]);
 
+  // Restore preferred playback speed from localStorage on initial mount
+  useEffect(() => {
+    try {
+      const storedSpeed = localStorage.getItem('preptea_preferred_speed');
+      if (storedSpeed) {
+        const rate = parseFloat(storedSpeed);
+        if (!isNaN(rate) && rate > 0) {
+          setPlaybackRate(rate);
+        }
+      }
+    } catch (e) {
+      // ignore
+    }
+  }, []);
+
   // Fullscreen change listener
   useEffect(() => {
     const handleFsChange = () => {
@@ -190,6 +224,7 @@ export function CustomVideoPlayer({
   useEffect(() => {
     return () => {
       if (controlsTimeoutRef.current) clearTimeout(controlsTimeoutRef.current);
+      if (singleTapTimeoutRef.current) clearTimeout(singleTapTimeoutRef.current);
     };
   }, []);
 
@@ -220,7 +255,7 @@ export function CustomVideoPlayer({
     }, 650);
   };
 
-  // Double tap gesture handler for mobile devices & video overlay clicks
+  // Double tap gesture handler for 10s seek & single tap play/pause anywhere on player
   const handleContainerTap = (e: React.MouseEvent<HTMLDivElement> | React.TouchEvent<HTMLDivElement>) => {
     const now = Date.now();
     const rect = containerRef.current?.getBoundingClientRect();
@@ -237,6 +272,11 @@ export function CustomVideoPlayer({
     const isLeftHalf = clickX < rect.width / 2;
 
     if (now - lastTapRef.current.time < 300) {
+      // Second tap of double tap: cancel single tap play/pause
+      if (singleTapTimeoutRef.current) {
+        clearTimeout(singleTapTimeoutRef.current);
+        singleTapTimeoutRef.current = null;
+      }
       if (isLeftHalf) {
         seekRelative(-10);
       } else {
@@ -246,6 +286,14 @@ export function CustomVideoPlayer({
     } else {
       lastTapRef.current = { time: now, x: clickX };
       resetControlsTimeout();
+
+      if (singleTapTimeoutRef.current) {
+        clearTimeout(singleTapTimeoutRef.current);
+      }
+      singleTapTimeoutRef.current = setTimeout(() => {
+        handlePlayPause();
+        singleTapTimeoutRef.current = null;
+      }, 250);
     }
   };
 
@@ -293,6 +341,17 @@ export function CustomVideoPlayer({
   };
 
   const handleVideoEnded = () => {
+    try {
+      const storedCompleted = localStorage.getItem('preptea_completed_videos');
+      const completedList: string[] = storedCompleted ? JSON.parse(storedCompleted) : [];
+      if (!completedList.includes(videoId)) {
+        completedList.push(videoId);
+        localStorage.setItem('preptea_completed_videos', JSON.stringify(completedList));
+      }
+    } catch (e) {
+      // ignore
+    }
+
     if (nextVideoUrl && !autoPlayCancelled) {
       router.push(nextVideoUrl);
     }
@@ -303,6 +362,34 @@ export function CustomVideoPlayer({
     const currentTimeVal = videoRef.current.currentTime;
     setCurrentTime(currentTimeVal);
     handleProgress();
+
+    // Throttled progress & timestamp persistence (every 2 seconds)
+    if (Date.now() - lastSaveTimeRef.current > 2000 && videoId && currentTimeVal > 2) {
+      lastSaveTimeRef.current = Date.now();
+      try {
+        localStorage.setItem(`preptea_video_time_${videoId}`, currentTimeVal.toString());
+
+        if (courseSlug) {
+          localStorage.setItem(`preptea_last_video_${courseSlug}`, JSON.stringify({
+            videoId,
+            title: title || videoData?.name || 'Video Lesson',
+            timestamp: currentTimeVal,
+            updatedAt: Date.now()
+          }));
+        }
+
+        if (duration > 0 && currentTimeVal / duration >= 0.88) {
+          const storedCompleted = localStorage.getItem('preptea_completed_videos');
+          const completedList: string[] = storedCompleted ? JSON.parse(storedCompleted) : [];
+          if (!completedList.includes(videoId)) {
+            completedList.push(videoId);
+            localStorage.setItem('preptea_completed_videos', JSON.stringify(completedList));
+          }
+        }
+      } catch (e) {
+        // ignore
+      }
+    }
 
     if (pendingQualityTargetRef.current && isPreloadReadyRef.current) {
       const { asset, switchTime } = pendingQualityTargetRef.current;
@@ -326,7 +413,9 @@ export function CustomVideoPlayer({
 
   const handleLoadedMetadata = () => {
     if (!videoRef.current) return;
-    setDuration(videoRef.current.duration);
+    const vidDuration = videoRef.current.duration;
+    setDuration(vidDuration);
+    videoRef.current.playbackRate = playbackRate;
     isSwitchingQualityRef.current = false;
 
     if (pendingSeekTimeRef.current > 0) {
@@ -334,6 +423,20 @@ export function CustomVideoPlayer({
       pendingSeekTimeRef.current = 0;
       if (wasPlayingBeforeSwitchRef.current) {
         videoRef.current.play().catch(() => {});
+      }
+    } else if (!hasRestoredTimeRef.current) {
+      hasRestoredTimeRef.current = true;
+      try {
+        const saved = localStorage.getItem(`preptea_video_time_${videoId}`);
+        if (saved) {
+          const savedTime = parseFloat(saved);
+          if (savedTime > 5 && vidDuration > 0 && savedTime < vidDuration - 10) {
+            videoRef.current.currentTime = savedTime;
+            setCurrentTime(savedTime);
+          }
+        }
+      } catch (e) {
+        // ignore
       }
     }
   };
@@ -361,6 +464,11 @@ export function CustomVideoPlayer({
     if (videoRef.current) {
       videoRef.current.playbackRate = rate;
     }
+    try {
+      localStorage.setItem('preptea_preferred_speed', rate.toString());
+    } catch (e) {
+      // ignore
+    }
     setShowSettings(false);
   };
 
@@ -370,6 +478,8 @@ export function CustomVideoPlayer({
 
     try {
       localStorage.setItem('preptea_preferred_quality', asset.height.toString());
+      localStorage.setItem('preptea_preferred_quality_name', asset.displayName);
+      localStorage.setItem('preptea_preferred_quality_slug', asset.slug);
     } catch (e) {
       // ignore
     }
@@ -542,50 +652,16 @@ export function CustomVideoPlayer({
   }
 
   return (
-    <div className="w-full space-y-2.5">
-      {/* Player Header */}
-      <div className="flex items-center justify-between gap-2 px-1">
-        <div className="min-w-0">
+    <div className="w-full flex flex-col">
+      {/* Video first on mobile (order-first), title below. On desktop title is on top. */}
 
-          <h3 className="text-xs sm:text-sm font-bold text-white truncate">{title || videoData.name}</h3>
-        </div>
-        <div className="flex items-center gap-1.5 sm:gap-2 shrink-0">
-          {prevVideoUrl && (
-            <Link
-              href={prevVideoUrl}
-              className="text-xs font-bold text-slate-300 hover:text-white px-2.5 sm:px-3 py-1.5 rounded-xl bg-slate-800/80 border border-slate-700/60 hover:border-indigo-500/50 transition-all flex items-center gap-1 touch-manipulation"
-            >
-              <ChevronLeft className="w-4 h-4" />
-              <span className="hidden sm:inline">Prev</span>
-            </Link>
-          )}
-          {nextVideoUrl && (
-            <Link
-              href={nextVideoUrl}
-              className="text-xs font-bold text-slate-300 hover:text-white px-2.5 sm:px-3 py-1.5 rounded-xl bg-slate-800/80 border border-slate-700/60 hover:border-indigo-500/50 transition-all flex items-center gap-1 touch-manipulation"
-            >
-              <span className="hidden sm:inline">Next</span>
-              <ChevronRight className="w-4 h-4" />
-            </Link>
-          )}
-          {onClose && (
-            <button
-              onClick={onClose}
-              className="text-xs font-bold text-slate-400 hover:text-white px-2.5 sm:px-3 py-1.5 rounded-xl bg-slate-800/80 border border-slate-700/60 transition-all"
-            >
-              Close
-            </button>
-          )}
-        </div>
-      </div>
-
-      {/* Main Video Container */}
+      {/* Main Video Container — full bleed */}
       <div
         ref={containerRef}
         onMouseMove={resetControlsTimeout}
         onMouseLeave={() => isPlaying && setShowControls(false)}
         onClick={handleContainerTap}
-        className="relative w-full aspect-[16/10] sm:aspect-video min-h-[220px] sm:min-h-0 bg-black rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-800/80 shadow-2xl group select-none touch-none"
+        className="relative w-full aspect-video min-h-[200px] sm:min-h-0 bg-black overflow-hidden shadow-2xl group select-none touch-none order-first sm:order-2"
       >
         <video
           ref={videoRef}
@@ -649,80 +725,152 @@ export function CustomVideoPlayer({
           }`}
         />
 
-        {/* Settings Popover UX Modal - Fits perfectly inside player bounds */}
+        {/* Settings Popover UX Modal - Navigation style like original YouTube player, mobile-friendly */}
         {showSettings && (
           <div 
             onClick={(e) => e.stopPropagation()}
-            className="absolute right-2 sm:right-6 bottom-14 sm:bottom-16 z-40 w-56 sm:w-60 max-h-[75%] overflow-y-auto rounded-2xl bg-slate-950/95 border border-slate-800 p-2.5 shadow-2xl text-slate-200 text-xs backdrop-blur-2xl custom-scrollbar animate-in fade-in zoom-in-95 duration-150"
+            className="absolute right-2 sm:right-6 bottom-14 sm:bottom-16 z-40 w-64 sm:w-72 max-h-[80%] overflow-y-auto rounded-2xl bg-slate-950/95 border border-slate-800 p-2.5 shadow-2xl text-slate-200 backdrop-blur-2xl custom-scrollbar animate-in fade-in zoom-in-95 duration-150 select-none"
           >
-
-
+            {/* MAIN MENU TAB */}
             {settingsTab === 'main' && (
-              <div className="space-y-0.5">
+              <div className="space-y-1">
+                <div className="text-[10px] font-bold tracking-wider text-slate-400 uppercase px-2 py-1 border-b border-slate-800/60 mb-1 flex items-center justify-between">
+                  <span>Settings</span>
+                  <button 
+                    onClick={() => setShowSettings(false)}
+                    className="p-0.5 rounded-md hover:bg-slate-800 text-slate-400 hover:text-white"
+                  >
+                    <X className="w-3.5 h-3.5" />
+                  </button>
+                </div>
+
+                {/* Quality Row */}
                 <button
                   onClick={() => setSettingsTab('quality')}
-                  className="w-full flex items-center justify-between p-2 rounded-xl hover:bg-slate-900/90 transition-all font-semibold"
+                  className="w-full flex items-center justify-between p-2.5 rounded-xl hover:bg-slate-900/90 active:bg-slate-800 transition-all text-xs font-semibold text-slate-200 touch-manipulation group"
                 >
-                  <span className="text-slate-300">Stream Quality</span>
-                  <span className="text-indigo-400 font-bold">{selectedAsset?.displayName || activeAsset?.displayName}</span>
+                  <div className="flex items-center gap-2.5">
+                    <SlidersHorizontal className="w-4 h-4 text-indigo-400" />
+                    <span>Quality</span>
+                  </div>
+                  <div className="flex items-center gap-1.5 text-slate-400 group-hover:text-white">
+                    <span className="text-[11px] font-medium text-indigo-300 bg-indigo-500/10 px-2 py-0.5 rounded-md border border-indigo-500/20">
+                      {selectedAsset?.displayName || 'Auto'}
+                    </span>
+                    <ChevronRight className="w-4 h-4 text-slate-500" />
+                  </div>
                 </button>
 
+                {/* Playback Speed Row */}
                 <button
                   onClick={() => setSettingsTab('speed')}
-                  className="w-full flex items-center justify-between p-2 rounded-xl hover:bg-slate-900/90 transition-all font-semibold"
+                  className="w-full flex items-center justify-between p-2.5 rounded-xl hover:bg-slate-900/90 active:bg-slate-800 transition-all text-xs font-semibold text-slate-200 touch-manipulation group"
                 >
-                  <span className="text-slate-300">Playback Speed</span>
-                  <span className="text-indigo-400 font-bold">{playbackRate === 1 ? 'Normal' : `${playbackRate}x`}</span>
+                  <div className="flex items-center gap-2.5">
+                    <FastForward className="w-4 h-4 text-indigo-400" />
+                    <span>Playback Speed</span>
+                  </div>
+                  <div className="flex items-center gap-1.5 text-slate-400 group-hover:text-white">
+                    <span className="text-[11px] font-medium text-indigo-300 bg-indigo-500/10 px-2 py-0.5 rounded-md border border-indigo-500/20">
+                      {`${playbackRate}x`}
+                    </span>
+                    <ChevronRight className="w-4 h-4 text-slate-500" />
+                  </div>
                 </button>
               </div>
             )}
 
+            {/* QUALITY SUBMENU */}
             {settingsTab === 'quality' && (
-              <div className="space-y-0.5">
-                <div className="flex items-center justify-between border-b border-slate-800/60 pb-1.5 mb-1 px-1 font-bold text-slate-400 text-[10px] uppercase tracking-wider">
-                  <span>Select Quality</span>
-                  <button onClick={() => setSettingsTab('main')} className="text-indigo-400 hover:text-indigo-300 font-bold">
-                    Back
+              <div className="space-y-1">
+                <div className="flex items-center gap-2 pb-2 border-b border-slate-800/60 mb-1">
+                  <button
+                    onClick={() => setSettingsTab('main')}
+                    className="p-1 rounded-lg hover:bg-slate-800 text-slate-300 hover:text-white transition-colors flex items-center gap-1.5 text-xs font-bold"
+                  >
+                    <ChevronLeft className="w-4 h-4 text-indigo-400" />
+                    <span>Quality</span>
                   </button>
                 </div>
-                {videoData.assets.map((asset) => (
-                  <button
-                    key={asset.slug}
-                    onClick={() => handleQualityChange(asset)}
-                    className={`w-full text-left p-2 rounded-xl hover:bg-slate-900/90 transition-all flex items-center justify-between font-semibold ${
-                      selectedAsset?.slug === asset.slug ? 'text-indigo-400 bg-indigo-950/40 border border-indigo-500/20' : 'text-slate-300'
-                    }`}
-                  >
-                    <div className="flex items-center gap-2">
-                      {selectedAsset?.slug === asset.slug && <Check className="w-3.5 h-3.5 text-indigo-400" />}
-                      <span>{asset.displayName}</span>
-                    </div>
-                    <span className="text-[10px] font-mono text-slate-500">{(asset.sizeBytes / (1024 * 1024)).toFixed(1)} MB</span>
-                  </button>
-                ))}
+
+                <div className="space-y-1 max-h-56 overflow-y-auto custom-scrollbar">
+                  {videoData?.assets?.map((asset) => {
+                    const isSelected = selectedAsset?.slug === asset.slug;
+                    return (
+                      <button
+                        key={asset.slug}
+                        onClick={() => {
+                          handleQualityChange(asset);
+                          setShowSettings(false);
+                        }}
+                        className={`w-full text-left p-2.5 rounded-xl transition-all flex items-center justify-between font-semibold text-xs touch-manipulation ${
+                          isSelected 
+                            ? 'text-indigo-400 bg-indigo-950/40 border border-indigo-500/30 shadow-sm' 
+                            : 'text-slate-300 hover:bg-slate-900/90 active:bg-slate-800'
+                        }`}
+                      >
+                        <div className="flex items-center gap-2.5">
+                          <div className="w-4 h-4 flex items-center justify-center shrink-0">
+                            {isSelected && <Check className="w-4 h-4 text-indigo-400" />}
+                          </div>
+                          <span>{asset.displayName}</span>
+                        </div>
+                        <span className="text-[10px] font-mono text-slate-400 bg-slate-900 px-1.5 py-0.5 rounded border border-slate-800">
+                          {(asset.sizeBytes / (1024 * 1024)).toFixed(1)} MB
+                        </span>
+                      </button>
+                    );
+                  })}
+                </div>
               </div>
             )}
 
+            {/* SPEED SUBMENU */}
             {settingsTab === 'speed' && (
-              <div className="space-y-0.5">
-                <div className="flex items-center justify-between border-b border-slate-800/60 pb-1.5 mb-1 px-1 font-bold text-slate-400 text-[10px] uppercase tracking-wider">
-                  <span>Select Speed</span>
-                  <button onClick={() => setSettingsTab('main')} className="text-indigo-400 hover:text-indigo-300 font-bold">
-                    Back
+              <div className="space-y-1">
+                <div className="flex items-center gap-2 pb-2 border-b border-slate-800/60 mb-1">
+                  <button
+                    onClick={() => setSettingsTab('main')}
+                    className="p-1 rounded-lg hover:bg-slate-800 text-slate-300 hover:text-white transition-colors flex items-center gap-1.5 text-xs font-bold"
+                  >
+                    <ChevronLeft className="w-4 h-4 text-indigo-400" />
+                    <span>Playback Speed</span>
                   </button>
                 </div>
-                {[0.5, 0.75, 1, 1.25, 1.5, 1.75, 2].map((rate) => (
-                  <button
-                    key={rate}
-                    onClick={() => handleSpeedChange(rate)}
-                    className={`w-full text-left p-2 rounded-xl hover:bg-slate-900/90 transition-all flex items-center justify-between font-semibold ${
-                      playbackRate === rate ? 'text-indigo-400 bg-indigo-950/40 border border-indigo-500/20' : 'text-slate-300'
-                    }`}
-                  >
-                    <span>{rate === 1 ? 'Normal (1.0x)' : `${rate}x`}</span>
-                    {playbackRate === rate && <Check className="w-3.5 h-3.5 text-indigo-400" />}
-                  </button>
-                ))}
+
+                <div className="space-y-1 max-h-56 overflow-y-auto custom-scrollbar">
+                  {[
+                    { label: '0.5x', rate: 0.5 },
+                    { label: '1x', rate: 1 },
+                    { label: '1.25x', rate: 1.25 },
+                    { label: '1.5x', rate: 1.5 },
+                    { label: '1.75x', rate: 1.75 },
+                    { label: '2x', rate: 2 },
+                  ].map((item) => {
+                    const isActive = playbackRate === item.rate;
+                    return (
+                      <button
+                        key={item.rate}
+                        onClick={() => {
+                          handleSpeedChange(item.rate);
+                          setShowSettings(false);
+                        }}
+                        className={`w-full text-left p-2.5 rounded-xl transition-all flex items-center justify-between font-semibold text-xs touch-manipulation ${
+                          isActive 
+                            ? 'text-indigo-400 bg-indigo-950/40 border border-indigo-500/30 shadow-sm' 
+                            : 'text-slate-300 hover:bg-slate-900/90 active:bg-slate-800'
+                        }`}
+                      >
+                        <div className="flex items-center gap-2.5">
+                          <div className="w-4 h-4 flex items-center justify-center shrink-0">
+                            {isActive && <Check className="w-4 h-4 text-indigo-400" />}
+                          </div>
+                          <span>{item.label}</span>
+                        </div>
+                      </button>
+                    );
+                  })}
+                </div>
               </div>
             )}
           </div>
@@ -785,22 +933,6 @@ export function CustomVideoPlayer({
                 {isPlaying ? <Pause className="w-5 h-5 sm:w-6 sm:h-6 fill-white" /> : <Play className="w-5 h-5 sm:w-6 sm:h-6 fill-white" />}
               </button>
 
-              <button
-                onClick={() => seekRelative(-10)}
-                className="p-1.5 rounded-xl hover:bg-white/10 text-slate-300 hover:text-white transition-all hidden sm:flex items-center"
-                title="-10 Seconds"
-              >
-                <RotateCcw className="w-4 h-4" />
-              </button>
-
-              <button
-                onClick={() => seekRelative(10)}
-                className="p-1.5 rounded-xl hover:bg-white/10 text-slate-300 hover:text-white transition-all hidden sm:flex items-center"
-                title="+10 Seconds"
-              >
-                <FastForward className="w-4 h-4" />
-              </button>
-
               <span className="text-[10px] sm:text-xs font-mono text-slate-300 tracking-tight">
                 {formatTime(currentTime)} <span className="text-slate-500">/</span> {formatTime(duration)}
               </span>
@@ -814,10 +946,10 @@ export function CustomVideoPlayer({
               )}
 
               <button
-                onClick={() => {
-                  setShowSettings(!showSettings);
-                  setSettingsTab('main');
-                }}
+                onClick={() => setShowSettings(prev => {
+                  if (!prev) setSettingsTab('main');
+                  return !prev;
+                })}
                 className={`p-1.5 sm:p-2 rounded-xl hover:bg-white/10 transition-all text-slate-200 ${showSettings ? 'bg-white/20 text-white' : ''}`}
                 aria-label="Settings"
               >
@@ -900,6 +1032,41 @@ export function CustomVideoPlayer({
             onCanPlay={handlePreloadCanPlay}
           />
         )}
+      </div>
+
+      {/* Player Info/Nav Header — below video on mobile (order-2), above on desktop (sm:order-1) */}
+      <div className="flex items-center justify-between gap-2 px-3 sm:px-6 py-2.5 sm:py-2.5 order-2 sm:order-1 border-b border-slate-800/40">
+        <div className="min-w-0 flex-1">
+          <h3 className="text-sm sm:text-sm font-bold text-white truncate">{title || videoData?.name}</h3>
+        </div>
+        <div className="flex items-center gap-2 shrink-0">
+          {prevVideoUrl && (
+            <Link
+              href={prevVideoUrl}
+              className="text-xs font-bold text-slate-300 hover:text-white px-2.5 py-1.5 rounded-xl bg-slate-800/80 border border-slate-700/60 hover:border-indigo-500/50 transition-all flex items-center gap-1 touch-manipulation"
+            >
+              <ChevronLeft className="w-4 h-4" />
+              <span className="hidden sm:inline">Prev</span>
+            </Link>
+          )}
+          {nextVideoUrl && (
+            <Link
+              href={nextVideoUrl}
+              className="text-xs font-bold text-slate-300 hover:text-white px-2.5 py-1.5 rounded-xl bg-slate-800/80 border border-slate-700/60 hover:border-indigo-500/50 transition-all flex items-center gap-1 touch-manipulation"
+            >
+              <span className="hidden sm:inline">Next</span>
+              <ChevronRight className="w-4 h-4" />
+            </Link>
+          )}
+          {onClose && (
+            <button
+              onClick={onClose}
+              className="text-xs font-bold text-slate-400 hover:text-white px-2.5 py-1.5 rounded-xl bg-slate-800/80 border border-slate-700/60 transition-all"
+            >
+              Close
+            </button>
+          )}
+        </div>
       </div>
     </div>
   );
