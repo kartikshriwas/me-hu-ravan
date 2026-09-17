@@ -1,7 +1,7 @@
 import { User } from '@/models/User';
 import { connectToDatabase } from '@/lib/db';
 
-export const SUPERADMIN_EMAIL = 'fykartik@gmail.com';
+export const SUPERADMIN_EMAIL = (process.env.SUPERADMIN_EMAIL || '').toLowerCase().trim();
 
 export type AdminPermission =
   | 'manage_codes'

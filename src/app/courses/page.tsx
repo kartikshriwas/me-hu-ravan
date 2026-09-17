@@ -1,16 +1,15 @@
 import { getAllCourses } from '@/lib/coursesData';
 import { cookies } from 'next/headers';
 import { notFound } from 'next/navigation';
-import { verifySessionToken } from '@/lib/session';
+import { auth } from '@/auth';
 import { hasCoursesAccess, isCourseSlugUnlocked } from '@/lib/coursesAuth';
 import { CoursesCatalogGrid } from '@/components/CoursesCatalogGrid';
 
 export const revalidate = 0;
 
 export default async function CoursesCatalogPage() {
-  const cookieStore = await cookies();
-  const sessionCookie = cookieStore.get('preptea_session')?.value;
-  const sessionUser = verifySessionToken(sessionCookie);
+  const session = await auth();
+  const sessionUser = session?.user as any;
 
   const allowed = await hasCoursesAccess(sessionUser);
   if (!allowed) {

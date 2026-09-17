@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { getSessionFromRequest } from '@/lib/session';
+import { auth } from '@/auth';
 
 export async function GET(
   request: Request,
@@ -7,7 +7,8 @@ export async function GET(
 ) {
   try {
     // 1. Session verification
-    const session = getSessionFromRequest(request);
+    const sessionAuth = await auth();
+    const session = sessionAuth?.user as any;
     if (!session) {
       return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 });
     }

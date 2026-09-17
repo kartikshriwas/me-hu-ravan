@@ -6,16 +6,16 @@ import { Attempt } from '@/models/Attempt';
 import { User } from '@/models/User';
 import { isPlatformGlobalFree } from '@/lib/globalSetting';
 import { cleanQuizId } from '@/lib/storage';
-import { getSessionFromRequest } from '@/lib/session';
-
-const SUPERADMIN_EMAIL = 'fykartik@gmail.com';
+import { auth } from '@/auth';
+import { SUPERADMIN_EMAIL } from '@/lib/adminAuth';
 
 export async function GET(
   request: Request,
   { params }: { params: Promise<{ id: string }> }
 ) {
   try {
-    const session = getSessionFromRequest(request);
+    const sessionAuth = await auth();
+    const session = sessionAuth?.user as any;
     if (!session) {
       return NextResponse.json(
         { success: false, error: 'Access Declined: Authentication Required or Token Expired' },

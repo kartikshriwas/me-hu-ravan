@@ -4,12 +4,13 @@ import { Attempt } from '@/models/Attempt';
 import { User } from '@/models/User';
 import { QuestionStat } from '@/models/QuestionStat';
 import { cleanQuizId } from '@/lib/storage';
-import { getSessionFromRequest } from '@/lib/session';
+import { auth } from '@/auth';
 import { getAssessmentById } from '@/lib/questionsData';
 
 export async function POST(request: Request) {
   try {
-    const session = getSessionFromRequest(request);
+    const sessionAuth = await auth();
+    const session = sessionAuth?.user as any;
     if (!session) {
       return NextResponse.json(
         { success: false, error: 'Access Declined: Token Expired or Authentication Required' },
@@ -208,7 +209,8 @@ export async function POST(request: Request) {
 
 export async function GET(request: Request) {
   try {
-    const session = getSessionFromRequest(request);
+    const sessionAuth = await auth();
+    const session = sessionAuth?.user as any;
     if (!session) {
       return NextResponse.json(
         { success: false, error: 'Access Declined: Token Expired or Authentication Required' },

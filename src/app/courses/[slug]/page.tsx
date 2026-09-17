@@ -2,16 +2,15 @@ import { notFound } from 'next/navigation';
 import { getCourseBySlug } from '@/lib/coursesData';
 import { getAllAssessments } from '@/lib/questionsData';
 import { cookies } from 'next/headers';
-import { verifySessionToken } from '@/lib/session';
+import { auth } from '@/auth';
 import { hasCoursesAccess, isCourseSlugUnlocked } from '@/lib/coursesAuth';
 import { CourseDetailClient } from '@/components/CourseDetailClient';
 
 export const revalidate = 0;
 
 export default async function CourseDetailPage({ params }: { params: Promise<{ slug: string }> }) {
-  const cookieStore = await cookies();
-  const sessionCookie = cookieStore.get('preptea_session')?.value;
-  const sessionUser = verifySessionToken(sessionCookie);
+  const session = await auth();
+  const sessionUser = session?.user as any;
 
   const allowed = await hasCoursesAccess(sessionUser);
   if (!allowed) {

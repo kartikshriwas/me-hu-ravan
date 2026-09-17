@@ -1,14 +1,15 @@
 import { NextResponse } from 'next/server';
-import { getSessionFromRequest } from '@/lib/session';
+import { auth } from '@/auth';
 import { verifyAdminPermission } from '@/lib/adminAuth';
 import { LaunchEvent } from '@/models/LaunchEvent';
 
 export async function GET(request: Request) {
   try {
-    const sessionUser = getSessionFromRequest(request);
-    const auth = await verifyAdminPermission(sessionUser?.email, 'manage_events');
-    if (!auth.isAuthorized) {
-      return NextResponse.json({ success: false, error: auth.error }, { status: auth.statusCode || 403 });
+    const session = await auth();
+  const sessionUser = session?.user as any;
+    const adminAuth = await verifyAdminPermission(sessionUser?.email, 'manage_events');
+    if (!adminAuth.isAuthorized) {
+      return NextResponse.json({ success: false, error: adminAuth.error }, { status: adminAuth.statusCode || 403 });
     }
 
     const events = await LaunchEvent.find().sort({ createdAt: -1 }).lean();
@@ -35,10 +36,11 @@ export async function GET(request: Request) {
 
 export async function POST(request: Request) {
   try {
-    const sessionUser = getSessionFromRequest(request);
-    const auth = await verifyAdminPermission(sessionUser?.email, 'manage_events');
-    if (!auth.isAuthorized) {
-      return NextResponse.json({ success: false, error: auth.error }, { status: auth.statusCode || 403 });
+    const session = await auth();
+  const sessionUser = session?.user as any;
+    const adminAuth = await verifyAdminPermission(sessionUser?.email, 'manage_events');
+    if (!adminAuth.isAuthorized) {
+      return NextResponse.json({ success: false, error: adminAuth.error }, { status: adminAuth.statusCode || 403 });
     }
 
     const body = await request.json();

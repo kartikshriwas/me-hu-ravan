@@ -2,6 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import { getQuestionsDirectory } from './pathHelper';
 import { AssessmentDetail, AssessmentMeta, QuestionBlock, QuestionOption } from './types';
+import { cleanQuizId } from './storage';
 
 const parsedAssessmentCache = new Map<string, { data: AssessmentDetail; mtime: number }>();
 let cachedAllAssessments: AssessmentMeta[] | null = null;
@@ -242,40 +243,37 @@ export function getAllAssessments(): AssessmentMeta[] {
   return sorted;
 }
 
-function cleanQuizId(rawId: string): string {
-  if (!rawId) return '';
-  let current = rawId;
-  try {
-    while (current.includes('%')) {
-      const decoded = decodeURIComponent(current);
-      if (decoded === current) break;
-      current = decoded;
-    }
-  } catch {
-    // Return last valid decoded value
-  }
-  return current;
-}
-
 export function getAssessmentById(rawQuizId: string): AssessmentDetail | null {
   const dir = getQuestionsDirectory();
   if (!fs.existsSync(dir)) return null;
 
   const quizId = cleanQuizId(rawQuizId);
-  const targetFileName = quizId.toLowerCase().endsWith('.json') ? quizId : `${quizId}.json`;
+
+  // SECURITY: Sanitize path separators and traversal patterns to prevent directory escape
+  const safeId = quizId.replace(/[\/\\]/g, '').replace(/\.\./g, '');
+  if (!safeId || safeId.length === 0 || safeId.length > 100) return null;
+
+  const targetFileName = safeId.toLowerCase().endsWith('.json') ? safeId : `${safeId}.json`;
   const fullPath = path.join(dir, targetFileName);
+
+  // SECURITY: Verify resolved path remains within the expected questions directory
+  const resolvedPath = path.resolve(fullPath);
+  const resolvedDir = path.resolve(dir);
+  if (!resolvedPath.startsWith(resolvedDir + path.sep) && resolvedPath !== resolvedDir) {
+    return null;
+  }
 
   if (!fs.existsSync(fullPath)) {
     const files = fs.readdirSync(dir).filter((f) => f.endsWith('.json'));
     for (const file of files) {
-      if (path.basename(file, '.json').toLowerCase() === quizId.toLowerCase()) {
-        return parseAssessmentFile(path.join(dir, file), quizId);
+      if (path.basename(file, '.json').toLowerCase() === safeId.toLowerCase()) {
+        return parseAssessmentFile(path.join(dir, file), safeId);
       }
     }
     return null;
   }
 
-  return parseAssessmentFile(fullPath, quizId);
+  return parseAssessmentFile(fullPath, safeId);
 }
 
 function parseAssessmentFile(filePath: string, quizId: string): AssessmentDetail | null {

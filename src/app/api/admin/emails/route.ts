@@ -1,15 +1,16 @@
 import { NextResponse } from 'next/server';
-import { getSessionFromRequest } from '@/lib/session';
+import { auth } from '@/auth';
 import { verifyAdminPermission } from '@/lib/adminAuth';
 import { User } from '@/models/User';
 import { PreApprovedEmail } from '@/models/PreApprovedEmail';
 
 export async function GET(request: Request) {
   try {
-    const sessionUser = getSessionFromRequest(request);
-    const auth = await verifyAdminPermission(sessionUser?.email, 'manage_emails');
-    if (!auth.isAuthorized) {
-      return NextResponse.json({ success: false, error: auth.error }, { status: auth.statusCode || 403 });
+    const session = await auth();
+  const sessionUser = session?.user as any;
+    const adminAuth = await verifyAdminPermission(sessionUser?.email, 'manage_emails');
+    if (!adminAuth.isAuthorized) {
+      return NextResponse.json({ success: false, error: adminAuth.error }, { status: adminAuth.statusCode || 403 });
     }
 
     const list = await PreApprovedEmail.find().sort({ createdAt: -1 }).limit(300).lean();
@@ -34,10 +35,11 @@ export async function GET(request: Request) {
 
 export async function POST(request: Request) {
   try {
-    const sessionUser = getSessionFromRequest(request);
-    const auth = await verifyAdminPermission(sessionUser?.email, 'manage_emails');
-    if (!auth.isAuthorized) {
-      return NextResponse.json({ success: false, error: auth.error }, { status: auth.statusCode || 403 });
+    const session = await auth();
+  const sessionUser = session?.user as any;
+    const adminAuth = await verifyAdminPermission(sessionUser?.email, 'manage_emails');
+    if (!adminAuth.isAuthorized) {
+      return NextResponse.json({ success: false, error: adminAuth.error }, { status: adminAuth.statusCode || 403 });
     }
 
     const body = await request.json();

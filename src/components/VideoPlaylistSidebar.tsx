@@ -11,6 +11,10 @@ interface Unit {
   title?: string;
   type: string;
   duration?: string;
+  data?: {
+    embed?: string;
+    [key: string]: any;
+  };
 }
 
 interface Section {
@@ -113,7 +117,7 @@ export function VideoPlaylistSidebar({
 
   // Calculate total playable videos & progress
   const totalVideos = sections.reduce((acc, sec) => {
-    return acc + sec.units.filter(u => !!u.sourceid || u.type === 'youtube' || u.type === 'ivideo').length;
+    return acc + sec.units.filter(u => !!u.sourceid || u.type === 'youtube' || (u.data && !!u.data.embed)).length;
   }, 0);
 
   const completedCount = sections.reduce((acc, sec) => {
@@ -192,7 +196,7 @@ export function VideoPlaylistSidebar({
         className="hidden lg:block flex-1 overflow-y-auto custom-scrollbar scroll-smooth p-3"
       >
         {sections.map((section, sIdx) => {
-          const videoUnits = section.units.filter(u => !!u.sourceid || u.type === 'youtube' || u.type === 'ivideo');
+          const videoUnits = section.units.filter(u => !!u.sourceid || u.type === 'youtube' || (u.data && !!u.data.embed));
           if (videoUnits.length === 0) return null;
           const isExpanded = expandedSections[sIdx] ?? false;
           const sectionName = section.title || section.sectionTitle || 'Course Section';
@@ -283,7 +287,7 @@ export function VideoPlaylistSidebar({
         className="lg:hidden flex-1 min-h-0 overflow-y-auto custom-scrollbar divide-y divide-slate-800/50"
       >
         {sections.map((section, sIdx) => {
-          const videoUnits = section.units.filter(u => !!u.sourceid || u.type === 'youtube' || u.type === 'ivideo');
+          const videoUnits = section.units.filter(u => !!u.sourceid || u.type === 'youtube' || (u.data && !!u.data.embed));
           if (videoUnits.length === 0) return null;
           const sectionName = section.title || section.sectionTitle || 'Course Section';
           const hasActiveVideo = videoUnits.some(u => (u.sourceid || u.id) === currentVideoId);

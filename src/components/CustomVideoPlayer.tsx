@@ -3,6 +3,7 @@
 import React, { useEffect, useRef, useState, useCallback } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
+import DOMPurify from 'dompurify';
 import {
   Play,
   Pause,
@@ -635,7 +636,7 @@ export function CustomVideoPlayer({
               allowFullScreen
             />
           ) : (
-            <div dangerouslySetInnerHTML={{ __html: embedHtml }} className="w-full h-full flex items-center justify-center" />
+            <div dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(embedHtml, { ADD_TAGS: ['iframe'], ADD_ATTR: ['allow', 'allowfullscreen', 'frameborder', 'src'] }) }} className="w-full h-full flex items-center justify-center" />
           )}
         </div>
       </div>

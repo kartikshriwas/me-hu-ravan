@@ -1,29 +1,32 @@
 import { NextResponse } from 'next/server';
-import { getSessionFromRequest } from '@/lib/session';
+import { auth } from '@/auth';
 import { verifyAdminPermission } from '@/lib/adminAuth';
 import { isPlatformGlobalFree, setGlobalFreeDays } from '@/lib/globalSetting';
 
 export async function GET(request: Request) {
   try {
-    const sessionUser = getSessionFromRequest(request);
-    const auth = await verifyAdminPermission(sessionUser?.email, 'manage_global_free');
-    if (!auth.isAuthorized) {
-      return NextResponse.json({ success: false, error: auth.error }, { status: auth.statusCode || 403 });
+    const session = await auth();
+  const sessionUser = session?.user as any;
+    const adminAuth = await verifyAdminPermission(sessionUser?.email, 'manage_global_free');
+    if (!adminAuth.isAuthorized) {
+      return NextResponse.json({ success: false, error: adminAuth.error }, { status: adminAuth.statusCode || 403 });
     }
 
     const status = await isPlatformGlobalFree();
     return NextResponse.json({ success: true, ...status });
   } catch (err: any) {
-    return NextResponse.json({ success: false, error: err.message || 'Server Error' }, { status: 500 });
+    console.error('Error in global-free GET:', err);
+    return NextResponse.json({ success: false, error: 'Failed to check global free status' }, { status: 500 });
   }
 }
 
 export async function POST(request: Request) {
   try {
-    const sessionUser = getSessionFromRequest(request);
-    const auth = await verifyAdminPermission(sessionUser?.email, 'manage_global_free');
-    if (!auth.isAuthorized) {
-      return NextResponse.json({ success: false, error: auth.error }, { status: auth.statusCode || 403 });
+    const session = await auth();
+  const sessionUser = session?.user as any;
+    const adminAuth = await verifyAdminPermission(sessionUser?.email, 'manage_global_free');
+    if (!adminAuth.isAuthorized) {
+      return NextResponse.json({ success: false, error: adminAuth.error }, { status: adminAuth.statusCode || 403 });
     }
 
     const body = await request.json();
@@ -39,6 +42,7 @@ export async function POST(request: Request) {
       ...result,
     });
   } catch (err: any) {
-    return NextResponse.json({ success: false, error: err.message || 'Server Error' }, { status: 500 });
+    console.error('Error in global-free POST:', err);
+    return NextResponse.json({ success: false, error: 'Failed to update global free status' }, { status: 500 });
   }
 }

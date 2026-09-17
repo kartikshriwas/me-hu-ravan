@@ -1,34 +1,14 @@
 'use client';
 
 import React from 'react';
-import { useGoogleLogin } from '@react-oauth/google';
-import { useAuth } from '@/lib/authContext';
+import { signIn } from 'next-auth/react';
 
 export function GoogleLoginButton({ label = 'Sign in with Google', size = 'medium' }: { label?: string; size?: 'small' | 'medium' | 'large' }) {
-  const { handleGoogleUserInfo } = useAuth();
-
-  const login = useGoogleLogin({
-    onSuccess: async (tokenResponse) => {
-      try {
-        const res = await fetch('https://www.googleapis.com/oauth2/v3/userinfo', {
-          headers: { Authorization: `Bearer ${tokenResponse.access_token}` },
-        });
-        const userInfo = await res.json();
-        if (userInfo && userInfo.email) {
-          await handleGoogleUserInfo(userInfo);
-        }
-      } catch (err) {
-        console.error('Error fetching Google userinfo:', err);
-      }
-    },
-    onError: (error) => console.error('Google Sign-In Error:', error),
-  });
-
   const paddingClass = size === 'small' ? 'px-2.5 py-1.5 text-xs' : size === 'large' ? 'px-5 py-2.5 text-sm' : 'px-3.5 py-2 text-xs sm:text-sm';
 
   return (
     <button
-      onClick={() => login()}
+      onClick={() => signIn('google')}
       type="button"
       className={`relative group overflow-hidden rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700 hover:border-indigo-500/50 text-white font-bold transition-all shadow-md hover:shadow-indigo-500/20 flex items-center justify-center gap-2 shrink-0 ${paddingClass}`}
     >

@@ -2,11 +2,11 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { getCourseBySlug } from '@/lib/coursesData';
 import { cookies } from 'next/headers';
-import { verifySessionToken } from '@/lib/session';
+import { auth } from '@/auth';
 import { hasCoursesAccess, isCourseSlugUnlocked } from '@/lib/coursesAuth';
 import { CustomVideoPlayer } from '@/components/CustomVideoPlayer';
 import { VideoPlaylistSidebar } from '@/components/VideoPlaylistSidebar';
-import { ArrowLeft, Lock } from 'lucide-react';
+import { ArrowLeft, Lock, VideoOff } from 'lucide-react';
 import { CourseSectionUnit } from '@/lib/types';
 
 export const revalidate = 0;
@@ -22,9 +22,8 @@ export default async function VideoPlayerPage({ params }: PageProps) {
   const { slug, videoId } = await params;
 
   // 1. Session verification & Course catalog access check
-  const cookieStore = await cookies();
-  const sessionCookie = cookieStore.get('preptea_session')?.value;
-  const sessionUser = verifySessionToken(sessionCookie);
+  const session = await auth();
+  const sessionUser = session?.user as any;
 
   const allowed = await hasCoursesAccess(sessionUser);
   if (!allowed) {
@@ -107,6 +106,35 @@ export default async function VideoPlayerPage({ params }: PageProps) {
   }
 
   const embedHtml = currentUnit?.data?.embed;
+  const isYouTubeUnit = currentUnit?.type === 'youtube' || currentUnit?.icon === 'yt' || (currentUnit?.subtitle && currentUnit.subtitle.toLowerCase().includes('youtube'));
+  const hasVideoSource = !!(currentUnit?.sourceid && currentUnit.sourceid.trim() !== '') || isYouTubeUnit || !!embedHtml;
+
+  if (currentUnit && !hasVideoSource) {
+    return (
+      <div className="max-w-3xl mx-auto space-y-6 py-12 px-4 text-center">
+        <div className="glass-panel rounded-3xl p-8 sm:p-12 border border-slate-800 space-y-6 bg-slate-900/60 shadow-2xl">
+          <div className="w-16 h-16 rounded-full bg-slate-800 text-slate-400 flex items-center justify-center mx-auto border border-slate-700/60">
+            <VideoOff className="w-8 h-8" />
+          </div>
+          <div className="space-y-2">
+            <h2 className="text-2xl font-bold text-white">Video Not Available</h2>
+            <p className="text-xs text-slate-400 max-w-md mx-auto leading-relaxed">
+              The video source for <span className="font-bold text-slate-200">{unitTitle}</span> is currently not available.
+            </p>
+          </div>
+          <div>
+            <Link
+              href={`/courses/${slug}`}
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs shadow-lg transition-all border border-slate-700"
+            >
+              <ArrowLeft className="w-4 h-4" />
+              <span>Back to Course Syllabus</span>
+            </Link>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="-mx-3 sm:-mx-6 lg:-mx-8 -mt-4 sm:-mt-8 flex flex-col h-[calc(100dvh-3.5rem)] sm:h-[calc(100dvh-4rem)] lg:h-[calc(100vh-5rem)] overflow-hidden">

@@ -17,6 +17,7 @@ export interface IUser extends Document {
   averageAccuracy: number;
   lastActiveAt: Date;
   createdAt: Date;
+  hasCourseAccess?: boolean;
 }
 
 const UserSchema: Schema<IUser> = new Schema(
@@ -36,6 +37,7 @@ const UserSchema: Schema<IUser> = new Schema(
     testsCompleted: { type: Number, default: 0 },
     averageAccuracy: { type: Number, default: 0 },
     lastActiveAt: { type: Date, default: Date.now },
+    hasCourseAccess: { type: Boolean, default: false },
   },
   { timestamps: true }
 );

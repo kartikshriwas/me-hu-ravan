@@ -1,14 +1,15 @@
 import { NextResponse } from 'next/server';
-import { getSessionFromRequest } from '@/lib/session';
+import { auth } from '@/auth';
 import { verifyAdminPermission, SUPERADMIN_EMAIL } from '@/lib/adminAuth';
 import { User } from '@/models/User';
 
 export async function GET(request: Request) {
   try {
-    const sessionUser = getSessionFromRequest(request);
-    const auth = await verifyAdminPermission(sessionUser?.email, 'manage_users');
-    if (!auth.isAuthorized) {
-      return NextResponse.json({ success: false, error: auth.error }, { status: auth.statusCode || 403 });
+    const session = await auth();
+  const sessionUser = session?.user as any;
+    const adminAuth = await verifyAdminPermission(sessionUser?.email, 'manage_users');
+    if (!adminAuth.isAuthorized) {
+      return NextResponse.json({ success: false, error: adminAuth.error }, { status: adminAuth.statusCode || 403 });
     }
 
     const users = await User.find()
@@ -43,10 +44,11 @@ export async function GET(request: Request) {
 
 export async function POST(request: Request) {
   try {
-    const sessionUser = getSessionFromRequest(request);
-    const auth = await verifyAdminPermission(sessionUser?.email, 'manage_users');
-    if (!auth.isAuthorized) {
-      return NextResponse.json({ success: false, error: auth.error }, { status: auth.statusCode || 403 });
+    const session = await auth();
+  const sessionUser = session?.user as any;
+    const adminAuth = await verifyAdminPermission(sessionUser?.email, 'manage_users');
+    if (!adminAuth.isAuthorized) {
+      return NextResponse.json({ success: false, error: adminAuth.error }, { status: adminAuth.statusCode || 403 });
     }
 
     const body = await request.json();
@@ -60,7 +62,7 @@ export async function POST(request: Request) {
 
     // Modifying role or granular permissions requires Superadmin privileges
     const isAssigningAdmin = (role && role !== 'user') || (Array.isArray(adminPermissions) && adminPermissions.length > 0);
-    if (isAssigningAdmin && !auth.isSuperadmin) {
+    if (isAssigningAdmin && !adminAuth.isSuperadmin) {
       return NextResponse.json({ success: false, error: 'Only Superadmin can assign Admin roles or permissions' }, { status: 403 });
     }
 

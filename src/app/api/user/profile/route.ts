@@ -1,16 +1,16 @@
 import { NextResponse } from 'next/server';
-import { getSessionFromRequest } from '@/lib/session';
+import { auth } from '@/auth';
 import { connectToDatabase } from '@/lib/db';
 import { User } from '@/models/User';
 import { Attempt } from '@/models/Attempt';
 import { isPlatformGlobalFree } from '@/lib/globalSetting';
 import { isCourseBatch } from '@/lib/batchAccess';
-
-const SUPERADMIN_EMAIL = 'fykartik@gmail.com';
+import { SUPERADMIN_EMAIL } from '@/lib/adminAuth';
 
 export async function GET(request: Request) {
   try {
-    const sessionUser = getSessionFromRequest(request);
+    const session = await auth();
+  const sessionUser = session?.user as any;
     if (!sessionUser) {
       return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 });
     }

@@ -31,7 +31,8 @@ import {
   ClipboardList,
   Link2,
   Download,
-  Lock
+  Lock,
+  VideoOff
 } from 'lucide-react';
 
 interface CourseDetailClientProps {
@@ -48,8 +49,8 @@ function getUnitMetaConfig(unit: CourseSectionUnit) {
   const icon = (unit.icon || '').toLowerCase();
   const subtitle = (unit.subtitle || '').toLowerCase();
 
-  // 1. ivideo (Supported Video Action)
-  if (type === 'ivideo' || (type === 'video' && unit.sourceid)) {
+  // 1. ivideo / video / wistia (Supported Video Action)
+  if (type === 'ivideo' || type === 'wistia' || type === 'video' || icon === 'video' || subtitle === 'video') {
     return {
       category: 'video',
       typeLabel: 'Interactive Video',
@@ -589,8 +590,23 @@ export function CourseDetailClient({ course, availableTests, isUnlocked = true }
                         </Link>
                       )}
 
-                      {config.isActionableVideo && !downloadUrl && (
-                        isUnlocked ? (
+                      {config.isActionableVideo && !downloadUrl && (() => {
+                        const isYouTube = unit.type === 'youtube' || unit.icon === 'yt' || (unit.subtitle && unit.subtitle.toLowerCase().includes('youtube')) || !!(unit.data && unit.data.embed);
+                        const hasVideoSource = !!(unit.sourceid && unit.sourceid.trim() !== '') || isYouTube;
+
+                        if (!hasVideoSource) {
+                          return (
+                            <div
+                              className="px-3.5 py-1.5 rounded-lg bg-slate-800/60 text-slate-400 text-xs font-semibold border border-slate-700/50 flex items-center gap-1.5 shrink-0 cursor-not-allowed"
+                              title="Video source is not available for this lesson"
+                            >
+                              <VideoOff className="w-3.5 h-3.5 text-slate-400" />
+                              <span>Video Not Available</span>
+                            </div>
+                          );
+                        }
+
+                        return isUnlocked ? (
                           <Link
                             href={`/courses/${course.slug}/video/${unit.sourceid || unit.id}`}
                             className="px-3.5 py-1.5 rounded-lg bg-indigo-600/20 hover:bg-indigo-600 text-indigo-300 hover:text-white text-xs font-bold transition-all border border-indigo-500/30 hover:border-transparent flex items-center gap-1.5 shrink-0"
@@ -606,8 +622,8 @@ export function CourseDetailClient({ course, availableTests, isUnlocked = true }
                             <Lock className="w-3.5 h-3.5" />
                             <span>Locked Video</span>
                           </Link>
-                        )
-                      )}
+                        );
+                      })()}
                     </div>
                   );
                 })}

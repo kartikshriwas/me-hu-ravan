@@ -1,9 +1,8 @@
-import { SessionUser } from '@/lib/session';
+import { AuthUser as SessionUser } from '@/lib/authContext';
 import { connectToDatabase } from '@/lib/db';
 import { User } from '@/models/User';
 import { isCourseSlugAllowed, isCourseBatch } from '@/lib/batchAccess';
-
-const SUPERADMIN_EMAIL = 'fykartik@gmail.com';
+import { SUPERADMIN_EMAIL } from '@/lib/adminAuth';
 
 /**
  * Checks if a user has access to the Course section at all.

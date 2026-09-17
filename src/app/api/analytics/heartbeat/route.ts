@@ -1,8 +1,10 @@
 import { NextResponse } from 'next/server';
-import { getSessionFromRequest } from '@/lib/session';
+import { auth } from '@/auth';
 import { connectToDatabase } from '@/lib/db';
 import { UserSession } from '@/models/UserSession';
 import { UserActivityLog } from '@/models/UserActivityLog';
+import { createHash } from 'crypto';
+import { rateLimit, getClientIp } from '@/lib/rateLimit';
 
 function parseUserAgent(ua: string) {
   let deviceType: 'desktop' | 'mobile' | 'tablet' = 'desktop';
@@ -36,7 +38,8 @@ function parseUserAgent(ua: string) {
 
 export async function POST(request: Request) {
   try {
-    const sessionUser = getSessionFromRequest(request);
+    const session = await auth();
+  const sessionUser = session?.user as any;
     const body = await request.json();
 
     const {
@@ -56,6 +59,13 @@ export async function POST(request: Request) {
       return NextResponse.json({ success: false, error: 'Session ID required' }, { status: 400 });
     }
 
+    // M-7 + H-1: Rate limit heartbeat requests per session (60/min)
+    const limiterKey = `heartbeat:${sessionId}`;
+    const { allowed } = rateLimit(limiterKey, 60, 60_000);
+    if (!allowed) {
+      return NextResponse.json({ success: true }); // Silently accept to avoid client-side spam
+    }
+
     const conn = await connectToDatabase();
     if (!conn || conn.connection.readyState !== 1) {
       // Return 200 with offline status so background beacon doesn't spam console
@@ -72,7 +82,10 @@ export async function POST(request: Request) {
     const userName = sessionUser?.name || 'Guest User';
     const userImage = sessionUser?.image || '';
     const userAgent = request.headers.get('user-agent') || '';
-    const ipAddress = request.headers.get('x-forwarded-for') || request.headers.get('x-real-ip') || '';
+    const rawIp = request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || request.headers.get('x-real-ip') || '';
+    // H-7: Hash IP address for privacy — daily salt allows same-day correlation without exposing raw IP
+    const dailySalt = new Date().toISOString().split('T')[0];
+    const ipAddress = rawIp ? createHash('sha256').update(rawIp + dailySalt).digest('hex').slice(0, 16) : '';
 
     const { deviceType, browser, os } = parseUserAgent(userAgent);
     const validState = ['active', 'idle', 'focus', 'background'].includes(state) ? state : 'active';

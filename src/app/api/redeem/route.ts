@@ -1,14 +1,26 @@
 import { NextResponse } from 'next/server';
-import { getSessionFromRequest, attachSessionCookie } from '@/lib/session';
+import { auth } from '@/auth';
 import { connectToDatabase } from '@/lib/db';
 import { User } from '@/models/User';
 import { RedeemCode } from '@/models/RedeemCode';
+import { rateLimit, getClientIp } from '@/lib/rateLimit';
 
 export async function POST(request: Request) {
   try {
-    const sessionUser = getSessionFromRequest(request);
+    const session = await auth();
+  const sessionUser = session?.user as any;
     if (!sessionUser) {
       return NextResponse.json({ success: false, error: 'Sign in required to redeem code' }, { status: 401 });
+    }
+
+    // H-1: Rate limit redeem attempts — 10 per minute per user
+    const limiterKey = `redeem:${sessionUser.email || getClientIp(request)}`;
+    const { allowed } = rateLimit(limiterKey, 10, 60_000);
+    if (!allowed) {
+      return NextResponse.json(
+        { success: false, error: 'Too many redeem attempts. Please wait a moment and try again.' },
+        { status: 429 }
+      );
     }
 
     const body = await request.json();
@@ -25,33 +37,49 @@ export async function POST(request: Request) {
       return NextResponse.json({ success: false, error: 'Database connection failed' }, { status: 500 });
     }
 
-    const redeemRecord = await RedeemCode.findOne({ code: cleanCode, isActive: true });
-
-    if (!redeemRecord) {
-      return NextResponse.json({ success: false, error: 'Invalid or inactive redeem code' }, { status: 404 });
-    }
-
-    // Check code expiration date
-    if (redeemRecord.expiresAt && new Date(redeemRecord.expiresAt) < new Date()) {
-      return NextResponse.json({ success: false, error: 'This redeem code has expired' }, { status: 400 });
-    }
-
-    // Check usage limits
-    if (redeemRecord.usedCount >= redeemRecord.maxUses) {
-      return NextResponse.json({ success: false, error: 'Redeem code usage limit reached' }, { status: 400 });
-    }
-
     const userEmail = sessionUser.email.toLowerCase().trim();
 
-    // Check if user already used this code
-    const alreadyUsed = redeemRecord.usedBy.some((u) => u.userEmail.toLowerCase() === userEmail);
-    if (alreadyUsed) {
-      return NextResponse.json({ success: false, error: 'You have already redeemed this code' }, { status: 400 });
+    // SECURITY: Atomic redeem to prevent race condition double-spending
+    // Single query validates: active, not expired, not maxed out, not already used by this user
+    const redeemResult = await RedeemCode.findOneAndUpdate(
+      {
+        code: cleanCode,
+        isActive: true,
+        $expr: { $lt: ['$usedCount', '$maxUses'] },
+        'usedBy.userEmail': { $ne: userEmail }, // prevent double-redeem
+        $or: [
+          { expiresAt: null },
+          { expiresAt: { $gt: new Date() } },
+        ],
+      },
+      {
+        $inc: { usedCount: 1 },
+        $push: { usedBy: { userEmail, usedAt: new Date() } },
+      },
+      { returnDocument: 'after' }
+    );
+
+    if (!redeemResult) {
+      // Determine specific error by reading without update
+      const existingCode = await RedeemCode.findOne({ code: cleanCode });
+      if (!existingCode || !existingCode.isActive) {
+        return NextResponse.json({ success: false, error: 'Invalid or inactive redeem code' }, { status: 404 });
+      }
+      if (existingCode.expiresAt && new Date(existingCode.expiresAt) < new Date()) {
+        return NextResponse.json({ success: false, error: 'This redeem code has expired' }, { status: 400 });
+      }
+      if (existingCode.usedCount >= existingCode.maxUses) {
+        return NextResponse.json({ success: false, error: 'Redeem code usage limit reached' }, { status: 400 });
+      }
+      if (existingCode.usedBy.some((u) => u.userEmail.toLowerCase() === userEmail)) {
+        return NextResponse.json({ success: false, error: 'You have already redeemed this code' }, { status: 400 });
+      }
+      return NextResponse.json({ success: false, error: 'Unable to redeem code' }, { status: 400 });
     }
 
     // Calculate premium expiry
     let newExpiresAt: Date | null = null;
-    const durationDays = redeemRecord.durationDays || 365;
+    const durationDays = redeemResult.durationDays || 365;
 
     if (durationDays < 3650) {
       // 3650 days (~10 yrs) treated as Lifetime
@@ -59,7 +87,7 @@ export async function POST(request: Request) {
       newExpiresAt = new Date(now.getTime() + durationDays * 24 * 60 * 60 * 1000);
     }
 
-    const batchNameToGrant = redeemRecord.batchName || 'General';
+    const batchNameToGrant = redeemResult.batchName || 'General';
 
     // Update User premium status in DB
     const updatedUser = await User.findOneAndUpdate(
@@ -83,11 +111,6 @@ export async function POST(request: Request) {
       return NextResponse.json({ success: false, error: 'User record not found' }, { status: 404 });
     }
 
-    // Increment code usage
-    redeemRecord.usedCount += 1;
-    redeemRecord.usedBy.push({ userEmail, usedAt: new Date() });
-    await redeemRecord.save();
-
     const freshUserData = {
       id: updatedUser._id.toString(),
       name: updatedUser.name,
@@ -109,7 +132,7 @@ export async function POST(request: Request) {
       user: freshUserData,
     });
 
-    return attachSessionCookie(response, freshUserData);
+    return response;
   } catch (error) {
     console.error('Error redeeming code:', error);
     return NextResponse.json({ success: false, error: 'Failed to redeem code' }, { status: 500 });

@@ -236,7 +236,7 @@ export default function AdminDashboardPage() {
   const [userQuery, setUserQuery] = useState('');
   const [copiedCodeId, setCopiedCodeId] = useState('');
 
-  const isSuperadmin = authUser?.email?.toLowerCase().trim() === 'fykartik@gmail.com' || authUser?.role === 'superadmin';
+  const isSuperadmin = authUser?.role === 'superadmin';
   const isAdmin = isSuperadmin || authUser?.role === 'admin';
 
   const userPerms = useMemo(() => {

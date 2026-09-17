@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { getSessionFromRequest } from '@/lib/session';
+import { auth } from '@/auth';
 import { verifyAdminPermission } from '@/lib/adminAuth';
 import { UserSession } from '@/models/UserSession';
 import { UserActivityLog } from '@/models/UserActivityLog';
@@ -7,10 +7,11 @@ import { User } from '@/models/User';
 
 export async function GET(request: Request) {
   try {
-    const sessionUser = getSessionFromRequest(request);
-    const auth = await verifyAdminPermission(sessionUser?.email, 'manage_users');
-    if (!auth.isAuthorized) {
-      return NextResponse.json({ success: false, error: auth.error }, { status: auth.statusCode || 403 });
+    const session = await auth();
+  const sessionUser = session?.user as any;
+    const adminAuth = await verifyAdminPermission(sessionUser?.email, 'manage_users');
+    if (!adminAuth.isAuthorized) {
+      return NextResponse.json({ success: false, error: adminAuth.error }, { status: adminAuth.statusCode || 403 });
     }
     // Sessions active within last 2.5 minutes (150,000 ms)
 
@@ -316,10 +317,11 @@ export async function GET(request: Request) {
 
 export async function POST(request: Request) {
   try {
-    const sessionUser = getSessionFromRequest(request);
-    const auth = await verifyAdminPermission(sessionUser?.email, 'manage_users');
-    if (!auth.isAuthorized) {
-      return NextResponse.json({ success: false, error: auth.error }, { status: auth.statusCode || 403 });
+    const session = await auth();
+  const sessionUser = session?.user as any;
+    const adminAuth = await verifyAdminPermission(sessionUser?.email, 'manage_users');
+    if (!adminAuth.isAuthorized) {
+      return NextResponse.json({ success: false, error: adminAuth.error }, { status: adminAuth.statusCode || 403 });
     }
 
     const body = await request.json();

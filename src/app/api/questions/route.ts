@@ -3,6 +3,7 @@ import { getAllAssessments } from '@/lib/questionsData';
 import { connectToDatabase } from '@/lib/db';
 import { Attempt } from '@/models/Attempt';
 import { cleanQuizId } from '@/lib/storage';
+import { auth } from '@/auth';
 
 // 30-Second TTL Cache for questions list API to eliminate repetitive aggregation & disk reading
 let cachedQuestionsResponse: any = null;
@@ -11,6 +12,15 @@ const CACHE_TTL_MS = 30000;
 
 export async function GET() {
   try {
+    // // M-3: Require authentication to view assessment catalog
+    // const session = await auth();
+    // if (!session?.user) {
+    //   return NextResponse.json(
+    //     { success: false, error: 'Authentication required' },
+    //     { status: 401 }
+    //   );
+    // }
+
     const now = Date.now();
     if (cachedQuestionsResponse && now - lastCacheTime < CACHE_TTL_MS) {
       return NextResponse.json(cachedQuestionsResponse, {

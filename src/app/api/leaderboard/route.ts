@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 import { connectToDatabase } from '@/lib/db';
 import { User } from '@/models/User';
+import { auth } from '@/auth';
 
 let cachedLeaderboard: any = null;
 let lastLeaderboardFetch = 0;
@@ -8,6 +9,15 @@ const LEADERBOARD_CACHE_TTL_MS = 30000; // 30-second in-memory cache
 
 export async function GET() {
   try {
+    // // M-2: Require authentication to view leaderboard
+    // const session = await auth();
+    // if (!session?.user) {
+    //   return NextResponse.json(
+    //     { success: false, error: 'Authentication required' },
+    //     { status: 401 }
+    //   );
+    // }
+
     const now = Date.now();
     if (cachedLeaderboard && now - lastLeaderboardFetch < LEADERBOARD_CACHE_TTL_MS) {
       return NextResponse.json({ success: true, data: cachedLeaderboard, cached: true });
@@ -35,7 +45,8 @@ export async function GET() {
       if (u.email) {
         const [local, domain] = u.email.split('@');
         if (local && domain) {
-          maskedEmail = `${local[0]}***${local[local.length - 1]}@${domain}`;
+          // M-2: Improved masking — variable-length stars based on local part length
+          maskedEmail = `${local[0]}${'*'.repeat(Math.max(local.length - 2, 3))}${local[local.length - 1]}@${domain}`;
         }
       }
 

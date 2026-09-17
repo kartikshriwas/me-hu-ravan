@@ -1,15 +1,18 @@
 import { NextResponse } from 'next/server';
-import { getSessionFromRequest } from '@/lib/session';
+import { auth } from '@/auth';
 import { verifyAdminPermission } from '@/lib/adminAuth';
 import { RedeemCode } from '@/models/RedeemCode';
+import { randomBytes } from 'crypto';
 
 function generateRandomCode(prefix: string): string {
   const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+  // M-8: Use crypto.randomBytes instead of Math.random for unpredictable codes
+  const bytes = randomBytes(8);
   let random1 = '';
   let random2 = '';
   for (let i = 0; i < 4; i++) {
-    random1 += chars.charAt(Math.floor(Math.random() * chars.length));
-    random2 += chars.charAt(Math.floor(Math.random() * chars.length));
+    random1 += chars.charAt(bytes[i] % chars.length);
+    random2 += chars.charAt(bytes[i + 4] % chars.length);
   }
   const cleanPrefix = prefix.trim().toUpperCase().replace(/[^A-Z0-9-]/g, '');
   const prefixPart = cleanPrefix ? (cleanPrefix.endsWith('-') ? cleanPrefix : `${cleanPrefix}-`) : 'PREPTEA-';
@@ -18,10 +21,11 @@ function generateRandomCode(prefix: string): string {
 
 export async function GET(request: Request) {
   try {
-    const sessionUser = getSessionFromRequest(request);
-    const auth = await verifyAdminPermission(sessionUser?.email, 'manage_codes');
-    if (!auth.isAuthorized) {
-      return NextResponse.json({ success: false, error: auth.error }, { status: auth.statusCode || 403 });
+    const session = await auth();
+  const sessionUser = session?.user as any;
+    const adminAuth = await verifyAdminPermission(sessionUser?.email, 'manage_codes');
+    if (!adminAuth.isAuthorized) {
+      return NextResponse.json({ success: false, error: adminAuth.error }, { status: adminAuth.statusCode || 403 });
     }
 
     const codes = await RedeemCode.find().sort({ createdAt: -1 }).limit(200).lean();
@@ -50,10 +54,11 @@ export async function GET(request: Request) {
 
 export async function POST(request: Request) {
   try {
-    const sessionUser = getSessionFromRequest(request);
-    const auth = await verifyAdminPermission(sessionUser?.email, 'manage_codes');
-    if (!auth.isAuthorized) {
-      return NextResponse.json({ success: false, error: auth.error }, { status: auth.statusCode || 403 });
+    const session = await auth();
+  const sessionUser = session?.user as any;
+    const adminAuth = await verifyAdminPermission(sessionUser?.email, 'manage_codes');
+    if (!adminAuth.isAuthorized) {
+      return NextResponse.json({ success: false, error: adminAuth.error }, { status: adminAuth.statusCode || 403 });
     }
 
     const body = await request.json();

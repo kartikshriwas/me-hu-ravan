@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import { getCourseBySlug } from '@/lib/coursesData';
-import { getSessionFromRequest } from '@/lib/session';
+import { auth } from '@/auth';
 import { hasCoursesAccess } from '@/lib/coursesAuth';
 
 export async function GET(
@@ -8,7 +8,8 @@ export async function GET(
   { params }: { params: Promise<{ slug: string }> }
 ) {
   try {
-    const session = getSessionFromRequest(request);
+    const sessionAuth = await auth();
+    const session = sessionAuth?.user as any;
     if (!session) {
       return NextResponse.json(
         { success: false, error: 'Access Declined: Token Expired or Authentication Required' },

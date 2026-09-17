@@ -84,18 +84,30 @@ export function getCourseBySlug(slug: string): CourseDetail | null {
   const dir = getCoursesDirectory();
   if (!fs.existsSync(dir)) return null;
 
+  // SECURITY: Sanitize path separators and traversal patterns
+  const safeSlug = slug.replace(/[\/\\]/g, '').replace(/\.\./g, '');
+  if (!safeSlug || safeSlug.length === 0 || safeSlug.length > 100) return null;
+
   const files = fs.readdirSync(dir).filter(f => f.toLowerCase().endsWith('.json'));
 
   for (const file of files) {
     try {
       const fullPath = path.join(dir, file);
+
+      // SECURITY: Verify resolved path remains within the expected courses directory
+      const resolvedPath = path.resolve(fullPath);
+      const resolvedDir = path.resolve(dir);
+      if (!resolvedPath.startsWith(resolvedDir + path.sep) && resolvedPath !== resolvedDir) {
+        continue;
+      }
+
       const data = getParsedCourseFile(fullPath);
       if (!data) continue;
 
       const course = data.course || data;
       const fileSlug = course.identifiers?.slug || course.titleId || path.basename(file, '.json').toLowerCase();
 
-      if (fileSlug.toLowerCase() === slug.toLowerCase() || path.basename(file, '.json').toLowerCase() === slug.toLowerCase()) {
+      if (fileSlug.toLowerCase() === safeSlug.toLowerCase() || path.basename(file, '.json').toLowerCase() === safeSlug.toLowerCase()) {
         const unitsMap = {
           ...(course.units || {}),
           ...(course.videos || {}),

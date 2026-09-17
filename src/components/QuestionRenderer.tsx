@@ -2,6 +2,7 @@
 
 import { QuestionBlock } from '@/lib/types';
 import { Bookmark, CheckCircle2, XCircle, BookmarkCheck, HelpCircle, Lightbulb, Check } from 'lucide-react';
+import DOMPurify from 'dompurify';
 
 interface QuestionRendererProps {
   question: QuestionBlock;
@@ -116,7 +117,7 @@ export function QuestionRenderer({
         <div 
           suppressHydrationWarning
           className="text-base sm:text-lg text-slate-100 font-medium question-html-content leading-relaxed"
-          dangerouslySetInnerHTML={{ __html: question.htmlText }}
+          dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(question.htmlText) }}
         />
       </div>
 
@@ -164,7 +165,7 @@ export function QuestionRenderer({
               <div 
                 suppressHydrationWarning
                 className="text-sm sm:text-base font-normal pt-0.5 question-html-content flex-1"
-                dangerouslySetInnerHTML={{ __html: option.text }}
+                dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(option.text) }}
               />
 
               {showSolutionImmediately ? (
@@ -199,7 +200,7 @@ export function QuestionRenderer({
                 <span>Correct Option:</span>
                 <span className="px-2.5 py-0.5 rounded-md bg-emerald-500/20 border border-emerald-500/40 font-bold text-white flex items-center gap-1">
                   <span>Option {correctLetter}:</span>
-                  <span suppressHydrationWarning dangerouslySetInnerHTML={{ __html: correctOption.text }} />
+                  <span suppressHydrationWarning dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(correctOption.text) }} />
                 </span>
               </div>
             )}
@@ -209,7 +210,7 @@ export function QuestionRenderer({
             <div 
               suppressHydrationWarning
               className="text-slate-200 question-html-content leading-relaxed text-sm sm:text-base"
-              dangerouslySetInnerHTML={{ __html: question.explanationHtml }}
+              dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(question.explanationHtml) }}
             />
           ) : (
             <p className="text-xs text-slate-400">
