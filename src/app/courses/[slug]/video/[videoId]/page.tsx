@@ -9,6 +9,8 @@ import { VideoPlaylistSidebar } from '@/components/VideoPlaylistSidebar';
 import { ArrowLeft, Lock, VideoOff } from 'lucide-react';
 import { CourseSectionUnit } from '@/lib/types';
 
+import { VideoViewContainer } from '@/components/VideoViewContainer';
+
 export const revalidate = 0;
 
 interface PageProps {
@@ -137,61 +139,16 @@ export default async function VideoPlayerPage({ params }: PageProps) {
   }
 
   return (
-    <div className="-mx-3 sm:-mx-6 lg:-mx-8 -mt-4 sm:-mt-8 flex flex-col h-[calc(100dvh-3.5rem)] sm:h-[calc(100dvh-4rem)] lg:h-[calc(100vh-5rem)] overflow-hidden">
-
-      {/* Desktop-only back navigation header */}
-      <div className="hidden lg:flex items-center justify-between px-8 py-3 shrink-0">
-        <Link
-          href={`/courses/${slug}`}
-          className="inline-flex items-center gap-2 text-xs font-semibold text-slate-400 hover:text-white transition-colors py-1 px-3 rounded-xl bg-slate-900/60 border border-slate-800/80 hover:border-slate-700"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          <span>Back to {course.title}</span>
-        </Link>
-      </div>
-
-      {/* Main layout — flex-col on mobile so shrink/flex-1 work, grid on desktop */}
-      <div className="flex flex-col lg:grid lg:grid-cols-3 flex-1 min-h-0 lg:border-t lg:border-slate-800/60">
-
-        {/* Video player column — shrinks to fit content on mobile, fixed 2/3 on desktop */}
-        <div className="lg:col-span-2 lg:border-r lg:border-slate-800/60 flex flex-col shrink-0">
-
-          {/* Mobile-only back button */}
-          <div className="lg:hidden flex items-center px-3 py-2 shrink-0">
-            <Link
-              href={`/courses/${slug}`}
-              className="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-400 hover:text-white transition-colors"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              <span>{course.title}</span>
-            </Link>
-          </div>
-
-          {/* Video player — full bleed */}
-          <div className="w-full">
-            <CustomVideoPlayer
-              videoId={videoId}
-              courseSlug={slug}
-              title={unitTitle}
-              embedHtml={embedHtml}
-              prevVideoUrl={prevVideoUrl || undefined}
-              nextVideoUrl={nextVideoUrl || undefined}
-              prevTitle={prevTitle || undefined}
-              nextTitle={nextTitle || undefined}
-            />
-          </div>
-        </div>
-
-        {/* Playlist sidebar — fills remaining height and scrolls internally */}
-        <div className="flex-1 min-h-0 overflow-hidden lg:col-span-1">
-          <VideoPlaylistSidebar
-            courseTitle={course.title}
-            courseSlug={slug}
-            currentVideoId={videoId}
-            sections={course.sections}
-          />
-        </div>
-      </div>
-    </div>
+    <VideoViewContainer
+      course={course}
+      slug={slug}
+      videoId={videoId}
+      unitTitle={unitTitle}
+      embedHtml={embedHtml}
+      prevVideoUrl={prevVideoUrl || undefined}
+      nextVideoUrl={nextVideoUrl || undefined}
+      prevTitle={prevTitle || undefined}
+      nextTitle={nextTitle || undefined}
+    />
   );
 }

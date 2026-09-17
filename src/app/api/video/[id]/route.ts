@@ -18,18 +18,39 @@ export async function GET(
       return NextResponse.json({ success: false, error: 'Invalid Video ID' }, { status: 400 });
     }
 
-    // 2. Fetch Wistia metadata from their API
-    const wistiaUrl = `https://fast.wistia.com/embed/medias/${id}.json`;
-    const res = await fetch(wistiaUrl, {
-      headers: {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
-      },
-    });
+    // 2. Fetch Wistia metadata with retry loop to handle transient network/socket drops
+    const urls = [
+      `https://fast.wistia.com/embed/medias/${id}.json`,
+      `https://fast.wistia.net/embed/medias/${id}.json`,
+    ];
 
-    if (!res.ok) {
+    let res: Response | null = null;
+    let lastErr: any = null;
+
+    for (const wistiaUrl of urls) {
+      for (let attempt = 0; attempt < 3; attempt++) {
+        try {
+          res = await fetch(wistiaUrl, {
+            headers: {
+              'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+              'Accept': 'application/json, text/plain, */*',
+            },
+            cache: 'no-store',
+          });
+          if (res.ok) break;
+        } catch (err) {
+          lastErr = err;
+          await new Promise((r) => setTimeout(r, 300));
+        }
+      }
+      if (res && res.ok) break;
+    }
+
+    if (!res || !res.ok) {
+      console.error(`Wistia fetch failed for video ID ${id}:`, lastErr || res?.status);
       return NextResponse.json(
-        { success: false, error: `Failed to fetch wistia metadata (HTTP ${res.status})` },
-        { status: res.status }
+        { success: false, error: `Failed to fetch wistia metadata (HTTP ${res?.status || 500})` },
+        { status: res?.status || 500 }
       );
     }
 

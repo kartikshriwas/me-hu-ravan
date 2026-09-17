@@ -20,7 +20,8 @@ import {
   PictureInPicture2,
   Check,
   Sparkles,
-  SlidersHorizontal
+  SlidersHorizontal,
+  RectangleHorizontal
 } from 'lucide-react';
 
 interface VideoAsset {
@@ -52,6 +53,8 @@ interface CustomVideoPlayerProps {
   nextVideoUrl?: string;
   prevTitle?: string;
   nextTitle?: string;
+  isTheaterMode?: boolean;
+  onToggleTheaterMode?: () => void;
 }
 
 export function CustomVideoPlayer({ 
@@ -63,7 +66,9 @@ export function CustomVideoPlayer({
   prevVideoUrl, 
   nextVideoUrl,
   prevTitle,
-  nextTitle
+  nextTitle,
+  isTheaterMode = false,
+  onToggleTheaterMode
 }: CustomVideoPlayerProps) {
   const router = useRouter();
   const [videoData, setVideoData] = useState<WistiaVideoData | null>(null);
@@ -968,6 +973,17 @@ export function CustomVideoPlayer({
               >
                 <Settings className="w-4.5 h-4.5 sm:w-5 sm:h-5" />
               </button>
+
+              {onToggleTheaterMode && (
+                <button
+                  onClick={onToggleTheaterMode}
+                  className={`p-1.5 sm:p-2 rounded-xl hover:bg-white/10 transition-colors hidden sm:inline-flex items-center gap-1 ${isTheaterMode ? 'bg-purple-600/30 text-purple-300' : 'text-slate-200'}`}
+                  title="Theater Mode (T)"
+                  aria-label="Theater Mode"
+                >
+                  <RectangleHorizontal className="w-4.5 h-4.5 sm:w-5 sm:h-5 text-purple-400" />
+                </button>
+              )}
 
               {document.pictureInPictureEnabled && (
                 <button
