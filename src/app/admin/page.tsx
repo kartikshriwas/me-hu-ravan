@@ -183,7 +183,7 @@ interface AdminUserItem {
 
 export default function AdminDashboardPage() {
   const { user: authUser, loading: authLoading } = useAuth();
-  const [activeTab, setActiveTab] = useState<'overview' | 'codes' | 'events' | 'emails' | 'users' | 'active-sessions'>('overview');
+  const [activeTab, setActiveTab] = useState<'overview' | 'codes' | 'events' | 'emails' | 'users' | 'active-sessions' | 'all-sessions'>('overview');
 
   const [stats, setStats] = useState<AdminStats | null>(null);
   const [codes, setCodes] = useState<RedeemCodeItem[]>([]);
@@ -202,6 +202,13 @@ export default function AdminDashboardPage() {
   const [sessionSearchQuery, setSessionSearchQuery] = useState('');
   const [sessionStateFilter, setSessionStateFilter] = useState<'all' | 'active' | 'idle' | 'background' | 'registered' | 'guest'>('all');
   const [inspectingSession, setInspectingSession] = useState<ActiveSessionItem | null>(null);
+
+  // All Sessions Log state
+  const [allSessionsList, setAllSessionsList] = useState<any[]>([]);
+  const [allSessionsStats, setAllSessionsStats] = useState<{ total: number; active: number; offline: number; terminated: number } | null>(null);
+  const [allSessionsTabState, setAllSessionsTabState] = useState<'all' | 'active' | 'offline' | 'terminated'>('all');
+  const [allSessionsQuery, setAllSessionsQuery] = useState('');
+  const [allSessionsLoading, setAllSessionsLoading] = useState(false);
 
   const [loading, setLoading] = useState(true);
   const [feedbackMsg, setFeedbackMsg] = useState('');
@@ -300,6 +307,8 @@ export default function AdminDashboardPage() {
             if (json.topActiveUsersToday) setTopActiveUsers(json.topActiveUsersToday);
             if (json.topUsersByTimeframe) setTopUsersByTimeframe(json.topUsersByTimeframe);
           }
+        } else if (activeTab === 'all-sessions') {
+          await fetchAllSessions();
         }
       } catch (err) {
         console.error('Failed to load admin tab data:', err);
@@ -310,6 +319,48 @@ export default function AdminDashboardPage() {
 
     loadAdminData();
   }, [authUser?.email, isAdmin, activeTab]);
+
+  const fetchAllSessions = async (query = allSessionsQuery, status = allSessionsTabState) => {
+    try {
+      setAllSessionsLoading(true);
+      const params = new URLSearchParams();
+      if (query) params.set('email', query);
+      if (status !== 'all') params.set('status', status);
+      params.set('limit', '300');
+
+      const res = await fetch(`/api/admin/all-sessions?${params.toString()}`);
+      const json = await res.json();
+      if (json.success) {
+        setAllSessionsList(json.sessions);
+        setAllSessionsStats(json.stats);
+      }
+    } catch (err) {
+      console.error('Failed to fetch all user sessions:', err);
+    } finally {
+      setAllSessionsLoading(false);
+    }
+  };
+
+  const handleTerminateAllSessionsForEmail = async (userEmail: string) => {
+    if (!confirm(`Are you sure you want to terminate ALL active sessions for ${userEmail}?`)) return;
+    try {
+      const res = await fetch('/api/admin/active-sessions', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ action: 'terminate_all', targetUserEmail: userEmail }),
+      });
+      const json = await res.json();
+      if (json.success) {
+        setFeedbackMsg(`Terminated all sessions for ${userEmail}`);
+        fetchAllSessions();
+        setActiveSessions((prev) => prev.filter((s) => s.userEmail.toLowerCase() !== userEmail.toLowerCase()));
+      } else {
+        setErrorMsg(json.error || 'Failed to terminate sessions');
+      }
+    } catch (err) {
+      setErrorMsg('Failed to terminate sessions');
+    }
+  };
 
   // Auto-refresh active sessions every 8 seconds when activeTab === 'active-sessions'
   useEffect(() => {
@@ -812,6 +863,7 @@ export default function AdminDashboardPage() {
         {[
           { id: 'overview', label: 'Overview', icon: BarChart3, allowed: true },
           { id: 'active-sessions', label: 'Live Monitor 🟢', icon: Activity, allowed: canManageUsers },
+          { id: 'all-sessions', label: 'All Sessions Log 🌐', icon: Globe, allowed: canManageUsers },
           { id: 'codes', label: 'Redeem Codes', icon: Key, allowed: canManageCodes },
           { id: 'events', label: 'Launch Events', icon: Rocket, allowed: canManageEvents },
           { id: 'emails', label: 'Bulk CSV / Emails', icon: Mail, allowed: canManageEmails },
@@ -1635,6 +1687,233 @@ export default function AdminDashboardPage() {
             </div>
             );
           })()}
+        </div>
+      )}
+
+      {/* ALL SESSIONS LOG TAB */}
+      {activeTab === 'all-sessions' && (
+        <div className="space-y-6">
+          {/* Header Stats Bar */}
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+            <div className="glass-panel p-5 rounded-2xl border border-slate-800 space-y-1">
+              <span className="text-xs font-bold text-slate-400 block uppercase tracking-wider">Total Telemetry Logs</span>
+              <span className="text-2xl font-black text-white">{allSessionsStats?.total || allSessionsList.length || 0}</span>
+            </div>
+            <div className="glass-panel p-5 rounded-2xl border border-emerald-500/20 bg-emerald-500/5 space-y-1">
+              <span className="text-xs font-bold text-emerald-400 block uppercase tracking-wider flex items-center gap-1.5">
+                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" /> Live Active
+              </span>
+              <span className="text-2xl font-black text-emerald-300">{allSessionsStats?.active || 0}</span>
+            </div>
+            <div className="glass-panel p-5 rounded-2xl border border-slate-700/40 bg-slate-800/20 space-y-1">
+              <span className="text-xs font-bold text-slate-400 block uppercase tracking-wider">Offline / Past</span>
+              <span className="text-2xl font-black text-slate-300">{allSessionsStats?.offline || 0}</span>
+            </div>
+            <div className="glass-panel p-5 rounded-2xl border border-rose-500/20 bg-rose-500/5 space-y-1">
+              <span className="text-xs font-bold text-rose-400 block uppercase tracking-wider flex items-center gap-1.5">
+                <Trash2 className="w-3.5 h-3.5" /> Terminated
+              </span>
+              <span className="text-2xl font-black text-rose-300">{allSessionsStats?.terminated || 0}</span>
+            </div>
+          </div>
+
+          {/* Search Bar & Filters */}
+          <div className="glass-panel p-5 rounded-3xl border border-slate-800 space-y-4">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4">
+              {/* Search Box */}
+              <div className="relative flex-1">
+                <Search className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-500" />
+                <input
+                  type="text"
+                  placeholder="Search user email or candidate name..."
+                  value={allSessionsQuery}
+                  onChange={(e) => {
+                    setAllSessionsQuery(e.target.value);
+                    fetchAllSessions(e.target.value, allSessionsTabState);
+                  }}
+                  className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-slate-900/80 border border-slate-800 text-xs text-slate-200 placeholder-slate-500 focus:outline-none focus:border-indigo-500 transition-all"
+                />
+                {allSessionsQuery && (
+                  <button
+                    onClick={() => {
+                      setAllSessionsQuery('');
+                      fetchAllSessions('', allSessionsTabState);
+                    }}
+                    className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-500 hover:text-white text-xs"
+                  >
+                    ✕
+                  </button>
+                )}
+              </div>
+
+              {/* Status Filter Buttons */}
+              <div className="flex items-center gap-1.5 bg-slate-900/60 p-1 rounded-xl border border-slate-800 overflow-x-auto">
+                {[
+                  { id: 'all', label: '🌐 Online & Offline' },
+                  { id: 'active', label: '🟢 Live Active' },
+                  { id: 'offline', label: '⚪ Offline' },
+                  { id: 'terminated', label: '🔴 Terminated' },
+                  { id: 'all_with_terminated', label: '📜 History & Terminated' },
+                ].map((st) => (
+                  <button
+                    key={st.id}
+                    onClick={() => {
+                      setAllSessionsTabState(st.id as any);
+                      fetchAllSessions(allSessionsQuery, st.id as any);
+                    }}
+                    className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all whitespace-nowrap ${
+                      allSessionsTabState === st.id
+                        ? 'bg-indigo-600 text-white shadow-md shadow-indigo-600/30'
+                        : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/40'
+                    }`}
+                  >
+                    {st.label}
+                  </button>
+                ))}
+              </div>
+
+              {/* Refresh Button */}
+              <button
+                onClick={() => fetchAllSessions(allSessionsQuery, allSessionsTabState)}
+                disabled={allSessionsLoading}
+                className="px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-bold border border-slate-700 transition-all flex items-center justify-center gap-2"
+              >
+                <RefreshCw className={`w-3.5 h-3.5 ${allSessionsLoading ? 'animate-spin text-indigo-400' : ''}`} />
+                <span>Refresh</span>
+              </button>
+            </div>
+          </div>
+
+          {/* Telemetry Table */}
+          <div className="glass-panel rounded-3xl border border-slate-800 overflow-hidden">
+            {allSessionsLoading ? (
+              <div className="p-12 text-center text-slate-400 space-y-3">
+                <Loader2 className="w-8 h-8 animate-spin mx-auto text-indigo-400" />
+                <p className="text-xs font-medium">Loading session telemetry across all user accounts...</p>
+              </div>
+            ) : allSessionsList.length === 0 ? (
+              <div className="p-12 text-center text-slate-400 space-y-2">
+                <Globe className="w-8 h-8 text-slate-600 mx-auto" />
+                <p className="text-sm font-bold text-slate-300">No session telemetry records found</p>
+                <p className="text-xs text-slate-500">Try adjusting search term or status filter tab.</p>
+              </div>
+            ) : (
+              <div className="overflow-x-auto">
+                <table className="w-full text-left text-xs text-slate-300">
+                  <thead className="bg-slate-900/90 text-slate-400 font-bold border-b border-slate-800 uppercase tracking-wider">
+                    <tr>
+                      <th className="py-3.5 px-4">User / Candidate</th>
+                      <th className="py-3.5 px-4">Device & IP</th>
+                      <th className="py-3.5 px-4">Status & Page</th>
+                      <th className="py-3.5 px-4">Logged In</th>
+                      <th className="py-3.5 px-4">Last Seen</th>
+                      <th className="py-3.5 px-4 text-right">Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-slate-800/60 font-medium">
+                    {allSessionsList.map((s) => {
+                      const isTerminated = s.terminated;
+
+                      return (
+                        <tr key={s.id} className="hover:bg-slate-900/40 transition-colors">
+                          <td className="py-3 px-4">
+                            <div className="flex items-center gap-2.5">
+                              <UserAvatar name={s.userName} image={s.userImage} className="w-8 h-8 rounded-full border border-slate-700" />
+                              <div className="space-y-0.5">
+                                <span className="font-bold text-slate-100 block">{s.userName}</span>
+                                <span className="text-[11px] text-indigo-400 font-mono block">{s.userEmail}</span>
+                              </div>
+                            </div>
+                          </td>
+                          <td className="py-3 px-4">
+                            <div className="space-y-0.5">
+                              <span className="font-bold text-slate-200 block capitalize">
+                                {s.deviceType === 'mobile' ? '📱 Mobile' : s.deviceType === 'tablet' ? '📱 Tablet' : '💻 Desktop'} · {s.browser}
+                              </span>
+                              <span className="text-[10px] text-slate-400 font-mono block">
+                                {s.os} · 📍 IP: {s.ipAddress || 'Unknown'}
+                              </span>
+                            </div>
+                          </td>
+                          <td className="py-3 px-4">
+                            <div className="space-y-1">
+                              <div className="flex items-center gap-1.5">
+                                {isTerminated ? (
+                                  <span className="px-2 py-0.5 rounded-full text-[10px] font-extrabold bg-rose-500/10 text-rose-400 border border-rose-500/20">
+                                    🔴 Terminated
+                                  </span>
+                                ) : s.state === 'active' ? (
+                                  <span className="px-2 py-0.5 rounded-full text-[10px] font-extrabold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 flex items-center gap-1">
+                                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" /> Live Active
+                                  </span>
+                                ) : s.state === 'focus' ? (
+                                  <span className="px-2 py-0.5 rounded-full text-[10px] font-extrabold bg-purple-500/10 text-purple-400 border border-purple-500/20">
+                                    🟣 Focus Studying
+                                  </span>
+                                ) : s.state === 'idle' ? (
+                                  <span className="px-2 py-0.5 rounded-full text-[10px] font-extrabold bg-amber-500/10 text-amber-400 border border-amber-500/20">
+                                    🟡 Away Idle
+                                  </span>
+                                ) : s.state === 'background' ? (
+                                  <span className="px-2 py-0.5 rounded-full text-[10px] font-extrabold bg-slate-800 text-slate-400 border border-slate-700">
+                                    ⚙️ Background Tab
+                                  </span>
+                                ) : (
+                                  <span className="px-2 py-0.5 rounded-full text-[10px] font-extrabold bg-slate-800 text-slate-400 border border-slate-700">
+                                    ⚪ Offline
+                                  </span>
+                                )}
+                              </div>
+                              <span className="text-[10px] text-slate-400 font-mono block truncate max-w-[180px]" title={s.currentPath}>
+                                {s.currentPath}
+                              </span>
+                            </div>
+                          </td>
+                          <td className="py-3 px-4">
+                            <span className="text-slate-300 font-mono text-[11px] block">
+                              {new Date(s.startedAt).toLocaleString(undefined, { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' })}
+                            </span>
+                          </td>
+                          <td className="py-3 px-4">
+                            <div className="space-y-0.5">
+                              <span className="text-slate-200 font-mono text-[11px] block">
+                                {s.lastSeenSecondsAgo < 60
+                                  ? `${s.lastSeenSecondsAgo}s ago`
+                                  : `${Math.floor(s.lastSeenSecondsAgo / 60)}m ago`}
+                              </span>
+                              <span className="text-[10px] text-slate-500 font-mono block">
+                                {new Date(s.lastHeartbeat).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' })}
+                              </span>
+                            </div>
+                          </td>
+                          <td className="py-3 px-4 text-right">
+                            <div className="flex items-center justify-end gap-1.5">
+                              {!isTerminated && (
+                                <button
+                                  onClick={() => handleTerminateSession(s.sessionId)}
+                                  title="Terminate this session"
+                                  className="p-1.5 rounded-lg bg-rose-500/10 hover:bg-rose-500/20 text-rose-400 border border-rose-500/20 transition-all text-xs font-bold"
+                                >
+                                  Terminate
+                                </button>
+                              )}
+                              <button
+                                onClick={() => handleTerminateAllSessionsForEmail(s.userEmail)}
+                                title="Terminate ALL sessions for this email"
+                                className="p-1.5 rounded-lg bg-slate-800 hover:bg-rose-900/30 text-slate-300 hover:text-rose-300 border border-slate-700 transition-all text-[11px] font-bold"
+                              >
+                                Terminate All
+                              </button>
+                            </div>
+                          </td>
+                        </tr>
+                      );
+                    })}
+                  </tbody>
+                </table>
+              </div>
+            )}
+          </div>
         </div>
       )}
 
