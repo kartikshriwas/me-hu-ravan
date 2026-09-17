@@ -1,6 +1,10 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  outputFileTracingIncludes: {
+    '/**': ['./Courses/**/*'],
+  },
+
   // L-5: Only expose internal dev origins in development
   ...(process.env.NODE_ENV === 'development' ? { allowedDevOrigins: ['10.16.65.83', "10.139.66.83", 'localhost:3000'] } : {}),
 
