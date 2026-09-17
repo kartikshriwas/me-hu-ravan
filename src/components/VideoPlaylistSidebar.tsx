@@ -1,8 +1,15 @@
-'use client';
+"use client";
 
-import React, { useState, useEffect, useRef } from 'react';
-import Link from 'next/link';
-import { PlayCircle, ChevronDown, ChevronUp, Layers, ListVideo, CheckCircle2 } from 'lucide-react';
+import React, { useState, useEffect, useRef } from "react";
+import Link from "next/link";
+import {
+  PlayCircle,
+  ChevronDown,
+  ChevronUp,
+  Layers,
+  ListVideo,
+  CheckCircle2,
+} from "lucide-react";
 
 interface Unit {
   id: string;
@@ -36,9 +43,9 @@ function formatUnitDuration(seconds?: number): string | null {
   const m = Math.floor((seconds % 3600) / 60);
   const s = Math.floor(seconds % 60);
   if (h > 0) {
-    return `${h}:${m < 10 ? '0' : ''}${m}:${s < 10 ? '0' : ''}${s}`;
+    return `${h}:${m < 10 ? "0" : ""}${m}:${s < 10 ? "0" : ""}${s}`;
   }
-  return `${m < 10 ? '0' : ''}${m}:${s < 10 ? '0' : ''}${s}`;
+  return `${m < 10 ? "0" : ""}${m}:${s < 10 ? "0" : ""}${s}`;
 }
 
 function formatSectionDuration(seconds?: number): string | null {
@@ -56,9 +63,11 @@ export function VideoPlaylistSidebar({
   sections,
 }: VideoPlaylistSidebarProps) {
   const [isOpen, setIsOpen] = useState(false); // kept for potential future use
-  const [expandedSections, setExpandedSections] = useState<Record<number, boolean>>({});
+  const [expandedSections, setExpandedSections] = useState<
+    Record<number, boolean>
+  >({});
   const [completedVideos, setCompletedVideos] = useState<string[]>([]);
-  
+
   const desktopActiveRef = useRef<HTMLAnchorElement | null>(null);
   const mobileActiveRef = useRef<HTMLAnchorElement | null>(null);
   const desktopPlaylistRef = useRef<HTMLDivElement | null>(null);
@@ -67,7 +76,7 @@ export function VideoPlaylistSidebar({
   // Load completed videos from localStorage
   useEffect(() => {
     try {
-      const stored = localStorage.getItem('preptea_completed_videos');
+      const stored = localStorage.getItem("preptea_completed_videos");
       if (stored) {
         setCompletedVideos(JSON.parse(stored));
       }
@@ -80,7 +89,9 @@ export function VideoPlaylistSidebar({
   useEffect(() => {
     const newExpandedState: Record<number, boolean> = {};
     sections.forEach((section, sIdx) => {
-      const hasActive = section.units.some(u => (u.sourceid || u.id) === currentVideoId);
+      const hasActive = section.units.some(
+        (u) => (u.sourceid || u.id) === currentVideoId,
+      );
       if (hasActive) {
         newExpandedState[sIdx] = true;
       }
@@ -88,7 +99,7 @@ export function VideoPlaylistSidebar({
     if (Object.keys(newExpandedState).length === 0) {
       newExpandedState[0] = true;
     }
-    setExpandedSections(prev => ({ ...prev, ...newExpandedState }));
+    setExpandedSections((prev) => ({ ...prev, ...newExpandedState }));
   }, [currentVideoId, sections]);
 
   // Auto-scroll to the currently playing item within the scrollable container
@@ -104,7 +115,7 @@ export function VideoPlaylistSidebar({
           const offset = elRect.top - containerRect.top;
           container.scrollTo({
             top: container.scrollTop + offset - 40,
-            behavior: 'smooth'
+            behavior: "smooth",
           });
         }
       }
@@ -119,7 +130,7 @@ export function VideoPlaylistSidebar({
           const offset = elRect.top - containerRect.top;
           container.scrollTo({
             top: container.scrollTop + offset - 40,
-            behavior: 'smooth'
+            behavior: "smooth",
           });
         }
       }
@@ -128,32 +139,43 @@ export function VideoPlaylistSidebar({
   }, [currentVideoId, expandedSections]);
 
   const toggleSection = (idx: number) => {
-    setExpandedSections(prev => ({
+    setExpandedSections((prev) => ({
       ...prev,
-      [idx]: !prev[idx]
+      [idx]: !prev[idx],
     }));
   };
 
   // Calculate total playable videos & progress
   const totalVideos = sections.reduce((acc, sec) => {
-    return acc + sec.units.filter(u => !!u.sourceid || u.type === 'youtube' || (u.data && !!u.data.embed)).length;
+    return (
+      acc +
+      sec.units.filter(
+        (u) =>
+          !!u.sourceid || u.type === "youtube" || (u.data && !!u.data.embed),
+      ).length
+    );
   }, 0);
 
   const completedCount = sections.reduce((acc, sec) => {
-    return acc + sec.units.filter(u => completedVideos.includes(u.sourceid || u.id)).length;
+    return (
+      acc +
+      sec.units.filter((u) => completedVideos.includes(u.sourceid || u.id))
+        .length
+    );
   }, 0);
 
-  const progressPercent = totalVideos > 0 ? Math.round((completedCount / totalVideos) * 100) : 0;
+  const progressPercent =
+    totalVideos > 0 ? Math.round((completedCount / totalVideos) * 100) : 0;
 
   // Find currently active section
-  const activeSection = sections.find(sec =>
-    sec.units.some(u => (u.sourceid || u.id) === currentVideoId)
+  const activeSection = sections.find((sec) =>
+    sec.units.some((u) => (u.sourceid || u.id) === currentVideoId),
   );
-  const activeSectionTitle = activeSection?.title || activeSection?.sectionTitle;
+  const activeSectionTitle =
+    activeSection?.title || activeSection?.sectionTitle;
 
   return (
     <div className="w-full h-full flex flex-col overflow-hidden">
-
       {/* ── Desktop Playlist Header ── */}
       <div className="hidden lg:flex items-center justify-between p-3.5 sm:p-4 bg-slate-900/90 border-b border-slate-800/80 shrink-0">
         <div className="flex items-center gap-2.5 min-w-0">
@@ -161,17 +183,33 @@ export function VideoPlaylistSidebar({
             <ListVideo className="w-4.5 h-4.5 text-indigo-400" />
           </div>
           <div className="min-w-0">
-            <h4 className="text-xs font-bold text-white truncate" title={courseTitle}>{courseTitle}</h4>
+            {" "}
+            <Link
+              href={`/courses/${courseSlug}`}
+              className="inline-flex items-center gap-2 text-xs font-semibold text-slate-400 hover:text-white transition-colors bg-slate-900/80"
+            >
+              <h4
+                className="text-xs font-bold text-white truncate"
+                title={courseTitle}
+              >
+                {courseTitle}
+              </h4>
+            </Link>
             {completedCount > 0 ? (
               <p className="text-[10px] text-emerald-400 font-semibold truncate">
                 {completedCount}/{totalVideos} Completed ({progressPercent}%)
               </p>
             ) : activeSectionTitle ? (
-              <p className="text-[10px] text-indigo-300 font-medium truncate" title={activeSectionTitle}>
+              <p
+                className="text-[10px] text-indigo-300 font-medium truncate"
+                title={activeSectionTitle}
+              >
                 {activeSectionTitle} • {totalVideos} Videos
               </p>
             ) : (
-              <p className="text-[10px] text-slate-400 font-medium">{totalVideos} Video Lessons</p>
+              <p className="text-[10px] text-slate-400 font-medium">
+                {totalVideos} Video Lessons
+              </p>
             )}
           </div>
         </div>
@@ -182,13 +220,26 @@ export function VideoPlaylistSidebar({
         <div className="flex items-center gap-2 min-w-0">
           <ListVideo className="w-4 h-4 text-indigo-400 shrink-0" />
           <div className="min-w-0">
-            <h4 className="text-xs font-bold text-white truncate" title={courseTitle}>{courseTitle}</h4>
+            <Link
+              href={`/courses/${courseSlug}`}
+              className="inline-flex items-center gap-2 text-xs font-semibold text-slate-400 hover:text-white transition-colors bg-slate-900/80"
+            >
+              <h4
+                className="text-xs font-bold text-white truncate"
+                title={courseTitle}
+              >
+                {courseTitle}
+              </h4>
+            </Link>
             {completedCount > 0 ? (
               <p className="text-[10px] text-emerald-400 font-semibold truncate">
                 {completedCount}/{totalVideos} Completed ({progressPercent}%)
               </p>
             ) : activeSectionTitle ? (
-              <p className="text-[10px] text-indigo-300 font-medium truncate" title={activeSectionTitle}>
+              <p
+                className="text-[10px] text-indigo-300 font-medium truncate"
+                title={activeSectionTitle}
+              >
                 {activeSectionTitle}
               </p>
             ) : null}
@@ -202,7 +253,7 @@ export function VideoPlaylistSidebar({
       {/* Thin Course Progress Bar */}
       {completedCount > 0 && (
         <div className="w-full h-1 bg-slate-950 shrink-0">
-          <div 
+          <div
             className="h-full bg-gradient-to-r from-emerald-500 to-teal-400 transition-all duration-500"
             style={{ width: `${progressPercent}%` }}
           />
@@ -215,11 +266,19 @@ export function VideoPlaylistSidebar({
         className="hidden lg:block flex-1 overflow-y-auto custom-scrollbar scroll-smooth p-3"
       >
         {sections.map((section, sIdx) => {
-          const videoUnits = section.units.filter(u => !!u.sourceid || u.type === 'youtube' || (u.data && !!u.data.embed));
+          const videoUnits = section.units.filter(
+            (u) =>
+              !!u.sourceid ||
+              u.type === "youtube" ||
+              (u.data && !!u.data.embed),
+          );
           if (videoUnits.length === 0) return null;
           const isExpanded = expandedSections[sIdx] ?? false;
-          const sectionName = section.title || section.sectionTitle || 'Course Section';
-          const hasActiveVideo = videoUnits.some(u => (u.sourceid || u.id) === currentVideoId);
+          const sectionName =
+            section.title || section.sectionTitle || "Course Section";
+          const hasActiveVideo = videoUnits.some(
+            (u) => (u.sourceid || u.id) === currentVideoId,
+          );
 
           return (
             <div key={sIdx} className="space-y-1 mb-3">
@@ -227,25 +286,35 @@ export function VideoPlaylistSidebar({
                 onClick={() => toggleSection(sIdx)}
                 className={`w-full flex items-center justify-between p-2.5 rounded-xl text-left transition-all group touch-manipulation ${
                   hasActiveVideo
-                    ? 'bg-indigo-950/40 border border-indigo-500/40 shadow-sm shadow-indigo-500/10 ring-1 ring-indigo-500/20'
-                    : 'bg-slate-950/60 border border-slate-800/60 hover:bg-slate-950'
+                    ? "bg-indigo-950/40 border border-indigo-500/40 shadow-sm shadow-indigo-500/10 ring-1 ring-indigo-500/20"
+                    : "bg-slate-950/60 border border-slate-800/60 hover:bg-slate-950"
                 }`}
               >
                 <div className="flex items-center gap-2 min-w-0">
-                  <Layers className={`w-3.5 h-3.5 shrink-0 ${hasActiveVideo ? 'text-indigo-400 animate-pulse' : 'text-slate-400'}`} />
-                  <span className={`text-xs font-bold truncate transition-colors ${
-                    hasActiveVideo ? 'text-white' : 'text-slate-200 group-hover:text-white'
-                  }`}>
+                  <Layers
+                    className={`w-3.5 h-3.5 shrink-0 ${hasActiveVideo ? "text-indigo-400 animate-pulse" : "text-slate-400"}`}
+                  />
+                  <span
+                    className={`text-xs font-bold truncate transition-colors ${
+                      hasActiveVideo
+                        ? "text-white"
+                        : "text-slate-200 group-hover:text-white"
+                    }`}
+                  >
                     {sectionName}
                   </span>
                 </div>
                 <div className="flex items-center gap-1.5 shrink-0 ml-2">
                   {(() => {
-                    const secSecs = videoUnits.reduce((acc, u) => acc + (u.duration || 0), 0);
+                    const secSecs = videoUnits.reduce(
+                      (acc, u) => acc + (u.duration || 0),
+                      0,
+                    );
                     const formattedSecDur = formatSectionDuration(secSecs);
                     return (
                       <span className="text-[10px] font-mono text-slate-500 flex items-center gap-1">
-                        {videoUnits.length} {videoUnits.length === 1 ? 'vid' : 'vids'}
+                        {videoUnits.length}{" "}
+                        {videoUnits.length === 1 ? "vid" : "vids"}
                         {formattedSecDur && (
                           <span className="text-slate-400 font-sans text-[10px] bg-slate-900/80 px-1 py-0.5 rounded border border-slate-800">
                             {formattedSecDur}
@@ -254,7 +323,11 @@ export function VideoPlaylistSidebar({
                       </span>
                     );
                   })()}
-                  {isExpanded ? <ChevronUp className="w-3.5 h-3.5 text-slate-500" /> : <ChevronDown className="w-3.5 h-3.5 text-slate-500" />}
+                  {isExpanded ? (
+                    <ChevronUp className="w-3.5 h-3.5 text-slate-500" />
+                  ) : (
+                    <ChevronDown className="w-3.5 h-3.5 text-slate-500" />
+                  )}
                 </div>
               </button>
 
@@ -264,7 +337,8 @@ export function VideoPlaylistSidebar({
                     const uId = unit.sourceid || unit.id;
                     const isActive = uId === currentVideoId;
                     const isCompleted = completedVideos.includes(uId);
-                    const title = unit.unitTitle || unit.title || 'Video Lesson';
+                    const title =
+                      unit.unitTitle || unit.title || "Video Lesson";
 
                     return (
                       <Link
@@ -273,8 +347,8 @@ export function VideoPlaylistSidebar({
                         href={`/courses/${courseSlug}/video/${uId}`}
                         className={`flex items-center justify-between p-2.5 rounded-xl transition-all touch-manipulation ${
                           isActive
-                            ? 'bg-indigo-600/25 border border-indigo-500/50 text-white font-bold shadow-md shadow-indigo-600/10 ring-1 ring-indigo-500/30'
-                            : 'hover:bg-slate-800/60 border border-transparent text-slate-400 hover:text-slate-200'
+                            ? "bg-indigo-600/25 border border-indigo-500/50 text-white font-bold shadow-md shadow-indigo-600/10 ring-1 ring-indigo-500/30"
+                            : "hover:bg-slate-800/60 border border-transparent text-slate-400 hover:text-slate-200"
                         }`}
                       >
                         <div className="flex items-center gap-2.5 min-w-0">
@@ -316,23 +390,39 @@ export function VideoPlaylistSidebar({
         className="lg:hidden flex-1 min-h-0 overflow-y-auto custom-scrollbar divide-y divide-slate-800/50"
       >
         {sections.map((section, sIdx) => {
-          const videoUnits = section.units.filter(u => !!u.sourceid || u.type === 'youtube' || (u.data && !!u.data.embed));
+          const videoUnits = section.units.filter(
+            (u) =>
+              !!u.sourceid ||
+              u.type === "youtube" ||
+              (u.data && !!u.data.embed),
+          );
           if (videoUnits.length === 0) return null;
-          const sectionName = section.title || section.sectionTitle || 'Course Section';
-          const hasActiveVideo = videoUnits.some(u => (u.sourceid || u.id) === currentVideoId);
+          const sectionName =
+            section.title || section.sectionTitle || "Course Section";
+          const hasActiveVideo = videoUnits.some(
+            (u) => (u.sourceid || u.id) === currentVideoId,
+          );
 
           return (
             <div key={sIdx}>
               {/* Section Label */}
-              <div className={`flex items-center gap-2 px-3 py-2 sticky top-0 z-10 backdrop-blur-md border-y transition-colors ${
-                hasActiveVideo
-                  ? 'bg-indigo-950/90 border-indigo-500/40 shadow-sm shadow-indigo-500/20'
-                  : 'bg-slate-950/90 border-slate-800/60'
-              }`}>
-                <Layers className={`w-3.5 h-3.5 shrink-0 ${hasActiveVideo ? 'text-indigo-400 animate-pulse' : 'text-slate-400'}`} />
-                <span className={`text-[11px] font-bold uppercase tracking-wider truncate ${
-                  hasActiveVideo ? 'text-indigo-200 font-extrabold' : 'text-slate-300'
-                }`}>
+              <div
+                className={`flex items-center gap-2 px-3 py-2 sticky top-0 z-10 backdrop-blur-md border-y transition-colors ${
+                  hasActiveVideo
+                    ? "bg-indigo-950/90 border-indigo-500/40 shadow-sm shadow-indigo-500/20"
+                    : "bg-slate-950/90 border-slate-800/60"
+                }`}
+              >
+                <Layers
+                  className={`w-3.5 h-3.5 shrink-0 ${hasActiveVideo ? "text-indigo-400 animate-pulse" : "text-slate-400"}`}
+                />
+                <span
+                  className={`text-[11px] font-bold uppercase tracking-wider truncate ${
+                    hasActiveVideo
+                      ? "text-indigo-200 font-extrabold"
+                      : "text-slate-300"
+                  }`}
+                >
                   {sectionName}
                 </span>
                 {/* {hasActiveVideo && (
@@ -341,7 +431,10 @@ export function VideoPlaylistSidebar({
                   </span>
                 )} */}
                 {(() => {
-                  const secSecs = videoUnits.reduce((acc, u) => acc + (u.duration || 0), 0);
+                  const secSecs = videoUnits.reduce(
+                    (acc, u) => acc + (u.duration || 0),
+                    0,
+                  );
                   const formattedSecDur = formatSectionDuration(secSecs);
                   return (
                     <span className="ml-auto text-[10px] font-mono text-slate-400 bg-slate-900 px-1.5 py-0.5 rounded border border-slate-800 shrink-0 flex items-center gap-1">
@@ -361,7 +454,7 @@ export function VideoPlaylistSidebar({
                 const uId = unit.sourceid || unit.id;
                 const isActive = uId === currentVideoId;
                 const isCompleted = completedVideos.includes(uId);
-                const title = unit.unitTitle || unit.title || 'Video Lesson';
+                const title = unit.unitTitle || unit.title || "Video Lesson";
 
                 return (
                   <Link
@@ -370,14 +463,20 @@ export function VideoPlaylistSidebar({
                     href={`/courses/${courseSlug}/video/${uId}`}
                     className={`flex items-center gap-3 px-3 py-3 transition-all touch-manipulation ${
                       isActive
-                        ? 'bg-indigo-600/15 border-l-2 border-indigo-500'
-                        : 'border-l-2 border-transparent hover:bg-slate-800/40'
+                        ? "bg-indigo-600/15 border-l-2 border-indigo-500"
+                        : "border-l-2 border-transparent hover:bg-slate-800/40"
                     }`}
                   >
                     {/* Thumbnail placeholder / indicator */}
-                    <div className={`w-12 h-8 rounded-lg shrink-0 flex items-center justify-center ${
-                      isActive ? 'bg-indigo-500/20' : isCompleted ? 'bg-emerald-950/40 border border-emerald-500/30' : 'bg-slate-800'
-                    }`}>
+                    <div
+                      className={`w-12 h-8 rounded-lg shrink-0 flex items-center justify-center ${
+                        isActive
+                          ? "bg-indigo-500/20"
+                          : isCompleted
+                            ? "bg-emerald-950/40 border border-emerald-500/30"
+                            : "bg-slate-800"
+                      }`}
+                    >
                       {isActive ? (
                         <div className="w-2 h-2 rounded-full bg-indigo-400 animate-pulse" />
                       ) : isCompleted ? (
@@ -389,13 +488,19 @@ export function VideoPlaylistSidebar({
 
                     {/* Title */}
                     <div className="flex-1 min-w-0">
-                      <p className={`text-xs leading-snug line-clamp-2 ${
-                        isActive ? 'text-white font-semibold' : 'text-slate-300'
-                      }`}>
+                      <p
+                        className={`text-xs leading-snug line-clamp-2 ${
+                          isActive
+                            ? "text-white font-semibold"
+                            : "text-slate-300"
+                        }`}
+                      >
                         {title}
                       </p>
                       {isActive ? (
-                        <span className="text-[9px] font-bold text-indigo-400 mt-0.5 block">Now Playing</span>
+                        <span className="text-[9px] font-bold text-indigo-400 mt-0.5 block">
+                          Now Playing
+                        </span>
                       ) : isCompleted ? (
                         <span className="text-[9px] font-bold text-emerald-400 mt-0.5 block flex items-center gap-1">
                           Completed
@@ -415,7 +520,6 @@ export function VideoPlaylistSidebar({
         {/* bottom spacer */}
         <div className="h-6" />
       </div>
-
     </div>
   );
 }

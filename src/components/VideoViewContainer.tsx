@@ -77,9 +77,9 @@ export function VideoViewContainer({
   }, []);
 
   return (
-    <div className={`-mx-3 sm:-mx-6 lg:-mx-8 -mt-4 sm:-mt-8 flex flex-col ${isTheaterMode ? 'min-h-screen overflow-y-auto' : 'h-[calc(100dvh-3.5rem)] sm:h-[calc(100dvh-4rem)] lg:h-[calc(100vh-5rem)] overflow-hidden'}`}>
+    <div className={`w-full flex flex-col flex-1 min-h-0 ${isTheaterMode ? 'min-h-screen overflow-y-auto pb-12' : 'h-[calc(100dvh-3.5rem)] sm:h-[calc(100dvh-4rem)] lg:h-[calc(100vh-5rem)] overflow-hidden'}`}>
       {/* Desktop Navigation Header */}
-      <div className="hidden lg:flex items-center justify-between px-8 py-2.5 shrink-0 bg-slate-950/40 border-b border-slate-800/60">
+      {/* <div className="hidden lg:flex items-center justify-between px-4 sm:px-6 py-2 shrink-0 bg-slate-950/40 border-b border-slate-800/60">
         <Link
           href={`/courses/${slug}`}
           className="inline-flex items-center gap-2 text-xs font-semibold text-slate-400 hover:text-white transition-colors py-1 px-3 rounded-xl bg-slate-900/80 border border-slate-800"
@@ -87,26 +87,26 @@ export function VideoViewContainer({
           <ArrowLeft className="w-4 h-4" />
           <span>Back to {course.title}</span>
         </Link>
-      </div>
+      </div> */}
 
       {/* Main Layout Container */}
       <div
         className={`flex flex-col flex-1 min-h-0 ${
           isTheaterMode
             ? 'w-full space-y-6 pb-12'
-            : 'lg:grid lg:grid-cols-3 lg:border-t lg:border-slate-800/60'
+            : 'lg:grid lg:grid-cols-12 lg:gap-4 xl:gap-6 lg:border-t lg:border-slate-800/60 px-2 sm:px-4 lg:px-6 py-2 sm:py-3'
         }`}
       >
-        {/* Video Player Section */}
+        {/* Video Player Section (75% screen width on desktop) */}
         <div
           className={`${
             isTheaterMode
               ? 'w-full bg-slate-950 border-b border-slate-800/80 shadow-2xl'
-              : 'lg:col-span-2 lg:border-r lg:border-slate-800/60 flex flex-col shrink-0'
+              : 'lg:col-span-8 xl:col-span-9 flex flex-col shrink-0 min-w-0'
           }`}
         >
           {/* Mobile Back Button */}
-          <div className="lg:hidden flex items-center justify-between px-3 py-2 shrink-0 border-b border-slate-800/40">
+          {/* <div className="lg:hidden flex items-center justify-between px-3 py-2 shrink-0 border-b border-slate-800/40">
             <Link
               href={`/courses/${slug}`}
               className="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-400 hover:text-white transition-colors"
@@ -114,16 +114,9 @@ export function VideoViewContainer({
               <ArrowLeft className="w-4 h-4" />
               <span>{course.title}</span>
             </Link>
-            <button
-              onClick={toggleTheaterMode}
-              className="p-1.5 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 text-xs font-bold flex items-center gap-1"
-            >
-              <RectangleHorizontal className="w-3.5 h-3.5 text-purple-400" />
-              <span>T</span>
-            </button>
-          </div>
+          </div> */}
 
-          <div className={`${isTheaterMode ? 'max-w-6xl mx-auto w-full' : 'w-full'}`}>
+          <div className={`${isTheaterMode ? 'max-w-7xl mx-auto w-full' : 'w-full'}`}>
             <CustomVideoPlayer
               videoId={videoId}
               courseSlug={slug}
@@ -139,12 +132,12 @@ export function VideoViewContainer({
           </div>
         </div>
 
-        {/* Playlist Sidebar */}
+        {/* Playlist Sidebar (25% screen width on desktop) */}
         <div
           className={`${
             isTheaterMode
               ? 'w-full max-w-5xl mx-auto px-4 sm:px-6'
-              : 'flex-1 min-h-0 overflow-hidden lg:col-span-1'
+              : 'flex-1 min-h-0 overflow-hidden lg:col-span-4 xl:col-span-3 min-w-0'
           }`}
         >
           <VideoPlaylistSidebar

@@ -27,5 +27,9 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ s
 
   const isUnlocked = await isCourseSlugUnlocked(sessionUser, slug);
 
-  return <CourseDetailClient course={course} availableTests={availableTests} isUnlocked={isUnlocked} />;
+  return (
+    <div className="max-w-7xl w-full mx-auto px-3 sm:px-6 lg:px-8 py-4 sm:py-8">
+      <CourseDetailClient course={course} availableTests={availableTests} isUnlocked={isUnlocked} />
+    </div>
+  );
 }

@@ -21,7 +21,9 @@ import {
   Check,
   Sparkles,
   SlidersHorizontal,
-  RectangleHorizontal
+  RectangleHorizontal,
+  SkipBack,
+  SkipForward
 } from 'lucide-react';
 
 interface VideoAsset {
@@ -593,45 +595,8 @@ export function CustomVideoPlayer({
     }
 
     return (
-      <div className="w-full space-y-3">
-        <div className="flex items-center justify-between gap-2 px-1">
-          <div className="min-w-0">
-            <span className="text-[10px] uppercase tracking-wider font-extrabold text-red-400 flex items-center gap-1">
-              <Sparkles className="w-3 h-3" /> YouTube Video
-            </span>
-            <h3 className="text-xs sm:text-sm font-bold text-white truncate">{title || 'YouTube Video'}</h3>
-          </div>
-          <div className="flex items-center gap-2 shrink-0">
-            {prevVideoUrl && (
-              <Link
-                href={prevVideoUrl}
-                className="text-xs font-bold text-slate-300 hover:text-white px-2.5 sm:px-3 py-1.5 rounded-xl bg-slate-800/80 border border-slate-700/60 hover:border-indigo-500/50 transition-all flex items-center gap-1 touch-manipulation"
-              >
-                <ChevronLeft className="w-4 h-4" />
-                <span className="hidden sm:inline">Prev</span>
-              </Link>
-            )}
-            {nextVideoUrl && (
-              <Link
-                href={nextVideoUrl}
-                className="text-xs font-bold text-slate-300 hover:text-white px-2.5 sm:px-3 py-1.5 rounded-xl bg-slate-800/80 border border-slate-700/60 hover:border-indigo-500/50 transition-all flex items-center gap-1 touch-manipulation"
-              >
-                <span className="hidden sm:inline">Next</span>
-                <ChevronRight className="w-4 h-4" />
-              </Link>
-            )}
-            {onClose && (
-              <button
-                onClick={onClose}
-                className="text-xs font-bold text-slate-400 hover:text-white px-2.5 sm:px-3 py-1.5 rounded-xl bg-slate-800/80 border border-slate-700/60 transition-all"
-              >
-                Close
-              </button>
-            )}
-          </div>
-        </div>
-
-        <div className="relative w-full aspect-[16/10] sm:aspect-video min-h-[220px] sm:min-h-0 bg-black rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-800 shadow-2xl">
+      <div className="w-full flex flex-col gap-3">
+        <div className="relative w-full aspect-[16/10] sm:aspect-video min-h-[220px] sm:min-h-0 bg-black rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-800 shadow-2xl order-1">
           {embedSrc ? (
             <iframe
               src={embedSrc}
@@ -643,6 +608,45 @@ export function CustomVideoPlayer({
           ) : (
             <div dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(embedHtml, { ADD_TAGS: ['iframe'], ADD_ATTR: ['allow', 'allowfullscreen', 'frameborder', 'src'] }) }} className="w-full h-full flex items-center justify-center" />
           )}
+        </div>
+
+        <div className="flex flex-wrap sm:flex-nowrap items-center justify-between gap-3 px-3 sm:px-5 py-2.5 sm:py-3 rounded-2xl bg-slate-900/60 border border-slate-800/80 order-2">
+          <div className="min-w-0 flex-1">
+            <span className="text-[10px] uppercase tracking-wider font-extrabold text-red-400 flex items-center gap-1">
+              <Sparkles className="w-3 h-3" /> YouTube Video
+            </span>
+            <h3 className="text-xs sm:text-sm font-bold text-white truncate mt-0.5">{title || 'YouTube Video'}</h3>
+          </div>
+          <div className="flex items-center gap-2 shrink-0">
+            {prevVideoUrl && (
+              <Link
+                href={prevVideoUrl}
+                className="text-xs sm:text-sm font-semibold text-slate-200 hover:text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl bg-slate-800 hover:bg-slate-700/80 border border-slate-700/60 hover:border-indigo-500/50 transition-all flex items-center gap-1.5 touch-manipulation"
+                title={prevTitle ? `Previous: ${prevTitle}` : "Previous Video"}
+              >
+                <ChevronLeft className="w-4 h-4 text-slate-400" />
+                <span>Previous</span>
+              </Link>
+            )}
+            {nextVideoUrl && (
+              <Link
+                href={nextVideoUrl}
+                className="text-xs sm:text-sm font-semibold text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 border border-indigo-400/30 transition-all flex items-center gap-1.5 shadow-md shadow-indigo-950/40 touch-manipulation"
+                title={nextTitle ? `Next: ${nextTitle}` : "Next Video"}
+              >
+                <span>Next</span>
+                <ChevronRight className="w-4 h-4 text-white" />
+              </Link>
+            )}
+            {onClose && (
+              <button
+                onClick={onClose}
+                className="text-xs font-bold text-slate-400 hover:text-white px-2.5 sm:px-3 py-1.5 rounded-xl bg-slate-800/80 border border-slate-700/60 transition-all"
+              >
+                Close
+              </button>
+            )}
+          </div>
         </div>
       </div>
     );
@@ -679,7 +683,7 @@ export function CustomVideoPlayer({
         onMouseMove={resetControlsTimeout}
         onMouseLeave={() => isPlaying && setShowControls(false)}
         onClick={handleContainerTap}
-        className="relative w-full aspect-video min-h-[200px] sm:min-h-0 bg-black overflow-hidden shadow-2xl group select-none touch-none order-first sm:order-2"
+        className="relative w-full aspect-video min-h-[200px] sm:min-h-0 bg-black overflow-hidden shadow-2xl group select-none touch-none order-1"
       >
         <video
           ref={videoRef}
@@ -942,7 +946,18 @@ export function CustomVideoPlayer({
 
           {/* Buttons & Options Row */}
           <div className="flex items-center justify-between text-white gap-2">
-            <div className="flex items-center gap-1.5 sm:gap-3">
+            <div className="flex items-center gap-1.5 sm:gap-2">
+              {prevVideoUrl && (
+                <Link
+                  href={prevVideoUrl}
+                  className="hidden sm:inline-flex p-1.5 sm:p-2 rounded-xl hover:bg-white/10 active:scale-95 transition-all text-slate-200 hover:text-white items-center justify-center"
+                  title={prevTitle ? `Previous: ${prevTitle}` : "Previous Video"}
+                  aria-label="Previous Video"
+                >
+                  <SkipBack className="w-4.5 h-4.5 sm:w-5 sm:h-5 fill-current" />
+                </Link>
+              )}
+
               <button
                 onClick={handlePlayPause}
                 className="p-1.5 sm:p-2 rounded-xl hover:bg-white/10 active:scale-95 transition-all text-white touch-manipulation"
@@ -951,7 +966,18 @@ export function CustomVideoPlayer({
                 {isPlaying ? <Pause className="w-5 h-5 sm:w-6 sm:h-6 fill-white" /> : <Play className="w-5 h-5 sm:w-6 sm:h-6 fill-white" />}
               </button>
 
-              <span className="text-[10px] sm:text-xs font-mono text-slate-300 tracking-tight">
+              {nextVideoUrl && (
+                <Link
+                  href={nextVideoUrl}
+                  className="hidden sm:inline-flex p-1.5 sm:p-2 rounded-xl hover:bg-white/10 active:scale-95 transition-all text-slate-200 hover:text-white items-center justify-center"
+                  title={nextTitle ? `Next: ${nextTitle}` : "Next Video"}
+                  aria-label="Next Video"
+                >
+                  <SkipForward className="w-4.5 h-4.5 sm:w-5 sm:h-5 fill-current" />
+                </Link>
+              )}
+
+              <span className="text-[10px] sm:text-xs font-mono text-slate-300 tracking-tight ml-1">
                 {formatTime(currentTime)} <span className="text-slate-500">/</span> {formatTime(duration)}
               </span>
             </div>
@@ -981,7 +1007,7 @@ export function CustomVideoPlayer({
                   title="Theater Mode (T)"
                   aria-label="Theater Mode"
                 >
-                  <RectangleHorizontal className="w-4.5 h-4.5 sm:w-5 sm:h-5 text-purple-400" />
+                  <RectangleHorizontal className="w-4.5 h-4.5 sm:w-5 sm:h-5 text-400" />
                 </button>
               )}
 
@@ -1063,34 +1089,36 @@ export function CustomVideoPlayer({
         )}
       </div>
 
-      {/* Player Info/Nav Header — below video on mobile (order-2), above on desktop (sm:order-1) */}
-      <div className="flex items-center justify-between gap-2 px-3 sm:px-6 py-2.5 sm:py-2.5 order-2 sm:order-1 border-b border-slate-800/40">
+      {/* Player Info/Nav Header — rendered under the video player on mobile and desktop */}
+      <div className="flex flex-wrap sm:flex-nowrap items-center justify-between gap-3 px-4 sm:px-6 py-3 order-2 border-t border-slate-800/60 bg-slate-950/90">
         <div className="min-w-0 flex-1">
-          <h3 className="text-sm sm:text-sm font-bold text-white truncate">{title || videoData?.name}</h3>
+          <h3 className="text-sm sm:text-base font-bold text-white truncate">{title || videoData?.name}</h3>
         </div>
         <div className="flex items-center gap-2 shrink-0">
           {prevVideoUrl && (
             <Link
               href={prevVideoUrl}
-              className="text-xs font-bold text-slate-300 hover:text-white px-2.5 py-1.5 rounded-xl bg-slate-800/80 border border-slate-700/60 hover:border-indigo-500/50 transition-all flex items-center gap-1 touch-manipulation"
+              className="text-xs sm:text-sm font-semibold text-slate-200 hover:text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl bg-slate-800 hover:bg-slate-700/80 border border-slate-700/60 hover:border-indigo-500/50 transition-all flex items-center gap-1.5 touch-manipulation shadow-sm"
+              title={prevTitle ? `Previous: ${prevTitle}` : "Previous Video"}
             >
-              <ChevronLeft className="w-4 h-4" />
-              <span className="hidden sm:inline">Prev</span>
+              <ChevronLeft className="w-4 h-4 text-slate-400" />
+              <span>Previous</span>
             </Link>
           )}
           {nextVideoUrl && (
             <Link
               href={nextVideoUrl}
-              className="text-xs font-bold text-slate-300 hover:text-white px-2.5 py-1.5 rounded-xl bg-slate-800/80 border border-slate-700/60 hover:border-indigo-500/50 transition-all flex items-center gap-1 touch-manipulation"
+              className="text-xs sm:text-sm font-semibold text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 border border-indigo-400/30 transition-all flex items-center gap-1.5 shadow-md shadow-indigo-950/50 touch-manipulation"
+              title={nextTitle ? `Next: ${nextTitle}` : "Next Video"}
             >
-              <span className="hidden sm:inline">Next</span>
-              <ChevronRight className="w-4 h-4" />
+              <span>Next</span>
+              <ChevronRight className="w-4 h-4 text-white" />
             </Link>
           )}
           {onClose && (
             <button
               onClick={onClose}
-              className="text-xs font-bold text-slate-400 hover:text-white px-2.5 py-1.5 rounded-xl bg-slate-800/80 border border-slate-700/60 transition-all"
+              className="text-xs sm:text-sm font-semibold text-slate-400 hover:text-white px-3 py-1.5 sm:py-2 rounded-xl bg-slate-800/80 border border-slate-700/60 transition-all"
             >
               Close
             </button>

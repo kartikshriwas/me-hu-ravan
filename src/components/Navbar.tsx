@@ -89,7 +89,7 @@ export function Navbar() {
 
   return (
     <header className="sticky top-0 z-40 w-full glass-panel border-b border-slate-800/80">
-      <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+      <div className="w-full px-3 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-14 sm:h-16 gap-1">
           
           {/* Logo */}
