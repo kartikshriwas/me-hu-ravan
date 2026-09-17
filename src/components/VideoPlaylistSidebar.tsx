@@ -10,7 +10,7 @@ interface Unit {
   unitTitle?: string;
   title?: string;
   type: string;
-  duration?: string;
+  duration?: number;
   data?: {
     embed?: string;
     [key: string]: any;
@@ -28,6 +28,25 @@ interface VideoPlaylistSidebarProps {
   courseSlug: string;
   currentVideoId: string;
   sections: Section[];
+}
+
+function formatUnitDuration(seconds?: number): string | null {
+  if (!seconds || seconds <= 0) return null;
+  const h = Math.floor(seconds / 3600);
+  const m = Math.floor((seconds % 3600) / 60);
+  const s = Math.floor(seconds % 60);
+  if (h > 0) {
+    return `${h}:${m < 10 ? '0' : ''}${m}:${s < 10 ? '0' : ''}${s}`;
+  }
+  return `${m < 10 ? '0' : ''}${m}:${s < 10 ? '0' : ''}${s}`;
+}
+
+function formatSectionDuration(seconds?: number): string | null {
+  if (!seconds || seconds <= 0) return null;
+  const h = Math.floor(seconds / 3600);
+  const m = Math.floor((seconds % 3600) / 60);
+  if (h > 0) return m > 0 ? `${h}h ${m}m` : `${h}h`;
+  return `${m}m`;
 }
 
 export function VideoPlaylistSidebar({
@@ -221,14 +240,20 @@ export function VideoPlaylistSidebar({
                   </span>
                 </div>
                 <div className="flex items-center gap-1.5 shrink-0 ml-2">
-                  {/* {hasActiveVideo && (
-                    <span className="text-[9px] font-extrabold uppercase px-1.5 py-0.5 rounded bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">
-                      Active
-                    </span>
-                  )} */}
-                  <span className="text-[10px] font-mono text-slate-500">
-                    {videoUnits.length} {videoUnits.length === 1 ? 'video' : 'videos'}
-                  </span>
+                  {(() => {
+                    const secSecs = videoUnits.reduce((acc, u) => acc + (u.duration || 0), 0);
+                    const formattedSecDur = formatSectionDuration(secSecs);
+                    return (
+                      <span className="text-[10px] font-mono text-slate-500 flex items-center gap-1">
+                        {videoUnits.length} {videoUnits.length === 1 ? 'vid' : 'vids'}
+                        {formattedSecDur && (
+                          <span className="text-slate-400 font-sans text-[10px] bg-slate-900/80 px-1 py-0.5 rounded border border-slate-800">
+                            {formattedSecDur}
+                          </span>
+                        )}
+                      </span>
+                    );
+                  })()}
                   {isExpanded ? <ChevronUp className="w-3.5 h-3.5 text-slate-500" /> : <ChevronDown className="w-3.5 h-3.5 text-slate-500" />}
                 </div>
               </button>
@@ -269,6 +294,10 @@ export function VideoPlaylistSidebar({
                         ) : isCompleted ? (
                           <span className="text-[9px] font-bold text-emerald-400 shrink-0 ml-2">
                             Done
+                          </span>
+                        ) : formatUnitDuration(unit.duration) ? (
+                          <span className="text-[10px] font-mono text-slate-500 shrink-0 ml-2">
+                            {formatUnitDuration(unit.duration)}
                           </span>
                         ) : null}
                       </Link>
@@ -311,9 +340,20 @@ export function VideoPlaylistSidebar({
                     Playing Section
                   </span>
                 )} */}
-                <span className="ml-auto text-[10px] font-mono text-slate-400 bg-slate-900 px-1.5 py-0.5 rounded border border-slate-800 shrink-0">
-                  {videoUnits.length} {videoUnits.length === 1 ? 'video' : 'videos'}
-                </span>
+                {(() => {
+                  const secSecs = videoUnits.reduce((acc, u) => acc + (u.duration || 0), 0);
+                  const formattedSecDur = formatSectionDuration(secSecs);
+                  return (
+                    <span className="ml-auto text-[10px] font-mono text-slate-400 bg-slate-900 px-1.5 py-0.5 rounded border border-slate-800 shrink-0 flex items-center gap-1">
+                      <span>{videoUnits.length} vids</span>
+                      {formattedSecDur && (
+                        <span className="text-slate-300 font-sans border-l border-slate-700 pl-1">
+                          {formattedSecDur}
+                        </span>
+                      )}
+                    </span>
+                  );
+                })()}
               </div>
 
               {/* Video rows */}
@@ -359,6 +399,10 @@ export function VideoPlaylistSidebar({
                       ) : isCompleted ? (
                         <span className="text-[9px] font-bold text-emerald-400 mt-0.5 block flex items-center gap-1">
                           Completed
+                        </span>
+                      ) : formatUnitDuration(unit.duration) ? (
+                        <span className="text-[9px] font-mono text-slate-500 mt-0.5 block">
+                          {formatUnitDuration(unit.duration)}
                         </span>
                       ) : null}
                     </div>

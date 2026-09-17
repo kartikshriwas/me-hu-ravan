@@ -12,6 +12,8 @@ export interface CourseMeta {
   } | null;
   sectionsCount: number;
   unitsCount: number;
+  totalDurationSeconds?: number;
+  isOngoing?: boolean;
 }
 
 export interface CourseSectionUnit {
@@ -33,6 +35,7 @@ export interface CourseSectionUnit {
   sourceid?: string;
   vimeoid?: string;
   fileUrl?: string;
+  duration?: number;
 }
 
 export interface CourseSection {

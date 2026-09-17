@@ -68,6 +68,7 @@ interface ActiveSessionItem {
   networkType: string;
   recentEvents: SessionEventItem[];
   userAgent?: string;
+  ipAddress?: string;
 }
 
 interface ActiveSessionStats {
@@ -348,11 +349,35 @@ export default function AdminDashboardPage() {
         setFeedbackMsg(`Session ${sessionId} terminated successfully.`);
         setActiveSessions((prev) => prev.filter((s) => s.sessionId !== sessionId));
         if (inspectingSession?.sessionId === sessionId) setInspectingSession(null);
+        if (inspectingUserEmail) {
+          openCandidateInspector(inspectingUserEmail);
+        }
       } else {
         setErrorMsg(json.error || 'Failed to terminate session');
       }
     } catch {
       setErrorMsg('Error terminating session');
+    }
+  };
+
+  const handleTerminateAllUserSessions = async (email: string) => {
+    try {
+      const res = await fetch('/api/admin/active-sessions', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ action: 'terminate_all', targetUserEmail: email }),
+      });
+      const json = await res.json();
+      if (json.success) {
+        setFeedbackMsg(json.message || `Terminated all sessions for ${email}`);
+        setActiveSessions((prev) => prev.filter((s) => s.userEmail.toLowerCase() !== email.toLowerCase()));
+        if (inspectingSession?.userEmail.toLowerCase() === email.toLowerCase()) setInspectingSession(null);
+        openCandidateInspector(email);
+      } else {
+        setErrorMsg(json.error || 'Failed to terminate user sessions');
+      }
+    } catch {
+      setErrorMsg('Error terminating user sessions');
     }
   };
 
@@ -1478,7 +1503,9 @@ export default function AdminDashboardPage() {
           </div>
 
           {/* Session Telemetry & Audit Log Inspection Modal */}
-          {inspectingSession && (
+          {inspectingSession && (() => {
+            const ModalDeviceIcon = inspectingSession.deviceType === 'mobile' ? Smartphone : inspectingSession.deviceType === 'tablet' ? Tablet : Laptop;
+            return (
             <div
               className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/60 backdrop-blur-md animate-fade-in cursor-pointer"
               onClick={() => setInspectingSession(null)}
@@ -1513,49 +1540,78 @@ export default function AdminDashboardPage() {
 
                 <div className="p-6 space-y-6">
                   {/* Device & Connection specs */}
-                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-                    <div className="bg-slate-900/60 p-4 rounded-2xl border border-slate-800">
-                      <span className="text-[10px] text-slate-500 font-bold block uppercase tracking-wider mb-1">Platform</span>
-                      <span className="font-bold text-slate-200 text-sm flex items-center gap-1.5">
-                        <Laptop className="w-4 h-4 text-indigo-400" /> {inspectingSession.os}
+                  <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
+                    <div className="bg-slate-900/60 p-3.5 rounded-2xl border border-slate-800">
+                      <span className="text-[10px] text-slate-500 font-bold block uppercase tracking-wider mb-1">Device Type</span>
+                      <span className="font-bold text-slate-200 text-xs capitalize flex items-center gap-1.5">
+                        <ModalDeviceIcon className="w-4 h-4 text-indigo-400" /> {inspectingSession.deviceType || 'Desktop'}
                       </span>
                     </div>
-                    <div className="bg-slate-900/60 p-4 rounded-2xl border border-slate-800">
+                    <div className="bg-slate-900/60 p-3.5 rounded-2xl border border-slate-800">
+                      <span className="text-[10px] text-slate-500 font-bold block uppercase tracking-wider mb-1">Platform</span>
+                      <span className="font-bold text-slate-200 text-xs truncate block">{inspectingSession.os}</span>
+                    </div>
+                    <div className="bg-slate-900/60 p-3.5 rounded-2xl border border-slate-800">
                       <span className="text-[10px] text-slate-500 font-bold block uppercase tracking-wider mb-1">Browser</span>
-                      <span className="font-bold text-slate-200 text-sm">{inspectingSession.browser}</span>
+                      <span className="font-bold text-slate-200 text-xs truncate block">{inspectingSession.browser}</span>
                     </div>
-                    <div className="bg-slate-900/60 p-4 rounded-2xl border border-slate-800">
+                    <div className="bg-slate-900/60 p-3.5 rounded-2xl border border-slate-800">
+                      <span className="text-[10px] text-slate-500 font-bold block uppercase tracking-wider mb-1">Resolution</span>
+                      <span className="font-bold text-slate-200 text-xs truncate block">{inspectingSession.screenResolution || '1920x1080'}</span>
+                    </div>
+                    <div className="bg-slate-900/60 p-3.5 rounded-2xl border border-slate-800">
                       <span className="text-[10px] text-slate-500 font-bold block uppercase tracking-wider mb-1">Network</span>
-                      <span className="font-bold text-emerald-400 uppercase text-sm">{inspectingSession.networkType}</span>
+                      <span className="font-bold text-slate-200 text-xs uppercase truncate block">{inspectingSession.networkType || '4g'}</span>
                     </div>
-                    <div className="bg-slate-900/60 p-4 rounded-2xl border border-slate-800">
-                      <span className="text-[10px] text-slate-500 font-bold block uppercase tracking-wider mb-1">Active Duration</span>
-                      <span className="font-bold text-amber-400 text-sm">{Math.floor(inspectingSession.activeSeconds / 60)}m {inspectingSession.activeSeconds % 60}s</span>
+                    <div className="bg-slate-900/60 p-3.5 rounded-2xl border border-slate-800">
+                      <span className="text-[10px] text-slate-500 font-bold block uppercase tracking-wider mb-1">Duration</span>
+                      <span className="font-bold text-emerald-400 text-xs truncate block">{Math.floor(inspectingSession.activeSeconds / 60)}m active</span>
                     </div>
                   </div>
 
-                  {/* Session Route & Event Chronological Audit Trail */}
-                  <div className="space-y-3">
-                    <h4 className="text-xs font-bold uppercase text-slate-400 tracking-wider">
-                      Full Session Audit Trail ({inspectingSession.recentEvents?.length || 0} events)
+                  {/* IP Address & User-Agent info */}
+                  <div className="bg-slate-900/40 p-4 rounded-2xl border border-slate-800 flex flex-wrap items-center justify-between gap-4">
+                    <div>
+                      <span className="text-[10px] text-slate-500 font-bold block uppercase tracking-wider mb-0.5">IP Address / Hash</span>
+                      <span className="font-mono text-xs font-bold text-indigo-300">{inspectingSession.ipAddress || 'Not recorded'}</span>
+                    </div>
+                    {inspectingSession.userAgent && (
+                      <div className="max-w-md">
+                        <span className="text-[10px] text-slate-500 font-bold block uppercase tracking-wider mb-0.5">User Agent</span>
+                        <span className="text-[10px] text-slate-400 font-mono block truncate" title={inspectingSession.userAgent}>
+                          {inspectingSession.userAgent}
+                        </span>
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Audit Trail Log */}
+                  <div className="bg-slate-900/40 rounded-2xl p-4 border border-slate-800 space-y-3">
+                    <h4 className="text-xs font-bold text-slate-300 uppercase tracking-wider flex items-center justify-between">
+                      <span className="flex items-center gap-2">
+                        <Activity className="w-4 h-4 text-indigo-400" /> Activity Audit Log
+                      </span>
+                      <span className="text-[10px] text-slate-500 font-normal">
+                        {inspectingSession.recentEvents?.length || 0} Recorded Events
+                      </span>
                     </h4>
-                    <div className="max-h-72 overflow-y-auto p-4 rounded-2xl bg-slate-950/80 border border-slate-800 font-mono text-xs custom-scrollbar space-y-1">
-                      {!inspectingSession.recentEvents || inspectingSession.recentEvents.length === 0 ? (
-                        <p className="text-slate-500 text-center py-8">No navigation events logged for this session yet.</p>
-                      ) : (
-                        inspectingSession.recentEvents.map((evt, idx) => (
-                          <div key={idx} className="flex items-center justify-between border-b border-slate-800/40 pb-2 mb-2 last:border-0 last:mb-0 last:pb-0 text-[11px] hover:bg-slate-900/50 p-1.5 rounded-md transition-colors">
-                            <div className="flex items-center gap-2.5 truncate">
-                              <span className={`w-2 h-2 rounded-full ${evt.type === 'navigation' ? 'bg-indigo-400' : 'bg-emerald-400'}`} />
-                              <span className="text-slate-300 font-bold">{evt.type.toUpperCase()}</span>
-                              <span className="text-slate-400">-</span>
-                              <span className="text-indigo-200">{evt.details}</span>
-                            </div>
-                            <span className="text-slate-500 font-bold shrink-0 ml-4">
+
+                    <div className="max-h-56 overflow-y-auto space-y-2 pr-1 custom-scrollbar">
+                      {inspectingSession.recentEvents && inspectingSession.recentEvents.length > 0 ? (
+                        inspectingSession.recentEvents.map((evt: SessionEventItem, idx: number) => (
+                          <div key={idx} className="bg-slate-950/60 p-2.5 rounded-xl border border-slate-800/80 text-xs flex items-start justify-between gap-3">
+                            <span className="text-slate-300 font-medium text-[11px] leading-relaxed break-all">
+                              {evt.details}
+                            </span>
+                            <span className="text-[10px] font-mono text-slate-500 whitespace-nowrap pt-0.5">
                               {new Date(evt.timestamp).toLocaleTimeString()}
                             </span>
                           </div>
                         ))
+                      ) : (
+                        <div className="text-center py-6 text-slate-500 text-xs italic">
+                          No audit trail events recorded yet for this session.
+                        </div>
                       )}
                     </div>
                   </div>
@@ -1577,7 +1633,8 @@ export default function AdminDashboardPage() {
                 </div>
               </div>
             </div>
-          )}
+            );
+          })()}
         </div>
       )}
 
@@ -2039,7 +2096,7 @@ export default function AdminDashboardPage() {
                 </thead>
                 <tbody className="divide-y divide-slate-800/60">
                   {filteredUsers.map((u) => {
-                    const isSuper = u.email.toLowerCase() === 'fykartik@gmail.com';
+                    const isSuper = u.email.toLowerCase() === (process.env.NEXT_PUBLIC_SUPERADMIN_EMAIL ?? '').toLowerCase();
                     const permCount = u.adminPermissions ? u.adminPermissions.length : 0;
                     const batchCount = u.allowedBatches ? u.allowedBatches.length : 0;
 
@@ -2501,36 +2558,192 @@ export default function AdminDashboardPage() {
                         </div>
                       </div>
 
-                      {/* Recent Live Sessions */}
+                      {/* All Logged-In Devices Telemetry */}
                       <div className="glass-panel p-5 rounded-2xl border border-slate-800 space-y-3">
-                        <h4 className="text-xs font-bold uppercase tracking-wider text-slate-400">
-                          Recent Live Sessions Telemetry ({inspectData.sessions?.length || 0})
-                        </h4>
+                        <div className="flex items-center justify-between flex-wrap gap-2">
+                          <div className="flex items-center gap-2">
+                            <Laptop className="w-4 h-4 text-indigo-400" />
+                            <h4 className="text-xs font-bold uppercase tracking-wider text-slate-300">
+                              All Logged-In Devices ({inspectData.sessions?.length || 0})
+                            </h4>
+                            {inspectData.sessions?.length > 1 && (
+                              <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-amber-500/20 text-amber-300 border border-amber-500/30">
+                                ⚠️ {inspectData.sessions.length} Active Devices
+                              </span>
+                            )}
+                          </div>
+                          {isSuperadmin && inspectData.sessions?.length > 0 && (
+                            <button
+                              onClick={() => handleTerminateAllUserSessions(inspectData.user.email)}
+                              className="px-3 py-1.5 rounded-xl bg-rose-600/20 hover:bg-rose-600/30 text-rose-300 border border-rose-500/30 text-xs font-bold transition-all flex items-center gap-1.5 shadow-sm"
+                            >
+                              <Trash2 className="w-3.5 h-3.5" />
+                              <span>Logout All Devices</span>
+                            </button>
+                          )}
+                        </div>
+
                         {inspectData.sessions?.length === 0 ? (
-                          <p className="text-xs text-slate-500">No active browser session records found.</p>
+                          <p className="text-xs text-slate-500 py-4 text-center">No active or historical session records found for this account.</p>
                         ) : (
-                          <div className="space-y-2">
-                            {inspectData.sessions.slice(0, 5).map((s: any) => (
-                              <div key={s._id} className="p-3 rounded-xl bg-slate-900/60 border border-slate-800 text-xs flex items-center justify-between gap-3">
-                                <div className="min-w-0">
-                                  <p className="font-bold text-white truncate">{s.currentPath || "/"}</p>
-                                  <p className="text-[10px] text-slate-400 font-mono">
-                                    {s.browser} • {s.os} • {s.deviceType} • IP: {s.ipAddress || 'Unknown'}
-                                  </p>
+                          <div className="space-y-2.5 max-h-72 overflow-y-auto custom-scrollbar pr-1">
+                            {inspectData.sessions.map((s: any) => {
+                              const loginAt = s.startedAt ? new Date(s.startedAt) : null;
+                              const lastSeen = s.lastHeartbeat ? new Date(s.lastHeartbeat) : null;
+                              const secondsAgo = lastSeen ? Math.floor((Date.now() - lastSeen.getTime()) / 1000) : null;
+                              const lastSeenLabel =
+                                secondsAgo === null ? '—'
+                                : secondsAgo < 60 ? `${secondsAgo}s ago`
+                                : secondsAgo < 3600 ? `${Math.floor(secondsAgo / 60)}m ago`
+                                : lastSeen!.toLocaleTimeString();
+
+                              const stateColors: Record<string, string> = {
+                                active: 'bg-emerald-500/20 text-emerald-300 border-emerald-500/30',
+                                focus: 'bg-blue-500/20 text-blue-300 border-blue-500/30',
+                                idle: 'bg-amber-500/20 text-amber-300 border-amber-500/30',
+                                background: 'bg-slate-700/40 text-slate-400 border-slate-600/30',
+                              };
+
+                              return (
+                                <div key={s._id} className="p-3.5 rounded-xl bg-slate-900/80 border border-slate-800/80 text-xs hover:border-slate-700 transition-all space-y-2.5">
+                                  {/* Row 1: Path + device type + state badge */}
+                                  <div className="flex items-center justify-between gap-2">
+                                    <div className="flex items-center gap-2 min-w-0">
+                                      <span className="font-bold text-white text-xs truncate">{s.currentPath || '/'}</span>
+                                      <span className="text-[10px] font-mono px-2 py-0.5 rounded-md bg-slate-800 text-slate-300 font-bold uppercase shrink-0">{s.deviceType || 'desktop'}</span>
+                                    </div>
+                                    <span className={`px-2 py-0.5 rounded-full text-[10px] font-bold uppercase border shrink-0 ${stateColors[s.state] || stateColors.background}`}>
+                                      {s.state || 'unknown'}
+                                    </span>
+                                  </div>
+
+                                  {/* Row 2: Browser / OS / IP / Resolution */}
+                                  <div className="flex flex-wrap items-center gap-x-2 gap-y-0.5 text-[10px] text-slate-400 font-mono">
+                                    <span className="text-indigo-300 font-bold">🌐 {s.browser || 'Unknown'}</span>
+                                    <span>•</span>
+                                    <span className="text-slate-300">💻 {s.os || 'Unknown'}</span>
+                                    <span>•</span>
+                                    <span className="text-emerald-400 font-bold">📍 IP: {s.ipAddress || '127.0.0.1'}</span>
+                                    <span>•</span>
+                                    <span className="text-slate-400">🖥️ {s.screenResolution || '1920x1080'}</span>
+                                  </div>
+
+                                  {/* Row 3: Login time + Last seen + Terminate */}
+                                  <div className="flex items-center justify-between gap-2 pt-1 border-t border-slate-800/60">
+                                    <div className="flex items-center gap-4 text-[10px] font-mono">
+                                      <div className="space-y-0.5">
+                                        <p className="text-slate-500 uppercase tracking-wider font-bold">Logged in at</p>
+                                        <p className="text-slate-300 font-bold">
+                                          {loginAt
+                                            ? `${loginAt.toLocaleDateString([], { month: 'short', day: 'numeric' })} · ${loginAt.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}`
+                                            : '—'}
+                                        </p>
+                                      </div>
+                                      <div className="space-y-0.5">
+                                        <p className="text-slate-500 uppercase tracking-wider font-bold">Last seen</p>
+                                        <p className="text-amber-300 font-bold">{lastSeenLabel}</p>
+                                      </div>
+                                    </div>
+                                    {isSuperadmin && (
+                                      <button
+                                        onClick={() => handleTerminateSession(s.sessionId)}
+                                        className="p-2 rounded-lg bg-rose-500/10 hover:bg-rose-500/20 text-rose-400 border border-rose-500/20 transition-all shrink-0"
+                                        title="Logout / Terminate this device session"
+                                      >
+                                        <Trash2 className="w-4 h-4" />
+                                      </button>
+                                    )}
+                                  </div>
                                 </div>
-                                <div className="text-right shrink-0">
-                                  <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-indigo-500/20 text-indigo-300">
-                                    {s.state}
-                                  </span>
-                                  <p className="text-[10px] text-slate-500 mt-0.5">
-                                    {new Date(s.lastHeartbeat).toLocaleTimeString()}
-                                  </p>
-                                </div>
-                              </div>
-                            ))}
+                              );
+                            })}
                           </div>
                         )}
                       </div>
+                      {/* Recent Live Sessions Telemetry (last 2 hours) */}
+                      {inspectData.recentSessions && inspectData.recentSessions.length > 0 && (
+                        <div className="glass-panel p-5 rounded-2xl border border-purple-500/20 bg-purple-950/10 space-y-3">
+                          <div className="flex items-center gap-2">
+                            <History className="w-4 h-4 text-purple-400" />
+                            <h4 className="text-xs font-bold uppercase tracking-wider text-slate-300">
+                              Recent Sessions Telemetry
+                            </h4>
+                            <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-purple-500/20 text-purple-300 border border-purple-500/30">
+                              Last 2h · {inspectData.recentSessions.length} records
+                            </span>
+                          </div>
+
+                          <div className="overflow-x-auto rounded-xl border border-slate-800">
+                            <table className="w-full text-left text-[11px]">
+                              <thead className="bg-slate-900/80 text-slate-400 font-bold border-b border-slate-800">
+                                <tr>
+                                  <th className="px-3 py-2.5">Path</th>
+                                  <th className="px-3 py-2.5">State</th>
+                                  <th className="px-3 py-2.5">Active Time</th>
+                                  <th className="px-3 py-2.5">Device / Browser</th>
+                                  <th className="px-3 py-2.5">IP</th>
+                                  <th className="px-3 py-2.5">Logged In</th>
+                                  <th className="px-3 py-2.5">Last Seen</th>
+                                </tr>
+                              </thead>
+                              <tbody className="divide-y divide-slate-800/60">
+                                {inspectData.recentSessions.map((s: any) => {
+                                  const loginAt = s.startedAt ? new Date(s.startedAt) : null;
+                                  const lastSeen = s.lastHeartbeat ? new Date(s.lastHeartbeat) : null;
+                                  const secondsAgo = lastSeen ? Math.floor((Date.now() - lastSeen.getTime()) / 1000) : null;
+                                  const lastSeenLabel =
+                                    secondsAgo === null ? '—'
+                                    : secondsAgo < 60 ? `${secondsAgo}s ago`
+                                    : secondsAgo < 3600 ? `${Math.floor(secondsAgo / 60)}m ago`
+                                    : `${Math.floor(secondsAgo / 3600)}h ago`;
+
+                                  const stateStyles: Record<string, string> = {
+                                    active: 'bg-emerald-500/20 text-emerald-300',
+                                    focus: 'bg-blue-500/20 text-blue-300',
+                                    idle: 'bg-amber-500/20 text-amber-300',
+                                    background: 'bg-slate-700/40 text-slate-400',
+                                  };
+
+                                  return (
+                                    <tr key={s._id} className={`hover:bg-slate-900/40 transition-colors ${s.terminated ? 'opacity-50' : ''}`}>
+                                      <td className="px-3 py-2.5 font-mono text-indigo-300 font-bold truncate max-w-[120px]">
+                                        <span title={s.currentPath}>{s.currentPath || '/'}</span>
+                                        {s.terminated && (
+                                          <span className="ml-1.5 px-1.5 py-0.5 rounded text-[9px] font-black bg-rose-500/20 text-rose-400 border border-rose-500/30 uppercase tracking-wider">
+                                            terminated
+                                          </span>
+                                        )}
+                                      </td>
+                                      <td className="px-3 py-2.5">
+                                        <span className={`px-2 py-0.5 rounded-full text-[10px] font-bold uppercase ${stateStyles[s.state] || stateStyles.background}`}>
+                                          {s.state || '—'}
+                                        </span>
+                                      </td>
+                                      <td className="px-3 py-2.5 font-mono text-slate-300 font-bold">
+                                        {Math.floor((s.activeSeconds || 0) / 60)}m {(s.activeSeconds || 0) % 60}s
+                                      </td>
+                                      <td className="px-3 py-2.5 text-slate-400 font-mono">
+                                        {s.deviceType || 'desktop'} · {s.browser || '—'} · {s.os || '—'}
+                                      </td>
+                                      <td className="px-3 py-2.5 font-mono text-emerald-400 font-bold">
+                                        {s.ipAddress || '127.0.0.1'}
+                                      </td>
+                                      <td className="px-3 py-2.5 font-mono text-slate-300">
+                                        {loginAt
+                                          ? `${loginAt.toLocaleDateString([], { month: 'short', day: 'numeric' })} ${loginAt.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}`
+                                          : '—'}
+                                      </td>
+                                      <td className="px-3 py-2.5 font-mono text-amber-300 font-bold">
+                                        {lastSeenLabel}
+                                      </td>
+                                    </tr>
+                                  );
+                                })}
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      )}
                     </div>
                   )}
 

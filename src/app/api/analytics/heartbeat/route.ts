@@ -82,10 +82,12 @@ export async function POST(request: Request) {
     const userName = sessionUser?.name || 'Guest User';
     const userImage = sessionUser?.image || '';
     const userAgent = request.headers.get('user-agent') || '';
-    const rawIp = request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || request.headers.get('x-real-ip') || '';
-    // H-7: Hash IP address for privacy — daily salt allows same-day correlation without exposing raw IP
+    const rawIpRaw = request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || request.headers.get('x-real-ip') || '';
+    // Strip IPv4-mapped IPv6 prefix (::ffff:127.0.0.1 → 127.0.0.1)
+    const rawIp = rawIpRaw.replace(/^::ffff:/i, '');
     const dailySalt = new Date().toISOString().split('T')[0];
-    const ipAddress = rawIp ? createHash('sha256').update(rawIp + dailySalt).digest('hex').slice(0, 16) : '';
+    const hashedIp = rawIp ? createHash('sha256').update(rawIp + dailySalt).digest('hex').slice(0, 16) : '';
+    const ipAddress = rawIp || hashedIp || '127.0.0.1';
 
     const { deviceType, browser, os } = parseUserAgent(userAgent);
     const validState = ['active', 'idle', 'focus', 'background'].includes(state) ? state : 'active';

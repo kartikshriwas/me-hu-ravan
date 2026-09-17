@@ -32,13 +32,33 @@ import {
   Link2,
   Download,
   Lock,
-  VideoOff
+  VideoOff,
+  Clock
 } from 'lucide-react';
 
 interface CourseDetailClientProps {
   course: CourseDetail;
   availableTests: AssessmentMeta[];
   isUnlocked?: boolean;
+}
+
+function formatCourseDuration(seconds?: number): string | null {
+  if (!seconds || seconds <= 0) return null;
+  const h = Math.floor(seconds / 3600);
+  const m = Math.floor((seconds % 3600) / 60);
+  if (h > 0) return m > 0 ? `${h}h ${m}m` : `${h}h`;
+  return `${m} min`;
+}
+
+function formatUnitDuration(seconds?: number): string | null {
+  if (!seconds || seconds <= 0) return null;
+  const h = Math.floor(seconds / 3600);
+  const m = Math.floor((seconds % 3600) / 60);
+  const s = Math.floor(seconds % 60);
+  if (h > 0) {
+    return `${h}:${m < 10 ? '0' : ''}${m}:${s < 10 ? '0' : ''}${s}`;
+  }
+  return `${m < 10 ? '0' : ''}${m}:${s < 10 ? '0' : ''}${s}`;
 }
 
 /**
@@ -378,7 +398,15 @@ export function CourseDetailClient({ course, availableTests, isUnlocked = true }
       <div className="glass-panel rounded-3xl p-6 sm:p-10 border border-slate-800 space-y-6 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-80 h-80 bg-purple-600/10 rounded-full blur-3xl pointer-events-none" />
 
-        <h1 className="text-3xl sm:text-4xl font-black text-white">{course.title}</h1>
+        <div className="flex items-center gap-3 flex-wrap">
+          <h1 className="text-3xl sm:text-4xl font-black text-white">{course.title}</h1>
+          {course.isOngoing && (
+            <span className="inline-flex items-center gap-1.5 text-xs font-extrabold uppercase px-3 py-1 rounded-lg bg-cyan-500/20 text-cyan-300 border border-cyan-500/40 shadow-sm shadow-cyan-500/10">
+              <span className="w-2 h-2 rounded-full bg-cyan-400 animate-ping" />
+              Ongoing Course
+            </span>
+          )}
+        </div>
 
         {course.keywords && (
           <p className="text-sm text-slate-300 max-w-3xl leading-relaxed">
@@ -474,6 +502,13 @@ export function CourseDetailClient({ course, availableTests, isUnlocked = true }
               <strong className="text-slate-200">{contentCounts.other}</strong> Other
             </div>
           )}
+
+          {formatCourseDuration(course.totalDurationSeconds) && (
+            <div className="flex items-center gap-2">
+              <Clock className="w-4 h-4 text-violet-400" />
+              <strong className="text-slate-200">{formatCourseDuration(course.totalDurationSeconds)}</strong> Total
+            </div>
+          )}
         </div>
       </div>
 
@@ -487,7 +522,7 @@ export function CourseDetailClient({ course, availableTests, isUnlocked = true }
         <div className="space-y-4">
           {course.sections.map((section, sIdx) => (
             <div key={section.id} className="glass-card rounded-2xl border border-slate-800 p-6 space-y-4">
-              <div className="flex items-center justify-between">
+              <div className="flex items-center justify-between flex-wrap gap-2">
                 <div>
                   <span className="text-xs font-bold text-purple-400 uppercase tracking-wider">
                     Section {sIdx + 1}
@@ -495,9 +530,24 @@ export function CourseDetailClient({ course, availableTests, isUnlocked = true }
                   <h3 className="text-lg font-bold text-white mt-0.5">{section.title}</h3>
                 </div>
 
-                <span className="text-xs text-slate-400 font-medium">
-                  {section.units.length} Units
-                </span>
+                {(() => {
+                  const sectionSecs = section.units.reduce((acc, u) => acc + (u.duration || 0), 0);
+                  const formattedSecDuration = formatCourseDuration(sectionSecs);
+                  return (
+                    <div className="flex items-center gap-3 text-xs text-slate-400 font-medium">
+                      <span>{section.units.length} Units</span>
+                      {formattedSecDuration && (
+                        <>
+                          <span className="text-slate-600">•</span>
+                          <span className="flex items-center gap-1 text-slate-300">
+                            <Clock className="w-3.5 h-3.5 text-purple-400" />
+                            {formattedSecDuration}
+                          </span>
+                        </>
+                      )}
+                    </div>
+                  );
+                })()}
               </div>
 
               {/* Units List */}
@@ -559,9 +609,11 @@ export function CourseDetailClient({ course, availableTests, isUnlocked = true }
                           <p className="text-sm font-semibold text-slate-200">
                             {unit.unitTitle !== 'Untitled' ? unit.unitTitle : `${section.title} Lesson ${uIdx + 1}`}
                           </p>
-                          {/* <span className="text-[11px] text-slate-400 capitalize flex items-center gap-1.5 mt-0.5">
-                            <span>{config.typeLabel}</span>
-                          </span> */}
+                          {formatUnitDuration(unit.duration) && config.isActionableVideo && (
+                            <span className="text-[11px] text-slate-500 mt-0.5 block font-mono">
+                              {formatUnitDuration(unit.duration)}
+                            </span>
+                          )}
                         </div>
                       </div>
 

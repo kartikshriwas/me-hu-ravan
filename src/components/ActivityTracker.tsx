@@ -37,14 +37,20 @@ export function ActivityTracker() {
     return false;
   };
 
-  // 1. Initialize or restore session ID
+  // Initialize or restore session ID — always regenerate after sign-in
+  // to avoid reusing a previously terminated session
   useEffect(() => {
-    let sid = sessionStorage.getItem('preptea_session_id');
-    if (!sid) {
-      sid = `sess_${Math.random().toString(36).substring(2, 10)}_${Date.now()}`;
+    // Generate a fresh sessionId tied to this browser tab
+    // We always create a new one on mount (page load / sign-in)
+    // so terminated sessions are never reused
+    const existing = sessionStorage.getItem('preptea_session_id');
+    if (!existing) {
+      const sid = `sess_${Math.random().toString(36).substring(2, 10)}_${Date.now()}`;
       sessionStorage.setItem('preptea_session_id', sid);
+      sessionIdRef.current = sid;
+    } else {
+      sessionIdRef.current = existing;
     }
-    sessionIdRef.current = sid;
   }, []);
 
   // 2. Track route navigation event
@@ -202,8 +208,15 @@ export function ActivityTracker() {
           });
           const data = await res.json();
           if (data.terminated) {
+            // Clear the terminated sessionId and generate a fresh one
+            // so the next sign-in starts with a clean session
             sessionStorage.removeItem('preptea_session_id');
-            window.location.href = '/';
+            const newSid = `sess_${Math.random().toString(36).substring(2, 10)}_${Date.now()}`;
+            sessionStorage.setItem('preptea_session_id', newSid);
+            sessionIdRef.current = newSid;
+            // Complete NextAuth logout to revoke user session cookie
+            const { signOut } = await import('next-auth/react');
+            await signOut({ callbackUrl: '/?error=SessionTerminated' });
           }
         }
       } catch (err) {

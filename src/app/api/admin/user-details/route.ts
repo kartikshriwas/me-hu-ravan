@@ -37,6 +37,7 @@ export async function GET(request: Request) {
     const [
       userDoc,
       liveSessions,
+      recentSessions,
       activityLogs,
       attempts,
       redeemCodes,
@@ -44,7 +45,17 @@ export async function GET(request: Request) {
       preApprovedRecord,
     ] = await Promise.all([
       User.findOne({ email: emailLower }).lean(),
-      UserSession.find({ userEmail: emailLower }).sort({ lastHeartbeat: -1 }).limit(50).lean(),
+      // Currently live: non-terminated, heartbeat within last 2.5 min
+      UserSession.find({
+        userEmail: emailLower,
+        terminated: { $ne: true },
+        lastHeartbeat: { $gte: new Date(Date.now() - 150000) },
+      }).sort({ lastHeartbeat: -1 }).limit(20).lean(),
+      // Recent telemetry: all sessions within the 2-hour TTL window (for historical view)
+      UserSession.find({
+        userEmail: emailLower,
+        lastHeartbeat: { $gte: new Date(Date.now() - 7200000) }, // last 2 hours
+      }).sort({ lastHeartbeat: -1 }).limit(50).lean(),
       UserActivityLog.find({ userEmail: emailLower }).sort({ dateStr: -1 }).limit(100).lean(),
       Attempt.find({ userEmail: emailLower }).sort({ createdAt: -1 }).limit(100).lean(),
       RedeemCode.find({ 'usedBy.userEmail': emailLower }).lean(),
@@ -77,6 +88,7 @@ export async function GET(request: Request) {
         testsCompleted: 0,
       },
       sessions: liveSessions || [],
+      recentSessions: recentSessions || [],
       activityLogs: activityLogs || [],
       attempts: attempts || [],
       redeemCodes: redeemCodes || [],
@@ -95,6 +107,6 @@ export async function GET(request: Request) {
     });
   } catch (error: any) {
     console.error('Error fetching candidate 360 details:', error);
-    return NextResponse.json({ success: false, error: error?.message || 'Server error' }, { status: 500 });
+    return NextResponse.json({ success: false, error: 'Failed to fetch user details' }, { status: 500 });
   }
 }

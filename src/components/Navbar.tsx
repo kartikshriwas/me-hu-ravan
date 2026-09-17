@@ -16,7 +16,7 @@ export function Navbar() {
   const [showMenu, setShowMenu] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
 
-  const isAdmin = user?.email?.toLowerCase().trim() === 'fykartik@gmail.com' || user?.role === 'superadmin' || user?.role === 'admin';
+  const isAdmin = user?.role === 'superadmin' || user?.role === 'admin';
   const courseBatches = (user?.allowedBatches || []).filter(isCourseBatch);
   const hasCourseAccess = isAdmin || !!user?.hasCourseAccess || courseBatches.length > 0 || user?.adminPermissions?.includes('access_courses') || user?.adminPermissions?.includes('*');
 

@@ -53,12 +53,39 @@ export function getAllCourses(): CourseMeta[] {
       const rawSections = course.sections || {};
       const sectionsCount = Object.keys(rawSections).length;
 
+      const unitsMap = {
+        ...(course.units || {}),
+        ...(course.videos || {}),
+        ...(course.assessments || {}),
+        ...(course.objects || {}),
+        ...(course.ebooks || {})
+      };
+
       let unitsCount = 0;
+      let totalDurationSeconds = 0;
+      let populatedUnitsCount = 0;
+
       Object.values(rawSections).forEach((sec: any) => {
         if (Array.isArray(sec.learningPath)) {
           unitsCount += sec.learningPath.length;
+          sec.learningPath.forEach((lpItem: any) => {
+            const unitMeta = unitsMap[lpItem.id] || {};
+            const hasCompletionTime = typeof lpItem.completionTime === 'number';
+            const hasUnitContent = unitMeta.hasData || !!unitMeta.sourceid || !!unitMeta.vimeoid || !!unitMeta.fileUrl || (typeof unitMeta.duration === 'number' && unitMeta.duration > 0);
+
+            if (hasCompletionTime || hasUnitContent) {
+              populatedUnitsCount++;
+            }
+
+            if (typeof unitMeta.duration === 'number' && unitMeta.duration > 0) {
+              totalDurationSeconds += unitMeta.duration;
+            }
+          });
         }
       });
+
+      // Algorithmic check: Course is ongoing if curriculum contains items, but populated playable units are under 95%
+      const isOngoing = unitsCount > 0 && (populatedUnitsCount / unitsCount) < 0.95;
 
       results.push({
         title: course.title || path.basename(file, '.json'),
@@ -70,7 +97,9 @@ export function getAllCourses(): CourseMeta[] {
         price: course.price || 0,
         courseImage: course.courseImage || null,
         sectionsCount,
-        unitsCount
+        unitsCount,
+        totalDurationSeconds: totalDurationSeconds > 0 ? totalDurationSeconds : undefined,
+        isOngoing
       });
     } catch (err) {
       console.error(`Failed to summarize course file ${file}:`, err);
@@ -136,7 +165,8 @@ export function getCourseBySlug(slug: string): CourseDetail | null {
               hasData: unitMeta.hasData || false,
               sourceid: unitMeta.sourceid || undefined,
               vimeoid: unitMeta.vimeoid || undefined,
-              fileUrl: unitMeta.fileUrl || lpItem.fileUrl || undefined
+              fileUrl: unitMeta.fileUrl || lpItem.fileUrl || undefined,
+              duration: typeof unitMeta.duration === 'number' ? unitMeta.duration : undefined
             };
           });
 
@@ -149,6 +179,17 @@ export function getCourseBySlug(slug: string): CourseDetail | null {
           });
         });
 
+        const totalUnits = parsedSections.reduce((sum, s) => sum + s.units.length, 0);
+        const populatedUnits = parsedSections.reduce(
+          (sum, s) =>
+            sum +
+            s.units.filter(
+              (u) => u.hasData || !!u.sourceid || !!u.vimeoid || !!u.fileUrl || (typeof u.duration === 'number' && u.duration > 0)
+            ).length,
+          0
+        );
+        const isOngoing = totalUnits > 0 && populatedUnits / totalUnits < 0.95;
+
         return {
           title: course.title || path.basename(file, '.json'),
           slug: fileSlug,
@@ -159,7 +200,13 @@ export function getCourseBySlug(slug: string): CourseDetail | null {
           price: course.price || 0,
           courseImage: course.courseImage || null,
           sectionsCount: parsedSections.length,
-          unitsCount: parsedSections.reduce((sum, s) => sum + s.units.length, 0),
+          unitsCount: totalUnits,
+          totalDurationSeconds: (() => {
+            const total = parsedSections.reduce((sum, s) =>
+              sum + s.units.reduce((uSum, u) => uSum + (u.duration || 0), 0), 0);
+            return total > 0 ? total : undefined;
+          })(),
+          isOngoing,
           sections: parsedSections
         };
       }

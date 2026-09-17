@@ -254,6 +254,7 @@ export async function GET(request: Request) {
         networkType: s.networkType || '4g',
         recentEvents: s.recentEvents || [],
         userAgent: s.userAgent,
+        ipAddress: s.ipAddress || '',
       };
     });
 
@@ -291,27 +292,8 @@ export async function GET(request: Request) {
       topUsersByTimeframe,
     });
   } catch (error) {
-    return NextResponse.json({
-      success: true,
-      sessions: [],
-      stats: {
-        onlineNowCount: 0,
-        activeNowCount: 0,
-        idleNowCount: 0,
-        backgroundCount: 0,
-        desktopCount: 0,
-        mobileCount: 0,
-        tabletCount: 0,
-        totalActiveSecondsToday: 0,
-        totalIdleSecondsToday: 0,
-        totalFocusSecondsToday: 0,
-        candidateCountToday: 0,
-        avgActiveSecondsPerUser: 0,
-        avgFocusSecondsPerUser: 0,
-      },
-      topPagesRightNow: [],
-      topActiveUsersToday: [],
-    });
+    console.error('Error fetching active sessions:', error);
+    return NextResponse.json({ success: false, error: 'Failed to fetch active sessions' }, { status: 500 });
   }
 }
 
@@ -325,11 +307,23 @@ export async function POST(request: Request) {
     }
 
     const body = await request.json();
-    const { action, targetSessionId } = body;
+    const { action, targetSessionId, targetUserEmail } = body;
 
     if (action === 'terminate' && targetSessionId) {
       await UserSession.updateOne({ sessionId: targetSessionId }, { $set: { terminated: true } });
       return NextResponse.json({ success: true, message: `Session ${targetSessionId} terminated successfully` });
+    }
+
+    if (action === 'terminate_all' && targetUserEmail) {
+      const result = await UserSession.updateMany(
+        { userEmail: targetUserEmail.toLowerCase().trim() },
+        { $set: { terminated: true } }
+      );
+      return NextResponse.json({
+        success: true,
+        message: `Terminated all ${result.modifiedCount} active sessions for ${targetUserEmail}`,
+        count: result.modifiedCount,
+      });
     }
 
     return NextResponse.json({ success: false, error: 'Invalid action' }, { status: 400 });

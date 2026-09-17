@@ -41,9 +41,13 @@ export const BATCH_COURSE_MAPPINGS: Record<string, string[]> = {
     'sigma-11',
   ],
   'prime': [
+    'prime-3',
     'prime-ai',
     'ai-projects-module',
     'prime-2',
+    'aptitude-hinglish',
+    'delta-library',
+    'plus-library',
   ],
   'delta': [
     'delta-5',
@@ -54,10 +58,10 @@ export const BATCH_COURSE_MAPPINGS: Record<string, string[]> = {
     'delta-library',
   ],
   'alpha': [
-    'alpha-plus-5-cpp',
-    'alpha-plus-6-cpp',
     'alpha-plus-7-cpp',
     'alpha-plus-7-java',
+    'alpha-plus-5-cpp',
+    'alpha-plus-6-cpp',
     'alpha-plus8-cpp',
     'alpha-plus8-java',
     'plus-library',
@@ -71,9 +75,9 @@ export const AVAILABLE_BATCH_OPTIONS = [
   { id: 'Sigma 6.0', label: 'Sigma 6.0', description: 'Aptitude, Delta/Plus Library, Sigma 6.0 & Live Recordings' },
   { id: 'Sigma 8.0', label: 'Sigma 8.0', description: 'Aptitude, Delta/Plus Library, Sigma 8.0 C++/Java DSA & Recordings' },
   { id: 'Sigma 11.0', label: 'Sigma 11.0', description: 'Sigma 11 DSA C++, Dev & Sigma Prime 2.0' },
-  { id: 'Prime', label: 'Prime', description: 'Prime AI/ML & AI Projects Module' },
-  { id: 'Delta', label: 'Delta', description: 'Delta 5.0 to 9.0 & DevHub Library' },
-  { id: 'Alpha', label: 'Alpha', description: 'Alpha Plus 5.0 to 8.0 C++/Java & Plus Library' },
+  { id: 'Prime', label: 'Prime', description: 'Prime AI/ML, AI Projects, Aptitude Hinglish, Delta & Plus Libraries' },
+  { id: 'Delta', label: 'Delta', description: 'Delta 5.0 (recommended) to 9.0 & DevHub Library' },
+  { id: 'Alpha', label: 'Alpha', description: 'Alpha 7 Java & C++ for DSA, Alpha 5.0 to 8.0 & Plus Library' },
   { id: 'Quiz Only Prime', label: 'Quiz Only Prime', description: 'Practice Tests & Leaderboard Only (No Video Courses)' },
 ];
 
