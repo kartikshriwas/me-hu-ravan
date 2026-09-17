@@ -362,6 +362,27 @@ export default function AdminDashboardPage() {
     }
   };
 
+  const handleTerminateSystemWideSessions = async () => {
+    if (!confirm('⚠️ SYSTEM WARNING: Are you sure you want to TERMINATE ALL active sessions across ALL user accounts in the entire system? Everyone will be forced to log in again.')) return;
+    try {
+      const res = await fetch('/api/admin/active-sessions', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ action: 'terminate_entire_system' }),
+      });
+      const json = await res.json();
+      if (json.success) {
+        setFeedbackMsg(`Successfully terminated all ${json.count || 0} active sessions across the entire system.`);
+        fetchAllSessions();
+        setActiveSessions([]);
+      } else {
+        setErrorMsg(json.error || 'Failed to terminate system sessions');
+      }
+    } catch (err) {
+      setErrorMsg('Failed to terminate system sessions');
+    }
+  };
+
   // Auto-refresh active sessions every 8 seconds when activeTab === 'active-sessions'
   useEffect(() => {
     if (activeTab !== 'active-sessions' || !authUser || !isAdmin) return;
@@ -1772,15 +1793,29 @@ export default function AdminDashboardPage() {
                 ))}
               </div>
 
-              {/* Refresh Button */}
-              <button
-                onClick={() => fetchAllSessions(allSessionsQuery, allSessionsTabState)}
-                disabled={allSessionsLoading}
-                className="px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-bold border border-slate-700 transition-all flex items-center justify-center gap-2"
-              >
-                <RefreshCw className={`w-3.5 h-3.5 ${allSessionsLoading ? 'animate-spin text-indigo-400' : ''}`} />
-                <span>Refresh</span>
-              </button>
+              <div className="flex items-center gap-2">
+                {/* Refresh Button */}
+                <button
+                  onClick={() => fetchAllSessions(allSessionsQuery, allSessionsTabState)}
+                  disabled={allSessionsLoading}
+                  className="px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-bold border border-slate-700 transition-all flex items-center justify-center gap-2"
+                >
+                  <RefreshCw className={`w-3.5 h-3.5 ${allSessionsLoading ? 'animate-spin text-indigo-400' : ''}`} />
+                  <span>Refresh</span>
+                </button>
+
+                {/* Terminate All System Sessions Button */}
+                {isSuperadmin && (
+                  <button
+                    onClick={handleTerminateSystemWideSessions}
+                    className="px-4 py-2.5 rounded-xl bg-rose-600/20 hover:bg-rose-600/40 text-rose-300 text-xs font-bold border border-rose-500/30 transition-all flex items-center justify-center gap-2 shadow-lg shadow-rose-950/40"
+                    title="Terminate all active user sessions across the entire platform at once"
+                  >
+                    <Trash2 className="w-3.5 h-3.5 text-rose-400" />
+                    <span>Terminate ALL Sessions (Global)</span>
+                  </button>
+                )}
+              </div>
             </div>
           </div>
 

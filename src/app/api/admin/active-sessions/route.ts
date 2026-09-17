@@ -326,6 +326,18 @@ export async function POST(request: Request) {
       });
     }
 
+    if (action === 'terminate_entire_system') {
+      const result = await UserSession.updateMany(
+        { terminated: { $ne: true } },
+        { $set: { terminated: true } }
+      );
+      return NextResponse.json({
+        success: true,
+        message: `Terminated all ${result.modifiedCount} active sessions across all users`,
+        count: result.modifiedCount,
+      });
+    }
+
     return NextResponse.json({ success: false, error: 'Invalid action' }, { status: 400 });
   } catch (error) {
     return NextResponse.json({ success: false, error: 'Action failed' }, { status: 500 });
