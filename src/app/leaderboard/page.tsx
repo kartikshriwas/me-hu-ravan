@@ -49,7 +49,7 @@ export default function LeaderboardPage() {
   const topThree = leaderboard.slice(0, 3);
 
   return (
-    <div className="space-y-10">
+    <div className="w-full px-4 sm:px-8 lg:px-12 py-6 space-y-10">
       
       {/* Header Banner */}
       <div className="glass-panel rounded-3xl p-6 sm:p-10 border border-indigo-500/30 relative overflow-hidden space-y-4">

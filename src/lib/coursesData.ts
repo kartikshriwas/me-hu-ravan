@@ -34,6 +34,62 @@ function getParsedCourseFile(fullPath: string): any {
   }
 }
 
+export function isUnitPlayableOrDownloadable(unit: Partial<CourseSectionUnit>): boolean {
+  const type = (unit.type || '').toLowerCase();
+  const icon = (unit.icon || '').toLowerCase();
+  const subtitle = (unit.subtitle || '').toLowerCase();
+  const fileUrl = (unit.fileUrl || '').toLowerCase();
+
+  // 1. Explicitly filter out PDFs / documents / notes
+  if (
+    type === 'pdf' ||
+    type === 'document' ||
+    type === 'pdfdocument' ||
+    type === 'pbebook' ||
+    icon === 'pdf' ||
+    subtitle.includes('pdf') ||
+    fileUrl.endsWith('.pdf') ||
+    fileUrl.includes('/pdf/')
+  ) {
+    return false;
+  }
+
+  // 2. Check if unit has a downloadable fileUrl (code attachment, zip, asset)
+  if (unit.fileUrl && unit.fileUrl.trim() !== '') {
+    return true;
+  }
+
+  // 3. Check if unit has a playable video stream (Wistia sourceid, Vimeo vimeoid, YouTube embed)
+  const isYouTube =
+    type === 'youtube' ||
+    icon === 'yt' ||
+    subtitle.includes('youtube') ||
+    !!(unit.data && unit.data.embed);
+
+  const hasVideoSource =
+    !!(unit.sourceid && unit.sourceid.trim() !== '') ||
+    !!(unit.vimeoid && unit.vimeoid.trim() !== '') ||
+    isYouTube;
+
+  if (hasVideoSource) {
+    return true;
+  }
+
+  // 4. Check if unit is an exam / assessment / quiz
+  if (
+    type === 'quiz' ||
+    type === 'assessment' ||
+    type === 'ivideo' ||
+    type === 'assessmentv2' ||
+    (typeof unit.questionsCount === 'number' && unit.questionsCount > 0)
+  ) {
+    return true;
+  }
+
+  // Otherwise, unit cannot be played or downloaded by the user -> filter out
+  return false;
+}
+
 export function getAllCourses(): CourseMeta[] {
   const dir = getCoursesDirectory();
   if (!fs.existsSync(dir)) return [];
@@ -51,7 +107,7 @@ export function getAllCourses(): CourseMeta[] {
       const slug = course.identifiers?.slug || course.titleId || path.basename(file, '.json').toLowerCase();
 
       const rawSections = course.sections || {};
-      const sectionsCount = Object.keys(rawSections).length;
+      let sectionsCount = 0;
 
       const unitsMap = {
         ...(course.units || {}),
@@ -67,20 +123,34 @@ export function getAllCourses(): CourseMeta[] {
 
       Object.values(rawSections).forEach((sec: any) => {
         if (Array.isArray(sec.learningPath)) {
-          unitsCount += sec.learningPath.length;
+          let sectionHasValidUnits = false;
           sec.learningPath.forEach((lpItem: any) => {
             const unitMeta = unitsMap[lpItem.id] || {};
-            const hasCompletionTime = typeof lpItem.completionTime === 'number';
-            const hasUnitContent = unitMeta.hasData || !!unitMeta.sourceid || !!unitMeta.vimeoid || !!unitMeta.fileUrl || (typeof unitMeta.duration === 'number' && unitMeta.duration > 0);
+            const unitObj: Partial<CourseSectionUnit> = {
+              id: lpItem.id,
+              type: lpItem.type || unitMeta.objectType || 'lesson',
+              icon: lpItem.icon || 'video',
+              subtitle: lpItem.subtitle || '',
+              unitTitle: unitMeta.title || lpItem.unitTitle || 'Lesson Unit',
+              sourceid: unitMeta.sourceid || undefined,
+              vimeoid: unitMeta.vimeoid || undefined,
+              fileUrl: unitMeta.fileUrl || lpItem.fileUrl || undefined,
+              data: unitMeta.data || lpItem.data || undefined,
+              duration: typeof unitMeta.duration === 'number' ? unitMeta.duration : undefined
+            };
 
-            if (hasCompletionTime || hasUnitContent) {
+            if (isUnitPlayableOrDownloadable(unitObj)) {
+              unitsCount++;
               populatedUnitsCount++;
-            }
-
-            if (typeof unitMeta.duration === 'number' && unitMeta.duration > 0) {
-              totalDurationSeconds += unitMeta.duration;
+              sectionHasValidUnits = true;
+              if (typeof unitMeta.duration === 'number' && unitMeta.duration > 0) {
+                totalDurationSeconds += unitMeta.duration;
+              }
             }
           });
+          if (sectionHasValidUnits) {
+            sectionsCount++;
+          }
         }
       });
 
@@ -149,34 +219,38 @@ export function getCourseBySlug(slug: string): CourseDetail | null {
 
         Object.entries(rawSections).forEach(([secId, secData]: [string, any]) => {
           const learningPath = Array.isArray(secData.learningPath) ? secData.learningPath : [];
-          const units: CourseSectionUnit[] = learningPath.map((lpItem: any) => {
-            const unitMeta = unitsMap[lpItem.id] || {};
-            return {
-              id: lpItem.id,
-              type: lpItem.type || unitMeta.objectType || 'lesson',
-              icon: lpItem.icon || 'video',
-              subtitle: lpItem.subtitle || '',
-              unitTitle: unitMeta.title || lpItem.unitTitle || 'Lesson Unit',
-              title: unitMeta.title || lpItem.unitTitle || 'Lesson Unit',
-              description: unitMeta.description || '',
-              access: unitMeta.access || lpItem.access || 'public',
-              data: unitMeta.data || lpItem.data || undefined,
-              questionsCount: unitMeta.questionsCount || undefined,
-              hasData: unitMeta.hasData || false,
-              sourceid: unitMeta.sourceid || undefined,
-              vimeoid: unitMeta.vimeoid || undefined,
-              fileUrl: unitMeta.fileUrl || lpItem.fileUrl || undefined,
-              duration: typeof unitMeta.duration === 'number' ? unitMeta.duration : undefined
-            };
-          });
+          const units: CourseSectionUnit[] = learningPath
+            .map((lpItem: any) => {
+              const unitMeta = unitsMap[lpItem.id] || {};
+              return {
+                id: lpItem.id,
+                type: lpItem.type || unitMeta.objectType || 'lesson',
+                icon: lpItem.icon || 'video',
+                subtitle: lpItem.subtitle || '',
+                unitTitle: unitMeta.title || lpItem.unitTitle || 'Lesson Unit',
+                title: unitMeta.title || lpItem.unitTitle || 'Lesson Unit',
+                description: unitMeta.description || '',
+                access: unitMeta.access || lpItem.access || 'public',
+                data: unitMeta.data || lpItem.data || undefined,
+                questionsCount: unitMeta.questionsCount || undefined,
+                hasData: unitMeta.hasData || false,
+                sourceid: unitMeta.sourceid || undefined,
+                vimeoid: unitMeta.vimeoid || undefined,
+                fileUrl: unitMeta.fileUrl || lpItem.fileUrl || undefined,
+                duration: typeof unitMeta.duration === 'number' ? unitMeta.duration : undefined
+              };
+            })
+            .filter(isUnitPlayableOrDownloadable);
 
-          parsedSections.push({
-            id: secId,
-            title: secData.title || 'Course Section',
-            description: secData.description || '',
-            access: secData.access || 'public',
-            units
-          });
+          if (units.length > 0) {
+            parsedSections.push({
+              id: secId,
+              title: secData.title || 'Course Section',
+              description: secData.description || '',
+              access: secData.access || 'public',
+              units
+            });
+          }
         });
 
         const totalUnits = parsedSections.reduce((sum, s) => sum + s.units.length, 0);

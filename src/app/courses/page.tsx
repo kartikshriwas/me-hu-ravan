@@ -26,7 +26,7 @@ export default async function CoursesCatalogPage() {
   );
 
   return (
-    <div className="max-w-7xl w-full mx-auto px-3 sm:px-6 lg:px-8 py-4 sm:py-8 space-y-8">
+    <div className="w-full px-4 sm:px-8 lg:px-12 py-6 space-y-8">
       <CoursesCatalogGrid courses={courses} />
     </div>
   );

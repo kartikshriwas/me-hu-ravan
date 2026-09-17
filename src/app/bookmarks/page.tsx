@@ -29,7 +29,7 @@ export default function BookmarksPage() {
   };
 
   return (
-    <div className="max-w-7xl w-full mx-auto px-3 sm:px-6 lg:px-8 py-4 sm:py-8 space-y-8">
+    <div className="w-full px-4 sm:px-8 lg:px-12 py-6 space-y-8">
       
       {/* Header */}
       <div className="glass-panel rounded-3xl p-6 sm:p-8 border border-slate-800 flex items-center justify-between">

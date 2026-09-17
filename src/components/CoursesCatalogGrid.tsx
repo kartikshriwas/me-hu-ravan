@@ -295,7 +295,7 @@ export function CoursesCatalogGrid({ courses }: { courses: CourseItem[] }) {
             </button>
           </div>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-4 gap-6">
             {filteredSectionXCourses.map((course) => {
             const lastVideo = lastVideos[course.slug];
 
@@ -381,7 +381,7 @@ export function CoursesCatalogGrid({ courses }: { courses: CourseItem[] }) {
           </div>
         ) : (
           <div className="space-y-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-4 gap-6">
               {filteredSectionYCourses.map((course) => {
               const lastVideo = lastVideos[course.slug];
 

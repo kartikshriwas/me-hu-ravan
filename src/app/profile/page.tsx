@@ -183,7 +183,7 @@ export default function ProfilePage() {
   const isAdmin = u.role === 'superadmin' || u.role === 'admin';
 
   return (
-    <div className="space-y-8">
+    <div className="w-full px-4 sm:px-8 lg:px-12 py-6 space-y-8">
       
       {/* Profile Header Banner */}
       <div className="glass-panel rounded-3xl p-6 sm:p-8 border border-indigo-500/30 relative overflow-hidden space-y-6">

@@ -78,7 +78,7 @@ export default function HistoryPage() {
   };
 
   return (
-    <div className="space-y-8">
+    <div className="w-full px-4 sm:px-8 lg:px-12 py-6 space-y-8">
       
       {/* Header */}
       <div className="glass-panel rounded-3xl p-6 sm:p-8 border border-slate-800 flex items-center justify-between">
@@ -134,7 +134,7 @@ export default function HistoryPage() {
           </Link>
         </div>
       ) : (
-        <div className="space-y-4">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
           {history.map((item, idx) => (
             <div
               key={`${item.quizId}-${item.timestamp}-${idx}`}
