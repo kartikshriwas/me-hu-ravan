@@ -77,46 +77,24 @@ export function VideoViewContainer({
   }, []);
 
   return (
-    <div className={`w-full flex flex-col min-h-0 ${isTheaterMode ? 'min-h-screen overflow-y-auto pb-12' : 'h-[calc(100dvh-3.5rem)] sm:h-[calc(100dvh-4rem)] lg:h-[calc(100vh-5rem)] overflow-hidden'}`}>
-      {/* Desktop Navigation Header */}
-      {/* <div className="hidden lg:flex items-center justify-between px-4 sm:px-6 py-2 shrink-0 bg-slate-950/40 border-b border-slate-800/60">
-        <Link
-          href={`/courses/${slug}`}
-          className="inline-flex items-center gap-2 text-xs font-semibold text-slate-400 hover:text-white transition-colors py-1 px-3 rounded-xl bg-slate-900/80 border border-slate-800"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          <span>Back to {course.title}</span>
-        </Link>
-      </div> */}
-
+    <div className={`w-full flex flex-col min-h-0 h-[calc(100dvh-3.5rem)] sm:h-[calc(100dvh-4rem)] lg:h-[calc(100vh-5rem)] overflow-hidden ${isTheaterMode ? 'bg-black' : 'bg-transparent'}`}>
       {/* Main Layout Container */}
       <div
-        className={`flex flex-col flex-1 min-h-0 ${
+        className={`flex flex-col flex-1 min-h-0 lg:grid lg:grid-cols-12 transition-all duration-300 ${
           isTheaterMode
-            ? 'w-full space-y-6 pb-12'
-            : 'lg:grid lg:grid-cols-12 lg:gap-4 xl:gap-6 lg:border-t lg:border-slate-800/60 px-2 sm:px-4 lg:px-6 py-2 sm:py-3'
+            ? 'lg:gap-0 px-0 py-0 bg-black'
+            : 'lg:gap-4 xl:gap-6 lg:border-t lg:border-slate-800/60 px-2 sm:px-4 lg:px-6 py-2 sm:py-3'
         }`}
       >
-        {/* Video Player Section (75% screen width on desktop) */}
+        {/* Video Player Section */}
         <div
-          className={`${
+          className={`flex flex-col shrink-0 min-w-0 ${
             isTheaterMode
-              ? 'w-full bg-slate-950 border-b border-slate-800/80 shadow-2xl'
-              : 'lg:col-span-8 xl:col-span-9 flex flex-col shrink-0 min-w-0'
+              ? 'lg:col-span-9 xl:col-span-9 2xl:col-span-9 bg-black border-r border-slate-800/40 shadow-2xl'
+              : 'lg:col-span-8 xl:col-span-9'
           }`}
         >
-          {/* Mobile Back Button */}
-          {/* <div className="lg:hidden flex items-center justify-between px-3 py-2 shrink-0 border-b border-slate-800/40">
-            <Link
-              href={`/courses/${slug}`}
-              className="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-400 hover:text-white transition-colors"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              <span>{course.title}</span>
-            </Link>
-          </div> */}
-
-          <div className={`${isTheaterMode ? 'max-w-7xl mx-auto w-full' : 'w-full'}`}>
+          <div className="w-full h-full flex flex-col">
             <CustomVideoPlayer
               videoId={videoId}
               courseSlug={slug}
@@ -132,12 +110,12 @@ export function VideoViewContainer({
           </div>
         </div>
 
-        {/* Playlist Sidebar (25% screen width on desktop) */}
+        {/* Playlist Sidebar */}
         <div
-          className={`${
+          className={`flex-1 min-h-0 overflow-hidden min-w-0 ${
             isTheaterMode
-              ? 'w-full max-w-5xl mx-auto px-4 sm:px-6'
-              : 'flex-1 min-h-0 overflow-hidden lg:col-span-4 xl:col-span-3 min-w-0'
+              ? 'lg:col-span-3 xl:col-span-3 2xl:col-span-3 bg-slate-950/80'
+              : 'lg:col-span-4 xl:col-span-3'
           }`}
         >
           <VideoPlaylistSidebar
