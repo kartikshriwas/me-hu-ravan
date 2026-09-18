@@ -76,7 +76,7 @@ export const AVAILABLE_BATCH_OPTIONS = [
   { id: 'Sigma 8.0', label: 'Sigma 8.0', description: 'Aptitude, Delta/Plus Library, Sigma 8.0 C++/Java DSA & Recordings' },
   { id: 'Sigma 11.0', label: 'Sigma 11.0', description: 'Sigma 11 DSA C++, Dev & Sigma Prime 2.0' },
   { id: 'Prime', label: 'Prime', description: 'Prime AI/ML, AI Projects, Aptitude Hinglish, Delta & Plus Libraries' },
-  { id: 'Delta', label: 'Delta', description: 'Delta 5.0 (recommended) to 9.0 & DevHub Library' },
+  { id: 'Delta', label: 'Delta', description: 'Delta 5.0 to 9.0 & DevHub Library' },
   { id: 'Alpha', label: 'Alpha', description: 'Alpha 7 Java & C++ for DSA, Alpha 5.0 to 8.0 & Plus Library' },
   { id: 'Quiz Only Prime', label: 'Quiz Only Prime', description: 'Practice Tests & Leaderboard Only (No Video Courses)' },
 ];

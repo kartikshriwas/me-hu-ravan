@@ -400,14 +400,14 @@ export function CoursesCatalogGrid({ courses }: { courses: CourseItem[] }) {
                             {course.isOngoing && (
                               <span className="w-2.5 h-2.5 rounded-full bg-cyan-400 animate-pulse shrink-0" title="Ongoing Course" />
                             )}
-                          </h2>
                           {RECOMMENDED_SLUGS.includes(course.slug) && (
                             <div className="pt-0.5">
-                              <span className="inline-flex items-center gap-1 text-[10px] font-extrabold uppercase px-2 py-0.5 rounded-md bg-purple-500/20 text-purple-300 border border-purple-500/30">
-                                <Sparkles className="w-3 h-3 text-purple-400" /> Recommended
-                              </span>
+                              {/* <span className="inline-flex items-center gap-1 text-[10px] font-extrabold uppercase px-2 py-0.5 rounded-md bg-purple-500/20 text-purple-300 border border-purple-500/30"> */}
+                                <Sparkles className="w-3 h-3 text-purple-400" /> 
+                              {/* </span> */}
                             </div>
                           )}
+                          </h2>
                         </div>
                       </div>
 

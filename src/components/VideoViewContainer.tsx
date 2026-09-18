@@ -77,7 +77,7 @@ export function VideoViewContainer({
   }, []);
 
   return (
-    <div className={`w-full flex flex-col flex-1 min-h-0 ${isTheaterMode ? 'min-h-screen overflow-y-auto pb-12' : 'h-[calc(100dvh-3.5rem)] sm:h-[calc(100dvh-4rem)] lg:h-[calc(100vh-5rem)] overflow-hidden'}`}>
+    <div className={`w-full flex flex-col min-h-0 ${isTheaterMode ? 'min-h-screen overflow-y-auto pb-12' : 'h-[calc(100dvh-3.5rem)] sm:h-[calc(100dvh-4rem)] lg:h-[calc(100vh-5rem)] overflow-hidden'}`}>
       {/* Desktop Navigation Header */}
       {/* <div className="hidden lg:flex items-center justify-between px-4 sm:px-6 py-2 shrink-0 bg-slate-950/40 border-b border-slate-800/60">
         <Link
