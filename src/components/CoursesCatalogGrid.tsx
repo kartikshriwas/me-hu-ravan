@@ -201,20 +201,31 @@ export function CoursesCatalogGrid({ courses }: { courses: CourseItem[] }) {
     });
   };
 
-  // Search Filtering
+  // Search Filtering & Sorting
   const filteredSectionXCourses = useMemo(() => {
-    if (!searchQuery) return sectionXCourses;
-    return sectionXCourses.filter((c) =>
-      matchCourseSmart(c.displayTitle, c.displayDescription, c.slug, c.keywords || '', searchQuery)
-    );
+    let list = sectionXCourses;
+    if (searchQuery) {
+      list = list.filter((c) =>
+        matchCourseSmart(c.displayTitle, c.displayDescription, c.slug, c.keywords || '', searchQuery)
+      );
+    }
+    return [...list].sort((a, b) => {
+      if (a.isUnlocked === b.isUnlocked) return 0;
+      return a.isUnlocked ? -1 : 1;
+    });
   }, [sectionXCourses, searchQuery]);
 
   const filteredSectionYCourses = useMemo(() => {
     let list = sectionYCourses;
-    if (!searchQuery) return list;
-    return list.filter((c) =>
-      matchCourseSmart(c.title, c.description || '', c.slug, c.keywords || '', searchQuery)
-    );
+    if (searchQuery) {
+      list = list.filter((c) =>
+        matchCourseSmart(c.title, c.description || '', c.slug, c.keywords || '', searchQuery)
+      );
+    }
+    return [...list].sort((a, b) => {
+      if (a.isUnlocked === b.isUnlocked) return 0;
+      return a.isUnlocked ? -1 : 1;
+    });
   }, [sectionYCourses, searchQuery]);
 
   return (
@@ -303,13 +314,13 @@ export function CoursesCatalogGrid({ courses }: { courses: CourseItem[] }) {
               <Link key={course.slug} href={`/courses/${course.slug}`}>
                 <div
                   className={`glass-card rounded-2xl p-6 h-full flex flex-col justify-between group transition-all relative overflow-hidden ${
-                    course.isUnlocked ? 'border-slate-800 hover:border-purple-500/50' : 'border-slate-800/80 grayscale opacity-60 hover:grayscale-0 hover:opacity-100'
+                    course.isUnlocked ? 'border-slate-800 hover:border-purple-500/50' : 'border-slate-800/80 grayscale opacity-60'
                   }`}
                 >
                   <div className="space-y-4">
                     <div className="flex items-start justify-between gap-2 flex-wrap">
                       <div className="space-y-1 min-w-0 flex-1">
-                        <h2 className="text-xl font-bold text-white group-hover:text-purple-300 transition-colors inline-flex items-center gap-2">
+                        <h2 className={`text-xl font-bold text-white transition-colors inline-flex items-center gap-2 ${course.isUnlocked ? 'group-hover:text-purple-300' : ''}`}>
                           <span>{course.displayTitle}</span>
                           {course.isOngoing && (
                             <span className="w-2.5 h-2.5 rounded-full bg-cyan-400 animate-pulse shrink-0" title="Ongoing Course" />
@@ -389,13 +400,13 @@ export function CoursesCatalogGrid({ courses }: { courses: CourseItem[] }) {
                 <Link key={course.slug} href={`/courses/${course.slug}`}>
                   <div
                     className={`glass-card rounded-2xl p-6 h-full flex flex-col justify-between group transition-all relative overflow-hidden ${
-                      course.isUnlocked ? 'border-slate-800 hover:border-purple-500/50' : 'border-slate-800/80 grayscale opacity-60 hover:grayscale-0 hover:opacity-100'
+                      course.isUnlocked ? 'border-slate-800 hover:border-purple-500/50' : 'border-slate-800/80 grayscale opacity-60'
                     }`}
                   >
                     <div className="space-y-4">
                       <div className="flex items-start justify-between gap-2 flex-wrap">
                         <div className="space-y-1.5 min-w-0 flex-1">
-                          <h2 className="text-xl font-bold text-white group-hover:text-purple-300 transition-colors inline-flex items-center gap-2 flex-wrap">
+                          <h2 className={`text-xl font-bold text-white transition-colors inline-flex items-center gap-2 flex-wrap ${course.isUnlocked ? 'group-hover:text-purple-300' : ''}`}>
                             <span>{course.title}</span>
                             {course.isOngoing && (
                               <span className="w-2.5 h-2.5 rounded-full bg-cyan-400 animate-pulse shrink-0" title="Ongoing Course" />

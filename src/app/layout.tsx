@@ -70,11 +70,11 @@ export default function RootLayout({
           <main className="flex-1 w-full flex flex-col min-h-0">
             {children}
           </main>
-          <footer className="border-t border-slate-800/80 bg-slate-950/60 py-6 mt-12">
+          {/* <footer className="border-t border-slate-800/80 bg-slate-950/60 py-6 mt-12">
             <div className="w-full px-4 sm:px-6 lg:px-8 text-center text-xs text-slate-500">
               <p suppressHydrationWarning>© {new Date().getFullYear()} PrepTea.</p>
             </div>
-          </footer>
+          </footer> */}
         </AuthProvider>
         <Analytics />
         <SpeedInsights />

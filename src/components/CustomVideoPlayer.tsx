@@ -1007,7 +1007,7 @@ export function CustomVideoPlayer({
                   title="Theater Mode (T)"
                   aria-label="Theater Mode"
                 >
-                  <RectangleHorizontal className="w-4.5 h-4.5 sm:w-5 sm:h-5 text-purple-400" />
+                  <RectangleHorizontal className="w-4.5 h-4.5 sm:w-5 sm:h-5 text-400" />
                 </button>
               )}
 
