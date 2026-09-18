@@ -13,14 +13,12 @@ export async function hasCoursesAccess(sessionUser: SessionUser | null): Promise
   if (!sessionUser) return false;
 
   const email = sessionUser.email.toLowerCase().trim();
-  if (email === SUPERADMIN_EMAIL || sessionUser.role === 'superadmin' || sessionUser.role === 'admin') {
-    return true;
-  }
+  if (email === SUPERADMIN_EMAIL) return true;
 
-  let userBatches: string[] = sessionUser.allowedBatches || [];
+  let userBatches: string[] = [];
   let isSuper = false;
   let isAdmin = false;
-  let hasPerm = sessionUser.adminPermissions?.includes('access_courses') || sessionUser.adminPermissions?.includes('*');
+  let hasPerm = false;
 
   try {
     const conn = await connectToDatabase();
@@ -31,16 +29,24 @@ export async function hasCoursesAccess(sessionUser: SessionUser | null): Promise
         isAdmin = userDoc.role === 'admin';
         hasPerm = userDoc.adminPermissions?.includes('access_courses') || userDoc.adminPermissions?.includes('*') || false;
 
-        if (Array.isArray(userDoc.allowedBatches)) {
-          userBatches = Array.from(new Set([...userBatches, ...userDoc.allowedBatches]));
-        }
+        userBatches = Array.isArray(userDoc.allowedBatches) ? [...userDoc.allowedBatches] : [];
         if (userDoc.premiumPlan && isCourseBatch(userDoc.premiumPlan)) {
           userBatches.push(userDoc.premiumPlan);
         }
+      } else {
+        // Fallback for brand new sessionUser before DB sync
+        isSuper = sessionUser.role === 'superadmin';
+        isAdmin = sessionUser.role === 'admin';
+        hasPerm = sessionUser.adminPermissions?.includes('access_courses') || sessionUser.adminPermissions?.includes('*') || false;
+        userBatches = sessionUser.allowedBatches || [];
       }
     }
   } catch (error) {
     console.error('Error verifying courses access:', error);
+    isSuper = sessionUser.role === 'superadmin';
+    isAdmin = sessionUser.role === 'admin';
+    hasPerm = sessionUser.adminPermissions?.includes('access_courses') || sessionUser.adminPermissions?.includes('*') || false;
+    userBatches = sessionUser.allowedBatches || [];
   }
 
   if (isSuper || isAdmin || hasPerm) return true;
@@ -49,20 +55,13 @@ export async function hasCoursesAccess(sessionUser: SessionUser | null): Promise
   return validCourseBatches.length > 0;
 }
 
-/**
- * Checks if a specific course slug is unlocked for video playback for a user with course access.
- * Returns true if the user's batch unlocks this course.
- * Returns false if the course curriculum is viewable but video playback is locked.
- */
 export async function isCourseSlugUnlocked(sessionUser: SessionUser | null, courseSlug: string): Promise<boolean> {
   if (!sessionUser || !courseSlug) return false;
 
   const email = sessionUser.email.toLowerCase().trim();
-  if (email === SUPERADMIN_EMAIL || sessionUser.role === 'superadmin' || sessionUser.role === 'admin') {
-    return true;
-  }
+  if (email === SUPERADMIN_EMAIL) return true;
 
-  let userBatches: string[] = sessionUser.allowedBatches || [];
+  let userBatches: string[] = [];
 
   try {
     const conn = await connectToDatabase();
@@ -72,16 +71,21 @@ export async function isCourseSlugUnlocked(sessionUser: SessionUser | null, cour
         if (userDoc.role === 'superadmin' || userDoc.role === 'admin') return true;
         if (userDoc.adminPermissions?.includes('access_courses') || userDoc.adminPermissions?.includes('*')) return true;
 
-        if (Array.isArray(userDoc.allowedBatches)) {
-          userBatches = Array.from(new Set([...userBatches, ...userDoc.allowedBatches]));
-        }
+        userBatches = Array.isArray(userDoc.allowedBatches) ? [...userDoc.allowedBatches] : [];
         if (userDoc.premiumPlan && isCourseBatch(userDoc.premiumPlan)) {
           userBatches.push(userDoc.premiumPlan);
         }
+      } else {
+        if (sessionUser.role === 'superadmin' || sessionUser.role === 'admin') return true;
+        if (sessionUser.adminPermissions?.includes('access_courses') || sessionUser.adminPermissions?.includes('*')) return true;
+        userBatches = sessionUser.allowedBatches || [];
       }
     }
   } catch (error) {
     console.error('Error checking course slug unlock:', error);
+    if (sessionUser.role === 'superadmin' || sessionUser.role === 'admin') return true;
+    if (sessionUser.adminPermissions?.includes('access_courses') || sessionUser.adminPermissions?.includes('*')) return true;
+    userBatches = sessionUser.allowedBatches || [];
   }
 
   const validCourseBatches = userBatches.filter(isCourseBatch);

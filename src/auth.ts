@@ -117,8 +117,11 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
       }
     },
     async jwt({ token, user, trigger, session }) {
-      // H-5: Only fetch from DB on initial sign-in or explicit session update — NOT every request
-      if ((user || trigger === 'update') && token.email) {
+      const now = Date.now();
+      const lastSync = (token.lastDbSync as number) || 0;
+      const shouldSync = user || trigger === 'update' || (now - lastSync) > 10000;
+
+      if (shouldSync && token.email) {
         try {
           const conn = await connectToDatabase();
           if (conn) {
@@ -134,6 +137,7 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
               token.totalScore = dbUser.totalScore || 0;
               token.testsCompleted = dbUser.testsCompleted || 0;
               token.hasCourseAccess = !!dbUser.hasCourseAccess;
+              token.lastDbSync = now;
             }
           }
         } catch (error) {
