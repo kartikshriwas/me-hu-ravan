@@ -34,59 +34,89 @@ function getParsedCourseFile(fullPath: string): any {
   }
 }
 
-export function isUnitPlayableOrDownloadable(unit: Partial<CourseSectionUnit>): boolean {
+export function isUnitActionable(unit: Partial<CourseSectionUnit>): boolean {
   const type = (unit.type || '').toLowerCase();
   const icon = (unit.icon || '').toLowerCase();
   const subtitle = (unit.subtitle || '').toLowerCase();
   const fileUrl = (unit.fileUrl || '').toLowerCase();
 
-  // 1. Explicitly filter out PDFs / documents / notes
+  // 1. Explicitly filter out Certificates
   if (
-    type === 'pdf' ||
-    type === 'document' ||
-    type === 'pdfdocument' ||
-    type === 'pbebook' ||
-    icon === 'pdf' ||
-    subtitle.includes('pdf') ||
-    fileUrl.endsWith('.pdf') ||
-    fileUrl.includes('/pdf/')
+    type.includes('certificate') ||
+    subtitle.includes('certificate') ||
+    icon === 'certification2' ||
+    icon.includes('cert')
   ) {
     return false;
   }
 
-  // 2. Check if unit has a downloadable fileUrl (code attachment, zip, asset)
-  if (unit.fileUrl && unit.fileUrl.trim() !== '') {
-    return true;
+  // 2. Explicitly filter out PDFs / eBooks / Documents / Notes if there is NO download fileUrl!
+  const isPdfOrEbookOrDoc =
+    type === 'pdf' ||
+    type === 'document' ||
+    type === 'pdfdocument' ||
+    type === 'pbebook' ||
+    type === 'ebook' ||
+    icon === 'pdf' ||
+    icon === 'ebook' ||
+    subtitle.includes('pdf') ||
+    subtitle.includes('ebook') ||
+    fileUrl.endsWith('.pdf') ||
+    fileUrl.includes('/pdf/');
+
+  if (isPdfOrEbookOrDoc) {
+    // ONLY show if a valid non-empty fileUrl exists so user can actually download it!
+    return !!(unit.fileUrl && unit.fileUrl.trim() !== '');
   }
 
-  // 3. Check if unit has a playable video stream (Wistia sourceid, Vimeo vimeoid, YouTube embed)
-  const isYouTube =
-    type === 'youtube' ||
-    icon === 'yt' ||
-    subtitle.includes('youtube') ||
-    !!(unit.data && unit.data.embed);
-
-  const hasVideoSource =
-    !!(unit.sourceid && unit.sourceid.trim() !== '') ||
-    !!(unit.vimeoid && unit.vimeoid.trim() !== '') ||
-    isYouTube;
-
-  if (hasVideoSource) {
-    return true;
-  }
-
-  // 4. Check if unit is an exam / assessment / quiz
+  // 3. Videos (Actionable: Watch Lesson / Locked Video / Video Not Available)
   if (
-    type === 'quiz' ||
-    type === 'assessment' ||
     type === 'ivideo' ||
+    type === 'wistia' ||
+    type === 'video' ||
+    type === 'youtube' ||
+    icon === 'video' ||
+    icon === 'yt' ||
+    subtitle.includes('video') ||
+    subtitle.includes('youtube') ||
+    !!unit.sourceid ||
+    !!unit.vimeoid ||
+    !!(unit.data && unit.data.embed)
+  ) {
+    return true;
+  }
+
+  // 4. Exams / Quizzes / Assessments (Actionable: Take Exam)
+  if (
+    type === 'assessment' ||
     type === 'assessmentv2' ||
+    type === 'quizformal' ||
+    type === 'quizinformal' ||
+    type === 'quizwritten' ||
+    type === 'quiz' ||
     (typeof unit.questionsCount === 'number' && unit.questionsCount > 0)
   ) {
     return true;
   }
 
-  // Otherwise, unit cannot be played or downloaded by the user -> filter out
+  // 5. Downloadable Files / Code Attachments
+  if (unit.fileUrl && unit.fileUrl.trim() !== '') {
+    return true;
+  }
+
+  // 6. Meetings / Live Sessions / URLs
+  if (
+    type === 'zoommeeting' ||
+    type === 'zoomwebinar' ||
+    type === 'webexmeeting' ||
+    type === 'googlemeet' ||
+    type === 'teamsmeeting' ||
+    type === 'url'
+  ) {
+    return true;
+  }
+
+  // Otherwise, no stream to watch, no file to download, no exam to take -> hide
   return false;
 }
 
@@ -117,13 +147,16 @@ export function getAllCourses(): CourseMeta[] {
         ...(course.ebooks || {})
       };
 
-      let unitsCount = 0;
-      let totalDurationSeconds = 0;
+      let rawUnitsCount = 0;
       let populatedUnitsCount = 0;
+      let validUnitsCount = 0;
+      let totalDurationSeconds = 0;
 
       Object.values(rawSections).forEach((sec: any) => {
         if (Array.isArray(sec.learningPath)) {
           let sectionHasValidUnits = false;
+          rawUnitsCount += sec.learningPath.length;
+
           sec.learningPath.forEach((lpItem: any) => {
             const unitMeta = unitsMap[lpItem.id] || {};
             const unitObj: Partial<CourseSectionUnit> = {
@@ -139,15 +172,20 @@ export function getAllCourses(): CourseMeta[] {
               duration: typeof unitMeta.duration === 'number' ? unitMeta.duration : undefined
             };
 
-            if (isUnitPlayableOrDownloadable(unitObj)) {
-              unitsCount++;
+            const hasContent = unitMeta.hasData || !!unitMeta.sourceid || !!unitMeta.vimeoid || !!unitMeta.fileUrl || (typeof unitMeta.duration === 'number' && unitMeta.duration > 0);
+            if (hasContent) {
               populatedUnitsCount++;
+            }
+
+            if (isUnitActionable(unitObj)) {
+              validUnitsCount++;
               sectionHasValidUnits = true;
               if (typeof unitMeta.duration === 'number' && unitMeta.duration > 0) {
                 totalDurationSeconds += unitMeta.duration;
               }
             }
           });
+
           if (sectionHasValidUnits) {
             sectionsCount++;
           }
@@ -155,7 +193,7 @@ export function getAllCourses(): CourseMeta[] {
       });
 
       // Algorithmic check: Course is ongoing if curriculum contains items, but populated playable units are under 95%
-      const isOngoing = unitsCount > 0 && (populatedUnitsCount / unitsCount) < 0.95;
+      const isOngoing = rawUnitsCount > 0 && (populatedUnitsCount / rawUnitsCount) < 0.95;
 
       results.push({
         title: course.title || path.basename(file, '.json'),
@@ -167,7 +205,7 @@ export function getAllCourses(): CourseMeta[] {
         price: course.price || 0,
         courseImage: course.courseImage || null,
         sectionsCount,
-        unitsCount,
+        unitsCount: validUnitsCount,
         totalDurationSeconds: totalDurationSeconds > 0 ? totalDurationSeconds : undefined,
         isOngoing
       });
@@ -216,12 +254,21 @@ export function getCourseBySlug(slug: string): CourseDetail | null {
         };
         const rawSections = course.sections || {};
         const parsedSections: CourseSection[] = [];
+        let rawUnitsCount = 0;
+        let populatedUnitsCount = 0;
 
         Object.entries(rawSections).forEach(([secId, secData]: [string, any]) => {
           const learningPath = Array.isArray(secData.learningPath) ? secData.learningPath : [];
+          rawUnitsCount += learningPath.length;
+
           const units: CourseSectionUnit[] = learningPath
             .map((lpItem: any) => {
               const unitMeta = unitsMap[lpItem.id] || {};
+              const hasContent = unitMeta.hasData || !!unitMeta.sourceid || !!unitMeta.vimeoid || !!unitMeta.fileUrl || (typeof unitMeta.duration === 'number' && unitMeta.duration > 0);
+              if (hasContent) {
+                populatedUnitsCount++;
+              }
+
               return {
                 id: lpItem.id,
                 type: lpItem.type || unitMeta.objectType || 'lesson',
@@ -240,7 +287,7 @@ export function getCourseBySlug(slug: string): CourseDetail | null {
                 duration: typeof unitMeta.duration === 'number' ? unitMeta.duration : undefined
               };
             })
-            .filter(isUnitPlayableOrDownloadable);
+            .filter((unit: CourseSectionUnit) => isUnitActionable(unit));
 
           if (units.length > 0) {
             parsedSections.push({
@@ -254,15 +301,7 @@ export function getCourseBySlug(slug: string): CourseDetail | null {
         });
 
         const totalUnits = parsedSections.reduce((sum, s) => sum + s.units.length, 0);
-        const populatedUnits = parsedSections.reduce(
-          (sum, s) =>
-            sum +
-            s.units.filter(
-              (u) => u.hasData || !!u.sourceid || !!u.vimeoid || !!u.fileUrl || (typeof u.duration === 'number' && u.duration > 0)
-            ).length,
-          0
-        );
-        const isOngoing = totalUnits > 0 && populatedUnits / totalUnits < 0.95;
+        const isOngoing = rawUnitsCount > 0 && (populatedUnitsCount / rawUnitsCount) < 0.95;
 
         return {
           title: course.title || path.basename(file, '.json'),

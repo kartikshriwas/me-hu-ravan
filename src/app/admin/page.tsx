@@ -827,32 +827,6 @@ export default function AdminDashboardPage() {
 
   return (
     <div className="w-full px-4 sm:px-8 lg:px-12 py-6 space-y-8">
-      
-      {/* Admin Header Banner */}
-      <div className="glass-panel rounded-3xl p-6 sm:p-8 border border-amber-500/30 relative overflow-hidden space-y-4">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-amber-500/15 via-purple-500/10 to-transparent rounded-full blur-3xl pointer-events-none" />
-
-        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 relative z-10">
-          <div>
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs font-bold uppercase tracking-wider">
-              <ShieldCheck className="w-4 h-4 text-amber-400" />
-              <span>Admin Management Hub</span>
-            </div>
-            <h1 className="text-2xl sm:text-3xl font-black text-white mt-2">PrepTea Control Panel</h1>
-            <p className="text-xs text-slate-300 mt-1">
-              Manage candidate passes, redeem codes, launch events, CSV bulk email grants, and admin permissions.
-            </p>
-          </div>
-
-          <div className="flex items-center gap-3">
-            <UserAvatar name={authUser.name} email={authUser.email} image={authUser.image} size="md" />
-            <div className="text-left">
-              <p className="text-xs font-bold text-white">{authUser.name}</p>
-              <p className="text-[10px] text-amber-300 font-mono capitalize">{authUser.role || 'Super Admin'}</p>
-            </div>
-          </div>
-        </div>
-      </div>
 
       {/* Global Notifications / Alerts */}
       {feedbackMsg && (

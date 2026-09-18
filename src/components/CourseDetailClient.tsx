@@ -617,8 +617,8 @@ export function CourseDetailClient({ course, availableTests, isUnlocked = true }
                         </div>
                       </div>
 
-                      {/* Action Button: Download File for pbEbook / Ebook / Attachments */}
-                      {downloadUrl && (
+                      {/* Action Button: Download File / eBook */}
+                      {downloadUrl ? (
                         <a
                           href={downloadUrl}
                           target="_blank"
@@ -627,11 +627,24 @@ export function CourseDetailClient({ course, availableTests, isUnlocked = true }
                           className="px-3.5 py-1.5 rounded-lg bg-teal-600/20 hover:bg-teal-600 text-teal-300 hover:text-white text-xs font-bold transition-all border border-teal-500/30 hover:border-transparent flex items-center gap-1.5 shrink-0"
                         >
                           <Download className="w-3.5 h-3.5" />
-                          <span>Download Code</span>
+                          <span>Download File</span>
                         </a>
+                      ) : (config.category === 'ebook' || unit.type === 'pbebook' || unit.type === 'ebook') ? (
+                        <div className="px-3.5 py-1.5 rounded-lg bg-teal-950/40 text-teal-300 text-xs font-bold border border-teal-500/30 flex items-center gap-1.5 shrink-0">
+                          <BookOpen className="w-3.5 h-3.5 text-teal-400" />
+                          <span>eBook Notes</span>
+                        </div>
+                      ) : null}
+
+                      {/* Action Button: Certificate */}
+                      {config.category === 'cert' && !downloadUrl && (
+                        <div className="px-3.5 py-1.5 rounded-lg bg-amber-500/20 text-amber-300 text-xs font-bold border border-amber-500/40 flex items-center gap-1.5 shrink-0">
+                          <Award className="w-3.5 h-3.5 text-amber-400" />
+                          <span>Course Certificate</span>
+                        </div>
                       )}
 
-                      {/* Action Button: ONLY for supported ivideo and assessmentv2 */}
+                      {/* Action Button: Take Exam */}
                       {config.isActionableExam && matchingTest && !downloadUrl && (
                         <Link
                           href={`/quiz/${matchingTest.quizId}`}
@@ -642,6 +655,7 @@ export function CourseDetailClient({ course, availableTests, isUnlocked = true }
                         </Link>
                       )}
 
+                      {/* Action Button: Watch Lesson / Video Not Available / Locked Video */}
                       {config.isActionableVideo && !downloadUrl && (() => {
                         const isYouTube = unit.type === 'youtube' || unit.icon === 'yt' || (unit.subtitle && unit.subtitle.toLowerCase().includes('youtube')) || !!(unit.data && unit.data.embed);
                         const hasVideoSource = !!(unit.sourceid && unit.sourceid.trim() !== '') || isYouTube;
