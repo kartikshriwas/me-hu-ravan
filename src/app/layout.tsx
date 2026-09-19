@@ -56,26 +56,25 @@ export const metadata: Metadata = {
   },
 };
 
+import { ThemeProvider } from '@/components/ThemeProvider';
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark" suppressHydrationWarning>
-      <body suppressHydrationWarning className="antialiased bg-[#0b0f19] text-slate-100 flex flex-col min-h-screen">
-        <AuthProvider>
-          <ActivityTracker />
-          <Navbar />
-          <main className="flex-1 w-full flex flex-col min-h-0">
-            {children}
-          </main>
-          {/* <footer className="border-t border-slate-800/80 bg-slate-950/60 py-6 mt-12">
-            <div className="w-full px-4 sm:px-6 lg:px-8 text-center text-xs text-slate-500">
-              <p suppressHydrationWarning>© {new Date().getFullYear()} PrepTea.</p>
-            </div>
-          </footer> */}
-        </AuthProvider>
+    <html lang="en" suppressHydrationWarning>
+      <body suppressHydrationWarning className="antialiased bg-background text-foreground flex flex-col min-h-screen transition-colors duration-300">
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
+          <AuthProvider>
+            <ActivityTracker />
+            <Navbar />
+            <main className="flex-1 w-full flex flex-col min-h-0">
+              {children}
+            </main>
+          </AuthProvider>
+        </ThemeProvider>
         <Analytics />
         <SpeedInsights />
       </body>

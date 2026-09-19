@@ -96,23 +96,23 @@ export function EventPromoBanner() {
 
   return (
     <div className="w-full max-w-7xl mx-auto mb-6 px-2 sm:px-6 lg:px-8 animate-fade-in">
-      <div className="relative overflow-hidden rounded-3xl p-4 sm:p-5 bg-gradient-to-r from-indigo-950/90 via-purple-950/80 to-slate-900 border border-indigo-500/30 shadow-2xl shadow-indigo-950/50 backdrop-blur-xl">
+      <div className="relative overflow-hidden rounded-3xl p-4 sm:p-5 bg-gradient-to-r from-primary-950/90 via-primary-950/80 to-slate-900 border border-primary-500/30 shadow-2xl shadow-primary-950/50 backdrop-blur-xl">
         {/* Ambient background glow accents */}
         <div className="absolute -top-12 -right-12 w-48 h-48 bg-amber-500/10 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute -bottom-12 -left-12 w-48 h-48 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute -bottom-12 -left-12 w-48 h-48 bg-primary-500/10 rounded-full blur-3xl pointer-events-none" />
 
         <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-4">
           <div className="space-y-2 flex-1">
             {/* Tag Badge */}
             {displayMode === 'global_free' && (
               <div className="flex flex-wrap items-center gap-2">
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-black bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 uppercase tracking-wider">
-                  <Sparkles className="w-3.5 h-3.5 text-emerald-400 animate-pulse" />
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-black bg-emerald-500/20 text-emerald-600 dark:text-emerald-300 border border-emerald-500/40 uppercase tracking-wider">
+                  <Sparkles className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400 animate-pulse" />
                   Global Free Access Active
                 </span>
 
                 {formattedFreeDate && (
-                  <span className="text-xs font-semibold text-amber-300 flex items-center gap-1">
+                  <span className="text-xs font-semibold text-amber-600 dark:text-amber-300 flex items-center gap-1">
                     <Clock className="w-3.5 h-3.5" />
                     Free until {formattedFreeDate}
                   </span>
@@ -122,21 +122,21 @@ export function EventPromoBanner() {
 
             {displayMode === 'launch_event' && launchEvent && (
               <div className="flex flex-wrap items-center gap-2">
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-black bg-amber-500/20 text-amber-300 border border-amber-500/40 uppercase tracking-wider">
-                  <Flame className="w-3.5 h-3.5 text-amber-400 animate-bounce" />
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-black bg-amber-500/20 text-amber-600 dark:text-amber-300 border border-amber-500/40 uppercase tracking-wider">
+                  <Flame className="w-3.5 h-3.5 text-amber-600 dark:text-amber-400 animate-bounce" />
                   New Candidate Promo Active
                 </span>
 
-                <span className="text-xs font-bold text-amber-300 flex items-center gap-1">
-                  <Sparkles className="w-3.5 h-3.5 text-amber-400" />
+                <span className="text-xs font-bold text-amber-600 dark:text-amber-300 flex items-center gap-1">
+                  <Sparkles className="w-3.5 h-3.5 text-amber-600 dark:text-amber-400" />
                   <span>Limited Spots Available • Few Slots Left</span>
                 </span>
               </div>
             )}
 
             {/* Banner Title */}
-            <h2 className="text-base sm:text-lg font-extrabold text-white flex items-center gap-2">
-              <Gift className="w-5 h-5 text-amber-400 shrink-0" />
+            <h2 className="text-base sm:text-lg font-extrabold text-foreground flex items-center gap-2">
+              <Gift className="w-5 h-5 text-amber-600 dark:text-amber-400 shrink-0" />
               <span>
                 {displayMode === 'global_free'
                   ? 'All Premium Tests & Solution Keys are 100% Free For Everyone!'
@@ -147,7 +147,7 @@ export function EventPromoBanner() {
             </h2>
 
             {/* Banner Description */}
-            <p className="text-xs text-slate-300 max-w-2xl leading-relaxed">
+            <p className="text-xs text-foreground/80 max-w-2xl leading-relaxed">
               {displayMode === 'global_free'
                 ? 'Enjoy full unlocked access to all practice sets, mock tests, and detailed solution keys.'
                 : !user
@@ -171,7 +171,7 @@ export function EventPromoBanner() {
             ) : (
               <a
                 href="#tests"
-                className="px-4 py-2.5 rounded-2xl bg-gradient-to-r from-amber-500 to-indigo-600 hover:from-amber-400 hover:to-indigo-500 text-white text-xs font-bold shadow-lg transition-all flex items-center gap-1.5"
+                className="px-4 py-2.5 rounded-2xl bg-gradient-to-r from-amber-500 to-primary-600 hover:from-amber-400 hover:to-primary-500 text-white text-xs font-bold shadow-lg transition-all flex items-center gap-1.5"
               >
                 <span>Start Practicing Now</span>
                 <ArrowRight className="w-4 h-4" />
@@ -180,7 +180,7 @@ export function EventPromoBanner() {
 
             <button
               onClick={() => setDismissed(true)}
-              className="p-1.5 rounded-xl text-slate-400 hover:text-white hover:bg-slate-800/80 transition-colors"
+              className="p-1.5 rounded-xl text-muted-foreground hover:text-foreground hover:bg-slate-800/80 transition-colors"
               title="Dismiss announcement"
             >
               <X className="w-4 h-4" />

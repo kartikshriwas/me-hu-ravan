@@ -1,15 +1,222 @@
 @import "tailwindcss";
 
+@variant dark (&:where(.dark, .dark *));
 @theme {
   --breakpoint-xs: 400px;
+  
+  /* Primary Color Classes */
+  --color-primary-50: var(--color-primary-50);
+  --color-primary-100: var(--color-primary-100);
+  --color-primary-200: var(--color-primary-200);
+  --color-primary-300: var(--color-primary-300);
+  --color-primary-400: var(--color-primary-400);
+  --color-primary-500: var(--color-primary-500);
+  --color-primary-600: var(--color-primary-600);
+  --color-primary-700: var(--color-primary-700);
+  --color-primary-800: var(--color-primary-800);
+  --color-primary-900: var(--color-primary-900);
+  --color-primary-950: var(--color-primary-950);
+
+  /* Map hardcoded colors to dynamic primary variables to avoid massive refactoring */
+  --color-purple-50: var(--color-primary-50);
+  --color-purple-100: var(--color-primary-100);
+  --color-purple-200: var(--color-primary-200);
+  --color-purple-300: var(--color-primary-300);
+  --color-purple-400: var(--color-primary-400);
+  --color-purple-500: var(--color-primary-500);
+  --color-purple-600: var(--color-primary-600);
+  --color-purple-700: var(--color-primary-700);
+  --color-purple-800: var(--color-primary-800);
+  --color-purple-900: var(--color-primary-900);
+  --color-purple-950: var(--color-primary-950);
+
+  --color-indigo-50: var(--color-primary-50);
+  --color-indigo-100: var(--color-primary-100);
+  --color-indigo-200: var(--color-primary-200);
+  --color-indigo-300: var(--color-primary-300);
+  --color-indigo-400: var(--color-primary-400);
+  --color-indigo-500: var(--color-primary-500);
+  --color-indigo-600: var(--color-primary-600);
+  --color-indigo-700: var(--color-primary-700);
+  --color-indigo-800: var(--color-primary-800);
+  --color-indigo-900: var(--color-primary-900);
+  --color-indigo-950: var(--color-primary-950);
+
+  /* Background and text semantic colors */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card-bg);
+  --color-card-border: var(--card-border);
+  --color-muted-foreground: var(--muted-foreground);
 }
 
 @layer base {
   :root {
-    --background: #0f172a;
+    /* Light Mode */
+    --background: #f8fafc;
+    --foreground: #0f172a;
+    --card-bg: #ffffff;
+    --card-border: #e2e8f0;
+    --glass-panel-bg: rgba(255, 255, 255, 0.8);
+    --glass-card-bg: rgba(255, 255, 255, 0.6);
+    --muted-foreground: #64748b; /* slate-500 */
+    
+    /* Auto-invert hardcoded dark slate backgrounds for Light Mode visibility */
+    --color-slate-950: #f8fafc;
+    --color-slate-900: #ffffff;
+    --color-slate-800: #f1f5f9;
+    --color-slate-700: #e2e8f0;
+    --color-slate-300: #64748b; /* text-slate-300 becomes darker */
+    --color-slate-400: #475569; /* text-slate-400 becomes darker */
+
+    /* Default Primary (Indigo) */
+    --color-primary-50: #eef2ff;
+    --color-primary-100: #e0e7ff;
+    --color-primary-200: #c7d2fe;
+    --color-primary-300: #a5b4fc;
+    --color-primary-400: #818cf8;
+    --color-primary-500: #6366f1;
+    --color-primary-600: #4f46e5;
+    --color-primary-700: #4338ca;
+    --color-primary-800: #3730a3;
+    --color-primary-900: #312e81;
+    --color-primary-950: #1e1b4b;
+  }
+
+  .dark {
+    /* Dark Mode */
+    --background: #0b0f19;
     --foreground: #f8fafc;
-    --card-bg: rgba(30, 41, 59, 0.7);
-    --card-border: rgba(255, 255, 255, 0.1);
+    --card-bg: #0f172a; /* slate-900 solid */
+    --card-border: #1e293b; /* slate-800 solid */
+    --glass-panel-bg: rgba(17, 24, 39, 0.75);
+    --glass-card-bg: rgba(30, 41, 59, 0.5);
+    --muted-foreground: #94a3b8; /* slate-400 */
+  }
+
+  [data-accent="red"] {
+    --color-primary-50: #fef2f2;
+    --color-primary-100: #fee2e2;
+    --color-primary-200: #fecaca;
+    --color-primary-300: #fca5a5;
+    --color-primary-400: #f87171;
+    --color-primary-500: #ef4444;
+    --color-primary-600: #dc2626;
+    --color-primary-700: #b91c1c;
+    --color-primary-800: #991b1b;
+    --color-primary-900: #7f1d1d;
+    --color-primary-950: #450a0a;
+    /* Light Mode Background Tint */
+    --background: #fff5f5;
+  }
+  .dark[data-accent="red"] {
+    --background: #0f0505;
+    --color-slate-950: #1a0505;
+    --color-slate-900: #2a0a0a;
+    --color-slate-800: #3f1515;
+    --card-bg: #2a0a0a;
+    --card-border: #3f1515;
+    --glass-panel-bg: rgba(26, 5, 5, 0.75);
+    --glass-card-bg: rgba(42, 10, 10, 0.5);
+  }
+  
+  [data-accent="blue"] {
+    --color-primary-50: #eff6ff;
+    --color-primary-100: #dbeafe;
+    --color-primary-200: #bfdbfe;
+    --color-primary-300: #93c5fd;
+    --color-primary-400: #60a5fa;
+    --color-primary-500: #3b82f6;
+    --color-primary-600: #2563eb;
+    --color-primary-700: #1d4ed8;
+    --color-primary-800: #1e40af;
+    --color-primary-900: #1e3a8a;
+    --color-primary-950: #172554;
+    --background: #f5f8ff;
+  }
+  .dark[data-accent="blue"] {
+    --background: #050a1a;
+    --color-slate-950: #0a1026;
+    --color-slate-900: #121c3b;
+    --color-slate-800: #1e294f;
+    --card-bg: #121c3b;
+    --card-border: #1e294f;
+    --glass-panel-bg: rgba(10, 16, 38, 0.75);
+    --glass-card-bg: rgba(18, 28, 59, 0.5);
+  }
+
+  [data-accent="green"] {
+    --color-primary-50: #f0fdf4;
+    --color-primary-100: #dcfce7;
+    --color-primary-200: #bbf7d0;
+    --color-primary-300: #86efac;
+    --color-primary-400: #4ade80;
+    --color-primary-500: #22c55e;
+    --color-primary-600: #16a34a;
+    --color-primary-700: #15803d;
+    --color-primary-800: #166534;
+    --color-primary-900: #14532d;
+    --color-primary-950: #052e16;
+    --background: #f5fff8;
+  }
+  .dark[data-accent="green"] {
+    --background: #050f08;
+    --color-slate-950: #07170c;
+    --color-slate-900: #0d2614;
+    --color-slate-800: #15381f;
+    --card-bg: #0d2614;
+    --card-border: #15381f;
+    --glass-panel-bg: rgba(7, 23, 12, 0.75);
+    --glass-card-bg: rgba(13, 38, 20, 0.5);
+  }
+
+  [data-accent="orange"] {
+    --color-primary-50: #fff7ed;
+    --color-primary-100: #ffedd5;
+    --color-primary-200: #fed7aa;
+    --color-primary-300: #fdba74;
+    --color-primary-400: #fb923c;
+    --color-primary-500: #f97316;
+    --color-primary-600: #ea580c;
+    --color-primary-700: #c2410c;
+    --color-primary-800: #9a3412;
+    --color-primary-900: #7c2d12;
+    --color-primary-950: #431407;
+    --background: #fffaf5;
+  }
+  .dark[data-accent="orange"] {
+    --background: #140a05;
+    --color-slate-950: #1f1008;
+    --color-slate-900: #2e170c;
+    --color-slate-800: #422112;
+    --card-bg: #2e170c;
+    --card-border: #422112;
+    --glass-panel-bg: rgba(31, 16, 8, 0.75);
+    --glass-card-bg: rgba(46, 23, 12, 0.5);
+  }
+
+  [data-accent="black"] {
+    --color-primary-50: #f8fafc;
+    --color-primary-100: #f1f5f9;
+    --color-primary-200: #e2e8f0;
+    --color-primary-300: #cbd5e1;
+    --color-primary-400: #94a3b8;
+    --color-primary-500: #64748b;
+    --color-primary-600: #475569;
+    --color-primary-700: #334155;
+    --color-primary-800: #1e293b;
+    --color-primary-900: #0f172a;
+    --color-primary-950: #020617;
+  }
+  .dark[data-accent="black"] {
+    --background: #000000;
+    --color-slate-950: #050505;
+    --color-slate-900: #111111;
+    --color-slate-800: #1f1f1f;
+    --card-bg: #111111;
+    --card-border: #1f1f1f;
+    --glass-panel-bg: rgba(5, 5, 5, 0.75);
+    --glass-card-bg: rgba(17, 17, 17, 0.5);
   }
 
   html, body {
@@ -28,8 +235,8 @@
   }
 
   body {
-    background-color: #0b0f19;
-    color: #f8fafc;
+    background-color: var(--background);
+    color: var(--foreground);
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     min-height: 100vh;
   }
@@ -49,24 +256,24 @@
 
 /* Custom Glass & Accent utilities */
 .glass-panel {
-  background: rgba(17, 24, 39, 0.75);
+  background: var(--glass-panel-bg, var(--card-bg));
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--card-border);
 }
 
 .glass-card {
-  background: rgba(30, 41, 59, 0.5);
+  background: var(--glass-card-bg, var(--card-bg));
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.07);
+  border: 1px solid var(--card-border);
   transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .glass-card:hover {
-  border-color: rgba(99, 102, 241, 0.3);
+  border-color: color-mix(in srgb, var(--color-primary-500) 30%, transparent);
   transform: translateY(-2px);
-  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4), 0 0 15px rgba(99, 102, 241, 0.15);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4), 0 0 15px color-mix(in srgb, var(--color-primary-500) 15%, transparent);
 }
 
 .glow-indigo {

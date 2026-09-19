@@ -329,8 +329,8 @@ export default function QuizPlayerPage({ params }: { params: Promise<{ quizId: s
   if (loading || authLoading) {
     return (
       <div className="min-h-[70vh] flex flex-col items-center justify-center space-y-4">
-        <div className="w-12 h-12 border-4 border-indigo-500 border-t-transparent rounded-full animate-spin" />
-        <p className="text-sm text-slate-400 font-medium">Preparing test environment...</p>
+        <div className="w-12 h-12 border-4 border-primary-500 border-t-transparent rounded-full animate-spin" />
+        <p className="text-sm text-muted-foreground font-medium">Preparing test environment...</p>
       </div>
     );
   }
@@ -350,19 +350,19 @@ export default function QuizPlayerPage({ params }: { params: Promise<{ quizId: s
 
     return (
       <div className="min-h-[70vh] flex flex-col items-center justify-center p-4">
-        <div className="w-full max-w-md glass-panel rounded-3xl p-6 sm:p-8 border border-slate-800 shadow-2xl text-center space-y-5 bg-slate-900/90 animate-fade-in">
-          <div className="w-14 h-14 rounded-2xl bg-amber-500/10 border border-amber-500/30 text-amber-400 flex items-center justify-center mx-auto shadow-inner">
+        <div className="w-full max-w-md glass-panel rounded-3xl p-6 sm:p-8 border border-card-border shadow-2xl text-center space-y-5 bg-card/90 animate-fade-in">
+          <div className="w-14 h-14 rounded-2xl bg-amber-500/10 border border-amber-500/30 text-amber-600 dark:text-amber-400 flex items-center justify-center mx-auto shadow-inner">
             <Lock className="w-7 h-7" />
           </div>
 
           <div className="space-y-2">
-            <span className="px-3 py-1 rounded-full text-[11px] font-bold bg-amber-500/20 text-amber-300 border border-amber-500/30 uppercase tracking-wider">
+            <span className="px-3 py-1 rounded-full text-[11px] font-bold bg-amber-500/20 text-amber-600 dark:text-amber-300 border border-amber-500/30 uppercase tracking-wider">
               Premium Practice Set
             </span>
-            <h2 className="text-xl sm:text-2xl font-extrabold text-white tracking-tight pt-1">
+            <h2 className="text-xl sm:text-2xl font-extrabold text-foreground tracking-tight pt-1">
               {titleText} is Locked
             </h2>
-            <p className="text-xs text-slate-400 leading-relaxed">
+            <p className="text-xs text-muted-foreground leading-relaxed">
               This practice paper requires an active PrepTea Candidate Pass. Redeem a promo pass code in your profile or contact your administrator.
             </p>
           </div>
@@ -370,14 +370,14 @@ export default function QuizPlayerPage({ params }: { params: Promise<{ quizId: s
           <div className="flex flex-col sm:flex-row items-center gap-2.5 pt-2">
             <button
               onClick={() => router.push('/')}
-              className="w-full sm:w-1/2 px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-bold transition-all text-center border border-slate-700"
+              className="w-full sm:w-1/2 px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-foreground text-xs font-bold transition-all text-center border border-slate-700"
             >
               Back to Tests
             </button>
 
             <button
               onClick={() => router.push('/profile')}
-              className="w-full sm:w-1/2 px-4 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-bold shadow-md transition-all flex items-center justify-center gap-1.5 border border-indigo-500/30"
+              className="w-full sm:w-1/2 px-4 py-2.5 rounded-xl bg-primary-600 hover:bg-primary-500 text-white text-xs font-bold shadow-md transition-all flex items-center justify-center gap-1.5 border border-primary-500/30"
             >
               <Lock className="w-3.5 h-3.5" />
               <span>Redeem Pass</span>
@@ -391,13 +391,13 @@ export default function QuizPlayerPage({ params }: { params: Promise<{ quizId: s
   if (error || !assessment) {
     return (
       <div className="min-h-[70vh] flex flex-col items-center justify-center text-center space-y-4">
-        <div className="p-4 rounded-full bg-rose-500/10 text-rose-400 border border-rose-500/20">
+        <div className="p-4 rounded-full bg-rose-500/10 text-rose-600 dark:text-rose-400 border border-rose-500/20">
           <AlertTriangle className="w-8 h-8" />
         </div>
-        <h2 className="text-xl font-bold text-white">{error || 'Test not found'}</h2>
+        <h2 className="text-xl font-bold text-foreground">{error || 'Test not found'}</h2>
         <button
           onClick={() => router.push('/')}
-          className="px-4 py-2 rounded-xl bg-indigo-600 text-white text-xs font-semibold"
+          className="px-4 py-2 rounded-xl bg-primary-600 text-white text-xs font-semibold"
         >
           Return to Test Hub
         </button>
@@ -407,30 +407,30 @@ export default function QuizPlayerPage({ params }: { params: Promise<{ quizId: s
 
   if (isFirstAttempt && !isAttemptConfirmed) {
     return (
-      <div className="max-w-2xl mx-auto my-8 sm:my-16 glass-panel rounded-3xl p-6 sm:p-10 border border-slate-800 shadow-2xl space-y-6 sm:space-y-8 text-center relative overflow-hidden animate-fade-in">
+      <div className="max-w-2xl mx-auto my-8 sm:my-16 glass-panel rounded-3xl p-6 sm:p-10 border border-card-border shadow-2xl space-y-6 sm:space-y-8 text-center relative overflow-hidden animate-fade-in">
         {/* Glow effect */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-80 h-80 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-80 h-80 bg-primary-500/10 rounded-full blur-3xl pointer-events-none" />
         
         <div className="flex flex-col items-center gap-3">
-          <div className="w-16 h-16 rounded-2xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 shadow-lg animate-pulse">
+          <div className="w-16 h-16 rounded-2xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-600 dark:text-amber-400 shadow-lg animate-pulse">
             <AlertTriangle className="w-8 h-8" />
           </div>
-          <h2 className="text-xl sm:text-2xl font-extrabold text-white tracking-tight mt-2">
+          <h2 className="text-xl sm:text-2xl font-extrabold text-foreground tracking-tight mt-2">
             First Attempt & Leaderboard Score
           </h2>
-          <p className="text-xs sm:text-sm text-slate-400 font-medium uppercase tracking-wider text-indigo-400">
+          <p className="text-xs sm:text-sm text-muted-foreground font-medium uppercase tracking-wider text-primary-600 dark:text-primary-400">
             {assessment.title}
           </p>
         </div>
 
-        <div className="space-y-4 text-slate-300 text-sm sm:text-base leading-relaxed text-left bg-slate-950/40 p-4 sm:p-6 rounded-2xl border border-slate-900">
+        <div className="space-y-4 text-foreground/80 text-sm sm:text-base leading-relaxed text-left bg-background/40 p-4 sm:p-6 rounded-2xl border border-slate-900">
           <p>
             ⚠️ <strong>This is your 1st attempt at this test paper.</strong>
           </p>
           <p>
             Only your <strong>very first attempt</strong> is officially recorded and submitted to the leaderboard. Retakes or subsequent attempts will run in <em>Practice Mode</em> and will not update your leaderboard score or rank.
           </p>
-          <p className="text-xs text-slate-400 border-t border-slate-800/20 pt-3">
+          <p className="text-xs text-muted-foreground border-t border-card-border/20 pt-3">
             <strong>Tip:</strong> If you are not ready yet, we recommend practicing with other papers first (e.g. Set 1 papers) before starting this official attempt.
           </p>
         </div>
@@ -438,14 +438,14 @@ export default function QuizPlayerPage({ params }: { params: Promise<{ quizId: s
         <div className="flex flex-col sm:flex-row gap-3 pt-2">
           <button
             onClick={() => setIsAttemptConfirmed(true)}
-            className="flex-1 py-3 px-6 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-sm font-bold text-white shadow-lg shadow-indigo-600/20 hover:shadow-indigo-600/30 hover:-translate-y-0.5 transition-all flex items-center justify-center gap-2 cursor-pointer"
+            className="flex-1 py-3 px-6 rounded-xl bg-primary-600 hover:bg-primary-500 text-sm font-bold text-white shadow-lg shadow-primary-600/20 hover:shadow-primary-600/30 hover:-translate-y-0.5 transition-all flex items-center justify-center gap-2 cursor-pointer"
           >
             <Trophy className="w-4 h-4" />
             <span>Start Official Attempt</span>
           </button>
           <button
             onClick={() => router.push('/')}
-            className="flex-1 py-3 px-6 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-800 text-sm font-bold text-slate-300 hover:text-white hover:-translate-y-0.5 transition-all flex items-center justify-center gap-2 cursor-pointer"
+            className="flex-1 py-3 px-6 rounded-xl bg-card hover:bg-slate-800 border border-card-border text-sm font-bold text-foreground/80 hover:text-foreground hover:-translate-y-0.5 transition-all flex items-center justify-center gap-2 cursor-pointer"
           >
             <ArrowLeft className="w-4 h-4" />
             <span>Cancel & Go Back</span>
@@ -593,19 +593,19 @@ export default function QuizPlayerPage({ params }: { params: Promise<{ quizId: s
     <div className="space-y-4 sm:space-y-6 pb-24 sm:pb-28">
       
       {/* Top Header Control Bar */}
-      <div className="glass-panel rounded-xl sm:rounded-2xl p-2.5 sm:p-5 border border-slate-800 flex items-center justify-between gap-2 sticky top-2 sm:top-4 z-30 shadow-2xl overflow-hidden">
+      <div className="glass-panel rounded-xl sm:rounded-2xl p-2.5 sm:p-5 border border-card-border flex items-center justify-between gap-2 sticky top-2 sm:top-4 z-30 shadow-2xl overflow-hidden">
         <div className="flex items-center gap-1.5 sm:gap-3 min-w-0 flex-1">
           <button
             onClick={() => setShowExitWarningModal(true)}
-            className="p-1.5 sm:p-2.5 rounded-lg sm:rounded-xl bg-slate-900/90 hover:bg-slate-800 text-slate-400 hover:text-slate-200 text-xs font-medium flex items-center gap-1 transition-all shrink-0"
+            className="p-1.5 sm:p-2.5 rounded-lg sm:rounded-xl bg-card/90 hover:bg-slate-800 text-muted-foreground hover:text-foreground text-xs font-medium flex items-center gap-1 transition-all shrink-0"
             title="Exit test"
           >
             <ArrowLeft className="w-4 h-4" />
             <span className="hidden sm:inline">Exit</span>
           </button>
           <div className="min-w-0 flex-1">
-            <h1 className="text-xs sm:text-lg font-bold text-white truncate">{assessment.title}</h1>
-            <p className="text-[10px] sm:text-xs text-slate-400 truncate">
+            <h1 className="text-xs sm:text-lg font-bold text-foreground truncate">{assessment.title}</h1>
+            <p className="text-[10px] sm:text-xs text-muted-foreground truncate">
               Q {currentIndex + 1} of {assessment.questions.length} • {answeredTotal} Done
             </p>
           </div>
@@ -615,10 +615,10 @@ export default function QuizPlayerPage({ params }: { params: Promise<{ quizId: s
         <div className="flex items-center gap-1.5 sm:gap-2.5 shrink-0">
           <div className={`flex items-center gap-1 sm:gap-2 px-2 sm:px-3.5 py-1.5 sm:py-2 rounded-lg sm:rounded-xl font-mono text-[11px] sm:text-sm font-bold border transition-colors ${
             timeLeft < 120
-              ? 'bg-rose-500/20 text-rose-300 border-rose-500/40 animate-pulse'
-              : 'bg-slate-900 text-indigo-300 border-indigo-500/30'
+              ? 'bg-rose-500/20 text-rose-600 dark:text-rose-300 border-rose-500/40 animate-pulse'
+              : 'bg-card text-primary-600 dark:text-primary-300 border-primary-500/30'
           }`}>
-            <Clock className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-indigo-400" />
+            <Clock className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-primary-600 dark:text-primary-400" />
             <span>{formatTime(timeLeft)}</span>
           </div>
 
@@ -637,24 +637,24 @@ export default function QuizPlayerPage({ params }: { params: Promise<{ quizId: s
       {isFirstAttempt ? (
         <div className="px-4 py-2.5 rounded-xl bg-emerald-950/50 border border-emerald-500/30 text-emerald-200 text-xs flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 shadow-lg">
           <div className="flex items-center gap-2">
-            <Trophy className="w-4 h-4 text-emerald-400 shrink-0" />
+            <Trophy className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0" />
             <span>
               <strong>1st Official Attempt:</strong> Your score on this test will be officially recorded on the Leaderboard and User Profile.
             </span>
           </div>
-          <span className="px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 text-[10px] font-bold uppercase tracking-wider border border-emerald-500/30 shrink-0">
+          <span className="px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-600 dark:text-emerald-300 text-[10px] font-bold uppercase tracking-wider border border-emerald-500/30 shrink-0">
             Leaderboard Score
           </span>
         </div>
       ) : (
         <div className="px-4 py-2.5 rounded-xl bg-amber-950/50 border border-amber-500/30 text-amber-200 text-xs flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 shadow-lg">
           <div className="flex items-center gap-2">
-            <RotateCcw className="w-4 h-4 text-amber-400 shrink-0" />
+            <RotateCcw className="w-4 h-4 text-amber-600 dark:text-amber-400 shrink-0" />
             <span>
               <strong>Practice Mode:</strong> You already completed your 1st attempt. Retaking this paper won&apos;t alter your official Leaderboard rank.
             </span>
           </div>
-          <span className="px-2.5 py-0.5 rounded-full bg-amber-500/20 text-amber-300 text-[10px] font-bold uppercase tracking-wider border border-amber-500/30 shrink-0">
+          <span className="px-2.5 py-0.5 rounded-full bg-amber-500/20 text-amber-600 dark:text-amber-300 text-[10px] font-bold uppercase tracking-wider border border-amber-500/30 shrink-0">
             Practice Retake
           </span>
         </div>
@@ -693,14 +693,14 @@ export default function QuizPlayerPage({ params }: { params: Promise<{ quizId: s
       </div>
 
       {/* Fixed Bottom Action & Navigation Bar (Responsive Desktop & Mobile) */}
-      <div className="fixed bottom-0 left-0 right-0 z-40 bg-slate-950/95 backdrop-blur-xl border-t border-slate-800/80 py-2.5 px-4 sm:px-8 shadow-2xl">
+      <div className="fixed bottom-0 left-0 right-0 z-40 bg-background/95 backdrop-blur-xl border-t border-card-border/80 py-2.5 px-4 sm:px-8 shadow-2xl">
         <div className="max-w-7xl mx-auto flex items-center justify-between gap-2 sm:gap-3">
           
           {/* Previous Button */}
           <button
             disabled={currentIndex === 0}
             onClick={() => setCurrentIndex((prev) => Math.max(0, prev - 1))}
-            className="px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-xl bg-slate-900 border border-slate-800 hover:bg-slate-800 text-xs font-semibold text-slate-300 hover:text-white disabled:opacity-40 disabled:pointer-events-none flex items-center gap-1.5 transition-all shrink-0"
+            className="px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-xl bg-card border border-card-border hover:bg-slate-800 text-xs font-semibold text-foreground/80 hover:text-foreground disabled:opacity-40 disabled:pointer-events-none flex items-center gap-1.5 transition-all shrink-0"
             title="Previous Question (Hotkey: Left Arrow)"
           >
             <ArrowLeft className="w-4 h-4" />
@@ -712,9 +712,9 @@ export default function QuizPlayerPage({ params }: { params: Promise<{ quizId: s
             {/* Mobile Grid Trigger */}
             <button
               onClick={() => setShowMobilePalette(true)}
-              className="lg:hidden py-2 px-3 rounded-xl bg-slate-900 border border-slate-800 text-slate-200 text-xs font-bold flex items-center gap-1.5"
+              className="lg:hidden py-2 px-3 rounded-xl bg-card border border-card-border text-foreground text-xs font-bold flex items-center gap-1.5"
             >
-              <Grid className="w-3.5 h-3.5 text-indigo-400 shrink-0" />
+              <Grid className="w-3.5 h-3.5 text-primary-600 dark:text-primary-400 shrink-0" />
               <span>Q {currentIndex + 1} / {assessment.questions.length}</span>
             </button>
 
@@ -722,7 +722,7 @@ export default function QuizPlayerPage({ params }: { params: Promise<{ quizId: s
             {currentAnswer.selectedOptionId && (
               <button
                 onClick={handleClearSelection}
-                className="px-3 py-2 sm:py-2.5 rounded-xl bg-slate-900 border border-slate-800 hover:border-slate-700 text-amber-400 hover:text-amber-300 text-xs font-medium flex items-center gap-1.5 transition-all shrink-0"
+                className="px-3 py-2 sm:py-2.5 rounded-xl bg-card border border-card-border hover:border-slate-700 text-amber-600 dark:text-amber-400 hover:text-amber-600 dark:hover:text-amber-300 text-xs font-medium flex items-center gap-1.5 transition-all shrink-0"
                 title="Unselect chosen option (Hotkey: X)"
               >
                 <RotateCcw className="w-3.5 h-3.5" />
@@ -731,13 +731,13 @@ export default function QuizPlayerPage({ params }: { params: Promise<{ quizId: s
             )}
 
             {/* Desktop Hotkeys Hint */}
-            <div className="hidden lg:flex items-center gap-2 text-[11px] text-slate-400">
-              <span className="font-semibold text-slate-300">Hotkeys:</span>
-              <span><kbd className="px-1.5 py-0.5 rounded bg-slate-800 text-slate-300 border border-slate-700">1-4</kbd>/<kbd className="px-1.5 py-0.5 rounded bg-slate-800 text-slate-300 border border-slate-700">A-D</kbd> Select</span>
-              <span><kbd className="px-1.5 py-0.5 rounded bg-slate-800 text-slate-300 border border-slate-700">↑/↓</kbd> Options</span>
-              <span><kbd className="px-1.5 py-0.5 rounded bg-slate-800 text-slate-300 border border-slate-700">←/→</kbd> Nav</span>
-              <span><kbd className="px-1.5 py-0.5 rounded bg-slate-800 text-slate-300 border border-slate-700">M</kbd> Mark</span>
-              <span><kbd className="px-1.5 py-0.5 rounded bg-slate-800 text-slate-300 border border-slate-700">X</kbd> Clear</span>
+            <div className="hidden lg:flex items-center gap-2 text-[11px] text-muted-foreground">
+              <span className="font-semibold text-foreground/80">Hotkeys:</span>
+              <span><kbd className="px-1.5 py-0.5 rounded bg-slate-800 text-foreground/80 border border-slate-700">1-4</kbd>/<kbd className="px-1.5 py-0.5 rounded bg-slate-800 text-foreground/80 border border-slate-700">A-D</kbd> Select</span>
+              <span><kbd className="px-1.5 py-0.5 rounded bg-slate-800 text-foreground/80 border border-slate-700">↑/↓</kbd> Options</span>
+              <span><kbd className="px-1.5 py-0.5 rounded bg-slate-800 text-foreground/80 border border-slate-700">←/→</kbd> Nav</span>
+              <span><kbd className="px-1.5 py-0.5 rounded bg-slate-800 text-foreground/80 border border-slate-700">M</kbd> Mark</span>
+              <span><kbd className="px-1.5 py-0.5 rounded bg-slate-800 text-foreground/80 border border-slate-700">X</kbd> Clear</span>
             </div>
           </div>
 
@@ -750,7 +750,7 @@ export default function QuizPlayerPage({ params }: { params: Promise<{ quizId: s
                 setShowSubmitModal(true);
               }
             }}
-            className="px-4 sm:px-6 py-2 sm:py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-xs transition-all shadow-md shadow-indigo-600/20 flex items-center gap-2 shrink-0"
+            className="px-4 sm:px-6 py-2 sm:py-2.5 rounded-xl bg-primary-600 hover:bg-primary-500 text-white font-bold text-xs transition-all shadow-md shadow-primary-600/20 flex items-center gap-2 shrink-0"
           >
             <span>{currentIndex < assessment.questions.length - 1 ? 'Next Question' : 'Review & Submit'}</span>
             <ArrowRight className="w-4 h-4" />
@@ -763,11 +763,11 @@ export default function QuizPlayerPage({ params }: { params: Promise<{ quizId: s
       {showMobilePalette && (
         <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-3 sm:p-4 bg-black/80 backdrop-blur-sm lg:hidden">
           <div className="glass-panel rounded-2xl w-full max-w-md p-4 sm:p-5 border border-slate-700 space-y-4 shadow-2xl max-h-[85vh] overflow-y-auto">
-            <div className="flex items-center justify-between border-b border-slate-800 pb-3">
-              <h3 className="text-sm font-bold text-white">Question Navigator</h3>
+            <div className="flex items-center justify-between border-b border-card-border pb-3">
+              <h3 className="text-sm font-bold text-foreground">Question Navigator</h3>
               <button
                 onClick={() => setShowMobilePalette(false)}
-                className="p-1.5 rounded-lg bg-slate-800 text-slate-400 hover:text-white"
+                className="p-1.5 rounded-lg bg-slate-800 text-muted-foreground hover:text-foreground"
               >
                 <X className="w-4 h-4" />
               </button>
@@ -798,25 +798,25 @@ export default function QuizPlayerPage({ params }: { params: Promise<{ quizId: s
           className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm animate-fade-in"
         >
           <div className="glass-panel rounded-2xl max-w-md w-full p-6 border border-slate-700 space-y-6 shadow-2xl">
-            <div className="flex items-center gap-3 text-emerald-400">
+            <div className="flex items-center gap-3 text-emerald-600 dark:text-emerald-400">
               <CheckCircle2 className="w-6 h-6" />
-              <h2 className="text-xl font-bold text-white">Submit Assessment?</h2>
+              <h2 className="text-xl font-bold text-foreground">Submit Assessment?</h2>
             </div>
 
-            <div className="space-y-3 text-sm text-slate-300 bg-slate-900/60 p-4 rounded-xl border border-slate-800">
+            <div className="space-y-3 text-sm text-foreground/80 bg-card/60 p-4 rounded-xl border border-card-border">
               <div className="flex justify-between">
                 <span>Total Questions:</span>
-                <strong className="text-white">{assessment.questions.length}</strong>
+                <strong className="text-foreground">{assessment.questions.length}</strong>
               </div>
-              <div className="flex justify-between text-emerald-400 font-semibold">
+              <div className="flex justify-between text-emerald-600 dark:text-emerald-400 font-semibold">
                 <span>Answered:</span>
                 <strong>{answeredTotal}</strong>
               </div>
-              <div className="flex justify-between text-amber-400">
+              <div className="flex justify-between text-amber-600 dark:text-amber-400">
                 <span>Unanswered:</span>
                 <strong>{assessment.questions.length - answeredTotal}</strong>
               </div>
-              <div className="flex justify-between text-indigo-400">
+              <div className="flex justify-between text-primary-600 dark:text-primary-400">
                 <span>Time Remaining:</span>
                 <strong>{formatTime(timeLeft)}</strong>
               </div>
@@ -829,14 +829,14 @@ export default function QuizPlayerPage({ params }: { params: Promise<{ quizId: s
             }`}>
               {isFirstAttempt ? (
                 <div className="flex items-start gap-2">
-                  <Trophy className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                  <Trophy className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
                   <p>
                     <strong>Notice:</strong> This is your <strong>1st Official Attempt</strong>. Your final score will be recorded on your profile and count toward the global Leaderboard!
                   </p>
                 </div>
               ) : (
                 <div className="flex items-start gap-2">
-                  <RotateCcw className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
+                  <RotateCcw className="w-4 h-4 text-amber-600 dark:text-amber-400 shrink-0 mt-0.5" />
                   <p>
                     <strong>Notice:</strong> This is a <strong>Practice Retake</strong>. Your score will be saved in your personal history, but your official Leaderboard score will remain unchanged.
                   </p>
@@ -848,7 +848,7 @@ export default function QuizPlayerPage({ params }: { params: Promise<{ quizId: s
               <button
                 onClick={() => setShowSubmitModal(false)}
                 disabled={isSubmitting}
-                className="px-4 py-2.5 rounded-xl glass-card text-xs font-semibold text-slate-300 hover:text-white disabled:opacity-50"
+                className="px-4 py-2.5 rounded-xl glass-card text-xs font-semibold text-foreground/80 hover:text-foreground disabled:opacity-50"
               >
                 Continue Test
               </button>
@@ -882,25 +882,25 @@ export default function QuizPlayerPage({ params }: { params: Promise<{ quizId: s
           }}
           className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md animate-fade-in"
         >
-          <div className="glass-panel rounded-3xl max-w-md w-full p-6 border border-rose-500/30 space-y-6 shadow-2xl relative bg-slate-950/90">
-            <div className="flex items-center gap-3 text-rose-400">
+          <div className="glass-panel rounded-3xl max-w-md w-full p-6 border border-rose-500/30 space-y-6 shadow-2xl relative bg-background/90">
+            <div className="flex items-center gap-3 text-rose-600 dark:text-rose-400">
               <div className="w-10 h-10 rounded-xl bg-rose-500/20 border border-rose-500/30 flex items-center justify-center">
-                <AlertTriangle className="w-5 h-5 text-rose-400" />
+                <AlertTriangle className="w-5 h-5 text-rose-600 dark:text-rose-400" />
               </div>
               <div>
-                <h2 className="text-lg font-bold text-white">Exit Exam Confirmation</h2>
-                <p className="text-xs text-rose-300 font-medium">Exam session currently in progress</p>
+                <h2 className="text-lg font-bold text-foreground">Exit Exam Confirmation</h2>
+                <p className="text-xs text-rose-600 dark:text-rose-300 font-medium">Exam session currently in progress</p>
               </div>
             </div>
 
-            <p className="text-xs sm:text-sm text-slate-300 leading-relaxed bg-slate-900/80 p-4 rounded-2xl border border-slate-800">
+            <p className="text-xs sm:text-sm text-foreground/80 leading-relaxed bg-card/80 p-4 rounded-2xl border border-card-border">
               Are you sure you want to exit? Your answers so far will be automatically submitted and saved.
             </p>
 
             <div className="flex items-center justify-end gap-3 pt-1">
               <button
                 onClick={() => setShowExitWarningModal(false)}
-                className="px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold transition-all"
+                className="px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-foreground text-xs font-semibold transition-all"
               >
                 Resume Exam
               </button>

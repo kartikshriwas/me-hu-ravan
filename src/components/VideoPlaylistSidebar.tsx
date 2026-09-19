@@ -177,37 +177,37 @@ export function VideoPlaylistSidebar({
   return (
     <div className="w-full h-full flex flex-col overflow-hidden">
       {/* ── Desktop Playlist Header ── */}
-      <div className="hidden lg:flex items-center justify-between p-3.5 sm:p-4 bg-slate-900/90 border-b border-slate-800/80 shrink-0">
+      <div className="hidden lg:flex items-center justify-between p-3.5 sm:p-4 bg-card/90 border-b border-card-border/80 shrink-0">
         <div className="flex items-center gap-2.5 min-w-0">
-          <div className="w-8 h-8 rounded-xl bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 flex items-center justify-center shrink-0">
-            <ListVideo className="w-4.5 h-4.5 text-indigo-400" />
+          <div className="w-8 h-8 rounded-xl bg-primary-500/10 border border-primary-500/20 text-primary-600 dark:text-primary-400 flex items-center justify-center shrink-0">
+            <ListVideo className="w-4.5 h-4.5 text-primary-600 dark:text-primary-400" />
           </div>
           <div className="min-w-0">
             {" "}
             <Link
               href={`/courses/${courseSlug}`}
-              className="inline-flex items-center gap-2 text-xs font-semibold text-slate-400 hover:text-white transition-colors bg-slate-900/80"
+              className="inline-flex items-center gap-2 text-xs font-semibold text-muted-foreground hover:text-foreground transition-colors bg-card/80"
             >
               <h4
-                className="text-xs font-bold text-white truncate"
+                className="text-xs font-bold text-foreground truncate"
                 title={courseTitle}
               >
                 {courseTitle}
               </h4>
             </Link>
             {completedCount > 0 ? (
-              <p className="text-[10px] text-emerald-400 font-semibold truncate">
+              <p className="text-[10px] text-emerald-600 dark:text-emerald-400 font-semibold truncate">
                 {completedCount}/{totalVideos} Completed ({progressPercent}%)
               </p>
             ) : activeSectionTitle ? (
               <p
-                className="text-[10px] text-indigo-300 font-medium truncate"
+                className="text-[10px] text-primary-600 dark:text-primary-300 font-medium truncate"
                 title={activeSectionTitle}
               >
                 {activeSectionTitle} • {totalVideos} Videos
               </p>
             ) : (
-              <p className="text-[10px] text-slate-400 font-medium">
+              <p className="text-[10px] text-muted-foreground font-medium">
                 {totalVideos} Video Lessons
               </p>
             )}
@@ -216,28 +216,28 @@ export function VideoPlaylistSidebar({
       </div>
 
       {/* ── Mobile Playlist Header ── */}
-      <div className="lg:hidden flex items-center justify-between px-3 py-2.5 bg-slate-900/90 border-b border-slate-800/80 shrink-0">
+      <div className="lg:hidden flex items-center justify-between px-3 py-2.5 bg-card/90 border-b border-card-border/80 shrink-0">
         <div className="flex items-center gap-2 min-w-0">
-          <ListVideo className="w-4 h-4 text-indigo-400 shrink-0" />
+          <ListVideo className="w-4 h-4 text-primary-600 dark:text-primary-400 shrink-0" />
           <div className="min-w-0">
             <Link
               href={`/courses/${courseSlug}`}
-              className="inline-flex items-center gap-2 text-xs font-semibold text-slate-400 hover:text-white transition-colors bg-slate-900/80"
+              className="inline-flex items-center gap-2 text-xs font-semibold text-muted-foreground hover:text-foreground transition-colors bg-card/80"
             >
               <h4
-                className="text-xs font-bold text-white truncate"
+                className="text-xs font-bold text-foreground truncate"
                 title={courseTitle}
               >
                 {courseTitle}
               </h4>
             </Link>
             {completedCount > 0 ? (
-              <p className="text-[10px] text-emerald-400 font-semibold truncate">
+              <p className="text-[10px] text-emerald-600 dark:text-emerald-400 font-semibold truncate">
                 {completedCount}/{totalVideos} Completed ({progressPercent}%)
               </p>
             ) : activeSectionTitle ? (
               <p
-                className="text-[10px] text-indigo-300 font-medium truncate"
+                className="text-[10px] text-primary-600 dark:text-primary-300 font-medium truncate"
                 title={activeSectionTitle}
               >
                 {activeSectionTitle}
@@ -245,14 +245,14 @@ export function VideoPlaylistSidebar({
             ) : null}
           </div>
         </div>
-        <span className="text-[10px] font-mono text-slate-400 bg-slate-800/80 px-2 py-0.5 rounded-full border border-slate-700/60 shrink-0 ml-2">
+        <span className="text-[10px] font-mono text-muted-foreground bg-slate-800/80 px-2 py-0.5 rounded-full border border-slate-700/60 shrink-0 ml-2">
           {totalVideos} vids
         </span>
       </div>
 
       {/* Thin Course Progress Bar */}
       {completedCount > 0 && (
-        <div className="w-full h-1 bg-slate-950 shrink-0">
+        <div className="w-full h-1 bg-background shrink-0">
           <div
             className="h-full bg-gradient-to-r from-emerald-500 to-teal-400 transition-all duration-500"
             style={{ width: `${progressPercent}%` }}
@@ -286,19 +286,19 @@ export function VideoPlaylistSidebar({
                 onClick={() => toggleSection(sIdx)}
                 className={`w-full flex items-center justify-between p-2.5 rounded-xl text-left transition-all group touch-manipulation ${
                   hasActiveVideo
-                    ? "bg-indigo-950/40 border border-indigo-500/40 shadow-sm shadow-indigo-500/10 ring-1 ring-indigo-500/20"
-                    : "bg-slate-950/60 border border-slate-800/60 hover:bg-slate-950"
+                    ? "bg-primary-950/40 border border-primary-500/40 shadow-sm shadow-primary-500/10 ring-1 ring-primary-500/20"
+                    : "bg-background/60 border border-card-border/60 hover:bg-background"
                 }`}
               >
                 <div className="flex items-center gap-2 min-w-0">
                   <Layers
-                    className={`w-3.5 h-3.5 shrink-0 ${hasActiveVideo ? "text-indigo-400 animate-pulse" : "text-slate-400"}`}
+                    className={`w-3.5 h-3.5 shrink-0 ${hasActiveVideo ? "text-primary-600 dark:text-primary-400 animate-pulse" : "text-muted-foreground"}`}
                   />
                   <span
                     className={`text-xs font-bold truncate transition-colors ${
                       hasActiveVideo
-                        ? "text-white"
-                        : "text-slate-200 group-hover:text-white"
+                        ? "text-foreground"
+                        : "text-foreground group-hover:text-foreground"
                     }`}
                   >
                     {sectionName}
@@ -316,7 +316,7 @@ export function VideoPlaylistSidebar({
                         {videoUnits.length}{" "}
                         {videoUnits.length === 1 ? "vid" : "vids"}
                         {formattedSecDur && (
-                          <span className="text-slate-400 font-sans text-[10px] bg-slate-900/80 px-1 py-0.5 rounded border border-slate-800">
+                          <span className="text-muted-foreground font-sans text-[10px] bg-card/80 px-1 py-0.5 rounded border border-card-border">
                             {formattedSecDur}
                           </span>
                         )}
@@ -347,26 +347,26 @@ export function VideoPlaylistSidebar({
                         href={`/courses/${courseSlug}/video/${uId}`}
                         className={`flex items-center justify-between p-2.5 rounded-xl transition-all touch-manipulation ${
                           isActive
-                            ? "bg-indigo-600/25 border border-indigo-500/50 text-white font-bold shadow-md shadow-indigo-600/10 ring-1 ring-indigo-500/30"
-                            : "hover:bg-slate-800/60 border border-transparent text-slate-400 hover:text-slate-200"
+                            ? "bg-primary-600/25 border border-primary-500/50 text-white font-bold shadow-md shadow-primary-600/10 ring-1 ring-primary-500/30"
+                            : "hover:bg-slate-800/60 border border-transparent text-muted-foreground hover:text-foreground"
                         }`}
                       >
                         <div className="flex items-center gap-2.5 min-w-0">
                           {isActive ? (
-                            <div className="w-2.5 h-2.5 rounded-full bg-indigo-400 animate-pulse shrink-0" />
+                            <div className="w-2.5 h-2.5 rounded-full bg-primary-400 animate-pulse shrink-0" />
                           ) : isCompleted ? (
-                            <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+                            <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0" />
                           ) : (
                             <PlayCircle className="w-4 h-4 text-slate-500 shrink-0" />
                           )}
                           <span className="text-xs truncate">{title}</span>
                         </div>
                         {isActive ? (
-                          <span className="text-[9px] font-extrabold uppercase px-1.5 py-0.5 rounded bg-indigo-500/30 text-indigo-300 shrink-0 ml-2">
+                          <span className="text-[9px] font-extrabold uppercase px-1.5 py-0.5 rounded bg-primary-500/30 text-primary-600 dark:text-primary-300 shrink-0 ml-2">
                             Playing
                           </span>
                         ) : isCompleted ? (
-                          <span className="text-[9px] font-bold text-emerald-400 shrink-0 ml-2">
+                          <span className="text-[9px] font-bold text-emerald-600 dark:text-emerald-400 shrink-0 ml-2">
                             Done
                           </span>
                         ) : formatUnitDuration(unit.duration) ? (
@@ -409,24 +409,24 @@ export function VideoPlaylistSidebar({
               <div
                 className={`flex items-center gap-2 px-3 py-2 sticky top-0 z-10 backdrop-blur-md border-y transition-colors ${
                   hasActiveVideo
-                    ? "bg-indigo-950/90 border-indigo-500/40 shadow-sm shadow-indigo-500/20"
-                    : "bg-slate-950/90 border-slate-800/60"
+                    ? "bg-primary-950/90 border-primary-500/40 shadow-sm shadow-primary-500/20"
+                    : "bg-background/90 border-card-border/60"
                 }`}
               >
                 <Layers
-                  className={`w-3.5 h-3.5 shrink-0 ${hasActiveVideo ? "text-indigo-400 animate-pulse" : "text-slate-400"}`}
+                  className={`w-3.5 h-3.5 shrink-0 ${hasActiveVideo ? "text-primary-600 dark:text-primary-400 animate-pulse" : "text-muted-foreground"}`}
                 />
                 <span
                   className={`text-[11px] font-bold uppercase tracking-wider truncate ${
                     hasActiveVideo
-                      ? "text-indigo-200 font-extrabold"
-                      : "text-slate-300"
+                      ? "text-primary-200 font-extrabold"
+                      : "text-foreground/80"
                   }`}
                 >
                   {sectionName}
                 </span>
                 {/* {hasActiveVideo && (
-                  <span className="text-[9px] font-extrabold uppercase px-1.5 py-0.5 rounded bg-indigo-500/30 text-indigo-300 border border-indigo-500/40 shrink-0 ml-1">
+                  <span className="text-[9px] font-extrabold uppercase px-1.5 py-0.5 rounded bg-primary-500/30 text-primary-600 dark:text-primary-300 border border-primary-500/40 shrink-0 ml-1">
                     Playing Section
                   </span>
                 )} */}
@@ -437,10 +437,10 @@ export function VideoPlaylistSidebar({
                   );
                   const formattedSecDur = formatSectionDuration(secSecs);
                   return (
-                    <span className="ml-auto text-[10px] font-mono text-slate-400 bg-slate-900 px-1.5 py-0.5 rounded border border-slate-800 shrink-0 flex items-center gap-1">
+                    <span className="ml-auto text-[10px] font-mono text-muted-foreground bg-card px-1.5 py-0.5 rounded border border-card-border shrink-0 flex items-center gap-1">
                       <span>{videoUnits.length} vids</span>
                       {formattedSecDur && (
-                        <span className="text-slate-300 font-sans border-l border-slate-700 pl-1">
+                        <span className="text-foreground/80 font-sans border-l border-slate-700 pl-1">
                           {formattedSecDur}
                         </span>
                       )}
@@ -463,7 +463,7 @@ export function VideoPlaylistSidebar({
                     href={`/courses/${courseSlug}/video/${uId}`}
                     className={`flex items-center gap-3 px-3 py-3 transition-all touch-manipulation ${
                       isActive
-                        ? "bg-indigo-600/15 border-l-2 border-indigo-500"
+                        ? "bg-primary-600/15 border-l-2 border-primary-500"
                         : "border-l-2 border-transparent hover:bg-slate-800/40"
                     }`}
                   >
@@ -471,16 +471,16 @@ export function VideoPlaylistSidebar({
                     <div
                       className={`w-12 h-8 rounded-lg shrink-0 flex items-center justify-center ${
                         isActive
-                          ? "bg-indigo-500/20"
+                          ? "bg-primary-500/20"
                           : isCompleted
                             ? "bg-emerald-950/40 border border-emerald-500/30"
                             : "bg-slate-800"
                       }`}
                     >
                       {isActive ? (
-                        <div className="w-2 h-2 rounded-full bg-indigo-400 animate-pulse" />
+                        <div className="w-2 h-2 rounded-full bg-primary-400 animate-pulse" />
                       ) : isCompleted ? (
-                        <CheckCircle2 className="w-4.5 h-4.5 text-emerald-400" />
+                        <CheckCircle2 className="w-4.5 h-4.5 text-emerald-600 dark:text-emerald-400" />
                       ) : (
                         <PlayCircle className="w-4 h-4 text-slate-500" />
                       )}
@@ -491,18 +491,18 @@ export function VideoPlaylistSidebar({
                       <p
                         className={`text-xs leading-snug line-clamp-2 ${
                           isActive
-                            ? "text-white font-semibold"
-                            : "text-slate-300"
+                            ? "text-foreground font-semibold"
+                            : "text-foreground/80"
                         }`}
                       >
                         {title}
                       </p>
                       {isActive ? (
-                        <span className="text-[9px] font-bold text-indigo-400 mt-0.5 block">
+                        <span className="text-[9px] font-bold text-primary-600 dark:text-primary-400 mt-0.5 block">
                           Now Playing
                         </span>
                       ) : isCompleted ? (
-                        <span className="text-[9px] font-bold text-emerald-400 mt-0.5 block flex items-center gap-1">
+                        <span className="text-[9px] font-bold text-emerald-600 dark:text-emerald-400 mt-0.5 block flex items-center gap-1">
                           Completed
                         </span>
                       ) : formatUnitDuration(unit.duration) ? (

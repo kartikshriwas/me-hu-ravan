@@ -83,14 +83,14 @@ export function VideoViewContainer({
         className={`flex flex-col flex-1 min-h-0 lg:grid lg:grid-cols-12 transition-all duration-300 ${
           isTheaterMode
             ? 'lg:gap-0 px-0 py-0 bg-black'
-            : 'lg:gap-4 xl:gap-6 lg:border-t lg:border-slate-800/60 px-2 sm:px-4 lg:px-6 py-2 sm:py-3'
+            : 'lg:gap-4 xl:gap-6 lg:border-t lg:border-card-border/60 px-2 sm:px-4 lg:px-6 py-2 sm:py-3'
         }`}
       >
         {/* Video Player Section */}
         <div
           className={`flex flex-col shrink-0 min-w-0 ${
             isTheaterMode
-              ? 'lg:col-span-9 xl:col-span-9 2xl:col-span-9 bg-black border-r border-slate-800/40 shadow-2xl'
+              ? 'lg:col-span-9 xl:col-span-9 2xl:col-span-9 bg-black border-r border-card-border/40 shadow-2xl'
               : 'lg:col-span-8 xl:col-span-9'
           }`}
         >
@@ -114,7 +114,7 @@ export function VideoViewContainer({
         <div
           className={`flex-1 min-h-0 overflow-hidden min-w-0 ${
             isTheaterMode
-              ? 'lg:col-span-3 xl:col-span-3 2xl:col-span-3 bg-slate-950/80'
+              ? 'lg:col-span-3 xl:col-span-3 2xl:col-span-3 bg-background/80'
               : 'lg:col-span-4 xl:col-span-3'
           }`}
         >

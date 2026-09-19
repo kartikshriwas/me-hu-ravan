@@ -34,36 +34,36 @@ export function QuizPalette({
   });
 
   return (
-    <div className="glass-panel rounded-2xl p-5 border border-slate-800 space-y-5">
+    <div className="glass-panel rounded-2xl p-5 border border-card-border space-y-5">
       
       {/* Title & Stats */}
-      <div className="flex items-center justify-between border-b border-slate-800/80 pb-3">
-        <h3 className="text-sm font-bold text-white">Question Navigator</h3>
-        <span className="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-slate-800 text-slate-300">
+      <div className="flex items-center justify-between border-b border-card-border/80 pb-3">
+        <h3 className="text-sm font-bold text-foreground">Question Navigator</h3>
+        <span className="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-slate-800 text-foreground/80">
           {totalQuestions} Questions
         </span>
       </div>
 
       {/* Legend Badge Status Grid */}
       <div className="grid grid-cols-2 gap-2 text-xs font-medium">
-        <div className="flex items-center gap-2 p-2 rounded-xl bg-slate-900/80 border border-slate-800/80">
+        <div className="flex items-center gap-2 p-2 rounded-xl bg-card/80 border border-card-border/80">
           <span className="w-3 h-3 rounded-full bg-emerald-500 shrink-0" />
-          <span className="text-slate-300 truncate">Answered ({answeredCount})</span>
+          <span className="text-foreground/80 truncate">Answered ({answeredCount})</span>
         </div>
 
-        <div className="flex items-center gap-2 p-2 rounded-lg bg-slate-900/80 border border-slate-800/80">
+        <div className="flex items-center gap-2 p-2 rounded-lg bg-card/80 border border-card-border/80">
           <span className="w-3 h-3 rounded-full bg-amber-400 shrink-0" />
-          <span className="text-slate-300 truncate">Marked ({markedCount})</span>
+          <span className="text-foreground/80 truncate">Marked ({markedCount})</span>
         </div>
 
-        <div className="flex items-center gap-2 p-2 rounded-lg bg-slate-900/80 border border-slate-800/80">
+        <div className="flex items-center gap-2 p-2 rounded-lg bg-card/80 border border-card-border/80">
           <span className="w-3 h-3 rounded-full bg-slate-700 shrink-0" />
-          <span className="text-slate-300 truncate">Pending ({unansweredCount})</span>
+          <span className="text-foreground/80 truncate">Pending ({unansweredCount})</span>
         </div>
 
-        <div className="flex items-center gap-2 p-2 rounded-lg bg-slate-900/80 border border-slate-800/80">
-          <span className="w-3 h-3 rounded-full bg-indigo-500 shrink-0 ring-2 ring-indigo-400/50" />
-          <span className="text-slate-300 truncate">Current</span>
+        <div className="flex items-center gap-2 p-2 rounded-lg bg-card/80 border border-card-border/80">
+          <span className="w-3 h-3 rounded-full bg-primary-500 shrink-0 ring-2 ring-primary-400/50" />
+          <span className="text-foreground/80 truncate">Current</span>
         </div>
       </div>
 
@@ -77,10 +77,10 @@ export function QuizPalette({
             const isMarked = ans?.isMarkedForReview;
             const isCurrent = currentIndex === idx;
 
-            let badgeStyle = 'bg-slate-900/90 text-slate-300 border-slate-800 hover:bg-slate-800 hover:text-white';
+            let badgeStyle = 'bg-card/90 text-foreground/80 border-card-border hover:bg-slate-800 hover:text-foreground';
 
             if (isSelected && isMarked) {
-              badgeStyle = 'bg-purple-600/30 text-purple-200 border-purple-500/80 font-bold';
+              badgeStyle = 'bg-primary-600/30 text-primary-200 border-primary-500/80 font-bold';
             } else if (isSelected) {
               badgeStyle = 'bg-emerald-600/30 text-emerald-200 border-emerald-500/80 font-bold';
             } else if (isMarked) {
@@ -88,7 +88,7 @@ export function QuizPalette({
             }
 
             if (isCurrent) {
-              badgeStyle = 'bg-indigo-600 text-white border-2 border-indigo-400 font-black shadow-lg shadow-indigo-600/30 scale-105 z-10';
+              badgeStyle = 'bg-primary-600 text-white border-2 border-primary-400 font-black shadow-lg shadow-primary-600/30 scale-105 z-10';
             }
 
             return (

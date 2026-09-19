@@ -64,16 +64,16 @@ export function PremiumGateModal({
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md animate-fade-in">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-background/80 backdrop-blur-md animate-fade-in">
       <div className="relative w-full max-w-md glass-panel rounded-3xl p-6 sm:p-8 border border-amber-500/30 shadow-2xl shadow-amber-500/10 space-y-6 overflow-hidden">
         
         {/* Background glow */}
-        <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-amber-500/20 via-indigo-500/10 to-transparent rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-amber-500/20 via-primary-500/10 to-transparent rounded-full blur-3xl pointer-events-none" />
 
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 p-2 rounded-xl text-slate-400 hover:text-white hover:bg-slate-800/60 transition-colors"
+          className="absolute top-4 right-4 p-2 rounded-xl text-muted-foreground hover:text-foreground hover:bg-slate-800/60 transition-colors"
         >
           <X className="w-5 h-5" />
         </button>
@@ -84,33 +84,33 @@ export function PremiumGateModal({
             <Crown className="w-8 h-8 fill-black" />
           </div>
           <div>
-            <h2 className="text-xl sm:text-2xl font-black text-white">Unlock Premium Access</h2>
-            <p className="text-xs text-amber-300/80 font-medium mt-1">
+            <h2 className="text-xl sm:text-2xl font-black text-foreground">Unlock Premium Access</h2>
+            <p className="text-xs text-amber-600 dark:text-amber-300/80 font-medium mt-1">
               &quot;{title}&quot; requires an active PrepTea Candidate Pass
             </p>
           </div>
         </div>
 
         {/* Feature List */}
-        <div className="bg-slate-900/60 rounded-2xl p-4 border border-slate-800 space-y-2 text-xs text-slate-300">
+        <div className="bg-card/60 rounded-2xl p-4 border border-card-border space-y-2 text-xs text-foreground/80">
           <div className="flex items-center gap-2">
-            <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+            <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0" />
             <span>Full access to all Practice Test Papers & Batches</span>
           </div>
           <div className="flex items-center gap-2">
-            <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+            <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0" />
             <span>Detailed step-by-step solutions & explanations</span>
           </div>
           <div className="flex items-center gap-2">
-            <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+            <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0" />
             <span>Global Leaderboard ranking & 1st attempt tracking</span>
           </div>
         </div>
 
         {/* Redeem Form */}
         <form onSubmit={handleRedeem} className="space-y-3">
-          <label className="block text-xs font-semibold text-slate-300 flex items-center gap-1.5">
-            <Key className="w-3.5 h-3.5 text-amber-400" />
+          <label className="block text-xs font-semibold text-foreground/80 flex items-center gap-1.5">
+            <Key className="w-3.5 h-3.5 text-amber-600 dark:text-amber-400" />
             <span>Have a Redeem Code?</span>
           </label>
           <div className="flex items-center gap-2">
@@ -120,7 +120,7 @@ export function PremiumGateModal({
               value={code}
               onChange={(e) => setCode(e.target.value.toUpperCase())}
               disabled={loading}
-              className="flex-1 px-4 py-2.5 rounded-xl bg-slate-900 border border-slate-800 text-xs font-mono font-bold text-white placeholder-slate-500 focus:outline-none focus:border-amber-500 uppercase tracking-wider"
+              className="flex-1 px-4 py-2.5 rounded-xl bg-card border border-card-border text-xs font-mono font-bold text-foreground placeholder-slate-500 focus:outline-none focus:border-amber-500 uppercase tracking-wider"
             />
             <button
               type="submit"
@@ -133,13 +133,13 @@ export function PremiumGateModal({
           </div>
 
           {error && (
-            <p className="text-xs text-rose-400 font-medium bg-rose-950/40 p-2.5 rounded-xl border border-rose-500/20 text-center">
+            <p className="text-xs text-rose-600 dark:text-rose-400 font-medium bg-rose-950/40 p-2.5 rounded-xl border border-rose-500/20 text-center">
               {error}
             </p>
           )}
 
           {successMsg && (
-            <p className="text-xs text-emerald-300 font-medium bg-emerald-950/40 p-2.5 rounded-xl border border-emerald-500/20 text-center">
+            <p className="text-xs text-emerald-600 dark:text-emerald-300 font-medium bg-emerald-950/40 p-2.5 rounded-xl border border-emerald-500/20 text-center">
               {successMsg}
             </p>
           )}

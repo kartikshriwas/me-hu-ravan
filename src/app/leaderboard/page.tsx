@@ -52,17 +52,17 @@ export default function LeaderboardPage() {
     <div className="w-full px-4 sm:px-8 lg:px-12 py-6 space-y-10">
       
       {/* Header Banner */}
-      <div className="glass-panel rounded-3xl p-6 sm:p-10 border border-indigo-500/30 relative overflow-hidden space-y-4">
-        <div className="absolute top-0 right-0 w-80 h-80 bg-gradient-to-br from-amber-500/15 via-indigo-500/10 to-transparent rounded-full blur-3xl pointer-events-none" />
+      <div className="glass-panel rounded-3xl p-6 sm:p-10 border border-primary-500/30 relative overflow-hidden space-y-4">
+        <div className="absolute top-0 right-0 w-80 h-80 bg-gradient-to-br from-amber-500/15 via-primary-500/10 to-transparent rounded-full blur-3xl pointer-events-none" />
 
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <div>
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs font-semibold">
-              <Trophy className="w-3.5 h-3.5 text-amber-400" />
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-600 dark:text-amber-300 text-xs font-semibold">
+              <Trophy className="w-3.5 h-3.5 text-amber-600 dark:text-amber-400" />
               <span>GLOBAL CANDIDATE RANKINGS</span>
             </div>
-            <h1 className="text-3xl sm:text-4xl font-black text-white mt-2">Leaderboard</h1>
-            <p className="text-sm text-slate-300 mt-1">
+            <h1 className="text-3xl sm:text-4xl font-black text-foreground mt-2">Leaderboard</h1>
+            <p className="text-sm text-foreground/80 mt-1">
               Top candidates ranked by total assessment points, accuracy, and completed test papers.
             </p>
           </div>
@@ -77,15 +77,15 @@ export default function LeaderboardPage() {
         <div className="space-y-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[1, 2, 3].map((n) => (
-              <div key={n} className="glass-panel rounded-3xl p-8 h-64 animate-pulse bg-slate-900/40" />
+              <div key={n} className="glass-panel rounded-3xl p-8 h-64 animate-pulse bg-card/40" />
             ))}
           </div>
         </div>
       ) : leaderboard.length === 0 ? (
         <div className="p-12 text-center glass-panel rounded-3xl space-y-4">
-          <Trophy className="w-10 h-10 text-amber-400 mx-auto" />
-          <h2 className="text-lg font-bold text-white">No Rankings Recorded Yet</h2>
-          <p className="text-xs text-slate-400">
+          <Trophy className="w-10 h-10 text-amber-600 dark:text-amber-400 mx-auto" />
+          <h2 className="text-lg font-bold text-foreground">No Rankings Recorded Yet</h2>
+          <p className="text-xs text-muted-foreground">
             Be the first candidate to complete a test and claim the #1 spot on the leaderboard!
           </p>
         </div>
@@ -99,8 +99,8 @@ export default function LeaderboardPage() {
               {/* #2 Silver (First on mobile layout or left) */}
               {topThree[1] && (
                 <div className="glass-card rounded-3xl p-6 border border-slate-700/80 flex flex-col items-center text-center space-y-4 relative order-2 md:order-1 transform md:translate-y-4">
-                  <div className="absolute -top-4 px-3 py-1 rounded-full bg-slate-800 border border-slate-700 text-slate-300 text-xs font-bold flex items-center gap-1 shadow-md">
-                    <Medal className="w-3.5 h-3.5 text-slate-300" /> #2 Silver
+                  <div className="absolute -top-4 px-3 py-1 rounded-full bg-slate-800 border border-slate-700 text-foreground/80 text-xs font-bold flex items-center gap-1 shadow-md">
+                    <Medal className="w-3.5 h-3.5 text-foreground/80" /> #2 Silver
                   </div>
 
                   <div className="mt-2">
@@ -108,20 +108,20 @@ export default function LeaderboardPage() {
                   </div>
 
                   <div>
-                    <h3 className="text-lg font-bold text-white">{topThree[1].name}</h3>
-                    <p className="text-xs text-slate-400">{topThree[1].testsCompleted} Tests Completed</p>
+                    <h3 className="text-lg font-bold text-foreground">{topThree[1].name}</h3>
+                    <p className="text-xs text-muted-foreground">{topThree[1].testsCompleted} Tests Completed</p>
                   </div>
 
-                  <div className="w-full pt-3 border-t border-slate-800/80 flex justify-between text-xs text-slate-300 font-semibold">
-                    <span>Points: <strong className="text-indigo-400">{topThree[1].totalScore} pts</strong></span>
-                    <span>Accuracy: <strong className="text-emerald-400">{topThree[1].averageAccuracy}%</strong></span>
+                  <div className="w-full pt-3 border-t border-card-border/80 flex justify-between text-xs text-foreground/80 font-semibold">
+                    <span>Points: <strong className="text-primary-600 dark:text-primary-400">{topThree[1].totalScore} pts</strong></span>
+                    <span>Accuracy: <strong className="text-emerald-600 dark:text-emerald-400">{topThree[1].averageAccuracy}%</strong></span>
                   </div>
                 </div>
               )}
 
               {/* #1 Gold (Center, Enlarged) */}
               {topThree[0] && (
-                <div className="glass-card rounded-3xl p-8 border-2 border-amber-500/50 flex flex-col items-center text-center space-y-4 relative order-1 md:order-2 shadow-2xl shadow-amber-500/10 bg-slate-900/90">
+                <div className="glass-card rounded-3xl p-8 border-2 border-amber-500/50 flex flex-col items-center text-center space-y-4 relative order-1 md:order-2 shadow-2xl shadow-amber-500/10 bg-card/90">
                   <div className="absolute -top-5 px-4 py-1.5 rounded-full bg-gradient-to-r from-amber-500 to-yellow-500 text-black text-xs font-black flex items-center gap-1.5 shadow-lg">
                     <Trophy className="w-4 h-4" /> #1 CHAMPION
                   </div>
@@ -131,13 +131,13 @@ export default function LeaderboardPage() {
                   </div>
 
                   <div>
-                    <h3 className="text-xl font-black text-white">{topThree[0].name}</h3>
-                    <p className="text-xs text-amber-300/80 font-semibold">{topThree[0].testsCompleted} Tests Completed</p>
+                    <h3 className="text-xl font-black text-foreground">{topThree[0].name}</h3>
+                    <p className="text-xs text-amber-600 dark:text-amber-300/80 font-semibold">{topThree[0].testsCompleted} Tests Completed</p>
                   </div>
 
-                  <div className="w-full pt-4 border-t border-slate-800/80 flex justify-between text-xs text-slate-200 font-bold">
-                    <span>Total: <strong className="text-amber-400 text-sm">{topThree[0].totalScore} pts</strong></span>
-                    <span>Accuracy: <strong className="text-emerald-400 text-sm">{topThree[0].averageAccuracy}%</strong></span>
+                  <div className="w-full pt-4 border-t border-card-border/80 flex justify-between text-xs text-foreground font-bold">
+                    <span>Total: <strong className="text-amber-600 dark:text-amber-400 text-sm">{topThree[0].totalScore} pts</strong></span>
+                    <span>Accuracy: <strong className="text-emerald-600 dark:text-emerald-400 text-sm">{topThree[0].averageAccuracy}%</strong></span>
                   </div>
                 </div>
               )}
@@ -154,13 +154,13 @@ export default function LeaderboardPage() {
                   </div>
 
                   <div>
-                    <h3 className="text-lg font-bold text-white">{topThree[2].name}</h3>
-                    <p className="text-xs text-slate-400">{topThree[2].testsCompleted} Tests Completed</p>
+                    <h3 className="text-lg font-bold text-foreground">{topThree[2].name}</h3>
+                    <p className="text-xs text-muted-foreground">{topThree[2].testsCompleted} Tests Completed</p>
                   </div>
 
-                  <div className="w-full pt-3 border-t border-slate-800/80 flex justify-between text-xs text-slate-300 font-semibold">
-                    <span>Points: <strong className="text-indigo-400">{topThree[2].totalScore} pts</strong></span>
-                    <span>Accuracy: <strong className="text-emerald-400">{topThree[2].averageAccuracy}%</strong></span>
+                  <div className="w-full pt-3 border-t border-card-border/80 flex justify-between text-xs text-foreground/80 font-semibold">
+                    <span>Points: <strong className="text-primary-600 dark:text-primary-400">{topThree[2].totalScore} pts</strong></span>
+                    <span>Accuracy: <strong className="text-emerald-600 dark:text-emerald-400">{topThree[2].averageAccuracy}%</strong></span>
                   </div>
                 </div>
               )}
@@ -169,18 +169,18 @@ export default function LeaderboardPage() {
           )}
 
           {/* Full Leaderboard Table */}
-          <div className="glass-panel rounded-2xl border border-slate-800 overflow-hidden shadow-2xl">
-            <div className="p-4 sm:p-5 border-b border-slate-800 flex items-center justify-between">
-              <h2 className="text-base font-bold text-white flex items-center gap-2">
-                <Flame className="w-4 h-4 text-amber-400" />
+          <div className="glass-panel rounded-2xl border border-card-border overflow-hidden shadow-2xl">
+            <div className="p-4 sm:p-5 border-b border-card-border flex items-center justify-between">
+              <h2 className="text-base font-bold text-foreground flex items-center gap-2">
+                <Flame className="w-4 h-4 text-amber-600 dark:text-amber-400" />
                 <span>Candidate Rankings</span>
               </h2>
-              <span className="text-xs text-slate-400">{leaderboard.length} Candidates</span>
+              <span className="text-xs text-muted-foreground">{leaderboard.length} Candidates</span>
             </div>
 
             <div className="overflow-x-auto">
               <table className="w-full text-left text-xs sm:text-sm">
-                <thead className="bg-slate-900/80 text-slate-400 uppercase text-[11px] font-semibold border-b border-slate-800">
+                <thead className="bg-card/80 text-muted-foreground uppercase text-[11px] font-semibold border-b border-card-border">
                   <tr>
                     <th className="py-3 px-4 sm:px-6">Rank</th>
                     <th className="py-3 px-4 sm:px-6">Candidate</th>
@@ -197,15 +197,15 @@ export default function LeaderboardPage() {
                         key={item.email}
                         className={`transition-colors ${
                           isMe
-                            ? 'bg-indigo-600/10 hover:bg-indigo-600/20 font-semibold'
-                            : 'hover:bg-slate-900/40 text-slate-200'
+                            ? 'bg-primary-600/10 hover:bg-primary-600/20 font-semibold'
+                            : 'hover:bg-card/40 text-foreground'
                         }`}
                       >
                         <td className="py-3.5 px-4 sm:px-6 font-bold">
                           {item.rank === 1 ? (
-                            <span className="px-2 py-0.5 rounded-md bg-amber-500/20 text-amber-300 border border-amber-500/40">🥇 1</span>
+                            <span className="px-2 py-0.5 rounded-md bg-amber-500/20 text-amber-600 dark:text-amber-300 border border-amber-500/40">🥇 1</span>
                           ) : item.rank === 2 ? (
-                            <span className="px-2 py-0.5 rounded-md bg-slate-700/40 text-slate-300 border border-slate-600/40">🥈 2</span>
+                            <span className="px-2 py-0.5 rounded-md bg-slate-700/40 text-foreground/80 border border-slate-600/40">🥈 2</span>
                           ) : item.rank === 3 ? (
                             <span className="px-2 py-0.5 rounded-md bg-amber-800/20 text-amber-500 border border-amber-700/40">🥉 3</span>
                           ) : (
@@ -216,21 +216,21 @@ export default function LeaderboardPage() {
                         <td className="py-3.5 px-4 sm:px-6 flex items-center gap-3">
                           <UserAvatar name={item.name} image={item.image} size="sm" />
                           <div>
-                            <p className="font-bold text-white">{item.name} {isMe && <span className="text-[10px] text-indigo-400 font-semibold">(You)</span>}</p>
+                            <p className="font-bold text-foreground">{item.name} {isMe && <span className="text-[10px] text-primary-600 dark:text-primary-400 font-semibold">(You)</span>}</p>
                           </div>
                         </td>
 
-                        <td className="py-3.5 px-4 sm:px-6 text-center font-semibold text-slate-300">
+                        <td className="py-3.5 px-4 sm:px-6 text-center font-semibold text-foreground/80">
                           {item.testsCompleted}
                         </td>
 
                         <td className="py-3.5 px-4 sm:px-6 text-center">
-                          <span className="px-2.5 py-1 rounded-lg bg-emerald-500/10 text-emerald-300 border border-emerald-500/20 font-bold">
+                          <span className="px-2.5 py-1 rounded-lg bg-emerald-500/10 text-emerald-600 dark:text-emerald-300 border border-emerald-500/20 font-bold">
                             {item.averageAccuracy}%
                           </span>
                         </td>
 
-                        <td className="py-3.5 px-4 sm:px-6 text-right font-black text-indigo-400 text-sm sm:text-base">
+                        <td className="py-3.5 px-4 sm:px-6 text-right font-black text-primary-600 dark:text-primary-400 text-sm sm:text-base">
                           {item.totalScore} pts
                         </td>
                       </tr>

@@ -596,7 +596,7 @@ export function CustomVideoPlayer({
 
     return (
       <div className="w-full flex flex-col gap-3">
-        <div className="relative w-full aspect-[16/10] sm:aspect-video min-h-[220px] sm:min-h-0 bg-black rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-800 shadow-2xl order-1">
+        <div className="relative w-full aspect-[16/10] sm:aspect-video min-h-[220px] sm:min-h-0 bg-black rounded-2xl sm:rounded-3xl overflow-hidden border border-card-border shadow-2xl order-1">
           {embedSrc ? (
             <iframe
               src={embedSrc}
@@ -610,38 +610,38 @@ export function CustomVideoPlayer({
           )}
         </div>
 
-        <div className="flex flex-wrap sm:flex-nowrap items-center justify-between gap-3 px-3 sm:px-5 py-2.5 sm:py-3 rounded-2xl bg-slate-900/60 border border-slate-800/80 order-2">
+        <div className="flex flex-wrap sm:flex-nowrap items-center justify-between gap-3 px-3 sm:px-5 py-2.5 sm:py-3 rounded-2xl bg-card/60 border border-card-border/80 order-2">
           <div className="min-w-0 flex-1">
-            <span className="text-[10px] uppercase tracking-wider font-extrabold text-red-400 flex items-center gap-1">
+            <span className="text-[10px] uppercase tracking-wider font-extrabold text-red-600 dark:text-red-400 flex items-center gap-1">
               <Sparkles className="w-3 h-3" /> YouTube Video
             </span>
-            <h3 className="text-xs sm:text-sm font-bold text-white truncate mt-0.5">{title || 'YouTube Video'}</h3>
+            <h3 className="text-xs sm:text-sm font-bold text-foreground truncate mt-0.5">{title || 'YouTube Video'}</h3>
           </div>
           <div className="flex items-center gap-2 shrink-0">
             {prevVideoUrl && (
               <Link
                 href={prevVideoUrl}
-                className="text-xs sm:text-sm font-semibold text-slate-200 hover:text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl bg-slate-800 hover:bg-slate-700/80 border border-slate-700/60 hover:border-indigo-500/50 transition-all flex items-center gap-1.5 touch-manipulation"
+                className="text-xs sm:text-sm font-semibold text-foreground hover:text-foreground px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl bg-slate-800 hover:bg-slate-700/80 border border-slate-700/60 hover:border-primary-500/50 transition-all flex items-center gap-1.5 touch-manipulation"
                 title={prevTitle ? `Previous: ${prevTitle}` : "Previous Video"}
               >
-                <ChevronLeft className="w-4 h-4 text-slate-400" />
+                <ChevronLeft className="w-4 h-4 text-muted-foreground" />
                 <span>Previous</span>
               </Link>
             )}
             {nextVideoUrl && (
               <Link
                 href={nextVideoUrl}
-                className="text-xs sm:text-sm font-semibold text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 border border-indigo-400/30 transition-all flex items-center gap-1.5 shadow-md shadow-indigo-950/40 touch-manipulation"
+                className="text-xs sm:text-sm font-semibold text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl bg-primary-600 hover:bg-primary-500 border border-primary-400/30 transition-all flex items-center gap-1.5 shadow-md shadow-primary-950/40 touch-manipulation"
                 title={nextTitle ? `Next: ${nextTitle}` : "Next Video"}
               >
                 <span>Next</span>
-                <ChevronRight className="w-4 h-4 text-white" />
+                <ChevronRight className="w-4 h-4 text-foreground" />
               </Link>
             )}
             {onClose && (
               <button
                 onClick={onClose}
-                className="text-xs font-bold text-slate-400 hover:text-white px-2.5 sm:px-3 py-1.5 rounded-xl bg-slate-800/80 border border-slate-700/60 transition-all"
+                className="text-xs font-bold text-muted-foreground hover:text-foreground px-2.5 sm:px-3 py-1.5 rounded-xl bg-slate-800/80 border border-slate-700/60 transition-all"
               >
                 Close
               </button>
@@ -654,20 +654,20 @@ export function CustomVideoPlayer({
 
   if (loading) {
     return (
-      <div className="w-full aspect-[16/10] sm:aspect-video min-h-[220px] sm:min-h-0 flex flex-col items-center justify-center bg-slate-950/90 border border-slate-800/80 rounded-2xl sm:rounded-3xl p-6">
-        <Loader2 className="w-8 h-8 text-indigo-400 animate-spin" />
-        <p className="text-xs text-slate-400 mt-3 font-medium">Loading high-definition stream...</p>
+      <div className="w-full aspect-[16/10] sm:aspect-video min-h-[220px] sm:min-h-0 flex flex-col items-center justify-center bg-background/90 border border-card-border/80 rounded-2xl sm:rounded-3xl p-6">
+        <Loader2 className="w-8 h-8 text-primary-600 dark:text-primary-400 animate-spin" />
+        <p className="text-xs text-muted-foreground mt-3 font-medium">Loading high-definition stream...</p>
       </div>
     );
   }
 
   if (error || !videoData || !activeAsset) {
     return (
-      <div className="w-full aspect-[16/10] sm:aspect-video min-h-[220px] sm:min-h-0 flex flex-col items-center justify-center bg-slate-950/90 border border-slate-800/80 rounded-2xl sm:rounded-3xl p-6 text-center space-y-3">
+      <div className="w-full aspect-[16/10] sm:aspect-video min-h-[220px] sm:min-h-0 flex flex-col items-center justify-center bg-background/90 border border-card-border/80 rounded-2xl sm:rounded-3xl p-6 text-center space-y-3">
         <AlertCircle className="w-10 h-10 text-rose-500" />
         <div className="space-y-1">
-          <p className="text-sm font-bold text-white">Playback Stream Error</p>
-          <p className="text-xs text-slate-400 max-w-sm">{error || 'Could not load video source stream.'}</p>
+          <p className="text-sm font-bold text-foreground">Playback Stream Error</p>
+          <p className="text-xs text-muted-foreground max-w-sm">{error || 'Could not load video source stream.'}</p>
         </div>
       </div>
     );
@@ -705,14 +705,14 @@ export function CustomVideoPlayer({
         {/* Double Tap Seek Feedback Ripple Overlay */}
         {seekFeedback && (
           <div
-            className={`absolute top-1/2 -translate-y-1/2 z-30 pointer-events-none flex flex-col items-center justify-center p-5 sm:p-6 rounded-full bg-indigo-600/40 backdrop-blur-md border border-indigo-400/50 text-white animate-ping duration-500 ${
+            className={`absolute top-1/2 -translate-y-1/2 z-30 pointer-events-none flex flex-col items-center justify-center p-5 sm:p-6 rounded-full bg-primary-600/40 backdrop-blur-md border border-primary-400/50 text-white animate-ping duration-500 ${
               seekFeedback.type === 'rewind' ? 'left-8 sm:left-12' : 'right-8 sm:right-12'
             }`}
           >
             {seekFeedback.type === 'rewind' ? (
-              <RotateCcw className="w-7 h-7 sm:w-8 sm:h-8 text-white" />
+              <RotateCcw className="w-7 h-7 sm:w-8 sm:h-8 text-foreground" />
             ) : (
-              <FastForward className="w-7 h-7 sm:w-8 sm:h-8 text-white" />
+              <FastForward className="w-7 h-7 sm:w-8 sm:h-8 text-foreground" />
             )}
             <span className="text-xs font-extrabold mt-1">
               {seekFeedback.type === 'rewind' ? '-10s' : '+10s'}
@@ -728,7 +728,7 @@ export function CustomVideoPlayer({
                 e.stopPropagation();
                 handlePlayPause();
               }}
-              className="pointer-events-auto w-14 h-14 sm:w-18 sm:h-18 rounded-full bg-slate-950/80 border border-slate-700/60 text-white flex items-center justify-center backdrop-blur-md shadow-2xl hover:scale-110 hover:bg-indigo-600 hover:border-indigo-400 transition-all duration-200"
+              className="pointer-events-auto w-14 h-14 sm:w-18 sm:h-18 rounded-full bg-background/80 border border-slate-700/60 text-white flex items-center justify-center backdrop-blur-md shadow-2xl hover:scale-110 hover:bg-primary-600 hover:border-primary-400 transition-all duration-200"
               aria-label={isPlaying ? 'Pause' : 'Play'}
             >
               {isPlaying ? (
@@ -751,16 +751,16 @@ export function CustomVideoPlayer({
         {showSettings && (
           <div 
             onClick={(e) => e.stopPropagation()}
-            className="absolute right-2 sm:right-6 bottom-14 sm:bottom-16 z-40 w-64 sm:w-72 max-h-[80%] overflow-y-auto rounded-2xl bg-slate-950/95 border border-slate-800 p-2.5 shadow-2xl text-slate-200 backdrop-blur-2xl custom-scrollbar animate-in fade-in zoom-in-95 duration-150 select-none"
+            className="absolute right-2 sm:right-6 bottom-14 sm:bottom-16 z-40 w-64 sm:w-72 max-h-[80%] overflow-y-auto rounded-2xl bg-background/95 border border-card-border p-2.5 shadow-2xl text-foreground backdrop-blur-2xl custom-scrollbar animate-in fade-in zoom-in-95 duration-150 select-none"
           >
             {/* MAIN MENU TAB */}
             {settingsTab === 'main' && (
               <div className="space-y-1">
-                <div className="text-[10px] font-bold tracking-wider text-slate-400 uppercase px-2 py-1 border-b border-slate-800/60 mb-1 flex items-center justify-between">
+                <div className="text-[10px] font-bold tracking-wider text-muted-foreground uppercase px-2 py-1 border-b border-card-border/60 mb-1 flex items-center justify-between">
                   <span>Settings</span>
                   <button 
                     onClick={() => setShowSettings(false)}
-                    className="p-0.5 rounded-md hover:bg-slate-800 text-slate-400 hover:text-white"
+                    className="p-0.5 rounded-md hover:bg-slate-800 text-muted-foreground hover:text-foreground"
                   >
                     <X className="w-3.5 h-3.5" />
                   </button>
@@ -769,14 +769,14 @@ export function CustomVideoPlayer({
                 {/* Quality Row */}
                 <button
                   onClick={() => setSettingsTab('quality')}
-                  className="w-full flex items-center justify-between p-2.5 rounded-xl hover:bg-slate-900/90 active:bg-slate-800 transition-all text-xs font-semibold text-slate-200 touch-manipulation group"
+                  className="w-full flex items-center justify-between p-2.5 rounded-xl hover:bg-card/90 active:bg-slate-800 transition-all text-xs font-semibold text-foreground touch-manipulation group"
                 >
                   <div className="flex items-center gap-2.5">
-                    <SlidersHorizontal className="w-4 h-4 text-indigo-400" />
+                    <SlidersHorizontal className="w-4 h-4 text-primary-600 dark:text-primary-400" />
                     <span>Quality</span>
                   </div>
-                  <div className="flex items-center gap-1.5 text-slate-400 group-hover:text-white">
-                    <span className="text-[11px] font-medium text-indigo-300 bg-indigo-500/10 px-2 py-0.5 rounded-md border border-indigo-500/20">
+                  <div className="flex items-center gap-1.5 text-muted-foreground group-hover:text-foreground">
+                    <span className="text-[11px] font-medium text-primary-600 dark:text-primary-300 bg-primary-500/10 px-2 py-0.5 rounded-md border border-primary-500/20">
                       {selectedAsset?.displayName || 'Auto'}
                     </span>
                     <ChevronRight className="w-4 h-4 text-slate-500" />
@@ -786,14 +786,14 @@ export function CustomVideoPlayer({
                 {/* Playback Speed Row */}
                 <button
                   onClick={() => setSettingsTab('speed')}
-                  className="w-full flex items-center justify-between p-2.5 rounded-xl hover:bg-slate-900/90 active:bg-slate-800 transition-all text-xs font-semibold text-slate-200 touch-manipulation group"
+                  className="w-full flex items-center justify-between p-2.5 rounded-xl hover:bg-card/90 active:bg-slate-800 transition-all text-xs font-semibold text-foreground touch-manipulation group"
                 >
                   <div className="flex items-center gap-2.5">
-                    <FastForward className="w-4 h-4 text-indigo-400" />
+                    <FastForward className="w-4 h-4 text-primary-600 dark:text-primary-400" />
                     <span>Playback Speed</span>
                   </div>
-                  <div className="flex items-center gap-1.5 text-slate-400 group-hover:text-white">
-                    <span className="text-[11px] font-medium text-indigo-300 bg-indigo-500/10 px-2 py-0.5 rounded-md border border-indigo-500/20">
+                  <div className="flex items-center gap-1.5 text-muted-foreground group-hover:text-foreground">
+                    <span className="text-[11px] font-medium text-primary-600 dark:text-primary-300 bg-primary-500/10 px-2 py-0.5 rounded-md border border-primary-500/20">
                       {`${playbackRate}x`}
                     </span>
                     <ChevronRight className="w-4 h-4 text-slate-500" />
@@ -805,12 +805,12 @@ export function CustomVideoPlayer({
             {/* QUALITY SUBMENU */}
             {settingsTab === 'quality' && (
               <div className="space-y-1">
-                <div className="flex items-center gap-2 pb-2 border-b border-slate-800/60 mb-1">
+                <div className="flex items-center gap-2 pb-2 border-b border-card-border/60 mb-1">
                   <button
                     onClick={() => setSettingsTab('main')}
-                    className="p-1 rounded-lg hover:bg-slate-800 text-slate-300 hover:text-white transition-colors flex items-center gap-1.5 text-xs font-bold"
+                    className="p-1 rounded-lg hover:bg-slate-800 text-foreground/80 hover:text-foreground transition-colors flex items-center gap-1.5 text-xs font-bold"
                   >
-                    <ChevronLeft className="w-4 h-4 text-indigo-400" />
+                    <ChevronLeft className="w-4 h-4 text-primary-600 dark:text-primary-400" />
                     <span>Quality</span>
                   </button>
                 </div>
@@ -827,17 +827,17 @@ export function CustomVideoPlayer({
                         }}
                         className={`w-full text-left p-2.5 rounded-xl transition-all flex items-center justify-between font-semibold text-xs touch-manipulation ${
                           isSelected 
-                            ? 'text-indigo-400 bg-indigo-950/40 border border-indigo-500/30 shadow-sm' 
-                            : 'text-slate-300 hover:bg-slate-900/90 active:bg-slate-800'
+                            ? 'text-primary-600 dark:text-primary-400 bg-primary-950/40 border border-primary-500/30 shadow-sm' 
+                            : 'text-foreground/80 hover:bg-card/90 active:bg-slate-800'
                         }`}
                       >
                         <div className="flex items-center gap-2.5">
                           <div className="w-4 h-4 flex items-center justify-center shrink-0">
-                            {isSelected && <Check className="w-4 h-4 text-indigo-400" />}
+                            {isSelected && <Check className="w-4 h-4 text-primary-600 dark:text-primary-400" />}
                           </div>
                           <span>{asset.displayName}</span>
                         </div>
-                        <span className="text-[10px] font-mono text-slate-400 bg-slate-900 px-1.5 py-0.5 rounded border border-slate-800">
+                        <span className="text-[10px] font-mono text-muted-foreground bg-card px-1.5 py-0.5 rounded border border-card-border">
                           {(asset.sizeBytes / (1024 * 1024)).toFixed(1)} MB
                         </span>
                       </button>
@@ -850,12 +850,12 @@ export function CustomVideoPlayer({
             {/* SPEED SUBMENU */}
             {settingsTab === 'speed' && (
               <div className="space-y-1">
-                <div className="flex items-center gap-2 pb-2 border-b border-slate-800/60 mb-1">
+                <div className="flex items-center gap-2 pb-2 border-b border-card-border/60 mb-1">
                   <button
                     onClick={() => setSettingsTab('main')}
-                    className="p-1 rounded-lg hover:bg-slate-800 text-slate-300 hover:text-white transition-colors flex items-center gap-1.5 text-xs font-bold"
+                    className="p-1 rounded-lg hover:bg-slate-800 text-foreground/80 hover:text-foreground transition-colors flex items-center gap-1.5 text-xs font-bold"
                   >
-                    <ChevronLeft className="w-4 h-4 text-indigo-400" />
+                    <ChevronLeft className="w-4 h-4 text-primary-600 dark:text-primary-400" />
                     <span>Playback Speed</span>
                   </button>
                 </div>
@@ -879,13 +879,13 @@ export function CustomVideoPlayer({
                         }}
                         className={`w-full text-left p-2.5 rounded-xl transition-all flex items-center justify-between font-semibold text-xs touch-manipulation ${
                           isActive 
-                            ? 'text-indigo-400 bg-indigo-950/40 border border-indigo-500/30 shadow-sm' 
-                            : 'text-slate-300 hover:bg-slate-900/90 active:bg-slate-800'
+                            ? 'text-primary-600 dark:text-primary-400 bg-primary-950/40 border border-primary-500/30 shadow-sm' 
+                            : 'text-foreground/80 hover:bg-card/90 active:bg-slate-800'
                         }`}
                       >
                         <div className="flex items-center gap-2.5">
                           <div className="w-4 h-4 flex items-center justify-center shrink-0">
-                            {isActive && <Check className="w-4 h-4 text-indigo-400" />}
+                            {isActive && <Check className="w-4 h-4 text-primary-600 dark:text-primary-400" />}
                           </div>
                           <span>{item.label}</span>
                         </div>
@@ -920,13 +920,13 @@ export function CustomVideoPlayer({
             
             <div 
               style={{ width: `${duration > 0 ? (currentTime / duration) * 100 : 0}%` }} 
-              className="absolute left-0 h-1.5 rounded-full bg-indigo-500 group-hover/timeline:h-2.5 transition-all shadow-[0_0_12px_rgba(99,102,241,0.6)]" 
+              className="absolute left-0 h-1.5 rounded-full bg-primary-500 group-hover/timeline:h-2.5 transition-all shadow-[0_0_12px_rgba(99,102,241,0.6)]" 
             />
 
             {scrubHoverTime !== null && (
               <div
                 style={{ left: `${scrubHoverPos}%` }}
-                className="absolute bottom-6 -translate-x-1/2 bg-slate-900 border border-slate-700 px-2 py-1 rounded-md text-[10px] font-mono text-white shadow-xl pointer-events-none z-40"
+                className="absolute bottom-6 -translate-x-1/2 bg-card border border-slate-700 px-2 py-1 rounded-md text-[10px] font-mono text-foreground shadow-xl pointer-events-none z-40"
               >
                 {formatTime(scrubHoverTime)}
               </div>
@@ -939,18 +939,18 @@ export function CustomVideoPlayer({
               step="any"
               value={currentTime}
               onChange={handleScrubChange}
-              className="absolute inset-x-0 w-full h-full opacity-0 accent-indigo-500 cursor-pointer z-20"
+              className="absolute inset-x-0 w-full h-full opacity-0 accent-primary-500 cursor-pointer z-20"
               style={{ background: 'none' }}
             />
           </div>
 
           {/* Buttons & Options Row */}
-          <div className="flex items-center justify-between text-white gap-2">
+          <div className="flex items-center justify-between text-foreground gap-2">
             <div className="flex items-center gap-1.5 sm:gap-2">
               {prevVideoUrl && (
                 <Link
                   href={prevVideoUrl}
-                  className="hidden sm:inline-flex p-1.5 sm:p-2 rounded-xl hover:bg-white/10 active:scale-95 transition-all text-slate-200 hover:text-white items-center justify-center"
+                  className="hidden sm:inline-flex p-1.5 sm:p-2 rounded-xl hover:bg-white/10 active:scale-95 transition-all text-foreground hover:text-foreground items-center justify-center"
                   title={prevTitle ? `Previous: ${prevTitle}` : "Previous Video"}
                   aria-label="Previous Video"
                 >
@@ -960,7 +960,7 @@ export function CustomVideoPlayer({
 
               <button
                 onClick={handlePlayPause}
-                className="p-1.5 sm:p-2 rounded-xl hover:bg-white/10 active:scale-95 transition-all text-white touch-manipulation"
+                className="p-1.5 sm:p-2 rounded-xl hover:bg-white/10 active:scale-95 transition-all text-foreground touch-manipulation"
                 aria-label={isPlaying ? 'Pause' : 'Play'}
               >
                 {isPlaying ? <Pause className="w-5 h-5 sm:w-6 sm:h-6 fill-white" /> : <Play className="w-5 h-5 sm:w-6 sm:h-6 fill-white" />}
@@ -969,7 +969,7 @@ export function CustomVideoPlayer({
               {nextVideoUrl && (
                 <Link
                   href={nextVideoUrl}
-                  className="hidden sm:inline-flex p-1.5 sm:p-2 rounded-xl hover:bg-white/10 active:scale-95 transition-all text-slate-200 hover:text-white items-center justify-center"
+                  className="hidden sm:inline-flex p-1.5 sm:p-2 rounded-xl hover:bg-white/10 active:scale-95 transition-all text-foreground hover:text-foreground items-center justify-center"
                   title={nextTitle ? `Next: ${nextTitle}` : "Next Video"}
                   aria-label="Next Video"
                 >
@@ -977,14 +977,14 @@ export function CustomVideoPlayer({
                 </Link>
               )}
 
-              <span className="text-[10px] sm:text-xs font-mono text-slate-300 tracking-tight ml-1">
+              <span className="text-[10px] sm:text-xs font-mono text-foreground/80 tracking-tight ml-1">
                 {formatTime(currentTime)} <span className="text-slate-500">/</span> {formatTime(duration)}
               </span>
             </div>
 
             <div className="flex items-center gap-1 sm:gap-2">
               {selectedAsset && (
-                <span className="hidden sm:inline-block text-[10px] font-bold tracking-wider uppercase px-2 py-0.5 rounded-md bg-indigo-950/80 border border-indigo-500/30 text-indigo-300">
+                <span className="hidden sm:inline-block text-[10px] font-bold tracking-wider uppercase px-2 py-0.5 rounded-md bg-primary-950/80 border border-primary-500/30 text-primary-600 dark:text-primary-300">
                   {selectedAsset.displayName}
                 </span>
               )}
@@ -994,7 +994,7 @@ export function CustomVideoPlayer({
                   if (!prev) setSettingsTab('main');
                   return !prev;
                 })}
-                className={`p-1.5 sm:p-2 rounded-xl hover:bg-white/10 transition-all text-slate-200 ${showSettings ? 'bg-white/20 text-white' : ''}`}
+                className={`p-1.5 sm:p-2 rounded-xl hover:bg-white/10 transition-all text-foreground ${showSettings ? 'bg-white/20 text-foreground' : ''}`}
                 aria-label="Settings"
               >
                 <Settings className="w-4.5 h-4.5 sm:w-5 sm:h-5" />
@@ -1003,7 +1003,7 @@ export function CustomVideoPlayer({
               {onToggleTheaterMode && (
                 <button
                   onClick={onToggleTheaterMode}
-                  className={`p-1.5 sm:p-2 rounded-xl hover:bg-white/10 transition-colors hidden sm:inline-flex items-center gap-1 ${isTheaterMode ? 'bg-purple-600/30 text-purple-300' : 'text-slate-200'}`}
+                  className={`p-1.5 sm:p-2 rounded-xl hover:bg-white/10 transition-colors hidden sm:inline-flex items-center gap-1 ${isTheaterMode ? 'bg-primary-600/30 text-primary-600 dark:text-primary-300' : 'text-foreground'}`}
                   title="Theater Mode (T)"
                   aria-label="Theater Mode"
                 >
@@ -1014,7 +1014,7 @@ export function CustomVideoPlayer({
               {document.pictureInPictureEnabled && (
                 <button
                   onClick={togglePictureInPicture}
-                  className="p-1.5 sm:p-2 rounded-xl hover:bg-white/10 text-slate-200 transition-colors hidden md:inline-flex"
+                  className="p-1.5 sm:p-2 rounded-xl hover:bg-white/10 text-foreground transition-colors hidden md:inline-flex"
                   title="Picture-in-Picture"
                 >
                   <PictureInPicture2 className="w-4.5 h-4.5 sm:w-5 sm:h-5" />
@@ -1023,7 +1023,7 @@ export function CustomVideoPlayer({
 
               <button 
                 onClick={handleToggleFullscreen} 
-                className="p-1.5 sm:p-2 rounded-xl hover:bg-white/10 text-slate-200 transition-colors"
+                className="p-1.5 sm:p-2 rounded-xl hover:bg-white/10 text-foreground transition-colors"
                 aria-label="Fullscreen"
               >
                 {isFullscreen ? <Minimize className="w-4.5 h-4.5 sm:w-5 sm:h-5" /> : <Maximize className="w-4.5 h-4.5 sm:w-5 sm:h-5" />}
@@ -1036,20 +1036,20 @@ export function CustomVideoPlayer({
         {showAutoPlayOverlay && nextVideoUrl && (
           <div 
             onClick={(e) => e.stopPropagation()}
-            className="absolute bottom-16 right-2 sm:right-6 z-40 max-w-[260px] sm:max-w-xs p-3.5 rounded-2xl bg-slate-950/95 border border-indigo-500/30 shadow-2xl backdrop-blur-xl animate-in fade-in flex flex-col gap-2 text-left text-white"
+            className="absolute bottom-16 right-2 sm:right-6 z-40 max-w-[260px] sm:max-w-xs p-3.5 rounded-2xl bg-background/95 border border-primary-500/30 shadow-2xl backdrop-blur-xl animate-in fade-in flex flex-col gap-2 text-left text-foreground"
           >
             <div className="flex items-start justify-between gap-3">
               <div>
-                <span className="text-[10px] font-extrabold uppercase text-indigo-400 tracking-wider">Up Next</span>
-                <p className="text-xs font-bold text-slate-100 line-clamp-1 mt-0.5">{nextTitle || "Next Video"}</p>
-                <p className="text-[11px] text-slate-400 mt-0.5">Playing in <span className="font-bold text-white text-xs">{autoPlayCountdown}s</span>...</p>
+                <span className="text-[10px] font-extrabold uppercase text-primary-600 dark:text-primary-400 tracking-wider">Up Next</span>
+                <p className="text-xs font-bold text-foreground line-clamp-1 mt-0.5">{nextTitle || "Next Video"}</p>
+                <p className="text-[11px] text-muted-foreground mt-0.5">Playing in <span className="font-bold text-foreground text-xs">{autoPlayCountdown}s</span>...</p>
               </div>
               <button 
                 onClick={() => {
                   setAutoPlayCancelled(true);
                   setShowAutoPlayOverlay(false);
                 }}
-                className="p-1 rounded-lg hover:bg-white/10 text-slate-400 hover:text-white transition-colors"
+                className="p-1 rounded-lg hover:bg-white/10 text-muted-foreground hover:text-foreground transition-colors"
                 title="Cancel Auto-play"
               >
                 <X className="w-4 h-4" />
@@ -1059,7 +1059,7 @@ export function CustomVideoPlayer({
             <div className="flex gap-2">
               <button
                 onClick={() => router.push(nextVideoUrl)}
-                className="flex-1 py-1.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-xs font-bold text-white transition-colors text-center shadow-lg shadow-indigo-600/30"
+                className="flex-1 py-1.5 rounded-xl bg-primary-600 hover:bg-primary-500 text-xs font-bold text-white transition-colors text-center shadow-lg shadow-primary-600/30"
               >
                 Play Now
               </button>
@@ -1068,7 +1068,7 @@ export function CustomVideoPlayer({
                   setAutoPlayCancelled(true);
                   setShowAutoPlayOverlay(false);
                 }}
-                className="px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-xs font-bold text-slate-300 transition-colors"
+                className="px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-xs font-bold text-foreground/80 transition-colors"
               >
                 Cancel
               </button>
@@ -1090,35 +1090,35 @@ export function CustomVideoPlayer({
       </div>
 
       {/* Player Info/Nav Header — rendered under the video player on mobile and desktop */}
-      <div className="flex flex-wrap sm:flex-nowrap items-center justify-between gap-3 px-4 sm:px-6 py-3 order-2 border-t border-slate-800/60 bg-slate-950/90">
+      <div className="flex flex-wrap sm:flex-nowrap items-center justify-between gap-3 px-4 sm:px-6 py-3 order-2 border-t border-card-border/60 bg-background/90">
         <div className="min-w-0 flex-1">
-          <h3 className="text-sm sm:text-base font-bold text-white truncate">{title || videoData?.name}</h3>
+          <h3 className="text-sm sm:text-base font-bold text-foreground truncate">{title || videoData?.name}</h3>
         </div>
         <div className="flex items-center gap-2 shrink-0">
           {prevVideoUrl && (
             <Link
               href={prevVideoUrl}
-              className="text-xs sm:text-sm font-semibold text-slate-200 hover:text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl bg-slate-800 hover:bg-slate-700/80 border border-slate-700/60 hover:border-indigo-500/50 transition-all flex items-center gap-1.5 touch-manipulation shadow-sm"
+              className="text-xs sm:text-sm font-semibold text-foreground hover:text-foreground px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl bg-slate-800 hover:bg-slate-700/80 border border-slate-700/60 hover:border-primary-500/50 transition-all flex items-center gap-1.5 touch-manipulation shadow-sm"
               title={prevTitle ? `Previous: ${prevTitle}` : "Previous Video"}
             >
-              <ChevronLeft className="w-4 h-4 text-slate-400" />
+              <ChevronLeft className="w-4 h-4 text-muted-foreground" />
               <span>Previous</span>
             </Link>
           )}
           {nextVideoUrl && (
             <Link
               href={nextVideoUrl}
-              className="text-xs sm:text-sm font-semibold text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 border border-indigo-400/30 transition-all flex items-center gap-1.5 shadow-md shadow-indigo-950/50 touch-manipulation"
+              className="text-xs sm:text-sm font-semibold text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl bg-primary-600 hover:bg-primary-500 border border-primary-400/30 transition-all flex items-center gap-1.5 shadow-md shadow-primary-950/50 touch-manipulation"
               title={nextTitle ? `Next: ${nextTitle}` : "Next Video"}
             >
               <span>Next</span>
-              <ChevronRight className="w-4 h-4 text-white" />
+              <ChevronRight className="w-4 h-4 text-foreground" />
             </Link>
           )}
           {onClose && (
             <button
               onClick={onClose}
-              className="text-xs sm:text-sm font-semibold text-slate-400 hover:text-white px-3 py-1.5 sm:py-2 rounded-xl bg-slate-800/80 border border-slate-700/60 transition-all"
+              className="text-xs sm:text-sm font-semibold text-muted-foreground hover:text-foreground px-3 py-1.5 sm:py-2 rounded-xl bg-slate-800/80 border border-slate-700/60 transition-all"
             >
               Close
             </button>

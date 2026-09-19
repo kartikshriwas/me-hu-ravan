@@ -809,7 +809,7 @@ export default function AdminDashboardPage() {
   if (authLoading) {
     return (
       <div className="space-y-6">
-        <div className="glass-panel rounded-3xl p-8 h-64 animate-pulse bg-slate-900/40" />
+        <div className="glass-panel rounded-3xl p-8 h-64 animate-pulse bg-card/40" />
       </div>
     );
   }
@@ -832,10 +832,10 @@ export default function AdminDashboardPage() {
       {feedbackMsg && (
         <div className="p-4 rounded-2xl bg-emerald-950/60 border border-emerald-500/40 text-emerald-200 text-xs font-bold flex items-center justify-between shadow-lg">
           <div className="flex items-center gap-2">
-            <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+            <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0" />
             <span>{feedbackMsg}</span>
           </div>
-          <button onClick={() => setFeedbackMsg('')} className="text-slate-400 hover:text-white">
+          <button onClick={() => setFeedbackMsg('')} className="text-muted-foreground hover:text-foreground">
             ✕
           </button>
         </div>
@@ -844,17 +844,17 @@ export default function AdminDashboardPage() {
       {errorMsg && (
         <div className="p-4 rounded-2xl bg-rose-950/60 border border-rose-500/40 text-rose-200 text-xs font-bold flex items-center justify-between shadow-lg">
           <div className="flex items-center gap-2">
-            <AlertCircle className="w-4 h-4 text-rose-400 shrink-0" />
+            <AlertCircle className="w-4 h-4 text-rose-600 dark:text-rose-400 shrink-0" />
             <span>{errorMsg}</span>
           </div>
-          <button onClick={() => setErrorMsg('')} className="text-slate-400 hover:text-white">
+          <button onClick={() => setErrorMsg('')} className="text-muted-foreground hover:text-foreground">
             ✕
           </button>
         </div>
       )}
 
       {/* Navigation Tabs */}
-      <div className="flex items-center gap-2 overflow-x-auto no-scrollbar p-1.5 glass-panel rounded-2xl border border-slate-800">
+      <div className="flex items-center gap-2 overflow-x-auto no-scrollbar p-1.5 glass-panel rounded-2xl border border-card-border">
         {[
           { id: 'overview', label: 'Overview', icon: BarChart3, allowed: true },
           { id: 'active-sessions', label: 'Live Monitor 🟢', icon: Activity, allowed: canManageUsers },
@@ -884,7 +884,7 @@ export default function AdminDashboardPage() {
                 isActive
                   ? 'bg-gradient-to-r from-amber-500 to-yellow-500 text-black shadow-lg shadow-amber-500/20'
                   : isAllowed
-                  ? 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/60'
+                  ? 'text-muted-foreground hover:text-foreground hover:bg-slate-800/60'
                   : 'text-slate-600 opacity-50 cursor-not-allowed'
               }`}
             >
@@ -899,36 +899,36 @@ export default function AdminDashboardPage() {
       {activeTab === 'overview' && (
         <div className="space-y-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <div className="glass-card rounded-2xl p-5 border border-slate-800 space-y-2">
-              <span className="text-xs text-slate-400 font-medium">Total Registered Candidates</span>
-              <p className="text-2xl font-black text-white">{stats?.totalUsers ?? '-'}</p>
+            <div className="glass-card rounded-2xl p-5 border border-card-border space-y-2">
+              <span className="text-xs text-muted-foreground font-medium">Total Registered Candidates</span>
+              <p className="text-2xl font-black text-foreground">{stats?.totalUsers ?? '-'}</p>
             </div>
 
-            <div className="glass-card rounded-2xl p-5 border border-slate-800 space-y-2">
-              <span className="text-xs text-slate-400 font-medium">Active Premium Members</span>
-              <p className="text-2xl font-black text-emerald-400">{stats?.premiumUsers ?? '-'}</p>
+            <div className="glass-card rounded-2xl p-5 border border-card-border space-y-2">
+              <span className="text-xs text-muted-foreground font-medium">Active Premium Members</span>
+              <p className="text-2xl font-black text-emerald-600 dark:text-emerald-400">{stats?.premiumUsers ?? '-'}</p>
             </div>
 
-            <div className="glass-card rounded-2xl p-5 border border-slate-800 space-y-2">
-              <span className="text-xs text-slate-400 font-medium">Generated Redeem Codes</span>
-              <p className="text-2xl font-black text-indigo-400">{stats?.totalCodes ?? '-'}</p>
+            <div className="glass-card rounded-2xl p-5 border border-card-border space-y-2">
+              <span className="text-xs text-muted-foreground font-medium">Generated Redeem Codes</span>
+              <p className="text-2xl font-black text-primary-600 dark:text-primary-400">{stats?.totalCodes ?? '-'}</p>
             </div>
 
-            <div className="glass-card rounded-2xl p-5 border border-slate-800 space-y-2">
-              <span className="text-xs text-slate-400 font-medium">Active Launch Promos</span>
-              <p className="text-2xl font-black text-amber-400">{stats?.activeEventsCount ?? '-'}</p>
+            <div className="glass-card rounded-2xl p-5 border border-card-border space-y-2">
+              <span className="text-xs text-muted-foreground font-medium">Active Launch Promos</span>
+              <p className="text-2xl font-black text-amber-600 dark:text-amber-400">{stats?.activeEventsCount ?? '-'}</p>
             </div>
           </div>
 
           {/* Global Platform-Wide Free Access Feature Card */}
-          <div className="glass-panel rounded-3xl p-6 border border-indigo-500/30 space-y-4 bg-gradient-to-r from-indigo-950/40 via-purple-950/20 to-slate-900 shadow-xl">
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-slate-800">
+          <div className="glass-panel rounded-3xl p-6 border border-primary-500/30 space-y-4 bg-gradient-to-r from-primary-950/40 via-primary-950/20 to-slate-900 shadow-xl">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-card-border">
               <div className="space-y-1">
                 <div className="flex items-center gap-2">
-                  <Sparkles className="w-5 h-5 text-amber-400 animate-pulse" />
-                  <h3 className="text-base font-bold text-white">Make Platform Free For Everyone</h3>
+                  <Sparkles className="w-5 h-5 text-amber-600 dark:text-amber-400 animate-pulse" />
+                  <h3 className="text-base font-bold text-foreground">Make Platform Free For Everyone</h3>
                 </div>
-                <p className="text-xs text-slate-300">
+                <p className="text-xs text-foreground/80">
                   Instantly unlock all premium practice tests and solutions for all candidates on the platform for X days.
                 </p>
               </div>
@@ -936,13 +936,13 @@ export default function AdminDashboardPage() {
               {/* Status Badge */}
               <div className="shrink-0">
                 {isGlobalFreeActive ? (
-                  <div className="px-3.5 py-1.5 rounded-xl bg-emerald-500/20 border border-emerald-500/40 text-emerald-300 text-xs font-bold flex items-center gap-1.5 shadow-lg shadow-emerald-950/50">
+                  <div className="px-3.5 py-1.5 rounded-xl bg-emerald-500/20 border border-emerald-500/40 text-emerald-600 dark:text-emerald-300 text-xs font-bold flex items-center gap-1.5 shadow-lg shadow-emerald-950/50">
                     <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
                     <span>Free for everyone until {globalFreeUntilDate}</span>
                   </div>
                 ) : (
-                  <div className="px-3.5 py-1.5 rounded-xl bg-slate-800/80 border border-slate-700 text-slate-400 text-xs font-semibold flex items-center gap-1.5">
-                    <Lock className="w-3.5 h-3.5 text-slate-400" />
+                  <div className="px-3.5 py-1.5 rounded-xl bg-slate-800/80 border border-slate-700 text-muted-foreground text-xs font-semibold flex items-center gap-1.5">
+                    <Lock className="w-3.5 h-3.5 text-muted-foreground" />
                     <span>Normal Access Rules Active</span>
                   </div>
                 )}
@@ -951,8 +951,8 @@ export default function AdminDashboardPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-end pt-1">
               <div className="space-y-2 md:col-span-2">
-                <label className="text-xs font-semibold text-slate-300 flex items-center gap-1.5">
-                  <Clock className="w-3.5 h-3.5 text-indigo-400" />
+                <label className="text-xs font-semibold text-foreground/80 flex items-center gap-1.5">
+                  <Clock className="w-3.5 h-3.5 text-primary-600 dark:text-primary-400" />
                   <span>Choose Duration (Days)</span>
                 </label>
 
@@ -964,25 +964,25 @@ export default function AdminDashboardPage() {
                       onClick={() => setGlobalFreeDaysInput(d)}
                       className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all border ${
                         globalFreeDays === d
-                          ? 'bg-indigo-600 text-white border-indigo-400 shadow-md shadow-indigo-950/50'
-                          : 'bg-slate-900/90 text-slate-300 border-slate-800 hover:bg-slate-800'
+                          ? 'bg-primary-600 text-white border-primary-400 shadow-md shadow-primary-950/50'
+                          : 'bg-card/90 text-foreground/80 border-card-border hover:bg-slate-800'
                       }`}
                     >
                       {d} {d === 1 ? 'Day' : 'Days'}
                     </button>
                   ))}
 
-                  <div className="flex items-center gap-1.5 bg-slate-900 border border-slate-800 rounded-xl px-2.5 py-1 text-xs">
-                    <span className="text-slate-400 font-semibold">Custom:</span>
+                  <div className="flex items-center gap-1.5 bg-card border border-card-border rounded-xl px-2.5 py-1 text-xs">
+                    <span className="text-muted-foreground font-semibold">Custom:</span>
                     <input
                       type="number"
                       min="1"
                       max="365"
                       value={globalFreeDays}
                       onChange={(e) => setGlobalFreeDaysInput(Math.max(1, parseInt(e.target.value) || 1))}
-                      className="w-12 bg-transparent text-white font-bold outline-none text-center no-spin"
+                      className="w-12 bg-transparent text-foreground font-bold outline-none text-center no-spin"
                     />
-                    <span className="text-slate-400 font-semibold">Days</span>
+                    <span className="text-muted-foreground font-semibold">Days</span>
                   </div>
                 </div>
               </div>
@@ -992,7 +992,7 @@ export default function AdminDashboardPage() {
                   type="button"
                   disabled={updatingGlobalFree || !canManageGlobalFree}
                   onClick={() => handleSetGlobalFree(globalFreeDays)}
-                  className="flex-1 px-4 py-2.5 rounded-xl bg-gradient-to-r from-emerald-500 via-teal-500 to-indigo-600 hover:from-emerald-400 hover:to-indigo-500 text-white font-bold text-xs shadow-lg shadow-emerald-950/40 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-1.5"
+                  className="flex-1 px-4 py-2.5 rounded-xl bg-gradient-to-r from-emerald-500 via-teal-500 to-primary-600 hover:from-emerald-400 hover:to-primary-500 text-white font-bold text-xs shadow-lg shadow-emerald-950/40 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-1.5"
                   title={!canManageGlobalFree ? 'Permission required: manage_global_free' : ''}
                 >
                   <Sparkles className="w-4 h-4 text-yellow-300" />
@@ -1004,7 +1004,7 @@ export default function AdminDashboardPage() {
                     type="button"
                     disabled={updatingGlobalFree || !canManageGlobalFree}
                     onClick={() => handleSetGlobalFree(0)}
-                    className="px-3 py-2.5 rounded-xl bg-rose-500/20 hover:bg-rose-500/30 border border-rose-500/30 text-rose-300 font-bold text-xs transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="px-3 py-2.5 rounded-xl bg-rose-500/20 hover:bg-rose-500/30 border border-rose-500/30 text-rose-600 dark:text-rose-300 font-bold text-xs transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                     title={!canManageGlobalFree ? 'Permission required: manage_global_free' : 'Revert platform back to normal access rules'}
                   >
                     Deactivate
@@ -1021,10 +1021,10 @@ export default function AdminDashboardPage() {
       {activeTab === 'active-sessions' && (
         <div className="space-y-8 animate-fade-in">
           {/* Header Bar & Auto-Refresh Indicator */}
-          <div className="flex items-center justify-between flex-wrap gap-4 relative overflow-hidden glass-panel p-6 rounded-3xl border border-slate-800/80 shadow-2xl">
+          <div className="flex items-center justify-between flex-wrap gap-4 relative overflow-hidden glass-panel p-6 rounded-3xl border border-card-border/80 shadow-2xl">
             {/* Background glowing effects */}
             <div className="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
-            <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-64 h-64 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-64 h-64 bg-primary-500/10 rounded-full blur-3xl pointer-events-none"></div>
             
             <div className="relative z-10">
               <div className="flex items-center gap-3">
@@ -1034,14 +1034,14 @@ export default function AdminDashboardPage() {
                 </div>
                 <h3 className="text-xl font-black text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-400">Live Mission Control</h3>
               </div>
-              <p className="text-sm text-slate-400 mt-1 font-medium ml-11">
+              <p className="text-sm text-muted-foreground mt-1 font-medium ml-11">
                 Real-time active candidate monitoring, advanced telemetry, and action audit trails.
               </p>
             </div>
 
-            <div className="flex items-center gap-4 relative z-10 bg-slate-950/60 p-2 pl-4 rounded-2xl border border-slate-800/80 backdrop-blur-md">
+            <div className="flex items-center gap-4 relative z-10 bg-background/60 p-2 pl-4 rounded-2xl border border-card-border/80 backdrop-blur-md">
               <div className="text-right">
-                <p className="text-sm font-black text-emerald-400 flex items-center justify-end gap-1.5 drop-shadow-[0_0_8px_rgba(52,211,153,0.4)]">
+                <p className="text-sm font-black text-emerald-600 dark:text-emerald-400 flex items-center justify-end gap-1.5 drop-shadow-[0_0_8px_rgba(52,211,153,0.4)]">
                   <Activity className="w-4 h-4 animate-pulse" />
                   <span>{activeStats?.onlineNowCount || 0} Online</span>
                 </p>
@@ -1065,10 +1065,10 @@ export default function AdminDashboardPage() {
                     setTimeout(() => setRefreshingSessions(false), 400);
                   }
                 }}
-                className="p-3 rounded-xl bg-gradient-to-b from-slate-800 to-slate-900 border border-slate-700 hover:border-indigo-500/50 text-slate-300 hover:text-white transition-all shadow-lg group"
+                className="p-3 rounded-xl bg-gradient-to-b from-slate-800 to-slate-900 border border-slate-700 hover:border-primary-500/50 text-foreground/80 hover:text-foreground transition-all shadow-lg group"
                 title="Force Refresh Telemetry"
               >
-                <RefreshCw className={`w-4 h-4 group-hover:rotate-180 transition-transform duration-500 ${refreshingSessions ? 'animate-spin text-amber-400' : ''}`} />
+                <RefreshCw className={`w-4 h-4 group-hover:rotate-180 transition-transform duration-500 ${refreshingSessions ? 'animate-spin text-amber-600 dark:text-amber-400' : ''}`} />
               </button>
             </div>
           </div>
@@ -1088,11 +1088,11 @@ export default function AdminDashboardPage() {
                   <p className="text-5xl font-black text-transparent bg-clip-text bg-gradient-to-b from-white to-emerald-200">
                     {activeStats?.activeNowCount ?? 0}
                   </p>
-                  <span className="px-2 py-1 rounded-md bg-emerald-500/20 text-emerald-400 text-[10px] font-bold border border-emerald-500/30">
+                  <span className="px-2 py-1 rounded-md bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 text-[10px] font-bold border border-emerald-500/30">
                     LIVE
                   </span>
                 </div>
-                <p className="text-[11px] text-slate-400 font-medium">Candidates currently focused and engaging.</p>
+                <p className="text-[11px] text-muted-foreground font-medium">Candidates currently focused and engaging.</p>
               </div>
             </div>
 
@@ -1101,37 +1101,37 @@ export default function AdminDashboardPage() {
               <div className="flex-1 glass-card rounded-3xl p-5 border border-amber-500/20 bg-amber-950/10 flex items-center justify-between">
                 <div>
                   <span className="text-[10px] font-bold uppercase tracking-wider text-amber-500/80 block mb-1">Avg Focus / Session</span>
-                  <p className="text-2xl font-black text-amber-300">
+                  <p className="text-2xl font-black text-amber-600 dark:text-amber-300">
                     {Math.floor((activeStats?.avgActiveSecondsPerUser || 0) / 60)}<span className="text-sm text-amber-500/70">m</span> {(activeStats?.avgActiveSecondsPerUser || 0) % 60}<span className="text-sm text-amber-500/70">s</span>
                   </p>
                 </div>
                 <div className="p-3 bg-amber-500/10 rounded-2xl border border-amber-500/20">
-                  <Clock className="w-6 h-6 text-amber-400" />
+                  <Clock className="w-6 h-6 text-amber-600 dark:text-amber-400" />
                 </div>
               </div>
-              <div className="flex-1 glass-card rounded-3xl p-5 border border-purple-500/20 bg-purple-950/10 flex items-center justify-between">
+              <div className="flex-1 glass-card rounded-3xl p-5 border border-primary-500/20 bg-primary-950/10 flex items-center justify-between">
                 <div>
-                  <span className="text-[10px] font-bold uppercase tracking-wider text-purple-500/80 block mb-1">Total Time Logged Today</span>
-                  <p className="text-2xl font-black text-purple-300">
-                    {Math.floor((activeStats?.totalActiveSecondsToday || 0) / 3600)}<span className="text-sm text-purple-500/70">h</span> {Math.floor(((activeStats?.totalActiveSecondsToday || 0) % 3600) / 60)}<span className="text-sm text-purple-500/70">m</span>
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-primary-500/80 block mb-1">Total Time Logged Today</span>
+                  <p className="text-2xl font-black text-primary-600 dark:text-primary-300">
+                    {Math.floor((activeStats?.totalActiveSecondsToday || 0) / 3600)}<span className="text-sm text-primary-500/70">h</span> {Math.floor(((activeStats?.totalActiveSecondsToday || 0) % 3600) / 60)}<span className="text-sm text-primary-500/70">m</span>
                   </p>
                 </div>
-                <div className="p-3 bg-purple-500/10 rounded-2xl border border-purple-500/20">
-                  <Sparkles className="w-6 h-6 text-purple-400" />
+                <div className="p-3 bg-primary-500/10 rounded-2xl border border-primary-500/20">
+                  <Sparkles className="w-6 h-6 text-primary-600 dark:text-primary-400" />
                 </div>
               </div>
             </div>
 
             {/* Right Column - Device Breakdown */}
             <div className="col-span-1 md:col-span-4 glass-card rounded-3xl p-6 border border-blue-500/20 bg-blue-950/10 flex flex-col justify-between">
-              <span className="text-[11px] font-bold uppercase tracking-wider text-blue-400 flex items-center gap-2 mb-4">
+              <span className="text-[11px] font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400 flex items-center gap-2 mb-4">
                 <Laptop className="w-4 h-4" /> Platform Distribution
               </span>
               
               <div className="space-y-4">
-                {[{ label: 'Desktop', icon: Laptop, count: activeStats?.desktopCount || 0, color: 'bg-indigo-500', bg: 'bg-indigo-500/20', text: 'text-indigo-400' },
-                  { label: 'Mobile', icon: Smartphone, count: activeStats?.mobileCount || 0, color: 'bg-emerald-500', bg: 'bg-emerald-500/20', text: 'text-emerald-400' },
-                  { label: 'Tablet', icon: Tablet, count: activeStats?.tabletCount || 0, color: 'bg-amber-500', bg: 'bg-amber-500/20', text: 'text-amber-400' }
+                {[{ label: 'Desktop', icon: Laptop, count: activeStats?.desktopCount || 0, color: 'bg-primary-500', bg: 'bg-primary-500/20', text: 'text-primary-600 dark:text-primary-400' },
+                  { label: 'Mobile', icon: Smartphone, count: activeStats?.mobileCount || 0, color: 'bg-emerald-500', bg: 'bg-emerald-500/20', text: 'text-emerald-600 dark:text-emerald-400' },
+                  { label: 'Tablet', icon: Tablet, count: activeStats?.tabletCount || 0, color: 'bg-amber-500', bg: 'bg-amber-500/20', text: 'text-amber-600 dark:text-amber-400' }
                 ].map((device) => {
                   const total = (activeStats?.desktopCount || 0) + (activeStats?.mobileCount || 0) + (activeStats?.tabletCount || 0);
                   const percentage = total === 0 ? 0 : Math.round((device.count / total) * 100);
@@ -1139,12 +1139,12 @@ export default function AdminDashboardPage() {
                   return (
                     <div key={device.label} className="space-y-1.5">
                       <div className="flex justify-between text-xs font-bold">
-                        <span className="flex items-center gap-1.5 text-slate-300">
+                        <span className="flex items-center gap-1.5 text-foreground/80">
                           <device.icon className={`w-3.5 h-3.5 ${device.text}`} /> {device.label}
                         </span>
                         <span className={device.text}>{device.count} <span className="text-slate-500 font-medium">({percentage}%)</span></span>
                       </div>
-                      <div className="w-full h-1.5 bg-slate-900 rounded-full overflow-hidden border border-slate-800">
+                      <div className="w-full h-1.5 bg-card rounded-full overflow-hidden border border-card-border">
                         <div className={`h-full ${device.color} rounded-full`} style={{ width: `${percentage}%` }}></div>
                       </div>
                     </div>
@@ -1176,13 +1176,13 @@ export default function AdminDashboardPage() {
               <div className="glass-panel rounded-3xl border border-amber-500/20 p-5 space-y-4 bg-amber-950/10">
                 <div className="flex items-center justify-between flex-wrap gap-3">
                   <div className="flex items-center gap-2">
-                    <Crown className="w-5 h-5 text-amber-400" />
+                    <Crown className="w-5 h-5 text-amber-600 dark:text-amber-400" />
                     <div>
-                      <h4 className="text-sm font-black text-white">
+                      <h4 className="text-sm font-black text-foreground">
                         Top Candidates Leaderboard ({activeTimeframeList.length})
                       </h4>
-                      <p className="text-[10px] text-slate-400 font-medium">
-                        Showing top candidates for <span className="text-amber-400 font-bold">{timeframeLabels[topUsersTimeframeFilter]}</span>
+                      <p className="text-[10px] text-muted-foreground font-medium">
+                        Showing top candidates for <span className="text-amber-600 dark:text-amber-400 font-bold">{timeframeLabels[topUsersTimeframeFilter]}</span>
                       </p>
                     </div>
                   </div>
@@ -1192,27 +1192,27 @@ export default function AdminDashboardPage() {
                     <select
                       value={topUsersTimeframeFilter}
                       onChange={(e) => setTopUsersTimeframeFilter(e.target.value as any)}
-                      className="px-3.5 py-2 rounded-xl bg-slate-900 border border-amber-500/30 text-amber-300 font-bold text-xs focus:outline-none focus:border-amber-400 focus:ring-1 focus:ring-amber-400 transition-all shadow-md cursor-pointer appearance-none pr-8"
+                      className="px-3.5 py-2 rounded-xl bg-card border border-amber-500/30 text-amber-600 dark:text-amber-300 font-bold text-xs focus:outline-none focus:border-amber-400 focus:ring-1 focus:ring-amber-400 transition-all shadow-md cursor-pointer appearance-none pr-8"
                     >
-                      <option value="today" className="bg-slate-950 text-slate-200">📅 Today</option>
-                      <option value="yesterday" className="bg-slate-950 text-slate-200">⏮️ Yesterday</option>
-                      <option value="thisWeek" className="bg-slate-950 text-slate-200">📅 This Week</option>
-                      <option value="lastWeek" className="bg-slate-950 text-slate-200">⏮️ Last Week</option>
-                      <option value="thisMonth" className="bg-slate-950 text-slate-200">📅 This Month</option>
-                      <option value="lastMonth" className="bg-slate-950 text-slate-200">⏮️ Last Month</option>
-                      <option value="thisYear" className="bg-slate-950 text-slate-200">🗓️ This Year</option>
-                      <option value="lastYear" className="bg-slate-950 text-slate-200">⏮️ Last Year</option>
-                      <option value="allTime" className="bg-slate-950 text-amber-300 font-bold">🏆 All Time</option>
+                      <option value="today" className="bg-background text-foreground">📅 Today</option>
+                      <option value="yesterday" className="bg-background text-foreground">⏮️ Yesterday</option>
+                      <option value="thisWeek" className="bg-background text-foreground">📅 This Week</option>
+                      <option value="lastWeek" className="bg-background text-foreground">⏮️ Last Week</option>
+                      <option value="thisMonth" className="bg-background text-foreground">📅 This Month</option>
+                      <option value="lastMonth" className="bg-background text-foreground">⏮️ Last Month</option>
+                      <option value="thisYear" className="bg-background text-foreground">🗓️ This Year</option>
+                      <option value="lastYear" className="bg-background text-foreground">⏮️ Last Year</option>
+                      <option value="allTime" className="bg-background text-amber-600 dark:text-amber-300 font-bold">🏆 All Time</option>
                     </select>
-                    <div className="absolute right-2.5 top-1/2 -translate-y-1/2 pointer-events-none text-amber-400 text-[10px]">
+                    <div className="absolute right-2.5 top-1/2 -translate-y-1/2 pointer-events-none text-amber-600 dark:text-amber-400 text-[10px]">
                       ▼
                     </div>
                   </div>
                 </div>
 
                 {activeTimeframeList.length === 0 ? (
-                  <div className="p-6 text-center bg-slate-900/40 rounded-2xl border border-slate-800/80">
-                    <p className="text-xs font-bold text-slate-400">No candidate activity logged for {timeframeLabels[topUsersTimeframeFilter]}</p>
+                  <div className="p-6 text-center bg-card/40 rounded-2xl border border-card-border/80">
+                    <p className="text-xs font-bold text-muted-foreground">No candidate activity logged for {timeframeLabels[topUsersTimeframeFilter]}</p>
                     <p className="text-[10px] text-slate-500 mt-0.5">As candidates study or take practice tests, their usage metrics will populate here.</p>
                   </div>
                 ) : (
@@ -1234,22 +1234,22 @@ export default function AdminDashboardPage() {
                         <div
                           key={u.userEmail}
                           onClick={() => openCandidateInspector(u.userEmail)}
-                          className="p-3.5 rounded-2xl bg-slate-900/80 border border-slate-800 flex items-center justify-between gap-3 hover:border-amber-500/40 transition-all shadow-md cursor-pointer group"
+                          className="p-3.5 rounded-2xl bg-card/80 border border-card-border flex items-center justify-between gap-3 hover:border-amber-500/40 transition-all shadow-md cursor-pointer group"
                         >
                           <div className="flex items-center gap-2.5 min-w-0">
-                            <span className="text-sm font-black w-6 text-center text-amber-300 shrink-0">{rankBadge}</span>
+                            <span className="text-sm font-black w-6 text-center text-amber-600 dark:text-amber-300 shrink-0">{rankBadge}</span>
                             <UserAvatar name={u.userName} email={u.userEmail} image={u.userImage} size="sm" />
                             <div className="min-w-0">
-                              <p className="text-xs font-bold text-white truncate">{u.userName}</p>
-                              <p className="text-[10px] text-slate-400 truncate">{u.userEmail}</p>
+                              <p className="text-xs font-bold text-foreground truncate">{u.userName}</p>
+                              <p className="text-[10px] text-muted-foreground truncate">{u.userEmail}</p>
                             </div>
                           </div>
 
                           <div className="text-right shrink-0 flex flex-col items-end gap-1">
-                            <span className="text-xs font-mono font-bold text-amber-300 block">
+                            <span className="text-xs font-mono font-bold text-amber-600 dark:text-amber-300 block">
                               {timeDisplay}
                             </span>
-                            <span className="text-[9px] text-slate-400 font-mono bg-slate-950/80 px-1.5 py-0.5 rounded-md border border-slate-800/80 truncate block max-w-[110px]" title={u.lastActivePath}>
+                            <span className="text-[9px] text-muted-foreground font-mono bg-background/80 px-1.5 py-0.5 rounded-md border border-card-border/80 truncate block max-w-[110px]" title={u.lastActivePath}>
                               {u.lastActivePath || "/"}
                             </span>
                           </div>
@@ -1264,9 +1264,9 @@ export default function AdminDashboardPage() {
 
           {/* Top Active Pages Heatmap Right Now */}
           {topPagesRightNow.length > 0 && (
-            <div className="glass-panel rounded-3xl border border-indigo-500/20 p-5 space-y-3 bg-indigo-950/10">
-              <h4 className="text-xs font-bold uppercase tracking-wider text-indigo-400 flex items-center gap-1.5">
-                <Globe className="w-4 h-4 text-indigo-400" />
+            <div className="glass-panel rounded-3xl border border-primary-500/20 p-5 space-y-3 bg-primary-950/10">
+              <h4 className="text-xs font-bold uppercase tracking-wider text-primary-600 dark:text-primary-400 flex items-center gap-1.5">
+                <Globe className="w-4 h-4 text-primary-600 dark:text-primary-400" />
                 <span>Most Used Tabs / Pages Being Read Right Now</span>
               </h4>
 
@@ -1277,13 +1277,13 @@ export default function AdminDashboardPage() {
                     href={p.path}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-3.5 rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-indigo-500/40 flex items-center justify-between gap-3 transition-all group shadow-md"
+                    className="p-3.5 rounded-2xl bg-card/80 border border-card-border hover:border-primary-500/40 flex items-center justify-between gap-3 transition-all group shadow-md"
                   >
                     <div className="min-w-0">
-                      <p className="text-xs font-bold text-white group-hover:text-indigo-300 truncate">{p.title}</p>
-                      <p className="text-[10px] text-slate-400 font-mono truncate">{p.path}</p>
+                      <p className="text-xs font-bold text-foreground group-hover:text-primary-600 dark:group-hover:text-primary-300 truncate">{p.title}</p>
+                      <p className="text-[10px] text-muted-foreground font-mono truncate">{p.path}</p>
                     </div>
-                    <span className="px-2.5 py-1 rounded-xl bg-indigo-600/20 text-indigo-300 border border-indigo-500/30 text-xs font-black shrink-0">
+                    <span className="px-2.5 py-1 rounded-xl bg-primary-600/20 text-primary-600 dark:text-primary-300 border border-primary-500/30 text-xs font-black shrink-0">
                       {p.count} users
                     </span>
                   </a>
@@ -1296,7 +1296,7 @@ export default function AdminDashboardPage() {
             {/* LEFT AREA: Live Candidates Grid (Spans 2 columns) */}
             <div className="lg:col-span-2 space-y-4">
               {/* Filters & Search */}
-              <div className="flex items-center justify-between flex-wrap gap-4 glass-panel p-4 rounded-2xl border border-slate-800">
+              <div className="flex items-center justify-between flex-wrap gap-4 glass-panel p-4 rounded-2xl border border-card-border">
                 <div className="flex items-center gap-1.5 overflow-x-auto no-scrollbar">
                   {[
                     { id: 'all', label: `All (${activeSessions.length})` },
@@ -1311,8 +1311,8 @@ export default function AdminDashboardPage() {
                       onClick={() => setSessionStateFilter(f.id as any)}
                       className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all shrink-0 ${
                         sessionStateFilter === f.id
-                          ? 'bg-purple-600 text-white shadow-md shadow-purple-600/30'
-                          : 'bg-slate-900/60 text-slate-400 hover:text-white border border-slate-800 hover:border-slate-700'
+                          ? 'bg-primary-600 text-white shadow-md shadow-primary-600/30'
+                          : 'bg-card/60 text-muted-foreground hover:text-foreground border border-card-border hover:border-slate-700'
                       }`}
                     >
                       {f.label}
@@ -1327,16 +1327,16 @@ export default function AdminDashboardPage() {
                     value={sessionSearchQuery}
                     onChange={(e) => setSessionSearchQuery(e.target.value)}
                     placeholder="Search candidate, OS, Path..."
-                    className="w-full pl-9 pr-4 py-2 rounded-xl bg-slate-950 border border-slate-800 text-xs font-medium text-white focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all shadow-inner"
+                    className="w-full pl-9 pr-4 py-2 rounded-xl bg-background border border-card-border text-xs font-medium text-foreground focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 transition-all shadow-inner"
                   />
                 </div>
               </div>
 
               {/* Grid of Active Candidate Cards */}
-              <div className="glass-panel rounded-3xl border border-slate-800 p-6 min-h-[400px]">
+              <div className="glass-panel rounded-3xl border border-card-border p-6 min-h-[400px]">
                 <div className="flex items-center justify-between mb-6">
-                  <h4 className="text-sm font-black text-white flex items-center gap-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5 text-indigo-400 animate-[spin_4s_linear_infinite]">
+                  <h4 className="text-sm font-black text-foreground flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5 text-primary-600 dark:text-primary-400 animate-[spin_4s_linear_infinite]">
                       <path d="M19.07 4.93A10 10 0 0 0 6.99 3.34" />
                       <path d="M4 6h.01" />
                       <path d="M2.29 9.62A10 10 0 1 0 21.31 8.35" />
@@ -1357,7 +1357,7 @@ export default function AdminDashboardPage() {
                       <div className="absolute inset-0 border-4 border-dashed border-slate-600 rounded-full animate-[spin_10s_linear_infinite]"></div>
                       <Globe className="absolute inset-0 m-auto w-8 h-8 text-slate-500" />
                     </div>
-                    <p className="text-sm font-bold text-slate-300">Awaiting Signal...</p>
+                    <p className="text-sm font-bold text-foreground/80">Awaiting Signal...</p>
                     <p className="text-xs text-slate-500 mt-1">No active candidates connected.</p>
                   </div>
                 ) : (
@@ -1390,7 +1390,7 @@ export default function AdminDashboardPage() {
                             shadowHover: 'hover:shadow-[0_0_20px_rgba(16,185,129,0.15)]',
                             bgGlow: 'bg-emerald-500/5',
                             bgDot: 'bg-emerald-500',
-                            textTime: 'text-emerald-400',
+                            textTime: 'text-emerald-600 dark:text-emerald-400',
                             pingClass: 'bg-emerald-400'
                           },
                           idle: {
@@ -1398,7 +1398,7 @@ export default function AdminDashboardPage() {
                             shadowHover: 'hover:shadow-[0_0_20px_rgba(245,158,11,0.15)]',
                             bgGlow: 'bg-amber-500/5',
                             bgDot: 'bg-amber-500',
-                            textTime: 'text-amber-400',
+                            textTime: 'text-amber-600 dark:text-amber-400',
                             pingClass: 'bg-amber-400'
                           },
                           background: {
@@ -1406,7 +1406,7 @@ export default function AdminDashboardPage() {
                             shadowHover: 'hover:shadow-[0_0_20px_rgba(100,116,139,0.15)]',
                             bgGlow: 'bg-slate-500/5',
                             bgDot: 'bg-slate-500',
-                            textTime: 'text-slate-400',
+                            textTime: 'text-muted-foreground',
                             pingClass: 'hidden'
                           },
                           focus: {
@@ -1414,7 +1414,7 @@ export default function AdminDashboardPage() {
                             shadowHover: 'hover:shadow-[0_0_20px_rgba(59,130,246,0.15)]',
                             bgGlow: 'bg-blue-500/5',
                             bgDot: 'bg-blue-500',
-                            textTime: 'text-blue-400',
+                            textTime: 'text-blue-600 dark:text-blue-400',
                             pingClass: 'bg-blue-400'
                           }
                         };
@@ -1426,7 +1426,7 @@ export default function AdminDashboardPage() {
                         return (
                           <div
                             key={session.id}
-                            className={`relative overflow-hidden p-4 rounded-2xl bg-slate-900/60 border border-slate-800 transition-all group cursor-pointer ${sConf.borderHover} ${sConf.shadowHover}`}
+                            className={`relative overflow-hidden p-4 rounded-2xl bg-card/60 border border-card-border transition-all group cursor-pointer ${sConf.borderHover} ${sConf.shadowHover}`}
                             onClick={() => setInspectingSession(session)}
                           >
                             {/* Subtle background glow based on state */}
@@ -1449,30 +1449,30 @@ export default function AdminDashboardPage() {
                                   </span>
                                 </div>
                                 <div className="min-w-0">
-                                  <p className="text-sm font-black text-white group-hover/prof:text-indigo-400 group-hover/prof:underline transition-colors truncate flex items-center gap-1">
+                                  <p className="text-sm font-black text-foreground group-hover/prof:text-primary-600 dark:text-primary-400 group-hover/prof:underline transition-colors truncate flex items-center gap-1">
                                     <span>{session.userName}</span>
-                                    <Search className="w-3 h-3 text-indigo-400 opacity-0 group-hover/prof:opacity-100 transition-opacity shrink-0" />
+                                    <Search className="w-3 h-3 text-primary-600 dark:text-primary-400 opacity-0 group-hover/prof:opacity-100 transition-opacity shrink-0" />
                                   </p>
-                                  <p className="text-[10px] text-slate-400 font-medium truncate">{session.userEmail}</p>
+                                  <p className="text-[10px] text-muted-foreground font-medium truncate">{session.userEmail}</p>
                                 </div>
                               </div>
-                              <span className="px-2 py-1 bg-slate-950 rounded-lg border border-slate-800 text-[10px] font-mono text-slate-300 font-bold shrink-0">
+                              <span className="px-2 py-1 bg-background rounded-lg border border-card-border text-[10px] font-mono text-foreground/80 font-bold shrink-0">
                                 {Math.floor(session.activeSeconds / 60)}m {session.activeSeconds % 60}s
                               </span>
                             </div>
 
-                            <div className="mt-4 p-2.5 rounded-xl bg-slate-950/80 border border-slate-800/80">
+                            <div className="mt-4 p-2.5 rounded-xl bg-background/80 border border-card-border/80">
                               <p className="text-[9px] font-bold uppercase text-slate-500 mb-1 flex justify-between">
                                 <span>Current View</span>
                                 <span className={`${sConf.textTime}`}>{session.lastSeenSecondsAgo}s ago</span>
                               </p>
-                              <p className="text-xs font-semibold text-slate-200 truncate">{session.pageTitle || 'Loading...'}</p>
-                              <p className="text-[10px] text-indigo-400/80 font-mono truncate mt-0.5">{session.currentPath}</p>
+                              <p className="text-xs font-semibold text-foreground truncate">{session.pageTitle || 'Loading...'}</p>
+                              <p className="text-[10px] text-primary-600 dark:text-primary-400/80 font-mono truncate mt-0.5">{session.currentPath}</p>
                             </div>
 
                             <div className="mt-3 flex items-center justify-between text-[10px] text-slate-500 font-bold">
                               <div className="flex items-center gap-2">
-                                <DeviceIcon className="w-3.5 h-3.5 text-slate-400" />
+                                <DeviceIcon className="w-3.5 h-3.5 text-muted-foreground" />
                                 <span>{session.os}</span>
                                 <span className="w-1 h-1 rounded-full bg-slate-700"></span>
                                 <span>{session.browser}</span>
@@ -1480,7 +1480,7 @@ export default function AdminDashboardPage() {
                               {isSuperadmin && (
                                 <button
                                   onClick={(e) => { e.stopPropagation(); handleTerminateSession(session.sessionId); }}
-                                  className="text-rose-500/50 hover:text-rose-400 p-1 rounded-md hover:bg-rose-500/10 transition-colors"
+                                  className="text-rose-500/50 hover:text-rose-600 dark:hover:text-rose-400 p-1 rounded-md hover:bg-rose-500/10 transition-colors"
                                   title="Terminate Session"
                                 >
                                   <Trash2 className="w-3.5 h-3.5" />
@@ -1497,13 +1497,13 @@ export default function AdminDashboardPage() {
 
             {/* RIGHT AREA: Global Activity Stream */}
             <div className="lg:col-span-1 space-y-4">
-              <div className="glass-panel rounded-3xl border border-slate-800 p-5 h-full flex flex-col">
+              <div className="glass-panel rounded-3xl border border-card-border p-5 h-full flex flex-col">
                 <div className="flex items-center justify-between mb-4 shrink-0">
-                  <h4 className="text-sm font-black text-white flex items-center gap-2">
-                    <History className="w-4 h-4 text-purple-400" />
+                  <h4 className="text-sm font-black text-foreground flex items-center gap-2">
+                    <History className="w-4 h-4 text-primary-600 dark:text-primary-400" />
                     <span>Global Pulse</span>
                   </h4>
-                  <span className="text-[10px] bg-purple-500/20 text-purple-300 px-2 py-0.5 rounded-md font-bold">Live Stream</span>
+                  <span className="text-[10px] bg-primary-500/20 text-primary-600 dark:text-primary-300 px-2 py-0.5 rounded-md font-bold">Live Stream</span>
                 </div>
 
                 <div className="flex-1 overflow-y-auto pr-2 space-y-3 custom-scrollbar h-[350px]">
@@ -1521,21 +1521,21 @@ export default function AdminDashboardPage() {
                       <div key={idx} className="flex gap-3 items-start group">
                         <div className="relative mt-1">
                           <div className="absolute top-4 left-2.5 -ml-px h-full w-0.5 bg-slate-800/50"></div>
-                          <div className={`relative z-10 w-5 h-5 rounded-full flex items-center justify-center border-2 border-slate-900 ${evt.type === 'navigation' ? 'bg-indigo-500' : 'bg-emerald-500'}`}>
-                            {evt.type === 'navigation' ? <Globe className="w-2.5 h-2.5 text-white" /> : <Activity className="w-2.5 h-2.5 text-white" />}
+                          <div className={`relative z-10 w-5 h-5 rounded-full flex items-center justify-center border-2 border-slate-900 ${evt.type === 'navigation' ? 'bg-primary-500' : 'bg-emerald-500'}`}>
+                            {evt.type === 'navigation' ? <Globe className="w-2.5 h-2.5 text-foreground" /> : <Activity className="w-2.5 h-2.5 text-foreground" />}
                           </div>
                         </div>
-                        <div className="flex-1 min-w-0 py-1 border-b border-slate-800/40 group-last:border-0">
-                          <p className="text-[11px] font-medium text-slate-300">
+                        <div className="flex-1 min-w-0 py-1 border-b border-card-border/40 group-last:border-0">
+                          <p className="text-[11px] font-medium text-foreground/80">
                             <span
                               onClick={() => openCandidateInspector(evt.email)}
-                              className="font-bold text-white hover:text-indigo-400 hover:underline cursor-pointer transition-colors"
+                              className="font-bold text-foreground hover:text-primary-600 dark:hover:text-primary-400 hover:underline cursor-pointer transition-colors"
                               title="Click profile to open Candidate 360° Inspector"
                             >
                               {evt.user}
                             </span>{' '}
                             {evt.type === 'navigation' ? 'navigated to' : 'interacted with'}{' '}
-                            <span className="text-indigo-300 font-mono ml-1">{evt.details}</span>
+                            <span className="text-primary-600 dark:text-primary-300 font-mono ml-1">{evt.details}</span>
                           </p>
                           <p className="text-[9px] text-slate-500 font-bold mt-0.5">
                             {new Date(evt.timestamp).toLocaleTimeString()}
@@ -1558,11 +1558,11 @@ export default function AdminDashboardPage() {
               onClick={() => setInspectingSession(null)}
             >
               <div
-                className="glass-panel w-full max-w-3xl rounded-3xl p-0 border border-slate-700/80 overflow-hidden shadow-2xl relative bg-slate-950/90 cursor-default"
+                className="glass-panel w-full max-w-3xl rounded-3xl p-0 border border-slate-700/80 overflow-hidden shadow-2xl relative bg-background/90 cursor-default"
                 onClick={(e) => e.stopPropagation()}
               >
                 {/* Modal Header */}
-                <div className="p-6 border-b border-slate-800 bg-gradient-to-r from-indigo-900/40 to-transparent flex items-center justify-between">
+                <div className="p-6 border-b border-card-border bg-gradient-to-r from-primary-900/40 to-transparent flex items-center justify-between">
                   <div
                     className="flex items-center gap-4 cursor-pointer group/modalprof"
                     onClick={() => {
@@ -1573,14 +1573,14 @@ export default function AdminDashboardPage() {
                   >
                     <UserAvatar name={inspectingSession.userName} email={inspectingSession.userEmail} image={inspectingSession.userImage} size="lg" />
                     <div>
-                      <h3 className="text-lg font-black text-white group-hover/modalprof:text-indigo-400 group-hover/modalprof:underline transition-colors flex items-center gap-1.5">
+                      <h3 className="text-lg font-black text-foreground group-hover/modalprof:text-primary-600 dark:text-primary-400 group-hover/modalprof:underline transition-colors flex items-center gap-1.5">
                         <span>{inspectingSession.userName}</span>
-                        <Search className="w-4 h-4 text-indigo-400" />
+                        <Search className="w-4 h-4 text-primary-600 dark:text-primary-400" />
                       </h3>
-                      <p className="text-xs text-indigo-300 font-medium">{inspectingSession.userEmail}</p>
+                      <p className="text-xs text-primary-600 dark:text-primary-300 font-medium">{inspectingSession.userEmail}</p>
                     </div>
                   </div>
-                  <button onClick={() => setInspectingSession(null)} className="p-2 bg-slate-900 rounded-full text-slate-400 hover:text-white hover:bg-slate-800 transition-colors border border-slate-700">
+                  <button onClick={() => setInspectingSession(null)} className="p-2 bg-card rounded-full text-muted-foreground hover:text-foreground hover:bg-slate-800 transition-colors border border-slate-700">
                     <X className="w-5 h-5" />
                   </button>
                 </div>
@@ -1588,44 +1588,44 @@ export default function AdminDashboardPage() {
                 <div className="p-6 space-y-6">
                   {/* Device & Connection specs */}
                   <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
-                    <div className="bg-slate-900/60 p-3.5 rounded-2xl border border-slate-800">
+                    <div className="bg-card/60 p-3.5 rounded-2xl border border-card-border">
                       <span className="text-[10px] text-slate-500 font-bold block uppercase tracking-wider mb-1">Device Type</span>
-                      <span className="font-bold text-slate-200 text-xs capitalize flex items-center gap-1.5">
-                        <ModalDeviceIcon className="w-4 h-4 text-indigo-400" /> {inspectingSession.deviceType || 'Desktop'}
+                      <span className="font-bold text-foreground text-xs capitalize flex items-center gap-1.5">
+                        <ModalDeviceIcon className="w-4 h-4 text-primary-600 dark:text-primary-400" /> {inspectingSession.deviceType || 'Desktop'}
                       </span>
                     </div>
-                    <div className="bg-slate-900/60 p-3.5 rounded-2xl border border-slate-800">
+                    <div className="bg-card/60 p-3.5 rounded-2xl border border-card-border">
                       <span className="text-[10px] text-slate-500 font-bold block uppercase tracking-wider mb-1">Platform</span>
-                      <span className="font-bold text-slate-200 text-xs truncate block">{inspectingSession.os}</span>
+                      <span className="font-bold text-foreground text-xs truncate block">{inspectingSession.os}</span>
                     </div>
-                    <div className="bg-slate-900/60 p-3.5 rounded-2xl border border-slate-800">
+                    <div className="bg-card/60 p-3.5 rounded-2xl border border-card-border">
                       <span className="text-[10px] text-slate-500 font-bold block uppercase tracking-wider mb-1">Browser</span>
-                      <span className="font-bold text-slate-200 text-xs truncate block">{inspectingSession.browser}</span>
+                      <span className="font-bold text-foreground text-xs truncate block">{inspectingSession.browser}</span>
                     </div>
-                    <div className="bg-slate-900/60 p-3.5 rounded-2xl border border-slate-800">
+                    <div className="bg-card/60 p-3.5 rounded-2xl border border-card-border">
                       <span className="text-[10px] text-slate-500 font-bold block uppercase tracking-wider mb-1">Resolution</span>
-                      <span className="font-bold text-slate-200 text-xs truncate block">{inspectingSession.screenResolution || '1920x1080'}</span>
+                      <span className="font-bold text-foreground text-xs truncate block">{inspectingSession.screenResolution || '1920x1080'}</span>
                     </div>
-                    <div className="bg-slate-900/60 p-3.5 rounded-2xl border border-slate-800">
+                    <div className="bg-card/60 p-3.5 rounded-2xl border border-card-border">
                       <span className="text-[10px] text-slate-500 font-bold block uppercase tracking-wider mb-1">Network</span>
-                      <span className="font-bold text-slate-200 text-xs uppercase truncate block">{inspectingSession.networkType || '4g'}</span>
+                      <span className="font-bold text-foreground text-xs uppercase truncate block">{inspectingSession.networkType || '4g'}</span>
                     </div>
-                    <div className="bg-slate-900/60 p-3.5 rounded-2xl border border-slate-800">
+                    <div className="bg-card/60 p-3.5 rounded-2xl border border-card-border">
                       <span className="text-[10px] text-slate-500 font-bold block uppercase tracking-wider mb-1">Duration</span>
-                      <span className="font-bold text-emerald-400 text-xs truncate block">{Math.floor(inspectingSession.activeSeconds / 60)}m active</span>
+                      <span className="font-bold text-emerald-600 dark:text-emerald-400 text-xs truncate block">{Math.floor(inspectingSession.activeSeconds / 60)}m active</span>
                     </div>
                   </div>
 
                   {/* IP Address & User-Agent info */}
-                  <div className="bg-slate-900/40 p-4 rounded-2xl border border-slate-800 flex flex-wrap items-center justify-between gap-4">
+                  <div className="bg-card/40 p-4 rounded-2xl border border-card-border flex flex-wrap items-center justify-between gap-4">
                     <div>
                       <span className="text-[10px] text-slate-500 font-bold block uppercase tracking-wider mb-0.5">IP Address / Hash</span>
-                      <span className="font-mono text-xs font-bold text-indigo-300">{inspectingSession.ipAddress || 'Not recorded'}</span>
+                      <span className="font-mono text-xs font-bold text-primary-600 dark:text-primary-300">{inspectingSession.ipAddress || 'Not recorded'}</span>
                     </div>
                     {inspectingSession.userAgent && (
                       <div className="max-w-md">
                         <span className="text-[10px] text-slate-500 font-bold block uppercase tracking-wider mb-0.5">User Agent</span>
-                        <span className="text-[10px] text-slate-400 font-mono block truncate" title={inspectingSession.userAgent}>
+                        <span className="text-[10px] text-muted-foreground font-mono block truncate" title={inspectingSession.userAgent}>
                           {inspectingSession.userAgent}
                         </span>
                       </div>
@@ -1633,10 +1633,10 @@ export default function AdminDashboardPage() {
                   </div>
 
                   {/* Audit Trail Log */}
-                  <div className="bg-slate-900/40 rounded-2xl p-4 border border-slate-800 space-y-3">
-                    <h4 className="text-xs font-bold text-slate-300 uppercase tracking-wider flex items-center justify-between">
+                  <div className="bg-card/40 rounded-2xl p-4 border border-card-border space-y-3">
+                    <h4 className="text-xs font-bold text-foreground/80 uppercase tracking-wider flex items-center justify-between">
                       <span className="flex items-center gap-2">
-                        <Activity className="w-4 h-4 text-indigo-400" /> Activity Audit Log
+                        <Activity className="w-4 h-4 text-primary-600 dark:text-primary-400" /> Activity Audit Log
                       </span>
                       <span className="text-[10px] text-slate-500 font-normal">
                         {inspectingSession.recentEvents?.length || 0} Recorded Events
@@ -1646,8 +1646,8 @@ export default function AdminDashboardPage() {
                     <div className="max-h-56 overflow-y-auto space-y-2 pr-1 custom-scrollbar">
                       {inspectingSession.recentEvents && inspectingSession.recentEvents.length > 0 ? (
                         inspectingSession.recentEvents.map((evt: SessionEventItem, idx: number) => (
-                          <div key={idx} className="bg-slate-950/60 p-2.5 rounded-xl border border-slate-800/80 text-xs flex items-start justify-between gap-3">
-                            <span className="text-slate-300 font-medium text-[11px] leading-relaxed break-all">
+                          <div key={idx} className="bg-background/60 p-2.5 rounded-xl border border-card-border/80 text-xs flex items-start justify-between gap-3">
+                            <span className="text-foreground/80 font-medium text-[11px] leading-relaxed break-all">
                               {evt.details}
                             </span>
                             <span className="text-[10px] font-mono text-slate-500 whitespace-nowrap pt-0.5">
@@ -1664,14 +1664,14 @@ export default function AdminDashboardPage() {
                   </div>
                 </div>
 
-                <div className="p-5 bg-slate-900/50 border-t border-slate-800 flex items-center justify-between">
+                <div className="p-5 bg-card/50 border-t border-card-border flex items-center justify-between">
                   <div className="text-[10px] text-slate-500 font-mono font-bold">
                     ID: {inspectingSession.sessionId}
                   </div>
                   {isSuperadmin && (
                     <button
                       onClick={() => { handleTerminateSession(inspectingSession.sessionId); setInspectingSession(null); }}
-                      className="px-5 py-2.5 rounded-xl bg-rose-600/10 hover:bg-rose-600/20 text-rose-400 text-xs font-bold border border-rose-500/20 transition-all flex items-center gap-2"
+                      className="px-5 py-2.5 rounded-xl bg-rose-600/10 hover:bg-rose-600/20 text-rose-600 dark:text-rose-400 text-xs font-bold border border-rose-500/20 transition-all flex items-center gap-2"
                     >
                       <Trash2 className="w-4 h-4" />
                       <span>Terminate User Session</span>
@@ -1690,30 +1690,30 @@ export default function AdminDashboardPage() {
         <div className="space-y-6">
           {/* Header Stats Bar */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-            <div className="glass-panel p-5 rounded-2xl border border-slate-800 space-y-1">
-              <span className="text-xs font-bold text-slate-400 block uppercase tracking-wider">Total Telemetry Logs</span>
-              <span className="text-2xl font-black text-white">{allSessionsStats?.total || allSessionsList.length || 0}</span>
+            <div className="glass-panel p-5 rounded-2xl border border-card-border space-y-1">
+              <span className="text-xs font-bold text-muted-foreground block uppercase tracking-wider">Total Telemetry Logs</span>
+              <span className="text-2xl font-black text-foreground">{allSessionsStats?.total || allSessionsList.length || 0}</span>
             </div>
             <div className="glass-panel p-5 rounded-2xl border border-emerald-500/20 bg-emerald-500/5 space-y-1">
-              <span className="text-xs font-bold text-emerald-400 block uppercase tracking-wider flex items-center gap-1.5">
+              <span className="text-xs font-bold text-emerald-600 dark:text-emerald-400 block uppercase tracking-wider flex items-center gap-1.5">
                 <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" /> Live Active
               </span>
-              <span className="text-2xl font-black text-emerald-300">{allSessionsStats?.active || 0}</span>
+              <span className="text-2xl font-black text-emerald-600 dark:text-emerald-300">{allSessionsStats?.active || 0}</span>
             </div>
             <div className="glass-panel p-5 rounded-2xl border border-slate-700/40 bg-slate-800/20 space-y-1">
-              <span className="text-xs font-bold text-slate-400 block uppercase tracking-wider">Offline / Past</span>
-              <span className="text-2xl font-black text-slate-300">{allSessionsStats?.offline || 0}</span>
+              <span className="text-xs font-bold text-muted-foreground block uppercase tracking-wider">Offline / Past</span>
+              <span className="text-2xl font-black text-foreground/80">{allSessionsStats?.offline || 0}</span>
             </div>
             <div className="glass-panel p-5 rounded-2xl border border-rose-500/20 bg-rose-500/5 space-y-1">
-              <span className="text-xs font-bold text-rose-400 block uppercase tracking-wider flex items-center gap-1.5">
+              <span className="text-xs font-bold text-rose-600 dark:text-rose-400 block uppercase tracking-wider flex items-center gap-1.5">
                 <Trash2 className="w-3.5 h-3.5" /> Terminated
               </span>
-              <span className="text-2xl font-black text-rose-300">{allSessionsStats?.terminated || 0}</span>
+              <span className="text-2xl font-black text-rose-600 dark:text-rose-300">{allSessionsStats?.terminated || 0}</span>
             </div>
           </div>
 
           {/* Search Bar & Filters */}
-          <div className="glass-panel p-5 rounded-3xl border border-slate-800 space-y-4">
+          <div className="glass-panel p-5 rounded-3xl border border-card-border space-y-4">
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4">
               {/* Search Box */}
               <div className="relative flex-1">
@@ -1726,7 +1726,7 @@ export default function AdminDashboardPage() {
                     setAllSessionsQuery(e.target.value);
                     fetchAllSessions(e.target.value, allSessionsTabState);
                   }}
-                  className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-slate-900/80 border border-slate-800 text-xs text-slate-200 placeholder-slate-500 focus:outline-none focus:border-indigo-500 transition-all"
+                  className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-card/80 border border-card-border text-xs text-foreground placeholder-slate-500 focus:outline-none focus:border-primary-500 transition-all"
                 />
                 {allSessionsQuery && (
                   <button
@@ -1734,7 +1734,7 @@ export default function AdminDashboardPage() {
                       setAllSessionsQuery('');
                       fetchAllSessions('', allSessionsTabState);
                     }}
-                    className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-500 hover:text-white text-xs"
+                    className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-500 hover:text-foreground text-xs"
                   >
                     ✕
                   </button>
@@ -1742,7 +1742,7 @@ export default function AdminDashboardPage() {
               </div>
 
               {/* Status Filter Buttons */}
-              <div className="flex items-center gap-1.5 bg-slate-900/60 p-1 rounded-xl border border-slate-800 overflow-x-auto">
+              <div className="flex items-center gap-1.5 bg-card/60 p-1 rounded-xl border border-card-border overflow-x-auto">
                 {[
                   { id: 'all', label: '🌐 Online & Offline' },
                   { id: 'active', label: '🟢 Live Active' },
@@ -1758,8 +1758,8 @@ export default function AdminDashboardPage() {
                     }}
                     className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all whitespace-nowrap ${
                       allSessionsTabState === st.id
-                        ? 'bg-indigo-600 text-white shadow-md shadow-indigo-600/30'
-                        : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/40'
+                        ? 'bg-primary-600 text-white shadow-md shadow-primary-600/30'
+                        : 'text-muted-foreground hover:text-foreground hover:bg-slate-800/40'
                     }`}
                   >
                     {st.label}
@@ -1772,9 +1772,9 @@ export default function AdminDashboardPage() {
                 <button
                   onClick={() => fetchAllSessions(allSessionsQuery, allSessionsTabState)}
                   disabled={allSessionsLoading}
-                  className="px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-bold border border-slate-700 transition-all flex items-center justify-center gap-2"
+                  className="px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-foreground text-xs font-bold border border-slate-700 transition-all flex items-center justify-center gap-2"
                 >
-                  <RefreshCw className={`w-3.5 h-3.5 ${allSessionsLoading ? 'animate-spin text-indigo-400' : ''}`} />
+                  <RefreshCw className={`w-3.5 h-3.5 ${allSessionsLoading ? 'animate-spin text-primary-600 dark:text-primary-400' : ''}`} />
                   <span>Refresh</span>
                 </button>
 
@@ -1782,10 +1782,10 @@ export default function AdminDashboardPage() {
                 {isSuperadmin && (
                   <button
                     onClick={handleTerminateSystemWideSessions}
-                    className="px-4 py-2.5 rounded-xl bg-rose-600/20 hover:bg-rose-600/40 text-rose-300 text-xs font-bold border border-rose-500/30 transition-all flex items-center justify-center gap-2 shadow-lg shadow-rose-950/40"
+                    className="px-4 py-2.5 rounded-xl bg-rose-600/20 hover:bg-rose-600/40 text-rose-600 dark:text-rose-300 text-xs font-bold border border-rose-500/30 transition-all flex items-center justify-center gap-2 shadow-lg shadow-rose-950/40"
                     title="Terminate all active user sessions across the entire platform at once"
                   >
-                    <Trash2 className="w-3.5 h-3.5 text-rose-400" />
+                    <Trash2 className="w-3.5 h-3.5 text-rose-600 dark:text-rose-400" />
                     <span>Terminate ALL Sessions (Global)</span>
                   </button>
                 )}
@@ -1794,22 +1794,22 @@ export default function AdminDashboardPage() {
           </div>
 
           {/* Telemetry Table */}
-          <div className="glass-panel rounded-3xl border border-slate-800 overflow-hidden">
+          <div className="glass-panel rounded-3xl border border-card-border overflow-hidden">
             {allSessionsLoading ? (
-              <div className="p-12 text-center text-slate-400 space-y-3">
-                <Loader2 className="w-8 h-8 animate-spin mx-auto text-indigo-400" />
+              <div className="p-12 text-center text-muted-foreground space-y-3">
+                <Loader2 className="w-8 h-8 animate-spin mx-auto text-primary-600 dark:text-primary-400" />
                 <p className="text-xs font-medium">Loading session telemetry across all user accounts...</p>
               </div>
             ) : allSessionsList.length === 0 ? (
-              <div className="p-12 text-center text-slate-400 space-y-2">
+              <div className="p-12 text-center text-muted-foreground space-y-2">
                 <Globe className="w-8 h-8 text-slate-600 mx-auto" />
-                <p className="text-sm font-bold text-slate-300">No session telemetry records found</p>
+                <p className="text-sm font-bold text-foreground/80">No session telemetry records found</p>
                 <p className="text-xs text-slate-500">Try adjusting search term or status filter tab.</p>
               </div>
             ) : (
               <div className="overflow-x-auto">
-                <table className="w-full text-left text-xs text-slate-300">
-                  <thead className="bg-slate-900/90 text-slate-400 font-bold border-b border-slate-800 uppercase tracking-wider">
+                <table className="w-full text-left text-xs text-foreground/80">
+                  <thead className="bg-card/90 text-muted-foreground font-bold border-b border-card-border uppercase tracking-wider">
                     <tr>
                       <th className="py-3.5 px-4">User / Candidate</th>
                       <th className="py-3.5 px-4">Device & IP</th>
@@ -1824,22 +1824,22 @@ export default function AdminDashboardPage() {
                       const isTerminated = s.terminated;
 
                       return (
-                        <tr key={s.id} className="hover:bg-slate-900/40 transition-colors">
+                        <tr key={s.id} className="hover:bg-card/40 transition-colors">
                           <td className="py-3 px-4">
                             <div className="flex items-center gap-2.5">
                               <UserAvatar name={s.userName} image={s.userImage} className="w-8 h-8 rounded-full border border-slate-700" />
                               <div className="space-y-0.5">
-                                <span className="font-bold text-slate-100 block">{s.userName}</span>
-                                <span className="text-[11px] text-indigo-400 font-mono block">{s.userEmail}</span>
+                                <span className="font-bold text-foreground block">{s.userName}</span>
+                                <span className="text-[11px] text-primary-600 dark:text-primary-400 font-mono block">{s.userEmail}</span>
                               </div>
                             </div>
                           </td>
                           <td className="py-3 px-4">
                             <div className="space-y-0.5">
-                              <span className="font-bold text-slate-200 block capitalize">
+                              <span className="font-bold text-foreground block capitalize">
                                 {s.deviceType === 'mobile' ? '📱 Mobile' : s.deviceType === 'tablet' ? '📱 Tablet' : '💻 Desktop'} · {s.browser}
                               </span>
-                              <span className="text-[10px] text-slate-400 font-mono block">
+                              <span className="text-[10px] text-muted-foreground font-mono block">
                                 {s.os} · 📍 IP: {s.ipAddress || 'Unknown'}
                               </span>
                             </div>
@@ -1848,44 +1848,44 @@ export default function AdminDashboardPage() {
                             <div className="space-y-1">
                               <div className="flex items-center gap-1.5">
                                 {isTerminated ? (
-                                  <span className="px-2 py-0.5 rounded-full text-[10px] font-extrabold bg-rose-500/10 text-rose-400 border border-rose-500/20">
+                                  <span className="px-2 py-0.5 rounded-full text-[10px] font-extrabold bg-rose-500/10 text-rose-600 dark:text-rose-400 border border-rose-500/20">
                                     🔴 Terminated
                                   </span>
                                 ) : s.state === 'active' ? (
-                                  <span className="px-2 py-0.5 rounded-full text-[10px] font-extrabold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 flex items-center gap-1">
+                                  <span className="px-2 py-0.5 rounded-full text-[10px] font-extrabold bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20 flex items-center gap-1">
                                     <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" /> Live Active
                                   </span>
                                 ) : s.state === 'focus' ? (
-                                  <span className="px-2 py-0.5 rounded-full text-[10px] font-extrabold bg-purple-500/10 text-purple-400 border border-purple-500/20">
+                                  <span className="px-2 py-0.5 rounded-full text-[10px] font-extrabold bg-primary-500/10 text-primary-600 dark:text-primary-400 border border-primary-500/20">
                                     🟣 Focus Studying
                                   </span>
                                 ) : s.state === 'idle' ? (
-                                  <span className="px-2 py-0.5 rounded-full text-[10px] font-extrabold bg-amber-500/10 text-amber-400 border border-amber-500/20">
+                                  <span className="px-2 py-0.5 rounded-full text-[10px] font-extrabold bg-amber-500/10 text-amber-600 dark:text-amber-400 border border-amber-500/20">
                                     🟡 Away Idle
                                   </span>
                                 ) : s.state === 'background' ? (
-                                  <span className="px-2 py-0.5 rounded-full text-[10px] font-extrabold bg-slate-800 text-slate-400 border border-slate-700">
+                                  <span className="px-2 py-0.5 rounded-full text-[10px] font-extrabold bg-slate-800 text-muted-foreground border border-slate-700">
                                     ⚙️ Background Tab
                                   </span>
                                 ) : (
-                                  <span className="px-2 py-0.5 rounded-full text-[10px] font-extrabold bg-slate-800 text-slate-400 border border-slate-700">
+                                  <span className="px-2 py-0.5 rounded-full text-[10px] font-extrabold bg-slate-800 text-muted-foreground border border-slate-700">
                                     ⚪ Offline
                                   </span>
                                 )}
                               </div>
-                              <span className="text-[10px] text-slate-400 font-mono block truncate max-w-[180px]" title={s.currentPath}>
+                              <span className="text-[10px] text-muted-foreground font-mono block truncate max-w-[180px]" title={s.currentPath}>
                                 {s.currentPath}
                               </span>
                             </div>
                           </td>
                           <td className="py-3 px-4">
-                            <span className="text-slate-300 font-mono text-[11px] block">
+                            <span className="text-foreground/80 font-mono text-[11px] block">
                               {new Date(s.startedAt).toLocaleString(undefined, { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' })}
                             </span>
                           </td>
                           <td className="py-3 px-4">
                             <div className="space-y-0.5">
-                              <span className="text-slate-200 font-mono text-[11px] block">
+                              <span className="text-foreground font-mono text-[11px] block">
                                 {s.lastSeenSecondsAgo < 60
                                   ? `${s.lastSeenSecondsAgo}s ago`
                                   : `${Math.floor(s.lastSeenSecondsAgo / 60)}m ago`}
@@ -1901,7 +1901,7 @@ export default function AdminDashboardPage() {
                                 <button
                                   onClick={() => handleTerminateSession(s.sessionId)}
                                   title="Terminate this session"
-                                  className="p-1.5 rounded-lg bg-rose-500/10 hover:bg-rose-500/20 text-rose-400 border border-rose-500/20 transition-all text-xs font-bold"
+                                  className="p-1.5 rounded-lg bg-rose-500/10 hover:bg-rose-500/20 text-rose-600 dark:text-rose-400 border border-rose-500/20 transition-all text-xs font-bold"
                                 >
                                   Terminate
                                 </button>
@@ -1909,7 +1909,7 @@ export default function AdminDashboardPage() {
                               <button
                                 onClick={() => handleTerminateAllSessionsForEmail(s.userEmail)}
                                 title="Terminate ALL sessions for this email"
-                                className="p-1.5 rounded-lg bg-slate-800 hover:bg-rose-900/30 text-slate-300 hover:text-rose-300 border border-slate-700 transition-all text-[11px] font-bold"
+                                className="p-1.5 rounded-lg bg-slate-800 hover:bg-rose-900/30 text-foreground/80 hover:text-rose-600 dark:hover:text-rose-300 border border-slate-700 transition-all text-[11px] font-bold"
                               >
                                 Terminate All
                               </button>
@@ -1930,42 +1930,42 @@ export default function AdminDashboardPage() {
       {activeTab === 'codes' && (
         <div className="space-y-6">
           {/* Generator Form */}
-          <div className="glass-panel rounded-3xl p-6 sm:p-8 border border-slate-800 space-y-4">
-            <h2 className="text-base sm:text-lg font-bold text-white flex items-center gap-2">
-              <Key className="w-5 h-5 text-indigo-400" />
+          <div className="glass-panel rounded-3xl p-6 sm:p-8 border border-card-border space-y-4">
+            <h2 className="text-base sm:text-lg font-bold text-foreground flex items-center gap-2">
+              <Key className="w-5 h-5 text-primary-600 dark:text-primary-400" />
               <span>Redeem Code Generator</span>
             </h2>
 
             <form onSubmit={handleGenerateCodes} className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
               <div>
-                <label className="block text-[11px] font-semibold text-slate-400 mb-1">Prefix</label>
+                <label className="block text-[11px] font-semibold text-muted-foreground mb-1">Prefix</label>
                 <input
                   type="text"
                   value={codePrefix}
                   onChange={(e) => setCodePrefix(e.target.value)}
-                  className="w-full px-3 py-2 rounded-xl bg-slate-900 border border-slate-800 text-xs font-mono font-bold text-white uppercase"
+                  className="w-full px-3 py-2 rounded-xl bg-card border border-card-border text-xs font-mono font-bold text-foreground uppercase"
                   placeholder="PREPTEA"
                 />
               </div>
 
               <div>
-                <label className="block text-[11px] font-semibold text-slate-400 mb-1">Quantity (Max 100)</label>
+                <label className="block text-[11px] font-semibold text-muted-foreground mb-1">Quantity (Max 100)</label>
                 <input
                   type="number"
                   min="1"
                   max="100"
                   value={codeCount}
                   onChange={(e) => setCodeCount(parseInt(e.target.value) || 1)}
-                  className="w-full px-3 py-2 rounded-xl bg-slate-900 border border-slate-800 text-xs font-bold text-white"
+                  className="w-full px-3 py-2 rounded-xl bg-card border border-card-border text-xs font-bold text-foreground"
                 />
               </div>
 
               <div>
-                <label className="block text-[11px] font-semibold text-slate-400 mb-1">Duration (Days)</label>
+                <label className="block text-[11px] font-semibold text-muted-foreground mb-1">Duration (Days)</label>
                 <select
                   value={codeDuration}
                   onChange={(e) => setCodeDuration(parseInt(e.target.value))}
-                  className="w-full px-3 py-2 rounded-xl bg-slate-900 border border-slate-800 text-xs font-bold text-white"
+                  className="w-full px-3 py-2 rounded-xl bg-card border border-card-border text-xs font-bold text-foreground"
                 >
                   <option value={30}>30 Days (1 Month)</option>
                   <option value={90}>90 Days (3 Months)</option>
@@ -1975,11 +1975,11 @@ export default function AdminDashboardPage() {
               </div>
 
               <div>
-                <label className="block text-[11px] font-semibold text-slate-400 mb-1">Batch Access Tier</label>
+                <label className="block text-[11px] font-semibold text-muted-foreground mb-1">Batch Access Tier</label>
                 <select
                   value={codeBatchName}
                   onChange={(e) => setCodeBatchName(e.target.value)}
-                  className="w-full px-3 py-2 rounded-xl bg-slate-900 border border-slate-800 text-xs font-bold text-white"
+                  className="w-full px-3 py-2 rounded-xl bg-card border border-card-border text-xs font-bold text-foreground"
                 >
                   <option value="SigmaX">SigmaX (All Batches Access)</option>
                   <option value="Sigma 6.0">Sigma 6.0</option>
@@ -1995,7 +1995,7 @@ export default function AdminDashboardPage() {
                 <button
                   type="submit"
                   disabled={generatingCodes}
-                  className="w-full py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-xs shadow-lg shadow-indigo-600/30 transition-all flex items-center justify-center gap-1.5"
+                  className="w-full py-2.5 rounded-xl bg-primary-600 hover:bg-primary-500 text-white font-bold text-xs shadow-lg shadow-primary-600/30 transition-all flex items-center justify-center gap-1.5"
                 >
                   <Plus className="w-4 h-4" />
                   <span>{generatingCodes ? 'Generating...' : 'Generate Codes'}</span>
@@ -2005,19 +2005,19 @@ export default function AdminDashboardPage() {
           </div>
 
           {/* Codes Data Table */}
-          <div className="glass-panel rounded-3xl border border-slate-800 overflow-hidden space-y-4">
-            <div className="p-4 sm:p-6 border-b border-slate-800 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+          <div className="glass-panel rounded-3xl border border-card-border overflow-hidden space-y-4">
+            <div className="p-4 sm:p-6 border-b border-card-border flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
               <div>
-                <h3 className="text-base font-bold text-white">Generated Redeem Codes ({codes.length})</h3>
-                <p className="text-xs text-slate-400">Copy code strings or export batch to CSV.</p>
+                <h3 className="text-base font-bold text-foreground">Generated Redeem Codes ({codes.length})</h3>
+                <p className="text-xs text-muted-foreground">Copy code strings or export batch to CSV.</p>
               </div>
 
               {codes.length > 0 && (
                 <button
                   onClick={downloadCodesCSV}
-                  className="px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700 text-slate-200 font-bold text-xs flex items-center gap-1.5 transition-colors"
+                  className="px-4 py-2 rounded-xl bg-card hover:bg-slate-800 border border-slate-700 text-foreground font-bold text-xs flex items-center gap-1.5 transition-colors"
                 >
-                  <Download className="w-4 h-4 text-emerald-400" />
+                  <Download className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
                   <span>Export to CSV</span>
                 </button>
               )}
@@ -2025,7 +2025,7 @@ export default function AdminDashboardPage() {
 
             <div className="overflow-x-auto">
               <table className="w-full text-left text-xs">
-                <thead className="bg-slate-900/80 text-slate-400 uppercase text-[11px] font-semibold border-b border-slate-800">
+                <thead className="bg-card/80 text-muted-foreground uppercase text-[11px] font-semibold border-b border-card-border">
                   <tr>
                     <th className="py-3 px-4">Code</th>
                     <th className="py-3 px-4">Batch</th>
@@ -2036,40 +2036,40 @@ export default function AdminDashboardPage() {
                 </thead>
                 <tbody className="divide-y divide-slate-800/60">
                   {codes.map((c) => (
-                    <tr key={c.id} className="hover:bg-slate-900/40 text-slate-200 transition-colors">
+                    <tr key={c.id} className="hover:bg-card/40 text-foreground transition-colors">
                       <td className="py-3 px-4">
                         <button
                           type="button"
                           onClick={() => copyToClipboard(c.code, c.id)}
-                          className="font-mono font-bold text-amber-300 hover:text-amber-200 flex items-center gap-1.5 cursor-pointer text-left transition-colors group"
+                          className="font-mono font-bold text-amber-600 dark:text-amber-300 hover:text-amber-200 flex items-center gap-1.5 cursor-pointer text-left transition-colors group"
                           title="Click to copy code"
                         >
                           <span>{c.code}</span>
                           {copiedCodeId === c.id ? (
-                            <span className="text-[10px] text-emerald-400 font-semibold flex items-center gap-0.5 bg-emerald-950/60 px-1.5 py-0.5 rounded border border-emerald-500/30">
-                              <Check className="w-3 h-3 text-emerald-400" /> Copied!
+                            <span className="text-[10px] text-emerald-600 dark:text-emerald-400 font-semibold flex items-center gap-0.5 bg-emerald-950/60 px-1.5 py-0.5 rounded border border-emerald-500/30">
+                              <Check className="w-3 h-3 text-emerald-600 dark:text-emerald-400" /> Copied!
                             </span>
                           ) : (
-                            <Copy className="w-3.5 h-3.5 text-slate-500 group-hover:text-amber-300 transition-colors opacity-70 group-hover:opacity-100" />
+                            <Copy className="w-3.5 h-3.5 text-slate-500 group-hover:text-amber-600 dark:group-hover:text-amber-300 transition-colors opacity-70 group-hover:opacity-100" />
                           )}
                         </button>
                       </td>
-                      <td className="py-3 px-4 text-slate-300 font-medium">
+                      <td className="py-3 px-4 text-foreground/80 font-medium">
                         {c.batchName}
                       </td>
                       <td className="py-3 px-4 text-center font-bold">
                         {c.durationDays >= 3650 ? 'Lifetime' : `${c.durationDays} days`}
                       </td>
                       <td className="py-3 px-4 text-center">
-                        <span className="font-bold text-indigo-400">{c.usedCount}</span> / {c.maxUses}
+                        <span className="font-bold text-primary-600 dark:text-primary-400">{c.usedCount}</span> / {c.maxUses}
                       </td>
                       <td className="py-3 px-4 text-center">
                         {c.usedCount >= c.maxUses ? (
-                          <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-slate-800 text-slate-400 border border-slate-700">
+                          <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-slate-800 text-muted-foreground border border-slate-700">
                             Redeemed
                           </span>
                         ) : (
-                          <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+                          <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-500/20 text-emerald-600 dark:text-emerald-300 border border-emerald-500/30">
                             Active
                           </span>
                         )}
@@ -2087,42 +2087,42 @@ export default function AdminDashboardPage() {
       {activeTab === 'events' && (
         <div className="space-y-6">
           {/* Create Launch Event Form */}
-          <div className="glass-panel rounded-3xl p-6 sm:p-8 border border-slate-800 space-y-4">
-            <h2 className="text-base sm:text-lg font-bold text-white flex items-center gap-2">
-              <Rocket className="w-5 h-5 text-amber-400" />
+          <div className="glass-panel rounded-3xl p-6 sm:p-8 border border-card-border space-y-4">
+            <h2 className="text-base sm:text-lg font-bold text-foreground flex items-center gap-2">
+              <Rocket className="w-5 h-5 text-amber-600 dark:text-amber-400" />
               <span>Launch Event Creator (&quot;First N Members Get Free Premium&quot;)</span>
             </h2>
 
             <form onSubmit={handleCreateEvent} className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
               <div className="sm:col-span-2">
-                <label className="block text-[11px] font-semibold text-slate-400 mb-1">Event Title</label>
+                <label className="block text-[11px] font-semibold text-muted-foreground mb-1">Event Title</label>
                 <input
                   type="text"
                   value={eventTitle}
                   onChange={(e) => setEventTitle(e.target.value)}
-                  className="w-full px-3 py-2 rounded-xl bg-slate-900 border border-slate-800 text-xs font-bold text-white"
+                  className="w-full px-3 py-2 rounded-xl bg-card border border-card-border text-xs font-bold text-foreground"
                   placeholder="e.g. Next 100 New Users Get Yearly Pro"
                   required
                 />
               </div>
 
               <div>
-                <label className="block text-[11px] font-semibold text-slate-400 mb-1">Max Users Claim</label>
+                <label className="block text-[11px] font-semibold text-muted-foreground mb-1">Max Users Claim</label>
                 <input
                   type="number"
                   min="1"
                   value={eventMaxClaims}
                   onChange={(e) => setEventMaxClaims(parseInt(e.target.value) || 100)}
-                  className="w-full px-3 py-2 rounded-xl bg-slate-900 border border-slate-800 text-xs font-bold text-white"
+                  className="w-full px-3 py-2 rounded-xl bg-card border border-card-border text-xs font-bold text-foreground"
                 />
               </div>
 
               <div>
-                <label className="block text-[11px] font-semibold text-slate-400 mb-1">Duration (Days)</label>
+                <label className="block text-[11px] font-semibold text-muted-foreground mb-1">Duration (Days)</label>
                 <select
                   value={eventDuration}
                   onChange={(e) => setEventDuration(parseInt(e.target.value))}
-                  className="w-full px-3 py-2 rounded-xl bg-slate-900 border border-slate-800 text-xs font-bold text-white"
+                  className="w-full px-3 py-2 rounded-xl bg-card border border-card-border text-xs font-bold text-foreground"
                 >
                   <option value={30}>30 Days</option>
                   <option value={90}>90 Days</option>
@@ -2146,22 +2146,22 @@ export default function AdminDashboardPage() {
 
           {/* Active Launch Events Grid */}
           <div className="space-y-4">
-            <h3 className="text-base font-bold text-white">Active Launch Campaigns ({events.length})</h3>
+            <h3 className="text-base font-bold text-foreground">Active Launch Campaigns ({events.length})</h3>
 
             {events.length === 0 ? (
               <div className="p-8 text-center glass-panel rounded-3xl space-y-2">
-                <p className="text-xs text-slate-400">No active launch campaigns created yet.</p>
+                <p className="text-xs text-muted-foreground">No active launch campaigns created yet.</p>
               </div>
             ) : (
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {events.map((ev) => {
                   const percent = Math.min(Math.round((ev.claimedCount / ev.maxClaimCount) * 100), 100);
                   return (
-                    <div key={ev.id} className="glass-card rounded-3xl p-6 border border-slate-800 space-y-4 relative overflow-hidden">
+                    <div key={ev.id} className="glass-card rounded-3xl p-6 border border-card-border space-y-4 relative overflow-hidden">
                       <div className="flex items-start justify-between gap-2">
                         <div>
-                          <h4 className="text-base font-bold text-white">{ev.title}</h4>
-                          <p className="text-xs text-slate-400">
+                          <h4 className="text-base font-bold text-foreground">{ev.title}</h4>
+                          <p className="text-xs text-muted-foreground">
                             Duration: {ev.durationDays >= 3650 ? 'Lifetime' : `${ev.durationDays} Days`}
                           </p>
                         </div>
@@ -2170,8 +2170,8 @@ export default function AdminDashboardPage() {
                           onClick={() => handleToggleEvent(ev.id)}
                           className={`px-3 py-1 rounded-full text-xs font-bold border transition-colors ${
                             ev.isActive
-                              ? 'bg-emerald-500/20 text-emerald-300 border-emerald-500/40 hover:bg-emerald-500/30'
-                              : 'bg-slate-800 text-slate-400 border-slate-700 hover:bg-slate-700'
+                              ? 'bg-emerald-500/20 text-emerald-600 dark:text-emerald-300 border-emerald-500/40 hover:bg-emerald-500/30'
+                              : 'bg-slate-800 text-muted-foreground border-slate-700 hover:bg-slate-700'
                           }`}
                         >
                           {ev.isActive ? 'Active' : 'Paused'}
@@ -2181,10 +2181,10 @@ export default function AdminDashboardPage() {
                       {/* Progress Bar */}
                       <div className="space-y-1.5">
                         <div className="flex justify-between text-xs font-semibold">
-                          <span className="text-slate-300">Claims Progress</span>
-                          <span className="text-amber-400">{ev.claimedCount} / {ev.maxClaimCount} ({percent}%)</span>
+                          <span className="text-foreground/80">Claims Progress</span>
+                          <span className="text-amber-600 dark:text-amber-400">{ev.claimedCount} / {ev.maxClaimCount} ({percent}%)</span>
                         </div>
-                        <div className="w-full h-3 rounded-full bg-slate-900 overflow-hidden border border-slate-800">
+                        <div className="w-full h-3 rounded-full bg-card overflow-hidden border border-card-border">
                           <div
                             className="h-full bg-gradient-to-r from-amber-500 to-yellow-400 transition-all duration-500"
                             style={{ width: `${percent}%` }}
@@ -2192,7 +2192,7 @@ export default function AdminDashboardPage() {
                         </div>
                       </div>
 
-                      <div className="text-[11px] text-slate-500 pt-2 border-t border-slate-800/80 flex items-center justify-between">
+                      <div className="text-[11px] text-slate-500 pt-2 border-t border-card-border/80 flex items-center justify-between">
                         <span>Created by: {ev.createdBy}</span>
                         <span>{ev.claimedUsers.length} Users Claimed</span>
                       </div>
@@ -2209,26 +2209,26 @@ export default function AdminDashboardPage() {
       {activeTab === 'emails' && (
         <div className="space-y-6">
           {/* CSV File Upload & Textarea Panel */}
-          <div className="glass-panel rounded-3xl p-6 sm:p-8 border border-slate-800 space-y-6">
+          <div className="glass-panel rounded-3xl p-6 sm:p-8 border border-card-border space-y-6">
             <div>
-              <h2 className="text-base sm:text-lg font-bold text-white flex items-center gap-2">
-                <Mail className="w-5 h-5 text-emerald-400" />
+              <h2 className="text-base sm:text-lg font-bold text-foreground flex items-center gap-2">
+                <Mail className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
                 <span>Bulk Email Access Granting & CSV / Excel Upload</span>
               </h2>
-              <p className="text-xs text-slate-400 mt-1">
+              <p className="text-xs text-muted-foreground mt-1">
                 Upload a `.csv` file or paste emails. Granted emails get premium activated automatically on sign-in without requiring a code.
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {/* Left Option: File Upload */}
-              <div className="glass-card rounded-2xl p-6 border-2 border-dashed border-indigo-500/30 text-center space-y-4 flex flex-col justify-center items-center">
-                <div className="w-12 h-12 rounded-2xl bg-indigo-600/20 text-indigo-400 flex items-center justify-center">
+              <div className="glass-card rounded-2xl p-6 border-2 border-dashed border-primary-500/30 text-center space-y-4 flex flex-col justify-center items-center">
+                <div className="w-12 h-12 rounded-2xl bg-primary-600/20 text-primary-600 dark:text-primary-400 flex items-center justify-center">
                   <Upload className="w-6 h-6" />
                 </div>
                 <div>
-                  <h4 className="text-sm font-bold text-white">Upload CSV or Excel File</h4>
-                  <p className="text-xs text-slate-400 mt-1">Select a `.csv` or `.txt` file containing candidate email addresses.</p>
+                  <h4 className="text-sm font-bold text-foreground">Upload CSV or Excel File</h4>
+                  <p className="text-xs text-muted-foreground mt-1">Select a `.csv` or `.txt` file containing candidate email addresses.</p>
                 </div>
 
                 <input
@@ -2243,7 +2243,7 @@ export default function AdminDashboardPage() {
                   type="button"
                   onClick={() => fileInputRef.current?.click()}
                   disabled={grantingEmails}
-                  className="px-5 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-xs shadow-lg shadow-indigo-600/20 transition-all flex items-center gap-2"
+                  className="px-5 py-2.5 rounded-xl bg-primary-600 hover:bg-primary-500 text-white font-bold text-xs shadow-lg shadow-primary-600/20 transition-all flex items-center gap-2"
                 >
                   <Upload className="w-4 h-4" />
                   <span>Choose File & Grant</span>
@@ -2252,7 +2252,7 @@ export default function AdminDashboardPage() {
 
               {/* Right Option: Textarea Input */}
               <div className="space-y-3">
-                <label className="block text-xs font-semibold text-slate-300">
+                <label className="block text-xs font-semibold text-foreground/80">
                   Or Paste Emails (Comma or Newline Separated)
                 </label>
                 <textarea
@@ -2260,14 +2260,14 @@ export default function AdminDashboardPage() {
                   value={emailText}
                   onChange={(e) => setEmailText(e.target.value)}
                   placeholder="student1@gmail.com, student2@gmail.com&#10;student3@gmail.com"
-                  className="w-full p-3 rounded-2xl bg-slate-900 border border-slate-800 text-xs font-mono text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500"
+                  className="w-full p-3 rounded-2xl bg-card border border-card-border text-xs font-mono text-foreground placeholder-slate-500 focus:outline-none focus:border-primary-500"
                 />
 
                 <div className="flex items-center justify-between gap-3">
                   <select
                     value={bulkDuration}
                     onChange={(e) => setBulkDuration(parseInt(e.target.value))}
-                    className="px-3 py-2 rounded-xl bg-slate-900 border border-slate-800 text-xs font-bold text-white"
+                    className="px-3 py-2 rounded-xl bg-card border border-card-border text-xs font-bold text-foreground"
                   >
                     <option value={30}>30 Days</option>
                     <option value={90}>90 Days</option>
@@ -2296,14 +2296,14 @@ export default function AdminDashboardPage() {
           </div>
 
           {/* PreApproved Emails List */}
-          <div className="glass-panel rounded-3xl border border-slate-800 overflow-hidden space-y-4">
-            <div className="p-4 sm:p-6 border-b border-slate-800">
-              <h3 className="text-base font-bold text-white">Pre-Approved / Granted Email List ({emails.length})</h3>
+          <div className="glass-panel rounded-3xl border border-card-border overflow-hidden space-y-4">
+            <div className="p-4 sm:p-6 border-b border-card-border">
+              <h3 className="text-base font-bold text-foreground">Pre-Approved / Granted Email List ({emails.length})</h3>
             </div>
 
             <div className="overflow-x-auto">
               <table className="w-full text-left text-xs">
-                <thead className="bg-slate-900/80 text-slate-400 uppercase text-[11px] font-semibold border-b border-slate-800">
+                <thead className="bg-card/80 text-muted-foreground uppercase text-[11px] font-semibold border-b border-card-border">
                   <tr>
                     <th className="py-3 px-4">Email</th>
                     <th className="py-3 px-4 text-center">Duration</th>
@@ -2313,9 +2313,9 @@ export default function AdminDashboardPage() {
                 </thead>
                 <tbody className="divide-y divide-slate-800/60">
                   {emails.map((m) => (
-                    <tr key={m.id} className="hover:bg-slate-900/40 text-slate-200 transition-colors">
+                    <tr key={m.id} className="hover:bg-card/40 text-foreground transition-colors">
                       <td
-                        className="py-3 px-4 font-bold text-white cursor-pointer hover:text-indigo-400 hover:underline transition-colors"
+                        className="py-3 px-4 font-bold text-foreground cursor-pointer hover:text-primary-600 dark:hover:text-primary-400 hover:underline transition-colors"
                         onClick={() => openCandidateInspector(m.email)}
                         title="Click to open Candidate 360° Inspector"
                       >
@@ -2326,16 +2326,16 @@ export default function AdminDashboardPage() {
                       </td>
                       <td className="py-3 px-4 text-center">
                         {m.isActivated ? (
-                          <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+                          <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-emerald-500/20 text-emerald-600 dark:text-emerald-300 border border-emerald-500/30">
                             Active User
                           </span>
                         ) : (
-                          <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-amber-500/20 text-amber-300 border border-amber-500/30">
+                          <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-amber-500/20 text-amber-600 dark:text-amber-300 border border-amber-500/30">
                             Pending Sign-In
                           </span>
                         )}
                       </td>
-                      <td className="py-3 px-4 text-right text-slate-400">{m.addedBy}</td>
+                      <td className="py-3 px-4 text-right text-muted-foreground">{m.addedBy}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -2348,32 +2348,32 @@ export default function AdminDashboardPage() {
       {/* TAB 5: USER ROLES & PERMISSIONS */}
       {activeTab === 'users' && (
         <div className="space-y-6">
-          <div className="glass-panel rounded-3xl p-6 border border-slate-800 space-y-4">
+          <div className="glass-panel rounded-3xl p-6 border border-card-border space-y-4">
             <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
               <div>
-                <h2 className="text-base sm:text-lg font-bold text-white flex items-center gap-2">
-                  <Users className="w-5 h-5 text-purple-400" />
+                <h2 className="text-base sm:text-lg font-bold text-foreground flex items-center gap-2">
+                  <Users className="w-5 h-5 text-primary-600 dark:text-primary-400" />
                   <span>User & Administrator Management</span>
                 </h2>
-                <p className="text-xs text-slate-400 mt-1">Assign admin roles, permissions, and direct premium status.</p>
+                <p className="text-xs text-muted-foreground mt-1">Assign admin roles, permissions, and direct premium status.</p>
               </div>
 
               {/* Search Bar */}
               <div className="relative w-full sm:w-64">
-                <Search className="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2" />
+                <Search className="w-4 h-4 text-muted-foreground absolute left-3 top-1/2 -translate-y-1/2" />
                 <input
                   type="text"
                   placeholder="Search user name or email..."
                   value={userQuery}
                   onChange={(e) => setUserQuery(e.target.value)}
-                  className="w-full pl-9 pr-3 py-2 rounded-xl bg-slate-900 border border-slate-800 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500"
+                  className="w-full pl-9 pr-3 py-2 rounded-xl bg-card border border-card-border text-xs text-foreground placeholder-slate-500 focus:outline-none focus:border-primary-500"
                 />
               </div>
             </div>
 
             <div className="overflow-x-auto">
               <table className="w-full text-left text-xs">
-                <thead className="bg-slate-900/80 text-slate-400 uppercase text-[11px] font-semibold border-b border-slate-800">
+                <thead className="bg-card/80 text-muted-foreground uppercase text-[11px] font-semibold border-b border-card-border">
                   <tr>
                     <th className="py-3 px-4">User</th>
                     <th className="py-3 px-4 text-center">Role</th>
@@ -2389,7 +2389,7 @@ export default function AdminDashboardPage() {
                     const batchCount = u.allowedBatches ? u.allowedBatches.length : 0;
 
                     return (
-                      <tr key={u.id} className="hover:bg-slate-900/40 text-slate-200 transition-colors">
+                      <tr key={u.id} className="hover:bg-card/40 text-foreground transition-colors">
                         <td
                           className="py-3 px-4 flex items-center gap-3 cursor-pointer group/user"
                           onClick={() => openCandidateInspector(u.email)}
@@ -2397,11 +2397,11 @@ export default function AdminDashboardPage() {
                         >
                           <UserAvatar name={u.name} email={u.email} image={u.image} size="sm" />
                           <div>
-                            <p className="font-bold text-white group-hover/user:text-indigo-400 group-hover/user:underline transition-colors flex items-center gap-1.5">
+                            <p className="font-bold text-foreground group-hover/user:text-primary-600 dark:text-primary-400 group-hover/user:underline transition-colors flex items-center gap-1.5">
                               <span>{u.name}</span>
-                              <Search className="w-3 h-3 text-indigo-400 opacity-0 group-hover/user:opacity-100 transition-opacity shrink-0" />
+                              <Search className="w-3 h-3 text-primary-600 dark:text-primary-400 opacity-0 group-hover/user:opacity-100 transition-opacity shrink-0" />
                             </p>
-                            <p className="text-[10px] text-slate-400 font-mono">{u.email}</p>
+                            <p className="text-[10px] text-muted-foreground font-mono">{u.email}</p>
                           </div>
                         </td>
 
@@ -2415,7 +2415,7 @@ export default function AdminDashboardPage() {
                               value={u.role}
                               onChange={(e) => handleUpdateUser(u.email, e.target.value, u.isPremium, u.adminPermissions, u.allowedBatches)}
                               disabled={!isSuperadmin}
-                              className="px-2 py-1 rounded-lg bg-slate-900 border border-slate-700 text-xs font-bold text-slate-200"
+                              className="px-2 py-1 rounded-lg bg-card border border-slate-700 text-xs font-bold text-foreground"
                             >
                               <option value="user">User</option>
                               <option value="admin">Admin</option>
@@ -2425,14 +2425,14 @@ export default function AdminDashboardPage() {
 
                         <td className="py-3 px-4 text-center">
                           {isSuper ? (
-                            <span className="text-[11px] font-bold text-amber-400">Full Permanent Rights</span>
+                            <span className="text-[11px] font-bold text-amber-600 dark:text-amber-400">Full Permanent Rights</span>
                           ) : (
                             <button
                               onClick={() => openPermissionModal(u)}
                               disabled={!isSuperadmin}
-                              className="px-2.5 py-1 rounded-xl bg-purple-500/20 text-purple-300 hover:bg-purple-500/30 border border-purple-500/30 text-[11px] font-bold transition-all flex items-center gap-1.5 mx-auto"
+                              className="px-2.5 py-1 rounded-xl bg-primary-500/20 text-primary-600 dark:text-primary-300 hover:bg-primary-500/30 border border-primary-500/30 text-[11px] font-bold transition-all flex items-center gap-1.5 mx-auto"
                             >
-                              <ShieldCheck className="w-3.5 h-3.5 text-purple-400" />
+                              <ShieldCheck className="w-3.5 h-3.5 text-primary-600 dark:text-primary-400" />
                               <span>{permCount} active</span>
                             </button>
                           )}
@@ -2440,13 +2440,13 @@ export default function AdminDashboardPage() {
 
                         <td className="py-3 px-4 text-center">
                           {isSuper ? (
-                            <span className="text-[11px] font-bold text-emerald-400">All Batches</span>
+                            <span className="text-[11px] font-bold text-emerald-600 dark:text-emerald-400">All Batches</span>
                           ) : (
                             <button
                               onClick={() => openBatchesModal(u)}
-                              className="px-2.5 py-1 rounded-xl bg-indigo-500/20 text-indigo-300 hover:bg-indigo-500/30 border border-indigo-500/30 text-[11px] font-bold transition-all flex items-center gap-1.5 mx-auto"
+                              className="px-2.5 py-1 rounded-xl bg-primary-500/20 text-primary-600 dark:text-primary-300 hover:bg-primary-500/30 border border-primary-500/30 text-[11px] font-bold transition-all flex items-center gap-1.5 mx-auto"
                             >
-                              <BookOpen className="w-3.5 h-3.5 text-indigo-400" />
+                              <BookOpen className="w-3.5 h-3.5 text-primary-600 dark:text-primary-400" />
                               <span>{batchCount > 0 ? `${batchCount} batch(es)` : 'Grant Access'}</span>
                             </button>
                           )}
@@ -2459,7 +2459,7 @@ export default function AdminDashboardPage() {
                                 onClick={() => handleUpdateUser(u.email, u.role, !u.isPremium, u.adminPermissions, u.allowedBatches)}
                                 className={`px-3 py-1.5 rounded-xl text-[11px] font-bold transition-all ${
                                   u.isPremium
-                                    ? 'bg-rose-950/40 text-rose-300 border border-rose-500/30 hover:bg-rose-900/60'
+                                    ? 'bg-rose-950/40 text-rose-600 dark:text-rose-300 border border-rose-500/30 hover:bg-rose-900/60'
                                     : 'bg-emerald-600 hover:bg-emerald-500 text-white shadow-md'
                                 }`}
                               >
@@ -2479,24 +2479,24 @@ export default function AdminDashboardPage() {
           {/* Admin Permission Management Modal */}
           {editingUserForPerms && (
             <div
-              className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md animate-fade-in cursor-pointer"
+              className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-background/80 backdrop-blur-md animate-fade-in cursor-pointer"
               onClick={() => setEditingUserForPerms(null)}
             >
               <div
-                className="w-full max-w-lg glass-panel rounded-3xl p-6 border border-purple-500/30 shadow-2xl space-y-5 bg-slate-900/95 cursor-default"
+                className="w-full max-w-lg glass-panel rounded-3xl p-6 border border-primary-500/30 shadow-2xl space-y-5 bg-card/95 cursor-default"
                 onClick={(e) => e.stopPropagation()}
               >
-                <div className="flex items-center justify-between pb-3 border-b border-slate-800">
+                <div className="flex items-center justify-between pb-3 border-b border-card-border">
                   <div className="flex items-center gap-2.5">
-                    <ShieldCheck className="w-5 h-5 text-purple-400" />
+                    <ShieldCheck className="w-5 h-5 text-primary-600 dark:text-primary-400" />
                     <div>
-                      <h3 className="text-base font-bold text-white">Configure Admin Rights</h3>
-                      <p className="text-xs text-slate-400">{editingUserForPerms.email}</p>
+                      <h3 className="text-base font-bold text-foreground">Configure Admin Rights</h3>
+                      <p className="text-xs text-muted-foreground">{editingUserForPerms.email}</p>
                     </div>
                   </div>
                   <button
                     onClick={() => setEditingUserForPerms(null)}
-                    className="p-1.5 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 transition-colors"
+                    className="p-1.5 rounded-lg text-muted-foreground hover:text-foreground hover:bg-slate-800 transition-colors"
                   >
                     <X className="w-4 h-4" />
                   </button>
@@ -2507,21 +2507,21 @@ export default function AdminDashboardPage() {
                   <button
                     type="button"
                     onClick={() => setSelectedPerms(ALL_ADMIN_PERMISSIONS.map((p) => p.id))}
-                    className="px-2.5 py-1 rounded-lg bg-purple-500/20 text-purple-300 border border-purple-500/30 text-[11px] font-bold hover:bg-purple-500/30 transition-all"
+                    className="px-2.5 py-1 rounded-lg bg-primary-500/20 text-primary-600 dark:text-primary-300 border border-primary-500/30 text-[11px] font-bold hover:bg-primary-500/30 transition-all"
                   >
                     Grant All Rights
                   </button>
                   <button
                     type="button"
                     onClick={() => setSelectedPerms(['manage_codes', 'manage_events', 'manage_emails'])}
-                    className="px-2.5 py-1 rounded-lg bg-slate-800 text-slate-300 border border-slate-700 text-[11px] font-bold hover:bg-slate-700 transition-all"
+                    className="px-2.5 py-1 rounded-lg bg-slate-800 text-foreground/80 border border-slate-700 text-[11px] font-bold hover:bg-slate-700 transition-all"
                   >
                     Promos Only
                   </button>
                   <button
                     type="button"
                     onClick={() => setSelectedPerms([])}
-                    className="px-2.5 py-1 rounded-lg bg-rose-500/10 text-rose-300 border border-rose-500/20 text-[11px] font-bold hover:bg-rose-500/20 transition-all"
+                    className="px-2.5 py-1 rounded-lg bg-rose-500/10 text-rose-600 dark:text-rose-300 border border-rose-500/20 text-[11px] font-bold hover:bg-rose-500/20 transition-all"
                   >
                     Clear All
                   </button>
@@ -2542,40 +2542,40 @@ export default function AdminDashboardPage() {
                         }}
                         className={`flex items-start gap-3 p-3 rounded-2xl border cursor-pointer transition-all ${
                           isChecked
-                            ? 'bg-purple-950/40 border-purple-500/40 text-white'
-                            : 'bg-slate-900/60 border-slate-800 text-slate-400 hover:border-slate-700'
+                            ? 'bg-primary-950/40 border-primary-500/40 text-white'
+                            : 'bg-card/60 border-card-border text-muted-foreground hover:border-slate-700'
                         }`}
                       >
                         <input
                           type="checkbox"
                           checked={isChecked}
                           onChange={() => {}}
-                          className="mt-1 w-4 h-4 rounded text-purple-600 focus:ring-purple-500 bg-slate-900 border-slate-700"
+                          className="mt-1 w-4 h-4 rounded text-primary-600 focus:ring-primary-500 bg-card border-slate-700"
                         />
                         <div className="flex-1 min-w-0">
-                          <p className="text-xs font-bold text-white flex items-center gap-1.5">
-                            <Icon className="w-3.5 h-3.5 text-purple-400" />
+                          <p className="text-xs font-bold text-foreground flex items-center gap-1.5">
+                            <Icon className="w-3.5 h-3.5 text-primary-600 dark:text-primary-400" />
                             <span>{perm.label}</span>
                           </p>
-                          <p className="text-[11px] text-slate-400 mt-0.5">{perm.desc}</p>
+                          <p className="text-[11px] text-muted-foreground mt-0.5">{perm.desc}</p>
                         </div>
                       </div>
                     );
                   })}
                 </div>
 
-                <div className="flex items-center justify-end gap-2 pt-2 border-t border-slate-800">
+                <div className="flex items-center justify-end gap-2 pt-2 border-t border-card-border">
                   <button
                     type="button"
                     onClick={() => setEditingUserForPerms(null)}
-                    className="px-4 py-2 rounded-xl text-xs font-bold text-slate-400 hover:text-white hover:bg-slate-800 transition-colors"
+                    className="px-4 py-2 rounded-xl text-xs font-bold text-muted-foreground hover:text-foreground hover:bg-slate-800 transition-colors"
                   >
                     Cancel
                   </button>
                   <button
                     type="button"
                     onClick={handleSavePermissions}
-                    className="px-5 py-2 rounded-xl bg-purple-600 hover:bg-purple-500 text-white text-xs font-bold shadow-lg shadow-purple-600/30 transition-all flex items-center gap-1.5"
+                    className="px-5 py-2 rounded-xl bg-primary-600 hover:bg-primary-500 text-white text-xs font-bold shadow-lg shadow-primary-600/30 transition-all flex items-center gap-1.5"
                   >
                     <ShieldCheck className="w-4 h-4" />
                     <span>Save Admin Permissions</span>
@@ -2588,30 +2588,30 @@ export default function AdminDashboardPage() {
           {/* Admin Batch Access Management Modal */}
           {editingUserForBatches && (
             <div
-              className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md animate-fade-in cursor-pointer"
+              className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-background/80 backdrop-blur-md animate-fade-in cursor-pointer"
               onClick={() => setEditingUserForBatches(null)}
             >
               <div
-                className="w-full max-w-lg glass-panel rounded-3xl p-6 border border-indigo-500/30 shadow-2xl space-y-5 bg-slate-900/95 cursor-default"
+                className="w-full max-w-lg glass-panel rounded-3xl p-6 border border-primary-500/30 shadow-2xl space-y-5 bg-card/95 cursor-default"
                 onClick={(e) => e.stopPropagation()}
               >
-                <div className="flex items-center justify-between pb-3 border-b border-slate-800">
+                <div className="flex items-center justify-between pb-3 border-b border-card-border">
                   <div className="flex items-center gap-2.5">
-                    <BookOpen className="w-5 h-5 text-indigo-400" />
+                    <BookOpen className="w-5 h-5 text-primary-600 dark:text-primary-400" />
                     <div>
-                      <h3 className="text-base font-bold text-white">Grant Course Batch Access</h3>
-                      <p className="text-xs text-slate-400">{editingUserForBatches.email}</p>
+                      <h3 className="text-base font-bold text-foreground">Grant Course Batch Access</h3>
+                      <p className="text-xs text-muted-foreground">{editingUserForBatches.email}</p>
                     </div>
                   </div>
                   <button
                     onClick={() => setEditingUserForBatches(null)}
-                    className="p-1.5 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 transition-colors"
+                    className="p-1.5 rounded-lg text-muted-foreground hover:text-foreground hover:bg-slate-800 transition-colors"
                   >
                     <X className="w-4 h-4" />
                   </button>
                 </div>
 
-                <p className="text-xs text-slate-300">
+                <p className="text-xs text-foreground/80">
                   Select course batch tiers to grant this candidate access to specific video courses:
                 </p>
 
@@ -2629,39 +2629,39 @@ export default function AdminDashboardPage() {
                         }}
                         className={`flex items-start gap-3 p-3 rounded-2xl border transition-all cursor-pointer ${
                           isChecked
-                            ? 'bg-indigo-950/50 border-indigo-500/50 text-white'
-                            : 'bg-slate-950/50 border-slate-800/80 text-slate-400 hover:border-slate-700'
+                            ? 'bg-primary-950/50 border-primary-500/50 text-white'
+                            : 'bg-background/50 border-card-border/80 text-muted-foreground hover:border-slate-700'
                         }`}
                       >
                         <input
                           type="checkbox"
                           checked={isChecked}
                           onChange={() => {}}
-                          className="mt-0.5 rounded border-slate-700 text-indigo-600 focus:ring-indigo-500"
+                          className="mt-0.5 rounded border-slate-700 text-primary-600 focus:ring-primary-500"
                         />
                         <div className="space-y-0.5">
-                          <div className="text-xs font-bold text-white">
+                          <div className="text-xs font-bold text-foreground">
                             {opt.label}
                           </div>
-                          <p className="text-[11px] text-slate-400 leading-normal">{opt.description}</p>
+                          <p className="text-[11px] text-muted-foreground leading-normal">{opt.description}</p>
                         </div>
                       </div>
                     );
                   })}
                 </div>
 
-                <div className="flex items-center justify-end gap-3 pt-3 border-t border-slate-800">
+                <div className="flex items-center justify-end gap-3 pt-3 border-t border-card-border">
                   <button
                     type="button"
                     onClick={() => setEditingUserForBatches(null)}
-                    className="px-4 py-2 rounded-xl bg-slate-900 border border-slate-700 text-slate-300 hover:text-white font-bold text-xs transition-colors"
+                    className="px-4 py-2 rounded-xl bg-card border border-slate-700 text-foreground/80 hover:text-foreground font-bold text-xs transition-colors"
                   >
                     Cancel
                   </button>
                   <button
                     type="button"
                     onClick={handleSaveUserBatches}
-                    className="px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-xs shadow-lg shadow-indigo-600/30 transition-all flex items-center gap-1.5"
+                    className="px-4 py-2 rounded-xl bg-primary-600 hover:bg-primary-500 text-white font-bold text-xs shadow-lg shadow-primary-600/30 transition-all flex items-center gap-1.5"
                   >
                     <CheckCircle2 className="w-4 h-4" />
                     <span>Save Batch Access</span>
@@ -2683,23 +2683,23 @@ export default function AdminDashboardPage() {
           }}
         >
           <div
-            className="bg-slate-950 border border-slate-800 rounded-3xl max-w-4xl w-full max-h-[90vh] flex flex-col overflow-hidden shadow-2xl cursor-default"
+            className="bg-background border border-card-border rounded-3xl max-w-4xl w-full max-h-[90vh] flex flex-col overflow-hidden shadow-2xl cursor-default"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Modal Header */}
-            <div className="p-6 border-b border-slate-800 flex items-center justify-between bg-slate-900/60">
+            <div className="p-6 border-b border-card-border flex items-center justify-between bg-card/60">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-2xl bg-indigo-600/20 border border-indigo-500/30 text-indigo-400 flex items-center justify-center font-bold text-lg">
+                <div className="w-10 h-10 rounded-2xl bg-primary-600/20 border border-primary-500/30 text-primary-600 dark:text-primary-400 flex items-center justify-center font-bold text-lg">
                   🔍
                 </div>
                 <div>
-                  <h3 className="text-lg font-black text-white flex items-center gap-2">
+                  <h3 className="text-lg font-black text-foreground flex items-center gap-2">
                     Candidate 360° Inspector
-                    <span className="text-xs px-2 py-0.5 rounded-md bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 font-mono font-normal">
+                    <span className="text-xs px-2 py-0.5 rounded-md bg-primary-500/20 text-primary-600 dark:text-primary-300 border border-primary-500/30 font-mono font-normal">
                       {inspectingUserEmail}
                     </span>
                   </h3>
-                  <p className="text-xs text-slate-400">
+                  <p className="text-xs text-muted-foreground">
                     Complete MongoDB database dump, live session telemetry, study activity, and test history.
                   </p>
                 </div>
@@ -2709,7 +2709,7 @@ export default function AdminDashboardPage() {
                   setInspectingUserEmail(null);
                   setInspectData(null);
                 }}
-                className="p-2 rounded-xl text-slate-400 hover:text-white hover:bg-slate-800 transition-all"
+                className="p-2 rounded-xl text-muted-foreground hover:text-foreground hover:bg-slate-800 transition-all"
               >
                 <X className="w-5 h-5" />
               </button>
@@ -2717,21 +2717,21 @@ export default function AdminDashboardPage() {
 
             {loadingInspectData ? (
               <div className="p-12 text-center space-y-3 flex-1 flex flex-col items-center justify-center">
-                <Loader2 className="w-8 h-8 text-indigo-500 animate-spin" />
-                <p className="text-xs font-bold text-slate-400">Fetching complete MongoDB records for {inspectingUserEmail}...</p>
+                <Loader2 className="w-8 h-8 text-primary-500 animate-spin" />
+                <p className="text-xs font-bold text-muted-foreground">Fetching complete MongoDB records for {inspectingUserEmail}...</p>
               </div>
             ) : !inspectData ? (
-              <div className="p-12 text-center text-rose-400 text-xs font-bold">Failed to load candidate details.</div>
+              <div className="p-12 text-center text-rose-600 dark:text-rose-400 text-xs font-bold">Failed to load candidate details.</div>
             ) : (
               <div className="flex-1 flex flex-col min-h-0">
                 {/* Modal Tab Navigation */}
-                <div className="flex items-center gap-2 px-6 pt-4 border-b border-slate-800/80 bg-slate-900/30 overflow-x-auto">
+                <div className="flex items-center gap-2 px-6 pt-4 border-b border-card-border/80 bg-card/30 overflow-x-auto">
                   <button
                     onClick={() => setInspectActiveTab('overview')}
                     className={`px-4 py-2 rounded-t-xl text-xs font-bold transition-all border-b-2 ${
                       inspectActiveTab === 'overview'
-                        ? 'border-indigo-500 text-indigo-400 bg-indigo-500/10'
-                        : 'border-transparent text-slate-400 hover:text-white'
+                        ? 'border-primary-500 text-primary-600 dark:text-primary-400 bg-primary-500/10'
+                        : 'border-transparent text-muted-foreground hover:text-foreground'
                     }`}
                   >
                     📊 Overview & Profile
@@ -2740,8 +2740,8 @@ export default function AdminDashboardPage() {
                     onClick={() => setInspectActiveTab('activity')}
                     className={`px-4 py-2 rounded-t-xl text-xs font-bold transition-all border-b-2 ${
                       inspectActiveTab === 'activity'
-                        ? 'border-indigo-500 text-indigo-400 bg-indigo-500/10'
-                        : 'border-transparent text-slate-400 hover:text-white'
+                        ? 'border-primary-500 text-primary-600 dark:text-primary-400 bg-primary-500/10'
+                        : 'border-transparent text-muted-foreground hover:text-foreground'
                     }`}
                   >
                     📅 Daily Study Logs ({inspectData.activityLogs?.length || 0})
@@ -2750,8 +2750,8 @@ export default function AdminDashboardPage() {
                     onClick={() => setInspectActiveTab('attempts')}
                     className={`px-4 py-2 rounded-t-xl text-xs font-bold transition-all border-b-2 ${
                       inspectActiveTab === 'attempts'
-                        ? 'border-indigo-500 text-indigo-400 bg-indigo-500/10'
-                        : 'border-transparent text-slate-400 hover:text-white'
+                        ? 'border-primary-500 text-primary-600 dark:text-primary-400 bg-primary-500/10'
+                        : 'border-transparent text-muted-foreground hover:text-foreground'
                     }`}
                   >
                     📝 Quiz Attempts ({inspectData.attempts?.length || 0})
@@ -2760,8 +2760,8 @@ export default function AdminDashboardPage() {
                     onClick={() => setInspectActiveTab('promos')}
                     className={`px-4 py-2 rounded-t-xl text-xs font-bold transition-all border-b-2 ${
                       inspectActiveTab === 'promos'
-                        ? 'border-indigo-500 text-indigo-400 bg-indigo-500/10'
-                        : 'border-transparent text-slate-400 hover:text-white'
+                        ? 'border-primary-500 text-primary-600 dark:text-primary-400 bg-primary-500/10'
+                        : 'border-transparent text-muted-foreground hover:text-foreground'
                     }`}
                   >
                     🎁 Promos & Claims ({(inspectData.redeemCodes?.length || 0) + (inspectData.claimedEvents?.length || 0) + (inspectData.preApprovedRecord ? 1 : 0)})
@@ -2770,8 +2770,8 @@ export default function AdminDashboardPage() {
                     onClick={() => setInspectActiveTab('raw_json')}
                     className={`px-4 py-2 rounded-t-xl text-xs font-bold transition-all border-b-2 ${
                       inspectActiveTab === 'raw_json'
-                        ? 'border-emerald-500 text-emerald-400 bg-emerald-500/10'
-                        : 'border-transparent text-slate-400 hover:text-white'
+                        ? 'border-emerald-500 text-emerald-600 dark:text-emerald-400 bg-emerald-500/10'
+                        : 'border-transparent text-muted-foreground hover:text-foreground'
                     }`}
                   >
                     ⚡ Raw MongoDB JSON Dump
@@ -2785,61 +2785,61 @@ export default function AdminDashboardPage() {
                     <div className="space-y-6">
                       {/* Top Metric Cards */}
                       <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-                        <div className="p-3.5 rounded-2xl bg-indigo-950/30 border border-indigo-500/30">
-                          <p className="text-[10px] text-indigo-400 font-bold uppercase tracking-wider">Total Active Study</p>
-                          <p className="text-lg font-black text-white mt-1">
+                        <div className="p-3.5 rounded-2xl bg-primary-950/30 border border-primary-500/30">
+                          <p className="text-[10px] text-primary-600 dark:text-primary-400 font-bold uppercase tracking-wider">Total Active Study</p>
+                          <p className="text-lg font-black text-foreground mt-1">
                             {Math.floor((inspectData.stats?.lifetimeActiveSeconds || 0) / 3600)}h{' '}
                             {Math.floor(((inspectData.stats?.lifetimeActiveSeconds || 0) % 3600) / 60)}m
                           </p>
                         </div>
                         <div className="p-3.5 rounded-2xl bg-emerald-950/30 border border-emerald-500/30">
-                          <p className="text-[10px] text-emerald-400 font-bold uppercase tracking-wider">Focus Reading Time</p>
-                          <p className="text-lg font-black text-white mt-1">
+                          <p className="text-[10px] text-emerald-600 dark:text-emerald-400 font-bold uppercase tracking-wider">Focus Reading Time</p>
+                          <p className="text-lg font-black text-foreground mt-1">
                             {Math.floor((inspectData.stats?.lifetimeFocusSeconds || 0) / 3600)}h{' '}
                             {Math.floor(((inspectData.stats?.lifetimeFocusSeconds || 0) % 3600) / 60)}m
                           </p>
                         </div>
                         <div className="p-3.5 rounded-2xl bg-amber-950/30 border border-amber-500/30">
-                          <p className="text-[10px] text-amber-400 font-bold uppercase tracking-wider">Total Quiz Attempts</p>
-                          <p className="text-lg font-black text-white mt-1">{inspectData.stats?.totalAttempts || 0}</p>
+                          <p className="text-[10px] text-amber-600 dark:text-amber-400 font-bold uppercase tracking-wider">Total Quiz Attempts</p>
+                          <p className="text-lg font-black text-foreground mt-1">{inspectData.stats?.totalAttempts || 0}</p>
                         </div>
                         <div className="p-3.5 rounded-2xl bg-cyan-950/30 border border-cyan-500/30">
-                          <p className="text-[10px] text-cyan-400 font-bold uppercase tracking-wider">Days Active</p>
-                          <p className="text-lg font-black text-white mt-1">{inspectData.stats?.totalDaysActive || 0} Days</p>
+                          <p className="text-[10px] text-cyan-600 dark:text-cyan-400 font-bold uppercase tracking-wider">Days Active</p>
+                          <p className="text-lg font-black text-foreground mt-1">{inspectData.stats?.totalDaysActive || 0} Days</p>
                         </div>
                       </div>
 
                       {/* Profile Details Grid */}
-                      <div className="glass-panel p-5 rounded-2xl border border-slate-800 space-y-4">
-                        <h4 className="text-xs font-bold uppercase tracking-wider text-slate-400">Candidate Profile Record</h4>
+                      <div className="glass-panel p-5 rounded-2xl border border-card-border space-y-4">
+                        <h4 className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Candidate Profile Record</h4>
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
                           <div>
                             <span className="text-slate-500 block">Full Name</span>
-                            <span className="font-bold text-white">{inspectData.user.name}</span>
+                            <span className="font-bold text-foreground">{inspectData.user.name}</span>
                           </div>
                           <div>
                             <span className="text-slate-500 block">Email Address</span>
-                            <span className="font-bold text-white font-mono">{inspectData.user.email}</span>
+                            <span className="font-bold text-foreground font-mono">{inspectData.user.email}</span>
                           </div>
                           <div>
                             <span className="text-slate-500 block">Platform Role</span>
-                            <span className="font-bold text-indigo-400 uppercase">{inspectData.user.role || 'user'}</span>
+                            <span className="font-bold text-primary-600 dark:text-primary-400 uppercase">{inspectData.user.role || 'user'}</span>
                           </div>
                           <div>
                             <span className="text-slate-500 block">Premium Status</span>
-                            <span className={`font-bold ${inspectData.user.isPremium ? 'text-amber-400' : 'text-slate-400'}`}>
+                            <span className={`font-bold ${inspectData.user.isPremium ? 'text-amber-600 dark:text-amber-400' : 'text-muted-foreground'}`}>
                               {inspectData.user.isPremium ? 'Premium Candidate' : 'Standard Candidate'}
                             </span>
                           </div>
                           <div>
                             <span className="text-slate-500 block">Allowed Batches</span>
-                            <span className="font-bold text-white">
+                            <span className="font-bold text-foreground">
                               {inspectData.user.allowedBatches?.length > 0 ? inspectData.user.allowedBatches.join(', ') : 'None'}
                             </span>
                           </div>
                           <div>
                             <span className="text-slate-500 block">Registered At</span>
-                            <span className="font-bold text-slate-300">
+                            <span className="font-bold text-foreground/80">
                               {inspectData.user.createdAt ? new Date(inspectData.user.createdAt).toLocaleString() : 'N/A'}
                             </span>
                           </div>
@@ -2847,15 +2847,15 @@ export default function AdminDashboardPage() {
                       </div>
 
                       {/* All Logged-In Devices Telemetry */}
-                      <div className="glass-panel p-5 rounded-2xl border border-slate-800 space-y-3">
+                      <div className="glass-panel p-5 rounded-2xl border border-card-border space-y-3">
                         <div className="flex items-center justify-between flex-wrap gap-2">
                           <div className="flex items-center gap-2">
-                            <Laptop className="w-4 h-4 text-indigo-400" />
-                            <h4 className="text-xs font-bold uppercase tracking-wider text-slate-300">
+                            <Laptop className="w-4 h-4 text-primary-600 dark:text-primary-400" />
+                            <h4 className="text-xs font-bold uppercase tracking-wider text-foreground/80">
                               All Logged-In Devices ({inspectData.sessions?.length || 0})
                             </h4>
                             {inspectData.sessions?.length > 1 && (
-                              <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-amber-500/20 text-amber-300 border border-amber-500/30">
+                              <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-amber-500/20 text-amber-600 dark:text-amber-300 border border-amber-500/30">
                                 ⚠️ {inspectData.sessions.length} Active Devices
                               </span>
                             )}
@@ -2863,7 +2863,7 @@ export default function AdminDashboardPage() {
                           {isSuperadmin && inspectData.sessions?.length > 0 && (
                             <button
                               onClick={() => handleTerminateAllUserSessions(inspectData.user.email)}
-                              className="px-3 py-1.5 rounded-xl bg-rose-600/20 hover:bg-rose-600/30 text-rose-300 border border-rose-500/30 text-xs font-bold transition-all flex items-center gap-1.5 shadow-sm"
+                              className="px-3 py-1.5 rounded-xl bg-rose-600/20 hover:bg-rose-600/30 text-rose-600 dark:text-rose-300 border border-rose-500/30 text-xs font-bold transition-all flex items-center gap-1.5 shadow-sm"
                             >
                               <Trash2 className="w-3.5 h-3.5" />
                               <span>Logout All Devices</span>
@@ -2886,19 +2886,19 @@ export default function AdminDashboardPage() {
                                 : lastSeen!.toLocaleTimeString();
 
                               const stateColors: Record<string, string> = {
-                                active: 'bg-emerald-500/20 text-emerald-300 border-emerald-500/30',
-                                focus: 'bg-blue-500/20 text-blue-300 border-blue-500/30',
-                                idle: 'bg-amber-500/20 text-amber-300 border-amber-500/30',
-                                background: 'bg-slate-700/40 text-slate-400 border-slate-600/30',
+                                active: 'bg-emerald-500/20 text-emerald-600 dark:text-emerald-300 border-emerald-500/30',
+                                focus: 'bg-blue-500/20 text-blue-600 dark:text-blue-300 border-blue-500/30',
+                                idle: 'bg-amber-500/20 text-amber-600 dark:text-amber-300 border-amber-500/30',
+                                background: 'bg-slate-700/40 text-muted-foreground border-slate-600/30',
                               };
 
                               return (
-                                <div key={s._id} className="p-3.5 rounded-xl bg-slate-900/80 border border-slate-800/80 text-xs hover:border-slate-700 transition-all space-y-2.5">
+                                <div key={s._id} className="p-3.5 rounded-xl bg-card/80 border border-card-border/80 text-xs hover:border-slate-700 transition-all space-y-2.5">
                                   {/* Row 1: Path + device type + state badge */}
                                   <div className="flex items-center justify-between gap-2">
                                     <div className="flex items-center gap-2 min-w-0">
-                                      <span className="font-bold text-white text-xs truncate">{s.currentPath || '/'}</span>
-                                      <span className="text-[10px] font-mono px-2 py-0.5 rounded-md bg-slate-800 text-slate-300 font-bold uppercase shrink-0">{s.deviceType || 'desktop'}</span>
+                                      <span className="font-bold text-foreground text-xs truncate">{s.currentPath || '/'}</span>
+                                      <span className="text-[10px] font-mono px-2 py-0.5 rounded-md bg-slate-800 text-foreground/80 font-bold uppercase shrink-0">{s.deviceType || 'desktop'}</span>
                                     </div>
                                     <span className={`px-2 py-0.5 rounded-full text-[10px] font-bold uppercase border shrink-0 ${stateColors[s.state] || stateColors.background}`}>
                                       {s.state || 'unknown'}
@@ -2906,22 +2906,22 @@ export default function AdminDashboardPage() {
                                   </div>
 
                                   {/* Row 2: Browser / OS / IP / Resolution */}
-                                  <div className="flex flex-wrap items-center gap-x-2 gap-y-0.5 text-[10px] text-slate-400 font-mono">
-                                    <span className="text-indigo-300 font-bold">🌐 {s.browser || 'Unknown'}</span>
+                                  <div className="flex flex-wrap items-center gap-x-2 gap-y-0.5 text-[10px] text-muted-foreground font-mono">
+                                    <span className="text-primary-600 dark:text-primary-300 font-bold">🌐 {s.browser || 'Unknown'}</span>
                                     <span>•</span>
-                                    <span className="text-slate-300">💻 {s.os || 'Unknown'}</span>
+                                    <span className="text-foreground/80">💻 {s.os || 'Unknown'}</span>
                                     <span>•</span>
-                                    <span className="text-emerald-400 font-bold">📍 IP: {s.ipAddress || '127.0.0.1'}</span>
+                                    <span className="text-emerald-600 dark:text-emerald-400 font-bold">📍 IP: {s.ipAddress || '127.0.0.1'}</span>
                                     <span>•</span>
-                                    <span className="text-slate-400">🖥️ {s.screenResolution || '1920x1080'}</span>
+                                    <span className="text-muted-foreground">🖥️ {s.screenResolution || '1920x1080'}</span>
                                   </div>
 
                                   {/* Row 3: Login time + Last seen + Terminate */}
-                                  <div className="flex items-center justify-between gap-2 pt-1 border-t border-slate-800/60">
+                                  <div className="flex items-center justify-between gap-2 pt-1 border-t border-card-border/60">
                                     <div className="flex items-center gap-4 text-[10px] font-mono">
                                       <div className="space-y-0.5">
                                         <p className="text-slate-500 uppercase tracking-wider font-bold">Logged in at</p>
-                                        <p className="text-slate-300 font-bold">
+                                        <p className="text-foreground/80 font-bold">
                                           {loginAt
                                             ? `${loginAt.toLocaleDateString([], { month: 'short', day: 'numeric' })} · ${loginAt.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}`
                                             : '—'}
@@ -2929,13 +2929,13 @@ export default function AdminDashboardPage() {
                                       </div>
                                       <div className="space-y-0.5">
                                         <p className="text-slate-500 uppercase tracking-wider font-bold">Last seen</p>
-                                        <p className="text-amber-300 font-bold">{lastSeenLabel}</p>
+                                        <p className="text-amber-600 dark:text-amber-300 font-bold">{lastSeenLabel}</p>
                                       </div>
                                     </div>
                                     {isSuperadmin && (
                                       <button
                                         onClick={() => handleTerminateSession(s.sessionId)}
-                                        className="p-2 rounded-lg bg-rose-500/10 hover:bg-rose-500/20 text-rose-400 border border-rose-500/20 transition-all shrink-0"
+                                        className="p-2 rounded-lg bg-rose-500/10 hover:bg-rose-500/20 text-rose-600 dark:text-rose-400 border border-rose-500/20 transition-all shrink-0"
                                         title="Logout / Terminate this device session"
                                       >
                                         <Trash2 className="w-4 h-4" />
@@ -2950,20 +2950,20 @@ export default function AdminDashboardPage() {
                       </div>
                       {/* Recent Live Sessions Telemetry (last 2 hours) */}
                       {inspectData.recentSessions && inspectData.recentSessions.length > 0 && (
-                        <div className="glass-panel p-5 rounded-2xl border border-purple-500/20 bg-purple-950/10 space-y-3">
+                        <div className="glass-panel p-5 rounded-2xl border border-primary-500/20 bg-primary-950/10 space-y-3">
                           <div className="flex items-center gap-2">
-                            <History className="w-4 h-4 text-purple-400" />
-                            <h4 className="text-xs font-bold uppercase tracking-wider text-slate-300">
+                            <History className="w-4 h-4 text-primary-600 dark:text-primary-400" />
+                            <h4 className="text-xs font-bold uppercase tracking-wider text-foreground/80">
                               Recent Sessions Telemetry
                             </h4>
-                            <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-purple-500/20 text-purple-300 border border-purple-500/30">
+                            <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-primary-500/20 text-primary-600 dark:text-primary-300 border border-primary-500/30">
                               Last 2h · {inspectData.recentSessions.length} records
                             </span>
                           </div>
 
-                          <div className="overflow-x-auto rounded-xl border border-slate-800">
+                          <div className="overflow-x-auto rounded-xl border border-card-border">
                             <table className="w-full text-left text-[11px]">
-                              <thead className="bg-slate-900/80 text-slate-400 font-bold border-b border-slate-800">
+                              <thead className="bg-card/80 text-muted-foreground font-bold border-b border-card-border">
                                 <tr>
                                   <th className="px-3 py-2.5">Path</th>
                                   <th className="px-3 py-2.5">State</th>
@@ -2986,18 +2986,18 @@ export default function AdminDashboardPage() {
                                     : `${Math.floor(secondsAgo / 3600)}h ago`;
 
                                   const stateStyles: Record<string, string> = {
-                                    active: 'bg-emerald-500/20 text-emerald-300',
-                                    focus: 'bg-blue-500/20 text-blue-300',
-                                    idle: 'bg-amber-500/20 text-amber-300',
-                                    background: 'bg-slate-700/40 text-slate-400',
+                                    active: 'bg-emerald-500/20 text-emerald-600 dark:text-emerald-300',
+                                    focus: 'bg-blue-500/20 text-blue-600 dark:text-blue-300',
+                                    idle: 'bg-amber-500/20 text-amber-600 dark:text-amber-300',
+                                    background: 'bg-slate-700/40 text-muted-foreground',
                                   };
 
                                   return (
-                                    <tr key={s._id} className={`hover:bg-slate-900/40 transition-colors ${s.terminated ? 'opacity-50' : ''}`}>
-                                      <td className="px-3 py-2.5 font-mono text-indigo-300 font-bold truncate max-w-[120px]">
+                                    <tr key={s._id} className={`hover:bg-card/40 transition-colors ${s.terminated ? 'opacity-50' : ''}`}>
+                                      <td className="px-3 py-2.5 font-mono text-primary-600 dark:text-primary-300 font-bold truncate max-w-[120px]">
                                         <span title={s.currentPath}>{s.currentPath || '/'}</span>
                                         {s.terminated && (
-                                          <span className="ml-1.5 px-1.5 py-0.5 rounded text-[9px] font-black bg-rose-500/20 text-rose-400 border border-rose-500/30 uppercase tracking-wider">
+                                          <span className="ml-1.5 px-1.5 py-0.5 rounded text-[9px] font-black bg-rose-500/20 text-rose-600 dark:text-rose-400 border border-rose-500/30 uppercase tracking-wider">
                                             terminated
                                           </span>
                                         )}
@@ -3007,21 +3007,21 @@ export default function AdminDashboardPage() {
                                           {s.state || '—'}
                                         </span>
                                       </td>
-                                      <td className="px-3 py-2.5 font-mono text-slate-300 font-bold">
+                                      <td className="px-3 py-2.5 font-mono text-foreground/80 font-bold">
                                         {Math.floor((s.activeSeconds || 0) / 60)}m {(s.activeSeconds || 0) % 60}s
                                       </td>
-                                      <td className="px-3 py-2.5 text-slate-400 font-mono">
+                                      <td className="px-3 py-2.5 text-muted-foreground font-mono">
                                         {s.deviceType || 'desktop'} · {s.browser || '—'} · {s.os || '—'}
                                       </td>
-                                      <td className="px-3 py-2.5 font-mono text-emerald-400 font-bold">
+                                      <td className="px-3 py-2.5 font-mono text-emerald-600 dark:text-emerald-400 font-bold">
                                         {s.ipAddress || '127.0.0.1'}
                                       </td>
-                                      <td className="px-3 py-2.5 font-mono text-slate-300">
+                                      <td className="px-3 py-2.5 font-mono text-foreground/80">
                                         {loginAt
                                           ? `${loginAt.toLocaleDateString([], { month: 'short', day: 'numeric' })} ${loginAt.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}`
                                           : '—'}
                                       </td>
-                                      <td className="px-3 py-2.5 font-mono text-amber-300 font-bold">
+                                      <td className="px-3 py-2.5 font-mono text-amber-600 dark:text-amber-300 font-bold">
                                         {lastSeenLabel}
                                       </td>
                                     </tr>
@@ -3041,9 +3041,9 @@ export default function AdminDashboardPage() {
                       {inspectData.activityLogs?.length === 0 ? (
                         <p className="text-xs text-slate-500 text-center py-8">No daily activity logs recorded yet.</p>
                       ) : (
-                        <div className="overflow-x-auto rounded-2xl border border-slate-800">
+                        <div className="overflow-x-auto rounded-2xl border border-card-border">
                           <table className="w-full text-left text-xs">
-                            <thead className="bg-slate-900 text-slate-400 font-bold border-b border-slate-800">
+                            <thead className="bg-card text-muted-foreground font-bold border-b border-card-border">
                               <tr>
                                 <th className="p-3">Date</th>
                                 <th className="p-3">Active Study Time</th>
@@ -3053,21 +3053,21 @@ export default function AdminDashboardPage() {
                                 <th className="p-3">Last Page Visited</th>
                               </tr>
                             </thead>
-                            <tbody className="divide-y divide-slate-800/60 text-slate-300">
+                            <tbody className="divide-y divide-slate-800/60 text-foreground/80">
                               {inspectData.activityLogs.map((log: any) => (
-                                <tr key={log._id} className="hover:bg-slate-900/40 font-mono">
-                                  <td className="p-3 font-bold text-amber-300">{log.dateStr}</td>
-                                  <td className="p-3 font-bold text-emerald-400">
+                                <tr key={log._id} className="hover:bg-card/40 font-mono">
+                                  <td className="p-3 font-bold text-amber-600 dark:text-amber-300">{log.dateStr}</td>
+                                  <td className="p-3 font-bold text-emerald-600 dark:text-emerald-400">
                                     {formatInspectDuration(log.activeSeconds)}
                                   </td>
-                                  <td className="p-3 text-indigo-300">
+                                  <td className="p-3 text-primary-600 dark:text-primary-300">
                                     {formatInspectDuration(log.focusSeconds)}
                                   </td>
                                   <td className="p-3 text-slate-500">
                                     {formatInspectDuration(log.idleSeconds)}
                                   </td>
                                   <td className="p-3">{log.heartbeatsCount}</td>
-                                  <td className="p-3 text-slate-400 truncate max-w-[150px]">{log.lastActivePath}</td>
+                                  <td className="p-3 text-muted-foreground truncate max-w-[150px]">{log.lastActivePath}</td>
                                 </tr>
                               ))}
                             </tbody>
@@ -3083,9 +3083,9 @@ export default function AdminDashboardPage() {
                       {inspectData.attempts?.length === 0 ? (
                         <p className="text-xs text-slate-500 text-center py-8">No test or quiz attempts recorded yet.</p>
                       ) : (
-                        <div className="overflow-x-auto rounded-2xl border border-slate-800">
+                        <div className="overflow-x-auto rounded-2xl border border-card-border">
                           <table className="w-full text-left text-xs">
-                            <thead className="bg-slate-900 text-slate-400 font-bold border-b border-slate-800">
+                            <thead className="bg-card text-muted-foreground font-bold border-b border-card-border">
                               <tr>
                                 <th className="p-3">Quiz & Test Title</th>
                                 <th className="p-3">Score</th>
@@ -3095,23 +3095,23 @@ export default function AdminDashboardPage() {
                                 <th className="p-3">Date</th>
                               </tr>
                             </thead>
-                            <tbody className="divide-y divide-slate-800/60 text-slate-300">
+                            <tbody className="divide-y divide-slate-800/60 text-foreground/80">
                               {inspectData.attempts.map((att: any) => (
-                                <tr key={att._id} className="hover:bg-slate-900/40 font-mono">
-                                  <td className="p-3 font-bold text-white">{att.quizTitle}</td>
-                                  <td className="p-3 font-bold text-emerald-400">
+                                <tr key={att._id} className="hover:bg-card/40 font-mono">
+                                  <td className="p-3 font-bold text-foreground">{att.quizTitle}</td>
+                                  <td className="p-3 font-bold text-emerald-600 dark:text-emerald-400">
                                     {`${att.score} / ${att.maxScore}`}
                                   </td>
-                                  <td className="p-3 font-bold text-amber-300">{att.accuracy}%</td>
-                                  <td className="p-3 text-indigo-300">
+                                  <td className="p-3 font-bold text-amber-600 dark:text-amber-300">{att.accuracy}%</td>
+                                  <td className="p-3 text-primary-600 dark:text-primary-300">
                                     {formatInspectDuration(att.timeSpentSeconds)}
                                   </td>
                                   <td className="p-3">
-                                    <span className={`px-2 py-0.5 rounded text-[10px] font-bold ${att.isFirstAttempt ? 'bg-emerald-500/20 text-emerald-300' : 'bg-slate-800 text-slate-400'}`}>
+                                    <span className={`px-2 py-0.5 rounded text-[10px] font-bold ${att.isFirstAttempt ? 'bg-emerald-500/20 text-emerald-600 dark:text-emerald-300' : 'bg-slate-800 text-muted-foreground'}`}>
                                       {att.isFirstAttempt ? 'YES' : 'RETAKE'}
                                     </span>
                                   </td>
-                                  <td className="p-3 text-slate-400">
+                                  <td className="p-3 text-muted-foreground">
                                     {new Date(att.createdAt || att.timestamp).toLocaleDateString()}
                                   </td>
                                 </tr>
@@ -3127,15 +3127,15 @@ export default function AdminDashboardPage() {
                   {inspectActiveTab === 'promos' && (
                     <div className="space-y-6">
                       {/* Pre-Approved Status */}
-                      <div className="glass-panel p-5 rounded-2xl border border-slate-800 space-y-2">
-                        <h4 className="text-xs font-bold uppercase tracking-wider text-slate-400">Pre-Approved Email Access</h4>
+                      <div className="glass-panel p-5 rounded-2xl border border-card-border space-y-2">
+                        <h4 className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Pre-Approved Email Access</h4>
                         {inspectData.preApprovedRecord ? (
                           <div className="p-3 rounded-xl bg-emerald-950/30 border border-emerald-500/30 text-xs flex items-center justify-between">
                             <div>
-                              <p className="font-bold text-emerald-300">Pre-Approved Candidate ({inspectData.preApprovedRecord.durationDays} Days Access)</p>
-                              <p className="text-[10px] text-slate-400">Added By: {inspectData.preApprovedRecord.addedBy}</p>
+                              <p className="font-bold text-emerald-600 dark:text-emerald-300">Pre-Approved Candidate ({inspectData.preApprovedRecord.durationDays} Days Access)</p>
+                              <p className="text-[10px] text-muted-foreground">Added By: {inspectData.preApprovedRecord.addedBy}</p>
                             </div>
-                            <span className={`px-2 py-0.5 rounded text-[10px] font-bold ${inspectData.preApprovedRecord.isActivated ? 'bg-emerald-500/20 text-emerald-300' : 'bg-amber-500/20 text-amber-300'}`}>
+                            <span className={`px-2 py-0.5 rounded text-[10px] font-bold ${inspectData.preApprovedRecord.isActivated ? 'bg-emerald-500/20 text-emerald-600 dark:text-emerald-300' : 'bg-amber-500/20 text-amber-600 dark:text-amber-300'}`}>
                               {inspectData.preApprovedRecord.isActivated ? 'ACTIVATED' : 'PENDING'}
                             </span>
                           </div>
@@ -3145,17 +3145,17 @@ export default function AdminDashboardPage() {
                       </div>
 
                       {/* Redeem Code History */}
-                      <div className="glass-panel p-5 rounded-2xl border border-slate-800 space-y-3">
-                        <h4 className="text-xs font-bold uppercase tracking-wider text-slate-400">Redeemed Promo Codes ({inspectData.redeemCodes?.length || 0})</h4>
+                      <div className="glass-panel p-5 rounded-2xl border border-card-border space-y-3">
+                        <h4 className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Redeemed Promo Codes ({inspectData.redeemCodes?.length || 0})</h4>
                         {inspectData.redeemCodes?.length === 0 ? (
                           <p className="text-xs text-slate-500">No promo codes redeemed by this candidate.</p>
                         ) : (
                           <div className="space-y-2">
                             {inspectData.redeemCodes.map((c: any) => (
-                              <div key={c._id} className="p-3 rounded-xl bg-slate-900/60 border border-slate-800 text-xs flex items-center justify-between font-mono">
+                              <div key={c._id} className="p-3 rounded-xl bg-card/60 border border-card-border text-xs flex items-center justify-between font-mono">
                                 <div>
-                                  <span className="font-bold text-amber-300">{c.code}</span>
-                                  <span className="text-[10px] text-slate-400 ml-2">Batch: {c.batchName} ({c.durationDays} Days)</span>
+                                  <span className="font-bold text-amber-600 dark:text-amber-300">{c.code}</span>
+                                  <span className="text-[10px] text-muted-foreground ml-2">Batch: {c.batchName} ({c.durationDays} Days)</span>
                                 </div>
                                 <span className="text-[10px] text-slate-500">Created By: {c.createdBy}</span>
                               </div>
@@ -3165,15 +3165,15 @@ export default function AdminDashboardPage() {
                       </div>
 
                       {/* Launch Event Claims */}
-                      <div className="glass-panel p-5 rounded-2xl border border-slate-800 space-y-3">
-                        <h4 className="text-xs font-bold uppercase tracking-wider text-slate-400">Claimed Launch Events ({inspectData.claimedEvents?.length || 0})</h4>
+                      <div className="glass-panel p-5 rounded-2xl border border-card-border space-y-3">
+                        <h4 className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Claimed Launch Events ({inspectData.claimedEvents?.length || 0})</h4>
                         {inspectData.claimedEvents?.length === 0 ? (
                           <p className="text-xs text-slate-500">No launch events claimed by this candidate.</p>
                         ) : (
                           <div className="space-y-2">
                             {inspectData.claimedEvents.map((ev: any) => (
-                              <div key={ev._id} className="p-3 rounded-xl bg-slate-900/60 border border-slate-800 text-xs flex items-center justify-between">
-                                <span className="font-bold text-white">{ev.title} ({ev.durationDays} Days)</span>
+                              <div key={ev._id} className="p-3 rounded-xl bg-card/60 border border-card-border text-xs flex items-center justify-between">
+                                <span className="font-bold text-foreground">{ev.title} ({ev.durationDays} Days)</span>
                                 <span className="text-[10px] text-slate-500 font-mono">Created By: {ev.createdBy}</span>
                               </div>
                             ))}
@@ -3186,10 +3186,10 @@ export default function AdminDashboardPage() {
                   {/* TAB 5: RAW MONGODB JSON DUMP */}
                   {inspectActiveTab === 'raw_json' && (
                     <div className="space-y-4">
-                      <p className="text-xs text-slate-400">
-                        Below is the raw, unedited MongoDB JSON dump for candidate <span className="text-emerald-400 font-mono">{inspectingUserEmail}</span> across all 9 database collections.
+                      <p className="text-xs text-muted-foreground">
+                        Below is the raw, unedited MongoDB JSON dump for candidate <span className="text-emerald-600 dark:text-emerald-400 font-mono">{inspectingUserEmail}</span> across all 9 database collections.
                       </p>
-                      <pre className="p-4 rounded-2xl bg-slate-900/90 border border-slate-800 text-emerald-300 font-mono text-[11px] overflow-x-auto max-h-[500px]">
+                      <pre className="p-4 rounded-2xl bg-card/90 border border-card-border text-emerald-600 dark:text-emerald-300 font-mono text-[11px] overflow-x-auto max-h-[500px]">
                         {JSON.stringify(inspectData, null, 2)}
                       </pre>
                     </div>

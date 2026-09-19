@@ -10,7 +10,7 @@ export function GoogleLoginButton({ label = 'Sign in with Google', size = 'mediu
     <button
       onClick={() => signIn('google')}
       type="button"
-      className={`relative group overflow-hidden rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700 hover:border-indigo-500/50 text-white font-bold transition-all shadow-md hover:shadow-indigo-500/20 flex items-center justify-center gap-2 shrink-0 ${paddingClass}`}
+      className={`relative group overflow-hidden rounded-xl bg-card hover:bg-slate-800 border border-slate-700 hover:border-primary-500/50 text-foreground font-bold transition-all shadow-md hover:shadow-primary-500/20 flex items-center justify-center gap-2 shrink-0 ${paddingClass}`}
     >
       {/* Official Google G Logo SVG */}
       <svg className="w-4 h-4 shrink-0" viewBox="0 0 24 24">
