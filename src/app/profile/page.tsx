@@ -445,17 +445,31 @@ export default function ProfilePage() {
       {/* SECTION 2: PLATFORM PREFERENCES & REDEEM CODE */}
       {activeTab === "settings" && (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 animate-fadeIn">
-          {/* Theme Preferences */}
-          <section className="glass-card rounded-3xl p-6 border border-card-border space-y-6">
-            <h2 className="text-lg font-bold text-foreground flex items-center gap-2 border-b border-card-border pb-4">
-              <Sparkles className="w-5 h-5 text-primary-600 dark:text-primary-400" />
-              <span>Platform Theme Preferences</span>
-            </h2>
-            <p className="text-xs text-muted-foreground">
-              Customize your display preference between Light/Dark mode and pick
-              your favorite primary color accent.
-            </p>
-            <ThemePicker />
+          {/* Astra Theme Engine */}
+          <section className="glass-card rounded-3xl p-6 border border-card-border space-y-6 relative overflow-hidden">
+            {/* Ambient branding glow */}
+            <div className="absolute -top-12 -right-12 w-40 h-40 bg-primary-500/10 rounded-full blur-3xl pointer-events-none" />
+            
+            <div className="space-y-3 border-b border-card-border pb-5 relative z-10">
+              <div className="flex items-center gap-2.5">
+                <div className="p-1.5 rounded-lg bg-primary-500/10 border border-primary-500/20">
+                  <Sparkles className="w-4 h-4 text-primary-600 dark:text-primary-400" />
+                </div>
+                <h2 className="text-lg font-black text-foreground tracking-tight">
+                  Astra UI Engine
+                </h2>
+                <span className="px-2 py-0.5 rounded-md text-[9px] font-extrabold bg-primary-500/10 text-primary-600 dark:text-primary-400 border border-primary-500/20 uppercase tracking-widest">
+                  Active
+                </span>
+              </div>
+              <p className="text-xs text-muted-foreground leading-relaxed">
+                Powered by our next-generation aesthetic engine. Personalize your workspace with Astra's adaptive lighting modes and signature dynamic color accents.
+              </p>
+            </div>
+            
+            <div className="relative z-10">
+              <ThemePicker />
+            </div>
           </section>
 
           {/* Redeem Code Section */}
