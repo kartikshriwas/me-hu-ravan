@@ -61,7 +61,7 @@ export default function PricingPage() {
               ALL-ACCESS BATCHES PASS
             </h2>
             <p className="text-muted-foreground text-sm sm:text-base">
-              Get complete 2.5 Years (30 Months) access to <strong className="text-foreground">Quiz Access + Prime 3.0 (AI/ML) + Delta 9.0 (Web Dev) + Alpha Plus 8.0 (DSA Java & C++) + Sigma & Sigmax</strong> all included in one single pass!
+              Get complete access to <strong className="text-foreground">Quiz Access + Prime 3.0 (AI/ML) + Delta 9.0 (Web Dev) + Alpha Plus 8.0 (DSA Java & C++) + Sigma & Sigmax</strong> all included in one single pass!
             </p>
             <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 text-xs font-semibold text-foreground/80">
               <span className="flex items-center gap-1.5"><CheckCircle2 className="w-4 h-4 text-emerald-500" /> Full AI & ML Stack</span>
@@ -73,7 +73,7 @@ export default function PricingPage() {
           <div className="flex flex-col items-center bg-card/80 border border-card-border p-6 rounded-2xl shadow-xl shrink-0 w-full sm:w-auto text-center space-y-4">
             <div className="space-y-1">
               <div className="flex items-baseline justify-center gap-2">
-                <span className="text-4xl sm:text-5xl font-black text-primary-600 dark:text-primary-400">₹ 499</span>
+                <span className="text-4xl sm:text-5xl font-black text-primary-600 dark:text-primary-400">₹ 699</span>
                 <span className="text-xs font-bold px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30">
                   95% OFF
                 </span>
@@ -157,7 +157,6 @@ export default function PricingPage() {
                   <span className="text-xs text-muted-foreground line-through">₹ 6860</span>
                   <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-600 dark:text-emerald-400">95% OFF</span>
                 </div>
-                <p className="text-[11px] text-emerald-500 font-semibold mt-0.5">Validity: 2.5 Years (30 Months)</p>
               </div>
               <ul className="space-y-2.5 text-xs text-foreground/80 pt-2">
                 <li className="flex items-center gap-2"><Check className="w-4 h-4 text-primary-500 shrink-0" /> Python, Data Science, Pandas, PyTorch</li>
@@ -194,7 +193,6 @@ export default function PricingPage() {
                   <span className="text-xs text-muted-foreground line-through">₹ 6250</span>
                   <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-600 dark:text-emerald-400">95% OFF</span>
                 </div>
-                <p className="text-[11px] text-emerald-500 font-semibold mt-0.5">Validity: 2.5 Years (30 Months)</p>
               </div>
               <ul className="space-y-2.5 text-xs text-foreground/80 pt-2">
                 <li className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-500 shrink-0" /> Frontend: HTML, CSS, JS, React, Tailwind</li>
@@ -230,7 +228,6 @@ export default function PricingPage() {
                   <span className="text-xs text-muted-foreground line-through">₹ 6750</span>
                   <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-600 dark:text-emerald-400">95% OFF</span>
                 </div>
-                <p className="text-[11px] text-amber-500 font-semibold mt-0.5">Validity: 2.5 Years (30 Months)</p>
               </div>
               <ul className="space-y-2.5 text-xs text-foreground/80 pt-2">
                 <li className="flex items-center gap-2"><Check className="w-4 h-4 text-amber-500 shrink-0" /> Java / C++ Foundation to Advanced</li>
@@ -273,7 +270,6 @@ export default function PricingPage() {
                     <span className="text-xs text-muted-foreground line-through">₹ 8999</span>
                     <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-600 dark:text-emerald-400">95% OFF</span>
                   </div>
-                  <p className="text-[11px] text-purple-400 font-semibold mt-0.5">Validity: 2.5 Years (30 Months)</p>
                 </div>
                 <div>
                   <span className="text-xs text-muted-foreground font-semibold">SIGMAX Pro Edition</span>
@@ -282,7 +278,6 @@ export default function PricingPage() {
                     <span className="text-xs text-muted-foreground line-through">₹ 9650</span>
                     <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-600 dark:text-emerald-400">95% OFF</span>
                   </div>
-                  <p className="text-[11px] text-purple-400 font-semibold mt-0.5">Validity: 2.5 Years (30 Months)</p>
                 </div>
               </div>
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-foreground/80 pt-2">
