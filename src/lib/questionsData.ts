@@ -291,15 +291,21 @@ function parseAssessmentFile(filePath: string, quizId: string): AssessmentDetail
     const feedbackMap = buildFeedbackMap(data);
 
     const title = assessment.title || `Practice Paper (${quizId.toUpperCase()})`;
-    let difficulty: 'Easy' | 'Medium' | 'Hard' | 'Practice' = 'Practice';
+    let difficulty: 'Easy' | 'Medium' | 'Hard' | 'Practice' = 'Hard';
     const titleLower = title.toLowerCase();
     if (titleLower.includes('easy')) difficulty = 'Easy';
     else if (titleLower.includes('medium')) difficulty = 'Medium';
+    else if (titleLower.includes('practice')) difficulty = 'Practice';
     else if (titleLower.includes('hard')) difficulty = 'Hard';
 
-    let scorePerQuestion = 1;
+    let scorePerQuestion = 3; // default 3 for other/hard
+    if (difficulty === 'Easy') scorePerQuestion = 1;
     if (difficulty === 'Medium') scorePerQuestion = 2;
-    if (difficulty === 'Hard') scorePerQuestion = 3;
+    if (difficulty === 'Practice') scorePerQuestion = 1;
+
+    // Apply specific content-based scoring multipliers
+    if (titleLower.includes('tcs')) scorePerQuestion = 3;
+    if (titleLower.includes('advanced')) scorePerQuestion = 5;
 
     const questions: QuestionBlock[] = [];
     let qIndex = 0;
