@@ -116,10 +116,9 @@ export default function PricingPage() {
               </div>
               <div className="pt-2 border-t border-card-border/60">
                 <div className="flex items-baseline gap-2">
-                  <span className="text-3xl font-extrabold text-foreground">₹ 10</span>
+                  <span className="text-3xl font-extrabold text-foreground">₹ 9</span>
                   <span className="text-xs text-muted-foreground">/ month</span>
                 </div>
-                <p className="text-[11px] text-cyan-500 font-semibold mt-0.5">Validity: 2.5 Years (30 Months)</p>
               </div>
               <ul className="space-y-2.5 text-xs text-foreground/80 pt-2">
                 <li className="flex items-center gap-2"><Check className="w-4 h-4 text-cyan-500 shrink-0" /> Access to all core quizzes & mock tests</li>
