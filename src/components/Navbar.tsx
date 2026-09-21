@@ -147,6 +147,19 @@ export function Navbar() {
               </Link>
             )}
 
+            {/* Pricing Tab */}
+            <Link
+              href="/pricing"
+              className={`hidden md:flex items-center gap-1.5 px-3 sm:px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-semibold transition-all shrink-0 ${
+                pathname === '/pricing'
+                  ? 'bg-amber-600 text-white font-bold shadow-md shadow-amber-600/30 border border-amber-500/40'
+                  : 'text-muted-foreground hover:text-amber-600 dark:hover:text-amber-300 hover:bg-amber-950/40'
+              }`}
+            >
+              <Sparkles className={`w-3.5 h-3.5 sm:w-4 sm:h-4 ${pathname === '/pricing' ? 'text-foreground' : 'text-amber-600 dark:text-amber-400'}`} />
+              <span>Pricing</span>
+            </Link>
+
             {/* Dynamic Item 1: Saved (Bookmarks) */}
             {user && (
               <Link
