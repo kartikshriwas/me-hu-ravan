@@ -115,77 +115,26 @@ function getUnitMetaConfig(unit: CourseSectionUnit) {
     };
   }
 
-  // 4. assessmentv2 (Supported Exam Action)
-  if (type === 'assessmentv2') {
+  // 4. Exams, Quizzes & Assessments (Actionable: Take Exam / Give Test)
+  if (
+    type.includes('assessment') ||
+    type.includes('quiz') ||
+    type === 'fileass' ||
+    icon === 'fileass' ||
+    icon === 'quiz' ||
+    icon === 'assessment' ||
+    icon === 'written' ||
+    subtitle.includes('assessment') ||
+    subtitle.includes('quiz') ||
+    subtitle.includes('test')
+  ) {
     return {
       category: 'quiz',
-      typeLabel: 'Assessment (V2)',
+      typeLabel: subtitle || 'Assessment & Practice Test',
       icon: FileCheck2,
       colorClass: 'bg-primary-600/20 text-primary-600 dark:text-primary-400 border-primary-500/30',
       isActionableVideo: false,
       isActionableExam: true
-    };
-  }
-
-  // 5. assessment / quizzes
-  if (type === 'assessment') {
-    return {
-      category: 'quiz',
-      typeLabel: 'Assessment',
-      icon: FileCheck2,
-      colorClass: 'bg-primary-600/20 text-primary-600 dark:text-primary-400 border-primary-500/30',
-      isActionableVideo: false,
-      isActionableExam: true
-    };
-  }
-  if (type === 'quizinformal') {
-    return {
-      category: 'quiz',
-      typeLabel: 'Informal Quiz',
-      icon: HelpCircle,
-      colorClass: 'bg-primary-600/20 text-primary-600 dark:text-primary-400 border-primary-500/30',
-      isActionableVideo: false,
-      isActionableExam: true
-    };
-  }
-  if (type === 'quizformal') {
-    return {
-      category: 'quiz',
-      typeLabel: 'Formal Quiz',
-      icon: FileCheck2,
-      colorClass: 'bg-primary-600/20 text-primary-600 dark:text-primary-400 border-primary-500/30',
-      isActionableVideo: false,
-      isActionableExam: true
-    };
-  }
-  if (type === 'quizwritten') {
-    return {
-      category: 'quiz',
-      typeLabel: 'Written Quiz',
-      icon: FileEdit,
-      colorClass: 'bg-violet-600/20 text-violet-400 border-violet-500/30',
-      isActionableVideo: false,
-      isActionableExam: true
-    };
-  }
-  if (type === 'quizfiles') {
-    return {
-      category: 'quiz',
-      typeLabel: 'File Quiz',
-      icon: Paperclip,
-      colorClass: 'bg-cyan-600/20 text-cyan-600 dark:text-cyan-400 border-cyan-500/30',
-      isActionableVideo: false,
-      isActionableExam: false
-    };
-  }
-  if (type === 'selfassessment') {
-    return {
-      category: 'quiz',
-      typeLabel: 'Self Assessment',
-      icon: UserCheck,
-      colorClass: 'bg-sky-600/20 text-sky-400 border-sky-500/30',
-      isActionableVideo: false,
-      isActionableExam: false
     };
   }
 
@@ -644,16 +593,19 @@ export function CourseDetailClient({ course, availableTests, isUnlocked = true }
                         </div>
                       )}
 
-                      {/* Action Button: Take Exam */}
-                      {config.isActionableExam && matchingTest && !downloadUrl && (
-                        <Link
-                          href={`/quiz/${matchingTest.quizId}`}
-                          className="px-3.5 py-1.5 rounded-lg bg-primary-600/20 hover:bg-primary-600 text-primary-600 dark:text-primary-300 hover:text-white text-xs font-bold transition-all border border-primary-500/30 hover:border-transparent flex items-center gap-1 shrink-0"
-                        >
+                      {/* Action Button: Take Exam / Give Test */}
+                      {config.isActionableExam && !downloadUrl && (() => {
+                        const quizIdToUse = matchingTest?.quizId || unit.data?.assessmentId || unit.id;
+                        return (
+                          <Link
+                            href={`/quiz/${quizIdToUse}`}
+                            className="px-3.5 py-1.5 rounded-lg bg-primary-600/20 hover:bg-primary-600 text-primary-600 dark:text-primary-300 hover:text-white text-xs font-bold transition-all border border-primary-500/30 hover:border-transparent flex items-center gap-1 shrink-0"
+                          >
                           <span>Take Exam</span>
-                          <ChevronRight className="w-3.5 h-3.5" />
-                        </Link>
-                      )}
+                            <ChevronRight className="w-3.5 h-3.5" />
+                          </Link>
+                        );
+                      })()}
 
                       {/* Action Button: Watch Lesson / Video Not Available / Locked Video */}
                       {config.isActionableVideo && !downloadUrl && (() => {

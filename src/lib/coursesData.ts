@@ -35,12 +35,14 @@ function getParsedCourseFile(fullPath: string): any {
 }
 
 export function isUnitActionable(unit: Partial<CourseSectionUnit>): boolean {
+  if (!unit) return false;
+
   const type = (unit.type || '').toLowerCase();
   const icon = (unit.icon || '').toLowerCase();
   const subtitle = (unit.subtitle || '').toLowerCase();
-  const fileUrl = (unit.fileUrl || '').toLowerCase();
+  const fileUrl = (unit.fileUrl || '').trim();
 
-  // 1. Explicitly filter out Certificates
+  // 1. Filter out Certificates & Non-actionable placeholders
   if (
     type.includes('certificate') ||
     subtitle.includes('certificate') ||
@@ -50,7 +52,27 @@ export function isUnitActionable(unit: Partial<CourseSectionUnit>): boolean {
     return false;
   }
 
-  // 2. Explicitly filter out PDFs / eBooks / Documents / Notes if there is NO download fileUrl!
+  // 2. Exams / Quizzes / Assessments (Actionable: Take Exam)
+  if (
+    type === 'assessment' ||
+    type === 'assessmentv2' ||
+    type === 'quizformal' ||
+    type === 'quizinformal' ||
+    type === 'quizwritten' ||
+    type === 'quiz' ||
+    icon === 'fileass' ||
+    icon === 'quiz' ||
+    icon === 'assessment' ||
+    icon === 'written' ||
+    subtitle.includes('assessment') ||
+    subtitle.includes('quiz') ||
+    subtitle.includes('test') ||
+    (typeof unit.questionsCount === 'number' && unit.questionsCount > 0)
+  ) {
+    return true;
+  }
+
+  // 3. Explicitly filter out PDFs / eBooks / Documents / Notes if there is NO download fileUrl!
   const isPdfOrEbookOrDoc =
     type === 'pdf' ||
     type === 'document' ||
@@ -69,7 +91,7 @@ export function isUnitActionable(unit: Partial<CourseSectionUnit>): boolean {
     return !!(unit.fileUrl && unit.fileUrl.trim() !== '');
   }
 
-  // 3. Videos (Actionable: Watch Lesson / Locked Video / Video Not Available)
+  // 4. Videos (Actionable: Watch Lesson / Locked Video / Video Not Available)
   if (
     type === 'ivideo' ||
     type === 'wistia' ||
@@ -82,19 +104,6 @@ export function isUnitActionable(unit: Partial<CourseSectionUnit>): boolean {
     !!unit.sourceid ||
     !!unit.vimeoid ||
     !!(unit.data && unit.data.embed)
-  ) {
-    return true;
-  }
-
-  // 4. Exams / Quizzes / Assessments (Actionable: Take Exam)
-  if (
-    type === 'assessment' ||
-    type === 'assessmentv2' ||
-    type === 'quizformal' ||
-    type === 'quizinformal' ||
-    type === 'quizwritten' ||
-    type === 'quiz' ||
-    (typeof unit.questionsCount === 'number' && unit.questionsCount > 0)
   ) {
     return true;
   }
