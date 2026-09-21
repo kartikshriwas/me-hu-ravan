@@ -386,10 +386,10 @@ export default function HomePage() {
 
                       <div className="bg-card/80 rounded-xl px-3 py-2 border border-card-border/80 flex items-center justify-between">
                         <span className="text-[11px] text-muted-foreground font-medium flex items-center gap-1.5">
-                          <Users className="w-3.5 h-3.5 text-amber-600 dark:text-amber-400" />
-                          <span>Students</span>
+                          <Award className="w-3.5 h-3.5 text-amber-600 dark:text-amber-400" />
+                          <span>Max Points</span>
                         </span>
-                        <strong className="text-amber-600 dark:text-amber-300 font-bold">{test.candidateCount || 0}</strong>
+                        <strong className="text-amber-600 dark:text-amber-300 font-bold">{test.totalScore || 0}</strong>
                       </div>
                     </div>
 
