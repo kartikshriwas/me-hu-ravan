@@ -6,7 +6,7 @@ import { useAccentTheme } from './ThemeProvider';
 import { Moon, Sun, Check, Palette } from 'lucide-react';
 
 const ACCENT_THEMES = [
-  { name: 'purple', label: 'Purple (Default)', color: '#9333ea' },
+  { name: 'purple', label: 'Purple', color: '#9333ea' },
   { name: 'blue', label: 'Blue', color: '#2563eb' },
   { name: 'red', label: 'Red', color: '#dc2626' },
   { name: 'green', label: 'Green', color: '#16a34a' },

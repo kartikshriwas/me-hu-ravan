@@ -2,7 +2,7 @@
 
 import * as React from 'react';
 import { ThemeProvider as NextThemesProvider } from 'next-themes';
-import { generateColorScale } from '@/lib/colorUtils';
+import { generateColorScale, hexToHsl, hslToHex } from '@/lib/colorUtils';
 
 export const AccentThemeContext = React.createContext<{
   accentTheme: string;
@@ -29,15 +29,55 @@ export function ThemeProvider({
       Object.entries(scale).forEach(([shade, colorValue]) => {
         root.style.setProperty(`--color-primary-${shade}`, colorValue as string);
       });
-      // Optionally tint backgrounds in custom mode
-      root.style.setProperty('--background', '#0a0a0a'); // keep it dark for now
-      root.style.setProperty('--color-slate-950', '#0a0a0a');
-      root.style.setProperty('--color-slate-900', '#121212');
-      root.style.setProperty('--color-slate-800', '#1a1a1a');
-      root.style.setProperty('--card-bg', '#121212');
-      root.style.setProperty('--card-border', '#1a1a1a');
-      root.style.setProperty('--glass-panel-bg', 'rgba(18, 18, 18, 0.75)');
-      root.style.setProperty('--glass-card-bg', 'rgba(18, 18, 18, 0.5)');
+
+      // Calculate dynamic tinted backgrounds based on custom hex
+      const baseHsl = hexToHsl(hex);
+      const bgHue = baseHsl.h;
+      const bgSat = Math.min(baseHsl.s, 40); // Cap saturation for subtle backgrounds
+
+      // Light Mode Tints
+      const lightBg = hslToHex(bgHue, Math.min(bgSat, 60), 98);
+      
+      // Dark Mode Tints
+      const darkBg = hslToHex(bgHue, bgSat, 5);
+      const darkSlate950 = hslToHex(bgHue, bgSat, 7);
+      const darkSlate900 = hslToHex(bgHue, bgSat, 11);
+      const darkSlate800 = hslToHex(bgHue, bgSat, 16);
+      
+      // Extract RGB for rgba() variables
+      const hexToRgbVals = (h: string) => {
+        const r = parseInt(h.slice(1, 3), 16);
+        const g = parseInt(h.slice(3, 5), 16);
+        const b = parseInt(h.slice(5, 7), 16);
+        return `${r}, ${g}, ${b}`;
+      };
+      
+      const panelRgb = hexToRgbVals(darkSlate950);
+      const cardRgb = hexToRgbVals(darkSlate900);
+
+      // Inject or update a dynamic <style> tag
+      let styleEl = document.getElementById('preptea-custom-theme-styles');
+      if (!styleEl) {
+        styleEl = document.createElement('style');
+        styleEl.id = 'preptea-custom-theme-styles';
+        document.head.appendChild(styleEl);
+      }
+      
+      styleEl.innerHTML = `
+        :root[data-accent="custom"] {
+          --background: ${lightBg};
+        }
+        .dark[data-accent="custom"] {
+          --background: ${darkBg};
+          --color-slate-950: ${darkSlate950};
+          --color-slate-900: ${darkSlate900};
+          --color-slate-800: ${darkSlate800};
+          --card-bg: ${darkSlate900};
+          --card-border: ${darkSlate800};
+          --glass-panel-bg: rgba(${panelRgb}, 0.75);
+          --glass-card-bg: rgba(${cardRgb}, 0.5);
+        }
+      `;
     } catch (e) {
       console.error(e);
     }
@@ -47,14 +87,11 @@ export function ThemeProvider({
     const root = document.documentElement;
     const shades = ['50', '100', '200', '300', '400', '500', '600', '700', '800', '900', '950'];
     shades.forEach(shade => root.style.removeProperty(`--color-primary-${shade}`));
-    root.style.removeProperty('--background');
-    root.style.removeProperty('--color-slate-950');
-    root.style.removeProperty('--color-slate-900');
-    root.style.removeProperty('--color-slate-800');
-    root.style.removeProperty('--card-bg');
-    root.style.removeProperty('--card-border');
-    root.style.removeProperty('--glass-panel-bg');
-    root.style.removeProperty('--glass-card-bg');
+    
+    const styleEl = document.getElementById('preptea-custom-theme-styles');
+    if (styleEl) {
+      styleEl.remove();
+    }
   };
 
   React.useEffect(() => {

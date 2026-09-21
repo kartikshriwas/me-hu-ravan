@@ -13,34 +13,80 @@ export function hexToRgb(hex: string) {
   } : {r: 0, g: 0, b: 0};
 }
 
-function mix(color1: {r: number, g: number, b: number}, color2: {r: number, g: number, b: number}, weight: number) {
-  return {
-    r: Math.round(color1.r * weight + color2.r * (1 - weight)),
-    g: Math.round(color1.g * weight + color2.g * (1 - weight)),
-    b: Math.round(color1.b * weight + color2.b * (1 - weight)),
-  };
+export function hexToHsl(hex: string) {
+  const rgb = hexToRgb(hex);
+  const r = rgb.r / 255;
+  const g = rgb.g / 255;
+  const b = rgb.b / 255;
+
+  const max = Math.max(r, g, b);
+  const min = Math.min(r, g, b);
+  let h = 0, s = 0, l = (max + min) / 2;
+
+  if (max !== min) {
+    const d = max - min;
+    s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+    switch (max) {
+      case r: h = (g - b) / d + (g < b ? 6 : 0); break;
+      case g: h = (b - r) / d + 2; break;
+      case b: h = (r - g) / d + 4; break;
+    }
+    h /= 6;
+  }
+  return { h: h * 360, s: s * 100, l: l * 100 };
 }
 
-export function rgbToHex({r, g, b}: {r: number, g: number, b: number}) {
-  return "#" + (1 << 24 | r << 16 | g << 8 | b).toString(16).slice(1).padStart(6, '0');
+export function hslToHex(h: number, s: number, l: number) {
+  l /= 100;
+  const a = s * Math.min(l, 1 - l) / 100;
+  const f = (n: number) => {
+    const k = (n + h / 30) % 12;
+    const color = l - a * Math.max(Math.min(k - 3, 9 - k, 1), -1);
+    return Math.round(255 * color).toString(16).padStart(2, '0');
+  };
+  return `#${f(0)}${f(8)}${f(4)}`;
 }
 
 export function generateColorScale(baseHex: string) {
-  const baseRgb = hexToRgb(baseHex);
-  const white = {r: 255, g: 255, b: 255};
-  const black = {r: 0, g: 0, b: 0};
+  const baseHsl = hexToHsl(baseHex);
   
+  // Weights determine how far we interpolate lightness from the base color
+  // towards absolute light (98%) or absolute dark (5%)
+  const createShade = (shadeIndex: number) => {
+    if (shadeIndex === 500) return baseHex;
+    
+    let newL;
+    let weight;
+    
+    if (shadeIndex < 500) {
+      // Lighten (towards L = 97)
+      // 50 -> weight ~0.9, 400 -> weight ~0.2
+      weight = (500 - shadeIndex) / 450; 
+      newL = baseHsl.l + (97 - baseHsl.l) * weight;
+    } else {
+      // Darken (towards L = 5)
+      // 600 -> weight ~0.22, 950 -> weight ~1.0
+      weight = (shadeIndex - 500) / 450;
+      newL = baseHsl.l - (baseHsl.l - 5) * weight;
+    }
+    
+    // Slightly desaturate extreme shades to keep them looking natural
+    const newS = baseHsl.s * (1 - (weight * 0.15));
+    
+    return hslToHex(baseHsl.h, newS, newL);
+  };
+
   return {
-    '50': rgbToHex(mix(baseRgb, white, 0.05)),
-    '100': rgbToHex(mix(baseRgb, white, 0.1)),
-    '200': rgbToHex(mix(baseRgb, white, 0.3)),
-    '300': rgbToHex(mix(baseRgb, white, 0.5)),
-    '400': rgbToHex(mix(baseRgb, white, 0.7)),
+    '50': createShade(50),
+    '100': createShade(100),
+    '200': createShade(200),
+    '300': createShade(300),
+    '400': createShade(400),
     '500': baseHex,
-    '600': rgbToHex(mix(black, baseRgb, 0.2)),
-    '700': rgbToHex(mix(black, baseRgb, 0.4)),
-    '800': rgbToHex(mix(black, baseRgb, 0.6)),
-    '900': rgbToHex(mix(black, baseRgb, 0.8)),
-    '950': rgbToHex(mix(black, baseRgb, 0.92)), // slightly darker for 950
+    '600': createShade(600),
+    '700': createShade(700),
+    '800': createShade(800),
+    '900': createShade(900),
+    '950': createShade(950),
   };
 }

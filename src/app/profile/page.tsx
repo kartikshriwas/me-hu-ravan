@@ -458,9 +458,6 @@ export default function ProfilePage() {
                 <h2 className="text-lg font-black text-foreground tracking-tight">
                   Astra UI Engine
                 </h2>
-                <span className="px-2 py-0.5 rounded-md text-[9px] font-extrabold bg-primary-500/10 text-primary-600 dark:text-primary-400 border border-primary-500/20 uppercase tracking-widest">
-                  Active
-                </span>
               </div>
               <p className="text-xs text-muted-foreground leading-relaxed">
                 Powered by our next-generation aesthetic engine. Personalize your workspace with Astra's adaptive lighting modes and signature dynamic color accents.
