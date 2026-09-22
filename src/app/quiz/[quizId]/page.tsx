@@ -666,6 +666,7 @@ export default function QuizPlayerPage({ params }: { params: Promise<{ quizId: s
         {/* Question Area (3 cols) */}
         <div className="lg:col-span-3 space-y-6">
           <QuestionRenderer
+            quizId={quizId}
             question={currentQuestion}
             currentNumber={currentIndex + 1}
             totalQuestions={assessment.questions.length}

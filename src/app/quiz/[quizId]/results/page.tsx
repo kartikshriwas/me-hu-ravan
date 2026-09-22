@@ -393,6 +393,7 @@ export default function QuizResultsPage({ params }: { params: Promise<{ quizId: 
 
               return (
                 <QuestionRenderer
+                  quizId={quizId}
                   key={q.id}
                   question={q}
                   currentNumber={q.questionNumber}

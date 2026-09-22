@@ -6,6 +6,7 @@ import { notFound } from 'next/navigation';
 import { useAuth } from '@/lib/authContext';
 import { UserAvatar } from '@/components/UserAvatar';
 import { GoogleLoginButton } from '@/components/GoogleLoginButton';
+import { ReportListClient } from '@/components/admin/ReportListClient';
 import {
   ShieldCheck,
   Crown,
@@ -37,7 +38,8 @@ import {
   Tablet,
   Trash2,
   History,
-  Loader2
+  Loader2,
+  ShieldAlert
 } from 'lucide-react';
 
 interface SessionEventItem {
@@ -183,13 +185,14 @@ interface AdminUserItem {
 
 export default function AdminDashboardPage() {
   const { user: authUser, loading: authLoading } = useAuth();
-  const [activeTab, setActiveTab] = useState<'overview' | 'codes' | 'events' | 'emails' | 'users' | 'active-sessions' | 'all-sessions'>('overview');
+  const [activeTab, setActiveTab] = useState<'overview' | 'codes' | 'events' | 'emails' | 'users' | 'active-sessions' | 'all-sessions' | 'reports'>('overview');
 
   const [stats, setStats] = useState<AdminStats | null>(null);
   const [codes, setCodes] = useState<RedeemCodeItem[]>([]);
   const [events, setEvents] = useState<LaunchEventItem[]>([]);
   const [emails, setEmails] = useState<PreapprovedEmailItem[]>([]);
   const [users, setUsers] = useState<AdminUserItem[]>([]);
+  const [reports, setReports] = useState<any[]>([]);
 
   // Active Sessions Live Monitoring state
   const [activeSessions, setActiveSessions] = useState<ActiveSessionItem[]>([]);
@@ -309,6 +312,10 @@ export default function AdminDashboardPage() {
           }
         } else if (activeTab === 'all-sessions') {
           await fetchAllSessions();
+        } else if (activeTab === 'reports') {
+          const res = await fetch('/api/admin/reports');
+          const json = await res.json();
+          if (json.success) setReports(json.reports);
         }
       } catch (err) {
         console.error('Failed to load admin tab data:', err);
@@ -863,6 +870,7 @@ export default function AdminDashboardPage() {
           { id: 'events', label: 'Launch Events', icon: Rocket, allowed: canManageEvents },
           { id: 'emails', label: 'Bulk CSV / Emails', icon: Mail, allowed: canManageEmails },
           { id: 'users', label: 'User Roles & Perms', icon: Users, allowed: canManageUsers },
+          { id: 'reports', label: 'Reports', icon: ShieldAlert, allowed: canManageUsers },
         ].map((tab) => {
           const Icon = tab.icon;
           const isActive = activeTab === tab.id;
@@ -3197,6 +3205,25 @@ export default function AdminDashboardPage() {
                 </div>
               </div>
             )}
+          </div>
+        </div>
+      )}
+
+      {/* TAB 6: REPORTS */}
+      {activeTab === 'reports' && (
+        <div className="space-y-6">
+          <div className="glass-panel rounded-3xl p-6 border border-card-border space-y-4">
+            <div>
+              <h2 className="text-base sm:text-lg font-bold text-foreground flex items-center gap-2">
+                <ShieldAlert className="w-5 h-5 text-amber-500" />
+                <span>Question Reports</span>
+              </h2>
+              <p className="text-xs text-muted-foreground mt-1">Review and resolve issues reported by students in quizzes.</p>
+            </div>
+            
+            <div className="pt-4">
+              <ReportListClient initialReports={reports} />
+            </div>
           </div>
         </div>
       )}

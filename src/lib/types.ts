@@ -12,6 +12,7 @@ export interface CourseMeta {
   } | null;
   sectionsCount: number;
   unitsCount: number;
+  videosCount: number;
   totalDurationSeconds?: number;
   isOngoing?: boolean;
 }

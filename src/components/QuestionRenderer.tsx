@@ -1,8 +1,10 @@
 'use client';
 
 import { QuestionBlock } from '@/lib/types';
-import { Bookmark, CheckCircle2, XCircle, BookmarkCheck, HelpCircle, Lightbulb, Check } from 'lucide-react';
+import { Bookmark, CheckCircle2, XCircle, BookmarkCheck, HelpCircle, Lightbulb, Check, Flag } from 'lucide-react';
 import DOMPurify from 'dompurify';
+import { useState } from 'react';
+import { ReportIssueModal } from './ReportIssueModal';
 
 interface QuestionRendererProps {
   question: QuestionBlock;
@@ -15,6 +17,7 @@ interface QuestionRendererProps {
   isBookmarked: boolean;
   onToggleBookmark?: () => void;
   showSolutionImmediately?: boolean;
+  quizId?: string;
 }
 
 export function QuestionRenderer({
@@ -27,8 +30,10 @@ export function QuestionRenderer({
   onToggleMarkForReview,
   isBookmarked,
   onToggleBookmark,
-  showSolutionImmediately = false
+  showSolutionImmediately = false,
+  quizId
 }: QuestionRendererProps) {
+  const [isReportModalOpen, setIsReportModalOpen] = useState(false);
 
   const cleanText = (str?: string | null) => (str || '').replace(/<[^>]*>/g, '').trim().toLowerCase();
 
@@ -107,6 +112,16 @@ export function QuestionRenderer({
               ) : (
                 <Bookmark className="w-4 h-4" />
               )}
+            </button>
+          )}
+
+          {quizId && (
+            <button
+              onClick={() => setIsReportModalOpen(true)}
+              className="p-1.5 rounded-lg text-xs font-medium bg-card text-muted-foreground border border-card-border hover:text-rose-500 hover:border-rose-500/50 transition-all"
+              title="Report an issue with this question"
+            >
+              <Flag className="w-4 h-4" />
             </button>
           )}
         </div>
@@ -220,6 +235,14 @@ export function QuestionRenderer({
         </div>
       )}
 
+      {quizId && (
+        <ReportIssueModal
+          isOpen={isReportModalOpen}
+          onClose={() => setIsReportModalOpen(false)}
+          quizId={quizId}
+          questionId={question.id}
+        />
+      )}
     </div>
   );
 }

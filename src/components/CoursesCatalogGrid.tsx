@@ -457,12 +457,8 @@ export function CoursesCatalogGrid({ courses }: { courses: CourseItem[] }) {
                     <div className="pt-6 mt-6 border-t border-card-border flex items-center justify-between">
                       <div className="flex items-center gap-4 text-xs text-muted-foreground">
                         <div className="flex items-center gap-1.5">
-                          <Layers className="w-4 h-4 text-primary-600 dark:text-primary-400" />
-                          <span>{course.sectionsCount} Sections</span>
-                        </div>
-                        <div className="flex items-center gap-1.5">
-                          <Brain className="w-4 h-4 text-primary-600 dark:text-primary-400" />
-                          <span>{course.unitsCount} Units</span>
+                          <PlayCircle className="w-4 h-4 text-primary-600 dark:text-primary-400" />
+                          <span>{course.videosCount} Videos</span>
                         </div>
                         {formatCourseDuration(course.totalDurationSeconds) && (
                           <div className="flex items-center gap-1.5">
@@ -565,12 +561,8 @@ export function CoursesCatalogGrid({ courses }: { courses: CourseItem[] }) {
                     <div className="pt-6 mt-6 border-t border-card-border flex items-center justify-between">
                       <div className="flex items-center gap-4 text-xs text-muted-foreground">
                         <div className="flex items-center gap-1.5">
-                          <Layers className="w-4 h-4 text-primary-600 dark:text-primary-400" />
-                          <span>{course.sectionsCount} Sections</span>
-                        </div>
-                        <div className="flex items-center gap-1.5">
-                          <Brain className="w-4 h-4 text-primary-600 dark:text-primary-400" />
-                          <span>{course.unitsCount} Units</span>
+                          <PlayCircle className="w-4 h-4 text-primary-600 dark:text-primary-400" />
+                          <span>{course.videosCount} Videos</span>
                         </div>
                         {formatCourseDuration(course.totalDurationSeconds) && (
                           <div className="flex items-center gap-1.5">

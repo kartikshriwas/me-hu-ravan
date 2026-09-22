@@ -159,6 +159,7 @@ export function getAllCourses(): CourseMeta[] {
       let rawUnitsCount = 0;
       let populatedUnitsCount = 0;
       let validUnitsCount = 0;
+      let videosCount = 0;
       let totalDurationSeconds = 0;
 
       Object.values(rawSections).forEach((sec: any) => {
@@ -189,6 +190,14 @@ export function getAllCourses(): CourseMeta[] {
             if (isUnitActionable(unitObj)) {
               validUnitsCount++;
               sectionHasValidUnits = true;
+              
+              const type = (unitObj.type || '').toLowerCase();
+              const icon = (unitObj.icon || '').toLowerCase();
+              const isVideo = type === 'ivideo' || type === 'wistia' || type === 'video' || type === 'youtube' || icon === 'video' || icon === 'yt' || !!unitObj.sourceid || !!unitObj.vimeoid;
+              if (isVideo) {
+                videosCount++;
+              }
+
               if (typeof unitMeta.duration === 'number' && unitMeta.duration > 0) {
                 totalDurationSeconds += unitMeta.duration;
               }
@@ -215,6 +224,7 @@ export function getAllCourses(): CourseMeta[] {
         courseImage: course.courseImage || null,
         sectionsCount,
         unitsCount: validUnitsCount,
+        videosCount,
         totalDurationSeconds: totalDurationSeconds > 0 ? totalDurationSeconds : undefined,
         isOngoing
       });
@@ -239,7 +249,6 @@ export function getCourseBySlug(slug: string): CourseDetail | null {
   for (const file of files) {
     try {
       const fullPath = path.join(dir, file);
-
       // SECURITY: Verify resolved path remains within the expected courses directory
       const resolvedPath = path.resolve(fullPath);
       const resolvedDir = path.resolve(dir);
@@ -265,6 +274,7 @@ export function getCourseBySlug(slug: string): CourseDetail | null {
         const parsedSections: CourseSection[] = [];
         let rawUnitsCount = 0;
         let populatedUnitsCount = 0;
+        let videosCount = 0;
 
         Object.entries(rawSections).forEach(([secId, secData]: [string, any]) => {
           const learningPath = Array.isArray(secData.learningPath) ? secData.learningPath : [];
@@ -299,6 +309,13 @@ export function getCourseBySlug(slug: string): CourseDetail | null {
             .filter((unit: CourseSectionUnit) => isUnitActionable(unit));
 
           if (units.length > 0) {
+            units.forEach(u => {
+              const type = (u.type || '').toLowerCase();
+              const icon = (u.icon || '').toLowerCase();
+              const isVideo = type === 'ivideo' || type === 'wistia' || type === 'video' || type === 'youtube' || icon === 'video' || icon === 'yt' || !!u.sourceid || !!u.vimeoid;
+              if (isVideo) videosCount++;
+            });
+
             parsedSections.push({
               id: secId,
               title: secData.title || 'Course Section',
@@ -323,6 +340,7 @@ export function getCourseBySlug(slug: string): CourseDetail | null {
           courseImage: course.courseImage || null,
           sectionsCount: parsedSections.length,
           unitsCount: totalUnits,
+          videosCount,
           totalDurationSeconds: (() => {
             const total = parsedSections.reduce((sum, s) =>
               sum + s.units.reduce((uSum, u) => uSum + (u.duration || 0), 0), 0);
