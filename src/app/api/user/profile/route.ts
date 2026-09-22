@@ -62,13 +62,21 @@ export async function GET(request: Request) {
       }
     }
 
+    let userRole = dbUser?.role || (isSuperadmin ? 'superadmin' : 'user');
+    let userPerms: string[] = dbUser?.adminPermissions || [];
+    let userBatches: string[] = dbUser?.allowedBatches || [];
+
     if (isPremium && !isSuperadmin && !isGlobalFree && premiumExpiresAt && new Date(premiumExpiresAt) < new Date()) {
       isPremium = false;
+      userBatches = []; // Expire batches too
+      
+      // We don't need to await this, let it run in background to sync DB
+      User.updateOne(
+        { email: cleanEmail },
+        { $set: { isPremium: false, premiumPlan: 'expired', allowedBatches: [] } }
+      ).exec();
     }
 
-    const userRole = dbUser?.role || (isSuperadmin ? 'superadmin' : 'user');
-    const userPerms: string[] = dbUser?.adminPermissions || [];
-    const userBatches: string[] = dbUser?.allowedBatches || [];
     const courseBatches = userBatches.filter(isCourseBatch);
     const hasCourseAccess = isSuperadmin || userRole === 'superadmin' || userRole === 'admin' || userPerms.includes('access_courses') || userPerms.includes('*') || courseBatches.length > 0;
 

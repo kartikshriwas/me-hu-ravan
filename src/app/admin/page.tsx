@@ -748,6 +748,35 @@ export default function AdminDashboardPage() {
     }
   };
 
+  const handleGrantDemo = async (targetEmail: string, durationMinutes: number) => {
+    try {
+      setErrorMsg('');
+      setFeedbackMsg('');
+
+      const res = await fetch('/api/admin/users', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          action: 'grant_demo',
+          targetEmail,
+          demoDurationMinutes: durationMinutes,
+        }),
+      });
+
+      const json = await res.json();
+      if (json.success) {
+        setFeedbackMsg(json.message);
+        const userRes = await fetch('/api/admin/users');
+        const userJson = await userRes.json();
+        if (userJson.success) setUsers(userJson.users);
+      } else {
+        setErrorMsg(json.error || 'Failed to grant demo');
+      }
+    } catch {
+      setErrorMsg('Error granting demo');
+    }
+  };
+
   const openPermissionModal = (u: AdminUserItem) => {
     setEditingUserForPerms(u);
     setSelectedPerms(u.adminPermissions && u.adminPermissions.length > 0
@@ -2463,16 +2492,35 @@ export default function AdminDashboardPage() {
                         <td className="py-3 px-4 text-right">
                           <div className="flex items-center justify-end gap-2">
                             {!isSuper && (
-                              <button
-                                onClick={() => handleUpdateUser(u.email, u.role, !u.isPremium, u.adminPermissions, u.allowedBatches)}
-                                className={`px-3 py-1.5 rounded-xl text-[11px] font-bold transition-all ${
-                                  u.isPremium
-                                    ? 'bg-rose-950/40 text-rose-600 dark:text-rose-300 border border-rose-500/30 hover:bg-rose-900/60'
-                                    : 'bg-emerald-600 hover:bg-emerald-500 text-white shadow-md'
-                                }`}
-                              >
-                                {u.isPremium ? 'Revoke Premium' : 'Grant Premium'}
-                              </button>
+                              <>
+                                <select 
+                                  onChange={(e) => {
+                                    if (e.target.value) {
+                                      handleGrantDemo(u.email, parseInt(e.target.value));
+                                      e.target.value = ""; // Reset after selection
+                                    }
+                                  }}
+                                  className="px-2 py-1.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white shadow-md border-none text-[11px] font-bold outline-none cursor-pointer text-center appearance-none"
+                                  defaultValue=""
+                                >
+                                  <option value="" disabled>Grant Demo</option>
+                                  <option value="15">15 mins</option>
+                                  <option value="60">1 Hour</option>
+                                  <option value="720">12 Hours</option>
+                                  <option value="1440">24 Hours</option>
+                                  <option value="4320">3 Days</option>
+                                </select>
+                                <button
+                                  onClick={() => handleUpdateUser(u.email, u.role, !u.isPremium, u.adminPermissions, u.allowedBatches)}
+                                  className={`px-3 py-1.5 rounded-xl text-[11px] font-bold transition-all ${
+                                    u.isPremium
+                                      ? 'bg-rose-950/40 text-rose-600 dark:text-rose-300 border border-rose-500/30 hover:bg-rose-900/60'
+                                      : 'bg-emerald-600 hover:bg-emerald-500 text-white shadow-md'
+                                  }`}
+                                >
+                                  {u.isPremium ? 'Revoke Premium' : 'Grant Premium'}
+                                </button>
+                              </>
                             )}
                           </div>
                         </td>

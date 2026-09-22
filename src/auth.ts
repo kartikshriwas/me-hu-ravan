@@ -37,6 +37,18 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
             if (isPremium && !isSuperadmin && premiumExpiresAt && new Date(premiumExpiresAt) < new Date()) {
               isPremium = false;
               premiumPlan = 'expired';
+              
+              // Actively clear DB fields so they lose access everywhere
+              await User.updateOne(
+                { email },
+                {
+                  $set: {
+                    isPremium: false,
+                    premiumPlan: 'expired',
+                    allowedBatches: []
+                  }
+                }
+              );
             }
           }
 

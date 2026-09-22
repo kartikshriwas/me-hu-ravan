@@ -52,13 +52,43 @@ export async function POST(request: Request) {
     }
 
     const body = await request.json();
-    const { targetEmail, role, adminPermissions, allowedBatches, isPremium, durationDays } = body;
+    const { action, targetEmail, role, adminPermissions, allowedBatches, isPremium, durationDays, demoDurationMinutes } = body;
 
     if (!targetEmail || typeof targetEmail !== 'string') {
       return NextResponse.json({ success: false, error: 'Target email is required' }, { status: 400 });
     }
 
     const cleanTarget = targetEmail.toLowerCase().trim();
+
+    const targetUser = await User.findOne({ email: cleanTarget });
+    if (!targetUser) {
+      return NextResponse.json({ success: false, error: 'User not found' }, { status: 404 });
+    }
+
+    if (action === 'grant_demo') {
+      const minutes = parseInt(demoDurationMinutes) || 15;
+      targetUser.isPremium = true;
+      targetUser.premiumExpiresAt = new Date(Date.now() + minutes * 60 * 1000);
+      targetUser.premiumPlan = `${minutes}m_demo`;
+      targetUser.allowedBatches = ['SigmaX'];
+      targetUser.grantedBy = sessionUser!.email.toLowerCase().trim();
+      await targetUser.save();
+
+      return NextResponse.json({
+        success: true,
+        message: `${minutes}m Demo granted successfully to ${targetUser.email}`,
+        user: {
+          id: targetUser._id.toString(),
+          name: targetUser.name,
+          email: targetUser.email,
+          role: targetUser.role,
+          adminPermissions: targetUser.adminPermissions,
+          allowedBatches: targetUser.allowedBatches,
+          isPremium: targetUser.isPremium,
+          premiumExpiresAt: targetUser.premiumExpiresAt.toISOString(),
+        }
+      });
+    }
 
     // Modifying role or granular permissions requires Superadmin privileges
     const isAssigningAdmin = (role && role !== 'user') || (Array.isArray(adminPermissions) && adminPermissions.length > 0);
@@ -69,11 +99,6 @@ export async function POST(request: Request) {
     // Prevent demoting primary superadmin
     if (cleanTarget === SUPERADMIN_EMAIL && role && role !== 'superadmin') {
       return NextResponse.json({ success: false, error: 'Primary Super Admin role cannot be modified' }, { status: 400 });
-    }
-
-    const targetUser = await User.findOne({ email: cleanTarget });
-    if (!targetUser) {
-      return NextResponse.json({ success: false, error: 'User not found' }, { status: 404 });
     }
 
     if (role && ['admin', 'user'].includes(role)) {
