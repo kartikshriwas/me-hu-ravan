@@ -28,6 +28,7 @@ export interface CourseSectionUnit {
   access?: string;
   data?: {
     assessmentId?: string;
+    quizId?: string;
     embed?: string;
     default?: boolean;
   };

@@ -52,23 +52,20 @@ export function isUnitActionable(unit: Partial<CourseSectionUnit>): boolean {
     return false;
   }
 
-  // 2. Exams / Quizzes / Assessments (Actionable: Take Exam)
-  if (
+  // 2. Real Interactive Exams / Quizzes / Assessments (ALWAYS actionable)
+  const isQuizType =
     type === 'assessment' ||
     type === 'assessmentv2' ||
     type === 'quizformal' ||
     type === 'quizinformal' ||
     type === 'quizwritten' ||
     type === 'quiz' ||
-    icon === 'fileass' ||
-    icon === 'quiz' ||
-    icon === 'assessment' ||
-    icon === 'written' ||
-    subtitle.includes('assessment') ||
-    subtitle.includes('quiz') ||
-    subtitle.includes('test') ||
-    (typeof unit.questionsCount === 'number' && unit.questionsCount > 0)
-  ) {
+    type === 'fileass' ||
+    type === 'exam' ||
+    (typeof unit.questionsCount === 'number' && unit.questionsCount > 0) ||
+    !!(unit.data && (unit.data.assessmentId || unit.data.quizId));
+
+  if (isQuizType) {
     return true;
   }
 
@@ -79,10 +76,8 @@ export function isUnitActionable(unit: Partial<CourseSectionUnit>): boolean {
     type === 'pdfdocument' ||
     type === 'pbebook' ||
     type === 'ebook' ||
-    icon === 'pdf' ||
-    icon === 'ebook' ||
-    subtitle.includes('pdf') ||
-    subtitle.includes('ebook') ||
+    subtitle === 'pdf' ||
+    subtitle === 'ebook' ||
     fileUrl.endsWith('.pdf') ||
     fileUrl.includes('/pdf/');
 

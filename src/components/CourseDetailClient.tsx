@@ -71,9 +71,34 @@ function getUnitMetaConfig(unit: CourseSectionUnit) {
   const type = (unit.type || '').toLowerCase();
   const icon = (unit.icon || '').toLowerCase();
   const subtitle = (unit.subtitle || '').toLowerCase();
+  const fileUrl = (unit.fileUrl || '').trim();
 
-  // 1. ivideo / video / wistia (Supported Video Action)
-  if (type === 'ivideo' || type === 'wistia' || type === 'video' || icon === 'video' || subtitle === 'video') {
+  // 1. True Exams, Quizzes & Assessments (Actionable: Take Exam / Give Test)
+  const isTrueQuiz =
+    type === 'assessment' ||
+    type === 'assessmentv2' ||
+    type === 'quizformal' ||
+    type === 'quizinformal' ||
+    type === 'quizwritten' ||
+    type === 'quiz' ||
+    type === 'fileass' ||
+    type === 'exam' ||
+    (typeof unit.questionsCount === 'number' && unit.questionsCount > 0) ||
+    !!(unit.data && (unit.data.assessmentId || unit.data.quizId));
+
+  if (isTrueQuiz) {
+    return {
+      category: 'quiz',
+      typeLabel: subtitle && subtitle !== 'video' ? subtitle : 'Assessment & Practice Test',
+      icon: FileCheck2,
+      colorClass: 'bg-primary-600/20 text-primary-600 dark:text-primary-400 border-primary-500/30',
+      isActionableVideo: false,
+      isActionableExam: true
+    };
+  }
+
+  // 2. ivideo / video / wistia (Supported Video Action)
+  if (type === 'ivideo' || type === 'wistia' || type === 'video' || (icon === 'video' && type !== 'pdf') || subtitle === 'video') {
     return {
       category: 'video',
       typeLabel: 'Interactive Video',
@@ -84,7 +109,7 @@ function getUnitMetaConfig(unit: CourseSectionUnit) {
     };
   }
 
-  // 2. youtube (Playable YouTube Video with embed HTML)
+  // 3. youtube (Playable YouTube Video with embed HTML)
   if (type === 'youtube' || icon === 'yt' || subtitle.includes('youtube')) {
     return {
       category: 'video',
@@ -96,7 +121,7 @@ function getUnitMetaConfig(unit: CourseSectionUnit) {
     };
   }
 
-  // 3. soundcloud / audio
+  // 4. soundcloud / audio
   if (type === 'soundcloud') {
     return {
       category: 'audio',
@@ -118,31 +143,8 @@ function getUnitMetaConfig(unit: CourseSectionUnit) {
     };
   }
 
-  // 4. Exams, Quizzes & Assessments (Actionable: Take Exam / Give Test)
-  if (
-    type.includes('assessment') ||
-    type.includes('quiz') ||
-    type === 'fileass' ||
-    icon === 'fileass' ||
-    icon === 'quiz' ||
-    icon === 'assessment' ||
-    icon === 'written' ||
-    subtitle.includes('assessment') ||
-    subtitle.includes('quiz') ||
-    subtitle.includes('test')
-  ) {
-    return {
-      category: 'quiz',
-      typeLabel: subtitle || 'Assessment & Practice Test',
-      icon: FileCheck2,
-      colorClass: 'bg-primary-600/20 text-primary-600 dark:text-primary-400 border-primary-500/30',
-      isActionableVideo: false,
-      isActionableExam: true
-    };
-  }
-
-  // 6. pdf & ebooks
-  if (type === 'pdf') {
+  // 5. pdf & ebooks
+  if (type === 'pdf' || type === 'document' || type === 'pdfdocument' || subtitle === 'pdf' || fileUrl.endsWith('.pdf') || fileUrl.includes('/pdf/')) {
     return {
       category: 'pdf',
       typeLabel: 'PDF Document',
@@ -152,7 +154,7 @@ function getUnitMetaConfig(unit: CourseSectionUnit) {
       isActionableExam: false
     };
   }
-  if (type === 'ebook' || type === 'pbebook' || icon === 'ebook' || subtitle === 'ebook') {
+  if (type === 'ebook' || type === 'pbebook' || subtitle === 'ebook') {
     return {
       category: 'ebook',
       typeLabel: type === 'pbebook' ? 'FlipBook eBook' : 'eBook',
@@ -657,23 +659,7 @@ export function CourseDetailClient({ course, availableTests, isUnlocked = true }
                             const cleanUnitTitle = (unit.unitTitle || '').toLowerCase().trim();
                             const cleanQuizId = t.quizId.toLowerCase().trim();
                             return cleanUnitTitle && cleanQuizId === cleanUnitTitle;
-                          }) ||
-                          availableTests.find((t) => {
-                            // Priority 4: Number extraction match (e.g. if unitTitle has "13" and quizId has "13")
-                            const cleanUnitTitle = (unit.unitTitle || '').toLowerCase().trim();
-                            const cleanQuizId = t.quizId.toLowerCase().trim();
-                            const unitNum = cleanUnitTitle.match(/\d+/)?.[0];
-                            const quizNum = cleanQuizId.match(/\d+/)?.[0];
-                            if (unitNum && quizNum && unitNum === quizNum) {
-                              const baseUnit = cleanUnitTitle.replace(/\d+/g, '').trim();
-                              const baseQuiz = cleanQuizId.replace(/\d+/g, '').trim();
-                              if (baseUnit && baseQuiz && (baseUnit.includes(baseQuiz) || baseQuiz.includes(baseUnit))) {
-                                return true;
-                              }
-                            }
-                            return false;
-                          }) ||
-                          availableTests[0]
+                          })
                         : null;
 
                       return (
@@ -726,7 +712,7 @@ export function CourseDetailClient({ course, availableTests, isUnlocked = true }
                           )}
 
                           {/* Action Button: Take Exam / Give Test */}
-                          {config.isActionableExam && !downloadUrl && (() => {
+                          {config.isActionableExam && !downloadUrl && (matchingTest || unit.data?.assessmentId) && (() => {
                             const quizIdToUse = matchingTest?.quizId || unit.data?.assessmentId || unit.id;
                             return (
                               <Link
