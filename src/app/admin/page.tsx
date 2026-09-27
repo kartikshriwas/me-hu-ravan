@@ -919,7 +919,7 @@ export default function AdminDashboardPage() {
               }}
               className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-bold transition-all shrink-0 ${
                 isActive
-                  ? 'bg-gradient-to-r from-amber-500 to-yellow-500 text-black shadow-lg shadow-amber-500/20'
+                  ? 'bg-amber-500 text-black shadow-lg shadow-amber-500/20'
                   : isAllowed
                   ? 'text-muted-foreground hover:text-foreground hover:bg-slate-800/60'
                   : 'text-slate-600 opacity-50 cursor-not-allowed'
@@ -958,7 +958,7 @@ export default function AdminDashboardPage() {
           </div>
 
           {/* Global Platform-Wide Free Access Feature Card */}
-          <div className="glass-panel rounded-3xl p-6 border border-primary-500/30 space-y-4 bg-gradient-to-r from-primary-950/40 via-primary-950/20 to-slate-900 shadow-xl">
+          <div className="glass-panel rounded-3xl p-6 border border-primary-500/30 space-y-4 bg-card shadow-xl">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-card-border">
               <div className="space-y-1">
                 <div className="flex items-center gap-2">
@@ -1029,7 +1029,7 @@ export default function AdminDashboardPage() {
                   type="button"
                   disabled={updatingGlobalFree || !canManageGlobalFree}
                   onClick={() => handleSetGlobalFree(globalFreeDays)}
-                  className="flex-1 px-4 py-2.5 rounded-xl bg-gradient-to-r from-emerald-500 via-teal-500 to-primary-600 hover:from-emerald-400 hover:to-primary-500 text-white font-bold text-xs shadow-lg shadow-emerald-950/40 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-1.5"
+                  className="flex-1 px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs shadow-lg shadow-emerald-950/40 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-1.5"
                   title={!canManageGlobalFree ? 'Permission required: manage_global_free' : ''}
                 >
                   <Sparkles className="w-4 h-4 text-yellow-300" />
@@ -1069,7 +1069,7 @@ export default function AdminDashboardPage() {
                   <span className="animate-ping absolute inline-flex h-4 w-4 rounded-full bg-emerald-400 opacity-60"></span>
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-400"></span>
                 </div>
-                <h3 className="text-xl font-black text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-400">Live Mission Control</h3>
+                <h3 className="text-xl font-black text-foreground">Live Mission Control</h3>
               </div>
               <p className="text-sm text-muted-foreground mt-1 font-medium ml-11">
                 Real-time active candidate monitoring, advanced telemetry, and action audit trails.
@@ -1102,7 +1102,7 @@ export default function AdminDashboardPage() {
                     setTimeout(() => setRefreshingSessions(false), 400);
                   }
                 }}
-                className="p-3 rounded-xl bg-gradient-to-b from-slate-800 to-slate-900 border border-slate-700 hover:border-primary-500/50 text-foreground/80 hover:text-foreground transition-all shadow-lg group"
+                className="p-3 rounded-xl bg-slate-800 border border-slate-700 hover:border-primary-500/50 text-foreground/80 hover:text-foreground transition-all shadow-lg group"
                 title="Force Refresh Telemetry"
               >
                 <RefreshCw className={`w-4 h-4 group-hover:rotate-180 transition-transform duration-500 ${refreshingSessions ? 'animate-spin text-amber-600 dark:text-amber-400' : ''}`} />
@@ -1113,7 +1113,7 @@ export default function AdminDashboardPage() {
           {/* Bento Box Metrics Grid */}
           <div className="grid grid-cols-1 md:grid-cols-12 gap-5">
             {/* Primary Metric - Active Users */}
-            <div className="col-span-1 md:col-span-4 glass-card rounded-3xl p-6 border border-emerald-500/30 bg-gradient-to-br from-emerald-950/20 to-transparent relative overflow-hidden group">
+            <div className="col-span-1 md:col-span-4 glass-card rounded-3xl p-6 border border-emerald-500/30 bg-card relative overflow-hidden group">
               <div className="absolute -right-6 -top-6 text-emerald-500/10 group-hover:text-emerald-500/20 transition-colors">
                 <Users className="w-32 h-32" />
               </div>
@@ -1122,7 +1122,7 @@ export default function AdminDashboardPage() {
                   <Activity className="w-4 h-4" /> Actively Interacting
                 </span>
                 <div className="flex items-baseline gap-3">
-                  <p className="text-5xl font-black text-transparent bg-clip-text bg-gradient-to-b from-white to-emerald-200">
+                  <p className="text-5xl font-black text-emerald-500">
                     {activeStats?.activeNowCount ?? 0}
                   </p>
                   <span className="px-2 py-1 rounded-md bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 text-[10px] font-bold border border-emerald-500/30">
@@ -1599,7 +1599,7 @@ export default function AdminDashboardPage() {
                 onClick={(e) => e.stopPropagation()}
               >
                 {/* Modal Header */}
-                <div className="p-6 border-b border-card-border bg-gradient-to-r from-primary-900/40 to-transparent flex items-center justify-between">
+                <div className="p-6 border-b border-card-border bg-card flex items-center justify-between">
                   <div
                     className="flex items-center gap-4 cursor-pointer group/modalprof"
                     onClick={() => {
@@ -2172,7 +2172,7 @@ export default function AdminDashboardPage() {
                 <button
                   type="submit"
                   disabled={creatingEvent || !eventTitle.trim()}
-                  className="px-6 py-2.5 rounded-xl bg-gradient-to-r from-amber-500 to-yellow-500 hover:from-amber-400 hover:to-yellow-400 text-black font-bold text-xs shadow-lg shadow-amber-500/20 transition-all flex items-center gap-1.5"
+                  className="px-6 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-black font-bold text-xs shadow-lg shadow-amber-500/20 transition-all flex items-center gap-1.5"
                 >
                   <Rocket className="w-4 h-4" />
                   <span>{creatingEvent ? 'Creating Event...' : 'Launch Event'}</span>
@@ -2223,7 +2223,7 @@ export default function AdminDashboardPage() {
                         </div>
                         <div className="w-full h-3 rounded-full bg-card overflow-hidden border border-card-border">
                           <div
-                            className="h-full bg-gradient-to-r from-amber-500 to-yellow-400 transition-all duration-500"
+                            className="h-full bg-amber-500 transition-all duration-500"
                             style={{ width: `${percent}%` }}
                           />
                         </div>
@@ -2444,7 +2444,7 @@ export default function AdminDashboardPage() {
 
                         <td className="py-3 px-4 text-center">
                           {isSuper ? (
-                            <span className="px-2.5 py-0.5 rounded-full text-[10px] font-black bg-gradient-to-r from-amber-500 to-yellow-500 text-black">
+                            <span className="px-2.5 py-0.5 rounded-full text-[10px] font-black bg-amber-500 text-black">
                               Super Admin
                             </span>
                           ) : (

@@ -624,7 +624,7 @@ export default function QuizPlayerPage({ params }: { params: Promise<{ quizId: s
 
           <button
             onClick={() => setShowSubmitModal(true)}
-            className="px-2.5 sm:px-4 py-1.5 sm:py-2.5 rounded-lg sm:rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white font-bold text-xs shadow-lg shadow-emerald-600/20 transition-all flex items-center gap-1 shrink-0"
+            className="px-2.5 sm:px-4 py-1.5 sm:py-2.5 rounded-lg sm:rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs shadow-lg shadow-emerald-600/20 transition-all flex items-center gap-1 shrink-0"
           >
             <Send className="w-3.5 h-3.5" />
             <span className="hidden sm:inline">Submit Test</span>

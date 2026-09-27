@@ -234,7 +234,7 @@ export default function QuizResultsPage({ params }: { params: Promise<{ quizId: 
       
       {/* Top Banner & Score Cards */}
       <div className="glass-panel rounded-3xl p-6 sm:p-10 border border-card-border space-y-8 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-80 h-80 bg-gradient-to-br from-emerald-500/10 via-primary-500/10 to-transparent rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute top-0 right-0 w-80 h-80 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none" />
 
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <div>

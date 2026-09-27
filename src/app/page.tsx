@@ -411,7 +411,7 @@ export default function HomePage() {
                           if (!user) setSelectedTestForLoginModal(test);
                           else setSelectedTestForPremiumModal(test);
                         }}
-                        className="w-full py-3 rounded-xl bg-gradient-to-r from-amber-500 to-yellow-500 hover:from-amber-400 hover:to-yellow-400 text-black font-bold text-xs shadow-lg shadow-amber-500/20 transition-all flex items-center justify-center gap-2"
+                        className="w-full py-3 rounded-xl bg-amber-500 hover:bg-amber-400 text-black font-bold text-xs shadow-lg shadow-amber-500/20 transition-all flex items-center justify-center gap-2"
                       >
                         <Crown className="w-4 h-4" />
                         <span>Unlock Premium Test</span>
@@ -427,7 +427,7 @@ export default function HomePage() {
                         {user ? (
                           <Link
                             href={`/quiz/${test.quizId}`}
-                            className="flex-1 py-2.5 rounded-xl bg-gradient-to-r from-primary-600 to-primary-600 hover:from-primary-500 hover:to-primary-500 text-white font-bold text-xs shadow-lg shadow-primary-600/20 transition-all flex items-center justify-center gap-1.5"
+                            className="flex-1 py-2.5 rounded-xl bg-primary-600 hover:bg-primary-500 text-white font-bold text-xs shadow-lg shadow-primary-600/20 transition-all flex items-center justify-center gap-1.5"
                           >
                             <RotateCcw className="w-3.5 h-3.5" />
                             <span>Retake</span>
@@ -435,7 +435,7 @@ export default function HomePage() {
                         ) : (
                           <button
                             onClick={() => setSelectedTestForLoginModal(test)}
-                            className="flex-1 py-2.5 rounded-xl bg-gradient-to-r from-primary-600 to-primary-600 hover:from-primary-500 hover:to-primary-500 text-white font-bold text-xs shadow-lg shadow-primary-600/20 transition-all flex items-center justify-center gap-1.5"
+                            className="flex-1 py-2.5 rounded-xl bg-primary-600 hover:bg-primary-500 text-white font-bold text-xs shadow-lg shadow-primary-600/20 transition-all flex items-center justify-center gap-1.5"
                           >
                             <RotateCcw className="w-3.5 h-3.5" />
                             <span>Retake</span>
@@ -445,7 +445,7 @@ export default function HomePage() {
                     ) : user ? (
                       <Link
                         href={`/quiz/${test.quizId}`}
-                        className="w-full py-3 rounded-xl bg-gradient-to-r from-primary-600 to-primary-600 hover:from-primary-500 hover:to-primary-500 text-white font-bold text-xs shadow-lg shadow-primary-600/20 transition-all flex items-center justify-center gap-2 group-hover:scale-[1.02]"
+                        className="w-full py-3 rounded-xl bg-primary-600 hover:bg-primary-500 text-white font-bold text-xs shadow-lg shadow-primary-600/20 transition-all flex items-center justify-center gap-2 group-hover:scale-[1.02]"
                       >
                         <span>Start Test</span>
                         <ArrowRight className="w-4 h-4" />
@@ -453,7 +453,7 @@ export default function HomePage() {
                     ) : (
                       <button
                         onClick={() => setSelectedTestForLoginModal(test)}
-                        className="w-full py-3 rounded-xl bg-gradient-to-r from-primary-600 to-primary-600 hover:from-primary-500 hover:to-primary-500 text-white font-bold text-xs shadow-lg shadow-primary-600/20 transition-all flex items-center justify-center gap-2 group-hover:scale-[1.02]"
+                        className="w-full py-3 rounded-xl bg-primary-600 hover:bg-primary-500 text-white font-bold text-xs shadow-lg shadow-primary-600/20 transition-all flex items-center justify-center gap-2 group-hover:scale-[1.02]"
                       >
                         <span>Start Test</span>
                         <ArrowRight className="w-4 h-4" />

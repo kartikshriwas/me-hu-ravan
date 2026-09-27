@@ -22,7 +22,7 @@
 # misc
 .DS_Store
 *.pem
-
+packages
 # debug
 npm-debug.log*
 yarn-debug.log*
@@ -39,3 +39,4 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 scripts/recalculate_scores.ts
+scripts/add_dummy_users.ts

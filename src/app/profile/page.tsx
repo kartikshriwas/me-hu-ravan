@@ -197,7 +197,7 @@ export default function ProfilePage() {
     <div className="w-full px-4 sm:px-8 lg:px-12 py-6 space-y-8">
       {/* Profile Header Banner */}
       <div className="glass-panel rounded-3xl p-6 sm:p-8 border border-primary-500/30 relative overflow-hidden space-y-6">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-primary-500/15 via-primary-500/10 to-transparent rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute top-0 right-0 w-96 h-96 bg-primary-500/10 rounded-full blur-3xl pointer-events-none" />
 
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 relative z-10">
           <div className="flex items-center gap-4 sm:gap-6">
@@ -216,7 +216,7 @@ export default function ProfilePage() {
                 </h1>
 
                 {u.role === "superadmin" ? (
-                  <span className="px-2.5 py-0.5 rounded-full text-xs font-black bg-gradient-to-r from-amber-500 to-yellow-500 text-black shadow-md flex items-center gap-1">
+                  <span className="px-2.5 py-0.5 rounded-full text-xs font-black bg-amber-500 text-black shadow-md flex items-center gap-1">
                     <ShieldCheck className="w-3.5 h-3.5" /> Super Admin
                   </span>
                 ) : u.role === "admin" ? (

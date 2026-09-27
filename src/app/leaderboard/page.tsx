@@ -53,7 +53,7 @@ export default function LeaderboardPage() {
       
       {/* Header Banner */}
       <div className="glass-panel rounded-3xl p-6 sm:p-10 border border-primary-500/30 relative overflow-hidden space-y-4">
-        <div className="absolute top-0 right-0 w-80 h-80 bg-gradient-to-br from-amber-500/15 via-primary-500/10 to-transparent rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute top-0 right-0 w-80 h-80 bg-amber-500/10 rounded-full blur-3xl pointer-events-none" />
 
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <div>
@@ -122,7 +122,7 @@ export default function LeaderboardPage() {
               {/* #1 Gold (Center, Enlarged) */}
               {topThree[0] && (
                 <div className="glass-card rounded-3xl p-8 border-2 border-amber-500/50 flex flex-col items-center text-center space-y-4 relative order-1 md:order-2 shadow-2xl shadow-amber-500/10 bg-card/90">
-                  <div className="absolute -top-5 px-4 py-1.5 rounded-full bg-gradient-to-r from-amber-500 to-yellow-500 text-black text-xs font-black flex items-center gap-1.5 shadow-lg">
+                  <div className="absolute -top-5 px-4 py-1.5 rounded-full bg-amber-500 text-black text-xs font-black flex items-center gap-1.5 shadow-lg">
                     <Trophy className="w-4 h-4" /> #1 CHAMPION
                   </div>
 
@@ -168,50 +168,43 @@ export default function LeaderboardPage() {
             </div>
           )}
 
-          {/* Full Leaderboard Table */}
-          <div className="glass-panel rounded-2xl border border-card-border overflow-hidden shadow-2xl">
-            <div className="p-4 sm:p-5 border-b border-card-border flex items-center justify-between">
-              <h2 className="text-base font-bold text-foreground flex items-center gap-2">
-                <Flame className="w-4 h-4 text-amber-600 dark:text-amber-400" />
+          {/* Full Leaderboard Table (Ranks 4+) */}
+          {leaderboard.length > 3 && (
+            <div className="glass-panel rounded-2xl border border-card-border overflow-hidden shadow-2xl">
+              <div className="p-4 sm:p-5 border-b border-card-border flex items-center justify-between">
+                <h2 className="text-base font-bold text-foreground flex items-center gap-2">
+                  <Flame className="w-4 h-4 text-amber-600 dark:text-amber-400" />
                 <span>Candidate Rankings</span>
-              </h2>
+                </h2>
               <span className="text-xs text-muted-foreground">{leaderboard.length} Candidates</span>
-            </div>
+              </div>
 
-            <div className="overflow-x-auto">
-              <table className="w-full text-left text-xs sm:text-sm">
-                <thead className="bg-card/80 text-muted-foreground uppercase text-[11px] font-semibold border-b border-card-border">
-                  <tr>
-                    <th className="py-3 px-4 sm:px-6">Rank</th>
-                    <th className="py-3 px-4 sm:px-6">Candidate</th>
-                    <th className="py-3 px-4 sm:px-6 text-center">Tests Taken</th>
-                    <th className="py-3 px-4 sm:px-6 text-center">Avg Accuracy</th>
-                    <th className="py-3 px-4 sm:px-6 text-right">Total Score</th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-slate-800/60">
-                  {leaderboard.map((item) => {
-                    const isMe = currentUser?.email === item.email;
-                    return (
-                      <tr
-                        key={item.email}
-                        className={`transition-colors ${
-                          isMe
-                            ? 'bg-primary-600/10 hover:bg-primary-600/20 font-semibold'
-                            : 'hover:bg-card/40 text-foreground'
-                        }`}
-                      >
-                        <td className="py-3.5 px-4 sm:px-6 font-bold">
-                          {item.rank === 1 ? (
-                            <span className="px-2 py-0.5 rounded-md bg-amber-500/20 text-amber-600 dark:text-amber-300 border border-amber-500/40">🥇 1</span>
-                          ) : item.rank === 2 ? (
-                            <span className="px-2 py-0.5 rounded-md bg-slate-700/40 text-foreground/80 border border-slate-600/40">🥈 2</span>
-                          ) : item.rank === 3 ? (
-                            <span className="px-2 py-0.5 rounded-md bg-amber-800/20 text-amber-500 border border-amber-700/40">🥉 3</span>
-                          ) : (
+              <div className="overflow-x-auto">
+                <table className="w-full text-left text-xs sm:text-sm">
+                  <thead className="bg-card/80 text-muted-foreground uppercase text-[11px] font-semibold border-b border-card-border">
+                    <tr>
+                      <th className="py-3 px-4 sm:px-6">Rank</th>
+                      <th className="py-3 px-4 sm:px-6">Candidate</th>
+                      <th className="py-3 px-4 sm:px-6 text-center">Tests Taken</th>
+                      <th className="py-3 px-4 sm:px-6 text-center">Avg Accuracy</th>
+                      <th className="py-3 px-4 sm:px-6 text-right">Total Score</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-slate-800/60">
+                    {leaderboard.slice(3).map((item) => {
+                      const isMe = currentUser?.email === item.email;
+                      return (
+                        <tr
+                          key={item.email}
+                          className={`transition-colors ${
+                            isMe
+                              ? 'bg-primary-600/10 hover:bg-primary-600/20 font-semibold'
+                              : 'hover:bg-card/40 text-foreground'
+                          }`}
+                        >
+                          <td className="py-3.5 px-4 sm:px-6 font-bold">
                             <span>#{item.rank}</span>
-                          )}
-                        </td>
+                          </td>
 
                         <td className="py-3.5 px-4 sm:px-6 flex items-center gap-3">
                           <UserAvatar name={item.name} image={item.image} size="sm" />
@@ -240,6 +233,7 @@ export default function LeaderboardPage() {
               </table>
             </div>
           </div>
+        )}
 
         </div>
       )}

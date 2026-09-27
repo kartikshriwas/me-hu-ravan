@@ -5,6 +5,8 @@ import Link from 'next/link';
 import { CourseDetail, CourseSectionUnit } from '@/lib/types';
 import { AssessmentMeta } from '@/lib/types';
 import {
+  Search,
+  X,
   BookOpen,
   Layers,
   Video,
@@ -13,6 +15,7 @@ import {
   Award,
   ArrowLeft,
   ChevronRight,
+  ChevronDown,
   Play,
   PlayCircle,
   HelpCircle,
@@ -285,6 +288,57 @@ function getUnitMetaConfig(unit: CourseSectionUnit) {
 
 export function CourseDetailClient({ course, availableTests, isUnlocked = true }: CourseDetailClientProps) {
   const [lastVideoInfo, setLastVideoInfo] = useState<{ videoId: string; title?: string; timestamp?: number } | null>(null);
+  const [expandedSections, setExpandedSections] = useState<Record<string, boolean>>({});
+
+  const toggleSection = (sectionId: string) => {
+    setExpandedSections((prev) => ({
+      ...prev,
+      [sectionId]: !prev[sectionId],
+    }));
+  };
+
+  const expandAllSections = () => {
+    const allExpanded: Record<string, boolean> = {};
+    course.sections.forEach((s) => {
+      allExpanded[s.id] = true;
+    });
+    setExpandedSections(allExpanded);
+  };
+
+  const collapseAllSections = () => {
+    setExpandedSections({});
+  };
+
+  const [searchQuery, setSearchQuery] = useState('');
+
+  // Filter sections and units based on search query
+  const filteredSections = useMemo(() => {
+    const query = searchQuery.trim().toLowerCase();
+    if (!query) return course.sections;
+
+    return course.sections
+      .map((section) => {
+        const sectionTitleMatches = section.title.toLowerCase().includes(query);
+        const matchingUnits = section.units.filter((unit) => {
+          const titleMatch = (unit.unitTitle || '').toLowerCase().includes(query);
+          const subtitleMatch = (unit.subtitle || '').toLowerCase().includes(query);
+          const typeMatch = (unit.type || '').toLowerCase().includes(query);
+          return titleMatch || subtitleMatch || typeMatch;
+        });
+
+        if (sectionTitleMatches) {
+          return section;
+        }
+        if (matchingUnits.length > 0) {
+          return {
+            ...section,
+            units: matchingUnits,
+          };
+        }
+        return null;
+      })
+      .filter(Boolean) as typeof course.sections;
+  }, [course.sections, searchQuery]);
 
   useEffect(() => {
     try {
@@ -367,7 +421,7 @@ export function CourseDetailClient({ course, availableTests, isUnlocked = true }
           <div className="pt-1">
             <Link
               href={`/courses/${course.slug}/video/${lastVideoInfo.videoId}`}
-              className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-xl bg-gradient-to-r from-primary-600 to-primary-600 hover:from-primary-500 hover:to-primary-500 text-white font-bold text-xs shadow-lg shadow-primary-600/30 transition-all active:scale-95 group max-w-full"
+              className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-xl bg-primary-600 hover:bg-primary-500 text-white font-bold text-xs shadow-lg shadow-primary-600/30 transition-all active:scale-95 group max-w-full"
             >
               <Play className="w-4 h-4 fill-white shrink-0 group-hover:scale-110 transition-transform" />
               <div className="flex items-center gap-1.5 min-w-0 flex-wrap">
@@ -463,27 +517,102 @@ export function CourseDetailClient({ course, availableTests, isUnlocked = true }
 
       {/* Section Syllabus Breakdown */}
       <div className="space-y-6">
-        <h2 className="text-xl font-bold text-foreground flex items-center gap-2">
-          <Layers className="w-5 h-5 text-primary-600 dark:text-primary-400" />
-          <span>Course Curriculum</span>
-        </h2>
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <h2 className="text-xl font-bold text-foreground flex items-center gap-2 shrink-0">
+            <Layers className="w-5 h-5 text-primary-600 dark:text-primary-400" />
+            <span>Course Curriculum</span>
+            {searchQuery.trim() !== '' && (
+              <span className="text-xs font-normal text-muted-foreground ml-1">
+                ({filteredSections.length} {filteredSections.length === 1 ? 'section' : 'sections'} found)
+              </span>
+            )}
+          </h2>
 
-        <div className="space-y-4">
-          {course.sections.map((section, sIdx) => (
-            <div key={section.id} className="glass-card rounded-2xl border border-card-border p-6 space-y-4">
-              <div className="flex items-center justify-between flex-wrap gap-2">
-                <div>
-                  <span className="text-xs font-bold text-primary-600 dark:text-primary-400 uppercase tracking-wider">
-                    Section {sIdx + 1}
-                  </span>
-                  <h3 className="text-lg font-bold text-foreground mt-0.5">{section.title}</h3>
-                </div>
+          <div className="flex items-center gap-3 w-full sm:w-auto">
+            {/* Search Input Bar */}
+            <div className="relative flex-1 sm:w-72">
+              <Search className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-muted-foreground pointer-events-none" />
+              <input
+                type="text"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                placeholder="Search section or lesson content..."
+                className="w-full pl-9 pr-8 py-2 rounded-xl bg-card border border-card-border text-xs text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary-500 transition-colors"
+              />
+              {searchQuery && (
+                <button
+                  type="button"
+                  onClick={() => setSearchQuery('')}
+                  className="absolute right-2.5 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground p-0.5 rounded-full hover:bg-slate-800 transition-colors cursor-pointer"
+                  title="Clear search"
+                >
+                  <X className="w-3.5 h-3.5" />
+                </button>
+              )}
+            </div>
 
-                {(() => {
-                  const sectionSecs = section.units.reduce((acc, u) => acc + (u.duration || 0), 0);
-                  const formattedSecDuration = formatCourseDuration(sectionSecs);
-                  return (
-                    <div className="flex items-center gap-3 text-xs text-muted-foreground font-medium">
+            <div className="flex items-center gap-1.5 text-xs shrink-0">
+              <button
+                type="button"
+                onClick={expandAllSections}
+                className="px-3 py-2 rounded-xl bg-card border border-card-border hover:bg-card/80 text-muted-foreground hover:text-foreground font-semibold transition-colors cursor-pointer"
+              >
+                Expand All
+              </button>
+              <button
+                type="button"
+                onClick={collapseAllSections}
+                className="px-3 py-2 rounded-xl bg-card border border-card-border hover:bg-card/80 text-muted-foreground hover:text-foreground font-semibold transition-colors cursor-pointer"
+              >
+                Collapse All
+              </button>
+            </div>
+          </div>
+        </div>
+
+        {filteredSections.length === 0 ? (
+          <div className="p-8 text-center glass-panel rounded-2xl border border-card-border space-y-3">
+            <Search className="w-8 h-8 text-muted-foreground mx-auto opacity-50" />
+            <p className="text-sm font-semibold text-foreground">No matching content found</p>
+            <p className="text-xs text-muted-foreground">
+              No sections or lessons matched &quot;{searchQuery}&quot;. Try searching for another keyword or section name.
+            </p>
+            <button
+              type="button"
+              onClick={() => setSearchQuery('')}
+              className="mt-2 px-4 py-2 rounded-xl bg-primary-600/20 text-primary-400 text-xs font-semibold hover:bg-primary-600 hover:text-white transition-colors cursor-pointer"
+            >
+              Clear Search Filter
+            </button>
+          </div>
+        ) : (
+          <div className="space-y-4">
+            {filteredSections.map((section) => {
+              const originalIdx = course.sections.findIndex((s) => s.id === section.id);
+              const sIdx = originalIdx >= 0 ? originalIdx : 0;
+              const isExpanded = searchQuery.trim() !== '' ? true : !!expandedSections[section.id];
+              const sectionSecs = section.units.reduce((acc, u) => acc + (u.duration || 0), 0);
+              const formattedSecDuration = formatCourseDuration(sectionSecs);
+
+            return (
+              <div key={section.id} className="glass-card rounded-2xl border border-card-border overflow-hidden transition-all">
+                {/* Section Header (Clickable to Collapse/Expand) */}
+                <button
+                  type="button"
+                  onClick={() => toggleSection(section.id)}
+                  className="w-full text-left p-5 sm:p-6 flex items-center justify-between flex-wrap gap-3 hover:bg-primary-500/5 transition-colors cursor-pointer group select-none"
+                >
+                  <div className="flex items-center gap-3">
+                    <div className="w-8 h-8 rounded-lg bg-primary-500/10 border border-primary-500/20 text-primary-600 dark:text-primary-400 flex items-center justify-center font-bold text-xs shrink-0 group-hover:scale-105 transition-transform">
+                      {sIdx + 1}
+                    </div>
+                    <div>
+                      <h3 className="text-base sm:text-lg font-bold text-foreground mt-0.5 leading-snug">{section.title}</h3>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-3 ml-auto sm:ml-0">
+                    <div className="flex items-center gap-2.5 text-xs text-muted-foreground font-medium">
                       <span>{section.units.length} Units</span>
                       {formattedSecDuration && (
                         <>
@@ -495,161 +624,166 @@ export function CourseDetailClient({ course, availableTests, isUnlocked = true }
                         </>
                       )}
                     </div>
-                  );
-                })()}
-              </div>
-
-              {/* Units List */}
-              <div className="space-y-2.5 pt-2">
-                {section.units.map((unit, uIdx) => {
-                  const config = getUnitMetaConfig(unit);
-                  const IconComp = config.icon;
-
-                  // Read fileUrl directly from unit (parsed from course JSON)
-                  const downloadUrl = unit.fileUrl;
-
-                  const matchingTest = config.isActionableExam
-                    ? availableTests.find((t) => {
-                        // Priority 1: Exact object_id match (unit.id === t.objectId)
-                        if (unit.id && (t.objectId === unit.id || t.assessmentId === unit.id)) {
-                          return true;
-                        }
-                        // Priority 2: Exact assessmentId match (unit.data.assessmentId === t.assessmentId)
-                        if (unit.data?.assessmentId && (t.assessmentId === unit.data.assessmentId || t.objectId === unit.data.assessmentId)) {
-                          return true;
-                        }
-                        return false;
-                      }) ||
-                      availableTests.find((t) => {
-                        // Priority 3: Exact title/quizId match
-                        const cleanUnitTitle = (unit.unitTitle || '').toLowerCase().trim();
-                        const cleanQuizId = t.quizId.toLowerCase().trim();
-                        return cleanUnitTitle && cleanQuizId === cleanUnitTitle;
-                      }) ||
-                      availableTests.find((t) => {
-                        // Priority 4: Number extraction match (e.g. if unitTitle has "13" and quizId has "13")
-                        const cleanUnitTitle = (unit.unitTitle || '').toLowerCase().trim();
-                        const cleanQuizId = t.quizId.toLowerCase().trim();
-                        const unitNum = cleanUnitTitle.match(/\d+/)?.[0];
-                        const quizNum = cleanQuizId.match(/\d+/)?.[0];
-                        if (unitNum && quizNum && unitNum === quizNum) {
-                          const baseUnit = cleanUnitTitle.replace(/\d+/g, '').trim();
-                          const baseQuiz = cleanQuizId.replace(/\d+/g, '').trim();
-                          if (baseUnit && baseQuiz && (baseUnit.includes(baseQuiz) || baseQuiz.includes(baseUnit))) {
-                            return true;
-                          }
-                        }
-                        return false;
-                      }) ||
-                      availableTests[0]
-                    : null;
-
-                  return (
-                    <div
-                      key={unit.id}
-                      className="p-3.5 rounded-xl bg-card/60 border border-card-border/80 flex items-center justify-between gap-4 hover:border-slate-700 transition-colors"
-                    >
-                      <div className="flex items-center gap-3">
-                        <div className={`w-8 h-8 rounded-lg flex items-center justify-center text-xs font-bold shrink-0 border ${config.colorClass}`}>
-                          <IconComp className="w-4 h-4" />
-                        </div>
-
-                        <div>
-                          <p className="text-sm font-semibold text-foreground">
-                            {unit.unitTitle !== 'Untitled' ? unit.unitTitle : `${section.title} Lesson ${uIdx + 1}`}
-                          </p>
-                          {formatUnitDuration(unit.duration) && config.isActionableVideo && (
-                            <span className="text-[11px] text-slate-500 mt-0.5 block font-mono">
-                              {formatUnitDuration(unit.duration)}
-                            </span>
-                          )}
-                        </div>
-                      </div>
-
-                      {/* Action Button: Download File / eBook */}
-                      {downloadUrl ? (
-                        <a
-                          href={downloadUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          download
-                          className="px-3.5 py-1.5 rounded-lg bg-teal-600/20 hover:bg-teal-600 text-teal-300 hover:text-foreground text-xs font-bold transition-all border border-teal-500/30 hover:border-transparent flex items-center gap-1.5 shrink-0"
-                        >
-                          <Download className="w-3.5 h-3.5" />
-                          <span>Download File</span>
-                        </a>
-                      ) : (config.category === 'ebook' || unit.type === 'pbebook' || unit.type === 'ebook') ? (
-                        <div className="px-3.5 py-1.5 rounded-lg bg-teal-950/40 text-teal-300 text-xs font-bold border border-teal-500/30 flex items-center gap-1.5 shrink-0">
-                          <BookOpen className="w-3.5 h-3.5 text-teal-400" />
-                          <span>eBook Notes</span>
-                        </div>
-                      ) : null}
-
-                      {/* Action Button: Certificate */}
-                      {config.category === 'cert' && !downloadUrl && (
-                        <div className="px-3.5 py-1.5 rounded-lg bg-amber-500/20 text-amber-600 dark:text-amber-300 text-xs font-bold border border-amber-500/40 flex items-center gap-1.5 shrink-0">
-                          <Award className="w-3.5 h-3.5 text-amber-600 dark:text-amber-400" />
-                          <span>Course Certificate</span>
-                        </div>
-                      )}
-
-                      {/* Action Button: Take Exam / Give Test */}
-                      {config.isActionableExam && !downloadUrl && (() => {
-                        const quizIdToUse = matchingTest?.quizId || unit.data?.assessmentId || unit.id;
-                        return (
-                          <Link
-                            href={`/quiz/${quizIdToUse}`}
-                            className="px-3.5 py-1.5 rounded-lg bg-primary-600/20 hover:bg-primary-600 text-primary-600 dark:text-primary-300 hover:text-white text-xs font-bold transition-all border border-primary-500/30 hover:border-transparent flex items-center gap-1 shrink-0"
-                          >
-                          <span>Take Exam</span>
-                            <ChevronRight className="w-3.5 h-3.5" />
-                          </Link>
-                        );
-                      })()}
-
-                      {/* Action Button: Watch Lesson / Video Not Available / Locked Video */}
-                      {config.isActionableVideo && !downloadUrl && (() => {
-                        const isYouTube = unit.type === 'youtube' || unit.icon === 'yt' || (unit.subtitle && unit.subtitle.toLowerCase().includes('youtube')) || !!(unit.data && unit.data.embed);
-                        const hasVideoSource = !!(unit.sourceid && unit.sourceid.trim() !== '') || isYouTube;
-
-                        if (!hasVideoSource) {
-                          return (
-                            <div
-                              className="px-3.5 py-1.5 rounded-lg bg-slate-800/60 text-muted-foreground text-xs font-semibold border border-slate-700/50 flex items-center gap-1.5 shrink-0 cursor-not-allowed"
-                              title="Video source is not available for this lesson"
-                            >
-                              <VideoOff className="w-3.5 h-3.5 text-muted-foreground" />
-                              <span>Video Not Available</span>
-                            </div>
-                          );
-                        }
-
-                        return isUnlocked ? (
-                          <Link
-                            href={`/courses/${course.slug}/video/${unit.sourceid || unit.id}`}
-                            className="px-3.5 py-1.5 rounded-lg bg-primary-600/20 hover:bg-primary-600 text-primary-600 dark:text-primary-300 hover:text-white text-xs font-bold transition-all border border-primary-500/30 hover:border-transparent flex items-center gap-1.5 shrink-0"
-                          >
-                            <Play className="w-3.5 h-3.5 fill-current" />
-                            <span>Watch Lesson</span>
-                          </Link>
-                        ) : (
-                          <Link
-                            href={`/courses/${course.slug}/video/${unit.sourceid || unit.id}`}
-                            className="px-3.5 py-1.5 rounded-lg bg-amber-950/40 hover:bg-amber-900/60 text-amber-600 dark:text-amber-400 text-xs font-bold transition-all border border-amber-500/30 flex items-center gap-1.5 shrink-0"
-                          >
-                            <Lock className="w-3.5 h-3.5" />
-                            <span>Locked Video</span>
-                          </Link>
-                        );
-                      })()}
+                    <div className="p-1 rounded-lg bg-card/60 border border-card-border/60 text-muted-foreground group-hover:text-foreground transition-colors">
+                      <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isExpanded ? 'rotate-180' : ''}`} />
                     </div>
-                  );
-                })}
-              </div>
+                  </div>
+                </button>
 
-            </div>
-          ))}
+                {/* Units List (Only shown when expanded) */}
+                {isExpanded && (
+                  <div className="p-5 sm:p-6 pt-0 space-y-2.5 border-t border-card-border/60 mt-1 pt-4">
+                    {section.units.map((unit, uIdx) => {
+                      const config = getUnitMetaConfig(unit);
+                      const IconComp = config.icon;
+
+                      // Read fileUrl directly from unit (parsed from course JSON)
+                      const downloadUrl = unit.fileUrl;
+
+                      const matchingTest = config.isActionableExam
+                        ? availableTests.find((t) => {
+                            // Priority 1: Exact object_id match (unit.id === t.objectId)
+                            if (unit.id && (t.objectId === unit.id || t.assessmentId === unit.id)) {
+                              return true;
+                            }
+                            // Priority 2: Exact assessmentId match (unit.data.assessmentId === t.assessmentId)
+                            if (unit.data?.assessmentId && (t.assessmentId === unit.data.assessmentId || t.objectId === unit.data.assessmentId)) {
+                              return true;
+                            }
+                            return false;
+                          }) ||
+                          availableTests.find((t) => {
+                            // Priority 3: Exact title/quizId match
+                            const cleanUnitTitle = (unit.unitTitle || '').toLowerCase().trim();
+                            const cleanQuizId = t.quizId.toLowerCase().trim();
+                            return cleanUnitTitle && cleanQuizId === cleanUnitTitle;
+                          }) ||
+                          availableTests.find((t) => {
+                            // Priority 4: Number extraction match (e.g. if unitTitle has "13" and quizId has "13")
+                            const cleanUnitTitle = (unit.unitTitle || '').toLowerCase().trim();
+                            const cleanQuizId = t.quizId.toLowerCase().trim();
+                            const unitNum = cleanUnitTitle.match(/\d+/)?.[0];
+                            const quizNum = cleanQuizId.match(/\d+/)?.[0];
+                            if (unitNum && quizNum && unitNum === quizNum) {
+                              const baseUnit = cleanUnitTitle.replace(/\d+/g, '').trim();
+                              const baseQuiz = cleanQuizId.replace(/\d+/g, '').trim();
+                              if (baseUnit && baseQuiz && (baseUnit.includes(baseQuiz) || baseQuiz.includes(baseUnit))) {
+                                return true;
+                              }
+                            }
+                            return false;
+                          }) ||
+                          availableTests[0]
+                        : null;
+
+                      return (
+                        <div
+                          key={unit.id}
+                          className="p-3.5 rounded-xl bg-card/60 border border-card-border/80 flex items-center justify-between gap-4 hover:border-slate-700 transition-colors"
+                        >
+                          <div className="flex items-center gap-3">
+                            <div className={`w-8 h-8 rounded-lg flex items-center justify-center text-xs font-bold shrink-0 border ${config.colorClass}`}>
+                              <IconComp className="w-4 h-4" />
+                            </div>
+
+                            <div>
+                              <p className="text-sm font-semibold text-foreground">
+                                {unit.unitTitle !== 'Untitled' ? unit.unitTitle : `${section.title} Lesson ${uIdx + 1}`}
+                              </p>
+                              {formatUnitDuration(unit.duration) && config.isActionableVideo && (
+                                <span className="text-[11px] text-slate-500 mt-0.5 block font-mono">
+                                  {formatUnitDuration(unit.duration)}
+                                </span>
+                              )}
+                            </div>
+                          </div>
+
+                          {/* Action Button: Download File / eBook */}
+                          {downloadUrl ? (
+                            <a
+                              href={downloadUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              download
+                              className="px-3.5 py-1.5 rounded-lg bg-teal-600/20 hover:bg-teal-600 text-teal-300 hover:text-foreground text-xs font-bold transition-all border border-teal-500/30 hover:border-transparent flex items-center gap-1.5 shrink-0"
+                            >
+                              <Download className="w-3.5 h-3.5" />
+                              <span>Download File</span>
+                            </a>
+                          ) : (config.category === 'ebook' || unit.type === 'pbebook' || unit.type === 'ebook') ? (
+                            <div className="px-3.5 py-1.5 rounded-lg bg-teal-950/40 text-teal-300 text-xs font-bold border border-teal-500/30 flex items-center gap-1.5 shrink-0">
+                              <BookOpen className="w-3.5 h-3.5 text-teal-400" />
+                              <span>eBook Notes</span>
+                            </div>
+                          ) : null}
+
+                          {/* Action Button: Certificate */}
+                          {config.category === 'cert' && !downloadUrl && (
+                            <div className="px-3.5 py-1.5 rounded-lg bg-amber-500/20 text-amber-600 dark:text-amber-300 text-xs font-bold border border-amber-500/40 flex items-center gap-1.5 shrink-0">
+                              <Award className="w-3.5 h-3.5 text-amber-600 dark:text-amber-400" />
+                              <span>Course Certificate</span>
+                            </div>
+                          )}
+
+                          {/* Action Button: Take Exam / Give Test */}
+                          {config.isActionableExam && !downloadUrl && (() => {
+                            const quizIdToUse = matchingTest?.quizId || unit.data?.assessmentId || unit.id;
+                            return (
+                              <Link
+                                href={`/quiz/${quizIdToUse}`}
+                                className="px-3.5 py-1.5 rounded-lg bg-primary-600/20 hover:bg-primary-600 text-primary-600 dark:text-primary-300 hover:text-white text-xs font-bold transition-all border border-primary-500/30 hover:border-transparent flex items-center gap-1 shrink-0"
+                              >
+                                <span>Take Exam</span>
+                                <ChevronRight className="w-3.5 h-3.5" />
+                              </Link>
+                            );
+                          })()}
+
+                          {/* Action Button: Watch Lesson / Video Not Available / Locked Video */}
+                          {config.isActionableVideo && !downloadUrl && (() => {
+                            const isYouTube = unit.type === 'youtube' || unit.icon === 'yt' || (unit.subtitle && unit.subtitle.toLowerCase().includes('youtube')) || !!(unit.data && unit.data.embed);
+                            const hasVideoSource = !!(unit.sourceid && unit.sourceid.trim() !== '') || isYouTube;
+
+                            if (!hasVideoSource) {
+                              return (
+                                <div
+                                  className="px-3.5 py-1.5 rounded-lg bg-slate-800/60 text-muted-foreground text-xs font-semibold border border-slate-700/50 flex items-center gap-1.5 shrink-0 cursor-not-allowed"
+                                  title="Video source is not available for this lesson"
+                                >
+                                  <VideoOff className="w-3.5 h-3.5 text-muted-foreground" />
+                                  <span>Video Not Available</span>
+                                </div>
+                              );
+                            }
+
+                            return isUnlocked ? (
+                              <Link
+                                href={`/courses/${course.slug}/video/${unit.sourceid || unit.id}`}
+                                className="px-3.5 py-1.5 rounded-lg bg-primary-600/20 hover:bg-primary-600 text-primary-600 dark:text-primary-300 hover:text-white text-xs font-bold transition-all border border-primary-500/30 hover:border-transparent flex items-center gap-1.5 shrink-0"
+                              >
+                                <Play className="w-3.5 h-3.5 fill-current" />
+                                <span>Watch Lesson</span>
+                              </Link>
+                            ) : (
+                              <Link
+                                href={`/courses/${course.slug}/video/${unit.sourceid || unit.id}`}
+                                className="px-3.5 py-1.5 rounded-lg bg-amber-950/40 hover:bg-amber-900/60 text-amber-600 dark:text-amber-400 text-xs font-bold transition-all border border-amber-500/30 flex items-center gap-1.5 shrink-0"
+                              >
+                                <Lock className="w-3.5 h-3.5" />
+                                <span>Locked Video</span>
+                              </Link>
+                            );
+                          })()}
+                        </div>
+                      );
+                    })}
+                  </div>
+                )}
+              </div>
+            );
+          })}
         </div>
+        )}
       </div>
 
     </div>

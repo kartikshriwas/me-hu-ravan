@@ -1,4 +1,6 @@
-import React from 'react';
+'use client';
+
+import React, { useState } from 'react';
 import Link from 'next/link';
 import { 
   Sparkles, 
@@ -22,16 +24,14 @@ import {
   Rocket
 } from 'lucide-react';
 
-export const metadata = {
-  title: 'Pricing & Plans | PrepTea',
-  description: 'Unlock Prime AI/ML, Delta Web Dev, Alpha Plus DSA, Sigma, or get All Batches bundle with 95% discount.',
-};
+// Removed exported metadata since this is a client component
 
 export default function PricingPage() {
+  const [isMonthly, setIsMonthly] = useState(false);
   const TELEGRAM_URL = "https://t.me/KartikShriwas";
 
   return (
-    <div className="min-h-screen py-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto space-y-16">
+    <div className="min-h-screen py-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto space-y-12">
       
       {/* Header Banner */}
       <div className="text-center space-y-4 max-w-3xl mx-auto">
@@ -40,15 +40,60 @@ export default function PricingPage() {
           <span>95% Off Special Launch Sale</span>
         </div>
         <h1 className="text-3xl sm:text-5xl font-black text-foreground tracking-tight leading-tight">
-          Invest in Your Career with <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 via-amber-500 to-rose-500">Industry-Grade Batches</span>
+          Invest in Your Career with <span className="text-primary-600 dark:text-primary-400">Industry-Grade Batches</span>
         </h1>
         <p className="text-muted-foreground text-base sm:text-lg">
           Master AI & ML, Full-Stack MERN Web Development, or Data Structures & Algorithms. Get individual plans or unlock <strong className="text-foreground">Everything</strong> for a single low price.
         </p>
+
+        {/* Interactive Segmented Toggle Switch */}
+        <div className="flex justify-center items-center mt-8 pt-2">
+          <div className="inline-flex items-center p-1.5 rounded-2xl bg-card/90 border border-card-border shadow-2xl backdrop-blur-xl relative gap-1.5 sm:gap-2">
+            <button
+              type="button"
+              onClick={() => setIsMonthly(false)}
+              className={`relative px-5 py-2.5 rounded-xl font-bold text-xs sm:text-sm transition-all duration-300 flex items-center gap-2 ${
+                !isMonthly
+                  ? 'bg-primary-600 text-white shadow-lg shadow-primary-500/30 scale-[1.02]'
+                  : 'text-muted-foreground hover:text-foreground hover:bg-card/60'
+              }`}
+            >
+              <Zap className={`w-4 h-4 ${!isMonthly ? 'text-amber-300 animate-pulse' : ''}`} />
+              <span>Full Batch Pass</span>
+              <span className={`text-[10px] px-2 py-0.5 rounded-full font-black uppercase tracking-wider transition-colors ${
+                !isMonthly 
+                  ? 'bg-white/20 text-white border border-white/30' 
+                  : 'bg-amber-500/15 text-amber-600 dark:text-amber-400 border border-amber-500/30'
+              }`}>
+                Save Most
+              </span>
+            </button>
+
+            <button
+              type="button"
+              onClick={() => setIsMonthly(true)}
+              className={`relative px-5 py-2.5 rounded-xl font-bold text-xs sm:text-sm transition-all duration-300 flex items-center gap-2 ${
+                isMonthly
+                  ? 'bg-emerald-600 text-white shadow-lg shadow-emerald-500/30 scale-[1.02]'
+                  : 'text-muted-foreground hover:text-foreground hover:bg-card/60'
+              }`}
+            >
+              <Sparkles className={`w-4 h-4 ${isMonthly ? 'text-emerald-200 animate-pulse' : ''}`} />
+              <span>Monthly Access</span>
+              <span className={`text-[10px] px-2 py-0.5 rounded-full font-black uppercase tracking-wider transition-colors ${
+                isMonthly 
+                  ? 'bg-white/20 text-white border border-white/30' 
+                  : 'bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30'
+              }`}>
+                Flexible
+              </span>
+            </button>
+          </div>
+        </div>
       </div>
 
       {/* ALL-ACCESS BUNDLE BANNER (HERO DEAL) */}
-      <div className="relative overflow-hidden rounded-3xl border-2 border-primary-500/40 bg-gradient-to-br from-primary-950/40 via-card to-amber-950/20 p-6 sm:p-10 shadow-2xl shadow-primary-500/10 backdrop-blur-xl">
+      <div className="relative overflow-hidden rounded-3xl border-2 border-primary-500/40 bg-card p-6 sm:p-10 shadow-2xl shadow-primary-500/10 backdrop-blur-xl">
         <div className="absolute top-0 right-0 -mt-8 -mr-8 w-48 h-48 bg-primary-500/10 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute bottom-0 left-0 -mb-8 -ml-8 w-48 h-48 bg-amber-500/10 rounded-full blur-3xl pointer-events-none" />
         
@@ -73,19 +118,23 @@ export default function PricingPage() {
           <div className="flex flex-col items-center bg-card/80 border border-card-border p-6 rounded-2xl shadow-xl shrink-0 w-full sm:w-auto text-center space-y-4">
             <div className="space-y-1">
               <div className="flex items-baseline justify-center gap-2">
-                <span className="text-4xl sm:text-5xl font-black text-primary-600 dark:text-primary-400">₹ 599</span>
-                <span className="text-xs font-bold px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30">
-                  95% OFF
-                </span>
+                <span className="text-4xl sm:text-5xl font-black text-primary-600 dark:text-primary-400">₹ {isMonthly ? '99' : '599'}</span>
+                {!isMonthly && (
+                  <span className="text-xs font-bold px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30">
+                    95% OFF
+                  </span>
+                )}
               </div>
-              <p className="text-[11px] text-muted-foreground font-medium">One-time payment • All Batches Unlocked</p>
+              <p className="text-[11px] text-muted-foreground font-medium">
+                {isMonthly ? 'Billed monthly • Cancel anytime' : 'Full Batch Pass • Complete Access'}
+              </p>
             </div>
 
             <a 
               href={TELEGRAM_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-64 py-3 px-6 rounded-xl font-bold bg-gradient-to-r from-primary-600 to-amber-600 hover:from-primary-500 hover:to-amber-500 text-white shadow-lg shadow-primary-600/30 transition-all transform hover:-translate-y-0.5 flex items-center justify-center gap-2"
+              className="w-full sm:w-64 py-3 px-6 rounded-xl font-bold bg-primary-600 hover:bg-primary-500 text-white shadow-lg shadow-primary-600/30 transition-all transform hover:-translate-y-0.5 flex items-center justify-center gap-2"
             >
               <Send className="w-4 h-4" />
               <span>Enroll All Batches Now</span>
@@ -153,9 +202,15 @@ export default function PricingPage() {
               </div>
               <div className="pt-2 border-t border-card-border/60">
                 <div className="flex items-baseline gap-2">
-                  <span className="text-3xl font-extrabold text-foreground">₹ 349</span>
-                  <span className="text-xs text-muted-foreground line-through">₹ 6860</span>
-                  <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-600 dark:text-emerald-400">95% OFF</span>
+                  <span className="text-3xl font-extrabold text-foreground">₹ {isMonthly ? '59' : '349'}</span>
+                  {isMonthly ? (
+                    <span className="text-xs text-muted-foreground">/ month</span>
+                  ) : (
+                    <>
+                      <span className="text-xs text-muted-foreground line-through">₹ 6860</span>
+                      <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-600 dark:text-emerald-400">95% OFF</span>
+                    </>
+                  )}
                 </div>
               </div>
               <ul className="space-y-2.5 text-xs text-foreground/80 pt-2">
@@ -189,9 +244,15 @@ export default function PricingPage() {
               </div>
               <div className="pt-2 border-t border-card-border/60">
                 <div className="flex items-baseline gap-2">
-                  <span className="text-3xl font-extrabold text-foreground">₹ 319</span>
-                  <span className="text-xs text-muted-foreground line-through">₹ 6250</span>
-                  <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-600 dark:text-emerald-400">95% OFF</span>
+                  <span className="text-3xl font-extrabold text-foreground">₹ {isMonthly ? '59' : '319'}</span>
+                  {isMonthly ? (
+                    <span className="text-xs text-muted-foreground">/ month</span>
+                  ) : (
+                    <>
+                      <span className="text-xs text-muted-foreground line-through">₹ 6250</span>
+                      <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-600 dark:text-emerald-400">95% OFF</span>
+                    </>
+                  )}
                 </div>
               </div>
               <ul className="space-y-2.5 text-xs text-foreground/80 pt-2">
@@ -224,9 +285,15 @@ export default function PricingPage() {
               </div>
               <div className="pt-2 border-t border-card-border/60">
                 <div className="flex items-baseline gap-2">
-                  <span className="text-3xl font-extrabold text-foreground">₹ 339</span>
-                  <span className="text-xs text-muted-foreground line-through">₹ 6750</span>
-                  <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-600 dark:text-emerald-400">95% OFF</span>
+                  <span className="text-3xl font-extrabold text-foreground">₹ {isMonthly ? '59' : '339'}</span>
+                  {isMonthly ? (
+                    <span className="text-xs text-muted-foreground">/ month</span>
+                  ) : (
+                    <>
+                      <span className="text-xs text-muted-foreground line-through">₹ 6750</span>
+                      <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-600 dark:text-emerald-400">95% OFF</span>
+                    </>
+                  )}
                 </div>
               </div>
               <ul className="space-y-2.5 text-xs text-foreground/80 pt-2">
@@ -266,17 +333,29 @@ export default function PricingPage() {
                 <div>
                   <span className="text-xs text-muted-foreground font-semibold">SIGMA Standard</span>
                   <div className="flex items-baseline gap-2">
-                    <span className="text-2xl font-extrabold text-foreground">₹ 449</span>
-                    <span className="text-xs text-muted-foreground line-through">₹ 8999</span>
-                    <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-600 dark:text-emerald-400">95% OFF</span>
+                    <span className="text-2xl font-extrabold text-foreground">₹ {isMonthly ? '79' : '449'}</span>
+                    {isMonthly ? (
+                      <span className="text-xs text-muted-foreground">/ month</span>
+                    ) : (
+                      <>
+                        <span className="text-xs text-muted-foreground line-through">₹ 8999</span>
+                        <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-600 dark:text-emerald-400">95% OFF</span>
+                      </>
+                    )}
                   </div>
                 </div>
                 <div>
                   <span className="text-xs text-muted-foreground font-semibold">SIGMAX Pro Edition</span>
                   <div className="flex items-baseline gap-2">
-                    <span className="text-2xl font-extrabold text-purple-600 dark:text-purple-400">₹ 499</span>
-                    <span className="text-xs text-muted-foreground line-through">₹ 9650</span>
-                    <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-600 dark:text-emerald-400">95% OFF</span>
+                    <span className="text-2xl font-extrabold text-purple-600 dark:text-purple-400">₹ {isMonthly ? '89' : '499'}</span>
+                    {isMonthly ? (
+                      <span className="text-xs text-muted-foreground">/ month</span>
+                    ) : (
+                      <>
+                        <span className="text-xs text-muted-foreground line-through">₹ 9650</span>
+                        <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-600 dark:text-emerald-400">95% OFF</span>
+                      </>
+                    )}
                   </div>
                 </div>
               </div>
