@@ -312,6 +312,38 @@ export function CourseDetailClient({ course, availableTests, isUnlocked = true }
   };
 
   const [searchQuery, setSearchQuery] = useState('');
+  const searchInputRef = React.useRef<HTMLInputElement>(null);
+
+  // Keyboard shortcut listener: Ctrl+K, Cmd+K, Ctrl+F, Cmd+F or '/' to trigger search
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      const activeEl = document.activeElement;
+      const activeTag = activeEl?.tagName.toLowerCase();
+      const isInputActive =
+        activeTag === 'input' ||
+        activeTag === 'textarea' ||
+        (activeEl as HTMLElement)?.isContentEditable;
+
+      const isCmdOrCtrlK = (e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k';
+      const isCmdOrCtrlF = (e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'f';
+      const isSlash = e.key === '/' && !isInputActive;
+
+      if (isCmdOrCtrlK || isCmdOrCtrlF || isSlash) {
+        e.preventDefault();
+        if (searchInputRef.current) {
+          searchInputRef.current.focus();
+          searchInputRef.current.select();
+        }
+      }
+
+      if (e.key === 'Escape' && document.activeElement === searchInputRef.current) {
+        searchInputRef.current?.blur();
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, []);
 
   // Filter sections and units based on search query
   const filteredSections = useMemo(() => {
@@ -535,13 +567,14 @@ export function CourseDetailClient({ course, availableTests, isUnlocked = true }
             <div className="relative flex-1 sm:w-72">
               <Search className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-muted-foreground pointer-events-none" />
               <input
+                ref={searchInputRef}
                 type="text"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Search section or lesson content..."
-                className="w-full pl-9 pr-8 py-2 rounded-xl bg-card border border-card-border text-xs text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary-500 transition-colors"
+                className="w-full pl-9 pr-12 py-2 rounded-xl bg-card border border-card-border text-xs text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary-500 transition-colors"
               />
-              {searchQuery && (
+              {searchQuery ? (
                 <button
                   type="button"
                   onClick={() => setSearchQuery('')}
@@ -550,6 +583,10 @@ export function CourseDetailClient({ course, availableTests, isUnlocked = true }
                 >
                   <X className="w-3.5 h-3.5" />
                 </button>
+              ) : (
+                <kbd className="absolute right-2.5 top-1/2 -translate-y-1/2 text-[10px] font-mono text-muted-foreground/70 border border-card-border/80 px-1.5 py-0.5 rounded bg-card/80 pointer-events-none hidden xs:inline-block">
+                  ⌘K
+                </kbd>
               )}
             </div>
 
