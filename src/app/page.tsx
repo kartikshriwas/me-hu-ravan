@@ -29,13 +29,17 @@ import {
 } from 'lucide-react';
 
 import { HomeTestsSkeleton } from '@/components/skeletons/HomeTestsSkeleton';
+import { clientCache } from '@/lib/clientCache';
 
 export default function HomePage() {
   const router = useRouter();
   const { user } = useAuth();
-  const [tests, setTests] = useState<AssessmentMeta[]>([]);
+  
+  // Instant load from memory cache if previously fetched
+  const cachedInitialTests = typeof window !== 'undefined' ? clientCache.get<{ success: boolean; data: AssessmentMeta[] }>('/api/questions') : null;
+  const [tests, setTests] = useState<AssessmentMeta[]>(cachedInitialTests?.data || []);
   const [history, setHistory] = useState<QuizAttemptResult[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(!cachedInitialTests?.data?.length);
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedDifficulty, setSelectedDifficulty] = useState<string>('All');
   const [recentAttempt, setRecentAttempt] = useState<QuizAttemptResult | null>(null);
@@ -51,17 +55,11 @@ export default function HomePage() {
     }
   }, [user, selectedTestForLoginModal, router]);
 
-  const fetchedRef = useRef(false);
-
   useEffect(() => {
-    if (fetchedRef.current) return;
-    fetchedRef.current = true;
-
     async function fetchAssessments() {
       try {
-        const res = await fetch('/api/questions');
-        const json = await res.json();
-        if (json.success) {
+        const json = await clientCache.fetchWithCache<{ success: boolean; data: AssessmentMeta[] }>('/api/questions', undefined, 60000);
+        if (json?.success && Array.isArray(json.data)) {
           setTests(json.data);
         }
       } catch (err) {
@@ -89,9 +87,8 @@ export default function HomePage() {
 
       // 2. Fetch MongoDB remote attempts for the active user account
       try {
-        const res = await fetch('/api/attempts');
-        const json = await res.json();
-        if (json.success && Array.isArray(json.data)) {
+        const json = await clientCache.fetchWithCache<any>('/api/attempts', undefined, 60000);
+        if (json?.success && Array.isArray(json.data)) {
           const remoteAttempts: QuizAttemptResult[] = json.data.map((remote: any) => ({
             quizId: remote.quizId,
             quizTitle: remote.quizTitle,

@@ -8,6 +8,7 @@ import { isPlatformGlobalFree } from '@/lib/globalSetting';
 import { cleanQuizId } from '@/lib/storage';
 import { auth } from '@/auth';
 import { SUPERADMIN_EMAIL } from '@/lib/adminAuth';
+import { getCachedUserDoc } from '@/lib/coursesAuth';
 
 export async function GET(
   request: Request,
@@ -34,15 +35,17 @@ export async function GET(
     const setMatch = (assessment.quizId || cleanId).match(/\d+/);
     const setNum = setMatch ? parseInt(setMatch[0], 10) : 1;
 
-    await connectToDatabase();
     const cleanEmail = session.email.toLowerCase().trim();
     const isSuperadmin = cleanEmail === SUPERADMIN_EMAIL;
 
-    const dbUser = await User.findOne({ email: cleanEmail }).lean();
-    const { isGlobalFree } = await isPlatformGlobalFree();
+    // Check user and global setting in parallel using memory cache
+    const [cachedUser, globalFreeConfig] = await Promise.all([
+      getCachedUserDoc(cleanEmail),
+      isPlatformGlobalFree(),
+    ]);
 
-    let isPremium = !!(dbUser?.isPremium || isSuperadmin || isGlobalFree);
-    if (isPremium && !isSuperadmin && !isGlobalFree && dbUser?.premiumExpiresAt && new Date(dbUser.premiumExpiresAt) < new Date()) {
+    let isPremium = !!(cachedUser?.isPremium || isSuperadmin || globalFreeConfig.isGlobalFree);
+    if (isPremium && !isSuperadmin && !globalFreeConfig.isGlobalFree && cachedUser?.premiumExpiresAt && new Date(cachedUser.premiumExpiresAt) < new Date()) {
       isPremium = false;
     }
 
@@ -64,18 +67,21 @@ export async function GET(
     let avgAccuracy = 0;
     const qStatsMap: Record<string, { totalAttempts: number; accuracyRate: number }> = {};
 
-    const stats = await Attempt.aggregate([
-      { $match: { quizId: { $in: [id, cleanId, encodeURIComponent(cleanId)] }, isFirstAttempt: { $ne: false } } },
-      { $group: { _id: null, count: { $sum: 1 }, avgAccuracy: { $avg: '$accuracy' } } }
+    // Run attempt aggregation and question stats find concurrently
+    const [stats, qStats] = await Promise.all([
+      Attempt.aggregate([
+        { $match: { quizId: { $in: [id, cleanId, encodeURIComponent(cleanId)] }, isFirstAttempt: { $ne: false } } },
+        { $group: { _id: null, count: { $sum: 1 }, avgAccuracy: { $avg: '$accuracy' } } }
+      ]),
+      QuestionStat.find({ quizId: { $in: [id, cleanId, encodeURIComponent(cleanId)] } })
+        .select('questionId totalAttempts firstAttemptTotal correctCount accuracyRate')
+        .lean(),
     ]);
+
     if (stats.length > 0) {
       candidateCount = stats[0].count;
       avgAccuracy = Math.round(stats[0].avgAccuracy || 0);
     }
-
-    const qStats = await QuestionStat.find({ quizId: { $in: [id, cleanId, encodeURIComponent(cleanId)] } })
-      .select('questionId totalAttempts firstAttemptTotal correctCount accuracyRate')
-      .lean();
     qStats.forEach((qs) => {
       const denom = (qs.firstAttemptTotal || 0) > 0 ? qs.firstAttemptTotal : (qs.totalAttempts || 0);
       const rate = denom > 0

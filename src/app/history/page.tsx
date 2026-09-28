@@ -9,11 +9,13 @@ import { GoogleLoginButton } from '@/components/GoogleLoginButton';
 import { SignInRequired } from '@/components/SignInRequired';
 import { History, Trophy, Target, Clock, RotateCcw, Lock } from 'lucide-react';
 import { HistorySkeleton } from '@/components/skeletons/HistorySkeleton';
+import { clientCache } from '@/lib/clientCache';
 
 export default function HistoryPage() {
   const { user } = useAuth();
+  const cachedAttempts = typeof window !== 'undefined' ? clientCache.get<any>('/api/attempts') : null;
   const [history, setHistory] = useState<QuizAttemptResult[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(!cachedAttempts);
 
   const fetchedEmailRef = useRef<string>('');
 
@@ -26,16 +28,11 @@ export default function HistoryPage() {
         return;
       }
 
-      if (fetchedEmailRef.current === email) return;
-      fetchedEmailRef.current = email;
-
-      setLoading(true);
       let localHistory = getQuizHistory(email);
 
       try {
-        const res = await fetch('/api/attempts');
-          const json = await res.json();
-          if (json.success && Array.isArray(json.data) && json.data.length > 0) {
+        const json = await clientCache.fetchWithCache<any>('/api/attempts', undefined, 60000);
+        if (json?.success && Array.isArray(json.data) && json.data.length > 0) {
             const remoteAttempts: QuizAttemptResult[] = json.data.map((remote: any) => ({
               quizId: remote.quizId,
               quizTitle: remote.quizTitle,

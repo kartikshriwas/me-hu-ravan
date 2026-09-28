@@ -24,6 +24,7 @@ import {
   Lock
 } from 'lucide-react';
 import { QuizPlaySkeleton } from '@/components/skeletons/QuizPlaySkeleton';
+import { clientCache } from '@/lib/clientCache';
 
 export default function QuizPlayerPage({ params }: { params: Promise<{ quizId: string }> }) {
   const { quizId: rawQuizId } = use(params);
@@ -572,6 +573,11 @@ export default function QuizPlayerPage({ params }: { params: Promise<{ quizId: s
 
     // Save final verified attempt to localStorage for instant local rendering
     saveQuizAttempt(result, user?.email);
+
+    // Invalidate stale caches so leaderboard and history update immediately
+    clientCache.invalidate('/api/attempts');
+    clientCache.invalidate('/api/leaderboard');
+    clientCache.invalidate('/api/user/profile');
 
     router.replace(`/quiz/${assessment.quizId}/results?t=${result.timestamp}`);
   };

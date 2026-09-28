@@ -6,6 +6,7 @@ import { useAuth } from '@/lib/authContext';
 import { GoogleLoginButton } from '@/components/GoogleLoginButton';
 import { UserAvatar } from '@/components/UserAvatar';
 import { LeaderboardSkeleton } from '@/components/skeletons/LeaderboardSkeleton';
+import { clientCache } from '@/lib/clientCache';
 
 interface LeaderboardUser {
   rank: number;
@@ -20,21 +21,15 @@ interface LeaderboardUser {
 
 export default function LeaderboardPage() {
   const { user: currentUser } = useAuth();
-  const [leaderboard, setLeaderboard] = useState<LeaderboardUser[]>([]);
-  const [loading, setLoading] = useState(true);
-
-  const fetchedRef = useRef(false);
+  const cachedData = typeof window !== 'undefined' ? clientCache.get<{ success: boolean; data: LeaderboardUser[] }>('/api/leaderboard') : null;
+  const [leaderboard, setLeaderboard] = useState<LeaderboardUser[]>(cachedData?.data || []);
+  const [loading, setLoading] = useState(!cachedData?.data?.length);
 
   useEffect(() => {
-    if (fetchedRef.current) return;
-    fetchedRef.current = true;
-
     async function loadLeaderboard() {
       try {
-        setLoading(true);
-        const res = await fetch('/api/leaderboard');
-        const json = await res.json();
-        if (json.success && Array.isArray(json.data)) {
+        const json = await clientCache.fetchWithCache<{ success: boolean; data: LeaderboardUser[] }>('/api/leaderboard', undefined, 30000);
+        if (json?.success && Array.isArray(json.data)) {
           setLeaderboard(json.data);
         }
       } catch (err) {

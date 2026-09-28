@@ -23,6 +23,7 @@ import {
   BookOpen,
 } from "lucide-react";
 import { ProfileSkeleton } from "@/components/skeletons/ProfileSkeleton";
+import { clientCache } from "@/lib/clientCache";
 
 interface ProfileData {
   user: {
@@ -57,8 +58,9 @@ interface ProfileData {
 
 export default function ProfilePage() {
   const { user: authUser, loading: authLoading } = useAuth();
-  const [profile, setProfile] = useState<ProfileData | null>(null);
-  const [loading, setLoading] = useState(true);
+  const cachedProfile = typeof window !== 'undefined' ? clientCache.get<ProfileData>('/api/user/profile') : null;
+  const [profile, setProfile] = useState<ProfileData | null>(cachedProfile);
+  const [loading, setLoading] = useState(!cachedProfile && Boolean(authUser?.email));
 
   // Redeem Code Form State
   const [redeemCode, setRedeemCode] = useState("");
@@ -69,22 +71,16 @@ export default function ProfilePage() {
     "overview",
   );
 
-  const fetchedEmailRef = useRef<string>("");
-
   useEffect(() => {
     async function loadProfile() {
       if (!authUser?.email) {
         setLoading(false);
         return;
       }
-      if (fetchedEmailRef.current === authUser.email) return;
-      fetchedEmailRef.current = authUser.email;
 
       try {
-        setLoading(true);
-        const res = await fetch("/api/user/profile");
-        const json = await res.json();
-        if (json.success && json.user) {
+        const json = await clientCache.fetchWithCache<ProfileData>("/api/user/profile", undefined, 60000);
+        if (json?.user) {
           setProfile(json);
         }
       } catch (err) {
@@ -119,11 +115,11 @@ export default function ProfilePage() {
 
       if (json.success) {
         setRedeemSuccess(json.message || "🎉 Code redeemed successfully!");
-        setRedeemCode("");
-        // Reload profile data
-        const profileRes = await fetch("/api/user/profile");
-        const profileJson = await profileRes.json();
-        if (profileJson.success) {
+        // Invalidate and reload profile data
+        clientCache.invalidate('/api/user/profile');
+        clientCache.invalidate('/api/attempts');
+        const profileJson = await clientCache.fetchWithCache<ProfileData>("/api/user/profile", undefined, 0);
+        if (profileJson?.user) {
           setProfile(profileJson);
         }
       } else {

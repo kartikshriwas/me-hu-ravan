@@ -1,6 +1,10 @@
 import { NextResponse } from 'next/server';
 import { auth } from '@/auth';
 
+// In-memory cache for parsed video metadata (1 hour TTL)
+const videoCache = new Map<string, { data: any; expiry: number }>();
+const VIDEO_CACHE_TTL_MS = 60 * 60 * 1000;
+
 export async function GET(
   request: Request,
   { params }: { params: Promise<{ id: string }> }
@@ -16,6 +20,17 @@ export async function GET(
     const { id } = await params;
     if (!id || typeof id !== 'string') {
       return NextResponse.json({ success: false, error: 'Invalid Video ID' }, { status: 400 });
+    }
+
+    const now = Date.now();
+    const cached = videoCache.get(id);
+    if (cached && cached.expiry > now) {
+      return NextResponse.json({
+        success: true,
+        video: cached.data,
+      }, {
+        headers: { 'Cache-Control': 'private, max-age=300, stale-while-revalidate=600' }
+      });
     }
 
     // 2. Fetch Wistia metadata with retry loop to handle transient network/socket drops
@@ -83,15 +98,24 @@ export async function GET(
     const thumbnailAsset = rawAssets.find((asset: any) => asset.type === 'still_image' || asset.slug?.includes('still'));
     const thumbnailUrl = thumbnailAsset?.url || '';
 
+    const videoPayload = {
+      id: media.hashedId || id,
+      name: media.name || 'Untitled Video',
+      durationSeconds: media.duration || 0,
+      thumbnailUrl,
+      assets: videoAssets,
+    };
+
+    videoCache.set(id, {
+      data: videoPayload,
+      expiry: now + VIDEO_CACHE_TTL_MS,
+    });
+
     return NextResponse.json({
       success: true,
-      video: {
-        id: media.hashedId || id,
-        name: media.name || 'Untitled Video',
-        durationSeconds: media.duration || 0,
-        thumbnailUrl,
-        assets: videoAssets,
-      },
+      video: videoPayload,
+    }, {
+      headers: { 'Cache-Control': 'private, max-age=300, stale-while-revalidate=600' }
     });
   } catch (error) {
     console.error('Error fetching wistia video metadata:', error);

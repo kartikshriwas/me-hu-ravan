@@ -72,12 +72,6 @@ export async function POST(request: Request) {
       return NextResponse.json({ success: false, offline: true });
     }
 
-    // Check if session was terminated by admin
-    const existingSession = await UserSession.findOne({ sessionId }).select('terminated').lean();
-    if (existingSession?.terminated) {
-      return NextResponse.json({ success: false, terminated: true, message: 'Session terminated by admin' });
-    }
-
     const userEmail = sessionUser?.email ? sessionUser.email.toLowerCase().trim() : `guest_${sessionId.substring(0, 12)}`;
     const userName = sessionUser?.name || 'Guest User';
     const userImage = sessionUser?.image || '';
@@ -97,8 +91,8 @@ export async function POST(request: Request) {
 
     const now = new Date();
 
-    // 1. Upsert live active session record with device & event telemetry
-    await UserSession.findOneAndUpdate(
+    // 1. Upsert live active session record with device & event telemetry (single atomic query)
+    const updatedSession = await UserSession.findOneAndUpdate(
       { sessionId },
       {
         $set: {
@@ -129,7 +123,11 @@ export async function POST(request: Request) {
         },
       },
       { upsert: true, returnDocument: 'after' }
-    );
+    ).select('terminated').lean();
+
+    if (updatedSession?.terminated) {
+      return NextResponse.json({ success: false, terminated: true, message: 'Session terminated by admin' });
+    }
 
     // 2. Aggregate daily usage logs if user is logged in (excluding /admin panel routes from student study metrics)
     const isAdminPath = currentPath && currentPath.startsWith('/admin');

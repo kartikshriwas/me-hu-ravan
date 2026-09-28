@@ -214,6 +214,9 @@ export default function AdminDashboardPage() {
   const [allSessionsQuery, setAllSessionsQuery] = useState('');
   const [allSessionsLoading, setAllSessionsLoading] = useState(false);
 
+  const loadedTabs = useRef<Set<string>>(new Set());
+  const tabLastFetched = useRef<Record<string, number>>({});
+
   const [loading, setLoading] = useState(true);
   const [feedbackMsg, setFeedbackMsg] = useState('');
   const [errorMsg, setErrorMsg] = useState('');
@@ -271,9 +274,21 @@ export default function AdminDashboardPage() {
       return;
     }
 
+    const hasLoaded = loadedTabs.current.has(activeTab);
+    const lastFetch = tabLastFetched.current[activeTab] || 0;
+    const isFresh = Date.now() - lastFetch < 60000;
+
+    // If already loaded and fresh (<60s), switch tab instantly without skeleton or network hit
+    if (hasLoaded && isFresh) {
+      setLoading(false);
+      return;
+    }
+
     async function loadAdminData() {
       try {
-        setLoading(true);
+        if (!hasLoaded) {
+          setLoading(true);
+        }
         if (activeTab === 'overview') {
           const res = await fetch('/api/admin/stats');
           const json = await res.json();
@@ -318,6 +333,9 @@ export default function AdminDashboardPage() {
           const json = await res.json();
           if (json.success) setReports(json.reports);
         }
+
+        loadedTabs.current.add(activeTab);
+        tabLastFetched.current[activeTab] = Date.now();
       } catch (err) {
         console.error('Failed to load admin tab data:', err);
       } finally {
@@ -391,11 +409,12 @@ export default function AdminDashboardPage() {
     }
   };
 
-  // Auto-refresh active sessions every 8 seconds when activeTab === 'active-sessions'
+  // Auto-refresh active sessions every 15 seconds when activeTab === 'active-sessions' (paused when tab hidden)
   useEffect(() => {
     if (activeTab !== 'active-sessions' || !authUser || !isAdmin) return;
 
     const interval = setInterval(async () => {
+      if (typeof document !== 'undefined' && document.hidden) return;
       try {
         setRefreshingSessions(true);
         const res = await fetch('/api/admin/active-sessions');
@@ -412,7 +431,7 @@ export default function AdminDashboardPage() {
       } finally {
         setTimeout(() => setRefreshingSessions(false), 500);
       }
-    }, 8000);
+    }, 15000);
 
     return () => clearInterval(interval);
   }, [activeTab, authUser, isAdmin]);

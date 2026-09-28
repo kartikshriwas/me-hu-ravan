@@ -1,4 +1,17 @@
 import mongoose from 'mongoose';
+import dns from 'dns';
+
+// Fix Linux querySrv ETIMEOUT by forcing reliable public DNS resolvers and IPv4 order
+try {
+  if (typeof dns.setDefaultResultOrder === 'function') {
+    dns.setDefaultResultOrder('ipv4first');
+  }
+  if (typeof dns.setServers === 'function') {
+    dns.setServers(['8.8.8.8', '1.1.1.1', '8.8.4.4', '1.0.0.1']);
+  }
+} catch (e) {
+  // Ignore in environments where custom DNS servers cannot be set
+}
 
 const MONGODB_URI = process.env.MONGODB_URI;
 
@@ -39,11 +52,11 @@ export async function connectToDatabase(): Promise<typeof mongoose> {
   if (!cached.promise) {
     const opts: mongoose.ConnectOptions = {
       bufferCommands: false,
-      maxPoolSize: 15,
+      maxPoolSize: 10,
       minPoolSize: 2,
-      serverSelectionTimeoutMS: 10000,
-      connectTimeoutMS: 10000,
-      socketTimeoutMS: 20000,
+      serverSelectionTimeoutMS: 5000,
+      connectTimeoutMS: 5000,
+      socketTimeoutMS: 15000,
       family: 4, // Force IPv4 DNS lookup to prevent IPv6 timeout delays
     };
 

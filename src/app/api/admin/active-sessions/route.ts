@@ -5,15 +5,26 @@ import { UserSession } from '@/models/UserSession';
 import { UserActivityLog } from '@/models/UserActivityLog';
 import { User } from '@/models/User';
 
+// 6-second server cache to prevent multiple rapid polls from hammering MongoDB with 10 aggregations
+let cachedActiveSessionsResponse: any = null;
+let lastActiveSessionsFetchTime = 0;
+const SESSIONS_CACHE_TTL_MS = 6000;
+
 export async function GET(request: Request) {
   try {
     const session = await auth();
-  const sessionUser = session?.user as any;
+    const sessionUser = session?.user as any;
     const adminAuth = await verifyAdminPermission(sessionUser?.email, 'manage_users');
     if (!adminAuth.isAuthorized) {
       return NextResponse.json({ success: false, error: adminAuth.error }, { status: adminAuth.statusCode || 403 });
     }
-    // Sessions active within last 2.5 minutes (150,000 ms)
+
+    const nowMs = Date.now();
+    if (cachedActiveSessionsResponse && nowMs - lastActiveSessionsFetchTime < SESSIONS_CACHE_TTL_MS) {
+      return NextResponse.json(cachedActiveSessionsResponse, {
+        headers: { 'Cache-Control': 'private, max-age=6' }
+      });
+    }
 
     // Sessions active within last 2.5 minutes (150,000 ms)
     const activeCutoff = new Date(Date.now() - 150000);
@@ -269,7 +280,7 @@ export async function GET(request: Request) {
     const avgActiveSecondsPerUser = candidateCountToday > 0 ? Math.round(totalActiveSecondsToday / candidateCountToday) : 0;
     const avgFocusSecondsPerUser = candidateCountToday > 0 ? Math.round(totalFocusSecondsToday / candidateCountToday) : 0;
 
-    return NextResponse.json({
+    const responsePayload = {
       success: true,
       sessions: formattedSessions,
       stats: {
@@ -290,6 +301,13 @@ export async function GET(request: Request) {
       topPagesRightNow,
       topActiveUsersToday: topUsersByTimeframe.today,
       topUsersByTimeframe,
+    };
+
+    cachedActiveSessionsResponse = responsePayload;
+    lastActiveSessionsFetchTime = nowMs;
+
+    return NextResponse.json(responsePayload, {
+      headers: { 'Cache-Control': 'private, max-age=6' }
     });
   } catch (error) {
     console.error('Error fetching active sessions:', error);

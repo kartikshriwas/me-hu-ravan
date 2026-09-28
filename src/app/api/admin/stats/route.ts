@@ -9,13 +9,26 @@ import { Attempt } from '@/models/Attempt';
 import { QuestionStat } from '@/models/QuestionStat';
 import { UserActivityLog } from '@/models/UserActivityLog';
 
+// In-memory cache for admin dashboard stats (15 second TTL)
+let cachedStats: any = null;
+let lastStatsFetchTime = 0;
+const STATS_CACHE_TTL_MS = 15000;
+
 export async function GET(request: Request) {
   try {
     const session = await auth();
-  const sessionUser = session?.user as any;
+    const sessionUser = session?.user as any;
     const adminAuth = await verifyAdminPermission(sessionUser?.email);
     if (!adminAuth.isAuthorized) {
       return NextResponse.json({ success: false, error: adminAuth.error }, { status: adminAuth.statusCode || 403 });
+    }
+
+    const now = Date.now();
+    if (cachedStats && now - lastStatsFetchTime < STATS_CACHE_TTL_MS) {
+      return NextResponse.json({
+        success: true,
+        stats: cachedStats,
+      });
     }
 
     // Execute count queries concurrently in parallel
@@ -39,19 +52,26 @@ export async function GET(request: Request) {
       UserActivityLog.countDocuments(),
     ]);
 
+    const statsPayload = {
+      totalUsers,
+      premiumUsers,
+      freeUsers: totalUsers - premiumUsers,
+      totalCodes,
+      activeEventsCount,
+      totalAttempts,
+      preapprovedCount,
+      totalQuestionsTracked,
+      totalActivityLogsCount,
+    };
+
+    cachedStats = statsPayload;
+    lastStatsFetchTime = now;
+
     return NextResponse.json({
       success: true,
-      stats: {
-        totalUsers,
-        premiumUsers,
-        freeUsers: totalUsers - premiumUsers,
-        totalCodes,
-        activeEventsCount,
-        totalAttempts,
-        preapprovedCount,
-        totalQuestionsTracked,
-        totalActivityLogsCount,
-      },
+      stats: statsPayload,
+    }, {
+      headers: { 'Cache-Control': 'private, max-age=15, stale-while-revalidate=30' }
     });
   } catch (error) {
     console.error('Error in admin stats API:', error);

@@ -18,6 +18,7 @@ export function ActivityTracker() {
   const sessionIdRef = useRef<string>('');
   const prevStateRef = useRef<string>('active');
   const eventBufferRef = useRef<SessionEvent[]>([]);
+  const lastHeartbeatTimeRef = useRef<number>(Date.now());
 
   // Helper to check if video or audio is actively playing on the page
   const checkIsMediaPlaying = () => {
@@ -163,8 +164,10 @@ export function ActivityTracker() {
         prevStateRef.current = currentState;
       }
 
-      // 15s interval delta accounting
-      const intervalSecs = 15;
+      // 30s interval delta accounting
+      const intervalSecs = Math.max(1, Math.min(60, Math.floor((now - (lastHeartbeatTimeRef.current || now)) / 1000)));
+      lastHeartbeatTimeRef.current = now;
+
       if (currentState === 'active' || currentState === 'focus') {
         // BOTH Active and Focus count towards candidate's active usage time on site!
         activeSecondsAccumRef.current += intervalSecs;
@@ -230,17 +233,34 @@ export function ActivityTracker() {
       }
     };
 
-    // Heartbeat every 15 seconds
-    const interval = setInterval(() => sendHeartbeat(false), 15000);
+    // Heartbeat every 30 seconds (efficient, cuts requests by 50%)
+    const interval = setInterval(() => {
+      // Pause heartbeat loop when tab is hidden and not playing media
+      if (typeof document !== 'undefined' && document.visibilityState === 'hidden' && !checkIsMediaPlaying()) {
+        return;
+      }
+      sendHeartbeat(false);
+    }, 30000);
+
+    const handleVisibilityChange = () => {
+      if (document.visibilityState === 'hidden' && !checkIsMediaPlaying()) {
+        sendHeartbeat(true);
+      } else if (document.visibilityState === 'visible') {
+        lastActivityTimeRef.current = Date.now();
+        sendHeartbeat(false);
+      }
+    };
 
     const handleBeforeUnload = () => {
       sendHeartbeat(true);
     };
 
+    window.addEventListener('visibilitychange', handleVisibilityChange);
     window.addEventListener('beforeunload', handleBeforeUnload);
 
     return () => {
       clearInterval(interval);
+      window.removeEventListener('visibilitychange', handleVisibilityChange);
       window.removeEventListener('beforeunload', handleBeforeUnload);
     };
   }, [pathname]);

@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { useAuth } from '@/lib/authContext';
 import { GoogleLoginButton } from '@/components/GoogleLoginButton';
 import { Sparkles, Flame, Gift, ArrowRight, X, Clock } from 'lucide-react';
+import { clientCache } from '@/lib/clientCache';
 
 interface EventData {
   isGlobalFree: boolean;
@@ -16,32 +17,15 @@ interface EventData {
 
 export function EventPromoBanner() {
   const { user } = useAuth();
-  const [eventData, setEventData] = useState<EventData | null>(null);
+  const [eventData, setEventData] = useState<EventData | null>(() => clientCache.get<EventData>('/api/events/active'));
   const [dismissed, setDismissed] = useState(false);
 
   useEffect(() => {
     async function fetchActiveEvents() {
       try {
-        // Session storage caching (60 sec) to eliminate extra API calls in network tab
-        const cached = sessionStorage.getItem('preptea_active_events');
-        if (cached) {
-          try {
-            const parsed = JSON.parse(cached);
-            if (Date.now() - parsed.timestamp < 60000) {
-              setEventData(parsed.data);
-              return;
-            }
-          } catch {}
-        }
-
-        const res = await fetch('/api/events/active');
-        const json = await res.json();
-        if (json.success) {
+        const json = await clientCache.fetchWithCache<any>('/api/events/active', 120_000);
+        if (json?.success) {
           setEventData(json);
-          sessionStorage.setItem('preptea_active_events', JSON.stringify({
-            data: json,
-            timestamp: Date.now(),
-          }));
         }
       } catch (err) {
         console.error('Failed to fetch active events:', err);
