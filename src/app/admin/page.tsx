@@ -41,6 +41,7 @@ import {
   Loader2,
   ShieldAlert
 } from 'lucide-react';
+import { AdminSkeleton } from '@/components/skeletons/AdminSkeleton';
 
 interface SessionEventItem {
   timestamp: number;
@@ -842,12 +843,8 @@ export default function AdminDashboardPage() {
   };
 
 
-  if (authLoading) {
-    return (
-      <div className="space-y-6">
-        <div className="glass-panel rounded-3xl p-8 h-64 animate-pulse bg-card/40" />
-      </div>
-    );
+  if (authLoading || (loading && !stats)) {
+    return <AdminSkeleton />;
   }
 
   // 404 Authorization Guard: Unauthorized access throws 404 Not Found
@@ -862,7 +859,7 @@ export default function AdminDashboardPage() {
   );
 
   return (
-    <div className="w-full px-4 sm:px-8 lg:px-12 py-6 space-y-8">
+    <main className="w-full px-4 sm:px-8 lg:px-12 py-6 space-y-8" role="main">
 
       {/* Global Notifications / Alerts */}
       {feedbackMsg && (
@@ -3275,6 +3272,6 @@ export default function AdminDashboardPage() {
           </div>
         </div>
       )}
-    </div>
+    </main>
   );
 }

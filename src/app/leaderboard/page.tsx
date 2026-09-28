@@ -5,6 +5,7 @@ import { Trophy, Medal, Award, Flame, Target, User, Sparkles } from 'lucide-reac
 import { useAuth } from '@/lib/authContext';
 import { GoogleLoginButton } from '@/components/GoogleLoginButton';
 import { UserAvatar } from '@/components/UserAvatar';
+import { LeaderboardSkeleton } from '@/components/skeletons/LeaderboardSkeleton';
 
 interface LeaderboardUser {
   rank: number;
@@ -48,11 +49,15 @@ export default function LeaderboardPage() {
 
   const topThree = leaderboard.slice(0, 3);
 
+  if (loading) {
+    return <LeaderboardSkeleton />;
+  }
+
   return (
-    <div className="w-full px-4 sm:px-8 lg:px-12 py-6 space-y-10">
+    <main className="w-full px-4 sm:px-8 lg:px-12 py-6 space-y-10" role="main">
       
       {/* Header Banner */}
-      <div className="glass-panel rounded-3xl p-6 sm:p-10 border border-primary-500/30 relative overflow-hidden space-y-4">
+      <header className="glass-panel rounded-3xl p-6 sm:p-10 border border-primary-500/30 relative overflow-hidden space-y-4">
         <div className="absolute top-0 right-0 w-80 h-80 bg-amber-500/10 rounded-full blur-3xl pointer-events-none" />
 
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
@@ -71,17 +76,9 @@ export default function LeaderboardPage() {
             <GoogleLoginButton label="Join Leaderboard" size="medium" />
           )}
         </div>
-      </div>
+      </header>
 
-      {loading ? (
-        <div className="space-y-6">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[1, 2, 3].map((n) => (
-              <div key={n} className="glass-panel rounded-3xl p-8 h-64 animate-pulse bg-card/40" />
-            ))}
-          </div>
-        </div>
-      ) : leaderboard.length === 0 ? (
+      {leaderboard.length === 0 ? (
         <div className="p-12 text-center glass-panel rounded-3xl space-y-4">
           <Trophy className="w-10 h-10 text-amber-600 dark:text-amber-400 mx-auto" />
           <h2 className="text-lg font-bold text-foreground">No Rankings Recorded Yet</h2>
@@ -195,7 +192,7 @@ export default function LeaderboardPage() {
                       const isMe = currentUser?.email === item.email;
                       return (
                         <tr
-                          key={item.email}
+                          key={item.id || `rank-${item.rank}-${item.email}`}
                           className={`transition-colors ${
                             isMe
                               ? 'bg-primary-600/10 hover:bg-primary-600/20 font-semibold'
@@ -238,6 +235,6 @@ export default function LeaderboardPage() {
         </div>
       )}
 
-    </div>
+    </main>
   );
 }

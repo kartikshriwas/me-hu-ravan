@@ -8,6 +8,7 @@ import { useAuth } from '@/lib/authContext';
 import { GoogleLoginButton } from '@/components/GoogleLoginButton';
 import { SignInRequired } from '@/components/SignInRequired';
 import { Bookmark, Lock } from 'lucide-react';
+import { BookmarksSkeleton } from '@/components/skeletons/BookmarksSkeleton';
 
 export default function BookmarksPage() {
   const { user } = useAuth();
@@ -28,11 +29,15 @@ export default function BookmarksPage() {
     setBookmarks(getBookmarks(user?.email));
   };
 
+  if (loading) {
+    return <BookmarksSkeleton />;
+  }
+
   return (
-    <div className="w-full px-4 sm:px-8 lg:px-12 py-6 space-y-8">
+    <main className="w-full px-4 sm:px-8 lg:px-12 py-6 space-y-8" role="main">
       
       {/* Header */}
-      <div className="glass-panel rounded-3xl p-6 sm:p-8 border border-card-border flex items-center justify-between">
+      <header className="glass-panel rounded-3xl p-6 sm:p-8 border border-card-border flex items-center justify-between">
         <div>
           <div className="flex items-center gap-2 text-primary-600 dark:text-primary-400 font-semibold text-xs mb-2">
             <Bookmark className="w-4 h-4" />
@@ -45,31 +50,15 @@ export default function BookmarksPage() {
         </div>
 
         <div className="text-xs font-semibold text-muted-foreground bg-card px-4 py-2.5 rounded-xl border border-card-border">
-          {loading ? '...' : `${bookmarks.length} Saved`}
+          {`${bookmarks.length} Saved`}
         </div>
-      </div>
+      </header>
 
       {!user ? (
         <SignInRequired
           title="Sign In to View Bookmarks"
           subtitle="Please sign in with your Google account to access your saved revision questions and bookmarked problems."
         />
-      ) : loading ? (
-        <div className="space-y-6">
-          {[1, 2].map((n) => (
-            <div key={n} className="glass-panel rounded-2xl p-6 h-56 animate-pulse bg-card/40 space-y-4">
-              <div className="flex justify-between">
-                <div className="w-32 h-4 rounded bg-slate-800" />
-                <div className="w-24 h-4 rounded bg-slate-800" />
-              </div>
-              <div className="w-full h-12 rounded bg-slate-800" />
-              <div className="grid grid-cols-2 gap-3">
-                <div className="w-full h-10 rounded bg-slate-800" />
-                <div className="w-full h-10 rounded bg-slate-800" />
-              </div>
-            </div>
-          ))}
-        </div>
       ) : bookmarks.length === 0 ? (
         <div className="p-12 text-center glass-panel rounded-3xl space-y-4">
           <Bookmark className="w-10 h-10 text-primary-600 dark:text-primary-400 mx-auto" />
@@ -87,7 +76,7 @@ export default function BookmarksPage() {
       ) : (
         <div className="space-y-8">
           {bookmarks.map((bm) => (
-            <div key={bm.question.id} className="relative group">
+            <article key={bm.question.id} className="relative group">
               <QuestionRenderer
                 question={bm.question}
                 currentNumber={bm.question.questionNumber}
@@ -98,11 +87,11 @@ export default function BookmarksPage() {
                 isBookmarked={true}
                 showSolutionImmediately={true}
               />
-            </div>
+            </article>
           ))}
         </div>
       )}
 
-    </div>
+    </main>
   );
 }

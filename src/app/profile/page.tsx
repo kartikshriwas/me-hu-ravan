@@ -22,6 +22,7 @@ import {
   RotateCcw,
   BookOpen,
 } from "lucide-react";
+import { ProfileSkeleton } from "@/components/skeletons/ProfileSkeleton";
 
 interface ProfileData {
   user: {
@@ -136,15 +137,7 @@ export default function ProfilePage() {
   };
 
   if (authLoading || loading) {
-    return (
-      <div className="space-y-6">
-        <div className="glass-panel rounded-3xl p-8 h-64 animate-pulse bg-card/40" />
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="glass-panel rounded-3xl p-6 h-48 animate-pulse bg-card/40" />
-          <div className="glass-panel rounded-3xl p-6 h-48 animate-pulse bg-card/40" />
-        </div>
-      </div>
-    );
+    return <ProfileSkeleton />;
   }
 
   if (!authUser) {
@@ -194,9 +187,9 @@ export default function ProfilePage() {
   const isAdmin = u.role === "superadmin" || u.role === "admin";
 
   return (
-    <div className="w-full px-4 sm:px-8 lg:px-12 py-6 space-y-8">
+    <main className="w-full px-4 sm:px-8 lg:px-12 py-6 space-y-8" role="main">
       {/* Profile Header Banner */}
-      <div className="glass-panel rounded-3xl p-6 sm:p-8 border border-primary-500/30 relative overflow-hidden space-y-6">
+      <header className="glass-panel rounded-3xl p-6 sm:p-8 border border-primary-500/30 relative overflow-hidden space-y-6">
         <div className="absolute top-0 right-0 w-96 h-96 bg-primary-500/10 rounded-full blur-3xl pointer-events-none" />
 
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 relative z-10">
@@ -278,7 +271,7 @@ export default function ProfilePage() {
             </div>
           </div>
         </div>
-      </div>
+      </header>
 
       {/* 2-SECTION TABS SWITCHER */}
       <div className="flex items-center gap-3 border-b border-card-border pb-4">
@@ -522,6 +515,6 @@ export default function ProfilePage() {
           </section>
         </div>
       )}
-    </div>
+    </main>
   );
 }

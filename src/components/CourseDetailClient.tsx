@@ -408,19 +408,21 @@ export function CourseDetailClient({ course, availableTests, isUnlocked = true }
   }, [course]);
 
   return (
-    <div className="space-y-8">
-      {/* Back Button */}
-      <Link
-        href="/courses"
-        className="inline-flex items-center gap-2 text-xs font-semibold text-muted-foreground hover:text-foreground transition-colors"
-      >
-        <ArrowLeft className="w-4 h-4" />
-        <span>Back to Courses</span>
-      </Link>
+    <article className="space-y-8">
+      {/* Breadcrumb Navigation */}
+      <nav aria-label="Breadcrumb">
+        <Link
+          href="/courses"
+          className="inline-flex items-center gap-2 text-xs font-semibold text-muted-foreground hover:text-foreground transition-colors group"
+        >
+          <ArrowLeft className="w-4 h-4 group-hover:-translate-x-0.5 transition-transform" />
+          <span>Back to Courses</span>
+        </Link>
+      </nav>
 
       {/* Locked Course Banner Notice */}
       {!isUnlocked && (
-        <div className="p-4 rounded-2xl bg-amber-950/40 border border-amber-500/30 text-amber-600 dark:text-amber-300 text-xs font-semibold flex items-center gap-3">
+        <aside aria-label="Batch locked notice" className="p-4 rounded-2xl bg-amber-950/40 border border-amber-500/30 text-amber-600 dark:text-amber-300 text-xs font-semibold flex items-center gap-3">
           <Lock className="w-5 h-5 text-amber-600 dark:text-amber-400 shrink-0" />
           <div>
             <p className="font-bold text-amber-200">Batch Locked</p>
@@ -428,11 +430,11 @@ export function CourseDetailClient({ course, availableTests, isUnlocked = true }
               You are viewing the course syllabus and unit list. Video playback for this batch requires batch authorization from admin or redeem code activation.
             </p>
           </div>
-        </div>
+        </aside>
       )}
 
       {/* Course Banner Header */}
-      <div className="glass-panel rounded-3xl p-6 sm:p-10 border border-card-border space-y-6 relative overflow-hidden">
+      <header className="glass-panel rounded-3xl p-6 sm:p-10 border border-card-border space-y-6 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-80 h-80 bg-primary-600/10 rounded-full blur-3xl pointer-events-none" />
 
         <div className="flex items-center gap-3 flex-wrap">
@@ -547,12 +549,12 @@ export function CourseDetailClient({ course, availableTests, isUnlocked = true }
             </div>
           )}
         </div>
-      </div>
+      </header>
 
       {/* Section Syllabus Breakdown */}
-      <div className="space-y-6">
+      <section aria-labelledby="curriculum-heading" className="space-y-6">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-          <h2 className="text-xl font-bold text-foreground flex items-center gap-2 shrink-0">
+          <h2 id="curriculum-heading" className="text-xl font-bold text-foreground flex items-center gap-2 shrink-0">
             <Layers className="w-5 h-5 text-primary-600 dark:text-primary-400" />
             <span>Course Curriculum</span>
             {searchQuery.trim() !== '' && (
@@ -638,6 +640,7 @@ export function CourseDetailClient({ course, availableTests, isUnlocked = true }
                 {/* Section Header (Clickable to Collapse/Expand) */}
                 <button
                   type="button"
+                  aria-expanded={isExpanded}
                   onClick={() => toggleSection(section.id)}
                   className="w-full text-left p-5 sm:p-6 flex items-center justify-between flex-wrap gap-3 hover:bg-primary-500/5 transition-colors cursor-pointer group select-none"
                 >
@@ -671,7 +674,7 @@ export function CourseDetailClient({ course, availableTests, isUnlocked = true }
 
                 {/* Units List (Only shown when expanded) */}
                 {isExpanded && (
-                  <div className="p-5 sm:p-6 pt-0 space-y-2.5 border-t border-card-border/60 mt-1 pt-4">
+                  <div role="list" className="p-5 sm:p-6 pt-0 space-y-2.5 border-t border-card-border/60 mt-1 pt-4">
                     {section.units.map((unit, uIdx) => {
                       const config = getUnitMetaConfig(unit);
                       const IconComp = config.icon;
@@ -701,6 +704,7 @@ export function CourseDetailClient({ course, availableTests, isUnlocked = true }
 
                       return (
                         <div
+                          role="listitem"
                           key={unit.id}
                           className="p-3.5 rounded-xl bg-card/60 border border-card-border/80 flex items-center justify-between gap-4 hover:border-slate-700 transition-colors"
                         >
@@ -807,8 +811,8 @@ export function CourseDetailClient({ course, availableTests, isUnlocked = true }
           })}
         </div>
         )}
-      </div>
+      </section>
 
-    </div>
+    </article>
   );
 }

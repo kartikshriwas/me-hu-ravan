@@ -23,6 +23,7 @@ import {
   Bookmark,
   Lock
 } from 'lucide-react';
+import { QuizResultsSkeleton } from '@/components/skeletons/QuizResultsSkeleton';
 
 export default function QuizResultsPage({ params }: { params: Promise<{ quizId: string }> }) {
   const { quizId: rawQuizId } = use(params);
@@ -171,12 +172,7 @@ export default function QuizResultsPage({ params }: { params: Promise<{ quizId: 
   }, [quizId, timestampParam, user]);
 
   if (loading || authLoading) {
-    return (
-      <div className="min-h-[70vh] flex flex-col items-center justify-center space-y-4">
-        <div className="w-12 h-12 border-4 border-primary-500 border-t-transparent rounded-full animate-spin" />
-        <p className="text-sm text-muted-foreground font-medium">Calculating assessment performance...</p>
-      </div>
-    );
+    return <QuizResultsSkeleton />;
   }
 
   if (!user) {
@@ -230,7 +226,7 @@ export default function QuizResultsPage({ params }: { params: Promise<{ quizId: 
   });
 
   return (
-    <div className="space-y-10">
+    <main className="w-full space-y-10" role="main">
       
       {/* Top Banner & Score Cards */}
       <div className="glass-panel rounded-3xl p-6 sm:p-10 border border-card-border space-y-8 relative overflow-hidden">
@@ -412,6 +408,6 @@ export default function QuizResultsPage({ params }: { params: Promise<{ quizId: 
 
       </div>
 
-    </div>
+    </main>
   );
 }

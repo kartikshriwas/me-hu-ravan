@@ -77,7 +77,10 @@ export function VideoViewContainer({
   }, []);
 
   return (
-    <div className={`w-full flex flex-col min-h-0 h-[calc(100dvh-3.5rem)] sm:h-[calc(100dvh-4rem)] lg:h-[calc(100vh-5rem)] overflow-hidden ${isTheaterMode ? 'bg-black' : 'bg-transparent'}`}>
+    <main
+      role="main"
+      className={`w-full flex flex-col min-h-0 h-[calc(100dvh-3.5rem)] sm:h-[calc(100dvh-4rem)] lg:h-[calc(100vh-5rem)] overflow-hidden ${isTheaterMode ? 'bg-black' : 'bg-transparent'}`}
+    >
       {/* Main Layout Container */}
       <div
         className={`flex flex-col flex-1 min-h-0 lg:grid lg:grid-cols-12 transition-all duration-300 ${
@@ -87,7 +90,8 @@ export function VideoViewContainer({
         }`}
       >
         {/* Video Player Section */}
-        <div
+        <section
+          aria-label="Video Player"
           className={`flex flex-col shrink-0 min-w-0 ${
             isTheaterMode
               ? 'lg:col-span-9 xl:col-span-9 2xl:col-span-9 bg-black border-r border-card-border/40 shadow-2xl'
@@ -108,10 +112,11 @@ export function VideoViewContainer({
               onToggleTheaterMode={toggleTheaterMode}
             />
           </div>
-        </div>
+        </section>
 
         {/* Playlist Sidebar */}
-        <div
+        <aside
+          aria-label="Course Curriculum Playlist"
           className={`flex-1 min-h-0 overflow-hidden min-w-0 ${
             isTheaterMode
               ? 'lg:col-span-3 xl:col-span-3 2xl:col-span-3 bg-background/80'
@@ -124,8 +129,8 @@ export function VideoViewContainer({
             currentVideoId={videoId}
             sections={course.sections}
           />
-        </div>
+        </aside>
       </div>
-    </div>
+    </main>
   );
 }

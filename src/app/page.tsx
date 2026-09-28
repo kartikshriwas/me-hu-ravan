@@ -28,6 +28,8 @@ import {
   X
 } from 'lucide-react';
 
+import { HomeTestsSkeleton } from '@/components/skeletons/HomeTestsSkeleton';
+
 export default function HomePage() {
   const router = useRouter();
   const { user } = useAuth();
@@ -168,8 +170,12 @@ export default function HomePage() {
     return 0;
   });
 
+  if (loading) {
+    return <HomeTestsSkeleton />;
+  }
+
   return (
-    <div className="w-full px-4 sm:px-8 lg:px-12 py-6 space-y-8">
+    <main className="w-full px-4 sm:px-8 lg:px-12 py-6 space-y-8" role="main">
       {/* Active Events / Promos Banner for Non-Premium & Guests */}
       <EventPromoBanner />
       
@@ -314,7 +320,7 @@ export default function HomePage() {
               const isLocked = Number(setNum) > 1 && !user?.isPremium;
 
               return (
-                <div key={test.quizId} className="glass-card rounded-2xl p-5 sm:p-6 flex flex-col justify-between group relative overflow-hidden transition-all duration-300 hover:border-primary-500/40 hover:shadow-xl hover:shadow-primary-950/20">
+                <article key={test.quizId} className="glass-card rounded-2xl p-5 sm:p-6 flex flex-col justify-between group relative overflow-hidden transition-all duration-300 hover:border-primary-500/40 hover:shadow-xl hover:shadow-primary-950/20">
                   
                   {/* Card Header */}
                   <div className="space-y-3">
@@ -460,7 +466,7 @@ export default function HomePage() {
                       </button>
                     )}
                   </div>
-                </div>
+                </article>
               );
             })}
           </div>
@@ -488,6 +494,6 @@ export default function HomePage() {
         />
       )}
 
-    </div>
+    </main>
   );
 }

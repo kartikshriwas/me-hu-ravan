@@ -8,6 +8,7 @@ import { useAuth } from '@/lib/authContext';
 import { GoogleLoginButton } from '@/components/GoogleLoginButton';
 import { SignInRequired } from '@/components/SignInRequired';
 import { History, Trophy, Target, Clock, RotateCcw, Lock } from 'lucide-react';
+import { HistorySkeleton } from '@/components/skeletons/HistorySkeleton';
 
 export default function HistoryPage() {
   const { user } = useAuth();
@@ -77,11 +78,15 @@ export default function HistoryPage() {
     return `${mins}m ${secs}s`;
   };
 
+  if (loading) {
+    return <HistorySkeleton />;
+  }
+
   return (
-    <div className="w-full px-4 sm:px-8 lg:px-12 py-6 space-y-8">
+    <main className="w-full px-4 sm:px-8 lg:px-12 py-6 space-y-8" role="main">
       
       {/* Header */}
-      <div className="glass-panel rounded-3xl p-6 sm:p-8 border border-card-border flex items-center justify-between">
+      <header className="glass-panel rounded-3xl p-6 sm:p-8 border border-card-border flex items-center justify-between">
         <div>
           <div className="flex items-center gap-2 text-primary-600 dark:text-primary-400 font-semibold text-xs mb-2">
             <History className="w-4 h-4" />
@@ -94,31 +99,15 @@ export default function HistoryPage() {
         </div>
 
         <div className="text-xs font-semibold text-muted-foreground bg-card px-4 py-2.5 rounded-xl border border-card-border">
-          {loading ? '...' : `${history.length} Attempts`}
+          {`${history.length} Attempts`}
         </div>
-      </div>
+      </header>
 
       {!user ? (
         <SignInRequired
           title="Sign In to View History"
           subtitle="Please sign in with your Google account to access your personal assessment history and test records."
         />
-      ) : loading ? (
-        <div className="space-y-4">
-          {[1, 2, 3].map((n) => (
-            <div key={n} className="glass-panel rounded-2xl p-6 border border-card-border flex items-center justify-between gap-6 animate-pulse bg-card/40">
-              <div className="space-y-3 flex-1">
-                <div className="w-32 h-4 rounded bg-slate-800" />
-                <div className="w-48 h-5 rounded bg-slate-800" />
-                <div className="w-64 h-4 rounded bg-slate-800" />
-              </div>
-              <div className="flex gap-2">
-                <div className="w-28 h-9 rounded-xl bg-slate-800" />
-                <div className="w-9 h-9 rounded-xl bg-slate-800" />
-              </div>
-            </div>
-          ))}
-        </div>
       ) : history.length === 0 ? (
         <div className="p-12 text-center glass-panel rounded-3xl space-y-4">
           <Trophy className="w-10 h-10 text-primary-600 dark:text-primary-400 mx-auto" />
@@ -136,7 +125,7 @@ export default function HistoryPage() {
       ) : (
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
           {history.map((item, idx) => (
-            <div
+            <article
               key={`${item.quizId}-${item.timestamp}-${idx}`}
               className="glass-card rounded-2xl p-5 border border-card-border flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 group"
             >
@@ -205,11 +194,11 @@ export default function HistoryPage() {
                   <RotateCcw className="w-4 h-4" />
                 </Link>
               </div>
-            </div>
+            </article>
           ))}
         </div>
       )}
 
-    </div>
+    </main>
   );
 }

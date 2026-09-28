@@ -28,8 +28,8 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ s
   const isUnlocked = await isCourseSlugUnlocked(sessionUser, slug);
 
   return (
-    <div className="w-full px-4 sm:px-8 lg:px-12 py-6">
+    <main className="w-full px-4 sm:px-8 lg:px-12 py-6">
       <CourseDetailClient course={course} availableTests={availableTests} isUnlocked={isUnlocked} />
-    </div>
+    </main>
   );
 }

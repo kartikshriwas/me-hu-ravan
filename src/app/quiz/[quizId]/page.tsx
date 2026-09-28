@@ -23,6 +23,7 @@ import {
   Trophy,
   Lock
 } from 'lucide-react';
+import { QuizPlaySkeleton } from '@/components/skeletons/QuizPlaySkeleton';
 
 export default function QuizPlayerPage({ params }: { params: Promise<{ quizId: string }> }) {
   const { quizId: rawQuizId } = use(params);
@@ -327,12 +328,7 @@ export default function QuizPlayerPage({ params }: { params: Promise<{ quizId: s
   }, [assessment, currentIndex, showSubmitModal, showExitWarningModal, isStarted]);
 
   if (loading || authLoading) {
-    return (
-      <div className="min-h-[70vh] flex flex-col items-center justify-center space-y-4">
-        <div className="w-12 h-12 border-4 border-primary-500 border-t-transparent rounded-full animate-spin" />
-        <p className="text-sm text-muted-foreground font-medium">Preparing test environment...</p>
-      </div>
-    );
+    return <QuizPlaySkeleton />;
   }
 
   if (!user) {
