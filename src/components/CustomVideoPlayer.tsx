@@ -275,6 +275,26 @@ export function CustomVideoPlayer({
     }, 650);
   };
 
+  // Seek to percentage of video duration (0 = 0%, 1 = 10%, ... 9 = 90%)
+  const seekToFraction = (fraction: number) => {
+    if (!videoRef.current) return;
+    const dur = videoRef.current.duration || duration || 0;
+    if (dur <= 0) return;
+    const targetTime = Math.max(0, Math.min(dur, dur * fraction));
+    const isRewind = targetTime < videoRef.current.currentTime;
+    videoRef.current.currentTime = targetTime;
+    setCurrentTime(targetTime);
+
+    setSeekFeedback({
+      type: isRewind ? 'rewind' : 'forward',
+      id: Date.now()
+    });
+
+    setTimeout(() => {
+      setSeekFeedback(null);
+    }, 650);
+  };
+
   // Double tap gesture handler for 10s seek & single tap play/pause anywhere on player
   const handleContainerTap = (e: React.MouseEvent<HTMLDivElement> | React.TouchEvent<HTMLDivElement>) => {
     const now = Date.now();
@@ -553,8 +573,36 @@ export function CustomVideoPlayer({
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       const activeEl = document.activeElement;
-      const isInput = activeEl?.tagName === 'INPUT' || activeEl?.tagName === 'TEXTAREA';
-      if (isInput || !videoRef.current) return;
+      const isInput = activeEl?.tagName === 'INPUT' || activeEl?.tagName === 'TEXTAREA' || (activeEl as HTMLElement)?.isContentEditable;
+      if (isInput) return;
+
+      // Shift + Right Arrow: Next Video
+      if (e.shiftKey && (e.key === 'ArrowRight' || e.code === 'ArrowRight')) {
+        if (nextVideoUrl) {
+          e.preventDefault();
+          router.push(nextVideoUrl);
+        }
+        return;
+      }
+
+      // Shift + Left Arrow: Previous (Preview) Video
+      if (e.shiftKey && (e.key === 'ArrowLeft' || e.code === 'ArrowLeft')) {
+        if (prevVideoUrl) {
+          e.preventDefault();
+          router.push(prevVideoUrl);
+        }
+        return;
+      }
+
+      if (!videoRef.current) return;
+
+      // Number keys 0-9: Seek to 0%, 10%, 20% ... 90% of video
+      if (!e.ctrlKey && !e.altKey && !e.metaKey && !e.shiftKey && e.key >= '0' && e.key <= '9') {
+        e.preventDefault();
+        const fraction = parseInt(e.key, 10) / 10;
+        seekToFraction(fraction);
+        return;
+      }
 
       switch (e.key.toLowerCase()) {
         case ' ':
@@ -583,7 +631,7 @@ export function CustomVideoPlayer({
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [isPlaying]);
+  }, [isPlaying, nextVideoUrl, prevVideoUrl, router]);
 
   // YouTube Embed Renderer fallback
   if (embedHtml) {
@@ -622,7 +670,7 @@ export function CustomVideoPlayer({
               <Link
                 href={prevVideoUrl}
                 className="text-xs sm:text-sm font-semibold text-foreground hover:text-foreground px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl bg-slate-800 hover:bg-slate-700/80 border border-slate-700/60 hover:border-primary-500/50 transition-all flex items-center gap-1.5 touch-manipulation"
-                title={prevTitle ? `Previous: ${prevTitle}` : "Previous Video"}
+                title={prevTitle ? `Previous (Shift + ←): ${prevTitle}` : "Previous Video (Shift + ←)"}
               >
                 <ChevronLeft className="w-4 h-4 text-muted-foreground" />
                 <span>Previous</span>
@@ -632,7 +680,7 @@ export function CustomVideoPlayer({
               <Link
                 href={nextVideoUrl}
                 className="text-xs sm:text-sm font-semibold text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl bg-primary-600 hover:bg-primary-500 border border-primary-400/30 transition-all flex items-center gap-1.5 shadow-md shadow-primary-950/40 touch-manipulation"
-                title={nextTitle ? `Next: ${nextTitle}` : "Next Video"}
+                title={nextTitle ? `Next (Shift + →): ${nextTitle}` : "Next Video (Shift + →)"}
               >
                 <span>Next</span>
                 <ChevronRight className="w-4 h-4 text-foreground" />
@@ -970,7 +1018,7 @@ export function CustomVideoPlayer({
                 <Link
                   href={nextVideoUrl}
                   className="hidden sm:inline-flex p-1.5 sm:p-2 rounded-xl hover:bg-white/10 active:scale-95 transition-all text-foreground hover:text-foreground items-center justify-center"
-                  title={nextTitle ? `Next: ${nextTitle}` : "Next Video"}
+                  title={nextTitle ? `Next (Shift + →): ${nextTitle}` : "Next Video (Shift + →)"}
                   aria-label="Next Video"
                 >
                   <SkipForward className="w-4.5 h-4.5 sm:w-5 sm:h-5 fill-current" />
@@ -1099,7 +1147,7 @@ export function CustomVideoPlayer({
             <Link
               href={prevVideoUrl}
               className="text-xs sm:text-sm font-semibold text-foreground hover:text-foreground px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl bg-slate-800 hover:bg-slate-700/80 border border-slate-700/60 hover:border-primary-500/50 transition-all flex items-center gap-1.5 touch-manipulation shadow-sm"
-              title={prevTitle ? `Previous: ${prevTitle}` : "Previous Video"}
+              title={prevTitle ? `Previous (Shift + ←): ${prevTitle}` : "Previous Video (Shift + ←)"}
             >
               <ChevronLeft className="w-4 h-4 text-muted-foreground" />
               <span>Previous</span>
@@ -1109,7 +1157,7 @@ export function CustomVideoPlayer({
             <Link
               href={nextVideoUrl}
               className="text-xs sm:text-sm font-semibold text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl bg-primary-600 hover:bg-primary-500 border border-primary-400/30 transition-all flex items-center gap-1.5 shadow-md shadow-primary-950/50 touch-manipulation"
-              title={nextTitle ? `Next: ${nextTitle}` : "Next Video"}
+              title={nextTitle ? `Next (Shift + →): ${nextTitle}` : "Next Video (Shift + →)"}
             >
               <span>Next</span>
               <ChevronRight className="w-4 h-4 text-foreground" />

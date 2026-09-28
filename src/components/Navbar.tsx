@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { usePathname, useRouter } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 import { useAuth } from '@/lib/authContext';
 import { GoogleLoginButton } from '@/components/GoogleLoginButton';
 import { UserAvatar } from '@/components/UserAvatar';
@@ -11,7 +11,6 @@ import { isCourseBatch } from '@/lib/batchAccess';
 
 export function Navbar() {
   const pathname = usePathname();
-  const router = useRouter();
   const { user, logout } = useAuth();
   const [showMenu, setShowMenu] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
@@ -19,53 +18,6 @@ export function Navbar() {
   const isAdmin = user?.role === 'superadmin' || user?.role === 'admin';
   const courseBatches = (user?.allowedBatches || []).filter(isCourseBatch);
   const hasCourseAccess = isAdmin || !!user?.hasCourseAccess || courseBatches.length > 0 || user?.adminPermissions?.includes('access_courses') || user?.adminPermissions?.includes('*');
-
-  // Global Keyboard Section Switcher Shortcuts (Shift + Right/Left or [ / ])
-  useEffect(() => {
-    const handleSectionShortcut = (e: KeyboardEvent) => {
-      const activeEl = document.activeElement;
-      const tag = activeEl?.tagName || '';
-      if (['INPUT', 'TEXTAREA', 'SELECT'].includes(tag) || (activeEl as HTMLElement)?.isContentEditable) {
-        return;
-      }
-
-      // Order of sections: Tests -> Leaderboard -> Courses (if access) -> Saved -> History -> Admin (if admin) -> Profile
-      const sections = ['/', '/leaderboard'];
-      if (hasCourseAccess) sections.push('/courses');
-      sections.push('/bookmarks', '/history');
-      if (isAdmin) sections.push('/admin');
-      sections.push('/profile');
-
-      const cleanPath = pathname.split('?')[0].replace(/\/$/, '') || '/';
-      let currentIdx = sections.findIndex((s) => {
-        if (s === '/') return cleanPath === '/';
-        return cleanPath === s || cleanPath.startsWith(s + '/');
-      });
-      if (currentIdx === -1) currentIdx = 0;
-
-      let nextRoute: string | null = null;
-
-      const isNext = (e.shiftKey && (e.key === 'ArrowRight' || e.code === 'ArrowRight')) || e.key === ']' || e.key === '}';
-      const isPrev = (e.shiftKey && (e.key === 'ArrowLeft' || e.code === 'ArrowLeft')) || e.key === '[' || e.key === '{';
-
-      if (isNext) {
-        e.preventDefault();
-        const nextIdx = (currentIdx + 1) % sections.length;
-        nextRoute = sections[nextIdx];
-      } else if (isPrev) {
-        e.preventDefault();
-        const prevIdx = (currentIdx - 1 + sections.length) % sections.length;
-        nextRoute = sections[prevIdx];
-      }
-
-      if (nextRoute && nextRoute !== pathname) {
-        router.push(nextRoute);
-      }
-    };
-
-    window.addEventListener('keydown', handleSectionShortcut, true);
-    return () => window.removeEventListener('keydown', handleSectionShortcut, true);
-  }, [pathname, isAdmin, router]);
 
   // Close menu on click outside
   useEffect(() => {
