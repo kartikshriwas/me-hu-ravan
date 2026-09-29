@@ -21,9 +21,11 @@ import {
   Lock,
   RotateCcw,
   BookOpen,
+  LogOut,
 } from "lucide-react";
 import { ProfileSkeleton } from "@/components/skeletons/ProfileSkeleton";
 import { clientCache } from "@/lib/clientCache";
+import { isCourseBatch } from "@/lib/batchAccess";
 
 interface ProfileData {
   user: {
@@ -57,7 +59,7 @@ interface ProfileData {
 }
 
 export default function ProfilePage() {
-  const { user: authUser, loading: authLoading } = useAuth();
+  const { user: authUser, loading: authLoading, logout } = useAuth();
   const cachedProfile = typeof window !== 'undefined' ? clientCache.get<ProfileData>('/api/user/profile') : null;
   const [profile, setProfile] = useState<ProfileData | null>(cachedProfile);
   const [loading, setLoading] = useState(!cachedProfile && Boolean(authUser?.email));
@@ -79,7 +81,7 @@ export default function ProfilePage() {
       }
 
       try {
-        const json = await clientCache.fetchWithCache<ProfileData>("/api/user/profile", undefined, 60000);
+        const json = await clientCache.fetchWithCache<ProfileData>("/api/user/profile", undefined, 5000);
         if (json?.user) {
           setProfile(json);
         }
@@ -167,10 +169,11 @@ export default function ProfilePage() {
     adminPermissions: authUser.adminPermissions || [],
     isPremium: !!authUser.isPremium,
     hasCourseAccess:
-      !!authUser.isPremium ||
       authUser.role === "admin" ||
       authUser.role === "superadmin" ||
-      authUser.adminPermissions?.includes("access_courses"),
+      authUser.adminPermissions?.includes("access_courses") ||
+      authUser.adminPermissions?.includes("*") ||
+      (authUser.allowedBatches || []).some(isCourseBatch),
     premiumExpiresAt: authUser.premiumExpiresAt,
     premiumPlan: authUser.premiumPlan || "free",
     totalScore: authUser.totalScore || 0,
@@ -195,7 +198,8 @@ export default function ProfilePage() {
               email={u.email}
               image={u.image}
               size="xl"
-              className="border-2 border-primary-500/40 shadow-xl"
+              isPremium={u.isPremium}
+              className={u.isPremium ? 'shadow-xl' : 'border-2 border-primary-500/40 shadow-xl'}
             />
 
             <div className="space-y-1.5">
@@ -205,13 +209,21 @@ export default function ProfilePage() {
                 </h1>
 
                 {u.role === "superadmin" ? (
-                  <span className="px-2.5 py-0.5 rounded-full text-xs font-black bg-amber-500 text-black shadow-md flex items-center gap-1">
+                  <Link
+                    href="/admin"
+                    className="px-2.5 py-0.5 rounded-full text-xs font-black bg-amber-500 hover:bg-amber-400 text-black shadow-md flex items-center gap-1 transition-colors"
+                    title="Open Admin Dashboard"
+                  >
                     <ShieldCheck className="w-3.5 h-3.5" /> Super Admin
-                  </span>
+                  </Link>
                 ) : u.role === "admin" ? (
-                  <span className="px-2.5 py-0.5 rounded-full text-xs font-bold bg-primary-600/30 text-primary-600 dark:text-primary-300 border border-primary-500/40 flex items-center gap-1">
+                  <Link
+                    href="/admin"
+                    className="px-2.5 py-0.5 rounded-full text-xs font-bold bg-primary-600/30 hover:bg-primary-600/50 text-primary-600 dark:text-primary-300 border border-primary-500/40 flex items-center gap-1 transition-colors"
+                    title="Open Admin Dashboard"
+                  >
                     <ShieldCheck className="w-3.5 h-3.5" /> Admin
-                  </span>
+                  </Link>
                 ) : null}
 
                 {u.isPremium ? (
@@ -507,6 +519,27 @@ export default function ProfilePage() {
                   </p>
                 )}
               </form>
+            </div>
+          </section>
+
+          {/* Account & Session Management Section */}
+          <section className="glass-card rounded-3xl p-6 border border-card-border space-y-4">
+            <h2 className="text-base font-bold text-foreground flex items-center gap-2 border-b border-card-border pb-3">
+              <LogOut className="w-5 h-5 text-rose-600 dark:text-rose-400" />
+              <span>Account & Session</span>
+            </h2>
+            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+              <div className="space-y-0.5">
+                <p className="text-sm font-bold text-foreground">Signed in as {u.email}</p>
+                <p className="text-xs text-muted-foreground">Sign out of your active session on this device.</p>
+              </div>
+              <button
+                onClick={logout}
+                className="px-5 py-2.5 rounded-xl bg-rose-950/40 text-rose-600 dark:text-rose-300 border border-rose-500/30 hover:bg-rose-900/60 font-bold text-xs transition-all flex items-center gap-2 active:scale-95"
+              >
+                <LogOut className="w-4 h-4" />
+                <span>Sign Out</span>
+              </button>
             </div>
           </section>
         </div>

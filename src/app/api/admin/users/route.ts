@@ -2,6 +2,8 @@ import { NextResponse } from 'next/server';
 import { auth } from '@/auth';
 import { verifyAdminPermission, SUPERADMIN_EMAIL } from '@/lib/adminAuth';
 import { User } from '@/models/User';
+import { invalidateUserCourseCache } from '@/lib/coursesAuth';
+import { isCourseBatch } from '@/lib/batchAccess';
 
 export async function GET(request: Request) {
   try {
@@ -71,8 +73,10 @@ export async function POST(request: Request) {
       targetUser.premiumExpiresAt = new Date(Date.now() + minutes * 60 * 1000);
       targetUser.premiumPlan = `${minutes}m_demo`;
       targetUser.allowedBatches = ['SigmaX'];
+      targetUser.hasCourseAccess = true;
       targetUser.grantedBy = sessionUser!.email.toLowerCase().trim();
       await targetUser.save();
+      invalidateUserCourseCache(cleanTarget);
 
       return NextResponse.json({
         success: true,
@@ -120,10 +124,35 @@ export async function POST(request: Request) {
         targetUser.premiumExpiresAt = numDur < 3650 ? new Date(Date.now() + numDur * 24 * 60 * 60 * 1000) : null;
         targetUser.premiumPlan = 'admin_role_grant';
         targetUser.grantedBy = sessionUser!.email.toLowerCase().trim();
+      } else {
+        targetUser.premiumExpiresAt = null;
+        targetUser.premiumPlan = 'free';
+        targetUser.grantedBy = '';
+        // When explicitly revoking premium, also empty allowedBatches if not admin and not explicitly given
+        if (targetUser.role !== 'admin' && targetUser.role !== 'superadmin' && !Array.isArray(allowedBatches)) {
+          targetUser.allowedBatches = [];
+        }
+      }
+    }
+
+    const isSuperOrAdmin = targetUser.role === 'admin' || targetUser.role === 'superadmin' || cleanTarget === SUPERADMIN_EMAIL;
+    const hasAdminCoursePerm = targetUser.adminPermissions?.includes('access_courses') || targetUser.adminPermissions?.includes('*');
+    const hasCourseBatches = Array.isArray(targetUser.allowedBatches) && targetUser.allowedBatches.some((b: string) => isCourseBatch(b));
+
+    // Ensure hasCourseAccess in DB is strictly derived
+    targetUser.hasCourseAccess = Boolean(isSuperOrAdmin || hasAdminCoursePerm || hasCourseBatches);
+
+    // If regular user has no course batches, no admin role, and their plan was admin grant or demo or batch grant:
+    if (!isSuperOrAdmin && !hasAdminCoursePerm && !hasCourseBatches && (!targetUser.allowedBatches || targetUser.allowedBatches.length === 0)) {
+      if (targetUser.premiumPlan === 'admin_role_grant' || targetUser.premiumPlan?.includes('demo') || targetUser.premiumPlan?.startsWith('code:')) {
+        targetUser.isPremium = false;
+        targetUser.premiumExpiresAt = null;
+        targetUser.premiumPlan = 'free';
       }
     }
 
     await targetUser.save();
+    invalidateUserCourseCache(cleanTarget);
 
     return NextResponse.json({
       success: true,

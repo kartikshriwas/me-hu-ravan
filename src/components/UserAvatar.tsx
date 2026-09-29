@@ -8,6 +8,7 @@ interface UserAvatarProps {
   image?: string;
   size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
   className?: string;
+  isPremium?: boolean;
 }
 
 // In-memory cache to store canvas detection results so image check runs only once per avatar URL
@@ -19,6 +20,7 @@ export function UserAvatar({
   image,
   size = 'md',
   className = '',
+  isPremium = false,
 }: UserAvatarProps) {
   const [isDefaultLetter, setIsDefaultLetter] = useState<boolean>(() => {
     if (!image || image.trim().length === 0) return true;
@@ -110,6 +112,10 @@ export function UserAvatar({
   const showDicebear = isDefaultLetter || imgError || !image || image.trim().length === 0;
   const finalSrc = showDicebear ? dicebearBottts : image;
 
+  const borderStyle = isPremium
+    ? 'border border-amber-400 dark:border-amber-300 shadow-[0_0_9px_rgba(251,191,36,0.65),0_0_2px_rgba(245,158,11,0.85)]'
+    : 'border border-slate-700/80';
+
   return (
     // eslint-disable-next-line @next/next/no-img-element
     <img
@@ -117,7 +123,7 @@ export function UserAvatar({
       alt={name}
       referrerPolicy="no-referrer"
       onError={() => setImgError(true)}
-      className={`${sizeClasses} aspect-square object-cover border border-slate-700/80 shrink-0 bg-slate-800 ${className}`}
+      className={`${sizeClasses} aspect-square object-cover shrink-0 bg-slate-800 transition-all ${borderStyle} ${className}`}
     />
   );
 }

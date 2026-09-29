@@ -45,6 +45,14 @@ export async function getCachedUserDoc(email: string): Promise<CachedCourseUser 
   return null;
 }
 
+export function invalidateUserCourseCache(email?: string) {
+  if (email) {
+    userCourseCache.delete(email.toLowerCase().trim());
+  } else {
+    userCourseCache.clear();
+  }
+}
+
 /**
  * Checks if a user has access to the Course section at all.
  * Returns true ONLY if user is superadmin/admin, has access_courses permission, or has >= 1 course batch.

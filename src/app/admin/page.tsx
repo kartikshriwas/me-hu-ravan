@@ -818,10 +818,12 @@ export default function AdminDashboardPage() {
   const handleSaveUserBatches = async () => {
     if (!editingUserForBatches) return;
     const hasBatches = selectedUserBatches.length > 0;
+    const isSuperOrAdmin = editingUserForBatches.role === 'admin' || editingUserForBatches.role === 'superadmin';
+    const nextIsPremium = hasBatches ? true : (isSuperOrAdmin ? editingUserForBatches.isPremium : false);
     await handleUpdateUser(
       editingUserForBatches.email,
       editingUserForBatches.role,
-      hasBatches ? true : editingUserForBatches.isPremium,
+      nextIsPremium,
       editingUserForBatches.adminPermissions,
       selectedUserBatches
     );
@@ -2527,7 +2529,11 @@ export default function AdminDashboardPage() {
                                   <option value="4320">3 Days</option>
                                 </select>
                                 <button
-                                  onClick={() => handleUpdateUser(u.email, u.role, !u.isPremium, u.adminPermissions, u.allowedBatches)}
+                                  onClick={() => {
+                                    const nextPrem = !u.isPremium;
+                                    const nextBatches = nextPrem ? (u.allowedBatches || []) : [];
+                                    handleUpdateUser(u.email, u.role, nextPrem, u.adminPermissions, nextBatches);
+                                  }}
                                   className={`px-3 py-1.5 rounded-xl text-[11px] font-bold transition-all ${
                                     u.isPremium
                                       ? 'bg-rose-950/40 text-rose-600 dark:text-rose-300 border border-rose-500/30 hover:bg-rose-900/60'

@@ -5,6 +5,7 @@ import { User } from '@/models/User';
 import { PreApprovedEmail } from '@/models/PreApprovedEmail';
 import { LaunchEvent } from '@/models/LaunchEvent';
 import { SUPERADMIN_EMAIL } from '@/lib/adminAuth';
+import { isCourseBatch } from '@/lib/batchAccess';
 
 export const { handlers, auth, signIn, signOut } = NextAuth({
   ...authConfig,
@@ -131,8 +132,8 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
     async jwt({ token, user, trigger, session }) {
       const now = Date.now();
       const lastSync = (token.lastDbSync as number) || 0;
-      // Only re-sync with DB on sign in, explicit update, missing token id, or once every 5 minutes
-      const shouldSync = Boolean(user || trigger === 'update' || !token.id || (now - lastSync) > (5 * 60 * 1000));
+      // Re-sync with DB on sign in, explicit update, missing token id, or after 10 seconds
+      const shouldSync = Boolean(user || trigger === 'update' || !token.id || (now - lastSync) > (10 * 1000));
 
       if (shouldSync && token.email) {
         try {
@@ -140,16 +141,29 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
           if (conn) {
             const dbUser = await User.findOne({ email: token.email }).lean();
             if (dbUser) {
+              const userRole = dbUser.role || (token.email === SUPERADMIN_EMAIL ? 'superadmin' : 'user');
+              const isSuperOrAdmin = userRole === 'superadmin' || userRole === 'admin' || token.email === SUPERADMIN_EMAIL;
+              const adminPermissions = dbUser.adminPermissions || [];
+              const allowedBatches = dbUser.allowedBatches || [];
+
+              let isPremium = !!dbUser.isPremium;
+              if (isPremium && !isSuperOrAdmin && dbUser.premiumExpiresAt && new Date(dbUser.premiumExpiresAt) < new Date()) {
+                isPremium = false;
+              }
+
+              const hasCourseBatches = allowedBatches.some((b: string) => isCourseBatch(b));
+              const hasCourseAccess = Boolean(isSuperOrAdmin || adminPermissions.includes('access_courses') || adminPermissions.includes('*') || hasCourseBatches);
+
               token.id = dbUser._id.toString();
-              token.role = dbUser.role || (token.email === SUPERADMIN_EMAIL ? 'superadmin' : 'user');
-              token.adminPermissions = dbUser.adminPermissions || [];
-              token.allowedBatches = dbUser.allowedBatches || [];
-              token.isPremium = !!dbUser.isPremium;
+              token.role = userRole;
+              token.adminPermissions = adminPermissions;
+              token.allowedBatches = allowedBatches;
+              token.isPremium = isPremium;
               token.premiumExpiresAt = dbUser.premiumExpiresAt ? new Date(dbUser.premiumExpiresAt).toISOString() : null;
-              token.premiumPlan = dbUser.premiumPlan || 'free';
+              token.premiumPlan = isPremium ? (dbUser.premiumPlan || 'free') : 'free';
               token.totalScore = dbUser.totalScore || 0;
               token.testsCompleted = dbUser.testsCompleted || 0;
-              token.hasCourseAccess = !!dbUser.hasCourseAccess;
+              token.hasCourseAccess = hasCourseAccess;
               token.lastDbSync = now;
             }
           }

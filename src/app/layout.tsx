@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import './globals.css';
 import { Navbar } from '@/components/Navbar';
+import { MobileBottomNav } from '@/components/MobileBottomNav';
 import { ActivityTracker } from '@/components/ActivityTracker';
 import { AuthProvider } from '@/lib/authContext';
 import { Analytics } from '@vercel/analytics/next';
@@ -70,9 +71,10 @@ export default function RootLayout({
           <AuthProvider>
             <ActivityTracker />
             <Navbar />
-            <main className="flex-1 w-full flex flex-col min-h-0">
+            <main className="flex-1 w-full flex flex-col min-h-0 pb-16 md:pb-0">
               {children}
             </main>
+            <MobileBottomNav />
           </AuthProvider>
         </ThemeProvider>
         <Analytics />
