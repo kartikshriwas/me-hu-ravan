@@ -144,94 +144,98 @@ export function Navbar() {
                   </div>
                 </button>
 
-                {/* Dropdown Menu Popup */}
-                {showMenu && (
-                  <div className="absolute right-0 top-full mt-2 w-64 sm:w-72 p-2.5 bg-card/95 glass-panel border border-slate-700 shadow-2xl shadow-primary-950/70 z-50 rounded-2xl animate-fade-in space-y-1.5">
-                    {/* Header - Links to Profile */}
-                    <div className="flex items-center justify-between pb-1.5 border-b border-card-border/80">
-                      <Link
-                        href="/profile"
-                        onClick={() => setShowMenu(false)}
-                        className="flex items-center gap-2.5 p-1 rounded-xl hover:bg-slate-800/60 transition-colors flex-1 overflow-hidden group"
-                      >
-                        <UserAvatar
-                          name={user.name}
-                          email={user.email}
-                          image={user.image}
-                          size="md"
-                          isPremium={user.isPremium}
-                        />
-                        <div className="flex flex-col min-w-0">
-                          <p className="text-sm font-bold text-foreground group-hover:text-primary-600 dark:group-hover:text-primary-300 transition-colors truncate">
-                            {user.name}
-                          </p>
-                          <p className="text-[11px] text-muted-foreground truncate">{user.email}</p>
-                        </div>
-                      </Link>
-
-                      <button
-                        onClick={() => setShowMenu(false)}
-                        className="p-1.5 rounded-lg text-muted-foreground hover:text-foreground hover:bg-slate-800/80 transition-colors shrink-0"
-                        title="Close menu"
-                      >
-                        <X className="w-4 h-4" />
-                      </button>
-                    </div>
-
-                    {/* Profile */}
+                {/* Dropdown Menu Popup Container with Smooth Morphing Animation */}
+                <div
+                  className={`absolute right-0 top-full mt-2 w-64 sm:w-72 p-2.5 bg-card/95 glass-panel border border-slate-700 shadow-2xl z-50 rounded-2xl origin-top-right transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] space-y-1.5 ${
+                    showMenu
+                      ? 'scale-100 opacity-100 translate-y-0 pointer-events-auto ring-1 ring-primary-500/20 shadow-primary-950/70'
+                      : 'scale-90 opacity-0 -translate-y-2 pointer-events-none'
+                  }`}
+                >
+                  {/* Header - Links to Profile */}
+                  <div className="flex items-center justify-between pb-1.5 border-b border-card-border/80">
                     <Link
                       href="/profile"
                       onClick={() => setShowMenu(false)}
-                      className="w-full flex items-center gap-2.5 px-3 py-2 rounded-xl text-xs font-semibold text-foreground/80 hover:text-foreground hover:bg-slate-800/60 transition-all group"
+                      className="flex items-center gap-2.5 p-1 rounded-xl hover:bg-slate-800/60 transition-colors flex-1 overflow-hidden group"
                     >
-                      <UserIcon className="w-4 h-4 text-emerald-600 dark:text-emerald-400 group-hover:scale-110 transition-transform" />
-                      <span>Profile</span>
+                      <UserAvatar
+                        name={user.name}
+                        email={user.email}
+                        image={user.image}
+                        size="md"
+                        isPremium={user.isPremium}
+                      />
+                      <div className="flex flex-col min-w-0">
+                        <p className="text-sm font-bold text-foreground group-hover:text-primary-600 dark:group-hover:text-primary-300 transition-colors truncate">
+                          {user.name}
+                        </p>
+                        <p className="text-[11px] text-muted-foreground truncate">{user.email}</p>
+                      </div>
                     </Link>
-
-                    {/* Bookmarks */}
-                    <Link
-                      href="/bookmarks"
-                      onClick={() => setShowMenu(false)}
-                      className="w-full flex items-center gap-2.5 px-3 py-2 rounded-xl text-xs font-semibold text-foreground/80 hover:text-foreground hover:bg-slate-800/60 transition-all group"
-                    >
-                      <Bookmark className="w-4 h-4 text-rose-600 dark:text-rose-400 group-hover:scale-110 transition-transform" />
-                      <span>Bookmarks</span>
-                    </Link>
-
-                    {/* History */}
-                    <Link
-                      href="/history"
-                      onClick={() => setShowMenu(false)}
-                      className="w-full flex items-center gap-2.5 px-3 py-2 rounded-xl text-xs font-semibold text-foreground/80 hover:text-foreground hover:bg-slate-800/60 transition-all group"
-                    >
-                      <History className="w-4 h-4 text-cyan-600 dark:text-cyan-400 group-hover:scale-110 transition-transform" />
-                      <span>History</span>
-                    </Link>
-
-                    {/* Admin */}
-                    {isAdmin && (
-                      <Link
-                        href="/admin"
-                        onClick={() => setShowMenu(false)}
-                        className="w-full flex items-center gap-2.5 px-3 py-2 rounded-xl text-xs font-bold text-amber-600 dark:text-amber-300 bg-amber-500/10 border border-amber-500/20 hover:bg-amber-500/20 transition-all group"
-                      >
-                        <ShieldCheck className="w-4 h-4 text-amber-600 dark:text-amber-400 group-hover:scale-110 transition-transform" />
-                        <span>Admin</span>
-                      </Link>
-                    )}
 
                     <button
-                      onClick={() => {
-                        logout();
-                        setShowMenu(false);
-                      }}
-                      className="w-full flex items-center gap-2.5 px-3 py-2 rounded-xl text-xs font-semibold text-rose-600 dark:text-rose-400 hover:bg-rose-500/10 transition-all group"
+                      onClick={() => setShowMenu(false)}
+                      className="p-1.5 rounded-lg text-muted-foreground hover:text-foreground hover:bg-slate-800/80 transition-colors shrink-0"
+                      title="Close menu"
                     >
-                      <LogOut className="w-4 h-4 group-hover:scale-110 transition-transform" />
-                      <span>Sign Out</span>
+                      <X className="w-4 h-4" />
                     </button>
                   </div>
-                )}
+
+                  {/* Profile */}
+                  <Link
+                    href="/profile"
+                    onClick={() => setShowMenu(false)}
+                    className="w-full flex items-center gap-2.5 px-3 py-2 rounded-xl text-xs font-semibold text-foreground/80 hover:text-foreground hover:bg-slate-800/60 transition-all group"
+                  >
+                    <UserIcon className="w-4 h-4 text-emerald-600 dark:text-emerald-400 group-hover:scale-110 transition-transform" />
+                    <span>Profile</span>
+                  </Link>
+
+                  {/* Bookmarks */}
+                  <Link
+                    href="/bookmarks"
+                    onClick={() => setShowMenu(false)}
+                    className="w-full flex items-center gap-2.5 px-3 py-2 rounded-xl text-xs font-semibold text-foreground/80 hover:text-foreground hover:bg-slate-800/60 transition-all group"
+                  >
+                    <Bookmark className="w-4 h-4 text-rose-600 dark:text-rose-400 group-hover:scale-110 transition-transform" />
+                    <span>Bookmarks</span>
+                  </Link>
+
+                  {/* History */}
+                  <Link
+                    href="/history"
+                    onClick={() => setShowMenu(false)}
+                    className="w-full flex items-center gap-2.5 px-3 py-2 rounded-xl text-xs font-semibold text-foreground/80 hover:text-foreground hover:bg-slate-800/60 transition-all group"
+                  >
+                    <History className="w-4 h-4 text-cyan-600 dark:text-cyan-400 group-hover:scale-110 transition-transform" />
+                    <span>History</span>
+                  </Link>
+
+                  {/* Admin */}
+                  {isAdmin && (
+                    <Link
+                      href="/admin"
+                      onClick={() => setShowMenu(false)}
+                      className="w-full flex items-center gap-2.5 px-3 py-2 rounded-xl text-xs font-bold text-amber-600 dark:text-amber-300 bg-amber-500/10 border border-amber-500/20 hover:bg-amber-500/20 transition-all group"
+                    >
+                      <ShieldCheck className="w-4 h-4 text-amber-600 dark:text-amber-400 group-hover:scale-110 transition-transform" />
+                      <span>Admin</span>
+                    </Link>
+                  )}
+
+                  <button
+                    onClick={() => {
+                      logout();
+                      setShowMenu(false);
+                    }}
+                    className="w-full flex items-center gap-2.5 px-3 py-2 rounded-xl text-xs font-semibold text-rose-600 dark:text-rose-400 hover:bg-rose-500/10 transition-all group"
+                  >
+                    <LogOut className="w-4 h-4 group-hover:scale-110 transition-transform" />
+                    <span>Sign Out</span>
+                  </button>
+                </div>
               </>
             ) : (
               <GoogleLoginButton label="Sign In" size="small" />
