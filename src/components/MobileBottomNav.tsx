@@ -14,7 +14,7 @@ interface NavItem {
   active: boolean;
   accentColor: string;
   activeBg: string;
-  indicatorColor: string;
+  activeBorder: string;
   isProfile?: boolean;
 }
 
@@ -46,8 +46,8 @@ export function MobileBottomNav() {
         icon: BookOpen,
         active: cleanPath.startsWith('/courses'),
         accentColor: 'text-violet-600 dark:text-violet-400',
-        activeBg: 'bg-violet-500/15 text-violet-600 dark:text-violet-400 shadow-sm shadow-violet-500/20',
-        indicatorColor: 'bg-violet-500',
+        activeBg: 'bg-violet-500/15 dark:bg-violet-400/15',
+        activeBorder: 'border-violet-500/30',
       }
     : user
     ? {
@@ -56,8 +56,8 @@ export function MobileBottomNav() {
         icon: Bookmark,
         active: cleanPath === '/bookmarks',
         accentColor: 'text-rose-600 dark:text-rose-400',
-        activeBg: 'bg-rose-500/15 text-rose-600 dark:text-rose-400 shadow-sm shadow-rose-500/20',
-        indicatorColor: 'bg-rose-500',
+        activeBg: 'bg-rose-500/15 dark:bg-rose-400/15',
+        activeBorder: 'border-rose-500/30',
       }
     : {
         label: 'Pricing',
@@ -65,8 +65,8 @@ export function MobileBottomNav() {
         icon: Sparkles,
         active: cleanPath === '/pricing',
         accentColor: 'text-amber-600 dark:text-amber-400',
-        activeBg: 'bg-amber-500/15 text-amber-600 dark:text-amber-400 shadow-sm shadow-amber-500/20',
-        indicatorColor: 'bg-amber-500',
+        activeBg: 'bg-amber-500/15 dark:bg-amber-400/15',
+        activeBorder: 'border-amber-500/30',
       };
 
   const navItems: NavItem[] = [
@@ -76,8 +76,8 @@ export function MobileBottomNav() {
       icon: FileCheck2,
       active: cleanPath === '/' || cleanPath.startsWith('/quiz'),
       accentColor: 'text-primary-600 dark:text-primary-400',
-      activeBg: 'bg-primary-500/15 text-primary-600 dark:text-primary-400 shadow-sm shadow-primary-500/20',
-      indicatorColor: 'bg-primary-600 dark:bg-primary-400',
+      activeBg: 'bg-primary-500/15 dark:bg-primary-400/15',
+      activeBorder: 'border-primary-500/30',
     },
     {
       label: 'Ranks',
@@ -85,8 +85,8 @@ export function MobileBottomNav() {
       icon: Trophy,
       active: cleanPath === '/leaderboard',
       accentColor: 'text-amber-600 dark:text-amber-400',
-      activeBg: 'bg-amber-500/15 text-amber-600 dark:text-amber-400 shadow-sm shadow-amber-500/20',
-      indicatorColor: 'bg-amber-500',
+      activeBg: 'bg-amber-500/15 dark:bg-amber-400/15',
+      activeBorder: 'border-amber-500/30',
     },
     thirdTab,
     {
@@ -95,8 +95,8 @@ export function MobileBottomNav() {
       icon: UserIcon,
       active: cleanPath === '/profile' || cleanPath === '/history' || cleanPath.startsWith('/admin'),
       accentColor: 'text-emerald-600 dark:text-emerald-400',
-      activeBg: 'bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 shadow-sm shadow-emerald-500/20',
-      indicatorColor: 'bg-emerald-500',
+      activeBg: 'bg-emerald-500/15 dark:bg-emerald-400/15',
+      activeBorder: 'border-emerald-500/30',
       isProfile: true,
     },
   ];
@@ -104,9 +104,10 @@ export function MobileBottomNav() {
   return (
     <nav
       aria-label="Mobile Bottom Navigation"
-      className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-card/95 glass-panel border-t border-card-border/80 shadow-[0_-4px_25px_rgba(0,0,0,0.15)] pb-[env(safe-area-inset-bottom,0px)]"
+      className="md:hidden fixed bottom-2.5 inset-x-3 sm:inset-x-6 z-40 max-w-md mx-auto"
     >
-      <div className="flex items-center justify-around h-15 px-2 max-w-lg mx-auto">
+      {/* Floating Glass Dock */}
+      <div className="relative flex items-center justify-between p-1.5 rounded-2xl bg-card/90 dark:bg-slate-900/90 glass-panel border border-card-border/90 shadow-[0_8px_32px_rgba(0,0,0,0.3)] backdrop-blur-2xl">
         {navItems.map((item) => {
           const Icon = item.icon;
           const isActive = item.active;
@@ -115,25 +116,16 @@ export function MobileBottomNav() {
             <Link
               key={item.href}
               href={item.href}
-              className={`relative flex flex-col items-center justify-center flex-1 py-1 px-1 transition-all duration-200 active:scale-95 touch-manipulation select-none ${
-                isActive ? `${item.accentColor} font-bold` : 'text-muted-foreground hover:text-foreground font-medium'
+              className={`relative flex flex-col items-center justify-center flex-1 py-1.5 px-2 rounded-xl transition-all duration-200 active:scale-90 touch-manipulation select-none ${
+                isActive
+                  ? `${item.activeBg} ${item.accentColor} ${item.activeBorder} border font-bold shadow-sm`
+                  : 'text-muted-foreground hover:text-foreground font-semibold hover:bg-card-border/30 border border-transparent'
               }`}
             >
-              {/* Active Tab Top Glow Bar */}
-              {isActive && (
-                <span
-                  className={`absolute -top-1 w-10 h-0.5 rounded-full ${item.indicatorColor} shadow-md`}
-                />
-              )}
-
-              {/* Icon Container */}
-              <div
-                className={`relative flex items-center justify-center w-10 h-8 rounded-xl transition-all duration-200 ${
-                  isActive ? item.activeBg : 'bg-transparent'
-                }`}
-              >
+              {/* Icon / Avatar */}
+              <div className="relative flex items-center justify-center">
                 {item.isProfile && user ? (
-                  <div className="flex items-center justify-center">
+                  <div className={`p-0.5 rounded-full transition-transform duration-200 ${isActive ? 'scale-110 ring-2 ring-emerald-500/50' : ''}`}>
                     <UserAvatar
                       name={user.name}
                       email={user.email}
@@ -144,12 +136,12 @@ export function MobileBottomNav() {
                     />
                   </div>
                 ) : (
-                  <Icon className="w-4.5 h-4.5" />
+                  <Icon className={`w-4.5 h-4.5 transition-transform duration-200 ${isActive ? 'scale-110' : ''}`} />
                 )}
               </div>
 
               {/* Label */}
-              <span className="text-[10.5px] leading-tight tracking-tight mt-0.5">
+              <span className="text-[10px] tracking-tight mt-0.5 leading-none">
                 {item.label}
               </span>
             </Link>
@@ -159,3 +151,4 @@ export function MobileBottomNav() {
     </nav>
   );
 }
+

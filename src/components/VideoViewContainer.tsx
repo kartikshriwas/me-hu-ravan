@@ -79,7 +79,7 @@ export function VideoViewContainer({
   return (
     <main
       role="main"
-      className={`w-full flex flex-col min-h-0 h-[calc(100dvh-3.5rem)] sm:h-[calc(100dvh-4rem)] lg:h-[calc(100vh-5rem)] overflow-hidden ${isTheaterMode ? 'bg-black' : 'bg-transparent'}`}
+      className={`w-full flex flex-col min-h-0 h-[calc(100dvh-3.5rem)] sm:h-[calc(100dvh-4rem)] lg:h-[calc(100vh-4rem)] overflow-hidden ${isTheaterMode ? 'bg-black' : 'bg-transparent'}`}
     >
       {/* Main Layout Container */}
       <div
