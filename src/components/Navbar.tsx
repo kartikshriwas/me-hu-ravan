@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation';
 import { useAuth } from '@/lib/authContext';
 import { GoogleLoginButton } from '@/components/GoogleLoginButton';
 import { UserAvatar } from '@/components/UserAvatar';
-import { FileCheck2, Trophy, Sparkles, Bookmark, History, LogOut, User as UserIcon, ShieldCheck, Crown, X, Coffee, BookOpen } from 'lucide-react';
+import { FileCheck2, Trophy, Sparkles, Bookmark, History, LogOut, User as UserIcon, ShieldCheck, Crown, X, Coffee, BookOpen, ChevronDown } from 'lucide-react';
 import { useState, useRef, useEffect } from 'react';
 import { isCourseBatch } from '@/lib/batchAccess';
 
@@ -121,7 +121,7 @@ export function Navbar() {
           <div 
             ref={menuRef} 
             className={`relative shrink-0 h-9 sm:h-10 flex items-center justify-end z-50 ${
-              user ? 'w-9 sm:w-10 lg:w-auto lg:min-w-[90px]' : 'w-auto'
+              user ? 'w-[102px] sm:w-[116px]' : 'w-auto'
             }`}
           >
             {user ? (
@@ -136,14 +136,17 @@ export function Navbar() {
                   /* Compact Trigger Button State */
                   <button
                     onClick={() => setShowMenu(true)}
-                    className="flex items-center gap-1.5 w-full h-full text-left focus:outline-none px-0.5 justify-center lg:justify-start"
+                    className="flex items-center gap-1.5 w-full h-full text-left focus:outline-none px-1 justify-between"
                   >
-                    <div className="w-7 h-7 sm:w-8 sm:h-8 shrink-0 flex items-center justify-center overflow-hidden rounded-lg">
-                      <UserAvatar name={user.name} email={user.email} image={user.image} size="sm" isPremium={user.isPremium} />
+                    <div className="flex items-center gap-1.5 min-w-0">
+                      <div className="w-7 h-7 sm:w-8 sm:h-8 shrink-0 flex items-center justify-center overflow-hidden rounded-lg">
+                        <UserAvatar name={user.name} email={user.email} image={user.image} size="sm" isPremium={user.isPremium} />
+                      </div>
+                      <span className="text-xs font-bold text-foreground group-hover:text-foreground transition-colors truncate max-w-[50px] sm:max-w-[62px]">
+                        {user.name.split(' ')[0]}
+                      </span>
                     </div>
-                    <span className="hidden lg:inline text-xs font-bold text-foreground group-hover:text-foreground transition-colors truncate max-w-[65px]">
-                      {user.name.split(' ')[0]}
-                    </span>
+                    <ChevronDown className="w-3.5 h-3.5 text-muted-foreground group-hover:text-foreground shrink-0 transition-transform" />
                   </button>
                 ) : (
                   /* Expanded Smooth Menu Card State */
