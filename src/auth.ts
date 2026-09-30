@@ -132,43 +132,53 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
     async jwt({ token, user, trigger, session }) {
       const now = Date.now();
       const lastSync = (token.lastDbSync as number) || 0;
-      // Re-sync with DB on sign in, explicit update, missing token id, or after 10 seconds
-      const shouldSync = Boolean(user || trigger === 'update' || !token.id || (now - lastSync) > (10 * 1000));
+      // Re-sync with DB on sign in, explicit update, missing token id, or after 5 minutes
+      const shouldSync = Boolean(user || trigger === 'update' || !token.id || (now - lastSync) > (5 * 60 * 1000));
 
       if (shouldSync && token.email) {
         try {
-          const conn = await connectToDatabase();
-          if (conn) {
-            const dbUser = await User.findOne({ email: token.email }).lean();
-            if (dbUser) {
-              const userRole = dbUser.role || (token.email === SUPERADMIN_EMAIL ? 'superadmin' : 'user');
-              const isSuperOrAdmin = userRole === 'superadmin' || userRole === 'admin' || token.email === SUPERADMIN_EMAIL;
-              const adminPermissions = dbUser.adminPermissions || [];
-              const allowedBatches = dbUser.allowedBatches || [];
+          // Implement a 3-second timeout for the DB query so it doesn't freeze the API response if MongoDB is hanging
+          const dbSyncPromise = (async () => {
+            const conn = await connectToDatabase();
+            if (conn) {
+              const dbUser = await User.findOne({ email: token.email }).lean();
+              if (dbUser) {
+                const userRole = dbUser.role || (token.email === SUPERADMIN_EMAIL ? 'superadmin' : 'user');
+                const isSuperOrAdmin = userRole === 'superadmin' || userRole === 'admin' || token.email === SUPERADMIN_EMAIL;
+                const adminPermissions = dbUser.adminPermissions || [];
+                const allowedBatches = dbUser.allowedBatches || [];
 
-              let isPremium = !!dbUser.isPremium;
-              if (isPremium && !isSuperOrAdmin && dbUser.premiumExpiresAt && new Date(dbUser.premiumExpiresAt) < new Date()) {
-                isPremium = false;
+                let isPremium = !!dbUser.isPremium;
+                if (isPremium && !isSuperOrAdmin && dbUser.premiumExpiresAt && new Date(dbUser.premiumExpiresAt) < new Date()) {
+                  isPremium = false;
+                }
+
+                const hasCourseBatches = allowedBatches.some((b: string) => isCourseBatch(b));
+                const hasCourseAccess = Boolean(isSuperOrAdmin || adminPermissions.includes('access_courses') || adminPermissions.includes('*') || hasCourseBatches);
+
+                token.id = dbUser._id.toString();
+                token.role = userRole;
+                token.adminPermissions = adminPermissions;
+                token.allowedBatches = allowedBatches;
+                token.isPremium = isPremium;
+                token.premiumExpiresAt = dbUser.premiumExpiresAt ? new Date(dbUser.premiumExpiresAt).toISOString() : null;
+                token.premiumPlan = isPremium ? (dbUser.premiumPlan || 'free') : 'free';
+                token.totalScore = dbUser.totalScore || 0;
+                token.testsCompleted = dbUser.testsCompleted || 0;
+                token.hasCourseAccess = hasCourseAccess;
+                token.lastDbSync = now;
               }
-
-              const hasCourseBatches = allowedBatches.some((b: string) => isCourseBatch(b));
-              const hasCourseAccess = Boolean(isSuperOrAdmin || adminPermissions.includes('access_courses') || adminPermissions.includes('*') || hasCourseBatches);
-
-              token.id = dbUser._id.toString();
-              token.role = userRole;
-              token.adminPermissions = adminPermissions;
-              token.allowedBatches = allowedBatches;
-              token.isPremium = isPremium;
-              token.premiumExpiresAt = dbUser.premiumExpiresAt ? new Date(dbUser.premiumExpiresAt).toISOString() : null;
-              token.premiumPlan = isPremium ? (dbUser.premiumPlan || 'free') : 'free';
-              token.totalScore = dbUser.totalScore || 0;
-              token.testsCompleted = dbUser.testsCompleted || 0;
-              token.hasCourseAccess = hasCourseAccess;
-              token.lastDbSync = now;
             }
-          }
+          })();
+
+          const timeoutPromise = new Promise((_, reject) => 
+            setTimeout(() => reject(new Error('MongoDB Sync Timeout')), 3000)
+          );
+
+          await Promise.race([dbSyncPromise, timeoutPromise]);
         } catch (error) {
-          console.error('Error populating JWT with DB user:', error);
+          // Soft warn for fallback so dev server doesn't treat intentional timeout fallback as an uncaught error
+          console.warn('[Auth] DB user sync fallback to cached token:', (error as Error).message);
         }
       }
       return token;

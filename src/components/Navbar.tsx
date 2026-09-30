@@ -55,66 +55,126 @@ export function Navbar() {
           </Link>
 
           {/* Color-Accented Dynamic Responsive Navigation Bar (Desktop Only) */}
-          <nav className="hidden md:flex items-center p-1 rounded-2xl bg-card/90 border border-card-border backdrop-blur-xl shadow-inner gap-1">
-            {/* Core 1: Practice Tests */}
+          <nav className="hidden md:flex items-center p-1 rounded-2xl bg-card/90 border border-card-border backdrop-blur-xl shadow-inner gap-0.5 lg:gap-1">
+            {/* Tier 1: Always visible on desktop (md+) */}
             <Link
               href="/"
               title="Practice Tests"
-              className={`flex items-center gap-1.5 px-3 sm:px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-semibold transition-all shrink-0 ${
+              className={`flex items-center gap-1.5 px-2 lg:px-3 py-1.5 rounded-xl text-sm font-semibold transition-all shrink-0 ${
                 pathname === '/'
                   ? 'bg-primary-600 text-white font-bold shadow-md shadow-primary-600/30 border border-primary-500/40'
                   : 'text-muted-foreground hover:text-primary-600 dark:hover:text-primary-300 hover:bg-primary-950/40'
               }`}
             >
-              <FileCheck2 className={`w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0 ${pathname === '/' ? 'text-foreground' : 'text-primary-600 dark:text-primary-400'}`} />
-              <span className="hidden lg:inline">Practice Tests</span>
-              <span className="lg:hidden">Tests</span>
+              <FileCheck2 className={`w-4 h-4 shrink-0 ${pathname === '/' ? 'text-foreground' : 'text-primary-600 dark:text-primary-400'}`} />
+              <span className="hidden xl:inline">Practice Tests</span>
+              <span className="hidden md:inline xl:hidden">Tests</span>
             </Link>
 
-            {/* Core 2: Leaderboard */}
             <Link
               href="/leaderboard"
               title="Leaderboard"
-              className={`flex items-center gap-1.5 px-3 sm:px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-semibold transition-all shrink-0 ${
+              className={`flex items-center gap-1.5 px-2 lg:px-3 py-1.5 rounded-xl text-sm font-semibold transition-all shrink-0 ${
                 pathname === '/leaderboard'
                   ? 'bg-amber-600 text-white font-bold shadow-md shadow-amber-600/30 border border-amber-500/40'
                   : 'text-muted-foreground hover:text-amber-600 dark:hover:text-amber-300 hover:bg-amber-950/40'
               }`}
             >
-              <Trophy className={`w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0 ${pathname === '/leaderboard' ? 'text-foreground' : 'text-amber-600 dark:text-amber-400'}`} />
-              <span className="hidden lg:inline">Leaderboard</span>
-              <span className="lg:hidden">Ranks</span>
+              <Trophy className={`w-4 h-4 shrink-0 ${pathname === '/leaderboard' ? 'text-foreground' : 'text-amber-600 dark:text-amber-400'}`} />
+              <span className="hidden xl:inline">Leaderboard</span>
+              <span className="hidden md:inline xl:hidden">Ranks</span>
             </Link>
 
-            {/* Courses tab */}
+            {/* Tier 2: Visible at lg+ (1024px) */}
             {hasCourseAccess && (
               <Link
                 href="/courses"
                 title="Courses"
-                className={`flex items-center gap-1.5 px-3 sm:px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-semibold transition-all shrink-0 ${
+                className={`hidden lg:flex items-center gap-1.5 px-2 lg:px-3 py-1.5 rounded-xl text-sm font-semibold transition-all shrink-0 ${
                   pathname.startsWith('/courses')
                     ? 'bg-primary-600 text-white font-bold shadow-md shadow-primary-600/30 border border-primary-500/40'
                     : 'text-muted-foreground hover:text-primary-600 dark:hover:text-primary-300 hover:bg-primary-950/40'
                 }`}
               >
-                <BookOpen className={`w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0 ${pathname.startsWith('/courses') ? 'text-foreground' : 'text-primary-600 dark:text-primary-400'}`} />
+                <BookOpen className={`w-4 h-4 shrink-0 ${pathname.startsWith('/courses') ? 'text-foreground' : 'text-primary-600 dark:text-primary-400'}`} />
                 <span>Courses</span>
               </Link>
             )}
 
-            {/* Pricing Tab */}
+            {/* Tier 3: Visible at xl+ (1280px) */}
             <Link
               href="/pricing"
               title="Pricing"
-              className={`flex items-center gap-1.5 px-3 sm:px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-semibold transition-all shrink-0 ${
+              className={`hidden xl:flex items-center gap-1.5 px-2 xl:px-3 py-1.5 rounded-xl text-sm font-semibold transition-all shrink-0 ${
                 pathname === '/pricing'
                   ? 'bg-amber-600 text-white font-bold shadow-md shadow-amber-600/30 border border-amber-500/40'
                   : 'text-muted-foreground hover:text-amber-600 dark:hover:text-amber-300 hover:bg-amber-950/40'
               }`}
             >
-              <Sparkles className={`w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0 ${pathname === '/pricing' ? 'text-foreground' : 'text-amber-600 dark:text-amber-400'}`} />
+              <Sparkles className={`w-4 h-4 shrink-0 ${pathname === '/pricing' ? 'text-foreground' : 'text-amber-600 dark:text-amber-400'}`} />
               <span>Pricing</span>
             </Link>
+
+            {/* Tier 4: User links visible at 2xl+ (1536px) */}
+            {user && (
+              <>
+                <div className="hidden 2xl:block w-px h-4 bg-card-border/80 mx-0.5 shrink-0" />
+
+                <Link
+                  href="/profile"
+                  title="Profile"
+                  className={`hidden 2xl:flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-sm font-semibold transition-all shrink-0 ${
+                    pathname === '/profile'
+                      ? 'bg-emerald-600 text-white font-bold shadow-md shadow-emerald-600/30 border border-emerald-500/40'
+                      : 'text-muted-foreground hover:text-emerald-600 dark:hover:text-emerald-300 hover:bg-emerald-950/40'
+                  }`}
+                >
+                  <UserIcon className={`w-4 h-4 shrink-0 ${pathname === '/profile' ? 'text-foreground' : 'text-emerald-600 dark:text-emerald-400'}`} />
+                  <span>Profile</span>
+                </Link>
+
+                <Link
+                  href="/bookmarks"
+                  title="Bookmarks"
+                  className={`hidden 2xl:flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-sm font-semibold transition-all shrink-0 ${
+                    pathname === '/bookmarks'
+                      ? 'bg-rose-600 text-white font-bold shadow-md shadow-rose-600/30 border border-rose-500/40'
+                      : 'text-muted-foreground hover:text-rose-600 dark:hover:text-rose-300 hover:bg-rose-950/40'
+                  }`}
+                >
+                  <Bookmark className={`w-4 h-4 shrink-0 ${pathname === '/bookmarks' ? 'text-foreground' : 'text-rose-600 dark:text-rose-400'}`} />
+                  <span>Bookmarks</span>
+                </Link>
+
+                <Link
+                  href="/history"
+                  title="History"
+                  className={`hidden 2xl:flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-sm font-semibold transition-all shrink-0 ${
+                    pathname === '/history'
+                      ? 'bg-cyan-600 text-white font-bold shadow-md shadow-cyan-600/30 border border-cyan-500/40'
+                      : 'text-muted-foreground hover:text-cyan-600 dark:hover:text-cyan-300 hover:bg-cyan-950/40'
+                  }`}
+                >
+                  <History className={`w-4 h-4 shrink-0 ${pathname === '/history' ? 'text-foreground' : 'text-cyan-600 dark:text-cyan-400'}`} />
+                  <span>History</span>
+                </Link>
+
+                {isAdmin && (
+                  <Link
+                    href="/admin"
+                    title="Admin"
+                    className={`hidden 2xl:flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-sm font-semibold transition-all shrink-0 ${
+                      pathname.startsWith('/admin')
+                        ? 'bg-amber-600 text-white font-bold shadow-md shadow-amber-600/30 border border-amber-500/40'
+                        : 'text-amber-600 dark:text-amber-400 hover:bg-amber-950/40'
+                    }`}
+                  >
+                    <ShieldCheck className="w-4 h-4 shrink-0" />
+                    <span>Admin</span>
+                  </Link>
+                )}
+              </>
+            )}
           </nav>
 
           {/* Auth Button / Morphing Profile Menu */}
@@ -190,48 +250,70 @@ export function Navbar() {
                   }`}
                 />
 
-                {/* Dropdown Menu Items */}
+                {/* Dropdown Menu Items — inverse of nav bar visibility */}
                 <div 
                   className={`space-y-1 transition-all duration-300 ease-in-out flex flex-col overflow-hidden ${
-                    showMenu ? 'max-h-[400px] opacity-100' : 'max-h-0 opacity-0 pointer-events-none'
+                    showMenu ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0 pointer-events-none'
                   }`}
                 >
-                  {/* Profile */}
+                  {/* Courses — in dropdown below lg (nav shows it at lg+) */}
+                  {hasCourseAccess && (
+                    <Link
+                      href="/courses"
+                      onClick={() => setShowMenu(false)}
+                      className="flex lg:hidden w-full items-center gap-2.5 px-3 py-2 rounded-xl text-xs font-semibold text-foreground/80 hover:text-foreground hover:bg-slate-800/60 transition-all group"
+                    >
+                      <BookOpen className="w-4 h-4 text-primary-600 dark:text-primary-400 group-hover:scale-110 transition-transform" />
+                      <span>Courses</span>
+                    </Link>
+                  )}
+
+                  {/* Pricing — in dropdown below xl (nav shows it at xl+) */}
+                  <Link
+                    href="/pricing"
+                    onClick={() => setShowMenu(false)}
+                    className="flex xl:hidden w-full items-center gap-2.5 px-3 py-2 rounded-xl text-xs font-semibold text-foreground/80 hover:text-foreground hover:bg-slate-800/60 transition-all group"
+                  >
+                    <Sparkles className="w-4 h-4 text-amber-600 dark:text-amber-400 group-hover:scale-110 transition-transform" />
+                    <span>Pricing</span>
+                  </Link>
+
+                  {/* Profile — in dropdown below 2xl (nav shows it at 2xl+); hidden on <md since bottom nav has it */}
                   <Link
                     href="/profile"
                     onClick={() => setShowMenu(false)}
-                    className="w-full flex items-center gap-2.5 px-3 py-2 rounded-xl text-xs font-semibold text-foreground/80 hover:text-foreground hover:bg-slate-800/60 transition-all group"
+                    className="hidden md:flex 2xl:hidden w-full items-center gap-2.5 px-3 py-2 rounded-xl text-xs font-semibold text-foreground/80 hover:text-foreground hover:bg-slate-800/60 transition-all group"
                   >
                     <UserIcon className="w-4 h-4 text-emerald-600 dark:text-emerald-400 group-hover:scale-110 transition-transform" />
                     <span>Profile</span>
                   </Link>
 
-                  {/* Bookmarks */}
+                  {/* Bookmarks — in dropdown below 2xl (nav shows it at 2xl+) */}
                   <Link
                     href="/bookmarks"
                     onClick={() => setShowMenu(false)}
-                    className="w-full flex items-center gap-2.5 px-3 py-2 rounded-xl text-xs font-semibold text-foreground/80 hover:text-foreground hover:bg-slate-800/60 transition-all group"
+                    className="flex 2xl:hidden w-full items-center gap-2.5 px-3 py-2 rounded-xl text-xs font-semibold text-foreground/80 hover:text-foreground hover:bg-slate-800/60 transition-all group"
                   >
                     <Bookmark className="w-4 h-4 text-rose-600 dark:text-rose-400 group-hover:scale-110 transition-transform" />
                     <span>Bookmarks</span>
                   </Link>
 
-                  {/* History */}
+                  {/* History — in dropdown below 2xl (nav shows it at 2xl+) */}
                   <Link
                     href="/history"
                     onClick={() => setShowMenu(false)}
-                    className="w-full flex items-center gap-2.5 px-3 py-2 rounded-xl text-xs font-semibold text-foreground/80 hover:text-foreground hover:bg-slate-800/60 transition-all group"
+                    className="flex 2xl:hidden w-full items-center gap-2.5 px-3 py-2 rounded-xl text-xs font-semibold text-foreground/80 hover:text-foreground hover:bg-slate-800/60 transition-all group"
                   >
                     <History className="w-4 h-4 text-cyan-600 dark:text-cyan-400 group-hover:scale-110 transition-transform" />
                     <span>History</span>
                   </Link>
 
-                  {/* Admin */}
+                  {/* Admin — in dropdown below 2xl (nav shows it at 2xl+) */}
                   {isAdmin && (
                     <Link
                       href="/admin"
                       onClick={() => setShowMenu(false)}
-                      className="w-full flex items-center gap-2.5 px-3 py-2 rounded-xl text-xs font-bold text-amber-600 dark:text-amber-300 bg-amber-500/10 border border-amber-500/20 hover:bg-amber-500/20 transition-all group"
+                      className="flex 2xl:hidden w-full items-center gap-2.5 px-3 py-2 rounded-xl text-xs font-bold text-amber-600 dark:text-amber-300 bg-amber-500/10 border border-amber-500/20 hover:bg-amber-500/20 transition-all group"
                     >
                       <ShieldCheck className="w-4 h-4 text-amber-600 dark:text-amber-400 group-hover:scale-110 transition-transform" />
                       <span>Admin</span>
