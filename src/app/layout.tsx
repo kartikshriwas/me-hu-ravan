@@ -71,7 +71,7 @@ export default function RootLayout({
           <AuthProvider>
             <ActivityTracker />
             <Navbar />
-            <main className="flex-1 w-full flex flex-col min-h-0 pb-16 md:pb-0">
+            <main className="flex-1 w-full flex flex-col min-h-0 pt-14 sm:pt-16 pb-16 md:pb-0">
               {children}
             </main>
             <MobileBottomNav />

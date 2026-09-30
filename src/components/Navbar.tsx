@@ -40,9 +40,9 @@ export function Navbar() {
   }
 
   return (
-    <header className="sticky top-0 z-40 w-full glass-panel border-b border-card-border/80">
+    <header className="fixed top-0 inset-x-0 z-50 w-full glass-panel border-b border-card-border/80 backdrop-blur-xl">
       <div className="w-full px-3 sm:px-4 lg:px-6 xl:px-8">
-        <div className="flex items-center justify-between h-14 sm:h-16 gap-2 sm:gap-3">
+        <div className="relative flex items-center justify-between h-14 sm:h-16 gap-3 sm:gap-4 lg:gap-6">
           
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 sm:gap-2.5 group shrink-0">
@@ -54,8 +54,8 @@ export function Navbar() {
             </span>
           </Link>
 
-          {/* Responsive Desktop Navigation — each item has its own breakpoint entry */}
-          <nav className="hidden md:flex items-center p-1 rounded-2xl bg-card/90 border border-card-border backdrop-blur-xl shadow-inner gap-0.5 lg:gap-1">
+          {/* Responsive Desktop Navigation — centered in the header */}
+          <nav className="hidden md:flex items-center absolute left-1/2 -translate-x-1/2 p-1 rounded-2xl bg-card/90 border border-card-border backdrop-blur-xl shadow-inner gap-0.5 lg:gap-1">
             {/* ── Tier 1 · md (768px) — Core navigation ── */}
             <Link
               href="/"
@@ -113,44 +113,28 @@ export function Navbar() {
               <span>Pricing</span>
             </Link>
 
-            {/* ── User links — icon-only at entry, text label at 2xl ── */}
+            {/* ── User links — Icon + Text label at each tier ── */}
             {user && (
               <>
-                <div className="hidden xl:block w-px h-5 bg-card-border/60 mx-0.5 shrink-0" />
-
                 {/* Tier 4 · xl (1280px) */}
-                <Link
-                  href="/profile"
-                  title="Profile"
-                  className={`hidden xl:flex items-center gap-1 2xl:gap-1.5 px-2 2xl:px-2.5 py-1.5 rounded-xl text-sm font-semibold transition-all duration-200 shrink-0 ${
-                    pathname === '/profile'
-                      ? 'bg-emerald-600 text-white font-bold shadow-md shadow-emerald-600/30 border border-emerald-500/40'
-                      : 'text-muted-foreground hover:text-emerald-600 dark:hover:text-emerald-300 hover:bg-emerald-950/40'
-                  }`}
-                >
-                  <UserIcon className={`w-4 h-4 shrink-0 ${pathname === '/profile' ? 'text-foreground' : 'text-emerald-600 dark:text-emerald-400'}`} />
-                  <span className="hidden 2xl:inline">Profile</span>
-                </Link>
-
-                {/* Tier 5 · mxl (1408px) */}
                 <Link
                   href="/bookmarks"
                   title="Bookmarks"
-                  className={`hidden mxl:flex items-center gap-1 2xl:gap-1.5 px-2 2xl:px-2.5 py-1.5 rounded-xl text-sm font-semibold transition-all duration-200 shrink-0 ${
+                  className={`hidden xl:flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl text-sm font-semibold transition-all duration-200 shrink-0 ${
                     pathname === '/bookmarks'
                       ? 'bg-rose-600 text-white font-bold shadow-md shadow-rose-600/30 border border-rose-500/40'
                       : 'text-muted-foreground hover:text-rose-600 dark:hover:text-rose-300 hover:bg-rose-950/40'
                   }`}
                 >
                   <Bookmark className={`w-4 h-4 shrink-0 ${pathname === '/bookmarks' ? 'text-foreground' : 'text-rose-600 dark:text-rose-400'}`} />
-                  <span className="hidden 2xl:inline">Bookmarks</span>
+                  <span>Bookmarks</span>
                 </Link>
 
-                {/* Tier 6 · 2xl (1536px) */}
+                {/* Tier 5 · mxl (1408px) */}
                 <Link
                   href="/history"
                   title="History"
-                  className={`hidden 2xl:flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl text-sm font-semibold transition-all duration-200 shrink-0 ${
+                  className={`hidden mxl:flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl text-sm font-semibold transition-all duration-200 shrink-0 ${
                     pathname === '/history'
                       ? 'bg-cyan-600 text-white font-bold shadow-md shadow-cyan-600/30 border border-cyan-500/40'
                       : 'text-muted-foreground hover:text-cyan-600 dark:hover:text-cyan-300 hover:bg-cyan-950/40'
@@ -158,6 +142,22 @@ export function Navbar() {
                 >
                   <History className={`w-4 h-4 shrink-0 ${pathname === '/history' ? 'text-foreground' : 'text-cyan-600 dark:text-cyan-400'}`} />
                   <span>History</span>
+                </Link>
+
+                {/* Tier 6 · 2xl (1536px) — Divider line before user account links */}
+                <div className="hidden 2xl:block w-px h-5 bg-card-border/60 mx-0.5 shrink-0" />
+
+                <Link
+                  href="/profile"
+                  title="Profile"
+                  className={`hidden 2xl:flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl text-sm font-semibold transition-all duration-200 shrink-0 ${
+                    pathname === '/profile'
+                      ? 'bg-emerald-600 text-white font-bold shadow-md shadow-emerald-600/30 border border-emerald-500/40'
+                      : 'text-muted-foreground hover:text-emerald-600 dark:hover:text-emerald-300 hover:bg-emerald-950/40'
+                  }`}
+                >
+                  <UserIcon className={`w-4 h-4 shrink-0 ${pathname === '/profile' ? 'text-foreground' : 'text-emerald-600 dark:text-emerald-400'}`} />
+                  <span>Profile</span>
                 </Link>
 
                 {isAdmin && (
@@ -257,12 +257,12 @@ export function Navbar() {
                     showMenu ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0 pointer-events-none'
                   }`}
                 >
-                  {/* Courses — visible below lg (nav shows at lg+) */}
+                  {/* Courses — visible between md and lg (on < md screen, Courses is already in MobileBottomNav) */}
                   {hasCourseAccess && (
                     <Link
                       href="/courses"
                       onClick={() => setShowMenu(false)}
-                      className="flex lg:hidden w-full items-center gap-2.5 px-3 py-2 rounded-xl text-xs font-semibold text-foreground/80 hover:text-foreground hover:bg-slate-800/60 transition-all duration-150 group"
+                      className="hidden md:flex lg:hidden w-full items-center gap-2.5 px-3 py-2 rounded-xl text-xs font-semibold text-foreground/80 hover:text-foreground hover:bg-slate-800/60 transition-all duration-150 group"
                     >
                       <BookOpen className="w-4 h-4 text-primary-600 dark:text-primary-400 group-hover:scale-110 transition-transform" />
                       <span>Courses</span>
@@ -279,37 +279,34 @@ export function Navbar() {
                     <span>Pricing</span>
                   </Link>
 
-                  {/* Separator between nav overflow items and account items */}
-                  <div className="xl:hidden w-full h-px bg-card-border/50 my-0.5" />
-
-                  {/* Profile — visible below xl; hidden on <md (bottom nav) */}
-                  <Link
-                    href="/profile"
-                    onClick={() => setShowMenu(false)}
-                    className="hidden md:flex xl:hidden w-full items-center gap-2.5 px-3 py-2 rounded-xl text-xs font-semibold text-foreground/80 hover:text-foreground hover:bg-slate-800/60 transition-all duration-150 group"
-                  >
-                    <UserIcon className="w-4 h-4 text-emerald-600 dark:text-emerald-400 group-hover:scale-110 transition-transform" />
-                    <span>Profile</span>
-                  </Link>
-
-                  {/* Bookmarks — visible below mxl */}
+                  {/* Bookmarks — visible below xl (nav shows at xl+) */}
                   <Link
                     href="/bookmarks"
                     onClick={() => setShowMenu(false)}
-                    className="flex mxl:hidden w-full items-center gap-2.5 px-3 py-2 rounded-xl text-xs font-semibold text-foreground/80 hover:text-foreground hover:bg-slate-800/60 transition-all duration-150 group"
+                    className="flex xl:hidden w-full items-center gap-2.5 px-3 py-2 rounded-xl text-xs font-semibold text-foreground/80 hover:text-foreground hover:bg-slate-800/60 transition-all duration-150 group"
                   >
                     <Bookmark className="w-4 h-4 text-rose-600 dark:text-rose-400 group-hover:scale-110 transition-transform" />
                     <span>Bookmarks</span>
                   </Link>
 
-                  {/* History — visible below 2xl */}
+                  {/* History — visible below mxl (nav shows at mxl+) */}
                   <Link
                     href="/history"
                     onClick={() => setShowMenu(false)}
-                    className="flex 2xl:hidden w-full items-center gap-2.5 px-3 py-2 rounded-xl text-xs font-semibold text-foreground/80 hover:text-foreground hover:bg-slate-800/60 transition-all duration-150 group"
+                    className="flex mxl:hidden w-full items-center gap-2.5 px-3 py-2 rounded-xl text-xs font-semibold text-foreground/80 hover:text-foreground hover:bg-slate-800/60 transition-all duration-150 group"
                   >
                     <History className="w-4 h-4 text-cyan-600 dark:text-cyan-400 group-hover:scale-110 transition-transform" />
                     <span>History</span>
+                  </Link>
+
+                  {/* Profile — visible below 2xl; hidden on <md (bottom nav) */}
+                  <Link
+                    href="/profile"
+                    onClick={() => setShowMenu(false)}
+                    className="hidden md:flex 2xl:hidden w-full items-center gap-2.5 px-3 py-2 rounded-xl text-xs font-semibold text-foreground/80 hover:text-foreground hover:bg-slate-800/60 transition-all duration-150 group"
+                  >
+                    <UserIcon className="w-4 h-4 text-emerald-600 dark:text-emerald-400 group-hover:scale-110 transition-transform" />
+                    <span>Profile</span>
                   </Link>
 
                   {/* Admin — visible below 2xl */}
