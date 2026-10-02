@@ -4,18 +4,7 @@ import { Skeleton } from '@/components/ui/Skeleton';
 export function AdminSkeleton() {
   return (
     <main className="w-full px-4 sm:px-8 lg:px-12 py-6 space-y-8" role="main" aria-label="Loading Admin Control Center">
-      {/* Admin Topbar */}
-      <section className="glass-panel rounded-3xl p-6 sm:p-8 border border-card-border flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 shadow-xl">
-        <div className="space-y-2">
-          <Skeleton className="h-5 w-40 rounded-full" />
-          <Skeleton className="h-8 sm:h-9 w-64 rounded-xl" />
-          <Skeleton className="h-4 w-96 max-w-full rounded" />
-        </div>
-        <div className="flex items-center gap-3">
-          <Skeleton className="h-10 w-28 rounded-xl" />
-          <Skeleton className="h-10 w-32 rounded-xl" />
-        </div>
-      </section>
+
 
       {/* Navigation Tabs Bar */}
       <nav className="flex items-center gap-2 overflow-x-auto p-1.5 glass-panel rounded-2xl border border-card-border" aria-label="Admin Navigation Tabs">

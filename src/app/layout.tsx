@@ -58,6 +58,7 @@ export const metadata: Metadata = {
 };
 
 import { ThemeProvider } from '@/components/ThemeProvider';
+import { TopLoader } from '@/components/TopLoader';
 
 export default function RootLayout({
   children,
@@ -67,6 +68,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body suppressHydrationWarning className="antialiased bg-background text-foreground flex flex-col min-h-screen transition-colors duration-300">
+        <TopLoader />
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
           <AuthProvider>
             <ActivityTracker />
