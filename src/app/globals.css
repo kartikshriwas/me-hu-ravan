@@ -62,13 +62,7 @@
     --glass-card-bg: rgba(255, 255, 255, 0.6);
     --muted-foreground: #64748b; /* slate-500 */
     
-    /* Auto-invert hardcoded dark slate backgrounds for Light Mode visibility */
-    --color-slate-950: #f8fafc;
-    --color-slate-900: #ffffff;
-    --color-slate-800: #f1f5f9;
-    --color-slate-700: #e2e8f0;
-    --color-slate-300: #64748b; /* text-slate-300 becomes darker */
-    --color-slate-400: #475569; /* text-slate-400 becomes darker */
+
 
     /* Default Primary (Indigo) */
     --color-primary-50: #eef2ff;

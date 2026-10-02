@@ -90,9 +90,9 @@ export default function LeaderboardPage() {
               
               {/* #2 Silver (First on mobile layout or left) */}
               {topThree[1] && (
-                <div className="glass-card rounded-3xl p-6 border border-slate-700/80 flex flex-col items-center text-center space-y-4 relative order-2 md:order-1 transform md:translate-y-4">
-                  <div className="absolute -top-4 px-3 py-1 rounded-full bg-slate-800 border border-slate-700 text-foreground/80 text-xs font-bold flex items-center gap-1 shadow-md">
-                    <Medal className="w-3.5 h-3.5 text-foreground/80" /> #2 Silver
+                <div className="glass-card rounded-3xl p-6 border border-card-border flex flex-col items-center text-center space-y-4 relative order-2 md:order-1 transform md:translate-y-4">
+                  <div className="absolute -top-4 px-3.5 py-1 rounded-full bg-slate-200 dark:bg-slate-800 border border-slate-300 dark:border-slate-600 text-slate-800 dark:text-slate-200 text-xs font-black flex items-center gap-1.5 shadow-md">
+                    <Medal className="w-3.5 h-3.5 text-slate-600 dark:text-slate-300" /> #2 Silver
                   </div>
 
                   <div className="mt-2">
@@ -136,9 +136,9 @@ export default function LeaderboardPage() {
 
               {/* #3 Bronze (Right) */}
               {topThree[2] && (
-                <div className="glass-card rounded-3xl p-6 border border-slate-700/80 flex flex-col items-center text-center space-y-4 relative order-3 md:order-3 transform md:translate-y-4">
-                  <div className="absolute -top-4 px-3 py-1 rounded-full bg-slate-800 border border-slate-700 text-amber-600 text-xs font-bold flex items-center gap-1 shadow-md">
-                    <Award className="w-3.5 h-3.5 text-amber-600" /> #3 Bronze
+                <div className="glass-card rounded-3xl p-6 border border-card-border flex flex-col items-center text-center space-y-4 relative order-3 md:order-3 transform md:translate-y-4">
+                  <div className="absolute -top-4 px-3.5 py-1 rounded-full bg-amber-100 dark:bg-amber-950/80 border border-amber-300 dark:border-amber-800/80 text-amber-800 dark:text-amber-300 text-xs font-black flex items-center gap-1.5 shadow-md">
+                    <Award className="w-3.5 h-3.5 text-amber-700 dark:text-amber-400" /> #3 Bronze
                   </div>
 
                   <div className="mt-2">
