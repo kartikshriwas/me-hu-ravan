@@ -769,7 +769,7 @@ export function CourseDetailClient({ course, availableTests, isUnlocked = true }
                           {/* Action Button: Watch Lesson / Video Not Available / Locked Video */}
                           {config.isActionableVideo && !downloadUrl && (() => {
                             const isYouTube = unit.type === 'youtube' || unit.icon === 'yt' || (unit.subtitle && unit.subtitle.toLowerCase().includes('youtube')) || !!(unit.data && unit.data.embed);
-                            const hasVideoSource = !!(unit.sourceid && unit.sourceid.trim() !== '') || isYouTube;
+                            const hasVideoSource = !!(unit.sourceid && unit.sourceid.trim() !== '') || !!(unit.vimeoid && unit.vimeoid.trim() !== '') || isYouTube;
 
                             if (!hasVideoSource) {
                               return (
