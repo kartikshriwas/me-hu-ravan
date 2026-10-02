@@ -27,10 +27,6 @@ export function MobileBottomNav() {
     return null;
   }
 
-  // 2. Hide on dedicated full-screen video player page
-  if (pathname.includes('/video/')) {
-    return null;
-  }
 
   const isAdmin = user?.role === 'superadmin' || user?.role === 'admin';
   const courseBatches = (user?.allowedBatches || []).filter(isCourseBatch);
