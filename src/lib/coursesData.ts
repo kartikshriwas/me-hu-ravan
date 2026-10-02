@@ -86,9 +86,8 @@ export function isUnitActionable(unit: Partial<CourseSectionUnit>): boolean {
     return !!(unit.fileUrl && unit.fileUrl.trim() !== '');
   }
 
-  // 4. Videos (Actionable: Watch Lesson / Locked Video / Video Not Available)
-  if (
-    type === 'ivideo' ||
+  // 4. Videos (Only show if they have a playable source)
+  const isVideo = type === 'ivideo' ||
     type === 'wistia' ||
     type === 'video' ||
     type === 'youtube' ||
@@ -98,9 +97,14 @@ export function isUnitActionable(unit: Partial<CourseSectionUnit>): boolean {
     subtitle.includes('youtube') ||
     !!unit.sourceid ||
     !!unit.vimeoid ||
-    !!(unit.data && unit.data.embed)
-  ) {
-    return true;
+    !!(unit.data && unit.data.embed);
+
+  if (isVideo) {
+    const hasSource = !!(unit.sourceid && unit.sourceid.trim() !== '') || 
+                      !!(unit.vimeoid && unit.vimeoid.trim() !== '') || 
+                      type === 'youtube' || icon === 'yt' || subtitle.includes('youtube') ||
+                      !!(unit.data && unit.data.embed);
+    return hasSource;
   }
 
   // 5. Downloadable Files / Code Attachments

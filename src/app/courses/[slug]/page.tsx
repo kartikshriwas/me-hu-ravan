@@ -1,5 +1,5 @@
 import { notFound } from 'next/navigation';
-import { getCourseBySlug, parseRawCourseData, enrichCourseWithLocalData } from '@/lib/coursesData';
+import { getCourseBySlug, parseRawCourseData } from '@/lib/coursesData';
 import { getAllAssessments } from '@/lib/questionsData';
 import { cookies } from 'next/headers';
 import { auth } from '@/auth';
@@ -76,9 +76,12 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ s
   }
 
   const { slug } = await params;
-  const localCourse = getCourseBySlug(slug);
-  const apiCourse = await fetchCourseFromApi(slug);
-  const course = enrichCourseWithLocalData(apiCourse, localCourse);
+  let course = getCourseBySlug(slug);
+  
+  if (!course) {
+    course = await fetchCourseFromApi(slug);
+  }
+
   const availableTests = getAllAssessments();
 
   if (!course) {
