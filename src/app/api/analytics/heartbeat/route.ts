@@ -3,6 +3,8 @@ import { auth } from '@/auth';
 import { connectToDatabase } from '@/lib/db';
 import { UserSession } from '@/models/UserSession';
 import { UserActivityLog } from '@/models/UserActivityLog';
+import { User } from '@/models/User';
+import { processPendingDemoActivation } from '@/lib/pendingDemoHelper';
 import { createHash } from 'crypto';
 import { rateLimit, getClientIp } from '@/lib/rateLimit';
 
@@ -127,6 +129,14 @@ export async function POST(request: Request) {
 
     if (updatedSession?.terminated) {
       return NextResponse.json({ success: false, terminated: true, message: 'Session terminated by admin' });
+    }
+
+    // Activate pending demo if user just came online
+    if (sessionUser?.email) {
+      const dbUser = await User.findOne({ email: userEmail }).select('_id email premiumPlan allowedBatches').lean();
+      if (dbUser) {
+        await processPendingDemoActivation(dbUser);
+      }
     }
 
     // 2. Aggregate daily usage logs if user is logged in (excluding /admin panel routes from student study metrics)

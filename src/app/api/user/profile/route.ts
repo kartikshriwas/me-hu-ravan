@@ -7,6 +7,8 @@ import { isPlatformGlobalFree } from '@/lib/globalSetting';
 import { isCourseBatch } from '@/lib/batchAccess';
 import { SUPERADMIN_EMAIL } from '@/lib/adminAuth';
 
+import { processPendingDemoActivation } from '@/lib/pendingDemoHelper';
+
 export async function GET(request: Request) {
   try {
     const session = await auth();
@@ -20,9 +22,16 @@ export async function GET(request: Request) {
 
     await connectToDatabase();
 
-    // Execute User query, recent Attempts fetch, and GlobalFree check in parallel
-    const [dbUser, attempts, globalFreeConfig] = await Promise.all([
-      User.findOne({ email: cleanEmail }).select('_id name email image role adminPermissions allowedBatches isPremium premiumExpiresAt premiumPlan totalScore testsCompleted averageAccuracy createdAt').lean(),
+    let dbUser = await User.findOne({ email: cleanEmail }).select('_id name email image role adminPermissions allowedBatches isPremium premiumExpiresAt premiumPlan totalScore testsCompleted averageAccuracy createdAt').lean();
+    if (dbUser) {
+      const wasActivated = await processPendingDemoActivation(dbUser);
+      if (wasActivated) {
+        dbUser = await User.findOne({ email: cleanEmail }).select('_id name email image role adminPermissions allowedBatches isPremium premiumExpiresAt premiumPlan totalScore testsCompleted averageAccuracy createdAt').lean();
+      }
+    }
+
+    // Execute recent Attempts fetch and GlobalFree check in parallel
+    const [attempts, globalFreeConfig] = await Promise.all([
       Attempt.find({ userEmail: cleanEmail }).select('_id quizId quizTitle score maxScore accuracy isFirstAttempt timestamp createdAt').sort({ createdAt: -1 }).limit(50).lean(),
       isPlatformGlobalFree(),
     ]);

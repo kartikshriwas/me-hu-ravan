@@ -113,8 +113,8 @@ export function UserAvatar({
   const finalSrc = showDicebear ? dicebearBottts : image;
 
   const borderStyle = isPremium
-    ? 'border border-amber-400 dark:border-amber-300 shadow-[0_0_9px_rgba(251,191,36,0.65),0_0_2px_rgba(245,158,11,0.85)]'
-    : 'border border-slate-700/80';
+    ? 'border-2 border-primary-500 dark:border-primary-400 ring-2 ring-primary-500/30 dark:ring-primary-400/30 shadow-md shadow-primary-500/20 transition-all duration-300'
+    : 'border border-card-border';
 
   return (
     // eslint-disable-next-line @next/next/no-img-element

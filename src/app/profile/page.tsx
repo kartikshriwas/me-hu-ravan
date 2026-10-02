@@ -210,10 +210,10 @@ export default function ProfilePage() {
 
                 {u.isPremium && (
                   <span
-                    className="inline-flex items-center justify-center p-1.5 rounded-full bg-amber-500/15 text-amber-500 border border-amber-500/30 shadow-xs shrink-0"
+                    className="inline-flex items-center justify-center p-1.5 rounded-full bg-primary-500/15 text-primary-600 dark:text-primary-400 border border-primary-500/30 shadow-xs shrink-0"
                     title="Premium Member"
                   >
-                    <Crown className="w-4 h-4 fill-amber-500/30" />
+                    <Crown className="w-4 h-4 fill-primary-500/30" />
                   </span>
                 )}
               </div>

@@ -31,7 +31,6 @@ export async function GET(request: Request) {
         adminPermissions: u.adminPermissions || [],
         allowedBatches: u.allowedBatches || [],
         isPremium: !!u.isPremium,
-        premiumExpiresAt: u.premiumExpiresAt ? new Date(u.premiumExpiresAt).toISOString() : null,
         premiumPlan: u.premiumPlan || 'free',
         totalScore: u.totalScore || 0,
         testsCompleted: u.testsCompleted || 0,
@@ -69,29 +68,59 @@ export async function POST(request: Request) {
 
     if (action === 'grant_demo') {
       const minutes = parseInt(demoDurationMinutes) || 15;
-      targetUser.isPremium = true;
-      targetUser.premiumExpiresAt = new Date(Date.now() + minutes * 60 * 1000);
-      targetUser.premiumPlan = `${minutes}m_demo`;
-      targetUser.allowedBatches = ['SigmaX'];
-      targetUser.hasCourseAccess = true;
-      targetUser.grantedBy = sessionUser!.email.toLowerCase().trim();
-      await targetUser.save();
-      invalidateUserCourseCache(cleanTarget);
+      const now = new Date();
+      const isCurrentlyOnline = targetUser.lastActiveAt && (now.getTime() - new Date(targetUser.lastActiveAt).getTime() < 2 * 60 * 1000);
 
-      return NextResponse.json({
-        success: true,
-        message: `${minutes}m Demo granted successfully to ${targetUser.email}`,
-        user: {
-          id: targetUser._id.toString(),
-          name: targetUser.name,
-          email: targetUser.email,
-          role: targetUser.role,
-          adminPermissions: targetUser.adminPermissions,
-          allowedBatches: targetUser.allowedBatches,
-          isPremium: targetUser.isPremium,
-          premiumExpiresAt: targetUser.premiumExpiresAt.toISOString(),
-        }
-      });
+      if (isCurrentlyOnline) {
+        // User is online right now — activate demo timer immediately
+        const expiresAt = new Date(now.getTime() + minutes * 60 * 1000);
+        targetUser.isPremium = true;
+        targetUser.premiumExpiresAt = expiresAt;
+        targetUser.premiumPlan = `${minutes}m_demo`;
+        targetUser.allowedBatches = Array.from(new Set([...(targetUser.allowedBatches || []), 'SigmaX']));
+        targetUser.hasCourseAccess = true;
+        targetUser.grantedBy = sessionUser!.email.toLowerCase().trim();
+        await targetUser.save();
+        invalidateUserCourseCache(cleanTarget);
+
+        return NextResponse.json({
+          success: true,
+          message: `${minutes}m Demo granted & activated immediately for ${targetUser.email} (Expires at ${expiresAt.toLocaleTimeString()})`,
+          user: {
+            id: targetUser._id.toString(),
+            name: targetUser.name,
+            email: targetUser.email,
+            role: targetUser.role,
+            adminPermissions: targetUser.adminPermissions,
+            allowedBatches: targetUser.allowedBatches,
+            isPremium: targetUser.isPremium,
+            premiumExpiresAt: targetUser.premiumExpiresAt.toISOString(),
+          }
+        });
+      } else {
+        // User is offline — queue pending demo so timer only starts when they come online
+        targetUser.isPremium = false;
+        targetUser.premiumExpiresAt = null;
+        targetUser.premiumPlan = `pending_demo:${minutes}m`;
+        targetUser.grantedBy = sessionUser!.email.toLowerCase().trim();
+        await targetUser.save();
+
+        return NextResponse.json({
+          success: true,
+          message: `${minutes}m Demo granted! Timer will automatically start when ${targetUser.email} comes online.`,
+          user: {
+            id: targetUser._id.toString(),
+            name: targetUser.name,
+            email: targetUser.email,
+            role: targetUser.role,
+            adminPermissions: targetUser.adminPermissions,
+            allowedBatches: targetUser.allowedBatches,
+            isPremium: false,
+            premiumExpiresAt: null,
+            premiumPlan: targetUser.premiumPlan,
+          }
+        });
+      }
     }
 
     // Modifying role or granular permissions requires Superadmin privileges

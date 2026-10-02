@@ -6,6 +6,7 @@ import { PreApprovedEmail } from '@/models/PreApprovedEmail';
 import { LaunchEvent } from '@/models/LaunchEvent';
 import { SUPERADMIN_EMAIL } from '@/lib/adminAuth';
 import { isCourseBatch } from '@/lib/batchAccess';
+import { processPendingDemoActivation } from '@/lib/pendingDemoHelper';
 
 export const { handlers, auth, signIn, signOut } = NextAuth({
   ...authConfig,
@@ -141,8 +142,14 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
           const dbSyncPromise = (async () => {
             const conn = await connectToDatabase();
             if (conn) {
-              const dbUser = await User.findOne({ email: token.email }).lean();
+              let dbUser = await User.findOne({ email: token.email }).lean();
               if (dbUser) {
+                // Check if user came online with a queued pending demo ('pending_demo:Xm')
+                const wasActivated = await processPendingDemoActivation(dbUser);
+                if (wasActivated) {
+                  const updatedUser = await User.findOne({ email: token.email }).lean();
+                  if (updatedUser) dbUser = updatedUser;
+                }
                 const userRole = dbUser.role || (token.email === SUPERADMIN_EMAIL ? 'superadmin' : 'user');
                 const isSuperOrAdmin = userRole === 'superadmin' || userRole === 'admin' || token.email === SUPERADMIN_EMAIL;
                 const adminPermissions = dbUser.adminPermissions || [];

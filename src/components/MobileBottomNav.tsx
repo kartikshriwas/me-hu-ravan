@@ -130,16 +130,14 @@ export function MobileBottomNav() {
               {/* Icon / Avatar */}
               <div className="relative flex items-center justify-center">
                 {item.isProfile && user ? (
-                  <div className={`p-0.5 rounded-full transition-all duration-200 ${isActive ? 'scale-105 ring-2 ring-emerald-500/60 dark:ring-emerald-400/60 shadow-xs' : ''}`}>
-                    <UserAvatar
-                      name={user.name}
-                      email={user.email}
-                      image={user.image}
-                      size="xs"
-                      isPremium={user.isPremium}
-                      className="!w-5 !h-5 !rounded-full"
-                    />
-                  </div>
+                  <UserAvatar
+                    name={user.name}
+                    email={user.email}
+                    image={user.image}
+                    size="sm"
+                    isPremium={user.isPremium}
+                    className="!w-6 !h-6 !rounded-full"
+                  />
                 ) : (
                   <Icon className={`w-5 h-5 transition-transform duration-200 ${isActive ? 'scale-110' : ''}`} />
                 )}
