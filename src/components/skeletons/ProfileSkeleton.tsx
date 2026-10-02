@@ -12,10 +12,10 @@ export function ProfileSkeleton() {
             <Skeleton className="w-20 h-20 rounded-2xl shrink-0" />
 
             <div className="space-y-2">
-              {/* Name & Badges */}
-              <div className="flex flex-wrap items-center gap-2">
-                <Skeleton className="h-7 sm:h-8 w-48 rounded-lg" />
-                <Skeleton className="h-6 w-32 rounded-full" />
+              {/* Name & Crown Badge */}
+              <div className="flex items-center gap-2">
+                <Skeleton className="h-7 sm:h-8 w-44 rounded-lg" />
+                <Skeleton className="w-7 h-7 rounded-full shrink-0" />
               </div>
 
               {/* Email */}
@@ -23,8 +23,6 @@ export function ProfileSkeleton() {
 
               {/* Joined Date, Rank, and Expiry info */}
               <div className="flex items-center gap-3 pt-1 flex-wrap">
-                <Skeleton className="h-3.5 w-28 rounded" />
-                <span className="text-muted-foreground/40">•</span>
                 <Skeleton className="h-3.5 w-32 rounded" />
                 <span className="text-muted-foreground/40">•</span>
                 <Skeleton className="h-3.5 w-36 rounded" />

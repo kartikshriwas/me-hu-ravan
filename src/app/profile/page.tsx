@@ -208,32 +208,12 @@ export default function ProfilePage() {
                   {u.name}
                 </h1>
 
-                {u.role === "superadmin" ? (
-                  <Link
-                    href="/admin"
-                    className="px-2.5 py-0.5 rounded-full text-xs font-black bg-amber-500 hover:bg-amber-400 text-black shadow-md flex items-center gap-1 transition-colors"
-                    title="Open Admin Dashboard"
+                {u.isPremium && (
+                  <span
+                    className="inline-flex items-center justify-center p-1.5 rounded-full bg-amber-500/15 text-amber-500 border border-amber-500/30 shadow-xs shrink-0"
+                    title="Premium Member"
                   >
-                    <ShieldCheck className="w-3.5 h-3.5" /> Super Admin
-                  </Link>
-                ) : u.role === "admin" ? (
-                  <Link
-                    href="/admin"
-                    className="px-2.5 py-0.5 rounded-full text-xs font-bold bg-primary-600/30 hover:bg-primary-600/50 text-primary-600 dark:text-primary-300 border border-primary-500/40 flex items-center gap-1 transition-colors"
-                    title="Open Admin Dashboard"
-                  >
-                    <ShieldCheck className="w-3.5 h-3.5" /> Admin
-                  </Link>
-                ) : null}
-
-                {u.isPremium ? (
-                  <span className="px-2.5 py-0.5 rounded-full text-xs font-bold bg-emerald-500/20 text-emerald-600 dark:text-emerald-300 border border-emerald-500/40 flex items-center gap-1">
-                    <Crown className="w-3.5 h-3.5 text-amber-600 dark:text-amber-400" />{" "}
-                    Premium Member
-                  </span>
-                ) : (
-                  <span className="px-2.5 py-0.5 rounded-full text-xs font-medium bg-slate-800 text-muted-foreground border border-slate-700">
-                    Free Plan
+                    <Crown className="w-4 h-4 fill-amber-500/30" />
                   </span>
                 )}
               </div>
@@ -243,15 +223,6 @@ export default function ProfilePage() {
               </p>
 
               <div className="flex items-center gap-3 text-[11px] text-muted-foreground pt-1 flex-wrap">
-                <span className="flex items-center gap-1">
-                  <Calendar className="w-3.5 h-3.5 text-primary-600 dark:text-primary-400" />
-                  Joined{" "}
-                  {new Date(u.createdAt).toLocaleDateString("en-US", {
-                    month: "short",
-                    year: "numeric",
-                  })}
-                </span>
-                <span>•</span>
                 <span className="flex items-center gap-1 font-bold text-amber-600 dark:text-amber-400">
                   <Trophy className="w-3.5 h-3.5 text-amber-600 dark:text-amber-400" />
                   Global Rank #{u.rank || "-"}
