@@ -49,6 +49,21 @@ interface SessionEventItem {
   details: string;
 }
 
+function formatTimeAgo(secondsAgo: number | null): string {
+  if (secondsAgo === null || isNaN(secondsAgo)) return '—';
+  if (secondsAgo < 60) return `${secondsAgo}s ago`;
+  const minutes = Math.floor(secondsAgo / 60);
+  if (minutes < 60) return `${minutes}m ago`;
+  const hours = Math.floor(minutes / 60);
+  if (hours < 24) return `${hours}h ago`;
+  const days = Math.floor(hours / 24);
+  if (days < 30) return `${days}d ago`;
+  const months = Math.floor(days / 30);
+  if (months < 12) return `${months}mo ago`;
+  const years = Math.floor(days / 365);
+  return `${years}y ago`;
+}
+
 interface ActiveSessionItem {
   id: string;
   sessionId: string;
@@ -1934,16 +1949,20 @@ export default function AdminDashboardPage() {
                             </div>
                           </td>
                           <td className="py-3 px-4">
-                            <span className="text-foreground/80 font-mono text-[11px] block">
-                              {new Date(s.startedAt).toLocaleString(undefined, { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' })}
+                            <span
+                              className="text-foreground/80 font-mono text-[11px] block cursor-help"
+                              title={s.startedAt ? new Date(s.startedAt).toLocaleString() : undefined}
+                            >
+                              {formatTimeAgo(s.startedAt ? Math.max(0, Math.floor((Date.now() - new Date(s.startedAt).getTime()) / 1000)) : null)}
                             </span>
                           </td>
                           <td className="py-3 px-4">
                             <div className="space-y-0.5">
-                              <span className="text-foreground font-mono text-[11px] block">
-                                {s.lastSeenSecondsAgo < 60
-                                  ? `${s.lastSeenSecondsAgo}s ago`
-                                  : `${Math.floor(s.lastSeenSecondsAgo / 60)}m ago`}
+                              <span
+                                className="text-foreground font-mono text-[11px] block cursor-help"
+                                title={s.lastHeartbeat ? new Date(s.lastHeartbeat).toLocaleString() : undefined}
+                              >
+                                {formatTimeAgo(s.lastSeenSecondsAgo)}
                               </span>
                               <span className="text-[10px] text-slate-500 font-mono block">
                                 {new Date(s.lastHeartbeat).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' })}
@@ -2439,7 +2458,7 @@ export default function AdminDashboardPage() {
                 </thead>
                 <tbody className="divide-y divide-slate-800/60">
                   {filteredUsers.map((u) => {
-                    const isSuper = u.email.toLowerCase() === (process.env.NEXT_PUBLIC_SUPERADMIN_EMAIL ?? '').toLowerCase();
+                    const isSuper = u.email.toLowerCase() === (process.env.SUPERADMIN_EMAIL ?? '').toLowerCase();
                     const permCount = u.adminPermissions ? u.adminPermissions.length : 0;
                     const batchCount = u.allowedBatches ? u.allowedBatches.length : 0;
 
@@ -2955,13 +2974,11 @@ export default function AdminDashboardPage() {
                           <div className="space-y-2.5 max-h-72 overflow-y-auto custom-scrollbar pr-1">
                             {inspectData.sessions.map((s: any) => {
                               const loginAt = s.startedAt ? new Date(s.startedAt) : null;
+                              const loginSecondsAgo = loginAt ? Math.max(0, Math.floor((Date.now() - loginAt.getTime()) / 1000)) : null;
+                              const loginAtLabel = formatTimeAgo(loginSecondsAgo);
                               const lastSeen = s.lastHeartbeat ? new Date(s.lastHeartbeat) : null;
                               const secondsAgo = lastSeen ? Math.floor((Date.now() - lastSeen.getTime()) / 1000) : null;
-                              const lastSeenLabel =
-                                secondsAgo === null ? '—'
-                                : secondsAgo < 60 ? `${secondsAgo}s ago`
-                                : secondsAgo < 3600 ? `${Math.floor(secondsAgo / 60)}m ago`
-                                : lastSeen!.toLocaleTimeString();
+                              const lastSeenLabel = formatTimeAgo(secondsAgo);
 
                               const stateColors: Record<string, string> = {
                                 active: 'bg-emerald-500/20 text-emerald-600 dark:text-emerald-300 border-emerald-500/30',
@@ -2999,15 +3016,13 @@ export default function AdminDashboardPage() {
                                     <div className="flex items-center gap-4 text-[10px] font-mono">
                                       <div className="space-y-0.5">
                                         <p className="text-slate-500 uppercase tracking-wider font-bold">Logged in at</p>
-                                        <p className="text-foreground/80 font-bold">
-                                          {loginAt
-                                            ? `${loginAt.toLocaleDateString([], { month: 'short', day: 'numeric' })} · ${loginAt.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}`
-                                            : '—'}
+                                        <p className="text-foreground/80 font-bold cursor-help" title={loginAt ? loginAt.toLocaleString() : undefined}>
+                                          {loginAtLabel}
                                         </p>
                                       </div>
                                       <div className="space-y-0.5">
                                         <p className="text-slate-500 uppercase tracking-wider font-bold">Last seen</p>
-                                        <p className="text-amber-600 dark:text-amber-300 font-bold">{lastSeenLabel}</p>
+                                        <p className="text-amber-600 dark:text-amber-300 font-bold cursor-help" title={lastSeen ? lastSeen.toLocaleString() : undefined}>{lastSeenLabel}</p>
                                       </div>
                                     </div>
                                     {isSuperadmin && (
@@ -3055,13 +3070,11 @@ export default function AdminDashboardPage() {
                               <tbody className="divide-y divide-slate-800/60">
                                 {inspectData.recentSessions.map((s: any) => {
                                   const loginAt = s.startedAt ? new Date(s.startedAt) : null;
+                                  const loginSecondsAgo = loginAt ? Math.max(0, Math.floor((Date.now() - loginAt.getTime()) / 1000)) : null;
+                                  const loginAtLabel = formatTimeAgo(loginSecondsAgo);
                                   const lastSeen = s.lastHeartbeat ? new Date(s.lastHeartbeat) : null;
                                   const secondsAgo = lastSeen ? Math.floor((Date.now() - lastSeen.getTime()) / 1000) : null;
-                                  const lastSeenLabel =
-                                    secondsAgo === null ? '—'
-                                    : secondsAgo < 60 ? `${secondsAgo}s ago`
-                                    : secondsAgo < 3600 ? `${Math.floor(secondsAgo / 60)}m ago`
-                                    : `${Math.floor(secondsAgo / 3600)}h ago`;
+                                  const lastSeenLabel = formatTimeAgo(secondsAgo);
 
                                   const stateStyles: Record<string, string> = {
                                     active: 'bg-emerald-500/20 text-emerald-600 dark:text-emerald-300',
@@ -3094,12 +3107,16 @@ export default function AdminDashboardPage() {
                                       <td className="px-3 py-2.5 font-mono text-emerald-600 dark:text-emerald-400 font-bold">
                                         {s.ipAddress || '127.0.0.1'}
                                       </td>
-                                      <td className="px-3 py-2.5 font-mono text-foreground/80">
-                                        {loginAt
-                                          ? `${loginAt.toLocaleDateString([], { month: 'short', day: 'numeric' })} ${loginAt.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}`
-                                          : '—'}
+                                      <td
+                                        className="px-3 py-2.5 font-mono text-foreground/80 cursor-help"
+                                        title={loginAt ? loginAt.toLocaleString() : undefined}
+                                      >
+                                        {loginAtLabel}
                                       </td>
-                                      <td className="px-3 py-2.5 font-mono text-amber-600 dark:text-amber-300 font-bold">
+                                      <td
+                                        className="px-3 py-2.5 font-mono text-amber-600 dark:text-amber-300 font-bold cursor-help"
+                                        title={lastSeen ? lastSeen.toLocaleString() : undefined}
+                                      >
                                         {lastSeenLabel}
                                       </td>
                                     </tr>

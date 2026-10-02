@@ -133,8 +133,8 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
     async jwt({ token, user, trigger, session }) {
       const now = Date.now();
       const lastSync = (token.lastDbSync as number) || 0;
-      // Re-sync with DB on sign in, explicit update, missing token id, or after 5 minutes
-      const shouldSync = Boolean(user || trigger === 'update' || !token.id || (now - lastSync) > (5 * 60 * 1000));
+      // Re-sync with DB on sign in, explicit update, missing token id, or after 1 minute
+      const shouldSync = Boolean(user || trigger === 'update' || !token.id || (now - lastSync) > (60 * 1000));
 
       if (shouldSync && token.email) {
         try {

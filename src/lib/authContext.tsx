@@ -65,7 +65,7 @@ function AuthProviderInner({ children }: { children: React.ReactNode }) {
 
 export function AuthProvider({ children }: { children: React.ReactNode }) {
   return (
-    <SessionProvider refetchOnWindowFocus={false} refetchWhenOffline={false} refetchInterval={5 * 60}>
+    <SessionProvider refetchOnWindowFocus={true} refetchWhenOffline={false} refetchInterval={60}>
       <AuthProviderInner>{children}</AuthProviderInner>
     </SessionProvider>
   );
