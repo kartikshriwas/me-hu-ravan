@@ -231,6 +231,99 @@ export function getAllCourses(): CourseMeta[] {
   return results;
 }
 
+export function parseRawCourseData(data: any, fallbackSlug: string = 'course'): CourseDetail | null {
+  if (!data) return null;
+  const course = data.course || data;
+  const slug = course.identifiers?.slug || course.titleId || fallbackSlug;
+
+  const unitsMap = {
+    ...(course.units || {}),
+    ...(course.videos || {}),
+    ...(course.assessments || {}),
+    ...(course.objects || {}),
+    ...(course.ebooks || {})
+  };
+  const rawSections = course.sections || {};
+  const parsedSections: CourseSection[] = [];
+  let rawUnitsCount = 0;
+  let populatedUnitsCount = 0;
+  let videosCount = 0;
+
+  Object.entries(rawSections).forEach(([secId, secData]: [string, any]) => {
+    const learningPath = Array.isArray(secData.learningPath) ? secData.learningPath : [];
+    rawUnitsCount += learningPath.length;
+
+    const units: CourseSectionUnit[] = learningPath
+      .map((lpItem: any) => {
+        const unitMeta = unitsMap[lpItem.id] || {};
+        const hasContent = unitMeta.hasData || !!unitMeta.sourceid || !!unitMeta.vimeoid || !!unitMeta.fileUrl || (typeof unitMeta.duration === 'number' && unitMeta.duration > 0);
+        if (hasContent) {
+          populatedUnitsCount++;
+        }
+
+        return {
+          id: lpItem.id,
+          type: lpItem.type || unitMeta.objectType || 'lesson',
+          icon: lpItem.icon || 'video',
+          subtitle: lpItem.subtitle || '',
+          unitTitle: unitMeta.title || lpItem.unitTitle || 'Lesson Unit',
+          title: unitMeta.title || lpItem.unitTitle || 'Lesson Unit',
+          description: unitMeta.description || '',
+          access: unitMeta.access || lpItem.access || 'public',
+          data: unitMeta.data || lpItem.data || undefined,
+          questionsCount: unitMeta.questionsCount || undefined,
+          hasData: unitMeta.hasData || false,
+          sourceid: unitMeta.sourceid || undefined,
+          vimeoid: unitMeta.vimeoid || undefined,
+          fileUrl: unitMeta.fileUrl || lpItem.fileUrl || undefined,
+          duration: typeof unitMeta.duration === 'number' ? unitMeta.duration : undefined
+        };
+      })
+      .filter((unit: CourseSectionUnit) => isUnitActionable(unit));
+
+    if (units.length > 0) {
+      units.forEach(u => {
+        const type = (u.type || '').toLowerCase();
+        const icon = (u.icon || '').toLowerCase();
+        const isVideo = type === 'ivideo' || type === 'wistia' || type === 'video' || type === 'youtube' || icon === 'video' || icon === 'yt' || !!u.sourceid || !!u.vimeoid;
+        if (isVideo) videosCount++;
+      });
+
+      parsedSections.push({
+        id: secId,
+        title: secData.title || 'Course Section',
+        description: secData.description || '',
+        access: secData.access || 'public',
+        units
+      });
+    }
+  });
+
+  const totalUnits = parsedSections.reduce((sum, s) => sum + s.units.length, 0);
+  const isOngoing = rawUnitsCount > 0 && (populatedUnitsCount / rawUnitsCount) < 0.95;
+
+  return {
+    title: course.title || fallbackSlug,
+    slug,
+    filename: `${slug}.json`,
+    keywords: course.keywords || null,
+    description: course.description || null,
+    access: course.access || 'public',
+    price: course.price || 0,
+    courseImage: course.courseImage || null,
+    sectionsCount: parsedSections.length,
+    unitsCount: totalUnits,
+    videosCount,
+    totalDurationSeconds: (() => {
+      const total = parsedSections.reduce((sum, s) =>
+        sum + s.units.reduce((uSum, u) => uSum + (u.duration || 0), 0), 0);
+      return total > 0 ? total : undefined;
+    })(),
+    isOngoing,
+    sections: parsedSections
+  };
+}
+
 export function getCourseBySlug(slug: string): CourseDetail | null {
   const dir = getCoursesDirectory();
   if (!fs.existsSync(dir)) return null;
@@ -258,92 +351,11 @@ export function getCourseBySlug(slug: string): CourseDetail | null {
       const fileSlug = course.identifiers?.slug || course.titleId || path.basename(file, '.json').toLowerCase();
 
       if (fileSlug.toLowerCase() === safeSlug.toLowerCase() || path.basename(file, '.json').toLowerCase() === safeSlug.toLowerCase()) {
-        const unitsMap = {
-          ...(course.units || {}),
-          ...(course.videos || {}),
-          ...(course.assessments || {}),
-          ...(course.objects || {}),
-          ...(course.ebooks || {})
-        };
-        const rawSections = course.sections || {};
-        const parsedSections: CourseSection[] = [];
-        let rawUnitsCount = 0;
-        let populatedUnitsCount = 0;
-        let videosCount = 0;
-
-        Object.entries(rawSections).forEach(([secId, secData]: [string, any]) => {
-          const learningPath = Array.isArray(secData.learningPath) ? secData.learningPath : [];
-          rawUnitsCount += learningPath.length;
-
-          const units: CourseSectionUnit[] = learningPath
-            .map((lpItem: any) => {
-              const unitMeta = unitsMap[lpItem.id] || {};
-              const hasContent = unitMeta.hasData || !!unitMeta.sourceid || !!unitMeta.vimeoid || !!unitMeta.fileUrl || (typeof unitMeta.duration === 'number' && unitMeta.duration > 0);
-              if (hasContent) {
-                populatedUnitsCount++;
-              }
-
-              return {
-                id: lpItem.id,
-                type: lpItem.type || unitMeta.objectType || 'lesson',
-                icon: lpItem.icon || 'video',
-                subtitle: lpItem.subtitle || '',
-                unitTitle: unitMeta.title || lpItem.unitTitle || 'Lesson Unit',
-                title: unitMeta.title || lpItem.unitTitle || 'Lesson Unit',
-                description: unitMeta.description || '',
-                access: unitMeta.access || lpItem.access || 'public',
-                data: unitMeta.data || lpItem.data || undefined,
-                questionsCount: unitMeta.questionsCount || undefined,
-                hasData: unitMeta.hasData || false,
-                sourceid: unitMeta.sourceid || undefined,
-                vimeoid: unitMeta.vimeoid || undefined,
-                fileUrl: unitMeta.fileUrl || lpItem.fileUrl || undefined,
-                duration: typeof unitMeta.duration === 'number' ? unitMeta.duration : undefined
-              };
-            })
-            .filter((unit: CourseSectionUnit) => isUnitActionable(unit));
-
-          if (units.length > 0) {
-            units.forEach(u => {
-              const type = (u.type || '').toLowerCase();
-              const icon = (u.icon || '').toLowerCase();
-              const isVideo = type === 'ivideo' || type === 'wistia' || type === 'video' || type === 'youtube' || icon === 'video' || icon === 'yt' || !!u.sourceid || !!u.vimeoid;
-              if (isVideo) videosCount++;
-            });
-
-            parsedSections.push({
-              id: secId,
-              title: secData.title || 'Course Section',
-              description: secData.description || '',
-              access: secData.access || 'public',
-              units
-            });
-          }
-        });
-
-        const totalUnits = parsedSections.reduce((sum, s) => sum + s.units.length, 0);
-        const isOngoing = rawUnitsCount > 0 && (populatedUnitsCount / rawUnitsCount) < 0.95;
-
-        return {
-          title: course.title || path.basename(file, '.json'),
-          slug: fileSlug,
-          filename: file,
-          keywords: course.keywords || null,
-          description: course.description || null,
-          access: course.access || 'public',
-          price: course.price || 0,
-          courseImage: course.courseImage || null,
-          sectionsCount: parsedSections.length,
-          unitsCount: totalUnits,
-          videosCount,
-          totalDurationSeconds: (() => {
-            const total = parsedSections.reduce((sum, s) =>
-              sum + s.units.reduce((uSum, u) => uSum + (u.duration || 0), 0), 0);
-            return total > 0 ? total : undefined;
-          })(),
-          isOngoing,
-          sections: parsedSections
-        };
+        const parsed = parseRawCourseData(data, safeSlug);
+        if (parsed) {
+          parsed.filename = file;
+          return parsed;
+        }
       }
     } catch (err) {
       console.error(`Error parsing course ${file}:`, err);
