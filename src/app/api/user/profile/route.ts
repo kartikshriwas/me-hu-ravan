@@ -6,6 +6,7 @@ import { Attempt } from '@/models/Attempt';
 import { isPlatformGlobalFree } from '@/lib/globalSetting';
 import { isCourseBatch } from '@/lib/batchAccess';
 import { SUPERADMIN_EMAIL } from '@/lib/adminAuth';
+import crypto from 'crypto';
 
 import { processPendingDemoActivation } from '@/lib/pendingDemoHelper';
 
@@ -89,6 +90,10 @@ export async function GET(request: Request) {
     const courseBatches = userBatches.filter(isCourseBatch);
     const hasCourseAccess = isSuperadmin || userRole === 'superadmin' || userRole === 'admin' || userPerms.includes('access_courses') || userPerms.includes('*') || courseBatches.length > 0;
 
+    const OFFLINE_SECRET = process.env.OFFLINE_ACCESS_SECRET || 'fallback-secret-for-preptea-offline';
+    const payload = `${cleanEmail}:${hasCourseAccess}:${userBatches.join(',')}`;
+    const offlineAccessSignature = crypto.createHmac('sha256', OFFLINE_SECRET).update(payload).digest('hex');
+
     return NextResponse.json({
       success: true,
       user: {
@@ -108,6 +113,7 @@ export async function GET(request: Request) {
         averageAccuracy: dbUser?.averageAccuracy || 0,
         createdAt: dbUser?.createdAt ? new Date(dbUser.createdAt).toISOString() : new Date().toISOString(),
         rank: userRank,
+        offlineAccessSignature,
       },
       recentAttempts: attempts.map((a) => ({
         id: a._id.toString(),

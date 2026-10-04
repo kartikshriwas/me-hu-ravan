@@ -23,8 +23,17 @@ import {
   SlidersHorizontal,
   RectangleHorizontal,
   SkipBack,
-  SkipForward
+  SkipForward,
+  ArrowDownToLine,
+  CheckCircle2,
+  Download,
+  Trash2,
+  ArrowUpRight
 } from 'lucide-react';
+import { useDownloads } from '@/lib/downloadContext';
+import { useAuth } from '@/lib/authContext';
+import { checkUserCourseAccess, checkUserIsPremium } from '@/lib/batchAccess';
+import { OfflineState } from '@/components/OfflineState';
 
 interface VideoAsset {
   type: string;
@@ -48,6 +57,9 @@ interface WistiaVideoData {
 interface CustomVideoPlayerProps {
   videoId: string; // Wistia sourceid or unit id
   courseSlug?: string;
+  courseTitle?: string;
+  sectionTitle?: string;
+  sectionId?: string;
   title?: string;
   embedHtml?: string;
   onClose?: () => void;
@@ -57,11 +69,17 @@ interface CustomVideoPlayerProps {
   nextTitle?: string;
   isTheaterMode?: boolean;
   onToggleTheaterMode?: () => void;
+  blobUrl?: string;
+  onNext?: () => void;
+  onPrev?: () => void;
 }
 
 export function CustomVideoPlayer({ 
   videoId, 
   courseSlug,
+  courseTitle,
+  sectionTitle,
+  sectionId,
   title, 
   embedHtml,
   onClose, 
@@ -70,9 +88,79 @@ export function CustomVideoPlayer({
   prevTitle,
   nextTitle,
   isTheaterMode = false,
-  onToggleTheaterMode
+  onToggleTheaterMode,
+  blobUrl,
+  onNext,
+  onPrev,
 }: CustomVideoPlayerProps) {
   const router = useRouter();
+  const { user } = useAuth();
+  const hasCourseAccess = checkUserCourseAccess(user);
+  const isPremium = checkUserIsPremium(user);
+  const [hasMounted, setHasMounted] = useState<boolean>(false);
+  const [isOnline, setIsOnline] = useState<boolean>(true);
+
+  useEffect(() => {
+    setHasMounted(true);
+    if (typeof window !== 'undefined' && typeof navigator !== 'undefined' && typeof navigator.onLine === 'boolean') {
+      setIsOnline(navigator.onLine);
+    }
+    const handleOnline = () => setIsOnline(true);
+    const handleOffline = () => setIsOnline(false);
+    window.addEventListener('online', handleOnline);
+    window.addEventListener('offline', handleOffline);
+    return () => {
+      window.removeEventListener('online', handleOnline);
+      window.removeEventListener('offline', handleOffline);
+    };
+  }, []);
+
+  const {
+    isDownloaded,
+    isDownloading,
+    getDownloadProgress,
+    startDownload,
+    cancelDownload,
+    deleteDownload,
+    getBlobUrl,
+    downloads,
+  } = useDownloads();
+
+  const [localBlobUrl, setLocalBlobUrl] = useState<string | null>(blobUrl || null);
+  const [showDownloadQualityModal, setShowDownloadQualityModal] = useState(false);
+  const [showDownloadedMenu, setShowDownloadedMenu] = useState(false);
+  const [downloadQualityAsset, setDownloadQualityAsset] = useState<VideoAsset | null>(null);
+
+  const isCurrentDownloaded = isDownloaded(videoId);
+  const isCurrentDownloading = isDownloading(videoId);
+  const downloadProgress = getDownloadProgress(videoId);
+
+  // Load offline blob URL if downloaded or passed via prop
+  useEffect(() => {
+    let active = true;
+    async function loadOfflineBlob() {
+      if (blobUrl) {
+        setLocalBlobUrl(blobUrl);
+        return;
+      }
+      if (isCurrentDownloaded) {
+        try {
+          const url = await getBlobUrl(videoId);
+          if (active && url) {
+            setLocalBlobUrl(url);
+          }
+        } catch (e) {
+          console.warn('Could not load offline video blob:', e);
+        }
+      } else {
+        setLocalBlobUrl(null);
+      }
+    }
+    loadOfflineBlob();
+    return () => {
+      active = false;
+    };
+  }, [videoId, isCurrentDownloaded, getBlobUrl, blobUrl]);
   const [videoData, setVideoData] = useState<WistiaVideoData | null>(null);
   const [loading, setLoading] = useState<boolean>(!embedHtml);
   const [error, setError] = useState<string | null>(null);
@@ -177,10 +265,12 @@ export function CustomVideoPlayer({
           setActiveAsset(defaultAsset);
           setSelectedAsset(defaultAsset);
         } else {
-          setError(json.error || 'Failed to load video details.');
+          if (!blobUrl && !localBlobUrl) {
+            setError(json.error || 'Failed to load video details.');
+          }
         }
       } catch (err) {
-        if (active) setError('An error occurred while loading the video.');
+        if (active && !blobUrl && !localBlobUrl) setError('An error occurred while loading the video.');
       } finally {
         if (active) setLoading(false);
       }
@@ -190,7 +280,7 @@ export function CustomVideoPlayer({
     return () => {
       active = false;
     };
-  }, [videoId, embedHtml]);
+  }, [videoId, embedHtml, blobUrl, localBlobUrl]);
 
   // Restore preferred playback speed from localStorage on initial mount
   useEffect(() => {
@@ -392,6 +482,10 @@ export function CustomVideoPlayer({
       // ignore
     }
 
+    if (onNext) {
+      onNext();
+      return;
+    }
     if (nextVideoUrl && !autoPlayCancelled) {
       router.push(nextVideoUrl);
     }
@@ -440,7 +534,7 @@ export function CustomVideoPlayer({
       }
     }
 
-    if (nextVideoUrl && !autoPlayCancelled && duration > 0) {
+    if ((nextVideoUrl || onNext) && !autoPlayCancelled && duration > 0) {
       const remaining = duration - currentTimeVal;
       if (remaining <= 10 && remaining > 0) {
         setShowAutoPlayOverlay(true);
@@ -578,7 +672,10 @@ export function CustomVideoPlayer({
 
       // Shift + Right Arrow: Next Video
       if (e.shiftKey && (e.key === 'ArrowRight' || e.code === 'ArrowRight')) {
-        if (nextVideoUrl) {
+        if (onNext) {
+          e.preventDefault();
+          onNext();
+        } else if (nextVideoUrl) {
           e.preventDefault();
           router.push(nextVideoUrl);
         }
@@ -587,7 +684,10 @@ export function CustomVideoPlayer({
 
       // Shift + Left Arrow: Previous (Preview) Video
       if (e.shiftKey && (e.key === 'ArrowLeft' || e.code === 'ArrowLeft')) {
-        if (prevVideoUrl) {
+        if (onPrev) {
+          e.preventDefault();
+          onPrev();
+        } else if (prevVideoUrl) {
           e.preventDefault();
           router.push(prevVideoUrl);
         }
@@ -633,7 +733,73 @@ export function CustomVideoPlayer({
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [isPlaying, nextVideoUrl, prevVideoUrl, router]);
 
-  // YouTube Embed Renderer fallback
+  // Has playable video stream source (network or offline blob)
+  const hasPlayableSource = !!(blobUrl || localBlobUrl || activeAsset?.url);
+
+  // If not mounted yet and not an iframe embed or direct blob, render consistent SSR loading placeholder
+  if (!hasMounted && !embedHtml && !blobUrl) {
+    return (
+      <div className="w-full aspect-[16/10] sm:aspect-video min-h-[220px] sm:min-h-0 flex flex-col items-center justify-center bg-background/90 border border-card-border/80 rounded-2xl sm:rounded-3xl p-6">
+        <Loader2 className="w-8 h-8 text-primary-600 dark:text-primary-400 animate-spin" />
+        <p className="text-xs text-muted-foreground mt-3 font-medium">Loading stream...</p>
+      </div>
+    );
+  }
+
+  // 1. Offline state — applies to all video sources if not stored in local downloads vault
+  if (hasMounted && !isOnline && !hasPlayableSource) {
+    return (
+      <div className="w-full flex flex-col gap-3">
+        <div className="relative w-full aspect-[16/10] sm:aspect-video min-h-[240px] sm:min-h-0 bg-black/95 rounded-2xl sm:rounded-3xl overflow-hidden border border-card-border/80 shadow-2xl flex items-center justify-center p-6 order-1">
+          <OfflineState
+            isPremium={isPremium || hasCourseAccess}
+            onRetry={() => {
+              if (typeof window !== 'undefined') window.location.reload();
+            }}
+          />
+        </div>
+
+        <div className="flex flex-wrap sm:flex-nowrap items-center justify-between gap-3 px-3 sm:px-5 py-2.5 sm:py-3 rounded-2xl bg-card/60 border border-card-border/80 order-2">
+          <div className="min-w-0 flex-1">
+            <h3 className="text-xs sm:text-sm font-bold text-foreground truncate mt-0.5">{title || 'Video Lesson'}</h3>
+            {courseTitle && <p className="text-[11px] text-muted-foreground truncate">{courseTitle}</p>}
+          </div>
+          <div className="flex items-center gap-2 shrink-0">
+            {prevVideoUrl && (
+              <Link
+                href={prevVideoUrl}
+                className="text-xs sm:text-sm font-semibold text-foreground hover:text-foreground px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl bg-slate-800 hover:bg-slate-700/80 border border-slate-700/60 hover:border-primary-500/50 transition-all flex items-center gap-1.5 touch-manipulation"
+                title={prevTitle ? `Previous (Shift + ←): ${prevTitle}` : "Previous Video (Shift + ←)"}
+              >
+                <ChevronLeft className="w-4 h-4 text-muted-foreground" />
+                <span>Previous</span>
+              </Link>
+            )}
+            {nextVideoUrl && (
+              <Link
+                href={nextVideoUrl}
+                className="text-xs sm:text-sm font-semibold text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl bg-primary-600 hover:bg-primary-500 border border-primary-400/30 transition-all flex items-center gap-1.5 shadow-md shadow-primary-950/40 touch-manipulation"
+                title={nextTitle ? `Next (Shift + →): ${nextTitle}` : "Next Video (Shift + →)"}
+              >
+                <span>Next</span>
+                <ChevronRight className="w-4 h-4 text-foreground" />
+              </Link>
+            )}
+            {onClose && (
+              <button
+                onClick={onClose}
+                className="text-xs font-bold text-muted-foreground hover:text-foreground px-2.5 sm:px-3 py-1.5 rounded-xl bg-slate-800/80 border border-slate-700/60 transition-all"
+              >
+                Close
+              </button>
+            )}
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  // 2. YouTube Embed Renderer fallback
   if (embedHtml) {
     const srcMatch = embedHtml.match(/src=["']([^"']+)["']/i);
     let embedSrc = srcMatch ? srcMatch[1] : '';
@@ -700,16 +866,86 @@ export function CustomVideoPlayer({
     );
   }
 
-  if (loading) {
+  if (loading && !hasPlayableSource) {
     return (
       <div className="w-full aspect-[16/10] sm:aspect-video min-h-[220px] sm:min-h-0 flex flex-col items-center justify-center bg-background/90 border border-card-border/80 rounded-2xl sm:rounded-3xl p-6">
         <Loader2 className="w-8 h-8 text-primary-600 dark:text-primary-400 animate-spin" />
-        <p className="text-xs text-muted-foreground mt-3 font-medium">Loading high-definition stream...</p>
+        <p className="text-xs text-muted-foreground mt-3 font-medium">Loading stream...</p>
       </div>
     );
   }
 
-  if (error || !videoData || !activeAsset) {
+  if (!hasPlayableSource && (error || !videoData || !activeAsset)) {
+    if (hasMounted && (!isOnline || error?.toLowerCase().includes('offline') || error?.toLowerCase().includes('network') || error?.toLowerCase().includes('failed to fetch'))) {
+      return (
+        <div className="w-full flex flex-col gap-3">
+          <div className="relative w-full aspect-[16/10] sm:aspect-video min-h-[240px] sm:min-h-0 bg-black/95 rounded-2xl sm:rounded-3xl overflow-hidden border border-card-border/80 shadow-2xl flex items-center justify-center p-6 order-1">
+            <OfflineState
+              isPremium={isPremium || hasCourseAccess}
+              onRetry={() => {
+                if (typeof window !== 'undefined') window.location.reload();
+              }}
+            />
+          </div>
+
+          <div className="flex flex-wrap sm:flex-nowrap items-center justify-between gap-3 px-3 sm:px-5 py-2.5 sm:py-3 rounded-2xl bg-card/60 border border-card-border/80 order-2">
+            <div className="min-w-0 flex-1">
+              <h3 className="text-xs sm:text-sm font-bold text-foreground truncate mt-0.5">{title || 'Video Lesson'}</h3>
+              {courseTitle && <p className="text-[11px] text-muted-foreground truncate">{courseTitle}</p>}
+            </div>
+            <div className="flex items-center gap-2 shrink-0">
+              {(prevVideoUrl || onPrev) && (
+                onPrev ? (
+                  <button
+                    onClick={onPrev}
+                    className="text-xs sm:text-sm font-semibold text-foreground hover:text-foreground px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl bg-slate-800 hover:bg-slate-700/80 border border-slate-700/60 hover:border-primary-500/50 transition-all flex items-center gap-1.5 touch-manipulation cursor-pointer"
+                  >
+                    <ChevronLeft className="w-4 h-4 text-muted-foreground" />
+                    <span>Previous</span>
+                  </button>
+                ) : (
+                  <Link
+                    href={prevVideoUrl!}
+                    className="text-xs sm:text-sm font-semibold text-foreground hover:text-foreground px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl bg-slate-800 hover:bg-slate-700/80 border border-slate-700/60 hover:border-primary-500/50 transition-all flex items-center gap-1.5 touch-manipulation"
+                  >
+                    <ChevronLeft className="w-4 h-4 text-muted-foreground" />
+                    <span>Previous</span>
+                  </Link>
+                )
+              )}
+              {(nextVideoUrl || onNext) && (
+                onNext ? (
+                  <button
+                    onClick={onNext}
+                    className="text-xs sm:text-sm font-semibold text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl bg-primary-600 hover:bg-primary-500 border border-primary-400/30 transition-all flex items-center gap-1.5 shadow-md shadow-primary-950/40 touch-manipulation cursor-pointer"
+                  >
+                    <span>Next</span>
+                    <ChevronRight className="w-4 h-4 text-foreground" />
+                  </button>
+                ) : (
+                  <Link
+                    href={nextVideoUrl!}
+                    className="text-xs sm:text-sm font-semibold text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl bg-primary-600 hover:bg-primary-500 border border-primary-400/30 transition-all flex items-center gap-1.5 shadow-md shadow-primary-950/40 touch-manipulation"
+                  >
+                    <span>Next</span>
+                    <ChevronRight className="w-4 h-4 text-foreground" />
+                  </Link>
+                )
+              )}
+              {onClose && (
+                <button
+                  onClick={onClose}
+                  className="text-xs font-bold text-muted-foreground hover:text-foreground px-2.5 sm:px-3 py-1.5 rounded-xl bg-slate-800/80 border border-slate-700/60 transition-all cursor-pointer"
+                >
+                  Close
+                </button>
+              )}
+            </div>
+          </div>
+        </div>
+      );
+    }
+
     return (
       <div className="w-full aspect-[16/10] sm:aspect-video min-h-[220px] sm:min-h-0 flex flex-col items-center justify-center bg-background/90 border border-card-border/80 rounded-2xl sm:rounded-3xl p-6 text-center space-y-3">
         <AlertCircle className="w-10 h-10 text-rose-500" />
@@ -735,7 +971,9 @@ export function CustomVideoPlayer({
       >
         <video
           ref={videoRef}
-          src={activeAsset.url}
+          src={blobUrl || localBlobUrl || activeAsset?.url}
+          controlsList="nodownload"
+          onContextMenu={(e) => e.preventDefault()}
           className="w-full h-full object-contain cursor-pointer transition-all"
           onTimeUpdate={handleTimeUpdate}
           onLoadedMetadata={handleLoadedMetadata}
@@ -847,6 +1085,31 @@ export function CustomVideoPlayer({
                     <ChevronRight className="w-4 h-4 text-slate-500" />
                   </div>
                 </button>
+
+                {/* Download Row in Settings — visible only if user has course access */}
+                {!embedHtml && hasCourseAccess && (
+                  <button
+                    onClick={() => {
+                      setShowSettings(false);
+                      if (isCurrentDownloaded) {
+                        setShowDownloadedMenu(true);
+                      } else {
+                        setShowDownloadQualityModal(true);
+                      }
+                    }}
+                    className="w-full flex items-center justify-between p-2.5 rounded-xl hover:bg-card/90 active:bg-slate-800 transition-all text-xs font-semibold text-foreground touch-manipulation group"
+                  >
+                    <div className="flex items-center gap-2.5">
+                      <ArrowDownToLine className="w-4 h-4 text-primary-600 dark:text-primary-400" />
+                      <span>{isCurrentDownloaded ? 'Downloaded (In Site)' : 'Download for Offline'}</span>
+                    </div>
+                    <div className="flex items-center gap-1.5 text-muted-foreground group-hover:text-foreground">
+                      <span className="text-[11px] font-medium text-primary-600 dark:text-primary-300 bg-primary-500/10 px-2 py-0.5 rounded-md border border-primary-500/20">
+                        {isCurrentDownloaded ? 'Ready' : isCurrentDownloading ? `${downloadProgress}%` : 'Save'}
+                      </span>
+                    </div>
+                  </button>
+                )}
               </div>
             )}
 
@@ -995,15 +1258,26 @@ export function CustomVideoPlayer({
           {/* Buttons & Options Row */}
           <div className="flex items-center justify-between text-foreground gap-2">
             <div className="flex items-center gap-1.5 sm:gap-2">
-              {prevVideoUrl && (
-                <Link
-                  href={prevVideoUrl}
-                  className="hidden sm:inline-flex p-1.5 sm:p-2 rounded-xl hover:bg-white/10 active:scale-95 transition-all text-foreground hover:text-foreground items-center justify-center"
-                  title={prevTitle ? `Previous: ${prevTitle}` : "Previous Video"}
-                  aria-label="Previous Video"
-                >
-                  <SkipBack className="w-4.5 h-4.5 sm:w-5 sm:h-5 fill-current" />
-                </Link>
+              {(prevVideoUrl || onPrev) && (
+                onPrev ? (
+                  <button
+                    onClick={onPrev}
+                    className="hidden sm:inline-flex p-1.5 sm:p-2 rounded-xl hover:bg-white/10 active:scale-95 transition-all text-foreground hover:text-foreground items-center justify-center cursor-pointer"
+                    title={prevTitle ? `Previous: ${prevTitle}` : "Previous Video"}
+                    aria-label="Previous Video"
+                  >
+                    <SkipBack className="w-4.5 h-4.5 sm:w-5 sm:h-5 fill-current" />
+                  </button>
+                ) : (
+                  <Link
+                    href={prevVideoUrl!}
+                    className="hidden sm:inline-flex p-1.5 sm:p-2 rounded-xl hover:bg-white/10 active:scale-95 transition-all text-foreground hover:text-foreground items-center justify-center"
+                    title={prevTitle ? `Previous: ${prevTitle}` : "Previous Video"}
+                    aria-label="Previous Video"
+                  >
+                    <SkipBack className="w-4.5 h-4.5 sm:w-5 sm:h-5 fill-current" />
+                  </Link>
+                )
               )}
 
               <button
@@ -1014,15 +1288,26 @@ export function CustomVideoPlayer({
                 {isPlaying ? <Pause className="w-5 h-5 sm:w-6 sm:h-6 fill-white" /> : <Play className="w-5 h-5 sm:w-6 sm:h-6 fill-white" />}
               </button>
 
-              {nextVideoUrl && (
-                <Link
-                  href={nextVideoUrl}
-                  className="hidden sm:inline-flex p-1.5 sm:p-2 rounded-xl hover:bg-white/10 active:scale-95 transition-all text-foreground hover:text-foreground items-center justify-center"
-                  title={nextTitle ? `Next (Shift + →): ${nextTitle}` : "Next Video (Shift + →)"}
-                  aria-label="Next Video"
-                >
-                  <SkipForward className="w-4.5 h-4.5 sm:w-5 sm:h-5 fill-current" />
-                </Link>
+              {(nextVideoUrl || onNext) && (
+                onNext ? (
+                  <button
+                    onClick={onNext}
+                    className="hidden sm:inline-flex p-1.5 sm:p-2 rounded-xl hover:bg-white/10 active:scale-95 transition-all text-foreground hover:text-foreground items-center justify-center cursor-pointer"
+                    title={nextTitle ? `Next: ${nextTitle}` : "Next Video"}
+                    aria-label="Next Video"
+                  >
+                    <SkipForward className="w-4.5 h-4.5 sm:w-5 sm:h-5 fill-current" />
+                  </button>
+                ) : (
+                  <Link
+                    href={nextVideoUrl!}
+                    className="hidden sm:inline-flex p-1.5 sm:p-2 rounded-xl hover:bg-white/10 active:scale-95 transition-all text-foreground hover:text-foreground items-center justify-center"
+                    title={nextTitle ? `Next (Shift + →): ${nextTitle}` : "Next Video (Shift + →)"}
+                    aria-label="Next Video"
+                  >
+                    <SkipForward className="w-4.5 h-4.5 sm:w-5 sm:h-5 fill-current" />
+                  </Link>
+                )
               )}
 
               <span className="text-[10px] sm:text-xs font-mono text-foreground/80 tracking-tight ml-1">
@@ -1059,7 +1344,7 @@ export function CustomVideoPlayer({
                 </button>
               )}
 
-              {document.pictureInPictureEnabled && (
+              {hasMounted && typeof document !== 'undefined' && document.pictureInPictureEnabled && (
                 <button
                   onClick={togglePictureInPicture}
                   className="p-1.5 sm:p-2 rounded-xl hover:bg-white/10 text-foreground transition-colors hidden md:inline-flex"
@@ -1106,8 +1391,14 @@ export function CustomVideoPlayer({
             
             <div className="flex gap-2">
               <button
-                onClick={() => router.push(nextVideoUrl)}
-                className="flex-1 py-1.5 rounded-xl bg-primary-600 hover:bg-primary-500 text-xs font-bold text-white transition-colors text-center shadow-lg shadow-primary-600/30"
+                onClick={() => {
+                  if (onNext) {
+                    onNext();
+                  } else if (nextVideoUrl) {
+                    router.push(nextVideoUrl);
+                  }
+                }}
+                className="flex-1 py-1.5 rounded-xl bg-primary-600 hover:bg-primary-500 text-xs font-bold text-white transition-colors text-center shadow-lg shadow-primary-600/30 cursor-pointer"
               >
                 Play Now
               </button>
@@ -1116,7 +1407,7 @@ export function CustomVideoPlayer({
                   setAutoPlayCancelled(true);
                   setShowAutoPlayOverlay(false);
                 }}
-                className="px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-xs font-bold text-foreground/80 transition-colors"
+                className="px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-xs font-bold text-foreground/80 transition-colors cursor-pointer"
               >
                 Cancel
               </button>
@@ -1138,35 +1429,261 @@ export function CustomVideoPlayer({
       </div>
 
       {/* Player Info/Nav Header — rendered under the video player on mobile and desktop */}
-      <div className="flex flex-wrap sm:flex-nowrap items-center justify-between gap-3 px-4 sm:px-6 py-3 order-2 border-t border-card-border/60 bg-background/90">
-        <div className="min-w-0 flex-1">
-          <h3 className="text-sm sm:text-base font-bold text-foreground truncate">{title || videoData?.name}</h3>
-        </div>
-        <div className="flex items-center gap-2 shrink-0">
-          {prevVideoUrl && (
-            <Link
-              href={prevVideoUrl}
-              className="text-xs sm:text-sm font-semibold text-foreground hover:text-foreground px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl bg-slate-800 hover:bg-slate-700/80 border border-slate-700/60 hover:border-primary-500/50 transition-all flex items-center gap-1.5 touch-manipulation shadow-sm"
-              title={prevTitle ? `Previous (Shift + ←): ${prevTitle}` : "Previous Video (Shift + ←)"}
-            >
-              <ChevronLeft className="w-4 h-4 text-muted-foreground" />
-              <span>Previous</span>
-            </Link>
+      <div className="flex flex-wrap sm:flex-nowrap items-center justify-between gap-3 px-4 sm:px-6 py-3 order-2 border-t border-card-border/60 bg-background/90 relative">
+        <div className="min-w-0 flex-1 space-y-0.5">
+          <div className="flex items-center gap-2 flex-wrap">
+            <h3 className="text-sm sm:text-base font-bold text-foreground truncate">
+              {title || videoData?.name || 'Video Lesson'}
+            </h3>
+            {localBlobUrl && (
+              <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-950/70 border border-emerald-500/40 text-emerald-400 shrink-0">
+                <CheckCircle2 className="w-3 h-3" />
+                <span>Offline Ready</span>
+              </span>
+            )}
+          </div>
+          {courseTitle && (
+            <p className="text-xs text-muted-foreground truncate">{courseTitle}</p>
           )}
-          {nextVideoUrl && (
-            <Link
-              href={nextVideoUrl}
-              className="text-xs sm:text-sm font-semibold text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl bg-primary-600 hover:bg-primary-500 border border-primary-400/30 transition-all flex items-center gap-1.5 shadow-md shadow-primary-950/50 touch-manipulation"
-              title={nextTitle ? `Next (Shift + →): ${nextTitle}` : "Next Video (Shift + →)"}
-            >
-              <span>Next</span>
-              <ChevronRight className="w-4 h-4 text-foreground" />
-            </Link>
+        </div>
+
+        {/* Action Buttons Row */}
+        <div className="flex items-center gap-2 shrink-0">
+          {/* YouTube-style Download Action Button — visible only if user has course access */}
+          {!embedHtml && hasCourseAccess && (
+            <div className="relative">
+              {isCurrentDownloading ? (
+                /* Downloading State Button */
+                <div className="flex items-center gap-1.5 px-3 py-1.5 sm:py-2 rounded-xl bg-primary-950/80 border border-primary-500/40 text-primary-400 text-xs font-bold shadow-sm">
+                  <Loader2 className="w-3.5 h-3.5 animate-spin text-primary-400" />
+                  <span>{downloadProgress !== undefined ? `${downloadProgress}%` : 'Saving...'}</span>
+                  <button
+                    onClick={() => cancelDownload(videoId)}
+                    className="ml-1 p-0.5 rounded hover:bg-white/10 text-muted-foreground hover:text-foreground"
+                    title="Cancel download"
+                  >
+                    <X className="w-3.5 h-3.5" />
+                  </button>
+                </div>
+              ) : isCurrentDownloaded ? (
+                /* Downloaded State Button */
+                <div className="relative">
+                  <button
+                    onClick={() => setShowDownloadedMenu((prev) => !prev)}
+                    className="flex items-center gap-1.5 px-3 sm:px-3.5 py-1.5 sm:py-2 rounded-xl bg-primary-950/90 border border-primary-500/40 text-primary-400 hover:text-primary-300 text-xs font-bold shadow-sm transition-all active:scale-95"
+                    title="Downloaded to PrepTea (Saved in site)"
+                  >
+                    <CheckCircle2 className="w-4 h-4 text-primary-400" />
+                    <span>Downloaded</span>
+                  </button>
+
+                  {/* Downloaded Options Popover */}
+                  {showDownloadedMenu && (
+                    <div 
+                      onClick={(e) => e.stopPropagation()}
+                      className="absolute right-0 bottom-full mb-2 z-50 w-64 p-3 rounded-2xl bg-card/95 border border-card-border shadow-2xl backdrop-blur-xl animate-in fade-in zoom-in-95 space-y-2 text-foreground"
+                    >
+                      <div className="flex items-center justify-between pb-2 border-b border-card-border/60">
+                        <div className="flex items-center gap-1.5 text-xs font-bold text-emerald-400">
+                          <CheckCircle2 className="w-3.5 h-3.5" />
+                          <span>Saved in PrepTea</span>
+                        </div>
+                        <button
+                          onClick={() => setShowDownloadedMenu(false)}
+                          className="p-0.5 rounded text-muted-foreground hover:text-foreground"
+                        >
+                          <X className="w-3.5 h-3.5" />
+                        </button>
+                      </div>
+
+                      <p className="text-[11px] text-muted-foreground leading-relaxed">
+                        This lesson is saved in this browser for offline playback on PrepTea. Not saved to your device gallery.
+                      </p>
+
+                      <div className="space-y-1 pt-1">
+                        <Link
+                          href="/downloads"
+                          className="flex items-center justify-between w-full px-2.5 py-1.5 rounded-xl hover:bg-slate-800 text-xs font-semibold text-foreground transition-colors group"
+                        >
+                          <span>View all Downloads</span>
+                          <ArrowUpRight className="w-3.5 h-3.5 text-muted-foreground group-hover:text-foreground" />
+                        </Link>
+                        <button
+                          onClick={async () => {
+                            setShowDownloadedMenu(false);
+                            await deleteDownload(videoId);
+                          }}
+                          className="flex items-center gap-2 w-full px-2.5 py-1.5 rounded-xl hover:bg-rose-500/15 text-xs font-semibold text-rose-500 hover:text-rose-400 transition-colors"
+                        >
+                          <Trash2 className="w-3.5 h-3.5" />
+                          <span>Delete from Downloads</span>
+                        </button>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              ) : (
+                /* Not Downloaded State Button */
+                <div className="relative">
+                  <button
+                    onClick={() => {
+                      if (!downloadQualityAsset && videoData?.assets?.length) {
+                        const defaultAsset =
+                          videoData.assets.find((a) => a.height === 720) ||
+                          videoData.assets.find((a) => a.height === 540) ||
+                          videoData.assets[0];
+                        setDownloadQualityAsset(defaultAsset || null);
+                      }
+                      setShowDownloadQualityModal(true);
+                    }}
+                    className="flex items-center gap-1.5 px-3 sm:px-3.5 py-1.5 sm:py-2 rounded-xl bg-slate-800/90 hover:bg-slate-700/90 text-foreground text-xs font-bold border border-slate-700/60 hover:border-primary-500/40 transition-all shadow-sm active:scale-95 touch-manipulation"
+                    title="Download video for offline playback inside PrepTea"
+                  >
+                    <ArrowDownToLine className="w-4 h-4 text-primary-400" />
+                    <span>Download</span>
+                  </button>
+
+                  {/* Quality Picker Popover */}
+                  {showDownloadQualityModal && (
+                    <div 
+                      onClick={(e) => e.stopPropagation()}
+                      className="absolute right-0 bottom-full mb-2 z-50 w-72 sm:w-80 p-3.5 rounded-2xl bg-card/95 border border-card-border shadow-2xl backdrop-blur-xl animate-in fade-in zoom-in-95 space-y-3 text-foreground"
+                    >
+                      <div className="flex items-center justify-between pb-2 border-b border-card-border/60">
+                        <div className="flex items-center gap-2">
+                          <ArrowDownToLine className="w-4 h-4 text-primary-400" />
+                          <span className="text-xs font-bold">Download Lesson</span>
+                        </div>
+                        <button
+                          onClick={() => setShowDownloadQualityModal(false)}
+                          className="p-1 rounded-md text-muted-foreground hover:text-foreground"
+                        >
+                          <X className="w-3.5 h-3.5" />
+                        </button>
+                      </div>
+
+                      <p className="text-[11px] text-muted-foreground leading-relaxed">
+                        Select video quality to save inside PrepTea. Watch offline without data. (Not exported to gallery).
+                      </p>
+
+                      <div className="space-y-1.5 max-h-48 overflow-y-auto custom-scrollbar">
+                        {(videoData?.assets && videoData.assets.length > 0
+                          ? videoData.assets
+                          : [
+                              { slug: '1080p', displayName: '1080p', height: 1080, sizeBytes: 17.2 * 1024 * 1024, url: '' },
+                              { slug: '720p', displayName: '720p', height: 720, sizeBytes: 10.1 * 1024 * 1024, url: '' },
+                              { slug: '540p', displayName: '540p', height: 540, sizeBytes: 7.7 * 1024 * 1024, url: '' },
+                              { slug: '360p', displayName: '360p', height: 360, sizeBytes: 5.8 * 1024 * 1024, url: '' },
+                              { slug: '224p', displayName: '224p', height: 224, sizeBytes: 4.5 * 1024 * 1024, url: '' },
+                            ]
+                        ).map((asset: any) => {
+                          const isSelected = (downloadQualityAsset?.slug || activeAsset?.slug || '720p') === asset.slug;
+                          const sizeMb = (asset.sizeBytes / (1024 * 1024)).toFixed(1);
+                          return (
+                            <button
+                              key={asset.slug}
+                              onClick={() => setDownloadQualityAsset(asset)}
+                              className={`w-full flex items-center justify-between p-2 rounded-xl text-xs font-semibold transition-all cursor-pointer ${
+                                isSelected
+                                  ? 'bg-primary-950/60 border border-primary-500/50 text-primary-300'
+                                  : 'hover:bg-slate-800/60 text-foreground/80'
+                              }`}
+                            >
+                              <div className="flex items-center gap-2">
+                                <div className={`w-3.5 h-3.5 rounded-full border flex items-center justify-center ${
+                                  isSelected ? 'border-primary-400 bg-primary-400' : 'border-slate-600'
+                                }`}>
+                                  {isSelected && <div className="w-1.5 h-1.5 rounded-full bg-white" />}
+                                </div>
+                                <span>{asset.displayName}</span>
+                              </div>
+                              <span className="text-[10px] font-mono text-muted-foreground">
+                                ~{sizeMb} MB
+                              </span>
+                            </button>
+                          );
+                        })}
+                      </div>
+
+                      <div className="pt-2">
+                        <button
+                          onClick={() => {
+                            const chosen = downloadQualityAsset || activeAsset || videoData?.assets?.[0];
+                            if (!chosen) return;
+                            setShowDownloadQualityModal(false);
+                            startDownload({
+                              videoId,
+                              courseSlug: courseSlug || 'course',
+                              courseTitle: courseTitle || 'Course Batch',
+                              sectionTitle,
+                              sectionId,
+                              unitTitle: title || videoData?.name || 'Video Lesson',
+                              thumbnailUrl: videoData?.thumbnailUrl || '',
+                              durationSeconds: videoData?.durationSeconds || duration || 0,
+                              quality: chosen.displayName || `${chosen.height}p`,
+                              assetUrl: chosen.url,
+                              expectedSizeBytes: chosen.sizeBytes,
+                            });
+                          }}
+                          className="w-full py-2 rounded-xl bg-primary-600 hover:bg-primary-500 text-white text-xs font-bold shadow-md shadow-primary-600/30 transition-all text-center flex items-center justify-center gap-1.5"
+                        >
+                          <Download className="w-3.5 h-3.5" />
+                          <span>Start Download</span>
+                        </button>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              )}
+            </div>
+          )}
+
+          {(prevVideoUrl || onPrev) && (
+            onPrev ? (
+              <button
+                onClick={onPrev}
+                className="text-xs sm:text-sm font-semibold text-foreground hover:text-foreground px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl bg-slate-800 hover:bg-slate-700/80 border border-slate-700/60 hover:border-primary-500/50 transition-all flex items-center gap-1.5 touch-manipulation shadow-sm cursor-pointer"
+                title={prevTitle ? `Previous: ${prevTitle}` : "Previous Video"}
+              >
+                <ChevronLeft className="w-4 h-4 text-muted-foreground" />
+                <span>Previous</span>
+              </button>
+            ) : (
+              <Link
+                href={prevVideoUrl!}
+                className="text-xs sm:text-sm font-semibold text-foreground hover:text-foreground px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl bg-slate-800 hover:bg-slate-700/80 border border-slate-700/60 hover:border-primary-500/50 transition-all flex items-center gap-1.5 touch-manipulation shadow-sm"
+                title={prevTitle ? `Previous (Shift + ←): ${prevTitle}` : "Previous Video (Shift + ←)"}
+              >
+                <ChevronLeft className="w-4 h-4 text-muted-foreground" />
+                <span>Previous</span>
+              </Link>
+            )
+          )}
+          {(nextVideoUrl || onNext) && (
+            onNext ? (
+              <button
+                onClick={onNext}
+                className="text-xs sm:text-sm font-semibold text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl bg-primary-600 hover:bg-primary-500 border border-primary-400/30 transition-all flex items-center gap-1.5 shadow-md shadow-primary-950/50 touch-manipulation cursor-pointer"
+                title={nextTitle ? `Next: ${nextTitle}` : "Next Video"}
+              >
+                <span>Next</span>
+                <ChevronRight className="w-4 h-4 text-foreground" />
+              </button>
+            ) : (
+              <Link
+                href={nextVideoUrl!}
+                className="text-xs sm:text-sm font-semibold text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl bg-primary-600 hover:bg-primary-500 border border-primary-400/30 transition-all flex items-center gap-1.5 shadow-md shadow-primary-950/50 touch-manipulation"
+                title={nextTitle ? `Next (Shift + →): ${nextTitle}` : "Next Video (Shift + →)"}
+              >
+                <span>Next</span>
+                <ChevronRight className="w-4 h-4 text-foreground" />
+              </Link>
+            )
           )}
           {onClose && (
             <button
               onClick={onClose}
-              className="text-xs sm:text-sm font-semibold text-muted-foreground hover:text-foreground px-3 py-1.5 sm:py-2 rounded-xl bg-slate-800/80 border border-slate-700/60 transition-all"
+              className="text-xs sm:text-sm font-semibold text-muted-foreground hover:text-foreground px-3 py-1.5 sm:py-2 rounded-xl bg-slate-800/80 border border-slate-700/60 transition-all cursor-pointer"
             >
               Close
             </button>

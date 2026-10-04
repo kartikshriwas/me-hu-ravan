@@ -25,15 +25,40 @@ import {
   Target,
   Lock,
   Crown,
-  X
+  X,
+  Play,
+  Film,
+  ArrowDownToLine,
 } from 'lucide-react';
 
 import { HomeTestsSkeleton } from '@/components/skeletons/HomeTestsSkeleton';
 import { clientCache } from '@/lib/clientCache';
+import { OfflineState } from '@/components/OfflineState';
+import { useDownloads } from '@/lib/downloadContext';
+
+function formatBytes(bytes: number): string {
+  if (!bytes || bytes <= 0) return '0 B';
+  const units = ['B', 'KB', 'MB', 'GB'];
+  const i = Math.floor(Math.log(bytes) / Math.log(1024));
+  return `${(bytes / Math.pow(1024, i)).toFixed(1)} ${units[i]}`;
+}
+
+function formatDuration(seconds: number): string {
+  if (!seconds || seconds <= 0) return '';
+  const m = Math.floor(seconds / 60);
+  const s = Math.floor(seconds % 60);
+  if (m >= 60) {
+    const h = Math.floor(m / 60);
+    const remM = m % 60;
+    return `${h}h ${remM}m`;
+  }
+  return `${m}:${s < 10 ? '0' : ''}${s}`;
+}
 
 export default function HomePage() {
   const router = useRouter();
   const { user } = useAuth();
+  const { downloads, storageUsage } = useDownloads();
   
   // Instant load from memory cache if previously fetched
   const cachedInitialTests = typeof window !== 'undefined' ? clientCache.get<{ success: boolean; data: AssessmentMeta[] }>('/api/questions') : null;
@@ -45,6 +70,26 @@ export default function HomePage() {
   const [recentAttempt, setRecentAttempt] = useState<QuizAttemptResult | null>(null);
   const [selectedTestForLoginModal, setSelectedTestForLoginModal] = useState<AssessmentMeta | null>(null);
   const [selectedTestForPremiumModal, setSelectedTestForPremiumModal] = useState<AssessmentMeta | null>(null);
+  const [isOnline, setIsOnline] = useState(typeof navigator !== 'undefined' ? navigator.onLine : true);
+  const [fetchError, setFetchError] = useState(false);
+
+  // Monitor network connectivity
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    const handleOnline = () => {
+      setIsOnline(true);
+      fetchAssessments();
+    };
+    const handleOffline = () => setIsOnline(false);
+
+    window.addEventListener('online', handleOnline);
+    window.addEventListener('offline', handleOffline);
+
+    return () => {
+      window.removeEventListener('online', handleOnline);
+      window.removeEventListener('offline', handleOffline);
+    };
+  }, []);
 
   // Auto-redirect to target test paper as soon as user logs in via modal popup
   useEffect(() => {
@@ -55,20 +100,23 @@ export default function HomePage() {
     }
   }, [user, selectedTestForLoginModal, router]);
 
-  useEffect(() => {
-    async function fetchAssessments() {
-      try {
-        const json = await clientCache.fetchWithCache<{ success: boolean; data: AssessmentMeta[] }>('/api/questions', undefined, 60000);
-        if (json?.success && Array.isArray(json.data)) {
-          setTests(json.data);
-        }
-      } catch (err) {
-        console.error('Failed to fetch practice tests:', err);
-      } finally {
-        setLoading(false);
+  async function fetchAssessments() {
+    setLoading(true);
+    try {
+      const json = await clientCache.fetchWithCache<{ success: boolean; data: AssessmentMeta[] }>('/api/questions', undefined, 60000);
+      if (json?.success && Array.isArray(json.data)) {
+        setTests(json.data);
+        setFetchError(false);
       }
+    } catch (err) {
+      console.error('Failed to fetch practice tests:', err);
+      setFetchError(true);
+    } finally {
+      setLoading(false);
     }
+  }
 
+  useEffect(() => {
     fetchAssessments();
   }, []);
 
@@ -288,6 +336,104 @@ export default function HomePage() {
             {[1, 2, 3].map((n) => (
               <div key={n} className="glass-panel rounded-2xl p-6 h-56 animate-pulse bg-card/40" />
             ))}
+          </div>
+        ) : tests.length === 0 && (!isOnline || fetchError) ? (
+          <div className="w-full space-y-8">
+            <div className="w-full flex items-center justify-center py-6">
+              <div className="max-w-md w-full glass-panel rounded-3xl p-8 border border-card-border shadow-2xl">
+                <OfflineState
+                  title="You're offline"
+                  subtitle="Please check your connection or watch your downloaded videos."
+                  onRetry={fetchAssessments}
+                />
+              </div>
+            </div>
+
+            {downloads.length > 0 && (
+              <section className="space-y-4 pt-2">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-card-border">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-2xl bg-primary-600/20 text-primary-400 flex items-center justify-center border border-primary-500/30">
+                      <Film className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <h2 className="text-xl font-bold text-foreground flex items-center gap-2">
+                        <span>Downloaded Videos</span>
+                        <span className="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-primary-600/20 text-primary-400 border border-primary-500/30">
+                          {downloads.length} {downloads.length === 1 ? 'lesson' : 'lessons'}
+                        </span>
+                      </h2>
+                      <p className="text-xs text-muted-foreground">
+                        Ready to play offline • {formatBytes(storageUsage.usedBytes)} used
+                      </p>
+                    </div>
+                  </div>
+
+                  <Link
+                    href="/downloads"
+                    className="inline-flex items-center gap-1.5 text-xs font-bold text-primary-400 hover:text-primary-300 transition-colors"
+                  >
+                    <span>View all downloads</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </Link>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+                  {downloads.slice(0, 8).map((d) => (
+                    <article
+                      key={d.videoId}
+                      className="glass-card rounded-2xl p-4 flex flex-col justify-between group transition-all border border-card-border hover:border-primary-500/40 hover:shadow-xl hover:shadow-primary-950/20"
+                    >
+                      <div className="space-y-2.5">
+                        <div className="relative aspect-video rounded-xl overflow-hidden bg-slate-900 border border-slate-800 flex items-center justify-center">
+                          {d.thumbnailUrl ? (
+                            <img
+                              src={d.thumbnailUrl}
+                              alt={d.unitTitle}
+                              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                            />
+                          ) : (
+                            <Film className="w-8 h-8 text-slate-600" />
+                          )}
+                          <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                            <div className="w-10 h-10 rounded-full bg-primary-600 text-white flex items-center justify-center shadow-lg scale-90 group-hover:scale-100 transition-transform">
+                              <Play className="w-4 h-4 fill-current ml-0.5" />
+                            </div>
+                          </div>
+                          {d.durationSeconds > 0 && (
+                            <span className="absolute bottom-2 right-2 px-2 py-0.5 rounded-md bg-black/80 backdrop-blur-md text-[10px] font-bold text-white border border-white/10">
+                              {formatDuration(d.durationSeconds)}
+                            </span>
+                          )}
+                        </div>
+
+                        <div>
+                          <span className="text-[10px] font-bold uppercase tracking-wider text-primary-400 block truncate">
+                            {d.courseTitle}
+                          </span>
+                          <h3 className="text-sm font-bold text-foreground line-clamp-2 mt-0.5 group-hover:text-primary-300 transition-colors">
+                            {d.unitTitle}
+                          </h3>
+                        </div>
+                      </div>
+
+                      <div className="mt-4 pt-3 border-t border-card-border/60 flex items-center justify-between text-xs">
+                        <span className="text-[11px] text-muted-foreground font-medium">
+                          {d.quality || '720p'} • {formatBytes(d.sizeBytes)}
+                        </span>
+                        <Link
+                          href="/downloads"
+                          className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-primary-600 hover:bg-primary-500 text-white font-bold text-xs shadow-md shadow-primary-600/30 transition-all active:scale-95"
+                        >
+                          <Play className="w-3 h-3 fill-current" />
+                          <span>Watch</span>
+                        </Link>
+                      </div>
+                    </article>
+                  ))}
+                </div>
+              </section>
+            )}
           </div>
         ) : filteredTests.length === 0 ? (
           <div className="p-12 text-center glass-panel rounded-3xl space-y-3">

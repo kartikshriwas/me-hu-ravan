@@ -53,16 +53,14 @@
 
 @layer base {
   :root {
-    /* Light Mode */
-    --background: #f8fafc;
-    --foreground: #0f172a;
-    --card-bg: #ffffff;
-    --card-border: #e2e8f0;
-    --glass-panel-bg: rgba(255, 255, 255, 0.8);
-    --glass-card-bg: rgba(255, 255, 255, 0.6);
-    --muted-foreground: #64748b; /* slate-500 */
-    
-
+    /* Default Dark Mode (PrepTea Primary Theme - eliminates FOUC and color transition delay) */
+    --background: #0b0f19;
+    --foreground: #f8fafc;
+    --card-bg: #0f172a; /* slate-900 solid */
+    --card-border: #1e293b; /* slate-800 solid */
+    --glass-panel-bg: rgba(17, 24, 39, 0.75);
+    --glass-card-bg: rgba(30, 41, 59, 0.5);
+    --muted-foreground: #94a3b8; /* slate-400 */
 
     /* Default Primary (Indigo) */
     --color-primary-50: #eef2ff;
@@ -78,8 +76,19 @@
     --color-primary-950: #1e1b4b;
   }
 
+  .light {
+    /* Explicit Light Mode */
+    --background: #f8fafc;
+    --foreground: #0f172a;
+    --card-bg: #ffffff;
+    --card-border: #e2e8f0;
+    --glass-panel-bg: rgba(255, 255, 255, 0.8);
+    --glass-card-bg: rgba(255, 255, 255, 0.6);
+    --muted-foreground: #64748b; /* slate-500 */
+  }
+
   .dark {
-    /* Dark Mode */
+    /* Explicit Dark Mode */
     --background: #0b0f19;
     --foreground: #f8fafc;
     --card-bg: #0f172a; /* slate-900 solid */
@@ -87,6 +96,31 @@
     --glass-panel-bg: rgba(17, 24, 39, 0.75);
     --glass-card-bg: rgba(30, 41, 59, 0.5);
     --muted-foreground: #94a3b8; /* slate-400 */
+  }
+
+  [data-accent="purple"] {
+    --color-primary-50: #faf5ff;
+    --color-primary-100: #f3e8ff;
+    --color-primary-200: #e9d5ff;
+    --color-primary-300: #d8b4fe;
+    --color-primary-400: #c084fc;
+    --color-primary-500: #a855f7;
+    --color-primary-600: #9333ea;
+    --color-primary-700: #7e22ce;
+    --color-primary-800: #6b21a8;
+    --color-primary-900: #581c87;
+    --color-primary-950: #3b0764;
+    --background: #faf5ff;
+  }
+  .dark[data-accent="purple"] {
+    --background: #0b0714;
+    --color-slate-950: #120920;
+    --color-slate-900: #1a0d30;
+    --color-slate-800: #2a154d;
+    --card-bg: #150b28;
+    --card-border: #261345;
+    --glass-panel-bg: rgba(18, 9, 32, 0.75);
+    --glass-card-bg: rgba(26, 13, 48, 0.5);
   }
 
   [data-accent="red"] {

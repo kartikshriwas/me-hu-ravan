@@ -76,6 +76,13 @@ export function VideoViewContainer({
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, []);
 
+  // Find the section that contains the currently playing video
+  const currentSection = course.sections?.find((sec) =>
+    sec.units?.some((u) => (u.sourceid || u.id) === videoId)
+  );
+  const currentSectionTitle = currentSection?.title || (currentSection as any)?.sectionTitle;
+  const currentSectionId = currentSection?.id;
+
   return (
     <main
       role="main"
@@ -102,6 +109,9 @@ export function VideoViewContainer({
             <CustomVideoPlayer
               videoId={videoId}
               courseSlug={slug}
+              courseTitle={course.title}
+              sectionTitle={currentSectionTitle}
+              sectionId={currentSectionId}
               title={unitTitle}
               embedHtml={embedHtml}
               prevVideoUrl={prevVideoUrl || undefined}

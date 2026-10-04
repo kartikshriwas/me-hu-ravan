@@ -149,3 +149,128 @@ export function isCourseSlugAllowed(userBatches: string[], targetSlug: string): 
   if (allowed.includes('*')) return true;
   return allowed.includes(targetSlug.toLowerCase().trim());
 }
+
+const BATCH_ACCESS_STORAGE_KEY = 'preptea_user_batch_access';
+
+export interface CachedBatchAccess {
+  email: string;
+  hasAccess: boolean;
+  batches: string[];
+  lastSyncedAt: number;
+  signature: string;
+}
+
+const OFFLINE_SECRET = 'fallback-secret-for-preptea-offline';
+
+export async function verifyOfflineSignature(email: string, hasAccess: boolean, batches: string[], signature: string): Promise<boolean> {
+  if (!signature) return false;
+  try {
+    const payload = `${email.toLowerCase().trim()}:${hasAccess}:${batches.join(',')}`;
+    const encoder = new TextEncoder();
+    const key = await window.crypto.subtle.importKey(
+      'raw',
+      encoder.encode(OFFLINE_SECRET),
+      { name: 'HMAC', hash: 'SHA-256' },
+      false,
+      ['verify']
+    );
+    
+    const sigBytes = new Uint8Array(signature.match(/.{1,2}/g)!.map(byte => parseInt(byte, 16)));
+    
+    return await window.crypto.subtle.verify(
+      'HMAC',
+      key,
+      sigBytes,
+      encoder.encode(payload)
+    );
+  } catch (e) {
+    return false;
+  }
+}
+
+export async function verifyAndGetCachedBatchAccess(): Promise<CachedBatchAccess | null> {
+  const cached = getCachedBatchAccess();
+  if (!cached) return null;
+  const isValid = await verifyOfflineSignature(cached.email, cached.hasAccess, cached.batches, cached.signature);
+  if (!isValid) {
+    console.error('Security verification failed for offline cache. Data may have been tampered with.');
+    clearCachedBatchAccess();
+    return null;
+  }
+  return cached;
+}
+
+/**
+ * Retrieve cached batch access from localStorage for offline session verification
+ */
+export function getCachedBatchAccess(): CachedBatchAccess | null {
+  if (typeof window === 'undefined') return null;
+  try {
+    const raw = localStorage.getItem(BATCH_ACCESS_STORAGE_KEY);
+    return raw ? JSON.parse(raw) : null;
+  } catch {
+    return null;
+  }
+}
+
+/**
+ * Persist verified batch access into localStorage whenever user is online
+ */
+export function saveCachedBatchAccess(email: string, hasAccess: boolean, batches: string[] = [], signature: string = ''): void {
+  if (typeof window === 'undefined' || !email) return;
+  try {
+    const data: CachedBatchAccess = {
+      email: email.toLowerCase().trim(),
+      hasAccess,
+      batches,
+      lastSyncedAt: Date.now(),
+      signature,
+    };
+    localStorage.setItem(BATCH_ACCESS_STORAGE_KEY, JSON.stringify(data));
+  } catch {
+    // Ignore quota issues
+  }
+}
+
+/**
+ * Clear cached batch access
+ */
+export function clearCachedBatchAccess(): void {
+  if (typeof window === 'undefined') return;
+  try {
+    localStorage.removeItem(BATCH_ACCESS_STORAGE_KEY);
+  } catch {}
+}
+
+/**
+ * Checks if a user has course access (admins, users with access_courses permission, or enrolled in course batches)
+ * Falls back to verified cached batch access when user is offline
+ */
+export function checkUserCourseAccess(user: any): boolean {
+  if (!user) {
+    if (typeof window !== 'undefined' && typeof navigator !== 'undefined' && !navigator.onLine) {
+      const cached = getCachedBatchAccess();
+      if (cached && cached.hasAccess) {
+        return true;
+      }
+    }
+    return false;
+  }
+  if (user.role === 'superadmin' || user.role === 'admin') return true;
+  if (user.adminPermissions?.includes('access_courses') || user.adminPermissions?.includes('*')) return true;
+  if (user.hasCourseAccess) return true;
+  const batches: string[] = Array.isArray(user.allowedBatches) ? user.allowedBatches : [];
+  if (user.premiumPlan && isCourseBatch(user.premiumPlan)) return true;
+  return batches.some(isCourseBatch);
+}
+
+/**
+ * Checks if a user has premium status
+ */
+export function checkUserIsPremium(user: any): boolean {
+  if (!user) return false;
+  if (user.role === 'superadmin' || user.role === 'admin') return true;
+  if (user.isPremium) return true;
+  if (user.premiumPlan && user.premiumPlan.trim() !== '') return true;
+  return false;
+}
