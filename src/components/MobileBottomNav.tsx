@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation';
 import { useAuth } from '@/lib/authContext';
 import { UserAvatar } from '@/components/UserAvatar';
 import { FileCheck2, Trophy, BookOpen, User as UserIcon, Bookmark, Sparkles } from 'lucide-react';
-import { isCourseBatch } from '@/lib/batchAccess';
+import { checkUserCourseAccess } from '@/lib/batchAccess';
 
 interface NavItem {
   label: string;
@@ -27,10 +27,7 @@ export function MobileBottomNav() {
     return null;
   }
 
-
-  const isAdmin = user?.role === 'superadmin' || user?.role === 'admin';
-  const courseBatches = (user?.allowedBatches || []).filter(isCourseBatch);
-  const hasCourseAccess = isAdmin || courseBatches.length > 0 || user?.adminPermissions?.includes('access_courses') || user?.adminPermissions?.includes('*');
+  const hasCourseAccess = checkUserCourseAccess(user);
 
   const cleanPath = pathname.split('?')[0].replace(/\/$/, '') || '/';
 
@@ -89,7 +86,7 @@ export function MobileBottomNav() {
       label: 'Profile',
       href: '/profile',
       icon: UserIcon,
-      active: cleanPath === '/profile' || cleanPath === '/history' || cleanPath.startsWith('/admin'),
+      active: cleanPath === '/profile' || cleanPath === '/history' || cleanPath.startsWith('/admin') || cleanPath === '/downloads',
       accentColor: 'text-emerald-600 dark:text-emerald-400',
       activeBg: 'bg-emerald-500/15 dark:bg-emerald-400/20',
       activeBorder: 'border-emerald-500/30 dark:border-emerald-400/30',

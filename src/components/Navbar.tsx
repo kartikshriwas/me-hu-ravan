@@ -5,19 +5,20 @@ import { usePathname } from 'next/navigation';
 import { useAuth } from '@/lib/authContext';
 import { GoogleLoginButton } from '@/components/GoogleLoginButton';
 import { UserAvatar } from '@/components/UserAvatar';
-import { FileCheck2, Trophy, Sparkles, Bookmark, History, LogOut, User as UserIcon, ShieldCheck, Crown, X, Coffee, BookOpen, ChevronDown } from 'lucide-react';
+import { FileCheck2, Trophy, Sparkles, Bookmark, History, LogOut, User as UserIcon, ShieldCheck, Crown, X, Coffee, BookOpen, ChevronDown, ArrowDownToLine } from 'lucide-react';
 import { useState, useRef, useEffect } from 'react';
-import { isCourseBatch } from '@/lib/batchAccess';
+import { checkUserCourseAccess } from '@/lib/batchAccess';
+import { useDownloads } from '@/lib/downloadContext';
 
 export function Navbar() {
   const pathname = usePathname();
   const { user, logout } = useAuth();
+  const { downloads } = useDownloads();
   const [showMenu, setShowMenu] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
 
   const isAdmin = user?.role === 'superadmin' || user?.role === 'admin';
-  const courseBatches = (user?.allowedBatches || []).filter(isCourseBatch);
-  const hasCourseAccess = isAdmin || courseBatches.length > 0 || user?.adminPermissions?.includes('access_courses') || user?.adminPermissions?.includes('*');
+  const hasCourseAccess = checkUserCourseAccess(user);
 
   // Close menu on click outside
   useEffect(() => {
@@ -143,6 +144,27 @@ export function Navbar() {
                   <History className={`w-4 h-4 shrink-0 ${pathname === '/history' ? 'text-foreground' : 'text-cyan-600 dark:text-cyan-400'}`} />
                   <span>History</span>
                 </Link>
+
+                {/* Downloads Link — visible only if user has course access */}
+                {hasCourseAccess && (
+                  <Link
+                    href="/downloads"
+                    title="Downloads (Offline Ready)"
+                    className={`hidden mxl:flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl text-sm font-semibold transition-all duration-200 shrink-0 ${
+                      pathname === '/downloads'
+                        ? 'bg-primary-600 text-white font-bold shadow-md shadow-primary-600/30 border border-primary-500/40'
+                        : 'text-muted-foreground hover:text-primary-600 dark:hover:text-primary-300 hover:bg-primary-950/40'
+                    }`}
+                  >
+                    <ArrowDownToLine className={`w-4 h-4 shrink-0 ${pathname === '/downloads' ? 'text-foreground' : 'text-primary-600 dark:text-primary-400'}`} />
+                    <span>Downloads</span>
+                    {downloads.length > 0 && (
+                      <span className="text-[10px] px-1.5 py-0.5 rounded-full font-bold bg-primary-500/20 text-primary-400 border border-primary-500/30">
+                        {downloads.length}
+                      </span>
+                    )}
+                  </Link>
+                )}
 
                 {/* Tier 6 · 2xl (1536px) — Divider line before user account links */}
                 <div className="hidden 2xl:block w-px h-5 bg-card-border/60 mx-0.5 shrink-0" />
@@ -298,6 +320,25 @@ export function Navbar() {
                     <History className="w-4 h-4 text-cyan-600 dark:text-cyan-400 group-hover:scale-110 transition-transform" />
                     <span>History</span>
                   </Link>
+
+                  {/* Downloads — visible in dropdown only if user has course access */}
+                  {hasCourseAccess && (
+                    <Link
+                      href="/downloads"
+                      onClick={() => setShowMenu(false)}
+                      className="flex w-full items-center justify-between px-3 py-2 rounded-xl text-xs font-semibold text-foreground/80 hover:text-foreground hover:bg-slate-800/60 transition-all duration-150 group"
+                    >
+                      <div className="flex items-center gap-2.5">
+                        <ArrowDownToLine className="w-4 h-4 text-primary-600 dark:text-primary-400 group-hover:scale-110 transition-transform" />
+                        <span>Downloads</span>
+                      </div>
+                      {downloads.length > 0 && (
+                        <span className="text-[10px] px-1.5 py-0.5 rounded-full font-bold bg-primary-500/20 text-primary-400 border border-primary-500/30">
+                          {downloads.length}
+                        </span>
+                      )}
+                    </Link>
+                  )}
 
                   {/* Profile — visible below 2xl; hidden on <md (bottom nav) */}
                   <Link

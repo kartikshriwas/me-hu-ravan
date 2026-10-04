@@ -36,8 +36,15 @@ import {
   Download,
   Lock,
   VideoOff,
-  Clock
+  Clock,
+  CheckCircle2,
+  ArrowDownToLine,
+  Loader2,
+  Trash2,
+  Sparkles,
 } from 'lucide-react';
+import { useDownloads } from '@/lib/downloadContext';
+import { DownloadLessonModal, SingleLessonDownloadTarget } from '@/components/DownloadLessonModal';
 
 interface CourseDetailClientProps {
   course: CourseDetail;
@@ -289,8 +296,144 @@ function getUnitMetaConfig(unit: CourseSectionUnit) {
 }
 
 export function CourseDetailClient({ course, availableTests, isUnlocked = true }: CourseDetailClientProps) {
+  const {
+    isDownloaded,
+    isDownloading,
+    getDownloadProgress,
+    startDownload,
+    downloadSection,
+    downloadCourse,
+    isCourseDownloaded,
+    isCourseDownloading,
+    getCourseDownloadedCount,
+    isSectionDownloaded,
+    isSectionDownloading,
+    getSectionDownloadedCount,
+    deleteCourseDownloads,
+    deleteSectionDownloads,
+    batchProgress,
+    cancelBatchDownload,
+  } = useDownloads();
+
   const [lastVideoInfo, setLastVideoInfo] = useState<{ videoId: string; title?: string; timestamp?: number } | null>(null);
   const [expandedSections, setExpandedSections] = useState<Record<string, boolean>>({});
+  const [bundleQualityModal, setBundleQualityModal] = useState<{
+    type: 'course' | 'section';
+    title: string;
+    totalVideos: number;
+    section?: { title: string; id: string; units: CourseSectionUnit[] };
+  } | null>(null);
+  const [selectedQuality, setSelectedQuality] = useState<string>('720p');
+  const [singleDownloadModal, setSingleDownloadModal] = useState<SingleLessonDownloadTarget | null>(null);
+
+  // Downloadable video units in the entire course
+  const courseVideoUnits = useMemo(() => {
+    const list: {
+      videoId: string;
+      unitTitle: string;
+      sectionTitle: string;
+      sectionId: string;
+      duration?: number;
+    }[] = [];
+
+    course.sections.forEach((sec) => {
+      sec.units.forEach((u, uIdx) => {
+        const isYouTube =
+          u.type === 'youtube' ||
+          u.icon === 'yt' ||
+          (u.subtitle && u.subtitle.toLowerCase().includes('youtube')) ||
+          !!(u.data && u.data.embed);
+        const videoId = u.sourceid || (!isYouTube && u.id ? u.id : '');
+        if (videoId && !isYouTube) {
+          list.push({
+            videoId,
+            unitTitle: (u.unitTitle && u.unitTitle !== 'Untitled') ? u.unitTitle : `${sec.title} Lesson ${uIdx + 1}`,
+            sectionTitle: sec.title,
+            sectionId: sec.id,
+            duration: u.duration,
+          });
+        }
+      });
+    });
+
+    return list;
+  }, [course]);
+
+  const totalCourseVideos = courseVideoUnits.length;
+  const courseDownloadedCount = getCourseDownloadedCount(course.slug);
+  const isCourseFullyDownloaded =
+    totalCourseVideos > 0 && isCourseDownloaded(course.slug, totalCourseVideos);
+  const isCourseActiveDownloading = isCourseDownloading(course.slug);
+
+  const getSectionVideoUnits = React.useCallback(
+    (section: { title: string; id: string; units: CourseSectionUnit[] }) => {
+      const list: { videoId: string; unitTitle: string; duration?: number }[] = [];
+      section.units.forEach((u, uIdx) => {
+        const isYouTube =
+          u.type === 'youtube' ||
+          u.icon === 'yt' ||
+          (u.subtitle && u.subtitle.toLowerCase().includes('youtube')) ||
+          !!(u.data && u.data.embed);
+        const videoId = u.sourceid || (!isYouTube && u.id ? u.id : '');
+        if (videoId && !isYouTube) {
+          list.push({
+            videoId,
+            unitTitle: (u.unitTitle && u.unitTitle !== 'Untitled') ? u.unitTitle : `${section.title} Lesson ${uIdx + 1}`,
+            duration: u.duration,
+          });
+        }
+      });
+      return list;
+    },
+    []
+  );
+
+  const handleDownloadCourse = () => {
+    if (!isUnlocked) return;
+    setBundleQualityModal({
+      type: 'course',
+      title: course.title,
+      totalVideos: totalCourseVideos,
+    });
+  };
+
+  const handleDownloadSection = (
+    e: React.MouseEvent,
+    section: { title: string; id: string; units: CourseSectionUnit[] }
+  ) => {
+    e.stopPropagation();
+    if (!isUnlocked) return;
+    const units = getSectionVideoUnits(section);
+    setBundleQualityModal({
+      type: 'section',
+      title: section.title,
+      totalVideos: units.length,
+      section,
+    });
+  };
+
+  const handleDownloadUnit = (
+    e: React.MouseEvent,
+    unit: CourseSectionUnit,
+    sectionTitle: string,
+    sectionId: string
+  ) => {
+    e.stopPropagation();
+    if (!isUnlocked) return;
+    const videoId = unit.sourceid || unit.id;
+    if (!videoId) return;
+
+    setSingleDownloadModal({
+      videoId,
+      courseSlug: course.slug,
+      courseTitle: course.title,
+      sectionTitle,
+      sectionId,
+      unitTitle: (unit.unitTitle && unit.unitTitle !== 'Untitled') ? unit.unitTitle : 'Video Lesson',
+      thumbnailUrl: '',
+      durationSeconds: unit.duration || 0,
+    });
+  };
 
   const toggleSection = (sectionId: string) => {
     setExpandedSections((prev) => ({
@@ -551,6 +694,98 @@ export function CourseDetailClient({ course, availableTests, isUnlocked = true }
         </div>
       </header>
 
+      {/* Course Offline Downloads Bar (When course is unlocked) */}
+      {isUnlocked && totalCourseVideos > 0 && (
+        <section
+          aria-label="Course Offline Downloads"
+          className="glass-panel rounded-2xl p-4 sm:p-5 border border-primary-500/25 bg-gradient-to-r from-primary-950/20 via-card to-card flex flex-col md:flex-row items-start md:items-center justify-between gap-4 shadow-lg"
+        >
+          <div className="flex items-center gap-3.5 min-w-0">
+            <div className="w-10 h-10 rounded-xl bg-primary-500/15 border border-primary-500/25 flex items-center justify-center text-primary-500 shrink-0">
+              <ArrowDownToLine className="w-5 h-5" />
+            </div>
+            <div>
+              <div className="flex items-center gap-2 flex-wrap">
+                <h3 className="text-sm font-bold text-foreground">
+                  Offline Course Downloads
+                </h3>
+                {isCourseFullyDownloaded && (
+                  <span className="px-2 py-0.5 rounded-full bg-emerald-500/15 text-emerald-400 border border-emerald-500/30 text-[10px] font-bold flex items-center gap-1">
+                    <CheckCircle2 className="w-3 h-3" />
+                    <span>Complete</span>
+                  </span>
+                )}
+              </div>
+              <p className="text-xs text-muted-foreground mt-0.5">
+                {isCourseActiveDownloading && batchProgress
+                  ? `Downloading (${batchProgress.quality || selectedQuality}): ${batchProgress.currentVideoTitle || 'Lesson'} (${batchProgress.completedItems}/${batchProgress.totalItems})`
+                  : isCourseFullyDownloaded
+                  ? `All ${totalCourseVideos} video lessons saved to this browser for offline playback.`
+                  : `${courseDownloadedCount} of ${totalCourseVideos} video lessons downloaded.`}
+              </p>
+            </div>
+          </div>
+
+          <div className="flex items-center gap-2.5 w-full md:w-auto shrink-0 justify-end flex-wrap">
+            {isCourseActiveDownloading ? (
+              <div className="flex items-center gap-2">
+                <div className="px-4 py-2 rounded-xl bg-primary-600/20 border border-primary-500/30 text-primary-400 text-xs font-bold flex items-center gap-2 animate-pulse">
+                  <Loader2 className="w-3.5 h-3.5 animate-spin" />
+                  <span>Downloading ({batchProgress?.quality || selectedQuality})...</span>
+                </div>
+                <button
+                  type="button"
+                  onClick={cancelBatchDownload}
+                  className="px-3 py-2 rounded-xl bg-rose-500/10 hover:bg-rose-500/20 text-rose-400 text-xs font-semibold border border-rose-500/20 transition-all cursor-pointer"
+                >
+                  Cancel
+                </button>
+              </div>
+            ) : isCourseFullyDownloaded ? (
+              <div className="flex items-center gap-2">
+                <Link
+                  href="/downloads"
+                  className="px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold shadow-md shadow-emerald-600/20 transition-all flex items-center gap-1.5"
+                >
+                  <ArrowDownToLine className="w-3.5 h-3.5" />
+                  <span>View in Downloads</span>
+                </Link>
+                <button
+                  type="button"
+                  onClick={() => deleteCourseDownloads(course.slug)}
+                  className="p-2 rounded-xl bg-slate-800/80 hover:bg-rose-500/10 text-muted-foreground hover:text-rose-400 border border-slate-700/60 transition-all cursor-pointer"
+                  title="Remove all course downloads"
+                >
+                  <Trash2 className="w-4 h-4" />
+                </button>
+              </div>
+            ) : (
+              <div className="flex items-center gap-2">
+                <button
+                  type="button"
+                  onClick={handleDownloadCourse}
+                  className="px-4 py-2 rounded-xl bg-primary-600 hover:bg-primary-500 text-white text-xs font-bold shadow-md shadow-primary-600/25 transition-all flex items-center gap-1.5 hover:scale-105 active:scale-95 cursor-pointer"
+                >
+                  <ArrowDownToLine className="w-3.5 h-3.5" />
+                  <span>
+                    Download Entire Course ({totalCourseVideos - courseDownloadedCount}{' '}
+                    {totalCourseVideos - courseDownloadedCount === 1 ? 'lesson' : 'lessons'})
+                  </span>
+                </button>
+                {courseDownloadedCount > 0 && (
+                  <Link
+                    href="/downloads"
+                    className="px-3 py-2 rounded-xl bg-card hover:bg-card-border/60 text-muted-foreground hover:text-foreground text-xs font-semibold border border-card-border transition-all"
+                  >
+                    Downloads ({courseDownloadedCount})
+                  </Link>
+                )}
+              </div>
+            )}
+          </div>
+        </section>
+      )}
+
       {/* Section Syllabus Breakdown */}
       <section aria-labelledby="curriculum-heading" className="space-y-6">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
@@ -634,14 +869,26 @@ export function CourseDetailClient({ course, availableTests, isUnlocked = true }
               const isExpanded = searchQuery.trim() !== '' ? true : !!expandedSections[section.id];
               const sectionSecs = section.units.reduce((acc, u) => acc + (u.duration || 0), 0);
               const formattedSecDuration = formatCourseDuration(sectionSecs);
+              const sectionVideoUnits = getSectionVideoUnits(section);
+              const isSecDownloading = isSectionDownloading(course.slug, section.title);
+              const isSecDownloaded =
+                sectionVideoUnits.length > 0 &&
+                isSectionDownloaded(course.slug, section.title, sectionVideoUnits.length);
 
             return (
               <div key={section.id} className="glass-card rounded-2xl border border-card-border overflow-hidden transition-all">
                 {/* Section Header (Clickable to Collapse/Expand) */}
-                <button
-                  type="button"
+                <div
+                  role="button"
+                  tabIndex={0}
                   aria-expanded={isExpanded}
                   onClick={() => toggleSection(section.id)}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      toggleSection(section.id);
+                    }
+                  }}
                   className="w-full text-left p-5 sm:p-6 flex items-center justify-between flex-wrap gap-3 hover:bg-primary-500/5 transition-colors cursor-pointer group select-none"
                 >
                   <div className="flex items-center gap-3">
@@ -653,7 +900,50 @@ export function CourseDetailClient({ course, availableTests, isUnlocked = true }
                     </div>
                   </div>
 
-                  <div className="flex items-center gap-3 ml-auto sm:ml-0">
+                  <div className="flex items-center gap-3 ml-auto sm:ml-0 flex-wrap">
+                    {/* Section Offline Download Button */}
+                    {isUnlocked && sectionVideoUnits.length > 0 && (
+                      <div
+                        onClick={(e) => e.stopPropagation()}
+                        className="flex items-center gap-1.5 shrink-0"
+                      >
+                        {isSecDownloading ? (
+                          <div className="px-2.5 py-1 rounded-lg bg-primary-500/15 text-primary-400 border border-primary-500/30 text-[11px] font-bold flex items-center gap-1.5 animate-pulse">
+                            <Loader2 className="w-3 h-3 animate-spin" />
+                            <span>Downloading {batchProgress?.quality ? `(${batchProgress.quality})` : ''}...</span>
+                          </div>
+                        ) : isSecDownloaded ? (
+                          <div className="flex items-center gap-1">
+                            <span className="px-2.5 py-1 rounded-lg bg-emerald-500/15 text-emerald-400 border border-emerald-500/30 text-[11px] font-bold flex items-center gap-1">
+                              <CheckCircle2 className="w-3 h-3" />
+                              <span className="hidden xs:inline">Section Saved</span>
+                            </span>
+                            <button
+                              type="button"
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                deleteSectionDownloads(course.slug, section.title);
+                              }}
+                              className="p-1 rounded-lg hover:bg-rose-500/10 text-muted-foreground hover:text-rose-400 transition-colors"
+                              title="Delete section downloads"
+                            >
+                              <Trash2 className="w-3 h-3" />
+                            </button>
+                          </div>
+                        ) : (
+                          <button
+                            type="button"
+                            onClick={(e) => handleDownloadSection(e, section)}
+                            className="px-2.5 py-1 rounded-lg bg-primary-600/15 hover:bg-primary-600 text-primary-500 dark:text-primary-400 hover:text-white border border-primary-500/25 hover:border-transparent text-[11px] font-bold transition-all flex items-center gap-1 hover:scale-105 active:scale-95 cursor-pointer"
+                            title={`Download all ${sectionVideoUnits.length} video lessons in this section`}
+                          >
+                            <ArrowDownToLine className="w-3 h-3" />
+                            <span>Download Section ({sectionVideoUnits.length})</span>
+                          </button>
+                        )}
+                      </div>
+                    )}
+
                     <div className="flex items-center gap-2.5 text-xs text-muted-foreground font-medium">
                       <span>{section.units.length} Units</span>
                       {formattedSecDuration && (
@@ -670,7 +960,7 @@ export function CourseDetailClient({ course, availableTests, isUnlocked = true }
                       <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isExpanded ? 'rotate-180' : ''}`} />
                     </div>
                   </div>
-                </button>
+                </div>
 
                 {/* Units List (Only shown when expanded) */}
                 {isExpanded && (
@@ -783,14 +1073,51 @@ export function CourseDetailClient({ course, availableTests, isUnlocked = true }
                               );
                             }
 
+                            const isDownloadedUnit = isUnlocked && isDownloaded(unit.sourceid || unit.id);
+                            const isDownloadingUnit = isUnlocked && isDownloading(unit.sourceid || unit.id);
+                            const unitProgress = isUnlocked ? getDownloadProgress(unit.sourceid || unit.id) : undefined;
+
                             return isUnlocked ? (
-                              <Link
-                                href={`/courses/${course.slug}/video/${unit.sourceid || unit.id}`}
-                                className="px-3.5 py-1.5 rounded-lg bg-primary-600/20 hover:bg-primary-600 text-primary-600 dark:text-primary-300 hover:text-white text-xs font-bold transition-all border border-primary-500/30 hover:border-transparent flex items-center gap-1.5 shrink-0"
-                              >
-                                <Play className="w-3.5 h-3.5 fill-current" />
-                                <span>Watch Lesson</span>
-                              </Link>
+                              <div className="flex items-center gap-1.5 shrink-0">
+                                {isDownloadedUnit ? (
+                                  <span
+                                    title="Downloaded to this device for offline playback"
+                                    className="px-2 py-1 rounded-lg bg-emerald-950/70 border border-emerald-500/40 text-emerald-400 text-[10px] font-bold flex items-center gap-1"
+                                  >
+                                    <CheckCircle2 className="w-3 h-3" />
+                                    <span>Saved</span>
+                                  </span>
+                                ) : isDownloadingUnit ? (
+                                  <div
+                                    title="Downloading offline..."
+                                    className="px-2 py-1 rounded-lg bg-primary-500/15 border border-primary-500/30 text-primary-400 text-[10px] font-bold flex items-center gap-1.5 animate-pulse"
+                                  >
+                                    <Loader2 className="w-3 h-3 animate-spin" />
+                                    <span>{unitProgress !== undefined ? `${unitProgress}%` : 'Saving'}</span>
+                                  </div>
+                                ) : !isYouTube ? (
+                                  <button
+                                    type="button"
+                                    onClick={(e) => handleDownloadUnit(e, unit, section.title, section.id)}
+                                    className="p-1.5 rounded-lg bg-slate-800/80 hover:bg-primary-600/20 text-muted-foreground hover:text-primary-400 border border-slate-700/60 hover:border-primary-500/30 transition-all cursor-pointer"
+                                    title="Download this lesson offline"
+                                  >
+                                    <ArrowDownToLine className="w-3.5 h-3.5" />
+                                  </button>
+                                ) : null}
+
+                                <Link
+                                  href={`/courses/${course.slug}/video/${unit.sourceid || unit.id}`}
+                                  className={`px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all flex items-center gap-1.5 shrink-0 ${
+                                    isDownloadedUnit
+                                      ? 'bg-emerald-600/20 hover:bg-emerald-600 text-emerald-300 hover:text-white border border-emerald-500/30'
+                                      : 'bg-primary-600/20 hover:bg-primary-600 text-primary-600 dark:text-primary-300 hover:text-white border border-primary-500/30 hover:border-transparent'
+                                  }`}
+                                >
+                                  <Play className="w-3.5 h-3.5 fill-current" />
+                                  <span>{isDownloadedUnit ? 'Watch Offline' : 'Watch Lesson'}</span>
+                                </Link>
+                              </div>
                             ) : (
                               <Link
                                 href={`/courses/${course.slug}/video/${unit.sourceid || unit.id}`}
@@ -813,6 +1140,163 @@ export function CourseDetailClient({ course, availableTests, isUnlocked = true }
         )}
       </section>
 
+      {/* Bundle Quality Selector Modal */}
+      {bundleQualityModal && (
+        <div
+          onClick={() => setBundleQualityModal(null)}
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm animate-in fade-in"
+        >
+          <div
+            onClick={(e) => e.stopPropagation()}
+            className="w-full max-w-md p-6 rounded-3xl bg-card border border-card-border shadow-2xl space-y-5 animate-in zoom-in-95 duration-200"
+          >
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-primary-400">
+                <Sparkles className="w-4 h-4" />
+                <span>Select Download Quality</span>
+              </div>
+              <button
+                onClick={() => setBundleQualityModal(null)}
+                className="p-1 rounded-xl hover:bg-white/10 text-muted-foreground hover:text-foreground cursor-pointer"
+              >
+                <X className="w-4 h-4" />
+              </button>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-bold text-foreground">
+                {bundleQualityModal.type === 'course'
+                  ? 'Download Entire Course'
+                  : `Download Section: ${bundleQualityModal.title}`}
+              </h3>
+              <p className="text-xs text-muted-foreground mt-1">
+                Choose video resolution for {bundleQualityModal.totalVideos} lesson{bundleQualityModal.totalVideos === 1 ? '' : 's'}. Videos are stored inside your browser for offline viewing.
+              </p>
+            </div>
+
+            {/* Quality Options */}
+            <div className="space-y-2.5">
+              {[
+                {
+                  id: '1080p',
+                  name: 'Full HD (1080p)',
+                  desc: 'Maximum sharpness & detail • ~15-25 MB / lesson',
+                  badge: 'Best Quality',
+                },
+                {
+                  id: '720p',
+                  name: 'High Quality (720p HD)',
+                  desc: 'Crisp & clear video • ~10-15 MB / lesson',
+                  badge: 'Recommended',
+                },
+                {
+                  id: '540p',
+                  name: 'Medium Definition (540p)',
+                  desc: 'Great balance for mobile • ~7-10 MB / lesson',
+                  badge: 'Balanced',
+                },
+                {
+                  id: '360p',
+                  name: 'Data Saver (360p)',
+                  desc: 'Fastest download • ~5-8 MB / lesson',
+                  badge: 'Compact',
+                },
+                {
+                  id: '224p',
+                  name: 'Ultra Compact (224p)',
+                  desc: 'Minimal storage usage • ~3-5 MB / lesson',
+                  badge: 'Lightweight',
+                },
+              ].map((opt) => (
+                <button
+                  key={opt.id}
+                  onClick={() => setSelectedQuality(opt.id)}
+                  className={`w-full p-3.5 rounded-2xl border text-left flex items-center justify-between gap-3 transition-all cursor-pointer ${
+                    selectedQuality === opt.id
+                      ? 'bg-primary-950/40 border-primary-500/60 ring-1 ring-primary-500/30'
+                      : 'bg-card hover:bg-slate-800/40 border-card-border/80'
+                  }`}
+                >
+                  <div className="space-y-0.5">
+                    <div className="flex items-center gap-2">
+                      <span className="text-xs font-bold text-foreground">{opt.name}</span>
+                      <span
+                        className={`text-[9px] font-bold px-1.5 py-0.5 rounded ${
+                          selectedQuality === opt.id
+                            ? 'bg-primary-500/20 text-primary-300 border border-primary-500/30'
+                            : 'bg-slate-800 text-slate-400'
+                        }`}
+                      >
+                        {opt.badge}
+                      </span>
+                    </div>
+                    <p className="text-[11px] text-muted-foreground">{opt.desc}</p>
+                  </div>
+                  <div
+                    className={`w-4 h-4 rounded-full border flex items-center justify-center shrink-0 ${
+                      selectedQuality === opt.id
+                        ? 'border-primary-500 bg-primary-500 text-white'
+                        : 'border-slate-600'
+                    }`}
+                  >
+                    {selectedQuality === opt.id && <div className="w-1.5 h-1.5 rounded-full bg-white" />}
+                  </div>
+                </button>
+              ))}
+            </div>
+
+            {/* Confirm Actions */}
+            <div className="flex items-center justify-end gap-2 pt-2 border-t border-card-border/60">
+              <button
+                onClick={() => setBundleQualityModal(null)}
+                className="px-4 py-2 rounded-xl text-xs font-semibold text-muted-foreground hover:text-foreground hover:bg-slate-800 transition-colors cursor-pointer"
+              >
+                Cancel
+              </button>
+              <button
+                onClick={async () => {
+                  const modal = bundleQualityModal;
+                  setBundleQualityModal(null);
+                  if (modal.type === 'course') {
+                    const sectionsPayload = course.sections.map((sec) => ({
+                      sectionTitle: sec.title,
+                      sectionId: sec.id,
+                      units: getSectionVideoUnits(sec),
+                    }));
+                    await downloadCourse({
+                      courseSlug: course.slug,
+                      courseTitle: course.title,
+                      preferredQuality: selectedQuality,
+                      sections: sectionsPayload,
+                    });
+                  } else if (modal.section) {
+                    const units = getSectionVideoUnits(modal.section);
+                    await downloadSection({
+                      courseSlug: course.slug,
+                      courseTitle: course.title,
+                      sectionTitle: modal.section.title,
+                      sectionId: modal.section.id,
+                      preferredQuality: selectedQuality,
+                      units,
+                    });
+                  }
+                }}
+                className="px-5 py-2.5 rounded-xl text-xs font-bold bg-primary-600 hover:bg-primary-500 text-white shadow-md shadow-primary-600/30 transition-all flex items-center gap-1.5 cursor-pointer active:scale-95"
+              >
+                <ArrowDownToLine className="w-3.5 h-3.5" />
+                <span>Start Download ({selectedQuality})</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Single Lesson Quality Modal */}
+      <DownloadLessonModal
+        target={singleDownloadModal}
+        onClose={() => setSingleDownloadModal(null)}
+        onStartDownload={startDownload}
+      />
     </article>
   );
 }

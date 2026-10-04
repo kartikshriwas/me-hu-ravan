@@ -149,3 +149,27 @@ export function isCourseSlugAllowed(userBatches: string[], targetSlug: string): 
   if (allowed.includes('*')) return true;
   return allowed.includes(targetSlug.toLowerCase().trim());
 }
+
+/**
+ * Checks if a user has course access (admins, users with access_courses permission, or enrolled in course batches)
+ */
+export function checkUserCourseAccess(user: any): boolean {
+  if (!user) return false;
+  if (user.role === 'superadmin' || user.role === 'admin') return true;
+  if (user.adminPermissions?.includes('access_courses') || user.adminPermissions?.includes('*')) return true;
+  if (user.hasCourseAccess) return true;
+  const batches: string[] = Array.isArray(user.allowedBatches) ? user.allowedBatches : [];
+  if (user.premiumPlan && isCourseBatch(user.premiumPlan)) return true;
+  return batches.some(isCourseBatch);
+}
+
+/**
+ * Checks if a user has premium status
+ */
+export function checkUserIsPremium(user: any): boolean {
+  if (!user) return false;
+  if (user.role === 'superadmin' || user.role === 'admin') return true;
+  if (user.isPremium) return true;
+  if (user.premiumPlan && user.premiumPlan.trim() !== '') return true;
+  return false;
+}
