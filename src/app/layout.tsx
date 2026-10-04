@@ -31,6 +31,7 @@ export const metadata: Metadata = {
     shortcut: '/favicon.svg',
     apple: '/favicon.svg',
   },
+  manifest: '/manifest.json',
   openGraph: {
     title: 'PrepTea',
     description: 'Master quantitative aptitude, logical reasoning, and practice tests with interactive analytics and solution explanations.',
@@ -61,6 +62,7 @@ import { ThemeProvider } from '@/components/ThemeProvider';
 import { TopLoader } from '@/components/TopLoader';
 import { DownloadProvider } from '@/lib/downloadContext';
 import { OfflineBanner } from '@/components/OfflineBanner';
+import { ServiceWorkerRegistration } from '@/components/ServiceWorkerRegistration';
 
 export default function RootLayout({
   children,
@@ -88,6 +90,7 @@ export default function RootLayout({
               </main>
               <MobileBottomNav />
               <OfflineBanner />
+              <ServiceWorkerRegistration />
             </DownloadProvider>
           </AuthProvider>
         </ThemeProvider>

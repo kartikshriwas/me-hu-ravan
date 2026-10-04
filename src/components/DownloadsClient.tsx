@@ -158,7 +158,8 @@ export function DownloadsClient() {
   }, [activePlaybackVideo, activePlaybackUrl]);
 
   // 404 Guard: Once auth state is resolved, if user lacks course access, trigger 404
-  if (!authLoading && !hasCourseAccess) {
+  // Do not block if user is currently offline or has downloaded items stored locally in IndexedDB
+  if (!authLoading && !hasCourseAccess && isOnline && downloads.length === 0) {
     notFound();
   }
 

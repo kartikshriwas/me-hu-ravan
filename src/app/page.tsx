@@ -30,6 +30,7 @@ import {
 
 import { HomeTestsSkeleton } from '@/components/skeletons/HomeTestsSkeleton';
 import { clientCache } from '@/lib/clientCache';
+import { OfflineState } from '@/components/OfflineState';
 
 export default function HomePage() {
   const router = useRouter();
@@ -45,6 +46,26 @@ export default function HomePage() {
   const [recentAttempt, setRecentAttempt] = useState<QuizAttemptResult | null>(null);
   const [selectedTestForLoginModal, setSelectedTestForLoginModal] = useState<AssessmentMeta | null>(null);
   const [selectedTestForPremiumModal, setSelectedTestForPremiumModal] = useState<AssessmentMeta | null>(null);
+  const [isOnline, setIsOnline] = useState(typeof navigator !== 'undefined' ? navigator.onLine : true);
+  const [fetchError, setFetchError] = useState(false);
+
+  // Monitor network connectivity
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    const handleOnline = () => {
+      setIsOnline(true);
+      fetchAssessments();
+    };
+    const handleOffline = () => setIsOnline(false);
+
+    window.addEventListener('online', handleOnline);
+    window.addEventListener('offline', handleOffline);
+
+    return () => {
+      window.removeEventListener('online', handleOnline);
+      window.removeEventListener('offline', handleOffline);
+    };
+  }, []);
 
   // Auto-redirect to target test paper as soon as user logs in via modal popup
   useEffect(() => {
@@ -55,20 +76,23 @@ export default function HomePage() {
     }
   }, [user, selectedTestForLoginModal, router]);
 
-  useEffect(() => {
-    async function fetchAssessments() {
-      try {
-        const json = await clientCache.fetchWithCache<{ success: boolean; data: AssessmentMeta[] }>('/api/questions', undefined, 60000);
-        if (json?.success && Array.isArray(json.data)) {
-          setTests(json.data);
-        }
-      } catch (err) {
-        console.error('Failed to fetch practice tests:', err);
-      } finally {
-        setLoading(false);
+  async function fetchAssessments() {
+    setLoading(true);
+    try {
+      const json = await clientCache.fetchWithCache<{ success: boolean; data: AssessmentMeta[] }>('/api/questions', undefined, 60000);
+      if (json?.success && Array.isArray(json.data)) {
+        setTests(json.data);
+        setFetchError(false);
       }
+    } catch (err) {
+      console.error('Failed to fetch practice tests:', err);
+      setFetchError(true);
+    } finally {
+      setLoading(false);
     }
+  }
 
+  useEffect(() => {
     fetchAssessments();
   }, []);
 
@@ -288,6 +312,16 @@ export default function HomePage() {
             {[1, 2, 3].map((n) => (
               <div key={n} className="glass-panel rounded-2xl p-6 h-56 animate-pulse bg-card/40" />
             ))}
+          </div>
+        ) : tests.length === 0 && (!isOnline || fetchError) ? (
+          <div className="w-full flex items-center justify-center py-10">
+            <div className="max-w-md w-full glass-panel rounded-3xl p-8 border border-card-border shadow-2xl">
+              <OfflineState
+                title="Connect to the internet"
+                subtitle="You're offline. Check your connection."
+                onRetry={fetchAssessments}
+              />
+            </div>
           </div>
         ) : filteredTests.length === 0 ? (
           <div className="p-12 text-center glass-panel rounded-3xl space-y-3">

@@ -67,25 +67,25 @@ export function OfflineState({
         </p>
       </div>
 
-      {/* Action Button */}
-      <div className="pt-2">
-        {hasCourseAccess ? (
+      {/* Action Buttons */}
+      <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3 w-full max-w-xs mx-auto">
+        <button
+          onClick={handleRetry}
+          disabled={retrying}
+          className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-2xl bg-primary-600 hover:bg-primary-500 disabled:opacity-75 text-white font-bold text-xs sm:text-sm transition-all shadow-xl shadow-primary-600/30 hover:scale-105 active:scale-95 cursor-pointer"
+        >
+          <RotateCcw className={`w-4 h-4 ${retrying ? 'animate-spin' : ''}`} />
+          <span>{retrying ? 'Checking...' : 'Retry'}</span>
+        </button>
+
+        {hasCourseAccess && (
           <Link
             href="/downloads"
-            className="inline-flex items-center gap-2 px-7 py-3 rounded-2xl bg-primary-600 hover:bg-primary-500 text-white font-bold text-xs sm:text-sm transition-all shadow-xl shadow-primary-600/30 hover:scale-105 active:scale-95"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-2xl bg-slate-800/90 hover:bg-slate-700/90 border border-slate-700 text-foreground font-bold text-xs sm:text-sm transition-all shadow-lg hover:scale-105 active:scale-95"
           >
             <ArrowDownToLine className="w-4 h-4" />
             <span>Go to Downloads</span>
           </Link>
-        ) : (
-          <button
-            onClick={handleRetry}
-            disabled={retrying}
-            className="inline-flex items-center gap-2 px-7 py-3 rounded-2xl bg-primary-600 hover:bg-primary-500 disabled:opacity-75 text-white font-bold text-xs sm:text-sm transition-all shadow-xl shadow-primary-600/30 hover:scale-105 active:scale-95 cursor-pointer"
-          >
-            <RotateCcw className={`w-4 h-4 ${retrying ? 'animate-spin' : ''}`} />
-            <span>{retrying ? 'Checking...' : 'Retry'}</span>
-          </button>
         )}
       </div>
     </div>
