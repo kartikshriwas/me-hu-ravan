@@ -34,7 +34,7 @@ import {
 import { useDownloads } from '@/lib/downloadContext';
 import { OfflineVideoMetadata } from '@/lib/videoStorage';
 import { useAuth } from '@/lib/authContext';
-import { checkUserCourseAccess } from '@/lib/batchAccess';
+import { checkUserCourseAccess, verifyAndGetCachedBatchAccess, CachedBatchAccess } from '@/lib/batchAccess';
 import { CustomVideoPlayer } from '@/components/CustomVideoPlayer';
 
 function formatBytes(bytes: number): string {
@@ -86,7 +86,7 @@ interface GroupedCourse {
 
 export function DownloadsClient() {
   const { user, loading: authLoading } = useAuth();
-  const hasCourseAccess = checkUserCourseAccess(user);
+  const [isOnline, setIsOnline] = useState(typeof navigator !== 'undefined' ? navigator.onLine : true);
 
   const {
     downloads,
@@ -105,7 +105,6 @@ export function DownloadsClient() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCourse, setSelectedCourse] = useState<string>('all');
   const [sortBy, setSortBy] = useState<'recent' | 'size' | 'title'>('recent');
-  const [isOnline, setIsOnline] = useState(true);
 
   // Expanded sections state: courseSlug -> sectionTitle -> boolean
   const [collapsedSections, setCollapsedSections] = useState<Record<string, boolean>>({});
@@ -146,6 +145,18 @@ export function DownloadsClient() {
     };
   }, []);
 
+  const [cachedAccess, setCachedAccess] = useState<CachedBatchAccess | null>(null);
+  const [isVerifyingOfflineAccess, setIsVerifyingOfflineAccess] = useState(true);
+
+  useEffect(() => {
+    async function verify() {
+      const access = await verifyAndGetCachedBatchAccess();
+      setCachedAccess(access);
+      setIsVerifyingOfflineAccess(false);
+    }
+    verify();
+  }, []);
+
   // Keyboard shortcut listener: Escape to close cinema player
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -157,10 +168,24 @@ export function DownloadsClient() {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [activePlaybackVideo, activePlaybackUrl]);
 
-  // 404 Guard: Once auth state is resolved, if user lacks course access, trigger 404
-  // Do not block if user is currently offline or has downloaded items stored locally in IndexedDB
-  if (!authLoading && !hasCourseAccess && isOnline && downloads.length === 0) {
+  // Determine effective access:
+  // When online: check live session
+  // When offline: check cached batch access status
+  const liveAccess = checkUserCourseAccess(user);
+  const effectiveAccess = isOnline ? liveAccess : (cachedAccess?.hasAccess ?? liveAccess);
+
+  // 404 Guard: Once auth state is resolved, if user lacks course access, trigger notFound
+  if (!authLoading && !isVerifyingOfflineAccess && !effectiveAccess) {
     notFound();
+  }
+
+  if (isVerifyingOfflineAccess) {
+    return (
+      <div className="w-full h-[50vh] flex flex-col items-center justify-center">
+        <Loader2 className="w-8 h-8 text-primary-500 animate-spin" />
+        <p className="text-xs text-muted-foreground mt-4">Verifying secure offline access...</p>
+      </div>
+    );
   }
 
   // Distinct courses for filter pills

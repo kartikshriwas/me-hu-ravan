@@ -12,6 +12,13 @@ import {
   clearAllDownloadedVideos,
   getOfflineStorageUsage,
 } from './videoStorage';
+import { useAuth } from '@/lib/authContext';
+import {
+  checkUserCourseAccess,
+  getCachedBatchAccess,
+  verifyAndGetCachedBatchAccess,
+  saveCachedBatchAccess,
+} from '@/lib/batchAccess';
 
 export interface StartDownloadParams {
   videoId: string;
@@ -123,6 +130,8 @@ export function DownloadProvider({ children }: { children: React.ReactNode }) {
   const activeBlobUrlsRef = useRef<Map<string, string>>(new Map());
   const batchCancelRef = useRef<boolean>(false);
 
+  const { user, loading: authLoading } = useAuth();
+
   // Load downloads from IndexedDB on initial mount
   const refreshDownloads = useCallback(async () => {
     try {
@@ -139,6 +148,52 @@ export function DownloadProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     refreshDownloads();
   }, [refreshDownloads]);
+
+  // Synchronize user batch access & purge offline downloads if access was revoked
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+
+    const verifyAndSyncAccess = async () => {
+      if (authLoading) return;
+
+      const isOnline = typeof navigator !== 'undefined' ? navigator.onLine : true;
+      if (!isOnline) return; // Keep cached access state intact when offline
+
+      const cached = await verifyAndGetCachedBatchAccess();
+
+      if (user && user.email) {
+        const liveAccess = checkUserCourseAccess(user);
+
+        // Security Check: If user previously had access, but now liveAccess is revoked:
+        if (cached && cached.email === user.email.toLowerCase().trim() && cached.hasAccess && !liveAccess) {
+          console.warn('PrepTea Security: Course batch access revoked. Deleting all offline downloaded lessons...');
+          await clearAllDownloadedVideos();
+          setDownloads([]);
+          setDownloadedIds(new Set());
+          setStorageUsage({ usedBytes: 0, count: 0 });
+          saveCachedBatchAccess(user.email, false, []);
+          return;
+        }
+
+        // Keep cache updated with current access
+        if (liveAccess) {
+          saveCachedBatchAccess(user.email, true, user.allowedBatches || [], (user as any).offlineAccessSignature || '');
+        } else {
+          saveCachedBatchAccess(user.email, false, [], (user as any).offlineAccessSignature || '');
+        }
+      }
+    };
+
+    verifyAndSyncAccess();
+
+    // Whenever user comes back online, immediately re-verify permissions
+    const handleOnline = () => {
+      verifyAndSyncAccess();
+    };
+
+    window.addEventListener('online', handleOnline);
+    return () => window.removeEventListener('online', handleOnline);
+  }, [user, authLoading]);
 
   // Clean up object URLs on window unload
   useEffect(() => {

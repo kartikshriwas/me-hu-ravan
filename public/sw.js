@@ -1,8 +1,9 @@
 // PrepTea Service Worker - App Shell Architecture v2
-const CACHE_NAME = 'preptea-shell-v2';
+const CACHE_NAME = 'preptea-shell-v3';
 
 const APP_SHELL_ASSETS = [
   '/',
+  '/downloads',
   '/favicon.svg',
   '/favicon.png',
   '/manifest.json',

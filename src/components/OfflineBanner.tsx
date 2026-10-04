@@ -80,22 +80,22 @@ export function OfflineBanner() {
           </div>
           <div className="min-w-0">
             <p className="text-xs sm:text-sm font-bold text-foreground truncate">
-              Connect to the internet
+              You&apos;re offline
             </p>
             <p className="text-[11px] sm:text-xs text-muted-foreground truncate">
-              You&apos;re offline. Check your connection.
+              Please check your connection or watch your downloaded videos.
             </p>
           </div>
         </div>
 
-        <div className="shrink-0">
+        <div className="shrink-0 flex items-center gap-2">
           {hasCourseAccess ? (
             <Link
               href="/downloads"
               className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-primary-600 hover:bg-primary-500 text-white font-bold text-xs sm:text-sm shadow-md shadow-primary-600/30 transition-all active:scale-95 whitespace-nowrap"
             >
               <ArrowDownToLine className="w-3.5 h-3.5" />
-              <span>Downloads</span>
+              <span>Go to downloads</span>
             </Link>
           ) : (
             <button
