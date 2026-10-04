@@ -13,13 +13,14 @@ export function ServiceWorkerRegistration() {
       navigator.serviceWorker
         .register('/sw.js', { scope: '/' })
         .then((registration) => {
-          // Check for service worker updates periodically
+          // Check for service worker updates periodically and activate immediately
           registration.addEventListener('updatefound', () => {
             const installingWorker = registration.installing;
             if (installingWorker) {
               installingWorker.addEventListener('statechange', () => {
                 if (installingWorker.state === 'installed' && navigator.serviceWorker.controller) {
-                  console.log('New PrepTea service worker available.');
+                  // Tell new service worker to take control immediately
+                  installingWorker.postMessage({ type: 'SKIP_WAITING' });
                 }
               });
             }
@@ -28,6 +29,15 @@ export function ServiceWorkerRegistration() {
         .catch((error) => {
           console.warn('Service worker registration failed:', error);
         });
+
+      // Reload page when new service worker takes control so new deployment chunks load cleanly
+      let refreshing = false;
+      navigator.serviceWorker.addEventListener('controllerchange', () => {
+        if (!refreshing) {
+          refreshing = true;
+          window.location.reload();
+        }
+      });
     };
 
     if (document.readyState === 'complete') {

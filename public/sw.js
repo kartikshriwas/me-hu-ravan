@@ -1,7 +1,6 @@
-// PrepTea Service Worker - YouTube-style App Shell Architecture
-const CACHE_NAME = 'preptea-shell-v1';
+// PrepTea Service Worker - App Shell Architecture v2
+const CACHE_NAME = 'preptea-shell-v2';
 
-// Pre-cache only the app shell and core assets (no offline.html)
 const APP_SHELL_ASSETS = [
   '/',
   '/favicon.svg',
@@ -31,44 +30,49 @@ self.addEventListener('activate', (event) => {
   );
 });
 
+self.addEventListener('message', (event) => {
+  if (event.data && event.data.type === 'SKIP_WAITING') {
+    self.skipWaiting();
+  }
+});
+
 self.addEventListener('fetch', (event) => {
   const { request } = event;
   const url = new URL(request.url);
 
-  // Ignore non-GET and API mutation/stream requests
+  // Bypass non-GET, API requests, and streaming downloads
   if (request.method !== 'GET' || url.pathname.startsWith('/api/')) {
     return;
   }
 
-  // 1. Navigation requests (Opening or refreshing pages)
+  // 1. Navigation requests (Page loading and refreshes) - Network First
   if (request.mode === 'navigate') {
     event.respondWith(
       fetch(request)
         .then((response) => {
-          if (response.status === 200) {
+          if (response && response.status === 200 && response.type === 'basic') {
             const copy = response.clone();
             caches.open(CACHE_NAME).then((cache) => cache.put(request, copy));
           }
           return response;
         })
         .catch(async () => {
+          // Offline fallback
           const cache = await caches.open(CACHE_NAME);
-          // 1. Return the cached page if available
           const cachedPage = await cache.match(request);
           if (cachedPage) return cachedPage;
 
-          // 2. Otherwise serve the root App Shell ('/') so React mounts
           const shell = await cache.match('/');
           if (shell) return shell;
 
-          return new Response('Network offline', { status: 503 });
+          return new Response('Network offline', { status: 503, headers: { 'Content-Type': 'text/plain' } });
         })
     );
     return;
   }
 
-  // 2. Static Next.js assets & bundles
-  const isStatic =
+  // 2. Next.js chunks and static assets
+  const isStaticAsset =
     url.pathname.startsWith('/_next/static/') ||
     url.pathname.endsWith('.js') ||
     url.pathname.endsWith('.css') ||
@@ -76,28 +80,25 @@ self.addEventListener('fetch', (event) => {
     url.pathname.endsWith('.png') ||
     url.pathname.endsWith('.woff2');
 
-  if (isStatic) {
+  if (isStaticAsset) {
     event.respondWith(
       caches.match(request).then((cachedResponse) => {
         if (cachedResponse) {
-          // Serve from cache immediately, revalidate in background
-          fetch(request)
-            .then((networkResponse) => {
-              if (networkResponse.status === 200) {
-                caches.open(CACHE_NAME).then((cache) => cache.put(request, networkResponse));
-              }
-            })
-            .catch(() => {});
           return cachedResponse;
         }
 
-        return fetch(request).then((networkResponse) => {
-          if (networkResponse.status === 200) {
-            const copy = networkResponse.clone();
-            caches.open(CACHE_NAME).then((cache) => cache.put(request, copy));
-          }
-          return networkResponse;
-        });
+        return fetch(request)
+          .then((networkResponse) => {
+            if (networkResponse && networkResponse.status === 200) {
+              const copy = networkResponse.clone();
+              caches.open(CACHE_NAME).then((cache) => cache.put(request, copy));
+            }
+            return networkResponse;
+          })
+          .catch(() => {
+            // Return empty response or let caller handle chunk failure cleanly without crashing SW
+            return new Response(null, { status: 408, statusText: 'Request timed out or offline' });
+          });
       })
     );
     return;
