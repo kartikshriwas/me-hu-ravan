@@ -100,6 +100,13 @@ export default function HomePage() {
     }
   }, [user, selectedTestForLoginModal, router]);
 
+  // Auto-redirect to downloads page if offline and have downloads
+  useEffect(() => {
+    if (!isOnline && downloads.length > 0) {
+      router.replace('/downloads');
+    }
+  }, [isOnline, downloads.length, router]);
+
   async function fetchAssessments() {
     setLoading(true);
     try {

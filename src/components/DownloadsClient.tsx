@@ -1213,6 +1213,17 @@ export function DownloadsClient() {
         })}
         </div>
       )}
+
+      {/* Offline Banner at Bottom */}
+      {!isOnline && (
+        <div className="fixed bottom-0 left-0 right-0 z-50 p-4 bg-rose-600/95 backdrop-blur-md border-t border-rose-500/50 shadow-2xl flex items-center justify-center gap-3 animate-in slide-in-from-bottom-5">
+          <WifiOff className="w-5 h-5 text-white animate-pulse" />
+          <div>
+            <p className="text-sm font-bold text-white">You are offline</p>
+            <p className="text-[11px] font-medium text-rose-100">Enjoy your downloaded videos locally.</p>
+          </div>
+        </div>
+      )}
     </main>
   );
 }

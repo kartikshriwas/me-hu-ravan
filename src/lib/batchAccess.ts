@@ -192,18 +192,7 @@ export async function verifyAndGetCachedBatchAccess(): Promise<CachedBatchAccess
   const cached = getCachedBatchAccess();
   if (!cached) return null;
   
-  // No security risk if cache says they don't have access.
-  // This also prevents signature errors if the auth session doesn't provide a signature.
-  if (!cached.hasAccess) {
-    return cached;
-  }
-
-  const isValid = await verifyOfflineSignature(cached.email, cached.hasAccess, cached.batches, cached.signature);
-  if (!isValid) {
-    console.warn('Security verification failed for offline cache. Data may have been tampered with.');
-    clearCachedBatchAccess();
-    return null;
-  }
+  // Signature logic was removed from auth.ts, so we trust the cached value for offline access.
   return cached;
 }
 
