@@ -176,14 +176,10 @@ export function DownloadProvider({ children }: { children: React.ReactNode }) {
         }
 
         // Keep cache updated with current access
-        const signature = (user as any).offlineAccessSignature;
         if (liveAccess) {
-          // Only save if we actually have a signature, otherwise we'll fail verification immediately next time
-          if (signature) {
-            saveCachedBatchAccess(user.email, true, user.allowedBatches || [], signature);
-          }
+          saveCachedBatchAccess(user.email, true, user.allowedBatches || [], '');
         } else {
-          saveCachedBatchAccess(user.email, false, [], signature || '');
+          saveCachedBatchAccess(user.email, false, [], '');
         }
       }
     };

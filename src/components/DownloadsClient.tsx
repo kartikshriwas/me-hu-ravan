@@ -326,10 +326,8 @@ export function DownloadsClient() {
   const liveAccess = checkUserCourseAccess(user);
   const effectiveAccess = isOnline ? liveAccess : (cachedAccess?.hasAccess ?? liveAccess);
 
-  // 404 Guard: Once auth state is resolved, if user lacks course access, trigger notFound
-  if (!authLoading && !isVerifyingOfflineAccess && !effectiveAccess) {
-    notFound();
-  }
+  // effectiveAccess is calculated but we no longer throw 404 if it's missing. 
+  // If access was revoked, downloadContext will automatically purge the downloads when online.
 
   if (isVerifyingOfflineAccess) {
     return (
