@@ -72,14 +72,16 @@ export function OfflineBanner() {
     return (
       <aside
         aria-label="Offline status banner"
-        className="fixed bottom-20 md:bottom-6 left-1/2 -translate-x-1/2 z-50 w-[94%] max-w-lg p-3 sm:p-4 rounded-2xl sm:rounded-full bg-slate-950/95 border border-slate-800 shadow-2xl backdrop-blur-xl animate-in fade-in slide-in-from-bottom-4 duration-300 flex items-center justify-between gap-3 text-foreground select-none"
+        className="fixed bottom-20 md:bottom-6 left-1/2 -translate-x-1/2 z-50 w-[94%] max-w-lg p-3 sm:p-4 rounded-2xl sm:rounded-full bg-slate-950/95 border border-slate-800 shadow-[0_20px_50px_-12px_rgba(0,0,0,0.5),0_0_20px_-5px_rgba(255,255,255,0.05)] backdrop-blur-xl animate-in fade-in slide-in-from-bottom-4 duration-300 flex items-center justify-between gap-3 text-foreground select-none overflow-hidden"
       >
-        <div className="flex items-center gap-3 min-w-0">
-          <div className="w-9 h-9 rounded-full bg-slate-800 border border-slate-700/80 flex items-center justify-center shrink-0 text-muted-foreground">
-            <WifiOff className="w-4 h-4" />
+        <div className="absolute inset-0 bg-gradient-to-r from-rose-500/5 via-transparent to-primary-500/5 pointer-events-none" />
+        
+        <div className="flex items-center gap-3 min-w-0 relative z-10">
+          <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-slate-900 border border-slate-700/80 flex items-center justify-center shrink-0 text-muted-foreground shadow-inner">
+            <WifiOff className="w-4 h-4 sm:w-4.5 sm:h-4.5 drop-shadow-sm" />
           </div>
           <div className="min-w-0">
-            <p className="text-xs sm:text-sm font-bold text-foreground truncate">
+            <p className="text-sm font-black bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent truncate tracking-tight">
               You&apos;re offline
             </p>
             <p className="text-[11px] sm:text-xs text-muted-foreground truncate">
@@ -88,11 +90,11 @@ export function OfflineBanner() {
           </div>
         </div>
 
-        <div className="shrink-0 flex items-center gap-2">
+        <div className="shrink-0 flex items-center gap-2 relative z-10">
           {hasCourseAccess ? (
             <Link
               href="/downloads"
-              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-primary-600 hover:bg-primary-500 text-white font-bold text-xs sm:text-sm shadow-md shadow-primary-600/30 transition-all active:scale-95 whitespace-nowrap"
+              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-primary-600 hover:bg-primary-500 text-white font-bold text-xs sm:text-sm shadow-[0_0_15px_-3px_rgba(var(--primary-600),0.4)] transition-all hover:scale-105 active:scale-95 whitespace-nowrap"
             >
               <ArrowDownToLine className="w-3.5 h-3.5" />
               <span>Go to downloads</span>
@@ -100,7 +102,7 @@ export function OfflineBanner() {
           ) : (
             <button
               onClick={handleRetry}
-              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-primary-600 hover:bg-primary-500 text-white font-bold text-xs sm:text-sm shadow-md shadow-primary-600/30 transition-all active:scale-95 cursor-pointer whitespace-nowrap"
+              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-primary-600 hover:bg-primary-500 text-white font-bold text-xs sm:text-sm shadow-[0_0_15px_-3px_rgba(var(--primary-600),0.4)] transition-all hover:scale-105 active:scale-95 cursor-pointer whitespace-nowrap"
             >
               <RotateCcw className="w-3.5 h-3.5" />
               <span>Retry</span>

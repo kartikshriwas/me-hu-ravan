@@ -1007,10 +1007,16 @@ export function CourseDetailClient({ course, availableTests, isUnlocked = true }
                               <p className="text-sm font-semibold text-foreground">
                                 {unit.unitTitle !== 'Untitled' ? unit.unitTitle : `${section.title} Lesson ${uIdx + 1}`}
                               </p>
-                              {formatUnitDuration(unit.duration) && config.isActionableVideo && (
-                                <span className="text-[11px] text-slate-500 mt-0.5 block font-mono">
-                                  {formatUnitDuration(unit.duration)}
-                                </span>
+                              {(formatUnitDuration(unit.duration) || unit.modifiedF) && config.isActionableVideo && (
+                                <div className="text-[11px] text-slate-500 mt-0.5 flex items-center gap-1.5 font-mono">
+                                  {formatUnitDuration(unit.duration) && (
+                                    <span>{formatUnitDuration(unit.duration)}</span>
+                                  )}
+                                  {formatUnitDuration(unit.duration) && unit.modifiedF && <span>•</span>}
+                                  {unit.modifiedF && (
+                                    <span title={unit.modifiedF}>{unit.modifiedF.split(' ')[0]}</span>
+                                  )}
+                                </div>
                               )}
                             </div>
                           </div>

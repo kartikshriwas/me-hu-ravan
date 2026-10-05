@@ -353,17 +353,17 @@ export default function HomePage() {
               <section className="space-y-4 pt-2">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-card-border">
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-2xl bg-primary-600/20 text-primary-400 flex items-center justify-center border border-primary-500/30">
-                      <Film className="w-5 h-5" />
+                    <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-primary-500/20 to-emerald-500/10 text-primary-400 flex items-center justify-center border border-primary-500/30 shadow-inner">
+                      <Film className="w-6 h-6" />
                     </div>
                     <div>
-                      <h2 className="text-xl font-bold text-foreground flex items-center gap-2">
+                      <h2 className="text-xl sm:text-2xl font-black bg-gradient-to-br from-foreground via-foreground/90 to-primary-500/70 bg-clip-text text-transparent flex items-center gap-2 tracking-tight">
                         <span>Downloaded Videos</span>
-                        <span className="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-primary-600/20 text-primary-400 border border-primary-500/30">
+                        <span className="text-xs font-bold px-2.5 py-0.5 rounded-full bg-primary-600/20 text-primary-400 border border-primary-500/30 flex items-center shadow-sm">
                           {downloads.length} {downloads.length === 1 ? 'lesson' : 'lessons'}
                         </span>
                       </h2>
-                      <p className="text-xs text-muted-foreground">
+                      <p className="text-xs sm:text-sm text-muted-foreground font-medium mt-0.5">
                         Ready to play offline • {formatBytes(storageUsage.usedBytes)} used
                       </p>
                     </div>
@@ -382,15 +382,17 @@ export default function HomePage() {
                   {downloads.slice(0, 8).map((d) => (
                     <article
                       key={d.videoId}
-                      className="glass-card rounded-2xl p-4 flex flex-col justify-between group transition-all border border-card-border hover:border-primary-500/40 hover:shadow-xl hover:shadow-primary-950/20"
+                      className="glass-card rounded-2xl p-4 flex flex-col justify-between group transition-all duration-300 border border-card-border hover:border-primary-500/40 hover:shadow-2xl hover:shadow-primary-950/20 relative overflow-hidden"
                     >
-                      <div className="space-y-2.5">
-                        <div className="relative aspect-video rounded-xl overflow-hidden bg-slate-900 border border-slate-800 flex items-center justify-center">
+                      <div className="absolute inset-0 bg-gradient-to-br from-primary-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+                      
+                      <div className="space-y-3 relative z-10">
+                        <div className="relative aspect-video rounded-xl overflow-hidden bg-slate-900 border border-slate-800 flex items-center justify-center group-hover:shadow-lg group-hover:shadow-primary-900/30 transition-all duration-300">
                           {d.thumbnailUrl ? (
                             <img
                               src={d.thumbnailUrl}
                               alt={d.unitTitle}
-                              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                             />
                           ) : (
                             <Film className="w-8 h-8 text-slate-600" />
@@ -417,13 +419,14 @@ export default function HomePage() {
                         </div>
                       </div>
 
-                      <div className="mt-4 pt-3 border-t border-card-border/60 flex items-center justify-between text-xs">
-                        <span className="text-[11px] text-muted-foreground font-medium">
-                          {d.quality || '720p'} • {formatBytes(d.sizeBytes)}
+                      <div className="mt-4 pt-3 border-t border-card-border/60 flex items-center justify-between text-xs relative z-10">
+                        <span className="text-[11px] text-muted-foreground font-medium flex items-center gap-1.5">
+                          <span className="px-1.5 py-0.5 rounded text-[9px] font-bold bg-card border border-card-border/80 uppercase">{d.quality || '720p'}</span>
+                          <span>{formatBytes(d.sizeBytes)}</span>
                         </span>
                         <Link
                           href="/downloads"
-                          className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-primary-600 hover:bg-primary-500 text-white font-bold text-xs shadow-md shadow-primary-600/30 transition-all active:scale-95"
+                          className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-primary-600 hover:bg-primary-500 text-white font-bold text-xs shadow-lg shadow-primary-600/30 transition-all hover:scale-105 active:scale-95"
                         >
                           <Play className="w-3 h-3 fill-current" />
                           <span>Watch</span>

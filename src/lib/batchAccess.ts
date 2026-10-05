@@ -191,9 +191,16 @@ export async function verifyOfflineSignature(email: string, hasAccess: boolean, 
 export async function verifyAndGetCachedBatchAccess(): Promise<CachedBatchAccess | null> {
   const cached = getCachedBatchAccess();
   if (!cached) return null;
+  
+  // No security risk if cache says they don't have access.
+  // This also prevents signature errors if the auth session doesn't provide a signature.
+  if (!cached.hasAccess) {
+    return cached;
+  }
+
   const isValid = await verifyOfflineSignature(cached.email, cached.hasAccess, cached.batches, cached.signature);
   if (!isValid) {
-    console.error('Security verification failed for offline cache. Data may have been tampered with.');
+    console.warn('Security verification failed for offline cache. Data may have been tampered with.');
     clearCachedBatchAccess();
     return null;
   }

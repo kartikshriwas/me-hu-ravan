@@ -178,7 +178,8 @@ export function getAllCourses(): CourseMeta[] {
               vimeoid: unitMeta.vimeoid || undefined,
               fileUrl: unitMeta.fileUrl || lpItem.fileUrl || undefined,
               data: unitMeta.data || lpItem.data || undefined,
-              duration: typeof unitMeta.duration === 'number' ? unitMeta.duration : undefined
+              duration: typeof unitMeta.duration === 'number' ? unitMeta.duration : undefined,
+              modifiedF: unitMeta.modifiedF || undefined
             };
 
             const hasContent = unitMeta.hasData || !!unitMeta.sourceid || !!unitMeta.vimeoid || !!unitMeta.fileUrl || (typeof unitMeta.duration === 'number' && unitMeta.duration > 0);
@@ -280,7 +281,8 @@ export function parseRawCourseData(data: any, fallbackSlug: string = 'course'): 
           sourceid: unitMeta.sourceid || lpItem.sourceid || undefined,
           vimeoid: unitMeta.vimeoid || lpItem.vimeoid || undefined,
           fileUrl: unitMeta.fileUrl || lpItem.fileUrl || undefined,
-          duration: typeof unitMeta.duration === 'number' ? unitMeta.duration : (typeof lpItem.duration === 'number' ? lpItem.duration : undefined)
+          duration: typeof unitMeta.duration === 'number' ? unitMeta.duration : (typeof lpItem.duration === 'number' ? lpItem.duration : undefined),
+          modifiedF: unitMeta.modifiedF || undefined
         };
       })
       .filter((unit: CourseSectionUnit) => isUnitActionable(unit));

@@ -168,25 +168,7 @@ export function DownloadsClient() {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [activePlaybackVideo, activePlaybackUrl]);
 
-  // Determine effective access:
-  // When online: check live session
-  // When offline: check cached batch access status
-  const liveAccess = checkUserCourseAccess(user);
-  const effectiveAccess = isOnline ? liveAccess : (cachedAccess?.hasAccess ?? liveAccess);
-
-  // 404 Guard: Once auth state is resolved, if user lacks course access, trigger notFound
-  if (!authLoading && !isVerifyingOfflineAccess && !effectiveAccess) {
-    notFound();
-  }
-
-  if (isVerifyingOfflineAccess) {
-    return (
-      <div className="w-full h-[50vh] flex flex-col items-center justify-center">
-        <Loader2 className="w-8 h-8 text-primary-500 animate-spin" />
-        <p className="text-xs text-muted-foreground mt-4">Verifying secure offline access...</p>
-      </div>
-    );
-  }
+  // Note: early returns (404 guard and loader) have been moved to the bottom to respect hooks order
 
   // Distinct courses for filter pills
   const coursesList = useMemo(() => {
@@ -338,6 +320,26 @@ export function DownloadsClient() {
     }));
   };
 
+  // Determine effective access:
+  // When online: check live session
+  // When offline: check cached batch access status
+  const liveAccess = checkUserCourseAccess(user);
+  const effectiveAccess = isOnline ? liveAccess : (cachedAccess?.hasAccess ?? liveAccess);
+
+  // 404 Guard: Once auth state is resolved, if user lacks course access, trigger notFound
+  if (!authLoading && !isVerifyingOfflineAccess && !effectiveAccess) {
+    notFound();
+  }
+
+  if (isVerifyingOfflineAccess) {
+    return (
+      <div className="w-full h-[50vh] flex flex-col items-center justify-center">
+        <Loader2 className="w-8 h-8 text-primary-500 animate-spin" />
+        <p className="text-xs text-muted-foreground mt-4">Verifying secure offline access...</p>
+      </div>
+    );
+  }
+
   return (
     <main className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 space-y-6 sm:space-y-8" role="main">
       
@@ -407,16 +409,17 @@ export function DownloadsClient() {
       )}
 
       {/* Page Header */}
-      <header className="glass-panel rounded-3xl p-6 sm:p-8 border border-card-border shadow-xl flex flex-col md:flex-row md:items-center justify-between gap-6 relative overflow-hidden">
+      <header className="glass-panel rounded-3xl p-6 sm:p-8 border border-card-border shadow-2xl flex flex-col md:flex-row md:items-center justify-between gap-6 relative overflow-hidden group hover:border-primary-500/30 transition-all duration-500">
         {/* Subtle decorative glowing blob */}
-        <div className="absolute -top-16 -right-16 w-56 h-56 bg-primary-500/10 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute -top-24 -right-24 w-64 h-64 bg-primary-500/15 rounded-full blur-3xl pointer-events-none group-hover:bg-primary-500/25 transition-all duration-700" />
+        <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none group-hover:bg-emerald-500/20 transition-all duration-700" />
 
         <div className="space-y-2 relative z-10">
-          <div className="flex items-center gap-2 text-primary-600 dark:text-primary-400 font-extrabold text-xs tracking-wider uppercase">
+          <div className="flex items-center gap-2 text-primary-600 dark:text-primary-400 font-extrabold text-xs tracking-widest uppercase">
             <ArrowDownToLine className="w-4 h-4" />
             <span>Site Downloads Vault</span>
           </div>
-          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-black text-foreground tracking-tight">
+          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-black tracking-tight bg-gradient-to-br from-foreground via-foreground/90 to-primary-500/70 bg-clip-text text-transparent">
             Downloaded Videos
           </h1>
           <p className="text-xs sm:text-sm text-muted-foreground max-w-xl leading-relaxed">
@@ -708,19 +711,21 @@ export function DownloadsClient() {
       {/* Main Content Area */}
       {downloads.length === 0 ? (
         /* Normal Empty State */
-        <div className="glass-panel rounded-3xl p-8 sm:p-14 border border-card-border text-center space-y-6 max-w-2xl mx-auto shadow-xl">
-          <div className="w-20 h-20 rounded-3xl bg-primary-500/10 border border-primary-500/20 text-primary-600 dark:text-primary-400 flex items-center justify-center mx-auto shadow-inner">
-            <Film className="w-10 h-10" />
+        <div className="glass-panel rounded-3xl p-8 sm:p-14 border border-card-border text-center space-y-6 max-w-2xl mx-auto shadow-2xl relative overflow-hidden group">
+          <div className="absolute inset-0 bg-gradient-to-br from-primary-500/5 via-transparent to-emerald-500/5 opacity-50 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
+          
+          <div className="w-24 h-24 rounded-3xl bg-gradient-to-br from-primary-500/10 to-emerald-500/10 border border-primary-500/20 text-primary-600 dark:text-primary-400 flex items-center justify-center mx-auto shadow-inner group-hover:scale-105 transition-transform duration-500 relative z-10">
+            <Film className="w-12 h-12 drop-shadow-md" />
           </div>
 
-          <div className="space-y-2">
-            <h2 className="text-xl sm:text-2xl font-black text-foreground">No downloads yet</h2>
+          <div className="space-y-2 relative z-10">
+            <h2 className="text-2xl sm:text-3xl font-black bg-gradient-to-br from-foreground via-foreground/90 to-primary-500/70 bg-clip-text text-transparent tracking-tight">No downloads yet</h2>
             <p className="text-xs sm:text-sm text-muted-foreground max-w-md mx-auto leading-relaxed">
               Download entire courses, sections, or individual lessons from your enrolled course batches. They will appear here ready for smooth offline playback without internet.
             </p>
           </div>
 
-          <div className="p-4 rounded-2xl bg-card/60 border border-card-border/60 max-w-md mx-auto text-left space-y-2">
+          <div className="p-5 rounded-2xl bg-card/80 border border-card-border/80 backdrop-blur-sm max-w-md mx-auto text-left space-y-3 relative z-10 shadow-sm">
             <span className="text-[11px] font-bold text-foreground flex items-center gap-1.5">
               <Sparkles className="w-3.5 h-3.5 text-primary-500" />
               How in-site downloads work:
@@ -770,16 +775,18 @@ export function DownloadsClient() {
             return (
               <section
                 key={course.courseSlug}
-                className="glass-panel rounded-3xl border border-card-border/90 bg-card/85 shadow-lg overflow-hidden transition-all space-y-4"
+                className="glass-panel rounded-3xl border border-card-border/90 bg-card/85 shadow-lg overflow-hidden transition-all duration-300 space-y-4 hover:border-primary-500/40 hover:shadow-primary-950/20 group/course"
               >
                 {/* Course Header Bar */}
-                <div className="p-5 sm:p-6 pb-0 flex flex-col md:flex-row md:items-center justify-between gap-4">
-                  <div className="space-y-1 min-w-0">
-                    <div className="flex items-center gap-2 text-[11px] font-bold uppercase tracking-wider text-primary-600 dark:text-primary-400">
+                <div className="p-5 sm:p-6 pb-0 flex flex-col md:flex-row md:items-center justify-between gap-4 relative">
+                  <div className="absolute top-0 right-0 w-64 h-64 bg-primary-500/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 group-hover/course:bg-primary-500/10 transition-colors duration-500 pointer-events-none" />
+                  
+                  <div className="space-y-1 min-w-0 relative z-10">
+                    <div className="flex items-center gap-2 text-[11px] font-bold uppercase tracking-widest text-primary-600 dark:text-primary-400">
                       <BookOpen className="w-3.5 h-3.5" />
                       <span>Course Batch</span>
                     </div>
-                    <h2 className="text-lg sm:text-xl font-black text-foreground truncate">
+                    <h2 className="text-xl sm:text-2xl font-black text-foreground truncate group-hover/course:text-primary-400 transition-colors">
                       {course.courseTitle}
                     </h2>
                     <div className="flex items-center gap-2.5 text-xs text-muted-foreground font-medium pt-0.5">

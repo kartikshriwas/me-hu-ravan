@@ -46,20 +46,21 @@ export function OfflineState({
       {/* Icon with radar rings & glow */}
       <div className="relative flex items-center justify-center">
         {/* Soft background pulse glow */}
-        <div className="absolute w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-primary-500/10 blur-xl pointer-events-none animate-pulse" />
+        <div className="absolute w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-primary-500/20 blur-2xl pointer-events-none animate-pulse" />
+        <div className="absolute w-32 h-32 sm:w-40 sm:h-40 rounded-full bg-rose-500/10 blur-3xl pointer-events-none animate-pulse delay-700" />
         
         {/* Outer Ring */}
-        <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-slate-900/80 border border-slate-800/90 flex items-center justify-center relative shadow-2xl">
+        <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-card border border-card-border/80 flex items-center justify-center relative shadow-2xl backdrop-blur-md">
           {/* Inner Accent Ring */}
-          <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-slate-800/90 border border-slate-700/80 flex items-center justify-center text-muted-foreground shadow-inner">
-            <WifiOff className="w-7 h-7 sm:w-8 sm:h-8 text-slate-400" />
+          <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-card/60 border border-card-border flex items-center justify-center shadow-inner">
+            <WifiOff className="w-7 h-7 sm:w-8 sm:h-8 text-primary-500/80 drop-shadow-md" />
           </div>
         </div>
       </div>
 
       {/* Typography */}
-      <div className="space-y-1.5 max-w-sm mx-auto">
-        <h2 className="text-xl sm:text-2xl font-black text-foreground tracking-tight">
+      <div className="space-y-2 max-w-sm mx-auto">
+        <h2 className="text-2xl sm:text-3xl font-black bg-gradient-to-br from-foreground via-foreground/90 to-primary-500/80 bg-clip-text text-transparent tracking-tight">
           {title}
         </h2>
         <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">

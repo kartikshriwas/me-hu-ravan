@@ -38,6 +38,7 @@ export interface CourseSectionUnit {
   vimeoid?: string;
   fileUrl?: string;
   duration?: number;
+  modifiedF?: string;
 }
 
 export interface CourseSection {
