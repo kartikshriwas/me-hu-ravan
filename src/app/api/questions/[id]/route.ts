@@ -123,6 +123,7 @@ export async function GET(
         id: assessment.quizId,
         quizId: assessment.quizId,
         title: assessment.title,
+        quizType: assessment.quizType,
         description: assessment.description,
         timeLimitSeconds: assessment.timeLimitSeconds,
         questionTimeLimitSeconds: assessment.questionTimeLimitSeconds,

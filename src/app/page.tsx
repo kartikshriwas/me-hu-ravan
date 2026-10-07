@@ -56,6 +56,8 @@ function formatDuration(seconds: number): string {
   return `${m}:${s < 10 ? '0' : ''}${s}`;
 }
 
+import { getQuizTypeBadgeClass } from '@/lib/quizTypeStyle';
+
 export default function HomePage() {
   const router = useRouter();
   const { user } = useAuth();
@@ -68,6 +70,7 @@ export default function HomePage() {
   const [loading, setLoading] = useState(!cachedInitialTests?.data?.length);
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedDifficulty, setSelectedDifficulty] = useState<string>('All');
+  const [selectedQuizType, setSelectedQuizType] = useState<string>('All');
   const [recentAttempt, setRecentAttempt] = useState<QuizAttemptResult | null>(null);
   const [selectedTestForLoginModal, setSelectedTestForLoginModal] = useState<AssessmentMeta | null>(null);
   const [selectedTestForPremiumModal, setSelectedTestForPremiumModal] = useState<AssessmentMeta | null>(null);
@@ -200,10 +203,12 @@ export default function HomePage() {
     const matchesSearch = !query ||
                           t.title.toLowerCase().includes(query) ||
                           t.quizId.toLowerCase().includes(query) ||
+                          (t.quizType && t.quizType.toLowerCase().includes(query)) ||
                           t.description.toLowerCase().includes(query) ||
                           (setNum !== '' && (setAlias1.includes(query) || setAlias2.includes(query) || query === `#set ${setNum}` || query === `#set${setNum}`));
     const matchesDifficulty = selectedDifficulty === 'All' || t.difficulty === selectedDifficulty;
-    return matchesSearch && matchesDifficulty;
+    const matchesQuizType = selectedQuizType === 'All' || t.quizType === selectedQuizType;
+    return matchesSearch && matchesDifficulty && matchesQuizType;
   }).sort((a, b) => {
     const setMatchA = a.quizId.match(/\d+/);
     const setNumA = setMatchA ? parseInt(setMatchA[0], 10) : 1;
@@ -227,41 +232,75 @@ export default function HomePage() {
       {/* Active Events / Promos Banner for Non-Premium & Guests */}
       <EventPromoBanner />
       
-      {/* Top Search & Difficulty Filters Bar */}
-      <section className="glass-panel rounded-2xl p-4 sm:p-5 border border-card-border space-y-3 md:space-y-0 flex flex-col md:flex-row items-stretch md:items-center justify-between gap-3 sm:gap-4 shadow-xl">
-        {/* Search Bar */}
-        <div className="relative flex-1">
-          <Search className="w-4 h-4 text-muted-foreground absolute left-3.5 top-1/2 -translate-y-1/2" />
-          <input
-            type="text"
-            placeholder="Search test (e.g. TCS, Digital, Easy, SET 1)..."
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-card/90 border border-card-border text-sm text-foreground placeholder-slate-500 focus:outline-none focus:border-primary-500 transition-colors"
-          />
-        </div>
-
-        {/* Difficulty Pills & Test Counter */}
-        <div className="flex items-center justify-between gap-2 overflow-x-auto">
-          <div className="flex items-center gap-1 p-1 rounded-xl bg-card/90 border border-card-border text-xs font-semibold shrink-0">
-            {['All', 'Easy', 'Medium', 'Hard'].map((diff) => (
-              <button
-                key={diff}
-                onClick={() => setSelectedDifficulty(diff)}
-                className={`px-2.5 sm:px-3 py-1.5 rounded-lg transition-all ${
-                  selectedDifficulty === diff
-                    ? 'bg-primary-600 text-white shadow-md'
-                    : 'text-muted-foreground hover:text-foreground'
-                }`}
-              >
-                {diff}
-              </button>
-            ))}
+      {/* Top Search & Filter Bar */}
+      <section className="glass-panel rounded-2xl p-4 sm:p-5 border border-card-border space-y-3 shadow-xl">
+        {/* Row 1: Search & Difficulty */}
+        <div className="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-3 sm:gap-4">
+          {/* Search Bar */}
+          <div className="relative flex-1">
+            <Search className="w-4 h-4 text-muted-foreground absolute left-3.5 top-1/2 -translate-y-1/2" />
+            <input
+              type="text"
+              placeholder="Search test (e.g. Verbal, Logical, TCS Ninja, Easy, SET 1)..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-card/90 border border-card-border text-sm text-foreground placeholder-slate-500 focus:outline-none focus:border-primary-500 transition-colors"
+            />
           </div>
 
-          <span className="text-xs font-bold text-muted-foreground bg-card px-3 py-2 rounded-xl border border-card-border shrink-0">
-            {filteredTests.length} {filteredTests.length === 1 ? 'Test' : 'Tests'}
+          {/* Difficulty Pills & Test Counter */}
+          <div className="flex items-center justify-between gap-2 overflow-x-auto">
+            <div className="flex items-center gap-1 p-1 rounded-xl bg-card/90 border border-card-border text-xs font-semibold shrink-0">
+              {['All', 'Easy', 'Medium', 'Hard'].map((diff) => (
+                <button
+                  key={diff}
+                  onClick={() => setSelectedDifficulty(diff)}
+                  className={`px-2.5 sm:px-3 py-1.5 rounded-lg transition-all ${
+                    selectedDifficulty === diff
+                      ? 'bg-primary-600 text-white shadow-md'
+                      : 'text-muted-foreground hover:text-foreground'
+                  }`}
+                >
+                  {diff}
+                </button>
+              ))}
+            </div>
+
+            <span className="text-xs font-bold text-muted-foreground bg-card px-3 py-2 rounded-xl border border-card-border shrink-0">
+              {filteredTests.length} {filteredTests.length === 1 ? 'Test' : 'Tests'}
+            </span>
+          </div>
+        </div>
+
+        {/* Row 2: Category / Quiz Type Pills */}
+        <div className="pt-3 border-t border-card-border/60 flex items-center gap-2 overflow-x-auto pb-1">
+          <span className="text-xs font-bold text-muted-foreground shrink-0 mr-1 flex items-center gap-1.5">
+            <Brain className="w-3.5 h-3.5 text-primary-500" />
+            Category:
           </span>
+          {['All', 'Quantitative Aptitude', 'Logical Reasoning', 'Verbal Ability', 'Data Interpretation', 'TCS Ninja', 'TCS Digital'].map((type) => {
+            const isSelected = selectedQuizType === type;
+            const count = type === 'All' ? tests.length : tests.filter((t) => t.quizType === type).length;
+            if (type !== 'All' && count === 0) return null;
+            return (
+              <button
+                key={type}
+                onClick={() => setSelectedQuizType(type)}
+                className={`px-3 py-1.5 rounded-xl text-xs font-semibold whitespace-nowrap transition-all border flex items-center gap-1.5 shrink-0 ${
+                  isSelected
+                    ? 'bg-primary-600 text-white border-primary-500 shadow-md shadow-primary-600/20'
+                    : 'bg-card/80 hover:bg-card text-muted-foreground hover:text-foreground border-card-border'
+                }`}
+              >
+                <span>{type}</span>
+                <span className={`text-[10px] px-1.5 py-0.5 rounded-full font-bold leading-none ${
+                  isSelected ? 'bg-white/20 text-white' : 'bg-slate-800 text-muted-foreground'
+                }`}>
+                  {count}
+                </span>
+              </button>
+            );
+          })}
         </div>
       </section>
 
@@ -357,7 +396,7 @@ export default function HomePage() {
             <Award className="w-8 h-8 text-amber-600 dark:text-amber-400 mx-auto" />
             <p className="text-sm text-foreground/80 font-medium">No practice tests match your search criteria.</p>
             <button
-              onClick={() => { setSearchQuery(''); setSelectedDifficulty('All'); }}
+              onClick={() => { setSearchQuery(''); setSelectedDifficulty('All'); setSelectedQuizType('All'); }}
               className="px-4 py-2 rounded-xl bg-primary-600 text-white text-xs font-semibold"
             >
               Reset Filters
@@ -385,13 +424,18 @@ export default function HomePage() {
                   {/* Card Header */}
                   <div className="space-y-3">
                     <div className="flex items-center justify-between gap-2">
-                      <div className="flex items-center gap-2">
+                      <div className="flex items-center gap-1.5 flex-wrap">
                         <span className={`px-2.5 py-0.5 rounded-md text-[11px] font-bold border ${diffColor}`}>
                           {test.difficulty}
                         </span>
                         <span className="text-[11px] font-bold tracking-wider uppercase text-primary-600 dark:text-primary-400">
                           {setLabel}
                         </span>
+                        {test.quizType && (
+                          <span className={`px-2 py-0.5 rounded-md text-[10px] font-bold border ${getQuizTypeBadgeClass(test.quizType)}`}>
+                            {test.quizType}
+                          </span>
+                        )}
                       </div>
 
                       <div className="flex items-center gap-1.5">
