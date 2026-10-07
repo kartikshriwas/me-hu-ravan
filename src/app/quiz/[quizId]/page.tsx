@@ -824,7 +824,7 @@ export default function QuizPlayerPage({ params }: { params: Promise<{ quizId: s
                 <strong>{formatTime(timeLeft)}</strong>
               </div>
             </div>
-
+{/* 
             <div className={`p-3.5 rounded-xl border text-xs leading-relaxed ${
               isFirstAttempt
                 ? 'bg-emerald-950/40 border-emerald-500/30 text-emerald-200'
@@ -845,7 +845,7 @@ export default function QuizPlayerPage({ params }: { params: Promise<{ quizId: s
                   </p>
                 </div>
               )}
-            </div>
+            </div> */}
 
             <div className="flex items-center justify-end gap-3 pt-2">
               <button
