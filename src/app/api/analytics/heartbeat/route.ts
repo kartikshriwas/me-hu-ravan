@@ -5,6 +5,7 @@ import { UserSession } from '@/models/UserSession';
 import { UserActivityLog } from '@/models/UserActivityLog';
 import { User } from '@/models/User';
 import { processPendingDemoActivation } from '@/lib/pendingDemoHelper';
+import { processAutoDemoGrant } from '@/lib/autoDemoHelper';
 import { createHash } from 'crypto';
 import { rateLimit, getClientIp } from '@/lib/rateLimit';
 
@@ -131,11 +132,16 @@ export async function POST(request: Request) {
       return NextResponse.json({ success: false, terminated: true, message: 'Session terminated by admin' });
     }
 
-    // Activate pending demo if user just came online
+    let demoGranted = false;
+    // Activate pending demo or grant auto demo if user came online
     if (sessionUser?.email) {
-      const dbUser = await User.findOne({ email: userEmail }).select('_id email premiumPlan allowedBatches').lean();
+      const dbUser = await User.findOne({ email: userEmail }).select('_id email role isPremium premiumPlan allowedBatches hasHadDemoOrPremium').lean();
       if (dbUser) {
-        await processPendingDemoActivation(dbUser);
+        const wasPendingActivated = await processPendingDemoActivation(dbUser);
+        const wasAutoGranted = await processAutoDemoGrant(dbUser);
+        if (wasPendingActivated || wasAutoGranted) {
+          demoGranted = true;
+        }
       }
     }
 
@@ -160,7 +166,7 @@ export async function POST(request: Request) {
       );
     }
 
-    return NextResponse.json({ success: true, terminated: false });
+    return NextResponse.json({ success: true, terminated: false, demoGranted });
   } catch (error) {
     // Fail background heartbeat gracefully without throwing console errors
     return NextResponse.json({ success: false, error: 'Network/DB timeout' }, { status: 200 });

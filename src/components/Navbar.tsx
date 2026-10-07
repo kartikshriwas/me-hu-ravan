@@ -145,8 +145,8 @@ export function Navbar() {
                   <span>History</span>
                 </Link>
 
-                {/* Downloads Link — visible only if user has course access */}
-                {hasCourseAccess && (
+                {/* Downloads Link — visible only if user has downloaded videos */}
+                {downloads.length > 0 && (
                   <Link
                     href="/downloads"
                     title="Downloads (Offline Ready)"
@@ -321,8 +321,8 @@ export function Navbar() {
                     <span>History</span>
                   </Link>
 
-                  {/* Downloads — visible in dropdown only if user has course access */}
-                  {hasCourseAccess && (
+                  {/* Downloads — visible in dropdown only if user has downloaded videos */}
+                  {downloads.length > 0 && (
                     <Link
                       href="/downloads"
                       onClick={() => setShowMenu(false)}

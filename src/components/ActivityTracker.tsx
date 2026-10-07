@@ -226,6 +226,9 @@ export function ActivityTracker() {
             // Complete NextAuth logout to revoke user session cookie
             const { signOut } = await import('next-auth/react');
             await signOut({ callbackUrl: '/?error=SessionTerminated' });
+          } else if (data.demoGranted) {
+            // Demo granted automatically — refresh page so candidate immediately sees course options
+            window.location.reload();
           }
         }
       } catch (err) {

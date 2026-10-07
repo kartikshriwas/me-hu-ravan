@@ -79,6 +79,7 @@ export async function POST(request: Request) {
         targetUser.premiumPlan = `${minutes}m_demo`;
         targetUser.allowedBatches = Array.from(new Set([...(targetUser.allowedBatches || []), 'SigmaX']));
         targetUser.hasCourseAccess = true;
+        targetUser.hasHadDemoOrPremium = true;
         targetUser.grantedBy = sessionUser!.email.toLowerCase().trim();
         await targetUser.save();
         invalidateUserCourseCache(cleanTarget);
@@ -102,6 +103,7 @@ export async function POST(request: Request) {
         targetUser.isPremium = false;
         targetUser.premiumExpiresAt = null;
         targetUser.premiumPlan = `pending_demo:${minutes}m`;
+        targetUser.hasHadDemoOrPremium = true;
         targetUser.grantedBy = sessionUser!.email.toLowerCase().trim();
         await targetUser.save();
 

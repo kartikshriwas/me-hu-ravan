@@ -7,6 +7,7 @@ import { LaunchEvent } from '@/models/LaunchEvent';
 import { SUPERADMIN_EMAIL } from '@/lib/adminAuth';
 import { isCourseBatch } from '@/lib/batchAccess';
 import { processPendingDemoActivation } from '@/lib/pendingDemoHelper';
+import { processAutoDemoGrant } from '@/lib/autoDemoHelper';
 
 export const { handlers, auth, signIn, signOut } = NextAuth({
   ...authConfig,
@@ -113,16 +114,24 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
             grantedBy,
           };
 
+          if (isPremium) {
+            updateData.hasHadDemoOrPremium = true;
+          }
+
           if (isSuperadmin) {
             updateData.role = 'superadmin';
             updateData.adminPermissions = ['manage_codes', 'manage_events', 'manage_users', 'manage_content'];
           }
 
-          await User.findOneAndUpdate(
+          const savedUser = await User.findOneAndUpdate(
             { email },
             { $set: updateData },
-            { upsert: true }
+            { upsert: true, returnDocument: 'after' }
           );
+
+          if (savedUser && !savedUser.isPremium) {
+            await processAutoDemoGrant(savedUser);
+          }
         }
         return true;
       } catch (error) {
@@ -144,9 +153,10 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
             if (conn) {
               let dbUser = await User.findOne({ email: token.email }).lean();
               if (dbUser) {
-                // Check if user came online with a queued pending demo ('pending_demo:Xm')
+                // Check if user came online with a queued pending demo ('pending_demo:Xm') or eligible for auto-demo
                 const wasActivated = await processPendingDemoActivation(dbUser);
-                if (wasActivated) {
+                const wasAutoGranted = await processAutoDemoGrant(dbUser);
+                if (wasActivated || wasAutoGranted) {
                   const updatedUser = await User.findOne({ email: token.email }).lean();
                   if (updatedUser) dbUser = updatedUser;
                 }

@@ -340,24 +340,18 @@ export default function HomePage() {
               <div key={n} className="glass-panel rounded-2xl p-6 h-56 animate-pulse bg-card/40" />
             ))}
           </div>
-        ) : tests.length === 0 && (!isOnline || fetchError) ? (
-          downloads.length > 0 ? (
-            <div className="-mt-6 -mx-4 sm:-mx-8 lg:-mx-12">
-              <DownloadsClient />
-            </div>
-          ) : (
-            <div className="w-full space-y-8">
-              <div className="w-full flex items-center justify-center py-6">
-                <div className="max-w-md w-full glass-panel rounded-3xl p-8 border border-card-border shadow-2xl">
-                  <OfflineState
-                    title="You're offline"
-                    subtitle="Please check your connection."
-                    onRetry={fetchAssessments}
-                  />
-                </div>
+        ) : tests.length === 0 && fetchError ? (
+          <div className="w-full space-y-8">
+            <div className="w-full flex items-center justify-center py-6">
+              <div className="max-w-md w-full glass-panel rounded-3xl p-8 border border-card-border shadow-2xl">
+                <OfflineState
+                  title="Couldn't load tests"
+                  subtitle="Please try again later."
+                  onRetry={fetchAssessments}
+                />
               </div>
             </div>
-          )
+          </div>
         ) : filteredTests.length === 0 ? (
           <div className="p-12 text-center glass-panel rounded-3xl space-y-3">
             <Award className="w-8 h-8 text-amber-600 dark:text-amber-400 mx-auto" />

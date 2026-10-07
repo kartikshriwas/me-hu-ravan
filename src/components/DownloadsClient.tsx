@@ -86,7 +86,7 @@ interface GroupedCourse {
 
 export function DownloadsClient() {
   const { user, loading: authLoading } = useAuth();
-  const [isOnline, setIsOnline] = useState(typeof navigator !== 'undefined' ? navigator.onLine : true);
+  const [isOnline, setIsOnline] = useState(true);
 
   const {
     downloads,
@@ -146,16 +146,20 @@ export function DownloadsClient() {
   }, []);
 
   const [cachedAccess, setCachedAccess] = useState<CachedBatchAccess | null>(null);
-  const [isVerifyingOfflineAccess, setIsVerifyingOfflineAccess] = useState(true);
+  const [isVerifyingOfflineAccess, setIsVerifyingOfflineAccess] = useState(!isOnline);
 
   useEffect(() => {
+    if (isOnline) {
+      setIsVerifyingOfflineAccess(false);
+      return;
+    }
     async function verify() {
       const access = await verifyAndGetCachedBatchAccess();
       setCachedAccess(access);
       setIsVerifyingOfflineAccess(false);
     }
     verify();
-  }, []);
+  }, [isOnline]);
 
   // Keyboard shortcut listener: Escape to close cinema player
   useEffect(() => {
@@ -1209,17 +1213,6 @@ export function DownloadsClient() {
             </article>
           );
         })}
-        </div>
-      )}
-
-      {/* Offline Banner at Bottom */}
-      {!isOnline && (
-        <div className="fixed bottom-0 left-0 right-0 z-50 p-4 bg-rose-600/95 backdrop-blur-md border-t border-rose-500/50 shadow-2xl flex items-center justify-center gap-3 animate-in slide-in-from-bottom-5">
-          <WifiOff className="w-5 h-5 text-white animate-pulse" />
-          <div>
-            <p className="text-sm font-bold text-white">You are offline</p>
-            <p className="text-[11px] font-medium text-rose-100">Enjoy your downloaded videos locally.</p>
-          </div>
         </div>
       )}
     </main>

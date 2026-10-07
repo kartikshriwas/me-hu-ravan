@@ -97,7 +97,8 @@ export async function POST(request: Request) {
           isPremium: true,
           premiumExpiresAt: newExpiresAt,
           premiumPlan: `code:${cleanCode}`,
-          grantedBy: `code:${cleanCode}`,
+          grantedBy: redeemResult.createdBy || 'redeem_code',
+          hasHadDemoOrPremium: true,
           lastActiveAt: new Date(),
         },
         $addToSet: {

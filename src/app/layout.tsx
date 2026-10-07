@@ -63,6 +63,7 @@ import { TopLoader } from '@/components/TopLoader';
 import { DownloadProvider } from '@/lib/downloadContext';
 import { OfflineBanner } from '@/components/OfflineBanner';
 import { ServiceWorkerRegistration } from '@/components/ServiceWorkerRegistration';
+import { GlobalOfflineWrapper } from '@/components/GlobalOfflineWrapper';
 
 export default function RootLayout({
   children,
@@ -86,7 +87,9 @@ export default function RootLayout({
               <ActivityTracker />
               <Navbar />
               <main className="flex-1 w-full flex flex-col min-h-0 pt-14 sm:pt-16 pb-16 md:pb-0">
-                {children}
+                <GlobalOfflineWrapper>
+                  {children}
+                </GlobalOfflineWrapper>
               </main>
               <MobileBottomNav />
               <OfflineBanner />
