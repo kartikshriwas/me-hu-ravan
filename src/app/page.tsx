@@ -29,6 +29,12 @@ import {
   Play,
   Film,
   ArrowDownToLine,
+  Calculator,
+  BookOpen,
+  BarChart2,
+  Zap,
+  Layers,
+  ChevronDown,
 } from 'lucide-react';
 
 import { HomeTestsSkeleton } from '@/components/skeletons/HomeTestsSkeleton';
@@ -56,7 +62,17 @@ function formatDuration(seconds: number): string {
   return `${m}:${s < 10 ? '0' : ''}${s}`;
 }
 
-import { getQuizTypeBadgeClass } from '@/lib/quizTypeStyle';
+import { getQuizTypeBadgeClass, getQuizTypeDotClass, getQuizTypeActivePillClass } from '@/lib/quizTypeStyle';
+
+const CATEGORY_ITEMS = [
+  { label: 'All', icon: Layers },
+  { label: 'Quantitative Aptitude', icon: Calculator },
+  { label: 'Logical Reasoning', icon: Brain },
+  { label: 'Verbal Ability', icon: BookOpen },
+  { label: 'Data Interpretation', icon: BarChart2 },
+  { label: 'TCS Ninja', icon: Zap },
+  { label: 'TCS Digital', icon: Sparkles },
+];
 
 export default function HomePage() {
   const router = useRouter();
@@ -272,13 +288,52 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* Row 2: Category / Quiz Type Pills */}
-        <div className="pt-3 border-t border-card-border/60 flex items-center gap-2 overflow-x-auto pb-1">
-          <span className="text-xs font-bold text-muted-foreground shrink-0 mr-1 flex items-center gap-1.5">
+        {/* Row 2 (Mobile): Category Dropdown Menu */}
+        <div className="pt-3 border-t border-card-border/60 flex sm:hidden items-center gap-2">
+          <label htmlFor="mobile-category-select" className="text-[11px] font-bold text-muted-foreground uppercase tracking-wider shrink-0 flex items-center gap-1.5">
+            <Brain className="w-3.5 h-3.5 text-primary-500" />
+            Category:
+          </label>
+
+          <div className="relative flex-1">
+            <select
+              id="mobile-category-select"
+              value={selectedQuizType}
+              onChange={(e) => setSelectedQuizType(e.target.value)}
+              className="w-full pl-3 pr-8 py-2 rounded-xl bg-card/90 border border-card-border text-xs font-semibold text-foreground appearance-none focus:outline-none focus:border-primary-500 shadow-sm transition-colors cursor-pointer"
+            >
+              {CATEGORY_ITEMS.map(({ label: type }) => {
+                const count = type === 'All' ? tests.length : tests.filter((t) => t.quizType === type).length;
+                if (type !== 'All' && count === 0) return null;
+                return (
+                  <option key={type} value={type} className="bg-slate-900 text-foreground py-1">
+                    {type} ({count} {count === 1 ? 'test' : 'tests'})
+                  </option>
+                );
+              })}
+            </select>
+
+            <ChevronDown className="w-4 h-4 text-muted-foreground absolute right-2.5 top-1/2 -translate-y-1/2 pointer-events-none" />
+          </div>
+
+          {selectedQuizType !== 'All' && (
+            <button
+              onClick={() => setSelectedQuizType('All')}
+              className="p-2 rounded-xl bg-card hover:bg-slate-800 text-muted-foreground hover:text-foreground border border-card-border text-xs shrink-0"
+              title="Reset Category"
+            >
+              <RotateCcw className="w-3.5 h-3.5" />
+            </button>
+          )}
+        </div>
+
+        {/* Row 2 (Desktop & Tablet): Category / Quiz Type Pills */}
+        <div className="pt-3 border-t border-card-border/60 hidden sm:flex items-center gap-2 overflow-x-auto pb-1 scrollbar-none">
+          <span className="text-[11px] font-bold text-muted-foreground uppercase tracking-wider shrink-0 mr-1 flex items-center gap-1.5">
             <Brain className="w-3.5 h-3.5 text-primary-500" />
             Category:
           </span>
-          {['All', 'Quantitative Aptitude', 'Logical Reasoning', 'Verbal Ability', 'Data Interpretation', 'TCS Ninja', 'TCS Digital'].map((type) => {
+          {CATEGORY_ITEMS.map(({ label: type, icon: IconComp }) => {
             const isSelected = selectedQuizType === type;
             const count = type === 'All' ? tests.length : tests.filter((t) => t.quizType === type).length;
             if (type !== 'All' && count === 0) return null;
@@ -286,15 +341,16 @@ export default function HomePage() {
               <button
                 key={type}
                 onClick={() => setSelectedQuizType(type)}
-                className={`px-3 py-1.5 rounded-xl text-xs font-semibold whitespace-nowrap transition-all border flex items-center gap-1.5 shrink-0 ${
+                className={`px-3 py-1.5 rounded-xl text-xs font-semibold whitespace-nowrap transition-all duration-200 border flex items-center gap-2 shrink-0 active:scale-95 ${
                   isSelected
-                    ? 'bg-primary-600 text-white border-primary-500 shadow-md shadow-primary-600/20'
-                    : 'bg-card/80 hover:bg-card text-muted-foreground hover:text-foreground border-card-border'
+                    ? getQuizTypeActivePillClass(type)
+                    : 'bg-card/70 hover:bg-card hover:border-slate-700 text-muted-foreground hover:text-foreground border-card-border shadow-xs'
                 }`}
               >
+                <IconComp className={`w-3.5 h-3.5 ${isSelected ? 'text-white' : 'text-muted-foreground'}`} />
                 <span>{type}</span>
                 <span className={`text-[10px] px-1.5 py-0.5 rounded-full font-bold leading-none ${
-                  isSelected ? 'bg-white/20 text-white' : 'bg-slate-800 text-muted-foreground'
+                  isSelected ? 'bg-white/20 text-white' : 'bg-slate-800/80 text-muted-foreground'
                 }`}>
                   {count}
                 </span>
@@ -424,21 +480,28 @@ export default function HomePage() {
                   {/* Card Header */}
                   <div className="space-y-3">
                     <div className="flex items-center justify-between gap-2">
-                      <div className="flex items-center gap-1.5 flex-wrap">
-                        <span className={`px-2.5 py-0.5 rounded-md text-[11px] font-bold border ${diffColor}`}>
-                          {test.difficulty}
+                      {test.quizType ? (
+                        <span className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-[11px] font-bold border tracking-wide shadow-xs ${getQuizTypeBadgeClass(test.quizType)}`}>
+                          <span className={`w-1.5 h-1.5 rounded-full ${getQuizTypeDotClass(test.quizType)}`} />
+                          <span>{test.quizType}</span>
                         </span>
+                      ) : (
                         <span className="text-[11px] font-bold tracking-wider uppercase text-primary-600 dark:text-primary-400">
                           {setLabel}
                         </span>
+                      )}
+
+                      <div className="flex items-center gap-1.5 shrink-0">
                         {test.quizType && (
-                          <span className={`px-2 py-0.5 rounded-md text-[10px] font-bold border ${getQuizTypeBadgeClass(test.quizType)}`}>
-                            {test.quizType}
+                          <span className="text-[10px] font-bold px-2 py-0.5 rounded-md bg-card/90 border border-card-border text-muted-foreground uppercase tracking-wider">
+                            {setLabel}
                           </span>
                         )}
-                      </div>
 
-                      <div className="flex items-center gap-1.5">
+                        <span className={`px-2 py-0.5 rounded-md text-[10px] font-bold border ${diffColor}`}>
+                          {test.difficulty}
+                        </span>
+
                         {isLocked && (
                           <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-amber-500/20 text-amber-600 dark:text-amber-300 border border-amber-500/30 flex items-center gap-1">
                             <Crown className="w-3 h-3 text-amber-600 dark:text-amber-400" />

@@ -24,7 +24,7 @@ import {
   Lock
 } from 'lucide-react';
 import { QuizResultsSkeleton } from '@/components/skeletons/QuizResultsSkeleton';
-import { getQuizTypeBadgeClass } from '@/lib/quizTypeStyle';
+import { getQuizTypeBadgeClass, getQuizTypeDotClass } from '@/lib/quizTypeStyle';
 
 export default function QuizResultsPage({ params }: { params: Promise<{ quizId: string }> }) {
   const { quizId: rawQuizId } = use(params);
@@ -240,8 +240,9 @@ export default function QuizResultsPage({ params }: { params: Promise<{ quizId: 
                 Assessment Completed
               </span>
               {assessment.quizType && (
-                <span className={`px-3 py-1 rounded-full text-xs font-bold border ${getQuizTypeBadgeClass(assessment.quizType)}`}>
-                  {assessment.quizType}
+                <span className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold border ${getQuizTypeBadgeClass(assessment.quizType)}`}>
+                  <span className={`w-1.5 h-1.5 rounded-full ${getQuizTypeDotClass(assessment.quizType)}`} />
+                  <span>{assessment.quizType}</span>
                 </span>
               )}
               {attempt.isFirstAttempt !== false ? (

@@ -889,82 +889,173 @@ export function CourseDetailClient({ course, availableTests, isUnlocked = true }
                       toggleSection(section.id);
                     }
                   }}
-                  className="w-full text-left p-5 sm:p-6 flex items-center justify-between flex-wrap gap-3 hover:bg-primary-500/5 transition-colors cursor-pointer group select-none"
+                  className="w-full text-left p-4 sm:p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4 hover:bg-primary-500/5 transition-colors cursor-pointer group select-none"
                 >
-                  <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 rounded-lg bg-primary-500/10 border border-primary-500/20 text-primary-600 dark:text-primary-400 flex items-center justify-center font-bold text-xs shrink-0 group-hover:scale-105 transition-transform">
-                      {sIdx + 1}
+                  {/* === MOBILE VIEW (< sm) === */}
+                  <div className="flex flex-col gap-2.5 sm:hidden w-full">
+                    {/* Row 1: Number + Title + Chevron on top-right */}
+                    <div className="flex items-start justify-between gap-2.5 w-full">
+                      <div className="flex items-start gap-2.5 min-w-0 flex-1">
+                        <div className="w-7 h-7 rounded-lg bg-primary-500/10 border border-primary-500/20 text-primary-600 dark:text-primary-400 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">
+                          {sIdx + 1}
+                        </div>
+                        <h3 className="text-sm font-bold text-foreground leading-snug">
+                          {section.title}
+                        </h3>
+                      </div>
+                      <div className="p-1 rounded-lg bg-card/60 border border-card-border/60 text-muted-foreground group-hover:text-foreground transition-colors shrink-0 mt-0.5">
+                        <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isExpanded ? 'rotate-180' : ''}`} />
+                      </div>
                     </div>
-                    <div>
-                      <h3 className="text-base sm:text-lg font-bold text-foreground mt-0.5 leading-snug">{section.title}</h3>
+
+                    {/* Row 2: Download button (left) + Units & Duration pill (right) - Never wraps */}
+                    <div className="flex items-center justify-between gap-2 w-full pt-0.5">
+                      {isUnlocked && sectionVideoUnits.length > 0 ? (
+                        <div onClick={(e) => e.stopPropagation()} className="shrink-0">
+                          {isSecDownloading ? (
+                            <div className="px-2.5 py-1 rounded-lg bg-primary-500/15 text-primary-400 border border-primary-500/30 text-[11px] font-bold flex items-center gap-1.5 animate-pulse">
+                              <Loader2 className="w-3 h-3 animate-spin" />
+                              <span>Downloading...</span>
+                            </div>
+                          ) : isSecDownloaded ? (
+                            <div className="flex items-center gap-1">
+                              <span className="px-2.5 py-1 rounded-lg bg-emerald-500/15 text-emerald-400 border border-emerald-500/30 text-[11px] font-bold flex items-center gap-1">
+                                <CheckCircle2 className="w-3 h-3" />
+                                <span>Saved</span>
+                              </span>
+                              <button
+                                type="button"
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  deleteSectionDownloads(course.slug, section.title);
+                                }}
+                                className="p-1 rounded-lg hover:bg-rose-500/15 text-muted-foreground hover:text-rose-400 transition-colors"
+                              >
+                                <Trash2 className="w-3 h-3" />
+                              </button>
+                            </div>
+                          ) : (
+                            <button
+                              type="button"
+                              onClick={(e) => handleDownloadSection(e, section)}
+                              className="px-2.5 py-1 rounded-lg bg-primary-600/15 hover:bg-primary-600 text-primary-500 dark:text-primary-300 hover:text-white border border-primary-500/25 text-[11px] font-bold flex items-center gap-1 active:scale-95 transition-all"
+                            >
+                              <ArrowDownToLine className="w-3 h-3" />
+                              <span>Download ({sectionVideoUnits.length})</span>
+                            </button>
+                          )}
+                        </div>
+                      ) : (
+                        <div />
+                      )}
+
+                      <div className="flex items-center gap-1.5 text-[11px] font-semibold text-muted-foreground bg-card/80 px-2.5 py-1 rounded-lg border border-card-border/80 shrink-0">
+                        <span className="flex items-center gap-1">
+                          <Layers className="w-3 h-3 text-primary-500/80" />
+                          <span>{section.units.length} {section.units.length === 1 ? 'Unit' : 'Units'}</span>
+                        </span>
+                        {formattedSecDuration && (
+                          <>
+                            <span className="text-card-border">•</span>
+                            <span className="flex items-center gap-1 text-foreground">
+                              <Clock className="w-3 h-3 text-primary-500/80" />
+                              <span>{formattedSecDuration}</span>
+                            </span>
+                          </>
+                        )}
+                      </div>
                     </div>
                   </div>
 
-                  <div className="flex items-center gap-3 ml-auto sm:ml-0 flex-wrap">
-                    {/* Section Offline Download Button */}
-                    {isUnlocked && sectionVideoUnits.length > 0 && (
-                      <div
-                        onClick={(e) => e.stopPropagation()}
-                        className="flex items-center gap-1.5 shrink-0"
-                      >
-                        {isSecDownloading ? (
-                          <div className="px-2.5 py-1 rounded-lg bg-primary-500/15 text-primary-400 border border-primary-500/30 text-[11px] font-bold flex items-center gap-1.5 animate-pulse">
-                            <Loader2 className="w-3 h-3 animate-spin" />
-                            <span>Downloading {batchProgress?.quality ? `(${batchProgress.quality})` : ''}...</span>
+                  {/* === DESKTOP & TABLET VIEW (>= sm) === */}
+                  <div className="hidden sm:flex items-center justify-between w-full gap-4">
+                    {/* Col 1: Section Number & Full Title (Expands to fill available space) */}
+                    <div className="flex-1 min-w-0 flex items-center gap-3 pr-2">
+                      <div className="w-8 h-8 rounded-lg bg-primary-500/10 border border-primary-500/20 text-primary-600 dark:text-primary-400 flex items-center justify-center font-bold text-xs shrink-0 group-hover:scale-105 transition-transform">
+                        {sIdx + 1}
+                      </div>
+                      <h3 className="text-base sm:text-lg font-bold text-foreground leading-snug">
+                        {section.title}
+                      </h3>
+                    </div>
+
+                    {/* Uniform Alignment Cluster: Fixed Column Widths for Mathematical Alignment */}
+                    <div className="flex items-center gap-4 shrink-0">
+                      {/* Col 2: Download Action Column (Fixed width: 190px, right-aligned) */}
+                      <div className="w-[190px] shrink-0 flex items-center justify-end">
+                        {isUnlocked && sectionVideoUnits.length > 0 && (
+                          <div onClick={(e) => e.stopPropagation()} className="flex items-center gap-1.5">
+                            {isSecDownloading ? (
+                              <div className="px-3 py-1.5 rounded-xl bg-primary-500/15 text-primary-400 border border-primary-500/30 text-xs font-bold flex items-center gap-1.5 animate-pulse shadow-xs whitespace-nowrap">
+                                <Loader2 className="w-3.5 h-3.5 animate-spin" />
+                                <span>Downloading...</span>
+                              </div>
+                            ) : isSecDownloaded ? (
+                              <div className="flex items-center gap-1.5">
+                                <span className="px-3 py-1.5 rounded-xl bg-emerald-500/15 text-emerald-400 border border-emerald-500/30 text-xs font-bold flex items-center gap-1.5 shadow-xs whitespace-nowrap">
+                                  <CheckCircle2 className="w-3.5 h-3.5" />
+                                  <span>Section Saved</span>
+                                </span>
+                                <button
+                                  type="button"
+                                  onClick={(e) => {
+                                    e.stopPropagation();
+                                    deleteSectionDownloads(course.slug, section.title);
+                                  }}
+                                  className="p-1.5 rounded-lg hover:bg-rose-500/15 text-muted-foreground hover:text-rose-400 transition-colors border border-transparent hover:border-rose-500/30 cursor-pointer"
+                                  title="Delete section downloads"
+                                >
+                                  <Trash2 className="w-3.5 h-3.5" />
+                                </button>
+                              </div>
+                            ) : (
+                              <button
+                                type="button"
+                                onClick={(e) => handleDownloadSection(e, section)}
+                                className="px-3 py-1.5 rounded-xl bg-primary-600/15 hover:bg-primary-600 text-primary-500 dark:text-primary-300 hover:text-white border border-primary-500/25 hover:border-transparent text-xs font-bold transition-all flex items-center gap-1.5 hover:scale-102 active:scale-95 cursor-pointer shadow-xs whitespace-nowrap"
+                                title={`Download all ${sectionVideoUnits.length} video lessons in this section`}
+                              >
+                                <ArrowDownToLine className="w-3.5 h-3.5" />
+                                <span>Download Section ({sectionVideoUnits.length})</span>
+                              </button>
+                            )}
                           </div>
-                        ) : isSecDownloaded ? (
-                          <div className="flex items-center gap-1">
-                            <span className="px-2.5 py-1 rounded-lg bg-emerald-500/15 text-emerald-400 border border-emerald-500/30 text-[11px] font-bold flex items-center gap-1">
-                              <CheckCircle2 className="w-3 h-3" />
-                              <span className="hidden xs:inline">Section Saved</span>
-                            </span>
-                            <button
-                              type="button"
-                              onClick={(e) => {
-                                e.stopPropagation();
-                                deleteSectionDownloads(course.slug, section.title);
-                              }}
-                              className="p-1 rounded-lg hover:bg-rose-500/10 text-muted-foreground hover:text-rose-400 transition-colors"
-                              title="Delete section downloads"
-                            >
-                              <Trash2 className="w-3 h-3" />
-                            </button>
-                          </div>
-                        ) : (
-                          <button
-                            type="button"
-                            onClick={(e) => handleDownloadSection(e, section)}
-                            className="px-2.5 py-1 rounded-lg bg-primary-600/15 hover:bg-primary-600 text-primary-500 dark:text-primary-400 hover:text-white border border-primary-500/25 hover:border-transparent text-[11px] font-bold transition-all flex items-center gap-1 hover:scale-105 active:scale-95 cursor-pointer"
-                            title={`Download all ${sectionVideoUnits.length} video lessons in this section`}
-                          >
-                            <ArrowDownToLine className="w-3 h-3" />
-                            <span>Download Section ({sectionVideoUnits.length})</span>
-                          </button>
                         )}
                       </div>
-                    )}
 
-                    <div className="flex items-center gap-2.5 text-xs text-muted-foreground font-medium">
-                      <span>{section.units.length} Units</span>
-                      {formattedSecDuration && (
-                        <>
-                          <span className="text-slate-600">•</span>
-                          <span className="flex items-center gap-1 text-foreground/80">
-                            <Clock className="w-3.5 h-3.5 text-primary-600 dark:text-primary-400" />
-                            {formattedSecDuration}
+                      {/* Col 3: Units & Duration Pill (Fixed width: 175px, right-aligned) */}
+                      <div className="w-[175px] shrink-0 flex items-center justify-end">
+                        <div className="flex items-center gap-2 text-xs font-semibold text-muted-foreground bg-card/80 px-3 py-1.5 rounded-xl border border-card-border/80 shadow-xs whitespace-nowrap">
+                          <span className="flex items-center gap-1">
+                            <Layers className="w-3.5 h-3.5 text-primary-500/80" />
+                            <span>{section.units.length} {section.units.length === 1 ? 'Unit' : 'Units'}</span>
                           </span>
-                        </>
-                      )}
-                    </div>
-                    <div className="p-1 rounded-lg bg-card/60 border border-card-border/60 text-muted-foreground group-hover:text-foreground transition-colors">
-                      <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isExpanded ? 'rotate-180' : ''}`} />
+
+                          {formattedSecDuration && (
+                            <>
+                              <span className="text-card-border">•</span>
+                              <span className="flex items-center gap-1 text-foreground">
+                                <Clock className="w-3.5 h-3.5 text-primary-500/80" />
+                                <span>{formattedSecDuration}</span>
+                              </span>
+                            </>
+                          )}
+                        </div>
+                      </div>
+
+                      {/* Col 4: Chevron Toggle Icon (Fixed width: 32px, centered) */}
+                      <div className="w-8 shrink-0 flex items-center justify-center">
+                        <div className="p-1.5 rounded-lg bg-card/60 border border-card-border/60 text-muted-foreground group-hover:text-foreground transition-colors">
+                          <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isExpanded ? 'rotate-180' : ''}`} />
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
 
                 {/* Units List (Only shown when expanded) */}
                 {isExpanded && (
-                  <div role="list" className="p-5 sm:p-6 pt-0 space-y-2.5 border-t border-card-border/60 mt-1 pt-4">
+                  <div role="list" className="p-3 sm:p-6 pt-0 space-y-2.5 border-t border-card-border/60 mt-1 pt-3 sm:pt-4">
                     {section.units.map((unit, uIdx) => {
                       const config = getUnitMetaConfig(unit);
                       const IconComp = config.icon;
@@ -996,19 +1087,19 @@ export function CourseDetailClient({ course, availableTests, isUnlocked = true }
                         <div
                           role="listitem"
                           key={unit.id}
-                          className="p-3.5 rounded-xl bg-card/60 border border-card-border/80 flex items-center justify-between gap-4 hover:border-slate-700 transition-colors"
+                          className="p-2.5 sm:p-3.5 rounded-xl bg-card/60 border border-card-border/80 flex items-center justify-between gap-2.5 sm:gap-4 hover:border-slate-700 transition-colors"
                         >
-                          <div className="flex items-center gap-3">
+                          <div className="flex items-center gap-2.5 sm:gap-3 min-w-0 flex-1">
                             <div className={`w-8 h-8 rounded-lg flex items-center justify-center text-xs font-bold shrink-0 border ${config.colorClass}`}>
                               <IconComp className="w-4 h-4" />
                             </div>
 
-                            <div>
-                              <p className="text-sm font-semibold text-foreground">
+                            <div className="min-w-0 flex-1">
+                              <p className="text-xs sm:text-sm font-semibold text-foreground line-clamp-2 leading-snug">
                                 {unit.unitTitle !== 'Untitled' ? unit.unitTitle : `${section.title} Lesson ${uIdx + 1}`}
                               </p>
                               {(formatUnitDuration(unit.duration) || unit.modifiedF) && config.isActionableVideo && (
-                                <div className="text-[11px] text-slate-500 mt-0.5 flex items-center gap-1.5 font-mono">
+                                <div className="text-[10px] sm:text-[11px] text-slate-500 mt-0.5 flex items-center gap-1.5 font-mono">
                                   {formatUnitDuration(unit.duration) && (
                                     <span>{formatUnitDuration(unit.duration)}</span>
                                   )}
@@ -1028,13 +1119,13 @@ export function CourseDetailClient({ course, availableTests, isUnlocked = true }
                               target="_blank"
                               rel="noopener noreferrer"
                               download
-                              className="px-3.5 py-1.5 rounded-lg bg-teal-600/20 hover:bg-teal-600 text-teal-300 hover:text-foreground text-xs font-bold transition-all border border-teal-500/30 hover:border-transparent flex items-center gap-1.5 shrink-0"
+                              className="px-2.5 sm:px-3.5 py-1.5 rounded-lg bg-teal-600/20 hover:bg-teal-600 text-teal-300 hover:text-foreground text-xs font-bold transition-all border border-teal-500/30 hover:border-transparent flex items-center gap-1.5 shrink-0"
                             >
                               <Download className="w-3.5 h-3.5" />
                               <span>Download File</span>
                             </a>
                           ) : (config.category === 'ebook' || unit.type === 'pbebook' || unit.type === 'ebook') ? (
-                            <div className="px-3.5 py-1.5 rounded-lg bg-teal-950/40 text-teal-300 text-xs font-bold border border-teal-500/30 flex items-center gap-1.5 shrink-0">
+                            <div className="px-2.5 sm:px-3.5 py-1.5 rounded-lg bg-teal-950/40 text-teal-300 text-xs font-bold border border-teal-500/30 flex items-center gap-1.5 shrink-0">
                               <BookOpen className="w-3.5 h-3.5 text-teal-400" />
                               <span>eBook Notes</span>
                             </div>
@@ -1042,7 +1133,7 @@ export function CourseDetailClient({ course, availableTests, isUnlocked = true }
 
                           {/* Action Button: Certificate */}
                           {config.category === 'cert' && !downloadUrl && (
-                            <div className="px-3.5 py-1.5 rounded-lg bg-amber-500/20 text-amber-600 dark:text-amber-300 text-xs font-bold border border-amber-500/40 flex items-center gap-1.5 shrink-0">
+                            <div className="px-2.5 sm:px-3.5 py-1.5 rounded-lg bg-amber-500/20 text-amber-600 dark:text-amber-300 text-xs font-bold border border-amber-500/40 flex items-center gap-1.5 shrink-0">
                               <Award className="w-3.5 h-3.5 text-amber-600 dark:text-amber-400" />
                               <span>Course Certificate</span>
                             </div>
@@ -1054,7 +1145,7 @@ export function CourseDetailClient({ course, availableTests, isUnlocked = true }
                             return (
                               <Link
                                 href={`/quiz/${quizIdToUse}`}
-                                className="px-3.5 py-1.5 rounded-lg bg-primary-600/20 hover:bg-primary-600 text-primary-600 dark:text-primary-300 hover:text-white text-xs font-bold transition-all border border-primary-500/30 hover:border-transparent flex items-center gap-1 shrink-0"
+                                className="px-2.5 sm:px-3.5 py-1.5 rounded-lg bg-primary-600/20 hover:bg-primary-600 text-primary-600 dark:text-primary-300 hover:text-white text-xs font-bold transition-all border border-primary-500/30 hover:border-transparent flex items-center gap-1 shrink-0"
                               >
                                 <span>Take Exam</span>
                                 <ChevronRight className="w-3.5 h-3.5" />
@@ -1114,23 +1205,34 @@ export function CourseDetailClient({ course, availableTests, isUnlocked = true }
 
                                 <Link
                                   href={`/courses/${course.slug}/video/${unit.sourceid || unit.id}`}
-                                  className={`px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all flex items-center gap-1.5 shrink-0 ${
+                                  className={`px-2.5 sm:px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all flex items-center gap-1.5 shrink-0 ${
                                     isDownloadedUnit
                                       ? 'bg-emerald-600/20 hover:bg-emerald-600 text-emerald-300 hover:text-white border border-emerald-500/30'
                                       : 'bg-primary-600/20 hover:bg-primary-600 text-primary-600 dark:text-primary-300 hover:text-white border border-primary-500/30 hover:border-transparent'
                                   }`}
                                 >
-                                  <Play className="w-3.5 h-3.5 fill-current" />
-                                  <span>{isDownloadedUnit ? 'Watch Offline' : 'Watch Lesson'}</span>
+                                  <Play className="w-3.5 h-3.5 fill-current shrink-0" />
+                                  {isDownloadedUnit ? (
+                                    <>
+                                      <span className="hidden sm:inline">Watch Offline</span>
+                                      <span className="sm:hidden">Offline</span>
+                                    </>
+                                  ) : (
+                                    <>
+                                      <span className="hidden sm:inline">Watch Lesson</span>
+                                      <span className="sm:hidden">Watch</span>
+                                    </>
+                                  )}
                                 </Link>
                               </div>
                             ) : (
                               <Link
                                 href={`/courses/${course.slug}/video/${unit.sourceid || unit.id}`}
-                                className="px-3.5 py-1.5 rounded-lg bg-amber-950/40 hover:bg-amber-900/60 text-amber-600 dark:text-amber-400 text-xs font-bold transition-all border border-amber-500/30 flex items-center gap-1.5 shrink-0"
+                                className="px-2.5 sm:px-3.5 py-1.5 rounded-lg bg-amber-950/40 hover:bg-amber-900/60 text-amber-600 dark:text-amber-400 text-xs font-bold transition-all border border-amber-500/30 flex items-center gap-1.5 shrink-0"
                               >
-                                <Lock className="w-3.5 h-3.5" />
-                                <span>Locked Video</span>
+                                <Lock className="w-3.5 h-3.5 shrink-0" />
+                                <span className="hidden sm:inline">Locked Video</span>
+                                <span className="sm:hidden">Locked</span>
                               </Link>
                             );
                           })()}

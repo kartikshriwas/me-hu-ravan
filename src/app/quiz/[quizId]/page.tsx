@@ -25,7 +25,7 @@ import {
 } from 'lucide-react';
 import { QuizPlaySkeleton } from '@/components/skeletons/QuizPlaySkeleton';
 import { clientCache } from '@/lib/clientCache';
-import { getQuizTypeBadgeClass } from '@/lib/quizTypeStyle';
+import { getQuizTypeBadgeClass, getQuizTypeDotClass } from '@/lib/quizTypeStyle';
 
 export default function QuizPlayerPage({ params }: { params: Promise<{ quizId: string }> }) {
   const { quizId: rawQuizId } = use(params);
@@ -421,8 +421,9 @@ export default function QuizPlayerPage({ params }: { params: Promise<{ quizId: s
               {assessment.title}
             </span>
             {assessment.quizType && (
-              <span className={`px-2 py-0.5 rounded-md text-[10px] font-bold border ${getQuizTypeBadgeClass(assessment.quizType)}`}>
-                {assessment.quizType}
+              <span className={`inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-bold border ${getQuizTypeBadgeClass(assessment.quizType)}`}>
+                <span className={`w-1.5 h-1.5 rounded-full ${getQuizTypeDotClass(assessment.quizType)}`} />
+                <span>{assessment.quizType}</span>
               </span>
             )}
           </div>
@@ -617,16 +618,18 @@ export default function QuizPlayerPage({ params }: { params: Promise<{ quizId: s
             <div className="flex items-center gap-2">
               <h1 className="text-xs sm:text-lg font-bold text-foreground truncate">{assessment.title}</h1>
               {assessment.quizType && (
-                <span className={`hidden sm:inline-block px-2 py-0.5 rounded-md text-[10px] font-bold border shrink-0 ${getQuizTypeBadgeClass(assessment.quizType)}`}>
-                  {assessment.quizType}
+                <span className={`hidden sm:inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-lg text-[10px] font-bold border shrink-0 ${getQuizTypeBadgeClass(assessment.quizType)}`}>
+                  <span className={`w-1.5 h-1.5 rounded-full ${getQuizTypeDotClass(assessment.quizType)}`} />
+                  <span>{assessment.quizType}</span>
                 </span>
               )}
             </div>
             <p className="text-[10px] sm:text-xs text-muted-foreground truncate flex items-center gap-2">
               <span>Q {currentIndex + 1} of {assessment.questions.length} • {answeredTotal} Done</span>
               {assessment.quizType && (
-                <span className={`sm:hidden px-1.5 py-0.2 rounded text-[9px] font-bold border ${getQuizTypeBadgeClass(assessment.quizType)}`}>
-                  {assessment.quizType}
+                <span className={`sm:hidden inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[9px] font-bold border ${getQuizTypeBadgeClass(assessment.quizType)}`}>
+                  <span className={`w-1 h-1 rounded-full ${getQuizTypeDotClass(assessment.quizType)}`} />
+                  <span>{assessment.quizType}</span>
                 </span>
               )}
             </p>
