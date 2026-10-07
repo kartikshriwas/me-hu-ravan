@@ -852,6 +852,45 @@ export default function AdminDashboardPage() {
     }
   };
 
+  const handleDeleteUser = async (targetEmail: string) => {
+    if (!targetEmail) return;
+    const confirmed = window.confirm(
+      `⚠️ PERMANENT USER PURGE & DELETION\n\nAre you sure you want to permanently delete "${targetEmail}"?\n\nThis will completely delete:\n• All user profile & account data\n• All practice tests, answers & leaderboard scores\n• All active sessions & daily activity logs\n• All preapproved & premium access rights\n\nIf the user logs in again, they will start as a brand new account from scratch.`
+    );
+    if (!confirmed) return;
+
+    try {
+      setErrorMsg('');
+      setFeedbackMsg('');
+
+      const res = await fetch('/api/admin/users', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          action: 'delete_user',
+          targetEmail,
+        }),
+      });
+
+      const json = await res.json();
+      if (json.success) {
+        setFeedbackMsg(json.message);
+        const userRes = await fetch('/api/admin/users');
+        const userJson = await userRes.json();
+        if (userJson.success) setUsers(userJson.users);
+
+        if (inspectingUserEmail?.toLowerCase() === targetEmail.toLowerCase()) {
+          setInspectingUserEmail(null);
+          setInspectData(null);
+        }
+      } else {
+        setErrorMsg(json.error || 'Failed to delete user');
+      }
+    } catch {
+      setErrorMsg('Error deleting user');
+    }
+  };
+
   const openPermissionModal = (u: AdminUserItem) => {
     setEditingUserForPerms(u);
     setSelectedPerms(u.adminPermissions && u.adminPermissions.length > 0
@@ -2694,6 +2733,14 @@ export default function AdminDashboardPage() {
                                 >
                                   {u.isPremium ? 'Revoke Premium' : 'Grant Premium'}
                                 </button>
+                                <button
+                                  onClick={() => handleDeleteUser(u.email)}
+                                  title="Permanently Delete User & All Data"
+                                  className="px-2.5 py-1.5 rounded-xl bg-rose-500/15 hover:bg-rose-500/30 border border-rose-500/30 text-rose-500 hover:text-rose-400 font-bold text-[11px] transition-all flex items-center gap-1 shrink-0"
+                                >
+                                  <Trash2 className="w-3.5 h-3.5" />
+                                  <span className="hidden sm:inline">Delete</span>
+                                </button>
                               </>
                             )}
                           </div>
@@ -2934,15 +2981,27 @@ export default function AdminDashboardPage() {
                   </p>
                 </div>
               </div>
-              <button
-                onClick={() => {
-                  setInspectingUserEmail(null);
-                  setInspectData(null);
-                }}
-                className="p-2 rounded-xl text-muted-foreground hover:text-foreground hover:bg-slate-800 transition-all"
-              >
-                <X className="w-5 h-5" />
-              </button>
+              <div className="flex items-center gap-2">
+                {inspectData?.user?.role !== 'superadmin' && authUser?.email?.toLowerCase() !== inspectingUserEmail.toLowerCase() && (
+                  <button
+                    onClick={() => handleDeleteUser(inspectingUserEmail)}
+                    className="px-3 py-1.5 rounded-xl bg-rose-500/15 hover:bg-rose-500/30 border border-rose-500/30 text-rose-500 hover:text-rose-400 font-bold text-xs flex items-center gap-1.5 transition-all shadow-sm"
+                    title="Permanently Delete User & All Data"
+                  >
+                    <Trash2 className="w-3.5 h-3.5" />
+                    <span>Delete User</span>
+                  </button>
+                )}
+                <button
+                  onClick={() => {
+                    setInspectingUserEmail(null);
+                    setInspectData(null);
+                  }}
+                  className="p-2 rounded-xl text-muted-foreground hover:text-foreground hover:bg-slate-800 transition-all"
+                >
+                  <X className="w-5 h-5" />
+                </button>
+              </div>
             </div>
 
             {loadingInspectData ? (

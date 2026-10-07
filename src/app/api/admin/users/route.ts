@@ -2,6 +2,13 @@ import { NextResponse } from 'next/server';
 import { auth } from '@/auth';
 import { verifyAdminPermission, SUPERADMIN_EMAIL } from '@/lib/adminAuth';
 import { User } from '@/models/User';
+import { Attempt } from '@/models/Attempt';
+import { UserSession } from '@/models/UserSession';
+import { UserActivityLog } from '@/models/UserActivityLog';
+import { PreApprovedEmail } from '@/models/PreApprovedEmail';
+import { RedeemCode } from '@/models/RedeemCode';
+import { LaunchEvent } from '@/models/LaunchEvent';
+import { Report } from '@/models/Report';
 import { invalidateUserCourseCache } from '@/lib/coursesAuth';
 import { isCourseBatch } from '@/lib/batchAccess';
 
@@ -64,6 +71,63 @@ export async function POST(request: Request) {
     const targetUser = await User.findOne({ email: cleanTarget });
     if (!targetUser) {
       return NextResponse.json({ success: false, error: 'User not found' }, { status: 404 });
+    }
+
+    if (action === 'delete_user') {
+      if (cleanTarget === SUPERADMIN_EMAIL || targetUser.role === 'superadmin') {
+        return NextResponse.json({ success: false, error: 'Cannot delete Superadmin account' }, { status: 400 });
+      }
+
+      // Deleting admin requires Superadmin privileges
+      if (targetUser.role === 'admin' && !adminAuth.isSuperadmin) {
+        return NextResponse.json({ success: false, error: 'Only Superadmin can delete Admin accounts' }, { status: 403 });
+      }
+
+      // 1. Mark active sessions terminated immediately to kick user out and delete session documents
+      await UserSession.updateMany(
+        { userEmail: cleanTarget },
+        { $set: { terminated: true } }
+      ).catch(() => {});
+      await UserSession.deleteMany({ userEmail: cleanTarget }).catch(() => {});
+
+      // 2. Delete all test attempts and scores
+      await Attempt.deleteMany({
+        $or: [
+          { userEmail: cleanTarget },
+          { userId: targetUser._id.toString() },
+        ],
+      }).catch(() => {});
+
+      // 3. Delete user activity tracking logs
+      await UserActivityLog.deleteMany({ userEmail: cleanTarget }).catch(() => {});
+
+      // 4. Delete preapproved email records
+      await PreApprovedEmail.deleteMany({ email: cleanTarget }).catch(() => {});
+
+      // 5. Remove usage history from RedeemCode & LaunchEvent
+      await RedeemCode.updateMany(
+        { 'usedBy.userEmail': cleanTarget },
+        { $pull: { usedBy: { userEmail: cleanTarget } } }
+      ).catch(() => {});
+      await LaunchEvent.updateMany(
+        { 'claimedUsers.userEmail': cleanTarget },
+        { $pull: { claimedUsers: { userEmail: cleanTarget } } }
+      ).catch(() => {});
+
+      // 6. Delete reports submitted by user
+      await Report.deleteMany({ userEmail: cleanTarget }).catch(() => {});
+
+      // 7. Delete the user document completely
+      await User.deleteOne({ _id: targetUser._id });
+
+      // 8. Invalidate courses cache
+      invalidateUserCourseCache(cleanTarget);
+
+      return NextResponse.json({
+        success: true,
+        message: `User ${targetUser.email} and all associated data (tests, scores, sessions, premium) have been permanently deleted!`,
+        deletedEmail: cleanTarget,
+      });
     }
 
     if (action === 'grant_demo') {
