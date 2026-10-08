@@ -15,10 +15,17 @@ export function Navbar() {
   const { user, logout } = useAuth();
   const { downloads } = useDownloads();
   const [showMenu, setShowMenu] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
 
-  const isAdmin = user?.role === 'superadmin' || user?.role === 'admin';
-  const hasCourseAccess = checkUserCourseAccess(user);
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const currentUser = mounted ? user : null;
+  const currentDownloads = mounted ? downloads : [];
+  const isAdmin = currentUser?.role === 'superadmin' || currentUser?.role === 'admin';
+  const hasCourseAccess = Boolean(mounted && checkUserCourseAccess(user));
 
   // Close menu on click outside
   useEffect(() => {
@@ -115,7 +122,7 @@ export function Navbar() {
             </Link>
 
             {/* ── User links — Icon + Text label at each tier ── */}
-            {user && (
+            {currentUser && (
               <>
                 {/* Tier 4 · xl (1280px) */}
                 <Link
@@ -146,7 +153,7 @@ export function Navbar() {
                 </Link>
 
                 {/* Downloads Link — visible only if user has downloaded videos */}
-                {downloads.length > 0 && (
+                {currentDownloads.length > 0 && (
                   <Link
                     href="/downloads"
                     title="Downloads (Offline Ready)"
@@ -158,9 +165,9 @@ export function Navbar() {
                   >
                     <ArrowDownToLine className={`w-4 h-4 shrink-0 ${pathname === '/downloads' ? 'text-foreground' : 'text-primary-600 dark:text-primary-400'}`} />
                     <span>Downloads</span>
-                    {downloads.length > 0 && (
+                    {currentDownloads.length > 0 && (
                       <span className="text-[10px] px-1.5 py-0.5 rounded-full font-bold bg-primary-500/20 text-primary-400 border border-primary-500/30">
-                        {downloads.length}
+                        {currentDownloads.length}
                       </span>
                     )}
                   </Link>
@@ -204,10 +211,10 @@ export function Navbar() {
           <div 
             ref={menuRef} 
             className={`relative shrink-0 h-9 sm:h-10 flex items-center justify-end z-50 ${
-              user ? 'w-[102px] sm:w-[116px]' : 'w-auto'
+              currentUser ? 'w-[102px] sm:w-[116px]' : 'w-auto'
             }`}
           >
-            {user ? (
+            {currentUser ? (
               <div
                 className={`absolute right-0 top-0 transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] origin-top-right overflow-hidden rounded-2xl ${
                   showMenu
@@ -232,11 +239,11 @@ export function Navbar() {
                       showMenu ? 'w-10 h-10 sm:w-11 sm:h-11' : 'w-7 h-7 sm:w-8 sm:h-8'
                     }`}>
                       <UserAvatar 
-                        name={user.name} 
-                        email={user.email} 
-                        image={user.image} 
+                        name={currentUser.name} 
+                        email={currentUser.email} 
+                        image={currentUser.image} 
                         size={showMenu ? "md" : "sm"} 
-                        isPremium={user.isPremium} 
+                        isPremium={currentUser.isPremium} 
                       />
                     </div>
                     
@@ -245,9 +252,9 @@ export function Navbar() {
                         <span className={`font-bold text-foreground group-hover:text-primary-600 dark:group-hover:text-primary-300 transition-colors truncate ${
                           showMenu ? 'text-sm' : 'text-xs max-w-[50px] sm:max-w-[62px]'
                         }`}>
-                          {showMenu ? user.name : user.name.split(' ')[0]}
+                          {showMenu ? currentUser.name : currentUser.name.split(' ')[0]}
                         </span>
-                        {showMenu && user.isPremium && <Crown className="w-3.5 h-3.5 text-amber-600 dark:text-amber-400 shrink-0" />}
+                        {showMenu && currentUser.isPremium && <Crown className="w-3.5 h-3.5 text-amber-600 dark:text-amber-400 shrink-0" />}
                       </div>
                       
                       {/* Email only shows when expanded */}
@@ -255,7 +262,7 @@ export function Navbar() {
                         showMenu ? 'max-h-5 opacity-100 mt-0.5' : 'max-h-0 opacity-0'
                       }`}>
                         <span className="text-[11px] text-muted-foreground truncate block">
-                          {user.email}
+                          {currentUser.email}
                         </span>
                       </div>
                     </div>
@@ -322,7 +329,7 @@ export function Navbar() {
                   </Link>
 
                   {/* Downloads — visible in dropdown only if user has downloaded videos */}
-                  {downloads.length > 0 && (
+                  {currentDownloads.length > 0 && (
                     <Link
                       href="/downloads"
                       onClick={() => setShowMenu(false)}
@@ -332,9 +339,9 @@ export function Navbar() {
                         <ArrowDownToLine className="w-4 h-4 text-primary-600 dark:text-primary-400 group-hover:scale-110 transition-transform" />
                         <span>Downloads</span>
                       </div>
-                      {downloads.length > 0 && (
+                      {currentDownloads.length > 0 && (
                         <span className="text-[10px] px-1.5 py-0.5 rounded-full font-bold bg-primary-500/20 text-primary-400 border border-primary-500/30">
-                          {downloads.length}
+                          {currentDownloads.length}
                         </span>
                       )}
                     </Link>

@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { useState, useEffect } from 'react';
 import { useAuth } from '@/lib/authContext';
 import { UserAvatar } from '@/components/UserAvatar';
 import { FileCheck2, Trophy, BookOpen, User as UserIcon, Bookmark, Sparkles } from 'lucide-react';
@@ -21,13 +22,19 @@ interface NavItem {
 export function MobileBottomNav() {
   const pathname = usePathname();
   const { user } = useAuth();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   // 1. Hide on active quiz taking screen
   if (pathname.startsWith('/quiz/') && !pathname.includes('/results')) {
     return null;
   }
 
-  const hasCourseAccess = checkUserCourseAccess(user);
+  const currentUser = mounted ? user : null;
+  const hasCourseAccess = Boolean(mounted && checkUserCourseAccess(user));
 
   const cleanPath = pathname.split('?')[0].replace(/\/$/, '') || '/';
 
@@ -42,7 +49,7 @@ export function MobileBottomNav() {
         activeBg: 'bg-violet-500/15 dark:bg-violet-400/20',
         activeBorder: 'border-violet-500/30 dark:border-violet-400/30',
       }
-    : user
+    : currentUser
     ? {
         label: 'Saved',
         href: '/bookmarks',
@@ -122,13 +129,13 @@ export function MobileBottomNav() {
             >
               {/* Icon / Avatar */}
               <div className="relative flex items-center justify-center">
-                {item.isProfile && user ? (
+                {item.isProfile && currentUser ? (
                   <UserAvatar
-                    name={user.name}
-                    email={user.email}
-                    image={user.image}
+                    name={currentUser.name}
+                    email={currentUser.email}
+                    image={currentUser.image}
                     size="sm"
-                    isPremium={user.isPremium}
+                    isPremium={currentUser.isPremium}
                     className="!w-6 !h-6 !rounded-full"
                   />
                 ) : (

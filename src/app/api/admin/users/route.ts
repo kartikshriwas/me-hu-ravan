@@ -83,51 +83,56 @@ export async function POST(request: Request) {
         return NextResponse.json({ success: false, error: 'Only Superadmin can delete Admin accounts' }, { status: 403 });
       }
 
-      // 1. Mark active sessions terminated immediately to kick user out and delete session documents
-      await UserSession.updateMany(
-        { userEmail: cleanTarget },
-        { $set: { terminated: true } }
-      ).catch(() => {});
-      await UserSession.deleteMany({ userEmail: cleanTarget }).catch(() => {});
-
-      // 2. Delete all test attempts and scores
-      await Attempt.deleteMany({
-        $or: [
+      try {
+        // 1. Mark active sessions terminated immediately to kick user out and delete session documents
+        await UserSession.updateMany(
           { userEmail: cleanTarget },
-          { userId: targetUser._id.toString() },
-        ],
-      }).catch(() => {});
+          { $set: { terminated: true } }
+        ).catch(e => console.error('Error terminating sessions:', e));
+        await UserSession.deleteMany({ userEmail: cleanTarget }).catch(e => console.error('Error deleting sessions:', e));
 
-      // 3. Delete user activity tracking logs
-      await UserActivityLog.deleteMany({ userEmail: cleanTarget }).catch(() => {});
+        // 2. Delete all test attempts and scores
+        await Attempt.deleteMany({
+          $or: [
+            { userEmail: cleanTarget },
+            { userId: targetUser._id.toString() },
+          ],
+        }).catch(e => console.error('Error deleting attempts:', e));
 
-      // 4. Delete preapproved email records
-      await PreApprovedEmail.deleteMany({ email: cleanTarget }).catch(() => {});
+        // 3. Delete user activity tracking logs
+        await UserActivityLog.deleteMany({ userEmail: cleanTarget }).catch(e => console.error('Error deleting activity logs:', e));
 
-      // 5. Remove usage history from RedeemCode & LaunchEvent
-      await RedeemCode.updateMany(
-        { 'usedBy.userEmail': cleanTarget },
-        { $pull: { usedBy: { userEmail: cleanTarget } } }
-      ).catch(() => {});
-      await LaunchEvent.updateMany(
-        { 'claimedUsers.userEmail': cleanTarget },
-        { $pull: { claimedUsers: { userEmail: cleanTarget } } }
-      ).catch(() => {});
+        // 4. Delete preapproved email records
+        await PreApprovedEmail.deleteMany({ email: cleanTarget }).catch(e => console.error('Error deleting preapproved emails:', e));
 
-      // 6. Delete reports submitted by user
-      await Report.deleteMany({ userEmail: cleanTarget }).catch(() => {});
+        // 5. Remove usage history from RedeemCode & LaunchEvent
+        await RedeemCode.updateMany(
+          { 'usedBy.userEmail': cleanTarget },
+          { $pull: { usedBy: { userEmail: cleanTarget } } }
+        ).catch(e => console.error('Error updating RedeemCode:', e));
+        await LaunchEvent.updateMany(
+          { 'claimedUsers.userEmail': cleanTarget },
+          { $pull: { claimedUsers: { userEmail: cleanTarget } } }
+        ).catch(e => console.error('Error updating LaunchEvent:', e));
 
-      // 7. Delete the user document completely
-      await User.deleteOne({ _id: targetUser._id });
+        // 6. Delete reports submitted by user
+        await Report.deleteMany({ userEmail: cleanTarget }).catch(e => console.error('Error deleting reports:', e));
 
-      // 8. Invalidate courses cache
-      invalidateUserCourseCache(cleanTarget);
+        // 7. Delete the user document completely
+        await User.findOneAndDelete({ email: cleanTarget });
 
-      return NextResponse.json({
-        success: true,
-        message: `User ${targetUser.email} and all associated data (tests, scores, sessions, premium) have been permanently deleted!`,
-        deletedEmail: cleanTarget,
-      });
+        // 8. Invalidate courses cache
+        invalidateUserCourseCache(cleanTarget);
+
+        return NextResponse.json({
+          success: true,
+          message: `User ${targetUser.email} and all associated data (tests, scores, sessions, premium) have been permanently deleted!`,
+          deletedEmail: cleanTarget,
+        });
+      } catch (err) {
+        console.error('Error in delete_user process:', err);
+        return NextResponse.json({ success: false, error: 'Failed to completely delete user data' }, { status: 500 });
+      }
     }
 
     if (action === 'grant_demo') {

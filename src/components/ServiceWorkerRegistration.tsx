@@ -30,13 +30,9 @@ export function ServiceWorkerRegistration() {
           console.warn('Service worker registration failed:', error);
         });
 
-      // Reload page when new service worker takes control so new deployment chunks load cleanly
-      let refreshing = false;
+      // Do not automatically reload page on controllerchange to avoid interrupting users mid-task
       navigator.serviceWorker.addEventListener('controllerchange', () => {
-        if (!refreshing) {
-          refreshing = true;
-          window.location.reload();
-        }
+        // Silently updated in background
       });
     };
 

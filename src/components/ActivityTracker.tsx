@@ -227,8 +227,10 @@ export function ActivityTracker() {
             const { signOut } = await import('next-auth/react');
             await signOut({ callbackUrl: '/?error=SessionTerminated' });
           } else if (data.demoGranted) {
-            // Demo granted automatically — refresh page so candidate immediately sees course options
-            window.location.reload();
+            // Demo granted automatically — notify components silently without interrupting active users
+            if (typeof window !== 'undefined') {
+              window.dispatchEvent(new CustomEvent('preptea:demo-granted', { detail: data }));
+            }
           }
         }
       } catch (err) {
