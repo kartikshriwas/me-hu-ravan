@@ -10,27 +10,16 @@ import {
   Clock,
   Play,
   ArrowRight,
-  Sparkles,
-  Layers,
   ChevronDown,
   Search,
   X,
   ArrowDownToLine,
-  Filter,
   Check,
   CheckCheck,
   Video,
-  FileCheck2,
-  FileText,
-  HelpCircle,
   TrendingUp,
   Award,
-  Zap,
-  BookOpen,
   Navigation,
-  Trophy,
-  Star,
-  Flag,
 } from 'lucide-react';
 import { CourseDetail, CourseSectionUnit } from '@/lib/types';
 
@@ -696,109 +685,43 @@ export function CourseCalendarView({
     }
   };
 
-  // Phase milestone banner definition
-  const getMilestoneForDay = (day: CalendarDayGroup) => {
-    const t = day.targetTitle.toLowerCase();
-    if (t.includes('functions & methods') || t.includes('functions and methods')) {
-      return {
-        badge: 'Phase 1 Complete',
-        title: '🏁 Java Core & Fundamentals Mastered',
-        desc: 'Flowcharts, Variables, Operators, Conditionals, Loops & Pattern logic conquered!',
-        icon: Trophy,
-        color: 'from-amber-500/20 via-orange-500/10 to-transparent border-amber-500/30 text-amber-400',
-      };
-    }
-    if (t.includes('object oriented programming') || t.includes('oops')) {
-      return {
-        badge: 'Phase 2 Complete',
-        title: '🚀 Arrays, Sorting & Strings Mastered',
-        desc: '1D/2D arrays, classic sorting algorithms, and text manipulation conquered!',
-        icon: Zap,
-        color: 'from-blue-500/20 via-indigo-500/10 to-transparent border-blue-500/30 text-blue-400',
-      };
-    }
-    if (t.includes('time & space complexity') || t.includes('backtracking')) {
-      return {
-        badge: 'Phase 3 Complete',
-        title: '💡 OOPs & Divide-and-Conquer Mastered',
-        desc: 'Inheritance, Polymorphism, Recursion Basics, and Divide & Conquer unlocked!',
-        icon: Award,
-        color: 'from-purple-500/20 via-pink-500/10 to-transparent border-purple-500/30 text-purple-400',
-      };
-    }
-    if (t.includes('binary trees') || (t.includes('queues') && !t.includes('priority'))) {
-      return {
-        badge: 'Phase 4 Complete',
-        title: '⚡ Linear Data Structures Mastered',
-        desc: 'ArrayLists, Linked Lists, Stacks, and Queues fully mastered!',
-        icon: Sparkles,
-        color: 'from-emerald-500/20 via-teal-500/10 to-transparent border-emerald-500/30 text-emerald-400',
-      };
-    }
-    if (t.includes('graphs (part1)') || t.includes('graphs (part 1)')) {
-      return {
-        badge: 'Phase 5 Complete',
-        title: '🌲 Trees & Hierarchical Structures Mastered',
-        desc: 'Binary Trees, BSTs, Traversals, and Greedy Algorithms completed!',
-        icon: Star,
-        color: 'from-cyan-500/20 via-blue-500/10 to-transparent border-cyan-500/30 text-cyan-400',
-      };
-    }
-    if (t.includes('dp (part1)') || t.includes('dp (part 1)')) {
-      return {
-        badge: 'Phase 6 Complete',
-        title: '🌐 Graph Theory & Advanced Traversal Mastered',
-        desc: 'BFS, DFS, Dijkstra, MST, Heaps, and Hashing conquered!',
-        icon: Flag,
-        color: 'from-rose-500/20 via-pink-500/10 to-transparent border-rose-500/30 text-rose-400',
-      };
-    }
-    return null;
-  };
-
   return (
-    <div className="space-y-6">
-      {/* ── STREAK & TODAY'S TARGET HERO BANNER ── */}
-      <div className="relative overflow-hidden rounded-3xl p-5 sm:p-7 border border-card-border/80 glass-panel bg-gradient-to-br from-slate-900/95 via-slate-950 to-primary-950/50 shadow-2xl">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-primary-600/10 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute -bottom-10 -left-10 w-72 h-72 bg-amber-500/10 rounded-full blur-3xl pointer-events-none" />
-
-        <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+    <div className="space-y-5">
+      {/* ── STREAK & TODAY'S TARGET HERO CARD ── */}
+      <div className="rounded-2xl p-5 sm:p-6 border border-card-border bg-card/60 backdrop-blur-sm">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
           {/* Left: Streak Counter & Weekly Pulse */}
-          <div className="lg:col-span-5 space-y-4">
-            <div className="flex items-center gap-2 flex-wrap">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500/15 border border-amber-500/30 text-amber-400 text-xs font-black uppercase tracking-wider shadow-sm">
-                <Flame className="w-4 h-4 text-amber-400 fill-amber-400 animate-pulse" />
-                <span>Daily Learning Streak</span>
+          <div className="lg:col-span-5 space-y-3.5">
+            <div className="flex items-center gap-2">
+              <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-500 text-xs font-semibold">
+                <Flame className="w-3.5 h-3.5 fill-current" />
+                <span>Daily Streak</span>
               </span>
               {streakData.studiedToday && (
-                <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-emerald-400 text-[11px] font-bold">
+                <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-medium">
                   <Check className="w-3 h-3" />
-                  <span>Completed Today</span>
+                  <span>Studied Today</span>
                 </span>
               )}
             </div>
 
-            <div className="flex items-baseline gap-3">
-              <span className="text-4xl sm:text-5xl font-black text-foreground tracking-tight drop-shadow-md">
+            <div className="flex items-baseline gap-2.5">
+              <span className="text-3xl sm:text-4xl font-extrabold text-foreground tracking-tight">
                 {streakData.currentStreak}
               </span>
               <div className="text-left">
-                <p className="text-base font-extrabold text-foreground">
+                <p className="text-sm font-semibold text-foreground">
                   Day{streakData.currentStreak === 1 ? '' : 's'} Streak
                 </p>
                 <p className="text-xs text-muted-foreground">
-                  Personal Best: {streakData.longestStreak} days in a row
+                  Personal Best: {streakData.longestStreak} days
                 </p>
               </div>
             </div>
 
             {/* Weekly 7-Day Activity Strip */}
-            <div className="space-y-1.5 pt-1">
-              <p className="text-[11px] font-bold text-muted-foreground uppercase tracking-wider">
-                This Week&apos;s Activity
-              </p>
-              <div className="flex items-center gap-2">
+            <div className="space-y-1.5 pt-0.5">
+              <div className="flex items-center gap-1.5">
                 {['M', 'T', 'W', 'T', 'F', 'S', 'S'].map((dayLetter, idx) => {
                   const isActive = streakData.activeDaysThisWeek[idx];
                   const isTodayIndex = (new Date().getDay() + 6) % 7 === idx;
@@ -810,16 +733,16 @@ export function CourseCalendarView({
                       title={isActive ? `Day ${idx + 1}: Studied` : `Day ${idx + 1}`}
                     >
                       <div
-                        className={`w-7 h-7 sm:w-8 sm:h-8 rounded-xl flex items-center justify-center font-bold text-xs transition-all ${
+                        className={`w-7 h-7 rounded-lg flex items-center justify-center font-semibold text-xs transition-colors ${
                           isActive
-                            ? 'bg-amber-500 text-slate-950 shadow-md shadow-amber-500/30 scale-105 ring-2 ring-amber-400/30'
+                            ? 'bg-amber-500/20 text-amber-400 border border-amber-500/30'
                             : isTodayIndex
-                            ? 'bg-card border-2 border-primary-500 text-foreground ring-2 ring-primary-500/20'
-                            : 'bg-card/70 border border-card-border/60 text-muted-foreground'
+                            ? 'bg-card border border-primary-500/50 text-foreground font-bold'
+                            : 'bg-card/40 border border-card-border/60 text-muted-foreground'
                         }`}
                       >
                         {isActive ? (
-                          <Flame className="w-3.5 h-3.5 fill-current" />
+                          <Flame className="w-3 h-3 fill-current" />
                         ) : (
                           dayLetter
                         )}
@@ -834,95 +757,54 @@ export function CourseCalendarView({
           {/* Right: Next Up Target Card */}
           <div className="lg:col-span-7">
             {nextTargetDay ? (
-              <div className="p-4 sm:p-5 rounded-2xl bg-card/90 border border-primary-500/30 shadow-xl space-y-3.5 relative overflow-hidden backdrop-blur-md">
-                <div className="flex items-start sm:items-center justify-between gap-4">
-                  <div className="flex items-start gap-3 min-w-0 flex-1">
-                    <span className="p-2 rounded-xl bg-primary-500/20 text-primary-400 border border-primary-500/30 shrink-0 mt-0.5 sm:mt-0">
-                      <Target className="w-5 h-5 text-primary-400" />
-                    </span>
-                    <div className="min-w-0 flex-1">
-                      <div className="flex items-center gap-2 flex-wrap">
-                        <span className="text-[10px] font-black uppercase tracking-wider text-primary-400">
-                          Today&apos;s Target Day
-                        </span>
-                        <span className="text-[10px] px-2 py-0.5 rounded-full bg-primary-500/10 border border-primary-500/20 text-primary-300 font-bold">
-                          Day {nextTargetDay.dayNumber} of {totalDays}
-                        </span>
-                      </div>
-                      <h4 className="text-base sm:text-lg font-bold text-foreground leading-snug truncate mt-0.5">
-                        {nextTargetDay.targetTitle}
-                      </h4>
+              <div className="p-4 sm:p-5 rounded-xl bg-card/80 border border-card-border space-y-3">
+                <div className="flex items-start justify-between gap-3">
+                  <div className="min-w-0 flex-1">
+                    <div className="flex items-center gap-2 flex-wrap text-xs text-muted-foreground">
+                      <span className="font-semibold text-primary-400">
+                        Today&apos;s Target
+                      </span>
+                      <span>•</span>
+                      <span>Day {nextTargetDay.dayNumber} of {totalDays}</span>
+                      <span>•</span>
+                      <span>{nextTargetDay.formattedDate}</span>
                     </div>
+                    <h4 className="text-base font-bold text-foreground leading-snug truncate mt-1">
+                      {nextTargetDay.targetTitle}
+                    </h4>
                   </div>
 
-                  {/* Radial Mini Progress Ring */}
-                  <div className="relative w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center shrink-0">
-                    <svg className="w-full h-full transform -rotate-90" viewBox="0 0 36 36">
-                      <path
-                        className="text-slate-800"
-                        strokeWidth="3.5"
-                        stroke="currentColor"
-                        fill="none"
-                        d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
-                      />
-                      <path
-                        className="text-primary-500 transition-all duration-700 ease-out"
-                        strokeDasharray={`${nextTargetDay.progressPercent}, 100`}
-                        strokeWidth="3.5"
-                        strokeLinecap="round"
-                        stroke="currentColor"
-                        fill="none"
-                        d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
-                      />
-                    </svg>
-                    <span className="absolute text-[11px] sm:text-xs font-black text-foreground">
-                      {nextTargetDay.progressPercent}%
-                    </span>
-                  </div>
-                </div>
-
-                {/* Duration & Lectures Target Summary */}
-                <div className="flex flex-wrap items-center gap-2.5 text-xs text-muted-foreground pt-1">
-                  <span className="flex items-center gap-1.5 text-foreground font-semibold px-2 py-0.5 rounded-md bg-card border border-card-border">
-                    <Video className="w-3.5 h-3.5 text-primary-400" />
-                    <span>{nextTargetDay.totalLectures} Lectures</span>
-                  </span>
-                  <span className="flex items-center gap-1.5 text-foreground font-semibold px-2 py-0.5 rounded-md bg-card border border-card-border">
-                    <Clock className="w-3.5 h-3.5 text-primary-400" />
-                    <span>{formatDurationHms(nextTargetDay.totalSeconds)} required today</span>
-                  </span>
-                  <span className="text-muted-foreground hidden sm:inline">
-                    {nextTargetDay.formattedDate} ({nextTargetDay.dayOfWeek})
+                  <span className="text-xs font-mono font-medium text-muted-foreground shrink-0 px-2 py-1 rounded bg-card border border-card-border">
+                    {nextTargetDay.completedCount}/{nextTargetDay.totalLectures} Done
                   </span>
                 </div>
 
                 {/* Progress Bar */}
                 <div className="space-y-1">
-                  <div className="w-full h-2 rounded-full bg-slate-800/80 overflow-hidden">
+                  <div className="w-full h-1.5 rounded-full bg-slate-800/80 overflow-hidden">
                     <div
-                      className="h-full bg-gradient-to-r from-primary-500 via-indigo-500 to-emerald-500 transition-all duration-500"
+                      className="h-full bg-primary-500 transition-all duration-300"
                       style={{ width: `${nextTargetDay.progressPercent}%` }}
                     />
                   </div>
-                  <div className="flex justify-between text-[11px] font-medium text-muted-foreground">
-                    <span>{nextTargetDay.completedCount} of {nextTargetDay.totalLectures} completed</span>
+                  <div className="flex justify-between text-[11px] text-muted-foreground">
                     <span>
-                      {nextTargetDay.totalLectures - nextTargetDay.completedCount} remaining today
+                      {nextTargetDay.totalLectures} Lectures • {formatDurationHms(nextTargetDay.totalSeconds)}
                     </span>
+                    <span>{nextTargetDay.progressPercent}%</span>
                   </div>
                 </div>
 
-                {/* Action CTA: Jump to First Unfinished Lecture + Batch Finish Button */}
-                <div className="pt-1 flex items-center justify-between gap-3">
-                  {/* One-Click Day Finish Button */}
+                {/* Actions */}
+                <div className="pt-1 flex items-center justify-between gap-2.5">
                   <button
                     type="button"
                     onClick={() => handleToggleAllDay(nextTargetDay)}
-                    className="px-3 py-2 rounded-xl text-xs font-semibold flex items-center gap-1.5 transition-all cursor-pointer bg-card hover:bg-card-border/60 text-muted-foreground hover:text-foreground border border-card-border shrink-0"
+                    className="px-3 py-1.5 rounded-lg text-xs font-medium flex items-center gap-1.5 transition-colors cursor-pointer bg-card hover:bg-card-border/60 text-muted-foreground hover:text-foreground border border-card-border"
                     title="Mark all lectures in today's target complete"
                   >
                     <CheckCheck className="w-3.5 h-3.5" />
-                    <span>{nextTargetDay.isCompleted ? 'Mark Incomplete' : 'Finish All'}</span>
+                    <span>{nextTargetDay.isCompleted ? 'Mark Incomplete' : 'Finish Day'}</span>
                   </button>
 
                   {(() => {
@@ -936,24 +818,24 @@ export function CourseCalendarView({
                     return (
                       <Link
                         href={`/courses/${course.slug}/video/${firstUnfinished.videoId}`}
-                        className="px-4 py-2 rounded-xl bg-primary-600 hover:bg-primary-500 text-white text-xs font-bold shadow-lg shadow-primary-600/30 transition-all flex items-center gap-2 hover:scale-105 active:scale-95 ml-auto"
+                        className="px-3.5 py-1.5 rounded-lg bg-primary-600 hover:bg-primary-500 text-white text-xs font-semibold transition-colors flex items-center gap-1.5 ml-auto"
                       >
-                        <Play className="w-3.5 h-3.5 fill-current" />
-                        <span>Start Today&apos;s Target</span>
-                        <ArrowRight className="w-3.5 h-3.5" />
+                        <Play className="w-3 h-3 fill-current" />
+                        <span>Start Target</span>
+                        <ArrowRight className="w-3 h-3" />
                       </Link>
                     );
                   })()}
                 </div>
               </div>
             ) : (
-              <div className="p-6 rounded-2xl bg-card/70 border border-emerald-500/30 text-center space-y-2">
-                <Award className="w-10 h-10 text-emerald-400 mx-auto" />
-                <h4 className="text-base font-bold text-foreground">
-                  🎉 Course Targets Fully Completed!
+              <div className="p-5 rounded-xl bg-card/60 border border-card-border text-center space-y-1.5">
+                <Award className="w-8 h-8 text-emerald-400 mx-auto" />
+                <h4 className="text-sm font-semibold text-foreground">
+                  Course Targets Completed!
                 </h4>
-                <p className="text-xs text-muted-foreground max-w-sm mx-auto">
-                  You have completed all daily study targets for this course. Excellent consistency!
+                <p className="text-xs text-muted-foreground">
+                  You have completed all scheduled daily targets.
                 </p>
               </div>
             )}
@@ -961,83 +843,46 @@ export function CourseCalendarView({
         </div>
       </div>
 
-      {/* ── COURSE ROADMAP OVERVIEW CARDS ── */}
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3.5">
-        <div className="p-4 rounded-2xl bg-card/85 border border-card-border/80 shadow-sm hover:border-primary-500/30 transition-all space-y-2 backdrop-blur-sm">
-          <div className="flex items-center justify-between text-muted-foreground">
-            <span className="text-[11px] font-bold uppercase tracking-wider">
-              {scheduleMode === 'paced' ? 'Daily Targets' : 'Upload Drops'}
-            </span>
-            <Target className="w-4 h-4 text-primary-400" />
-          </div>
-          <div className="flex items-baseline justify-between">
-            <p className="text-2xl sm:text-3xl font-black text-foreground">{totalDays}</p>
-            <span className="text-xs text-muted-foreground font-medium">Days</span>
-          </div>
-          <div className="w-full h-1.5 rounded-full bg-slate-800/80 overflow-hidden">
-            <div className="h-full bg-primary-500 rounded-full w-full" />
+      {/* ── COURSE ROADMAP OVERVIEW ── */}
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+        <div className="p-3.5 rounded-xl bg-card/50 border border-card-border space-y-1">
+          <span className="text-[11px] font-medium text-muted-foreground">
+            {scheduleMode === 'paced' ? 'Daily Targets' : 'Upload Drops'}
+          </span>
+          <div className="flex items-baseline gap-1.5">
+            <p className="text-xl font-bold text-foreground">{totalDays}</p>
+            <span className="text-xs text-muted-foreground">Days</span>
           </div>
         </div>
 
-        <div className="p-4 rounded-2xl bg-card/85 border border-card-border/80 shadow-sm hover:border-emerald-500/30 transition-all space-y-2 backdrop-blur-sm">
-          <div className="flex items-center justify-between text-muted-foreground">
-            <span className="text-[11px] font-bold uppercase tracking-wider">
-              Completed Days
-            </span>
-            <CheckCircle2 className="w-4 h-4 text-emerald-400" />
-          </div>
-          <div className="flex items-baseline justify-between">
-            <p className="text-2xl sm:text-3xl font-black text-emerald-400">
-              {completedDaysCount}
-            </p>
-            <span className="text-xs text-muted-foreground font-medium">of {totalDays}</span>
-          </div>
-          <div className="w-full h-1.5 rounded-full bg-slate-800/80 overflow-hidden">
-            <div
-              className="h-full bg-emerald-500 rounded-full transition-all duration-500"
-              style={{
-                width: `${totalDays > 0 ? (completedDaysCount / totalDays) * 100 : 0}%`,
-              }}
-            />
+        <div className="p-3.5 rounded-xl bg-card/50 border border-card-border space-y-1">
+          <span className="text-[11px] font-medium text-muted-foreground">
+            Completed Days
+          </span>
+          <div className="flex items-baseline gap-1.5">
+            <p className="text-xl font-bold text-emerald-400">{completedDaysCount}</p>
+            <span className="text-xs text-muted-foreground">/ {totalDays}</span>
           </div>
         </div>
 
-        <div className="p-4 rounded-2xl bg-card/85 border border-card-border/80 shadow-sm hover:border-cyan-500/30 transition-all space-y-2 backdrop-blur-sm">
-          <div className="flex items-center justify-between text-muted-foreground">
-            <span className="text-[11px] font-bold uppercase tracking-wider">
-              Lectures Finished
-            </span>
-            <Video className="w-4 h-4 text-cyan-400" />
-          </div>
-          <div className="flex items-baseline justify-between">
-            <p className="text-2xl sm:text-3xl font-black text-cyan-400">
+        <div className="p-3.5 rounded-xl bg-card/50 border border-card-border space-y-1">
+          <span className="text-[11px] font-medium text-muted-foreground">
+            Lectures Finished
+          </span>
+          <div className="flex items-baseline gap-1.5">
+            <p className="text-xl font-bold text-foreground">
               {Math.min(overallTotalUnits, overallCompletedUnits)}
             </p>
-            <span className="text-xs text-muted-foreground font-medium">of {overallTotalUnits}</span>
-          </div>
-          <div className="w-full h-1.5 rounded-full bg-slate-800/80 overflow-hidden">
-            <div
-              className="h-full bg-cyan-500 rounded-full transition-all duration-500"
-              style={{
-                width: `${
-                  overallTotalUnits > 0
-                    ? (Math.min(overallTotalUnits, overallCompletedUnits) / overallTotalUnits) * 100
-                    : 0
-                }%`,
-              }}
-            />
+            <span className="text-xs text-muted-foreground">/ {overallTotalUnits}</span>
           </div>
         </div>
 
-        <div className="p-4 rounded-2xl bg-card/85 border border-card-border/80 shadow-sm hover:border-amber-500/30 transition-all space-y-2 backdrop-blur-sm">
-          <div className="flex items-center justify-between text-muted-foreground">
-            <span className="text-[11px] font-bold uppercase tracking-wider">
-              Roadmap Progress
-            </span>
-            <TrendingUp className="w-4 h-4 text-amber-400" />
-          </div>
-          <div className="flex items-baseline justify-between">
-            <p className="text-2xl sm:text-3xl font-black text-amber-400">
+        <div className="p-3.5 rounded-xl bg-card/50 border border-card-border space-y-1">
+          <span className="text-[11px] font-medium text-muted-foreground">
+            Progress
+          </span>
+          <div className="flex items-baseline gap-1.5">
+            <p className="text-xl font-bold text-foreground">
               {overallTotalUnits > 0
                 ? Math.round(
                     (Math.min(overallTotalUnits, overallCompletedUnits) / overallTotalUnits) * 100
@@ -1045,62 +890,50 @@ export function CourseCalendarView({
                 : 0}
               %
             </p>
-            <span className="text-xs text-muted-foreground font-medium">Total</span>
-          </div>
-          <div className="w-full h-1.5 rounded-full bg-slate-800/80 overflow-hidden">
-            <div
-              className="h-full bg-gradient-to-r from-amber-500 to-orange-500 rounded-full transition-all duration-500"
-              style={{
-                width: `${
-                  overallTotalUnits > 0
-                    ? (Math.min(overallTotalUnits, overallCompletedUnits) / overallTotalUnits) * 100
-                    : 0
-                }%`,
-              }}
-            />
+            <span className="text-xs text-muted-foreground">Overall</span>
           </div>
         </div>
       </div>
 
       {/* ── TARGET PACE TOGGLE & SEARCH TOOLBAR ── */}
-      <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-3 pt-2">
-        {/* Schedule Mode Selector: Paced (~1.5h/day) vs Raw LMS Upload Drops */}
-        <div className="inline-flex items-center p-1 rounded-2xl bg-card border border-card-border text-xs font-semibold self-start shrink-0">
+      <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-3 pt-1">
+        {/* Schedule Mode Selector */}
+        <div className="inline-flex items-center p-1 rounded-xl bg-card border border-card-border text-xs font-medium self-start shrink-0">
           <button
             type="button"
             onClick={() => setScheduleMode('paced')}
-            className={`px-3 py-1.5 rounded-xl transition-all cursor-pointer flex items-center gap-1.5 ${
+            className={`px-3 py-1.5 rounded-lg transition-colors cursor-pointer flex items-center gap-1.5 ${
               scheduleMode === 'paced'
-                ? 'bg-primary-600 text-white shadow-sm'
+                ? 'bg-primary-600 text-white'
                 : 'text-muted-foreground hover:text-foreground'
             }`}
           >
             <Target className="w-3.5 h-3.5" />
-            <span>Paced Daily Targets (~1.5h / day)</span>
+            <span>Paced Targets (~1.5h/day)</span>
           </button>
 
           <button
             type="button"
             onClick={() => setScheduleMode('raw_batches')}
-            className={`px-3 py-1.5 rounded-xl transition-all cursor-pointer flex items-center gap-1.5 ${
+            className={`px-3 py-1.5 rounded-lg transition-colors cursor-pointer flex items-center gap-1.5 ${
               scheduleMode === 'raw_batches'
-                ? 'bg-primary-600 text-white shadow-sm'
+                ? 'bg-primary-600 text-white'
                 : 'text-muted-foreground hover:text-foreground'
             }`}
           >
             <CalendarDays className="w-3.5 h-3.5" />
-            <span>Upload Drop Batches</span>
+            <span>Upload Batches</span>
           </button>
         </div>
 
         {/* Status Filters, Active Jump & Search Bar */}
-        <div className="flex flex-wrap items-center gap-2.5">
+        <div className="flex flex-wrap items-center gap-2">
           {/* Quick Jump to Active Day */}
           {nextTargetDay && (
             <button
               type="button"
               onClick={jumpToActiveDay}
-              className="px-3 py-1.5 rounded-xl bg-card hover:bg-card-border/60 text-primary-400 border border-primary-500/30 text-xs font-bold transition-all flex items-center gap-1.5 cursor-pointer shadow-sm hover:scale-105 active:scale-95"
+              className="px-2.5 py-1.5 rounded-lg bg-card hover:bg-card-border/60 text-primary-400 border border-primary-500/30 text-xs font-medium transition-colors flex items-center gap-1.5 cursor-pointer"
             >
               <Navigation className="w-3.5 h-3.5" />
               <span>Jump to Day {nextTargetDay.dayNumber}</span>
@@ -1108,13 +941,13 @@ export function CourseCalendarView({
           )}
 
           {/* Status Filter Pills */}
-          <div className="flex items-center gap-1 p-1 rounded-2xl bg-card border border-card-border text-xs font-semibold">
+          <div className="flex items-center gap-1 p-1 rounded-xl bg-card border border-card-border text-xs font-medium">
             <button
               type="button"
               onClick={() => setFilterMode('all')}
-              className={`px-2.5 py-1 rounded-xl transition-all cursor-pointer ${
+              className={`px-2.5 py-1 rounded-lg transition-colors cursor-pointer ${
                 filterMode === 'all'
-                  ? 'bg-primary-600 text-white shadow-sm'
+                  ? 'bg-primary-600 text-white'
                   : 'text-muted-foreground hover:text-foreground'
               }`}
             >
@@ -1123,9 +956,9 @@ export function CourseCalendarView({
             <button
               type="button"
               onClick={() => setFilterMode('pending')}
-              className={`px-2.5 py-1 rounded-xl transition-all cursor-pointer ${
+              className={`px-2.5 py-1 rounded-lg transition-colors cursor-pointer ${
                 filterMode === 'pending'
-                  ? 'bg-primary-600 text-white shadow-sm'
+                  ? 'bg-primary-600 text-white'
                   : 'text-muted-foreground hover:text-foreground'
               }`}
             >
@@ -1134,10 +967,10 @@ export function CourseCalendarView({
             <button
               type="button"
               onClick={() => setFilterMode('completed')}
-              className={`px-2.5 py-1 rounded-xl transition-all cursor-pointer ${
+              className={`px-2.5 py-1 rounded-lg transition-colors cursor-pointer ${
                 filterMode === 'completed'
-                  ? 'bg-primary-600 text-white shadow-sm'
-                  : 'text-muted-foreground hover:text-foreground'
+                  ? 'bg-primary-600 text-white'
+                : 'text-muted-foreground hover:text-foreground'
               }`}
             >
               Done ({completedDaysCount})
@@ -1145,14 +978,14 @@ export function CourseCalendarView({
           </div>
 
           {/* Search Box */}
-          <div className="relative flex-1 sm:w-56">
-            <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground pointer-events-none" />
+          <div className="relative flex-1 sm:w-52">
+            <Search className="w-3.5 h-3.5 absolute left-2.5 top-1/2 -translate-y-1/2 text-muted-foreground pointer-events-none" />
             <input
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Search topic or date..."
-              className="w-full pl-8 pr-8 py-1.5 rounded-xl bg-card border border-card-border text-xs text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary-500 transition-colors"
+              className="w-full pl-8 pr-7 py-1.5 rounded-lg bg-card border border-card-border text-xs text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary-500 transition-colors"
             />
             {searchQuery && (
               <button
@@ -1165,18 +998,18 @@ export function CourseCalendarView({
             )}
           </div>
 
-          <div className="flex items-center gap-1.5 text-xs shrink-0">
+          <div className="flex items-center gap-1 text-xs shrink-0">
             <button
               type="button"
               onClick={expandAll}
-              className="px-2.5 py-1.5 rounded-xl bg-card border border-card-border hover:bg-card/80 text-muted-foreground hover:text-foreground font-semibold transition-colors cursor-pointer"
+              className="px-2 py-1.5 rounded-lg bg-card border border-card-border hover:bg-card/80 text-muted-foreground hover:text-foreground font-medium transition-colors cursor-pointer"
             >
               Expand
             </button>
             <button
               type="button"
               onClick={collapseAll}
-              className="px-2.5 py-1.5 rounded-xl bg-card border border-card-border hover:bg-card/80 text-muted-foreground hover:text-foreground font-semibold transition-colors cursor-pointer"
+              className="px-2 py-1.5 rounded-lg bg-card border border-card-border hover:bg-card/80 text-muted-foreground hover:text-foreground font-medium transition-colors cursor-pointer"
             >
               Collapse
             </button>
@@ -1184,173 +1017,140 @@ export function CourseCalendarView({
         </div>
       </div>
 
-      {/* ── DAILY TARGETS LIST (CHRONOLOGICAL UPLOAD DAYS) ── */}
+      {/* ── DAILY TARGETS LIST ── */}
       {filteredDays.length === 0 ? (
-        <div className="p-8 text-center glass-panel rounded-2xl border border-card-border space-y-2">
-          <CalendarDays className="w-8 h-8 text-muted-foreground mx-auto opacity-50" />
-          <p className="text-sm font-semibold text-foreground">No matching days found</p>
+        <div className="p-8 text-center rounded-xl border border-card-border bg-card/30 space-y-1.5">
+          <CalendarDays className="w-7 h-7 text-muted-foreground mx-auto opacity-50" />
+          <p className="text-sm font-medium text-foreground">No matching days found</p>
           <p className="text-xs text-muted-foreground">
             No daily targets matched &quot;{searchQuery}&quot; with current status filter.
           </p>
         </div>
       ) : (
-        <div className="space-y-4">
+        <div className="space-y-3">
           {filteredDays.map((day) => {
             const isExpanded = !!expandedDays[day.dayNumber] || searchQuery.trim() !== '';
-            const milestone = getMilestoneForDay(day);
 
             return (
-              <React.Fragment key={day.dayNumber}>
-                {/* Milestone Marker Divider Card */}
-                {milestone && (
-                  <div className={`p-4 rounded-2xl border bg-gradient-to-r ${milestone.color} shadow-lg backdrop-blur-sm flex items-center justify-between gap-4 my-2`}>
-                    <div className="flex items-center gap-3 min-w-0">
-                      <div className="p-2 rounded-xl bg-card/80 border border-card-border shrink-0">
-                        <milestone.icon className="w-5 h-5 fill-current" />
-                      </div>
-                      <div className="min-w-0">
-                        <div className="flex items-center gap-2">
-                          <span className="text-[10px] font-black uppercase tracking-wider px-2 py-0.5 rounded-full bg-card border border-card-border">
-                            {milestone.badge}
-                          </span>
-                          <span className="text-xs font-extrabold text-foreground">
-                            {milestone.title}
-                          </span>
-                        </div>
-                        <p className="text-[11px] text-muted-foreground mt-0.5 truncate">
-                          {milestone.desc}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                )}
-
+              <div
+                key={day.dayNumber}
+                id={`calendar-day-${day.dayNumber}`}
+                className={`rounded-xl border transition-colors overflow-hidden ${
+                  day.isNextTarget
+                    ? 'border-primary-500/50 bg-card/60'
+                    : day.isCompleted
+                    ? 'border-card-border/60 bg-card/25'
+                    : 'border-card-border bg-card/40 hover:border-card-border/80'
+                }`}
+              >
+                {/* ── Day Header (Clickable) ── */}
                 <div
-                  id={`calendar-day-${day.dayNumber}`}
-                  className={`glass-card rounded-2xl border transition-all overflow-hidden ${
-                    day.isNextTarget
-                      ? 'border-primary-500/60 shadow-xl shadow-primary-500/10 ring-1 ring-primary-500/20'
-                      : day.isCompleted
-                      ? 'border-emerald-500/40 bg-card/60'
-                      : 'border-card-border hover:border-card-border/80'
-                  }`}
+                  role="button"
+                  tabIndex={0}
+                  onClick={() => toggleDay(day.dayNumber)}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      toggleDay(day.dayNumber);
+                    }
+                  }}
+                  className="w-full text-left p-3 sm:p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 sm:gap-4 hover:bg-card-border/15 transition-colors cursor-pointer group select-none"
                 >
-                  {/* ── Day Header (Clickable) ── */}
-                  <div
-                    role="button"
-                    tabIndex={0}
-                    onClick={() => toggleDay(day.dayNumber)}
-                    onKeyDown={(e) => {
-                      if (e.key === 'Enter' || e.key === ' ') {
-                        e.preventDefault();
-                        toggleDay(day.dayNumber);
-                      }
-                    }}
-                    className="w-full text-left p-3.5 sm:p-4.5 flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4 hover:bg-primary-500/5 transition-colors cursor-pointer group select-none"
-                  >
-                    {/* Left: Day Badge + Topic Title + Release Date */}
-                    <div className="flex items-start sm:items-center gap-3.5 min-w-0 flex-1">
-                      <div
-                        className={`w-10 h-10 rounded-xl flex items-center justify-center font-black text-xs sm:text-sm shrink-0 mt-0.5 sm:mt-0 transition-transform group-hover:scale-105 shadow-sm ${
-                          day.isCompleted
-                            ? 'bg-emerald-500 text-slate-950 shadow-emerald-500/20'
-                            : day.isNextTarget
-                            ? 'bg-primary-500 text-white shadow-primary-500/30'
-                            : 'bg-primary-500/10 text-primary-400 border border-primary-500/20'
-                        }`}
-                      >
-                        {day.isCompleted ? (
-                          <Check className="w-5 h-5 stroke-[3]" />
-                        ) : (
-                          `D${day.dayNumber}`
+                  {/* Left: Day Badge + Topic Title + Date */}
+                  <div className="flex items-center gap-3 min-w-0 flex-1">
+                    <div
+                      className={`w-8 h-8 rounded-lg flex items-center justify-center font-bold text-xs shrink-0 transition-colors ${
+                        day.isCompleted
+                          ? 'bg-emerald-500/15 text-emerald-400 border border-emerald-500/30'
+                          : day.isNextTarget
+                          ? 'bg-primary-500/15 text-primary-400 border border-primary-500/30'
+                          : 'bg-card border border-card-border text-muted-foreground'
+                      }`}
+                    >
+                      {day.isCompleted ? (
+                        <Check className="w-4 h-4 stroke-[2.5]" />
+                      ) : (
+                        `D${day.dayNumber}`
+                      )}
+                    </div>
+
+                    <div className="min-w-0 flex-1">
+                      <div className="flex items-center gap-2 flex-wrap">
+                        <h3 className="text-sm font-semibold text-foreground leading-snug truncate">
+                          Day {day.dayNumber}: {day.targetTitle}
+                        </h3>
+
+                        {day.isNextTarget && (
+                          <span className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded-md bg-primary-500/10 text-primary-400 text-[10px] font-semibold">
+                            Today&apos;s Target
+                          </span>
+                        )}
+
+                        {day.isCompleted && (
+                          <span className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded-md bg-emerald-500/10 text-emerald-400 text-[10px] font-medium">
+                            Done
+                          </span>
                         )}
                       </div>
 
-                      <div className="min-w-0 flex-1">
-                        <div className="flex items-center gap-2 flex-wrap">
-                          <h3 className="text-sm sm:text-base font-bold text-foreground leading-snug">
-                            Day {day.dayNumber}: {day.targetTitle}
-                          </h3>
-
-                          {day.isNextTarget && (
-                            <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-primary-500/20 border border-primary-500/40 text-primary-400 text-[10px] font-black uppercase tracking-wider animate-pulse">
-                              <Target className="w-3 h-3" />
-                              <span>Today&apos;s Target</span>
-                            </span>
-                          )}
-
-                          {day.isCompleted && (
-                            <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-emerald-400 text-[10px] font-bold">
-                              <Check className="w-3 h-3" />
-                              <span>Done</span>
-                            </span>
-                          )}
-                        </div>
-
-                        <p className="text-xs text-muted-foreground mt-0.5 flex items-center gap-1.5 flex-wrap">
-                          <CalendarDays className="w-3.5 h-3.5 text-primary-500/80" />
-                          <span className="font-semibold text-foreground/90">{day.formattedDate} ({day.dayOfWeek})</span>
-                          {day.originalUploadDate && day.originalUploadDate !== day.formattedDate && (
-                            <>
-                              <span>•</span>
-                              <span className="text-slate-500">Released: {day.originalUploadDate}</span>
-                            </>
-                          )}
-                        </p>
-                      </div>
-                    </div>
-
-                    {/* Right: Batch Finish Button + Metrics + Progress + Chevron */}
-                    <div className="flex items-center justify-between sm:justify-end gap-3 w-full sm:w-auto pt-2 sm:pt-0 border-t sm:border-t-0 border-card-border/60">
-                      {/* One-Click Finish Day Button */}
-                      <button
-                        type="button"
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          handleToggleAllDay(day);
-                        }}
-                        className={`px-2.5 py-1.5 rounded-xl text-xs font-semibold flex items-center gap-1.5 transition-all cursor-pointer ${
-                          day.isCompleted
-                            ? 'bg-emerald-500/15 text-emerald-400 border border-emerald-500/30 hover:bg-emerald-500/25'
-                            : 'bg-card hover:bg-card-border/60 text-muted-foreground hover:text-foreground border border-card-border'
-                        }`}
-                        title={day.isCompleted ? 'Mark all lectures in this day incomplete' : 'Mark all lectures in this day as completed'}
-                      >
-                        <CheckCheck className="w-3.5 h-3.5" />
-                        <span className="hidden sm:inline">
-                          {day.isCompleted ? 'All Done' : 'Finish Day'}
-                        </span>
-                      </button>
-
-                      <div className="flex items-center gap-2 text-xs">
-                        {/* Lectures & Duration Pill */}
-                        <span className="px-2.5 py-1 rounded-lg bg-card/80 border border-card-border text-foreground font-semibold flex items-center gap-1.5">
-                          <Video className="w-3.5 h-3.5 text-primary-400" />
-                          <span>{day.totalLectures} {day.totalLectures === 1 ? 'Lecture' : 'Lectures'}</span>
-                          <span className="text-muted-foreground">•</span>
-                          <Clock className="w-3.5 h-3.5 text-primary-400" />
-                          <span>{formatDurationHms(day.totalSeconds)}</span>
-                        </span>
-
-                        {/* Completion counter pill */}
-                        <span className="font-mono text-xs text-muted-foreground hidden xs:inline-block">
-                          {day.completedCount}/{day.totalLectures}
-                        </span>
-                      </div>
-
-                      <div className="p-1 rounded-lg bg-card/60 border border-card-border text-muted-foreground group-hover:text-foreground transition-colors shrink-0">
-                        <ChevronDown
-                          className={`w-4 h-4 transition-transform duration-200 ${
-                            isExpanded ? 'rotate-180' : ''
-                          }`}
-                        />
-                      </div>
+                      <p className="text-xs text-muted-foreground mt-0.5 flex items-center gap-1.5 flex-wrap">
+                        <span>{day.formattedDate} ({day.dayOfWeek})</span>
+                        {day.originalUploadDate && day.originalUploadDate !== day.formattedDate && (
+                          <>
+                            <span>•</span>
+                            <span className="text-muted-foreground/70">Released: {day.originalUploadDate}</span>
+                          </>
+                        )}
+                      </p>
                     </div>
                   </div>
 
+                  {/* Right: Batch Finish Button + Metrics + Chevron */}
+                  <div className="flex items-center justify-between sm:justify-end gap-2.5 w-full sm:w-auto pt-2 sm:pt-0 border-t sm:border-t-0 border-card-border/40">
+                    <button
+                      type="button"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        handleToggleAllDay(day);
+                      }}
+                      className={`px-2.5 py-1 rounded-lg text-xs font-medium flex items-center gap-1.5 transition-colors cursor-pointer ${
+                        day.isCompleted
+                          ? 'bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 hover:bg-emerald-500/20'
+                          : 'bg-card hover:bg-card-border/60 text-muted-foreground hover:text-foreground border border-card-border'
+                      }`}
+                      title={day.isCompleted ? 'Mark all lectures incomplete' : 'Mark all lectures completed'}
+                    >
+                      <CheckCheck className="w-3.5 h-3.5" />
+                      <span className="hidden sm:inline">
+                        {day.isCompleted ? 'All Done' : 'Finish Day'}
+                      </span>
+                    </button>
+
+                    <div className="flex items-center gap-2 text-xs">
+                      <span className="text-muted-foreground font-medium flex items-center gap-1">
+                        <span>{day.totalLectures} {day.totalLectures === 1 ? 'lecture' : 'lectures'}</span>
+                        <span>•</span>
+                        <span>{formatDurationHms(day.totalSeconds)}</span>
+                      </span>
+
+                      <span className="font-mono text-xs text-muted-foreground/80 hidden xs:inline-block">
+                        ({day.completedCount}/{day.totalLectures})
+                      </span>
+                    </div>
+
+                    <div className="text-muted-foreground group-hover:text-foreground transition-colors shrink-0 p-1">
+                      <ChevronDown
+                        className={`w-4 h-4 transition-transform duration-200 ${
+                          isExpanded ? 'rotate-180' : ''
+                        }`}
+                      />
+                    </div>
+                  </div>
+                </div>
+
                   {/* ── Lectures Table / Grid for This Date ── */}
                   {isExpanded && (
-                    <div className="border-t border-card-border/80 bg-background/50 divide-y divide-card-border/50">
+                    <div className="border-t border-card-border/70 bg-card/20 divide-y divide-card-border/40">
                       {day.items.map((item, itIdx) => {
                         const isItemCompleted =
                           !!item.videoId && completedVideos.includes(item.videoId);
@@ -1359,13 +1159,12 @@ export function CourseCalendarView({
                         return (
                           <div
                             key={item.unit.id || itIdx}
-                            className={`p-3 sm:p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3 transition-colors ${
-                              isItemCompleted ? 'bg-card/20' : 'hover:bg-card/40'
+                            className={`px-3 py-2.5 sm:px-4 sm:py-3 flex flex-col sm:flex-row sm:items-center justify-between gap-2 transition-colors ${
+                              isItemCompleted ? 'bg-card/10' : 'hover:bg-card/30'
                             }`}
                           >
                             {/* Unit Title, Checkbox & Section Badge */}
-                            <div className="flex items-start gap-3 min-w-0 flex-1">
-                              {/* Interactive Completion Toggle Checkbox */}
+                            <div className="flex items-center gap-3 min-w-0 flex-1">
                               <button
                                 type="button"
                                 onClick={(e) => {
@@ -1374,33 +1173,25 @@ export function CourseCalendarView({
                                     onToggleComplete(item.videoId);
                                   }
                                 }}
-                                className={`w-5 h-5 rounded-lg flex items-center justify-center shrink-0 mt-0.5 border transition-all cursor-pointer ${
+                                className={`w-4 h-4 rounded flex items-center justify-center shrink-0 border transition-colors cursor-pointer ${
                                   isItemCompleted
-                                    ? 'bg-emerald-500 border-emerald-500 text-white shadow-sm'
+                                    ? 'bg-emerald-500 border-emerald-500 text-white'
                                     : 'border-card-border hover:border-primary-500 text-transparent'
                                 }`}
                                 title={isItemCompleted ? 'Mark as incomplete' : 'Mark as completed'}
                               >
-                                <Check className="w-3.5 h-3.5 stroke-[3]" />
+                                <Check className="w-3 h-3 stroke-[3]" />
                               </button>
 
-                              <div className="min-w-0 flex-1 space-y-1">
-                                <div className="flex items-center gap-2 flex-wrap">
-                                  <span className="text-[10px] font-mono text-muted-foreground px-1.5 py-0.5 rounded bg-card border border-card-border">
-                                    #{itIdx + 1}
-                                  </span>
-                                  <span className="text-[10px] font-semibold text-muted-foreground uppercase tracking-wider px-2 py-0.5 rounded-md bg-card border border-card-border">
-                                    {item.sectionTitle}
-                                  </span>
-                                  {item.unit.subtitle && (
-                                    <span className="text-[10px] text-primary-400 font-medium">
-                                      {item.unit.subtitle}
-                                    </span>
-                                  )}
-                                </div>
-
+                              <div className="min-w-0 flex-1 flex items-baseline gap-2 flex-wrap sm:flex-nowrap">
+                                <span className="text-[11px] text-muted-foreground font-mono shrink-0">
+                                  #{itIdx + 1}
+                                </span>
+                                <span className="text-[11px] text-muted-foreground/80 truncate max-w-[160px] shrink-0">
+                                  {item.sectionTitle}
+                                </span>
                                 <h4
-                                  className={`text-xs sm:text-sm font-semibold leading-snug ${
+                                  className={`text-xs sm:text-sm font-medium leading-snug truncate ${
                                     isItemCompleted
                                       ? 'line-through text-muted-foreground'
                                       : 'text-foreground'
@@ -1412,39 +1203,36 @@ export function CourseCalendarView({
                             </div>
 
                             {/* Unit Actions & Duration */}
-                            <div className="flex items-center justify-between sm:justify-end gap-2.5 shrink-0 pl-8 sm:pl-0">
+                            <div className="flex items-center justify-between sm:justify-end gap-2 shrink-0 pl-7 sm:pl-0">
                               {unitDuration && (
-                                <span className="text-[11px] font-mono text-muted-foreground flex items-center gap-1 bg-card/60 px-2 py-1 rounded-md border border-card-border/60">
-                                  <Clock className="w-3 h-3" />
-                                  <span>{unitDuration}</span>
+                                <span className="text-xs font-mono text-muted-foreground">
+                                  {unitDuration}
                                 </span>
                               )}
 
-                              {/* Download Action (if available) */}
                               {isUnlocked && onDownloadUnit && item.videoId && (
                                 <button
                                   type="button"
                                   onClick={(e) =>
                                     onDownloadUnit(e, item.unit, item.sectionTitle, item.sectionId)
                                   }
-                                  className="p-1.5 rounded-lg bg-card hover:bg-card-border/60 text-muted-foreground hover:text-foreground border border-card-border transition-colors cursor-pointer"
+                                  className="p-1 rounded text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
                                   title="Download for offline study"
                                 >
                                   <ArrowDownToLine className="w-3.5 h-3.5" />
                                 </button>
                               )}
 
-                              {/* Play / View Button */}
                               {item.videoId ? (
                                 <Link
                                   href={`/courses/${course.slug}/video/${item.videoId}`}
-                                  className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all flex items-center gap-1.5 shadow-sm ${
+                                  className={`px-2.5 py-1 rounded-md text-xs font-medium transition-colors flex items-center gap-1 ${
                                     isItemCompleted
-                                      ? 'bg-card hover:bg-card-border/60 text-foreground border border-card-border'
-                                      : 'bg-primary-600 hover:bg-primary-500 text-white shadow-primary-600/20'
+                                      ? 'bg-card hover:bg-card-border/60 text-muted-foreground hover:text-foreground border border-card-border'
+                                      : 'bg-primary-600 hover:bg-primary-500 text-white'
                                   }`}
                                 >
-                                  <Play className="w-3.5 h-3.5 fill-current" />
+                                  <Play className="w-3 h-3 fill-current" />
                                   <span>{isItemCompleted ? 'Re-watch' : 'Watch'}</span>
                                 </Link>
                               ) : item.unit.fileUrl ? (
@@ -1452,9 +1240,9 @@ export function CourseCalendarView({
                                   href={item.unit.fileUrl}
                                   target="_blank"
                                   rel="noopener noreferrer"
-                                  className="px-3 py-1.5 rounded-xl bg-card hover:bg-card-border/60 text-foreground border border-card-border text-xs font-semibold flex items-center gap-1.5"
+                                  className="px-2.5 py-1 rounded-md bg-card hover:bg-card-border/60 text-foreground border border-card-border text-xs font-medium flex items-center gap-1"
                                 >
-                                  <span>Open File</span>
+                                  <span>File</span>
                                 </a>
                               ) : null}
                             </div>
@@ -1464,7 +1252,6 @@ export function CourseCalendarView({
                     </div>
                   )}
                 </div>
-              </React.Fragment>
             );
           })}
         </div>
@@ -1475,11 +1262,11 @@ export function CourseCalendarView({
         <button
           type="button"
           onClick={jumpToActiveDay}
-          className="fixed bottom-6 right-6 z-40 px-4 py-2.5 rounded-full bg-primary-600 hover:bg-primary-500 text-white font-bold text-xs shadow-xl shadow-primary-600/30 hover:scale-105 active:scale-95 transition-all flex items-center gap-2 cursor-pointer border border-primary-400/30 backdrop-blur-md"
+          className="fixed bottom-6 right-6 z-40 px-3.5 py-2 rounded-full bg-primary-600 hover:bg-primary-500 text-white font-medium text-xs shadow-lg transition-colors flex items-center gap-2 cursor-pointer border border-primary-400/20"
         >
-          <Navigation className="w-4 h-4" />
+          <Navigation className="w-3.5 h-3.5" />
           <span>Jump to Day {nextTargetDay.dayNumber}</span>
-          <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+          <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
         </button>
       )}
     </div>
