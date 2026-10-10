@@ -10,7 +10,7 @@ const nextConfig: NextConfig = {
   },
 
   // L-5: Only expose internal dev origins in development
-  ...(process.env.NODE_ENV === 'development' ? { allowedDevOrigins: ['10.16.65.83', "10.139.66.83", 'localhost:3000'] } : {}),
+  ...(process.env.NODE_ENV === 'development' ? { allowedDevOrigins: ['10.16.65.83', "10.139.66.83", 'localhost:3000', 'localhost:3001'] } : {}),
 
   // M-1: Security headers for all responses
   async headers() {

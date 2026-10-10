@@ -41,10 +41,11 @@ interface CalendarUnitItem {
 
 export interface CalendarDayGroup {
   dayNumber: number;
-  dateKey: string; // YYYY-MM-DD or 'unscheduled'
-  formattedDate: string; // e.g. "11 Nov 2025"
-  dayOfWeek: string; // e.g. "Tuesday"
-  targetTitle: string; // e.g. "Functions & Methods" or "Arrays (Part I)"
+  dateKey: string; // Scheduled calendar date YYYY-MM-DD
+  formattedDate: string; // e.g. "9 Feb 2026"
+  dayOfWeek: string; // e.g. "Monday"
+  targetTitle: string; // e.g. "Variables & Data Types"
+  originalUploadDate?: string; // e.g. "7 Feb 2026"
   items: CalendarUnitItem[];
   totalSeconds: number;
   totalLectures: number;
@@ -114,6 +115,16 @@ function formatDurationHms(totalSeconds: number): string {
   return `${m}m`;
 }
 
+function addDaysToDateStr(dateStr: string, daysToAdd: number): string {
+  const parts = dateStr.split('-').map(Number);
+  const d = new Date(parts[0], parts[1] - 1, parts[2]);
+  d.setDate(d.getDate() + daysToAdd);
+  const year = d.getFullYear();
+  const month = String(d.getMonth() + 1).padStart(2, '0');
+  const day = String(d.getDate()).padStart(2, '0');
+  return `${year}-${month}-${day}`;
+}
+
 export function CourseCalendarView({
   course,
   isUnlocked = true,
@@ -123,7 +134,7 @@ export function CourseCalendarView({
   formatUnitDuration,
   getUnitMetaConfig,
 }: CourseCalendarViewProps) {
-  // Paced targets (~1.5 - 2h per day across 4-6 months) vs Raw bulk upload drop batches
+  // Paced targets (~1.5h - 2h per day across 4-6 months) vs Raw bulk upload drop batches
   const [scheduleMode, setScheduleMode] = useState<'paced' | 'raw_batches'>('paced');
   const [filterMode, setFilterMode] = useState<'all' | 'pending' | 'completed'>('all');
   const [searchQuery, setSearchQuery] = useState('');
@@ -156,6 +167,10 @@ export function CourseCalendarView({
       }
 
       const uniqueDays = Array.from(new Set(studyDays)).sort().reverse();
+      localStorage.setItem(
+        'preptea_learning_streak_data',
+        JSON.stringify({ studyDays: uniqueDays })
+      );
       const studiedToday = uniqueDays.includes(todayStr);
 
       let currentStreak = 0;
@@ -199,7 +214,7 @@ export function CourseCalendarView({
     }
   }, [completedVideos]);
 
-  // 2. Group all units into either Paced Targets or Raw Upload Batches
+  // 2. Group all units into either Sprint Paced Targets or Raw Upload Batches
   const calendarDays: CalendarDayGroup[] = useMemo(() => {
     // Collect all valid unit items
     const allUnitsList: CalendarUnitItem[] = [];
@@ -243,47 +258,58 @@ export function CourseCalendarView({
     const result: CalendarDayGroup[] = [];
 
     // ─────────────────────────────────────────────────────────────
-    // MODE A: PACED DAILY TARGETS (~1.5h - 2h per day)
+    // MODE A: PACED DAILY TARGETS (~1.5h - 2h per day across 4-6 months)
     // ─────────────────────────────────────────────────────────────
     if (scheduleMode === 'paced') {
-      interface PacedBatch {
-        dateKey: string;
+      interface PacedBlock {
         title: string;
         items: CalendarUnitItem[];
-        durationSecs: number;
+        uploadDate: string;
       }
 
-      const batches: PacedBatch[] = [];
+      const topicBlocks: PacedBlock[] = [];
 
       course.sections.forEach((sec) => {
         const secUnits = allUnitsList.filter((it) => it.sectionId === sec.id);
         if (secUnits.length === 0) return;
 
-        // Group units by upload date within this section
-        const byDateMap = new Map<string, CalendarUnitItem[]>();
-        secUnits.forEach((it) => {
-          if (!byDateMap.has(it.uploadDateStr)) {
-            byDateMap.set(it.uploadDateStr, []);
-          }
-          byDateMap.get(it.uploadDateStr)!.push(it);
-        });
+        // Check if section has separate dates per lecture (e.g. Practice Sessions / Live Sessions)
+        const distinctDates = Array.from(new Set(secUnits.map((it) => it.uploadDateStr)));
 
-        byDateMap.forEach((uList, dt) => {
-          const totalSec = uList.reduce((acc, it) => acc + it.durationSeconds, 0);
+        if (distinctDates.length > 1) {
+          // Group by individual date inside this section (keeps live sessions on distinct dates)
+          const byDateMap = new Map<string, CalendarUnitItem[]>();
+          secUnits.forEach((it) => {
+            if (!byDateMap.has(it.uploadDateStr)) {
+              byDateMap.set(it.uploadDateStr, []);
+            }
+            byDateMap.get(it.uploadDateStr)!.push(it);
+          });
 
-          // If section on this date is > 2h 15m (8100s), split into Part 1, Part 2
-          if (totalSec > 8100 && uList.length > 1) {
+          byDateMap.forEach((uList, dt) => {
+            topicBlocks.push({
+              title: sec.title,
+              items: uList,
+              uploadDate: dt,
+            });
+          });
+        } else {
+          // Single upload date section (e.g. theory chapters)
+          const totalSec = secUnits.reduce((acc, it) => acc + it.durationSeconds, 0);
+          const dt = secUnits[0].uploadDateStr;
+
+          // If a single chapter is massive (> 2h 15m), split into Part 1, Part 2
+          if (totalSec > 8100 && secUnits.length > 1) {
             let chunk: CalendarUnitItem[] = [];
             let cSec = 0;
             let part = 1;
 
-            uList.forEach((it) => {
+            secUnits.forEach((it) => {
               if (cSec > 0 && cSec + it.durationSeconds > 7200) {
-                batches.push({
-                  dateKey: dt,
+                topicBlocks.push({
                   title: `${sec.title} (Part ${part})`,
                   items: chunk,
-                  durationSecs: cSec,
+                  uploadDate: dt,
                 });
                 chunk = [];
                 cSec = 0;
@@ -294,86 +320,109 @@ export function CourseCalendarView({
             });
 
             if (chunk.length > 0) {
-              batches.push({
-                dateKey: dt,
+              topicBlocks.push({
                 title: part > 1 ? `${sec.title} (Part ${part})` : sec.title,
                 items: chunk,
-                durationSecs: cSec,
+                uploadDate: dt,
               });
             }
           } else {
-            batches.push({
-              dateKey: dt,
+            topicBlocks.push({
               title: sec.title,
-              items: uList,
-              durationSecs: totalSec,
+              items: secUnits,
+              uploadDate: dt,
             });
           }
-        });
-      });
-
-      // Chronologically sort batches by upload date
-      const sortedBatches = batches.sort((a, b) => {
-        if (a.dateKey === 'unscheduled') return 1;
-        if (b.dateKey === 'unscheduled') return -1;
-        return a.dateKey.localeCompare(b.dateKey);
-      });
-
-      // Merge very small introductory sections on the same date (< 25 min)
-      const mergedBatches: PacedBatch[] = [];
-      let i = 0;
-      while (i < sortedBatches.length) {
-        const cur = sortedBatches[i];
-        if (
-          cur.durationSecs < 1800 &&
-          i + 1 < sortedBatches.length &&
-          sortedBatches[i + 1].dateKey === cur.dateKey &&
-          cur.durationSecs + sortedBatches[i + 1].durationSecs <= 7200
-        ) {
-          const nxt = sortedBatches[i + 1];
-          mergedBatches.push({
-            dateKey: cur.dateKey,
-            title: `${cur.title} & ${nxt.title}`,
-            items: [...cur.items, ...nxt.items],
-            durationSecs: cur.durationSecs + nxt.durationSecs,
-          });
-          i += 2;
-        } else {
-          mergedBatches.push(cur);
-          i++;
         }
+      });
+
+      // Sort topic blocks chronologically by upload date
+      const sortedBlocks = topicBlocks.sort((a, b) => {
+        if (a.uploadDate === 'unscheduled') return 1;
+        if (b.uploadDate === 'unscheduled') return -1;
+        return a.uploadDate.localeCompare(b.uploadDate);
+      });
+
+      // Merge very small adjacent introductory sections (< 25 min) on the same date
+      const mergedBlocks: PacedBlock[] = [];
+      let i = 0;
+      while (i < sortedBlocks.length) {
+        const cur = sortedBlocks[i];
+        const curDur = cur.items.reduce((acc, it) => acc + it.durationSeconds, 0);
+
+        if (
+          curDur < 1800 &&
+          i + 1 < sortedBlocks.length &&
+          sortedBlocks[i + 1].uploadDate === cur.uploadDate
+        ) {
+          const nxt = sortedBlocks[i + 1];
+          const nxtDur = nxt.items.reduce((acc, it) => acc + it.durationSeconds, 0);
+
+          if (curDur + nxtDur <= 7200) {
+            mergedBlocks.push({
+              title: `${cur.title} & ${nxt.title}`,
+              items: [...cur.items, ...nxt.items],
+              uploadDate: cur.uploadDate,
+            });
+            i += 2;
+            continue;
+          }
+        }
+
+        mergedBlocks.push(cur);
+        i++;
+      }
+
+      // Distribute across actual consecutive calendar days spanning the 4-6 months!
+      let currentCalDate = '2026-02-07';
+      const firstValidDate = mergedBlocks.find((b) => b.uploadDate !== 'unscheduled')?.uploadDate;
+      if (firstValidDate) {
+        currentCalDate = firstValidDate;
       }
 
       let dayNum = 1;
-      mergedBatches.forEach((batch) => {
-        const { formatted, dayOfWeek } = formatDateDisplay(batch.dateKey);
-        const completedCount = batch.items.filter(
+      mergedBlocks.forEach((block) => {
+        // If this topic was uploaded on a later date, advance our calendar date to at least that date
+        if (block.uploadDate !== 'unscheduled' && block.uploadDate > currentCalDate) {
+          currentCalDate = block.uploadDate;
+        }
+
+        const scheduledDateStr = currentCalDate;
+        const { formatted, dayOfWeek } = formatDateDisplay(scheduledDateStr);
+        const { formatted: origFormatted } = formatDateDisplay(block.uploadDate);
+
+        const totalSec = block.items.reduce((acc, it) => acc + it.durationSeconds, 0);
+        const completedCount = block.items.filter(
           (it) => it.videoId && completedVideos.includes(it.videoId)
         ).length;
 
-        const isCompleted = batch.items.length > 0 && completedCount === batch.items.length;
+        const isCompleted = block.items.length > 0 && completedCount === block.items.length;
         const progressPercent =
-          batch.items.length > 0 ? Math.round((completedCount / batch.items.length) * 100) : 0;
+          block.items.length > 0 ? Math.round((completedCount / block.items.length) * 100) : 0;
 
         result.push({
           dayNumber: dayNum++,
-          dateKey: batch.dateKey,
+          dateKey: scheduledDateStr,
           formattedDate: formatted,
           dayOfWeek,
-          targetTitle: batch.title,
-          items: batch.items,
-          totalSeconds: batch.durationSecs,
-          totalLectures: batch.items.length,
+          targetTitle: block.title,
+          originalUploadDate: origFormatted,
+          items: block.items,
+          totalSeconds: totalSec,
+          totalLectures: block.items.length,
           completedCount,
           isCompleted,
           isNextTarget: false,
           progressPercent,
         });
+
+        // Step forward 1 calendar day for the next topic
+        currentCalDate = addDaysToDateStr(currentCalDate, 1);
       });
     }
 
     // ─────────────────────────────────────────────────────────────
-    // MODE B: RAW LMS UPLOAD BATCHES (Original Drop Dates)
+    // MODE B: RAW LMS UPLOAD BATCHES (42 Raw Drops)
     // ─────────────────────────────────────────────────────────────
     else {
       const dateMap = new Map<string, CalendarUnitItem[]>();
@@ -404,7 +453,6 @@ export function CourseCalendarView({
         const progressPercent =
           items.length > 0 ? Math.round((completedCount / items.length) * 100) : 0;
 
-        // Distinct section names in this batch
         const distinctSections = Array.from(new Set(items.map((it) => it.sectionTitle)));
         const targetTitle =
           distinctSections.length === 1
@@ -417,6 +465,7 @@ export function CourseCalendarView({
           formattedDate: formatted,
           dayOfWeek,
           targetTitle,
+          originalUploadDate: formatted,
           items,
           totalSeconds: totalSec,
           totalLectures: items.length,
@@ -435,6 +484,9 @@ export function CourseCalendarView({
           const completedCount = items.filter(
             (it) => it.videoId && completedVideos.includes(it.videoId)
           ).length;
+          const isCompleted = items.length > 0 && completedCount === items.length;
+          const progressPercent =
+            items.length > 0 ? Math.round((completedCount / items.length) * 100) : 0;
 
           result.push({
             dayNumber: dayNum++,
@@ -442,14 +494,14 @@ export function CourseCalendarView({
             formattedDate: formatted,
             dayOfWeek,
             targetTitle: 'Course Resources & Extras',
+            originalUploadDate: formatted,
             items,
             totalSeconds: totalSec,
             totalLectures: items.length,
             completedCount,
-            isCompleted: items.length > 0 && completedCount === items.length,
+            isCompleted,
             isNextTarget: false,
-            progressPercent:
-              items.length > 0 ? Math.round((completedCount / items.length) * 100) : 0,
+            progressPercent,
           });
         }
       }
@@ -606,16 +658,16 @@ export function CourseCalendarView({
             {nextTargetDay ? (
               <div className="p-4 sm:p-5 rounded-2xl bg-card/85 border border-primary-500/30 shadow-xl space-y-3.5 relative overflow-hidden backdrop-blur-sm">
                 <div className="flex items-center justify-between gap-3">
-                  <div className="flex items-center gap-2">
-                    <span className="p-1.5 rounded-lg bg-primary-500/20 text-primary-400 border border-primary-500/30">
+                  <div className="flex items-center gap-2 min-w-0 flex-1">
+                    <span className="p-1.5 rounded-lg bg-primary-500/20 text-primary-400 border border-primary-500/30 shrink-0">
                       <Target className="w-4 h-4 text-primary-400" />
                     </span>
-                    <div>
+                    <div className="min-w-0 flex-1">
                       <span className="text-[10px] font-black uppercase tracking-wider text-primary-400">
                         Today&apos;s Target Day
                       </span>
-                      <h4 className="text-base sm:text-lg font-bold text-foreground leading-snug">
-                        Day {nextTargetDay.dayNumber} • {nextTargetDay.targetTitle}
+                      <h4 className="text-base sm:text-lg font-bold text-foreground leading-snug truncate">
+                        Day {nextTargetDay.dayNumber}: {nextTargetDay.targetTitle}
                       </h4>
                     </div>
                   </div>
@@ -637,7 +689,9 @@ export function CourseCalendarView({
                     <span>{formatDurationHms(nextTargetDay.totalSeconds)} required today</span>
                   </span>
                   <span>•</span>
-                  <span>{nextTargetDay.formattedDate}</span>
+                  <span className="text-foreground font-medium">
+                    {nextTargetDay.formattedDate} ({nextTargetDay.dayOfWeek})
+                  </span>
                 </div>
 
                 {/* Progress Bar */}
@@ -753,7 +807,7 @@ export function CourseCalendarView({
             }`}
           >
             <Target className="w-3.5 h-3.5" />
-            <span>Paced Daily Targets (~1.5h / day)</span>
+            <span>Paced Daily Targets (~1.5h / day • 4-6 Months)</span>
           </button>
 
           <button
@@ -766,7 +820,7 @@ export function CourseCalendarView({
             }`}
           >
             <CalendarDays className="w-3.5 h-3.5" />
-            <span>Upload Drop Batches</span>
+            <span>Upload Drop Batches (42 Drops)</span>
           </button>
         </div>
 
@@ -927,8 +981,14 @@ export function CourseCalendarView({
                       </div>
 
                       <p className="text-xs text-muted-foreground mt-0.5 flex items-center gap-1.5">
-                        <CalendarDays className="w-3.5 h-3.5 text-slate-500" />
-                        <span>Uploaded: {day.formattedDate} ({day.dayOfWeek})</span>
+                        <CalendarDays className="w-3.5 h-3.5 text-primary-500/80" />
+                        <span className="font-semibold text-foreground/90">{day.formattedDate} ({day.dayOfWeek})</span>
+                        {day.originalUploadDate && day.originalUploadDate !== day.formattedDate && (
+                          <>
+                            <span>•</span>
+                            <span className="text-slate-500">Released: {day.originalUploadDate}</span>
+                          </>
+                        )}
                       </p>
                     </div>
                   </div>
@@ -1053,7 +1113,7 @@ export function CourseCalendarView({
                                     : 'bg-primary-600 hover:bg-primary-500 text-white shadow-primary-600/20'
                                 }`}
                               >
-                                <Play className="w-3 h-3 fill-current" />
+                                <Play className="w-3.5 h-3.5 fill-current" />
                                 <span>{isItemCompleted ? 'Re-watch' : 'Watch'}</span>
                               </Link>
                             ) : item.unit.fileUrl ? (

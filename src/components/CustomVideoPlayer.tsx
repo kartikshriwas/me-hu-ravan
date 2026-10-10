@@ -497,17 +497,35 @@ export function CustomVideoPlayer({
     }
   };
 
-  const handleVideoEnded = () => {
+  const recordVideoCompletedAndStreak = (vId: string) => {
     try {
       const storedCompleted = localStorage.getItem('preptea_completed_videos');
       const completedList: string[] = storedCompleted ? JSON.parse(storedCompleted) : [];
-      if (!completedList.includes(videoId)) {
-        completedList.push(videoId);
+      if (!completedList.includes(vId)) {
+        completedList.push(vId);
         localStorage.setItem('preptea_completed_videos', JSON.stringify(completedList));
+      }
+
+      const todayStr = new Date().toISOString().split('T')[0];
+      const rawStreak = localStorage.getItem('preptea_learning_streak_data');
+      let studyDays: string[] = [];
+      if (rawStreak) {
+        try {
+          const parsed = JSON.parse(rawStreak);
+          if (Array.isArray(parsed.studyDays)) studyDays = parsed.studyDays;
+        } catch (e) {}
+      }
+      if (!studyDays.includes(todayStr)) {
+        studyDays.push(todayStr);
+        localStorage.setItem('preptea_learning_streak_data', JSON.stringify({ studyDays }));
       }
     } catch (e) {
       // ignore
     }
+  };
+
+  const handleVideoEnded = () => {
+    recordVideoCompletedAndStreak(videoId);
 
     if (onNext) {
       onNext();
@@ -547,12 +565,7 @@ export function CustomVideoPlayer({
         }
 
         if (duration > 0 && currentTimeVal / duration >= 0.88) {
-          const storedCompleted = localStorage.getItem('preptea_completed_videos');
-          const completedList: string[] = storedCompleted ? JSON.parse(storedCompleted) : [];
-          if (!completedList.includes(videoId)) {
-            completedList.push(videoId);
-            localStorage.setItem('preptea_completed_videos', JSON.stringify(completedList));
-          }
+          recordVideoCompletedAndStreak(videoId);
         }
       } catch (e) {
         // ignore
