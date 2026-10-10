@@ -171,6 +171,7 @@ export function CustomVideoPlayer({
   const [duration, setDuration] = useState(0);
   const [playbackRate, setPlaybackRate] = useState(1);
   const [showControls, setShowControls] = useState(true);
+  const [showRemainingTime, setShowRemainingTime] = useState(false);
 
   // Gesture & Ripple feedback
   const [seekFeedback, setSeekFeedback] = useState<{ type: 'rewind' | 'forward'; id: number } | null>(null);
@@ -296,6 +297,32 @@ export function CustomVideoPlayer({
       // ignore
     }
   }, []);
+
+  // Listen for dynamic playbackRate changes from extensions, keyboard shortcuts, or DOM
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    const onRateChange = () => {
+      const raw = video.playbackRate;
+      if (!isNaN(raw) && raw > 0) {
+        const clean = Math.round(raw * 100) / 100;
+        setPlaybackRate((prev) => (prev !== clean ? clean : prev));
+      }
+    };
+
+    video.addEventListener('ratechange', onRateChange);
+    // Periodically poll (every 300ms) to detect extensions that alter playbackRate directly without standard events
+    const interval = setInterval(onRateChange, 300);
+
+    // Sync immediately on mount / source change
+    onRateChange();
+
+    return () => {
+      video.removeEventListener('ratechange', onRateChange);
+      clearInterval(interval);
+    };
+  }, [blobUrl, localBlobUrl, activeAsset?.url]);
 
   // Fullscreen change listener
   useEffect(() => {
@@ -497,6 +524,13 @@ export function CustomVideoPlayer({
     setCurrentTime(currentTimeVal);
     handleProgress();
 
+    // Dynamically sync playbackRate while video is playing (detects extensions like Video Speed Controller)
+    const rawRate = videoRef.current.playbackRate;
+    if (rawRate && rawRate > 0) {
+      const cleanRate = Math.round(rawRate * 100) / 100;
+      setPlaybackRate((prev) => (prev !== cleanRate ? cleanRate : prev));
+    }
+
     // Throttled progress & timestamp persistence (every 2 seconds)
     if (Date.now() - lastSaveTimeRef.current > 2000 && videoId && currentTimeVal > 2) {
       lastSaveTimeRef.current = Date.now();
@@ -549,7 +583,14 @@ export function CustomVideoPlayer({
     if (!videoRef.current) return;
     const vidDuration = videoRef.current.duration;
     setDuration(vidDuration);
-    videoRef.current.playbackRate = playbackRate;
+
+    // If an extension already altered playbackRate, sync from video element; otherwise apply state
+    if (videoRef.current.playbackRate && videoRef.current.playbackRate !== 1) {
+      const currentRate = Math.round(videoRef.current.playbackRate * 100) / 100;
+      setPlaybackRate(currentRate);
+    } else {
+      videoRef.current.playbackRate = playbackRate;
+    }
     isSwitchingQualityRef.current = false;
 
     if (pendingSeekTimeRef.current > 0) {
@@ -587,6 +628,15 @@ export function CustomVideoPlayer({
     const pos = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
     setScrubHoverPos(pos * 100);
     setScrubHoverTime(pos * duration);
+  };
+
+  const handleRateChange = () => {
+    if (!videoRef.current) return;
+    const raw = videoRef.current.playbackRate;
+    if (!isNaN(raw) && raw > 0) {
+      const clean = Math.round(raw * 100) / 100;
+      setPlaybackRate(clean);
+    }
   };
 
   const handleScrubMouseLeave = () => {
@@ -979,7 +1029,14 @@ export function CustomVideoPlayer({
           onLoadedMetadata={handleLoadedMetadata}
           onProgress={handleProgress}
           onEnded={handleVideoEnded}
-          onPlay={() => setIsPlaying(true)}
+          onRateChange={handleRateChange}
+          onPlay={() => {
+            setIsPlaying(true);
+            if (videoRef.current?.playbackRate) {
+              const cleanRate = Math.round(videoRef.current.playbackRate * 100) / 100;
+              setPlaybackRate((prev) => (prev !== cleanRate ? cleanRate : prev));
+            }
+          }}
           onPause={() => {
             if (isSwitchingQualityRef.current) return;
             setIsPlaying(false);
@@ -1027,11 +1084,11 @@ export function CustomVideoPlayer({
         )}
 
         {/* Controls Gradient Mask */}
-        <div
+        {/* <div
           className={`absolute inset-0 bg-gradient-to-t from-slate-950/95 via-transparent to-slate-950/40 transition-opacity duration-300 pointer-events-none ${
             showControls ? 'opacity-100' : 'opacity-0'
           }`}
-        />
+        /> */}
 
         {/* Settings Popover UX Modal - Navigation style like original YouTube player, mobile-friendly */}
         {showSettings && (
@@ -1071,7 +1128,13 @@ export function CustomVideoPlayer({
 
                 {/* Playback Speed Row */}
                 <button
-                  onClick={() => setSettingsTab('speed')}
+                  onClick={() => {
+                    if (videoRef.current?.playbackRate) {
+                      const cleanRate = Math.round(videoRef.current.playbackRate * 100) / 100;
+                      setPlaybackRate((prev) => (prev !== cleanRate ? cleanRate : prev));
+                    }
+                    setSettingsTab('speed');
+                  }}
                   className="w-full flex items-center justify-between p-2.5 rounded-xl hover:bg-card/90 active:bg-slate-800 transition-all text-xs font-semibold text-foreground touch-manipulation group"
                 >
                   <div className="flex items-center gap-2.5">
@@ -1086,30 +1149,7 @@ export function CustomVideoPlayer({
                   </div>
                 </button>
 
-                {/* Download Row in Settings — visible only if user has course access */}
-                {!embedHtml && hasCourseAccess && (
-                  <button
-                    onClick={() => {
-                      setShowSettings(false);
-                      if (isCurrentDownloaded) {
-                        setShowDownloadedMenu(true);
-                      } else {
-                        setShowDownloadQualityModal(true);
-                      }
-                    }}
-                    className="w-full flex items-center justify-between p-2.5 rounded-xl hover:bg-card/90 active:bg-slate-800 transition-all text-xs font-semibold text-foreground touch-manipulation group"
-                  >
-                    <div className="flex items-center gap-2.5">
-                      <ArrowDownToLine className="w-4 h-4 text-primary-600 dark:text-primary-400" />
-                      <span>{isCurrentDownloaded ? 'Downloaded (In Site)' : 'Download for Offline'}</span>
-                    </div>
-                    <div className="flex items-center gap-1.5 text-muted-foreground group-hover:text-foreground">
-                      <span className="text-[11px] font-medium text-primary-600 dark:text-primary-300 bg-primary-500/10 px-2 py-0.5 rounded-md border border-primary-500/20">
-                        {isCurrentDownloaded ? 'Ready' : isCurrentDownloading ? `${downloadProgress}%` : 'Save'}
-                      </span>
-                    </div>
-                  </button>
-                )}
+
               </div>
             )}
 
@@ -1172,6 +1212,17 @@ export function CustomVideoPlayer({
                 </div>
 
                 <div className="space-y-1 max-h-56 overflow-y-auto custom-scrollbar">
+                  {![0.5, 1, 1.25, 1.5, 1.75, 2].includes(playbackRate) && (
+                    <div className="w-full text-left p-2.5 rounded-xl transition-all flex items-center justify-between font-semibold text-xs text-primary-600 dark:text-primary-400 bg-primary-950/40 border border-primary-500/30 shadow-sm">
+                      <div className="flex items-center gap-2.5">
+                        <div className="w-4 h-4 flex items-center justify-center shrink-0">
+                          <Check className="w-4 h-4 text-primary-600 dark:text-primary-400" />
+                        </div>
+                        <span>Custom ({playbackRate}x)</span>
+                      </div>
+                    </div>
+                  )}
+
                   {[
                     { label: '0.5x', rate: 0.5 },
                     { label: '1x', rate: 1 },
@@ -1231,7 +1282,7 @@ export function CustomVideoPlayer({
             
             <div 
               style={{ width: `${duration > 0 ? (currentTime / duration) * 100 : 0}%` }} 
-              className="absolute left-0 h-1.5 rounded-full bg-primary-500 group-hover/timeline:h-2.5 transition-all shadow-[0_0_12px_rgba(99,102,241,0.6)]" 
+              className="absolute left-0 h-1.5 rounded-full bg-primary-500 group-hover/timeline:h-2.5 transition-all" 
             />
 
             {scrubHoverTime !== null && (
@@ -1258,7 +1309,13 @@ export function CustomVideoPlayer({
           {/* Buttons & Options Row */}
           <div className="flex items-center justify-between text-foreground gap-2">
             <div className="flex items-center gap-1.5 sm:gap-2">
-              {(prevVideoUrl || onPrev) && (
+                         <button
+                onClick={handlePlayPause}
+                className="p-1.5 sm:p-2 rounded-xl hover:bg-white/10 active:scale-95 transition-all text-foreground touch-manipulation"
+                aria-label={isPlaying ? 'Pause' : 'Play'}
+              >
+                {isPlaying ? <Pause className="w-5 h-5 sm:w-6 sm:h-6 fill-white" /> : <Play className="w-5 h-5 sm:w-6 sm:h-6 fill-white" />}
+              </button>   {(prevVideoUrl || onPrev) && (
                 onPrev ? (
                   <button
                     onClick={onPrev}
@@ -1280,13 +1337,7 @@ export function CustomVideoPlayer({
                 )
               )}
 
-              <button
-                onClick={handlePlayPause}
-                className="p-1.5 sm:p-2 rounded-xl hover:bg-white/10 active:scale-95 transition-all text-foreground touch-manipulation"
-                aria-label={isPlaying ? 'Pause' : 'Play'}
-              >
-                {isPlaying ? <Pause className="w-5 h-5 sm:w-6 sm:h-6 fill-white" /> : <Play className="w-5 h-5 sm:w-6 sm:h-6 fill-white" />}
-              </button>
+
 
               {(nextVideoUrl || onNext) && (
                 onNext ? (
@@ -1310,8 +1361,18 @@ export function CustomVideoPlayer({
                 )
               )}
 
-              <span className="text-[10px] sm:text-xs font-mono text-foreground/80 tracking-tight ml-1">
-                {formatTime(currentTime)} <span className="text-slate-500">/</span> {formatTime(duration)}
+              <span
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setShowRemainingTime((prev) => !prev);
+                }}
+                className="text-[10px] sm:text-xs font-mono text-foreground/80 hover:text-foreground tracking-tight ml-1 cursor-pointer select-none transition-colors"
+                title={showRemainingTime ? "Click to show elapsed time" : "Click to show remaining time"}
+              >
+                {showRemainingTime
+                  ? `-${formatTime(Math.max(0, duration - currentTime))}`
+                  : formatTime(currentTime)}{' '}
+                <span className="text-slate-500">/</span> {formatTime(duration)}
               </span>
             </div>
 
@@ -1323,10 +1384,16 @@ export function CustomVideoPlayer({
               )}
 
               <button
-                onClick={() => setShowSettings(prev => {
-                  if (!prev) setSettingsTab('main');
-                  return !prev;
-                })}
+                onClick={() => {
+                  if (videoRef.current?.playbackRate) {
+                    const cleanRate = Math.round(videoRef.current.playbackRate * 100) / 100;
+                    setPlaybackRate((prev) => (prev !== cleanRate ? cleanRate : prev));
+                  }
+                  setShowSettings((prev) => {
+                    if (!prev) setSettingsTab('main');
+                    return !prev;
+                  });
+                }}
                 className={`p-1.5 sm:p-2 rounded-xl hover:bg-white/10 transition-all text-foreground ${showSettings ? 'bg-white/20 text-foreground' : ''}`}
                 aria-label="Settings"
               >

@@ -415,19 +415,6 @@ export function HomeClient({ initialTests = [] }: { initialTests?: AssessmentMet
 
       {/* Tests Catalog Grid */}
       <section className="space-y-6">
-        
-        {/* Section Header */}
-        <div className="flex items-center justify-between">
-          <div>
-            <h2 className="text-xl sm:text-2xl font-bold text-foreground flex items-center gap-2.5">
-              <FileCheck2 className="w-5 h-5 sm:w-6 sm:h-6 text-primary-600 dark:text-primary-400" />
-              <span>Available Practice Papers ({filteredTests.length})</span>
-            </h2>
-            <p className="text-xs text-muted-foreground mt-1">
-              Distinct test papers with attempt status tracking. Select any set to start.
-            </p>
-          </div>
-        </div>
 
         {loading ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
