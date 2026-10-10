@@ -267,6 +267,66 @@ export function CourseCalendarView({
         uploadDate: string;
       }
 
+      // Balanced pacing thresholds
+      const TARGET_MIN_MERGE = 3000; // 50 mins: accumulate micro-sections under this duration
+      const TARGET_SPLIT_THRESHOLD = 7500; // 2h 05m: split chapters exceeding this duration
+      const TARGET_IDEAL = 4800; // 1h 20m: target daily study length
+      const TARGET_MAX_DAY = 7500; // 2h 05m: maximum daily block duration
+
+      // Equal-weight split function that divides chapters into 50/50 (or 33/33/33) balanced blocks
+      const splitIntoBalancedParts = (
+        title: string,
+        items: CalendarUnitItem[],
+        uploadDate: string
+      ): PacedBlock[] => {
+        const totalSec = items.reduce((acc, it) => acc + it.durationSeconds, 0);
+        if (totalSec < TARGET_SPLIT_THRESHOLD || items.length <= 1) {
+          return [{ title, items, uploadDate }];
+        }
+
+        const numParts = Math.max(2, Math.round(totalSec / TARGET_IDEAL));
+        const targetPerPart = totalSec / numParts;
+
+        const parts: PacedBlock[] = [];
+        let currentChunk: CalendarUnitItem[] = [];
+        let currentSec = 0;
+        let partIndex = 1;
+
+        items.forEach((it) => {
+          const diffWithout = Math.abs(currentSec - targetPerPart);
+          const diffWith = Math.abs(currentSec + it.durationSeconds - targetPerPart);
+
+          if (
+            currentChunk.length > 0 &&
+            partIndex < numParts &&
+            currentSec >= 2400 && // Ensure at least 40 min in this part
+            (currentSec >= targetPerPart || diffWithout < diffWith)
+          ) {
+            parts.push({
+              title: `${title} (Part ${partIndex})`,
+              items: currentChunk,
+              uploadDate,
+            });
+            currentChunk = [];
+            currentSec = 0;
+            partIndex++;
+          }
+
+          currentChunk.push(it);
+          currentSec += it.durationSeconds;
+        });
+
+        if (currentChunk.length > 0) {
+          parts.push({
+            title: parts.length > 0 ? `${title} (Part ${partIndex})` : title,
+            items: currentChunk,
+            uploadDate,
+          });
+        }
+
+        return parts;
+      };
+
       const topicBlocks: PacedBlock[] = [];
 
       course.sections.forEach((sec) => {
@@ -287,52 +347,20 @@ export function CourseCalendarView({
           });
 
           byDateMap.forEach((uList, dt) => {
-            topicBlocks.push({
-              title: sec.title,
-              items: uList,
-              uploadDate: dt,
-            });
-          });
-        } else {
-          // Single upload date section (e.g. theory chapters)
-          const totalSec = secUnits.reduce((acc, it) => acc + it.durationSeconds, 0);
-          const dt = secUnits[0].uploadDateStr;
-
-          // If a single chapter is massive (> 2h 15m), split into Part 1, Part 2
-          if (totalSec > 8100 && secUnits.length > 1) {
-            let chunk: CalendarUnitItem[] = [];
-            let cSec = 0;
-            let part = 1;
-
-            secUnits.forEach((it) => {
-              if (cSec > 0 && cSec + it.durationSeconds > 7200) {
-                topicBlocks.push({
-                  title: `${sec.title} (Part ${part})`,
-                  items: chunk,
-                  uploadDate: dt,
-                });
-                chunk = [];
-                cSec = 0;
-                part++;
-              }
-              chunk.push(it);
-              cSec += it.durationSeconds;
-            });
-
-            if (chunk.length > 0) {
+            const dtTotal = uList.reduce((acc, it) => acc + it.durationSeconds, 0);
+            if (dtTotal > 10800 && uList.length > 1) {
+              topicBlocks.push(...splitIntoBalancedParts(sec.title, uList, dt));
+            } else {
               topicBlocks.push({
-                title: part > 1 ? `${sec.title} (Part ${part})` : sec.title,
-                items: chunk,
+                title: sec.title,
+                items: uList,
                 uploadDate: dt,
               });
             }
-          } else {
-            topicBlocks.push({
-              title: sec.title,
-              items: secUnits,
-              uploadDate: dt,
-            });
-          }
+          });
+        } else {
+          // Single upload date section (e.g. theory chapters): balanced equal-weight split
+          topicBlocks.push(...splitIntoBalancedParts(sec.title, secUnits, secUnits[0].uploadDateStr));
         }
       });
 
@@ -343,34 +371,83 @@ export function CourseCalendarView({
         return a.uploadDate.localeCompare(b.uploadDate);
       });
 
-      // Merge very small adjacent introductory sections (< 25 min) on the same date
-      const mergedBlocks: PacedBlock[] = [];
+      // Helper to cleanly format combined titles (e.g. "Course Introduction, Prerequisites & Flowcharts")
+      const formatCombinedTitle = (titles: string[]): string => {
+        const cleaned = titles
+          .map((t) =>
+            t
+              .replace(/ - Installation Resources/gi, '')
+              .replace(/ \(Recordings\)/gi, '')
+              .trim()
+          )
+          .filter(Boolean);
+
+        const unique = Array.from(new Set(cleaned));
+        if (unique.length === 0) return 'Daily Learning Target';
+        if (unique.length === 1) return unique[0];
+        if (unique.length === 2) return `${unique[0]} & ${unique[1]}`;
+        return `${unique.slice(0, -1).join(', ')} & ${unique[unique.length - 1]}`;
+      };
+
+      // PASS 1: FORWARD ACCUMULATION (accumulate until each daily target is >= TARGET_MIN_MERGE)
+      const forwardAccumulatedBlocks: {
+        titleParts: string[];
+        items: CalendarUnitItem[];
+        uploadDate: string;
+      }[] = [];
+
       let i = 0;
       while (i < sortedBlocks.length) {
-        const cur = sortedBlocks[i];
-        const curDur = cur.items.reduce((acc, it) => acc + it.durationSeconds, 0);
+        let cur = {
+          titleParts: [sortedBlocks[i].title],
+          items: [...sortedBlocks[i].items],
+          uploadDate: sortedBlocks[i].uploadDate,
+        };
+        let curDur = cur.items.reduce((acc, it) => acc + it.durationSeconds, 0);
+        i++;
 
-        if (
-          curDur < 1800 &&
-          i + 1 < sortedBlocks.length &&
-          sortedBlocks[i + 1].uploadDate === cur.uploadDate
-        ) {
-          const nxt = sortedBlocks[i + 1];
+        // Keep absorbing subsequent adjacent topics from the same release sprint while duration is under 50 mins
+        while (curDur < TARGET_MIN_MERGE && i < sortedBlocks.length) {
+          const nxt = sortedBlocks[i];
+          if (nxt.uploadDate !== cur.uploadDate && cur.uploadDate !== 'unscheduled') break;
           const nxtDur = nxt.items.reduce((acc, it) => acc + it.durationSeconds, 0);
+          if (curDur + nxtDur > TARGET_MAX_DAY) break;
 
-          if (curDur + nxtDur <= 7200) {
-            mergedBlocks.push({
-              title: `${cur.title} & ${nxt.title}`,
-              items: [...cur.items, ...nxt.items],
-              uploadDate: cur.uploadDate,
-            });
-            i += 2;
+          cur.titleParts.push(nxt.title);
+          cur.items.push(...nxt.items);
+          curDur += nxtDur;
+          i++;
+        }
+
+        forwardAccumulatedBlocks.push(cur);
+      }
+
+      // PASS 2: BACKWARD MERGE for any trailing topic that is still < TARGET_MIN_MERGE
+      // (e.g. Patterns Part 1 at the end of the sprint batch merges into Loops to form a complete 1h 58m day)
+      const mergedBlocks: PacedBlock[] = [];
+      for (let j = 0; j < forwardAccumulatedBlocks.length; j++) {
+        const blk = forwardAccumulatedBlocks[j];
+        const blkDur = blk.items.reduce((acc, it) => acc + it.durationSeconds, 0);
+
+        if (blkDur < TARGET_MIN_MERGE && mergedBlocks.length > 0) {
+          const prev = mergedBlocks[mergedBlocks.length - 1];
+          const prevDur = prev.items.reduce((acc, it) => acc + it.durationSeconds, 0);
+
+          if (
+            (prev.uploadDate === blk.uploadDate || blk.uploadDate === 'unscheduled') &&
+            prevDur + blkDur <= TARGET_MAX_DAY
+          ) {
+            prev.title = formatCombinedTitle([prev.title, ...blk.titleParts]);
+            prev.items.push(...blk.items);
             continue;
           }
         }
 
-        mergedBlocks.push(cur);
-        i++;
+        mergedBlocks.push({
+          title: formatCombinedTitle(blk.titleParts),
+          items: blk.items,
+          uploadDate: blk.uploadDate,
+        });
       }
 
       // Distribute across actual consecutive calendar days spanning the 4-6 months!
