@@ -25,6 +25,7 @@ import {
   TrendingUp,
   Award,
   Zap,
+  BookOpen,
 } from 'lucide-react';
 import { CourseDetail, CourseSectionUnit } from '@/lib/types';
 
@@ -43,6 +44,7 @@ export interface CalendarDayGroup {
   dateKey: string; // YYYY-MM-DD or 'unscheduled'
   formattedDate: string; // e.g. "11 Nov 2025"
   dayOfWeek: string; // e.g. "Tuesday"
+  targetTitle: string; // e.g. "Functions & Methods" or "Arrays (Part I)"
   items: CalendarUnitItem[];
   totalSeconds: number;
   totalLectures: number;
@@ -121,6 +123,8 @@ export function CourseCalendarView({
   formatUnitDuration,
   getUnitMetaConfig,
 }: CourseCalendarViewProps) {
+  // Paced targets (~1.5 - 2h per day across 4-6 months) vs Raw bulk upload drop batches
+  const [scheduleMode, setScheduleMode] = useState<'paced' | 'raw_batches'>('paced');
   const [filterMode, setFilterMode] = useState<'all' | 'pending' | 'completed'>('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [expandedDays, setExpandedDays] = useState<Record<number, boolean>>({});
@@ -147,19 +151,16 @@ export function CourseCalendarView({
         }
       }
 
-      // If user has completed videos, also consider those dates
       if (completedVideos.length > 0 && !studyDays.includes(todayStr)) {
         studyDays.push(todayStr);
       }
 
-      // Compute streak
       const uniqueDays = Array.from(new Set(studyDays)).sort().reverse();
       const studiedToday = uniqueDays.includes(todayStr);
 
       let currentStreak = 0;
       let checkDate = new Date();
       if (!studiedToday) {
-        // Check if streak was active up to yesterday
         checkDate.setDate(checkDate.getDate() - 1);
       }
 
@@ -173,8 +174,7 @@ export function CourseCalendarView({
         }
       }
 
-      // Compute active days in current week (Mon-Sun)
-      const currentDayOfWeek = (today.getDay() + 6) % 7; // 0 = Mon, 6 = Sun
+      const currentDayOfWeek = (today.getDay() + 6) % 7;
       const monday = new Date(today);
       monday.setDate(today.getDate() - currentDayOfWeek);
 
@@ -199,9 +199,10 @@ export function CourseCalendarView({
     }
   }, [completedVideos]);
 
-  // 2. Group all units into chronological upload calendar days
+  // 2. Group all units into either Paced Targets or Raw Upload Batches
   const calendarDays: CalendarDayGroup[] = useMemo(() => {
-    const dateMap = new Map<string, CalendarUnitItem[]>();
+    // Collect all valid unit items
+    const allUnitsList: CalendarUnitItem[] = [];
 
     course.sections.forEach((sec) => {
       sec.units.forEach((unit) => {
@@ -227,7 +228,7 @@ export function CourseCalendarView({
 
         const videoId = unit.sourceid || (!isYouTube && unit.id ? unit.id : '');
 
-        const item: CalendarUnitItem = {
+        allUnitsList.push({
           unit,
           sectionTitle: sec.title,
           sectionId: sec.id,
@@ -235,75 +236,222 @@ export function CourseCalendarView({
           durationSeconds: unit.duration || 0,
           isActionableVideo: cfg.isActionableVideo,
           uploadDateStr: dateKey,
-        };
-
-        if (!dateMap.has(dateKey)) {
-          dateMap.set(dateKey, []);
-        }
-        dateMap.get(dateKey)!.push(item);
+        });
       });
     });
-
-    // Chronologically sort valid date keys ascending (earliest upload first = Day 1)
-    const validDates = Array.from(dateMap.keys())
-      .filter((k) => k !== 'unscheduled')
-      .sort((a, b) => a.localeCompare(b));
 
     const result: CalendarDayGroup[] = [];
-    let dayCount = 1;
 
-    validDates.forEach((dateKey) => {
-      const items = dateMap.get(dateKey) || [];
-      const { formatted, dayOfWeek } = formatDateDisplay(dateKey);
-      const totalSec = items.reduce((acc, it) => acc + it.durationSeconds, 0);
+    // ─────────────────────────────────────────────────────────────
+    // MODE A: PACED DAILY TARGETS (~1.5h - 2h per day)
+    // ─────────────────────────────────────────────────────────────
+    if (scheduleMode === 'paced') {
+      interface PacedBatch {
+        dateKey: string;
+        title: string;
+        items: CalendarUnitItem[];
+        durationSecs: number;
+      }
 
-      const completedCount = items.filter(
-        (it) => it.videoId && completedVideos.includes(it.videoId)
-      ).length;
+      const batches: PacedBatch[] = [];
 
-      const isCompleted = items.length > 0 && completedCount === items.length;
-      const progressPercent =
-        items.length > 0 ? Math.round((completedCount / items.length) * 100) : 0;
+      course.sections.forEach((sec) => {
+        const secUnits = allUnitsList.filter((it) => it.sectionId === sec.id);
+        if (secUnits.length === 0) return;
 
-      result.push({
-        dayNumber: dayCount++,
-        dateKey,
-        formattedDate: formatted,
-        dayOfWeek,
-        items,
-        totalSeconds: totalSec,
-        totalLectures: items.length,
-        completedCount,
-        isCompleted,
-        isNextTarget: false,
-        progressPercent,
+        // Group units by upload date within this section
+        const byDateMap = new Map<string, CalendarUnitItem[]>();
+        secUnits.forEach((it) => {
+          if (!byDateMap.has(it.uploadDateStr)) {
+            byDateMap.set(it.uploadDateStr, []);
+          }
+          byDateMap.get(it.uploadDateStr)!.push(it);
+        });
+
+        byDateMap.forEach((uList, dt) => {
+          const totalSec = uList.reduce((acc, it) => acc + it.durationSeconds, 0);
+
+          // If section on this date is > 2h 15m (8100s), split into Part 1, Part 2
+          if (totalSec > 8100 && uList.length > 1) {
+            let chunk: CalendarUnitItem[] = [];
+            let cSec = 0;
+            let part = 1;
+
+            uList.forEach((it) => {
+              if (cSec > 0 && cSec + it.durationSeconds > 7200) {
+                batches.push({
+                  dateKey: dt,
+                  title: `${sec.title} (Part ${part})`,
+                  items: chunk,
+                  durationSecs: cSec,
+                });
+                chunk = [];
+                cSec = 0;
+                part++;
+              }
+              chunk.push(it);
+              cSec += it.durationSeconds;
+            });
+
+            if (chunk.length > 0) {
+              batches.push({
+                dateKey: dt,
+                title: part > 1 ? `${sec.title} (Part ${part})` : sec.title,
+                items: chunk,
+                durationSecs: cSec,
+              });
+            }
+          } else {
+            batches.push({
+              dateKey: dt,
+              title: sec.title,
+              items: uList,
+              durationSecs: totalSec,
+            });
+          }
+        });
       });
-    });
 
-    // Append unscheduled items at the end if any exist
-    if (dateMap.has('unscheduled')) {
-      const items = dateMap.get('unscheduled') || [];
-      if (items.length > 0) {
-        const { formatted, dayOfWeek } = formatDateDisplay('unscheduled');
+      // Chronologically sort batches by upload date
+      const sortedBatches = batches.sort((a, b) => {
+        if (a.dateKey === 'unscheduled') return 1;
+        if (b.dateKey === 'unscheduled') return -1;
+        return a.dateKey.localeCompare(b.dateKey);
+      });
+
+      // Merge very small introductory sections on the same date (< 25 min)
+      const mergedBatches: PacedBatch[] = [];
+      let i = 0;
+      while (i < sortedBatches.length) {
+        const cur = sortedBatches[i];
+        if (
+          cur.durationSecs < 1800 &&
+          i + 1 < sortedBatches.length &&
+          sortedBatches[i + 1].dateKey === cur.dateKey &&
+          cur.durationSecs + sortedBatches[i + 1].durationSecs <= 7200
+        ) {
+          const nxt = sortedBatches[i + 1];
+          mergedBatches.push({
+            dateKey: cur.dateKey,
+            title: `${cur.title} & ${nxt.title}`,
+            items: [...cur.items, ...nxt.items],
+            durationSecs: cur.durationSecs + nxt.durationSecs,
+          });
+          i += 2;
+        } else {
+          mergedBatches.push(cur);
+          i++;
+        }
+      }
+
+      let dayNum = 1;
+      mergedBatches.forEach((batch) => {
+        const { formatted, dayOfWeek } = formatDateDisplay(batch.dateKey);
+        const completedCount = batch.items.filter(
+          (it) => it.videoId && completedVideos.includes(it.videoId)
+        ).length;
+
+        const isCompleted = batch.items.length > 0 && completedCount === batch.items.length;
+        const progressPercent =
+          batch.items.length > 0 ? Math.round((completedCount / batch.items.length) * 100) : 0;
+
+        result.push({
+          dayNumber: dayNum++,
+          dateKey: batch.dateKey,
+          formattedDate: formatted,
+          dayOfWeek,
+          targetTitle: batch.title,
+          items: batch.items,
+          totalSeconds: batch.durationSecs,
+          totalLectures: batch.items.length,
+          completedCount,
+          isCompleted,
+          isNextTarget: false,
+          progressPercent,
+        });
+      });
+    }
+
+    // ─────────────────────────────────────────────────────────────
+    // MODE B: RAW LMS UPLOAD BATCHES (Original Drop Dates)
+    // ─────────────────────────────────────────────────────────────
+    else {
+      const dateMap = new Map<string, CalendarUnitItem[]>();
+
+      allUnitsList.forEach((it) => {
+        if (!dateMap.has(it.uploadDateStr)) {
+          dateMap.set(it.uploadDateStr, []);
+        }
+        dateMap.get(it.uploadDateStr)!.push(it);
+      });
+
+      const validDates = Array.from(dateMap.keys())
+        .filter((k) => k !== 'unscheduled')
+        .sort((a, b) => a.localeCompare(b));
+
+      let dayNum = 1;
+
+      validDates.forEach((dateKey) => {
+        const items = dateMap.get(dateKey) || [];
+        const { formatted, dayOfWeek } = formatDateDisplay(dateKey);
         const totalSec = items.reduce((acc, it) => acc + it.durationSeconds, 0);
+
         const completedCount = items.filter(
           (it) => it.videoId && completedVideos.includes(it.videoId)
         ).length;
 
+        const isCompleted = items.length > 0 && completedCount === items.length;
+        const progressPercent =
+          items.length > 0 ? Math.round((completedCount / items.length) * 100) : 0;
+
+        // Distinct section names in this batch
+        const distinctSections = Array.from(new Set(items.map((it) => it.sectionTitle)));
+        const targetTitle =
+          distinctSections.length === 1
+            ? distinctSections[0]
+            : `${distinctSections.length} Topics Upload Batch`;
+
         result.push({
-          dayNumber: dayCount++,
-          dateKey: 'unscheduled',
+          dayNumber: dayNum++,
+          dateKey,
           formattedDate: formatted,
           dayOfWeek,
+          targetTitle,
           items,
           totalSeconds: totalSec,
           totalLectures: items.length,
           completedCount,
-          isCompleted: items.length > 0 && completedCount === items.length,
+          isCompleted,
           isNextTarget: false,
-          progressPercent:
-            items.length > 0 ? Math.round((completedCount / items.length) * 100) : 0,
+          progressPercent,
         });
+      });
+
+      if (dateMap.has('unscheduled')) {
+        const items = dateMap.get('unscheduled') || [];
+        if (items.length > 0) {
+          const { formatted, dayOfWeek } = formatDateDisplay('unscheduled');
+          const totalSec = items.reduce((acc, it) => acc + it.durationSeconds, 0);
+          const completedCount = items.filter(
+            (it) => it.videoId && completedVideos.includes(it.videoId)
+          ).length;
+
+          result.push({
+            dayNumber: dayNum++,
+            dateKey: 'unscheduled',
+            formattedDate: formatted,
+            dayOfWeek,
+            targetTitle: 'Course Resources & Extras',
+            items,
+            totalSeconds: totalSec,
+            totalLectures: items.length,
+            completedCount,
+            isCompleted: items.length > 0 && completedCount === items.length,
+            isNextTarget: false,
+            progressPercent:
+              items.length > 0 ? Math.round((completedCount / items.length) * 100) : 0,
+          });
+        }
       }
     }
 
@@ -317,7 +465,7 @@ export function CourseCalendarView({
     }
 
     return result;
-  }, [course, completedVideos, getUnitMetaConfig]);
+  }, [course, completedVideos, getUnitMetaConfig, scheduleMode]);
 
   // Expand "Next Target" by default on initial mount
   useEffect(() => {
@@ -337,16 +485,15 @@ export function CourseCalendarView({
   // Filtered Days
   const filteredDays = useMemo(() => {
     return calendarDays.filter((day) => {
-      // 1. Status Filter
       if (filterMode === 'pending' && day.isCompleted) return false;
       if (filterMode === 'completed' && !day.isCompleted) return false;
 
-      // 2. Search Query
       if (searchQuery.trim()) {
         const q = searchQuery.toLowerCase();
         const matchesDate =
           day.formattedDate.toLowerCase().includes(q) ||
           day.dayOfWeek.toLowerCase().includes(q) ||
+          day.targetTitle.toLowerCase().includes(q) ||
           `day ${day.dayNumber}`.includes(q);
 
         const matchesLectures = day.items.some(
@@ -468,7 +615,7 @@ export function CourseCalendarView({
                         Today&apos;s Target Day
                       </span>
                       <h4 className="text-base sm:text-lg font-bold text-foreground leading-snug">
-                        Day {nextTargetDay.dayNumber} • {nextTargetDay.formattedDate}
+                        Day {nextTargetDay.dayNumber} • {nextTargetDay.targetTitle}
                       </h4>
                     </div>
                   </div>
@@ -490,7 +637,7 @@ export function CourseCalendarView({
                     <span>{formatDurationHms(nextTargetDay.totalSeconds)} required today</span>
                   </span>
                   <span>•</span>
-                  <span>{nextTargetDay.dayOfWeek}</span>
+                  <span>{nextTargetDay.formattedDate}</span>
                 </div>
 
                 {/* Progress Bar */}
@@ -542,7 +689,7 @@ export function CourseCalendarView({
                   🎉 Course Targets Fully Completed!
                 </h4>
                 <p className="text-xs text-muted-foreground max-w-sm mx-auto">
-                  You have completed all daily upload targets for this course. Excellent consistency!
+                  You have completed all daily study targets for this course. Excellent consistency!
                 </p>
               </div>
             )}
@@ -554,7 +701,7 @@ export function CourseCalendarView({
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
         <div className="p-3.5 rounded-2xl bg-card/80 border border-card-border space-y-1">
           <p className="text-[11px] font-bold text-muted-foreground uppercase tracking-wider">
-            Total Upload Days
+            {scheduleMode === 'paced' ? 'Daily Targets' : 'Upload Drops'}
           </p>
           <p className="text-xl sm:text-2xl font-black text-foreground">{totalDays}</p>
         </div>
@@ -592,61 +739,91 @@ export function CourseCalendarView({
         </div>
       </div>
 
-      {/* ── CALENDAR TOOLBAR: SEARCH & STATUS FILTERS ── */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-2">
-        {/* Status Filter Pills */}
-        <div className="flex items-center gap-1.5 p-1 rounded-2xl bg-card border border-card-border shrink-0 text-xs font-semibold">
+      {/* ── TARGET PACE TOGGLE & SEARCH TOOLBAR ── */}
+      <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-3 pt-2">
+        {/* Schedule Mode Selector: Paced (~1.5h/day) vs Raw LMS Upload Drops */}
+        <div className="inline-flex items-center p-1 rounded-2xl bg-card border border-card-border text-xs font-semibold self-start shrink-0">
           <button
             type="button"
-            onClick={() => setFilterMode('all')}
-            className={`px-3 py-1.5 rounded-xl transition-all cursor-pointer ${
-              filterMode === 'all'
+            onClick={() => setScheduleMode('paced')}
+            className={`px-3 py-1.5 rounded-xl transition-all cursor-pointer flex items-center gap-1.5 ${
+              scheduleMode === 'paced'
                 ? 'bg-primary-600 text-white shadow-sm'
                 : 'text-muted-foreground hover:text-foreground'
             }`}
           >
-            All Days ({totalDays})
+            <Target className="w-3.5 h-3.5" />
+            <span>Paced Daily Targets (~1.5h / day)</span>
           </button>
+
           <button
             type="button"
-            onClick={() => setFilterMode('pending')}
-            className={`px-3 py-1.5 rounded-xl transition-all cursor-pointer ${
-              filterMode === 'pending'
+            onClick={() => setScheduleMode('raw_batches')}
+            className={`px-3 py-1.5 rounded-xl transition-all cursor-pointer flex items-center gap-1.5 ${
+              scheduleMode === 'raw_batches'
                 ? 'bg-primary-600 text-white shadow-sm'
                 : 'text-muted-foreground hover:text-foreground'
             }`}
           >
-            Pending ({totalDays - completedDaysCount})
-          </button>
-          <button
-            type="button"
-            onClick={() => setFilterMode('completed')}
-            className={`px-3 py-1.5 rounded-xl transition-all cursor-pointer ${
-              filterMode === 'completed'
-                ? 'bg-primary-600 text-white shadow-sm'
-                : 'text-muted-foreground hover:text-foreground'
-            }`}
-          >
-            Completed ({completedDaysCount})
+            <CalendarDays className="w-3.5 h-3.5" />
+            <span>Upload Drop Batches</span>
           </button>
         </div>
 
-        {/* Search & Bulk Expand/Collapse */}
-        <div className="flex items-center gap-2.5">
-          <div className="relative flex-1 sm:w-64">
-            <Search className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-muted-foreground pointer-events-none" />
+        {/* Status Filters & Search Bar */}
+        <div className="flex flex-wrap items-center gap-2.5">
+          {/* Status Filter Pills */}
+          <div className="flex items-center gap-1 p-1 rounded-2xl bg-card border border-card-border text-xs font-semibold">
+            <button
+              type="button"
+              onClick={() => setFilterMode('all')}
+              className={`px-2.5 py-1 rounded-xl transition-all cursor-pointer ${
+                filterMode === 'all'
+                  ? 'bg-primary-600 text-white shadow-sm'
+                  : 'text-muted-foreground hover:text-foreground'
+              }`}
+            >
+              All ({totalDays})
+            </button>
+            <button
+              type="button"
+              onClick={() => setFilterMode('pending')}
+              className={`px-2.5 py-1 rounded-xl transition-all cursor-pointer ${
+                filterMode === 'pending'
+                  ? 'bg-primary-600 text-white shadow-sm'
+                  : 'text-muted-foreground hover:text-foreground'
+              }`}
+            >
+              Pending ({totalDays - completedDaysCount})
+            </button>
+            <button
+              type="button"
+              onClick={() => setFilterMode('completed')}
+              className={`px-2.5 py-1 rounded-xl transition-all cursor-pointer ${
+                filterMode === 'completed'
+                  ? 'bg-primary-600 text-white shadow-sm'
+                  : 'text-muted-foreground hover:text-foreground'
+              }`}
+            >
+              Done ({completedDaysCount})
+            </button>
+          </div>
+
+          {/* Search Box */}
+          <div className="relative flex-1 sm:w-56">
+            <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground pointer-events-none" />
             <input
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="Search date or lecture..."
-              className="w-full pl-9 pr-8 py-2 rounded-xl bg-card border border-card-border text-xs text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary-500 transition-colors"
+              placeholder="Search topic or date..."
+              className="w-full pl-8 pr-8 py-1.5 rounded-xl bg-card border border-card-border text-xs text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary-500 transition-colors"
             />
             {searchQuery && (
               <button
                 type="button"
                 onClick={() => setSearchQuery('')}
-                className="absolute right-2.5 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground p-0.5"
+                className="absolute right-2 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground p-0.5"
               >
                 <X className="w-3.5 h-3.5" />
               </button>
@@ -657,14 +834,14 @@ export function CourseCalendarView({
             <button
               type="button"
               onClick={expandAll}
-              className="px-3 py-2 rounded-xl bg-card border border-card-border hover:bg-card/80 text-muted-foreground hover:text-foreground font-semibold transition-colors cursor-pointer"
+              className="px-2.5 py-1.5 rounded-xl bg-card border border-card-border hover:bg-card/80 text-muted-foreground hover:text-foreground font-semibold transition-colors cursor-pointer"
             >
-              Expand All
+              Expand
             </button>
             <button
               type="button"
               onClick={collapseAll}
-              className="px-3 py-2 rounded-xl bg-card border border-card-border hover:bg-card/80 text-muted-foreground hover:text-foreground font-semibold transition-colors cursor-pointer"
+              className="px-2.5 py-1.5 rounded-xl bg-card border border-card-border hover:bg-card/80 text-muted-foreground hover:text-foreground font-semibold transition-colors cursor-pointer"
             >
               Collapse
             </button>
@@ -682,7 +859,7 @@ export function CourseCalendarView({
           </p>
         </div>
       ) : (
-        <div className="space-y-4">
+        <div className="space-y-3.5">
           {filteredDays.map((day) => {
             const isExpanded = !!expandedDays[day.dayNumber] || searchQuery.trim() !== '';
 
@@ -708,9 +885,9 @@ export function CourseCalendarView({
                       toggleDay(day.dayNumber);
                     }
                   }}
-                  className="w-full text-left p-4 sm:p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4 hover:bg-primary-500/5 transition-colors cursor-pointer group select-none"
+                  className="w-full text-left p-3.5 sm:p-4.5 flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4 hover:bg-primary-500/5 transition-colors cursor-pointer group select-none"
                 >
-                  {/* Left: Day Badge + Date Info */}
+                  {/* Left: Day Badge + Topic Title + Release Date */}
                   <div className="flex items-start sm:items-center gap-3 min-w-0 flex-1">
                     <div
                       className={`w-9 h-9 sm:w-10 sm:h-10 rounded-xl flex items-center justify-center font-black text-xs sm:text-sm shrink-0 mt-0.5 sm:mt-0 transition-transform group-hover:scale-105 ${
@@ -731,7 +908,7 @@ export function CourseCalendarView({
                     <div className="min-w-0 flex-1">
                       <div className="flex items-center gap-2 flex-wrap">
                         <h3 className="text-sm sm:text-base font-bold text-foreground leading-snug">
-                          Day {day.dayNumber} • {day.formattedDate}
+                          Day {day.dayNumber}: {day.targetTitle}
                         </h3>
 
                         {day.isNextTarget && (
@@ -744,16 +921,15 @@ export function CourseCalendarView({
                         {day.isCompleted && (
                           <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-emerald-400 text-[10px] font-bold">
                             <Check className="w-3 h-3" />
-                            <span>Target Completed</span>
+                            <span>Done</span>
                           </span>
                         )}
                       </div>
 
-                      {day.dayOfWeek && (
-                        <p className="text-xs text-muted-foreground mt-0.5">
-                          {day.dayOfWeek} upload batch
-                        </p>
-                      )}
+                      <p className="text-xs text-muted-foreground mt-0.5 flex items-center gap-1.5">
+                        <CalendarDays className="w-3.5 h-3.5 text-slate-500" />
+                        <span>Uploaded: {day.formattedDate} ({day.dayOfWeek})</span>
+                      </p>
                     </div>
                   </div>
 
@@ -793,12 +969,11 @@ export function CourseCalendarView({
                         !!item.videoId && completedVideos.includes(item.videoId);
                       const unitDuration = formatUnitDuration(item.durationSeconds);
                       const config = getUnitMetaConfig(item.unit);
-                      const IconComponent = config.icon || Video;
 
                       return (
                         <div
                           key={item.unit.id || itIdx}
-                          className="p-3.5 sm:p-4.5 flex flex-col sm:flex-row sm:items-center justify-between gap-3 hover:bg-card/40 transition-colors"
+                          className="p-3 sm:p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3 hover:bg-card/40 transition-colors"
                         >
                           {/* Unit Title, Checkbox & Section Badge */}
                           <div className="flex items-start gap-3 min-w-0 flex-1">
