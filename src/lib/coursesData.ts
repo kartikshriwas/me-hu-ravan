@@ -192,7 +192,9 @@ export function getAllCourses(): CourseMeta[] {
               fileUrl: unitMeta.fileUrl || lpItem.fileUrl || undefined,
               data: unitMeta.data || lpItem.data || undefined,
               duration: typeof unitMeta.duration === 'number' ? unitMeta.duration : undefined,
-              modifiedF: unitMeta.modifiedF || undefined
+              modifiedF: unitMeta.modifiedF || (typeof unitMeta.created === 'number' ? new Date(unitMeta.created * 1000).toISOString().replace('T', ' ').substring(0, 19) : undefined),
+              created: typeof unitMeta.created === 'number' ? unitMeta.created : undefined,
+              modified: typeof unitMeta.modified === 'number' ? unitMeta.modified : undefined
             };
 
             const hasContent = unitMeta.hasData || !!unitMeta.sourceid || !!unitMeta.vimeoid || !!unitMeta.fileUrl || (typeof unitMeta.duration === 'number' && unitMeta.duration > 0);
@@ -297,7 +299,9 @@ export function parseRawCourseData(data: any, fallbackSlug: string = 'course'): 
           vimeoid: unitMeta.vimeoid || lpItem.vimeoid || undefined,
           fileUrl: unitMeta.fileUrl || lpItem.fileUrl || undefined,
           duration: typeof unitMeta.duration === 'number' ? unitMeta.duration : (typeof lpItem.duration === 'number' ? lpItem.duration : undefined),
-          modifiedF: unitMeta.modifiedF || undefined
+          modifiedF: unitMeta.modifiedF || (typeof unitMeta.created === 'number' ? new Date(unitMeta.created * 1000).toISOString().replace('T', ' ').substring(0, 19) : undefined),
+          created: typeof unitMeta.created === 'number' ? unitMeta.created : (typeof lpItem.created === 'number' ? lpItem.created : undefined),
+          modified: typeof unitMeta.modified === 'number' ? unitMeta.modified : (typeof lpItem.modified === 'number' ? lpItem.modified : undefined)
         };
       })
       .filter((unit: CourseSectionUnit) => isUnitActionable(unit));

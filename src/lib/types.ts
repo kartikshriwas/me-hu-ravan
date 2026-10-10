@@ -39,6 +39,8 @@ export interface CourseSectionUnit {
   fileUrl?: string;
   duration?: number;
   modifiedF?: string;
+  created?: number;
+  modified?: number;
 }
 
 export interface CourseSection {

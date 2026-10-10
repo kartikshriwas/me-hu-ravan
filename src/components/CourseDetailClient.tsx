@@ -42,9 +42,12 @@ import {
   Loader2,
   Trash2,
   Sparkles,
+  CalendarDays,
+  Flame,
 } from 'lucide-react';
 import { useDownloads } from '@/lib/downloadContext';
 import { DownloadLessonModal, SingleLessonDownloadTarget } from '@/components/DownloadLessonModal';
+import { CourseCalendarView } from '@/components/CourseCalendarView';
 
 interface CourseDetailClientProps {
   course: CourseDetail;
@@ -317,6 +320,62 @@ export function CourseDetailClient({ course, availableTests, isUnlocked = true }
 
   const [lastVideoInfo, setLastVideoInfo] = useState<{ videoId: string; title?: string; timestamp?: number } | null>(null);
   const [expandedSections, setExpandedSections] = useState<Record<string, boolean>>({});
+  const [viewMode, setViewMode] = useState<'default' | 'calendar'>('default');
+  const [completedVideos, setCompletedVideos] = useState<string[]>([]);
+
+  // Load preferred view mode and completed videos
+  useEffect(() => {
+    try {
+      const savedMode = localStorage.getItem(`preptea_view_mode_${course.slug}`);
+      if (savedMode === 'calendar' || savedMode === 'default') {
+        setViewMode(savedMode);
+      }
+      const savedCompleted = localStorage.getItem('preptea_completed_videos');
+      if (savedCompleted) {
+        setCompletedVideos(JSON.parse(savedCompleted));
+      }
+    } catch (e) {
+      // ignore
+    }
+  }, [course.slug]);
+
+  const handleSetViewMode = (mode: 'default' | 'calendar') => {
+    setViewMode(mode);
+    try {
+      localStorage.setItem(`preptea_view_mode_${course.slug}`, mode);
+    } catch (e) {}
+  };
+
+  const handleToggleComplete = (videoId: string) => {
+    if (!videoId) return;
+    setCompletedVideos((prev) => {
+      const exists = prev.includes(videoId);
+      const updated = exists ? prev.filter((id) => id !== videoId) : [...prev, videoId];
+      try {
+        localStorage.setItem('preptea_completed_videos', JSON.stringify(updated));
+
+        // If completing a video, log today to studyDays for streak
+        if (!exists) {
+          const todayStr = new Date().toISOString().split('T')[0];
+          const raw = localStorage.getItem('preptea_learning_streak_data');
+          let studyDays: string[] = [];
+          if (raw) {
+            try {
+              studyDays = JSON.parse(raw).studyDays || [];
+            } catch (err) {}
+          }
+          if (!studyDays.includes(todayStr)) {
+            studyDays.push(todayStr);
+            localStorage.setItem(
+              'preptea_learning_streak_data',
+              JSON.stringify({ studyDays, lastUpdated: Date.now() })
+            );
+          }
+        }
+      } catch (e) {}
+      return updated;
+    });
+  };
   const [bundleQualityModal, setBundleQualityModal] = useState<{
     type: 'course' | 'section';
     title: string;
@@ -786,18 +845,86 @@ export function CourseDetailClient({ course, availableTests, isUnlocked = true }
         </section>
       )}
 
-      {/* Section Syllabus Breakdown */}
+      {/* Section Syllabus & Calendar Roadmap Modes */}
       <section aria-labelledby="curriculum-heading" className="space-y-6">
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-          <h2 id="curriculum-heading" className="text-xl font-bold text-foreground flex items-center gap-2 shrink-0">
-            <Layers className="w-5 h-5 text-primary-600 dark:text-primary-400" />
-            <span>Course Curriculum</span>
-            {searchQuery.trim() !== '' && (
-              <span className="text-xs font-normal text-muted-foreground ml-1">
-                ({filteredSections.length} {filteredSections.length === 1 ? 'section' : 'sections'} found)
+        {/* Mode Switcher Tabs Header */}
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-3 border-b border-card-border/60">
+          <div>
+            <h2 id="curriculum-heading" className="text-xl sm:text-2xl font-black text-foreground flex items-center gap-2.5">
+              {viewMode === 'calendar' ? (
+                <>
+                  <CalendarDays className="w-6 h-6 text-primary-600 dark:text-primary-400" />
+                  <span>Calendar & Daily Targets</span>
+                </>
+              ) : (
+                <>
+                  <Layers className="w-6 h-6 text-primary-600 dark:text-primary-400" />
+                  <span>Course Curriculum</span>
+                </>
+              )}
+            </h2>
+            <p className="text-xs text-muted-foreground mt-1">
+              {viewMode === 'calendar'
+                ? 'Chronological daily targets grouped by upload dates with streak tracker.'
+                : 'Browse all course chapters, sections, and syllabus modules.'}
+            </p>
+          </div>
+
+          {/* Mode Switcher Segmented Control */}
+          <div className="inline-flex items-center p-1 rounded-2xl bg-card border border-card-border shadow-sm shrink-0 self-start sm:self-auto">
+            <button
+              type="button"
+              onClick={() => handleSetViewMode('default')}
+              className={`px-3.5 sm:px-4 py-2 rounded-xl text-xs font-bold transition-all flex items-center gap-2 cursor-pointer ${
+                viewMode === 'default'
+                  ? 'bg-primary-600 text-white shadow-md shadow-primary-600/20'
+                  : 'text-muted-foreground hover:text-foreground hover:bg-card-border/40'
+              }`}
+            >
+              <Layers className="w-4 h-4" />
+              <span>Default Mode</span>
+            </button>
+
+            <button
+              type="button"
+              onClick={() => handleSetViewMode('calendar')}
+              className={`px-3.5 sm:px-4 py-2 rounded-xl text-xs font-bold transition-all flex items-center gap-2 cursor-pointer ${
+                viewMode === 'calendar'
+                  ? 'bg-primary-600 text-white shadow-md shadow-primary-600/20'
+                  : 'text-muted-foreground hover:text-foreground hover:bg-card-border/40'
+              }`}
+            >
+              <CalendarDays className="w-4 h-4" />
+              <span>Calendar Mode</span>
+              <span className="flex items-center gap-0.5 px-1.5 py-0.5 rounded-full bg-amber-500/20 text-amber-400 text-[10px] font-black">
+                <Flame className="w-3 h-3 fill-amber-400" />
+                <span>Streak</span>
               </span>
-            )}
-          </h2>
+            </button>
+          </div>
+        </div>
+
+        {viewMode === 'calendar' ? (
+          <CourseCalendarView
+            course={course}
+            isUnlocked={isUnlocked}
+            completedVideos={completedVideos}
+            onToggleComplete={handleToggleComplete}
+            onDownloadUnit={handleDownloadUnit}
+            formatUnitDuration={formatUnitDuration}
+            getUnitMetaConfig={getUnitMetaConfig}
+          />
+        ) : (
+          <div className="space-y-6">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+              <div className="text-sm font-bold text-foreground">
+                <span>Sections Overview</span>
+                {searchQuery.trim() !== '' && (
+                  <span className="text-xs font-normal text-muted-foreground ml-1">
+                    ({filteredSections.length} {filteredSections.length === 1 ? 'section' : 'sections'} found)
+                  </span>
+                )}
+              </div>
 
           <div className="flex items-center gap-3 w-full sm:w-auto">
             {/* Search Input Bar */}
@@ -1245,6 +1372,8 @@ export function CourseDetailClient({ course, availableTests, isUnlocked = true }
             );
           })}
         </div>
+        )}
+          </div>
         )}
       </section>
 
