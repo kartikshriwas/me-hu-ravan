@@ -376,6 +376,43 @@ export function CourseDetailClient({ course, availableTests, isUnlocked = true }
       return updated;
     });
   };
+
+  const handleBatchToggleComplete = (videoIds: string[], markComplete: boolean) => {
+    if (!videoIds || videoIds.length === 0) return;
+    setCompletedVideos((prev) => {
+      let updated: string[];
+      if (markComplete) {
+        const set = new Set([...prev, ...videoIds]);
+        updated = Array.from(set);
+
+        const todayStr = new Date().toISOString().split('T')[0];
+        const raw = localStorage.getItem('preptea_learning_streak_data');
+        let studyDays: string[] = [];
+        if (raw) {
+          try {
+            studyDays = JSON.parse(raw).studyDays || [];
+          } catch (err) {}
+        }
+        if (!studyDays.includes(todayStr)) {
+          studyDays.push(todayStr);
+          try {
+            localStorage.setItem(
+              'preptea_learning_streak_data',
+              JSON.stringify({ studyDays, lastUpdated: Date.now() })
+            );
+          } catch (e) {}
+        }
+      } else {
+        const removeSet = new Set(videoIds);
+        updated = prev.filter((id) => !removeSet.has(id));
+      }
+
+      try {
+        localStorage.setItem('preptea_completed_videos', JSON.stringify(updated));
+      } catch (e) {}
+      return updated;
+    });
+  };
   const [bundleQualityModal, setBundleQualityModal] = useState<{
     type: 'course' | 'section';
     title: string;
@@ -910,6 +947,7 @@ export function CourseDetailClient({ course, availableTests, isUnlocked = true }
             isUnlocked={isUnlocked}
             completedVideos={completedVideos}
             onToggleComplete={handleToggleComplete}
+            onBatchToggleComplete={handleBatchToggleComplete}
             onDownloadUnit={handleDownloadUnit}
             formatUnitDuration={formatUnitDuration}
             getUnitMetaConfig={getUnitMetaConfig}
