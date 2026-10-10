@@ -506,7 +506,10 @@ export function CustomVideoPlayer({
         localStorage.setItem('preptea_completed_videos', JSON.stringify(completedList));
       }
 
-      const todayStr = new Date().toISOString().split('T')[0];
+      const now = new Date();
+      const localTodayStr = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')}`;
+      const isoTodayStr = now.toISOString().split('T')[0];
+
       const rawStreak = localStorage.getItem('preptea_learning_streak_data');
       let studyDays: string[] = [];
       if (rawStreak) {
@@ -515,10 +518,12 @@ export function CustomVideoPlayer({
           if (Array.isArray(parsed.studyDays)) studyDays = parsed.studyDays;
         } catch (e) {}
       }
-      if (!studyDays.includes(todayStr)) {
-        studyDays.push(todayStr);
-        localStorage.setItem('preptea_learning_streak_data', JSON.stringify({ studyDays }));
+      if (!studyDays.includes(localTodayStr) && !studyDays.includes(isoTodayStr)) {
+        studyDays.push(localTodayStr);
+        localStorage.setItem('preptea_learning_streak_data', JSON.stringify({ studyDays, lastUpdated: Date.now() }));
       }
+
+      window.dispatchEvent(new Event('preptea_study_update'));
     } catch (e) {
       // ignore
     }

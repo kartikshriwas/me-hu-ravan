@@ -15,7 +15,6 @@ import {
   X,
   ArrowDownToLine,
   Check,
-  CheckCheck,
   Video,
   TrendingUp,
   Award,
@@ -53,7 +52,7 @@ interface CourseCalendarViewProps {
   course: CourseDetail;
   isUnlocked?: boolean;
   completedVideos: string[];
-  onToggleComplete: (videoId: string) => void;
+  onToggleComplete?: (videoId: string) => void;
   onBatchToggleComplete?: (videoIds: string[], markComplete: boolean) => void;
   onDownloadUnit?: (
     e: React.MouseEvent,
@@ -70,6 +69,13 @@ interface StreakState {
   longestStreak: number;
   studiedToday: boolean;
   activeDaysThisWeek: boolean[]; // 7 days (Mon-Sun)
+}
+
+function getLocalDateStr(d: Date = new Date()): string {
+  const year = d.getFullYear();
+  const month = String(d.getMonth() + 1).padStart(2, '0');
+  const day = String(d.getDate()).padStart(2, '0');
+  return `${year}-${month}-${day}`;
 }
 
 function formatDateDisplay(dateStr: string): { formatted: string; dayOfWeek: string } {
@@ -136,78 +142,145 @@ export function CourseCalendarView({
   const [searchQuery, setSearchQuery] = useState('');
   const [expandedDays, setExpandedDays] = useState<Record<number, boolean>>({});
   const [streakData, setStreakData] = useState<StreakState>({
-    currentStreak: 1,
-    longestStreak: 1,
+    currentStreak: 0,
+    longestStreak: 0,
     studiedToday: false,
     activeDaysThisWeek: [false, false, false, false, false, false, false],
   });
 
-  // 1. Calculate & manage streak from localStorage
+  // 1. Calculate & manage authentic learning streak from localStorage
   useEffect(() => {
-    try {
-      const today = new Date();
-      const todayStr = today.toISOString().split('T')[0];
+    const calculateStreak = () => {
+      try {
+        const today = new Date();
+        const todayStr = getLocalDateStr(today);
+        const isoTodayStr = today.toISOString().split('T')[0];
 
-      const raw = localStorage.getItem('preptea_learning_streak_data');
-      let studyDays: string[] = [];
+        const raw = localStorage.getItem('preptea_learning_streak_data');
+        let studyDays: string[] = [];
 
-      if (raw) {
-        const parsed = JSON.parse(raw);
-        if (Array.isArray(parsed.studyDays)) {
-          studyDays = parsed.studyDays;
+        if (raw) {
+          const parsed = JSON.parse(raw);
+          if (Array.isArray(parsed.studyDays)) {
+            studyDays = parsed.studyDays;
+          }
         }
-      }
 
-      if (completedVideos.length > 0 && !studyDays.includes(todayStr)) {
-        studyDays.push(todayStr);
-      }
+        const validDays = Array.from(
+          new Set(studyDays.filter((d) => typeof d === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(d)))
+        ).sort();
+        const daySet = new Set(validDays);
 
-      const uniqueDays = Array.from(new Set(studyDays)).sort().reverse();
-      localStorage.setItem(
-        'preptea_learning_streak_data',
-        JSON.stringify({ studyDays: uniqueDays })
-      );
-      const studiedToday = uniqueDays.includes(todayStr);
+        const studiedToday = daySet.has(todayStr) || daySet.has(isoTodayStr);
 
-      let currentStreak = 0;
-      let checkDate = new Date();
-      if (!studiedToday) {
-        checkDate.setDate(checkDate.getDate() - 1);
-      }
+        let currentStreak = 0;
 
-      for (let i = 0; i < 365; i++) {
-        const checkStr = checkDate.toISOString().split('T')[0];
-        if (uniqueDays.includes(checkStr)) {
-          currentStreak++;
-          checkDate.setDate(checkDate.getDate() - 1);
+        if (studiedToday) {
+          currentStreak = 1;
+          const cursor = new Date(today);
+          cursor.setDate(cursor.getDate() - 1);
+          for (let i = 0; i < 365; i++) {
+            const dStr = getLocalDateStr(cursor);
+            const isoStr = cursor.toISOString().split('T')[0];
+            if (daySet.has(dStr) || daySet.has(isoStr)) {
+              currentStreak++;
+              cursor.setDate(cursor.getDate() - 1);
+            } else {
+              break;
+            }
+          }
         } else {
-          break;
+          // Check if yesterday was studied to keep streak alive
+          const yesterday = new Date(today);
+          yesterday.setDate(yesterday.getDate() - 1);
+          const yesterdayStr = getLocalDateStr(yesterday);
+          const isoYesterdayStr = yesterday.toISOString().split('T')[0];
+
+          if (daySet.has(yesterdayStr) || daySet.has(isoYesterdayStr)) {
+            currentStreak = 1;
+            const cursor = new Date(yesterday);
+            cursor.setDate(cursor.getDate() - 1);
+            for (let i = 0; i < 365; i++) {
+              const dStr = getLocalDateStr(cursor);
+              const isoStr = cursor.toISOString().split('T')[0];
+              if (daySet.has(dStr) || daySet.has(isoStr)) {
+                currentStreak++;
+                cursor.setDate(cursor.getDate() - 1);
+              } else {
+                break;
+              }
+            }
+          } else {
+            currentStreak = 0;
+          }
         }
+
+        // Calculate all-time longest contiguous streak
+        let maxStreak = 0;
+        let tempStreak = 0;
+        let prevDate: Date | null = null;
+
+        for (const dStr of validDays) {
+          const [y, m, d] = dStr.split('-').map(Number);
+          const curDate = new Date(y, m - 1, d);
+
+          if (prevDate) {
+            const diffDays = Math.round((curDate.getTime() - prevDate.getTime()) / (1000 * 60 * 60 * 24));
+            if (diffDays === 1) {
+              tempStreak++;
+            } else if (diffDays > 1) {
+              tempStreak = 1;
+            }
+          } else {
+            tempStreak = 1;
+          }
+          prevDate = curDate;
+          if (tempStreak > maxStreak) {
+            maxStreak = tempStreak;
+          }
+        }
+
+        maxStreak = Math.max(maxStreak, currentStreak);
+        const savedMax = parseInt(localStorage.getItem('preptea_max_streak') || '0', 10);
+        const allTimeMax = Math.max(maxStreak, savedMax);
+        if (allTimeMax > savedMax && allTimeMax > 0) {
+          localStorage.setItem('preptea_max_streak', allTimeMax.toString());
+        }
+
+        // Monday-to-Sunday of current week
+        const currentDayOfWeek = (today.getDay() + 6) % 7;
+        const monday = new Date(today);
+        monday.setDate(today.getDate() - currentDayOfWeek);
+
+        const weekFlags = [0, 1, 2, 3, 4, 5, 6].map((offset) => {
+          const d = new Date(monday);
+          d.setDate(monday.getDate() + offset);
+          const dStr = getLocalDateStr(d);
+          const isoStr = d.toISOString().split('T')[0];
+          return daySet.has(dStr) || daySet.has(isoStr);
+        });
+
+        setStreakData({
+          currentStreak,
+          longestStreak: allTimeMax,
+          studiedToday,
+          activeDaysThisWeek: weekFlags,
+        });
+      } catch (e) {
+        // ignore
       }
+    };
 
-      const currentDayOfWeek = (today.getDay() + 6) % 7;
-      const monday = new Date(today);
-      monday.setDate(today.getDate() - currentDayOfWeek);
+    calculateStreak();
+    window.addEventListener('storage', calculateStreak);
+    window.addEventListener('focus', calculateStreak);
+    window.addEventListener('preptea_study_update', calculateStreak);
 
-      const weekFlags = [0, 1, 2, 3, 4, 5, 6].map((offset) => {
-        const d = new Date(monday);
-        d.setDate(monday.getDate() + offset);
-        const dStr = d.toISOString().split('T')[0];
-        return uniqueDays.includes(dStr);
-      });
-
-      const maxStreak = Math.max(currentStreak, parseInt(localStorage.getItem('preptea_max_streak') || '1', 10));
-      localStorage.setItem('preptea_max_streak', maxStreak.toString());
-
-      setStreakData({
-        currentStreak: Math.max(1, currentStreak),
-        longestStreak: Math.max(1, maxStreak),
-        studiedToday,
-        activeDaysThisWeek: weekFlags,
-      });
-    } catch (e) {
-      // ignore
-    }
+    return () => {
+      window.removeEventListener('storage', calculateStreak);
+      window.removeEventListener('focus', calculateStreak);
+      window.removeEventListener('preptea_study_update', calculateStreak);
+    };
   }, [completedVideos]);
 
   // 2. Group all units into either Sprint Paced Targets or Raw Upload Batches
@@ -606,6 +679,15 @@ export function CourseCalendarView({
   const nextTargetDay = calendarDays.find((d) => d.isNextTarget) || null;
   const overallCompletedUnits = completedVideos.length;
   const overallTotalUnits = calendarDays.reduce((acc, d) => acc + d.totalLectures, 0);
+  const totalCourseSeconds = useMemo(
+    () => calendarDays.reduce((acc, d) => acc + d.totalSeconds, 0),
+    [calendarDays]
+  );
+  const targetEndDate = useMemo(() => {
+    if (calendarDays.length === 0) return '';
+    const lastDay = calendarDays[calendarDays.length - 1];
+    return lastDay?.formattedDate || '';
+  }, [calendarDays]);
 
   // Filtered Days
   const filteredDays = useMemo(() => {
@@ -665,47 +747,30 @@ export function CourseCalendarView({
     }
   };
 
-  // Batch toggle all lectures for a day (One-Click Finish Day)
-  const handleToggleAllDay = (day: CalendarDayGroup) => {
-    const dayVideoIds = day.items.map((it) => it.videoId).filter(Boolean);
-    if (dayVideoIds.length === 0) return;
-
-    const allAreCompleted = dayVideoIds.every((id) => completedVideos.includes(id));
-    const targetState = !allAreCompleted;
-
-    if (onBatchToggleComplete) {
-      onBatchToggleComplete(dayVideoIds, targetState);
-    } else {
-      dayVideoIds.forEach((id) => {
-        const isCurrent = completedVideos.includes(id);
-        if (targetState !== isCurrent) {
-          onToggleComplete(id);
-        }
-      });
-    }
-  };
-
   return (
     <div className="space-y-5">
       {/* ── STREAK & TODAY'S TARGET HERO CARD ── */}
-      <div className="rounded-2xl p-5 sm:p-6 border border-card-border bg-card/60 backdrop-blur-sm">
+      <div className="rounded-2xl p-5 sm:p-6 border border-card-border bg-card/60 backdrop-blur-sm relative overflow-hidden">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
           {/* Left: Streak Counter & Weekly Pulse */}
-          <div className="lg:col-span-5 space-y-3.5">
-            <div className="flex items-center gap-2">
-              <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-500 text-xs font-semibold">
-                <Flame className="w-3.5 h-3.5 fill-current" />
-                <span>Daily Streak</span>
+          <div className="lg:col-span-5 space-y-3.5 relative">
+            {/* Theme-aligned ambient glow behind streak and weekly activity */}
+            <div className="absolute -top-10 -left-10 w-64 h-64 bg-primary-500/20 rounded-full blur-3xl pointer-events-none" />
+
+            <div className="flex items-center gap-2 flex-wrap relative z-10">
+              <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-orange-500/15 border border-orange-500/30 text-orange-400 text-xs font-semibold shadow-sm">
+                <Flame className="w-3.5 h-3.5 fill-current text-orange-400" />
+                <span>Daily Learning Streak</span>
               </span>
               {streakData.studiedToday && (
-                <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-medium">
-                  <Check className="w-3 h-3" />
-                  <span>Studied Today</span>
+                <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-medium">
+                  <Check className="w-3 h-3 stroke-[2.5]" />
+                  <span>Completed Today</span>
                 </span>
               )}
             </div>
 
-            <div className="flex items-baseline gap-2.5">
+            <div className="flex items-baseline gap-2.5 relative z-10">
               <span className="text-3xl sm:text-4xl font-extrabold text-foreground tracking-tight">
                 {streakData.currentStreak}
               </span>
@@ -714,14 +779,17 @@ export function CourseCalendarView({
                   Day{streakData.currentStreak === 1 ? '' : 's'} Streak
                 </p>
                 <p className="text-xs text-muted-foreground">
-                  Personal Best: {streakData.longestStreak} days
+                  Best: <span className="font-medium text-foreground/85">{streakData.longestStreak} days in a row</span>
                 </p>
               </div>
             </div>
 
-            {/* Weekly 7-Day Activity Strip */}
-            <div className="space-y-1.5 pt-0.5">
-              <div className="flex items-center gap-1.5">
+            {/* Weekly 7-Day Activity Strip with solid color block background behind M T W T F S S */}
+            <div className="pt-3 mt-1 space-y-2 relative z-10 border-t border-white/[0.06]">
+              <span className="block text-[11px] font-semibold text-muted-foreground tracking-wide">
+                This Week&apos;s Activity
+              </span>
+              <div className="flex items-center gap-2 flex-nowrap">
                 {['M', 'T', 'W', 'T', 'F', 'S', 'S'].map((dayLetter, idx) => {
                   const isActive = streakData.activeDaysThisWeek[idx];
                   const isTodayIndex = (new Date().getDay() + 6) % 7 === idx;
@@ -729,20 +797,20 @@ export function CourseCalendarView({
                   return (
                     <div
                       key={idx}
-                      className="flex flex-col items-center gap-1"
+                      className="flex flex-col items-center"
                       title={isActive ? `Day ${idx + 1}: Studied` : `Day ${idx + 1}`}
                     >
                       <div
-                        className={`w-7 h-7 rounded-lg flex items-center justify-center font-semibold text-xs transition-colors ${
+                        className={`w-7.5 h-7.5 sm:w-8 sm:h-8 rounded-lg flex items-center justify-center font-bold text-xs transition-colors border ${
                           isActive
-                            ? 'bg-amber-500/20 text-amber-400 border border-amber-500/30'
+                            ? 'bg-amber-500 border-amber-400 text-slate-950 shadow-sm'
                             : isTodayIndex
-                            ? 'bg-card border border-primary-500/50 text-foreground font-bold'
-                            : 'bg-card/40 border border-card-border/60 text-muted-foreground'
+                            ? 'bg-card border-2 border-primary-500 text-foreground font-black'
+                            : 'bg-card border-card-border text-muted-foreground hover:border-card-border/80'
                         }`}
                       >
                         {isActive ? (
-                          <Flame className="w-3 h-3 fill-current" />
+                          <Flame className="w-3.5 h-3.5 fill-current" />
                         ) : (
                           dayLetter
                         )}
@@ -774,9 +842,40 @@ export function CourseCalendarView({
                     </h4>
                   </div>
 
-                  <span className="text-xs font-mono font-medium text-muted-foreground shrink-0 px-2 py-1 rounded bg-card border border-card-border">
-                    {nextTargetDay.completedCount}/{nextTargetDay.totalLectures} Done
-                  </span>
+                  {/* Circle Progress Bar with Number in Between */}
+                  <div className="relative w-14 h-14 shrink-0 flex items-center justify-center">
+                    <svg className="w-14 h-14 -rotate-90" viewBox="0 0 60 60">
+                      <circle
+                        cx="30"
+                        cy="30"
+                        r={24}
+                        className="stroke-card-border"
+                        strokeWidth="4.5"
+                        fill="transparent"
+                      />
+                      <circle
+                        cx="30"
+                        cy="30"
+                        r={24}
+                        className="stroke-primary-500 transition-all duration-300"
+                        strokeWidth="4.5"
+                        strokeDasharray={2 * Math.PI * 24}
+                        strokeDashoffset={
+                          2 * Math.PI * 24 - (nextTargetDay.progressPercent / 100) * (2 * Math.PI * 24)
+                        }
+                        strokeLinecap="round"
+                        fill="transparent"
+                      />
+                    </svg>
+                    <div className="absolute inset-0 flex flex-col items-center justify-center text-center select-none pointer-events-none">
+                      <span className="text-xs font-bold font-mono text-foreground leading-none">
+                        {nextTargetDay.completedCount}/{nextTargetDay.totalLectures}
+                      </span>
+                      <span className="text-[9px] font-medium text-muted-foreground leading-none mt-0.5">
+                        Done
+                      </span>
+                    </div>
+                  </div>
                 </div>
 
                 {/* Progress Bar */}
@@ -796,17 +895,7 @@ export function CourseCalendarView({
                 </div>
 
                 {/* Actions */}
-                <div className="pt-0.5 flex items-center justify-between gap-2">
-                  <button
-                    type="button"
-                    onClick={() => handleToggleAllDay(nextTargetDay)}
-                    className="px-2.5 py-1.5 rounded-lg text-xs font-medium flex items-center gap-1.5 transition-colors cursor-pointer bg-card hover:bg-card-border/60 text-muted-foreground hover:text-foreground border border-card-border"
-                    title="Mark all lectures in today's target complete"
-                  >
-                    <CheckCheck className="w-3.5 h-3.5" />
-                    <span>{nextTargetDay.isCompleted ? 'Mark Incomplete' : 'Finish Day'}</span>
-                  </button>
-
+                <div className="pt-0.5 flex items-center justify-end">
                   {(() => {
                     const firstUnfinished =
                       nextTargetDay.items.find(
@@ -818,10 +907,10 @@ export function CourseCalendarView({
                     return (
                       <Link
                         href={`/courses/${course.slug}/video/${firstUnfinished.videoId}`}
-                        className="px-3.5 py-1.5 rounded-xl bg-primary-600 hover:bg-primary-500 text-white text-xs font-bold shadow-md shadow-primary-600/30 transition-all flex items-center gap-1.5 ml-auto"
+                        className="w-full sm:w-auto px-4 py-2 rounded-xl bg-primary-600 hover:bg-primary-500 text-white text-xs font-bold shadow-md shadow-primary-600/30 transition-all flex items-center justify-center gap-1.5 ml-auto"
                       >
                         <Play className="w-3.5 h-3.5 fill-current" />
-                        <span>Start Target</span>
+                        <span>{nextTargetDay.isCompleted ? 'Review Target' : 'Start Target'}</span>
                         <ArrowRight className="w-3.5 h-3.5" />
                       </Link>
                     );
@@ -847,11 +936,15 @@ export function CourseCalendarView({
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
         <div className="p-3.5 rounded-xl bg-card/50 border border-card-border space-y-1">
           <span className="text-[11px] font-medium text-muted-foreground">
-            {scheduleMode === 'paced' ? 'Daily Targets' : 'Upload Drops'}
+            {scheduleMode === 'paced' ? 'Target Completion' : 'Latest Upload'}
           </span>
           <div className="flex items-baseline gap-1.5">
-            <p className="text-xl font-bold text-foreground">{totalDays}</p>
-            <span className="text-xs text-muted-foreground">Days</span>
+            <p className="text-xl font-bold text-foreground truncate">
+              {targetEndDate || 'In Progress'}
+            </p>
+            <span className="text-xs text-muted-foreground">
+              {scheduleMode === 'paced' ? 'Goal' : 'Drop'}
+            </span>
           </div>
         </div>
 
@@ -909,7 +1002,7 @@ export function CourseCalendarView({
             }`}
           >
             <Target className="w-3.5 h-3.5" />
-            <span>Paced Targets (~1.5h/day)</span>
+            <span>Paced Targets</span>
           </button>
 
           <button
@@ -1065,10 +1158,10 @@ export function CourseCalendarView({
                 id={`calendar-day-${day.dayNumber}`}
                 className={`rounded-xl border transition-colors overflow-hidden ${
                   day.isNextTarget
-                    ? 'border-primary-500/50 bg-card/60'
+                    ? 'border-primary-500/40 bg-card/90 shadow-md shadow-primary-500/10'
                     : day.isCompleted
                     ? 'border-card-border/60 bg-card/25'
-                    : 'border-card-border bg-card/40 hover:border-card-border/80'
+                    : 'border-card-border/80 bg-card/40 hover:border-primary-500/30'
                 }`}
               >
                 {/* ── Day Header (Clickable) ── */}
@@ -1091,8 +1184,8 @@ export function CourseCalendarView({
                         day.isCompleted
                           ? 'bg-emerald-500/15 text-emerald-400 border border-emerald-500/30 shadow-sm'
                           : day.isNextTarget
-                          ? 'bg-primary-500/20 text-primary-300 border border-primary-500/40 shadow-sm ring-2 ring-primary-500/20'
-                          : 'bg-card/90 border border-white/[0.08] text-muted-foreground group-hover:text-foreground group-hover:border-white/20 shadow-sm'
+                          ? 'bg-primary-500 text-white border border-primary-400 shadow-md shadow-primary-500/25 font-black ring-2 ring-primary-500/30'
+                          : 'bg-primary-500/15 text-primary-300 border border-primary-500/25 shadow-sm group-hover:bg-primary-500/25 group-hover:text-primary-200'
                       }`}
                     >
                       {day.isCompleted ? (
@@ -1109,8 +1202,8 @@ export function CourseCalendarView({
                         </h3>
 
                         {day.isNextTarget && (
-                          <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-primary-500/15 border border-primary-500/25 text-primary-300 text-[10px] font-bold uppercase tracking-wider">
-                            <span className="w-1.5 h-1.5 rounded-full bg-primary-400 animate-pulse" />
+                          <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-primary-500 text-white border border-primary-400 text-[10px] font-bold uppercase tracking-wider shadow-sm">
+                            <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
                             Today&apos;s Target
                           </span>
                         )}
@@ -1125,37 +1218,13 @@ export function CourseCalendarView({
 
                       <p className="text-xs text-muted-foreground mt-0.5 flex items-center gap-1.5 flex-wrap">
                         <span>{day.formattedDate} ({day.dayOfWeek})</span>
-                        {day.originalUploadDate && day.originalUploadDate !== day.formattedDate && (
-                          <>
-                            <span className="text-white/20">•</span>
-                            <span className="text-muted-foreground/70">Released: {day.originalUploadDate}</span>
-                          </>
-                        )}
+
                       </p>
                     </div>
                   </div>
 
-                  {/* Right: Batch Finish Button + Metrics + Chevron */}
+                  {/* Right: Metrics + Chevron */}
                   <div className="flex items-center justify-between sm:justify-end gap-2.5 w-full sm:w-auto pt-2 sm:pt-0 border-t sm:border-t-0 border-white/[0.06]">
-                    <button
-                      type="button"
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        handleToggleAllDay(day);
-                      }}
-                      className={`px-3 py-1.5 rounded-xl text-xs font-semibold flex items-center gap-1.5 transition-all cursor-pointer ${
-                        day.isCompleted
-                          ? 'bg-emerald-500/15 text-emerald-400 border border-emerald-500/30 hover:bg-emerald-500/25 shadow-sm'
-                          : 'bg-card/90 hover:bg-white/[0.08] text-muted-foreground hover:text-foreground border border-white/[0.08]'
-                      }`}
-                      title={day.isCompleted ? 'Mark all lectures incomplete' : 'Mark all lectures completed'}
-                    >
-                      <CheckCheck className="w-3.5 h-3.5" />
-                      <span className="hidden sm:inline">
-                        {day.isCompleted ? 'All Done' : 'Finish Day'}
-                      </span>
-                    </button>
-
                     <div className="flex items-center gap-2 text-xs">
                       <span className="text-muted-foreground font-medium flex items-center gap-1.5 px-2.5 py-1 rounded-xl bg-card/60 border border-white/[0.06]">
                         <span>{day.totalLectures} {day.totalLectures === 1 ? 'lecture' : 'lectures'}</span>
@@ -1193,25 +1262,22 @@ export function CourseCalendarView({
                             isItemCompleted ? 'bg-card/15 opacity-80 hover:opacity-100' : 'hover:bg-white/[0.02]'
                           }`}
                         >
-                          {/* Unit Title, Checkbox & Section Badge */}
+                          {/* Unit Title, Status Indicator & Section Badge */}
                           <div className="flex items-center gap-3 min-w-0 flex-1">
-                            <button
-                              type="button"
-                              onClick={(e) => {
-                                e.stopPropagation();
-                                if (item.videoId) {
-                                  onToggleComplete(item.videoId);
-                                }
-                              }}
-                              className={`w-4.5 h-4.5 rounded-md flex items-center justify-center shrink-0 border transition-all cursor-pointer ${
+                            <div
+                              className={`w-5 h-5 rounded-md flex items-center justify-center shrink-0 border transition-colors ${
                                 isItemCompleted
-                                  ? 'bg-emerald-500 border-emerald-500 text-white shadow-sm shadow-emerald-500/25'
-                                  : 'border-white/20 hover:border-primary-400 bg-white/[0.02] text-transparent'
+                                  ? 'bg-emerald-500/15 border-emerald-500/30 text-emerald-400'
+                                  : 'border-white/10 bg-white/[0.02] text-muted-foreground/40'
                               }`}
-                              title={isItemCompleted ? 'Mark as incomplete' : 'Mark as completed'}
+                              title={isItemCompleted ? 'Completed (Watched in player)' : 'Not watched yet'}
                             >
-                              <Check className="w-3 h-3 stroke-[3]" />
-                            </button>
+                              {isItemCompleted ? (
+                                <Check className="w-3 h-3 stroke-[2.5]" />
+                              ) : (
+                                <span className="w-1.5 h-1.5 rounded-full bg-white/20" />
+                              )}
+                            </div>
 
                             <div className="min-w-0 flex-1 flex items-baseline gap-2 flex-wrap sm:flex-nowrap">
                               <span className="text-[11px] text-muted-foreground/60 font-mono shrink-0">
@@ -1220,15 +1286,28 @@ export function CourseCalendarView({
                               <span className="text-[10px] text-muted-foreground/80 px-2 py-0.5 rounded-md bg-white/[0.04] border border-white/[0.04] truncate max-w-[170px] shrink-0 font-medium">
                                 {item.sectionTitle}
                               </span>
-                              <h4
-                                className={`text-xs sm:text-sm font-medium leading-snug truncate transition-colors ${
-                                  isItemCompleted
-                                    ? 'line-through text-muted-foreground'
-                                    : 'text-foreground group-hover/item:text-primary-300'
-                                }`}
-                              >
-                                {item.unit.title || item.unit.unitTitle || 'Lesson'}
-                              </h4>
+                              {item.videoId ? (
+                                <Link
+                                  href={`/courses/${course.slug}/video/${item.videoId}`}
+                                  className={`text-xs sm:text-sm font-medium leading-snug truncate transition-colors hover:text-primary-300 ${
+                                    isItemCompleted
+                                      ? 'line-through text-muted-foreground'
+                                      : 'text-foreground'
+                                  }`}
+                                >
+                                  {item.unit.title || item.unit.unitTitle || 'Lesson'}
+                                </Link>
+                              ) : (
+                                <h4
+                                  className={`text-xs sm:text-sm font-medium leading-snug truncate transition-colors ${
+                                    isItemCompleted
+                                      ? 'line-through text-muted-foreground'
+                                      : 'text-foreground'
+                                  }`}
+                                >
+                                  {item.unit.title || item.unit.unitTitle || 'Lesson'}
+                                </h4>
+                              )}
                             </div>
                           </div>
 

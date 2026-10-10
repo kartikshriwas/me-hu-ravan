@@ -323,20 +323,36 @@ export function CourseDetailClient({ course, availableTests, isUnlocked = true }
   const [viewMode, setViewMode] = useState<'default' | 'calendar'>('default');
   const [completedVideos, setCompletedVideos] = useState<string[]>([]);
 
-  // Load preferred view mode and completed videos
+  // Load preferred view mode and sync completed videos
   useEffect(() => {
     try {
       const savedMode = localStorage.getItem(`preptea_view_mode_${course.slug}`);
       if (savedMode === 'calendar' || savedMode === 'default') {
         setViewMode(savedMode);
       }
-      const savedCompleted = localStorage.getItem('preptea_completed_videos');
-      if (savedCompleted) {
-        setCompletedVideos(JSON.parse(savedCompleted));
-      }
-    } catch (e) {
-      // ignore
-    }
+    } catch (e) {}
+
+    const syncCompleted = () => {
+      try {
+        const savedCompleted = localStorage.getItem('preptea_completed_videos');
+        if (savedCompleted) {
+          setCompletedVideos(JSON.parse(savedCompleted));
+        } else {
+          setCompletedVideos([]);
+        }
+      } catch (e) {}
+    };
+
+    syncCompleted();
+    window.addEventListener('storage', syncCompleted);
+    window.addEventListener('focus', syncCompleted);
+    window.addEventListener('preptea_study_update', syncCompleted);
+
+    return () => {
+      window.removeEventListener('storage', syncCompleted);
+      window.removeEventListener('focus', syncCompleted);
+      window.removeEventListener('preptea_study_update', syncCompleted);
+    };
   }, [course.slug]);
 
   const handleSetViewMode = (mode: 'default' | 'calendar') => {
