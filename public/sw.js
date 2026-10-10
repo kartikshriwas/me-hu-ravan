@@ -1,5 +1,5 @@
-// PrepTea Service Worker - App Shell Architecture v2
-const CACHE_NAME = 'preptea-shell-v3';
+// PrepTea Service Worker - App Shell Architecture v4
+const CACHE_NAME = 'preptea-shell-v4';
 
 const APP_SHELL_ASSETS = [
   '/',
@@ -10,10 +10,11 @@ const APP_SHELL_ASSETS = [
 ];
 
 self.addEventListener('install', (event) => {
+  self.skipWaiting();
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
-      return cache.addAll(APP_SHELL_ASSETS);
-    }).then(() => self.skipWaiting())
+      return cache.addAll(APP_SHELL_ASSETS).catch(() => {});
+    })
   );
 });
 
@@ -46,7 +47,7 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
-  // 1. Navigation requests (Page loading and refreshes) - Network First
+  // 1. Navigation requests (Page loading and refreshes) - Network First with Cache Fallback
   if (request.mode === 'navigate') {
     event.respondWith(
       fetch(request)
@@ -72,7 +73,8 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
-  // 2. Next.js chunks and static assets
+  // 2. Next.js chunks, scripts, styles and static assets - Network First with Cache Fallback
+  // Ensures users ALWAYS see latest UI without manual hard refresh (Ctrl + Shift + R)
   const isStaticAsset =
     url.pathname.startsWith('/_next/static/') ||
     url.pathname.endsWith('.js') ||
@@ -83,24 +85,19 @@ self.addEventListener('fetch', (event) => {
 
   if (isStaticAsset) {
     event.respondWith(
-      caches.match(request).then((cachedResponse) => {
-        if (cachedResponse) {
-          return cachedResponse;
-        }
-
-        return fetch(request)
-          .then((networkResponse) => {
-            if (networkResponse && networkResponse.status === 200) {
-              const copy = networkResponse.clone();
-              caches.open(CACHE_NAME).then((cache) => cache.put(request, copy));
-            }
-            return networkResponse;
-          })
-          .catch(() => {
-            // Return empty response or let caller handle chunk failure cleanly without crashing SW
-            return new Response(null, { status: 408, statusText: 'Request timed out or offline' });
-          });
-      })
+      fetch(request)
+        .then((networkResponse) => {
+          if (networkResponse && networkResponse.status === 200) {
+            const copy = networkResponse.clone();
+            caches.open(CACHE_NAME).then((cache) => cache.put(request, copy));
+          }
+          return networkResponse;
+        })
+        .catch(async () => {
+          const cached = await caches.match(request);
+          if (cached) return cached;
+          return new Response(null, { status: 408, statusText: 'Offline' });
+        })
     );
     return;
   }
