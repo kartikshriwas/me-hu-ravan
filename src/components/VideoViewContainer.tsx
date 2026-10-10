@@ -2,10 +2,28 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import dynamic from 'next/dynamic';
 import { ArrowLeft, RectangleHorizontal, Tv } from 'lucide-react';
 import { CustomVideoPlayer } from '@/components/CustomVideoPlayer';
-import { VideoPlaylistSidebar } from '@/components/VideoPlaylistSidebar';
 import { CourseDetail } from '@/lib/types';
+
+const VideoPlaylistSidebar = dynamic(
+  () => import('@/components/VideoPlaylistSidebar').then((m) => m.VideoPlaylistSidebar),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="w-full h-full min-h-[400px] rounded-2xl bg-card/40 border border-card-border/60 animate-pulse flex flex-col p-4 space-y-4">
+        <div className="h-6 w-3/4 bg-slate-800 rounded-lg" />
+        <div className="h-4 w-1/2 bg-slate-800/60 rounded" />
+        <div className="space-y-2 pt-4">
+          <div className="h-12 bg-slate-800/40 rounded-xl" />
+          <div className="h-12 bg-slate-800/40 rounded-xl" />
+          <div className="h-12 bg-slate-800/40 rounded-xl" />
+        </div>
+      </div>
+    ),
+  }
+);
 
 interface VideoViewContainerProps {
   course: CourseDetail;

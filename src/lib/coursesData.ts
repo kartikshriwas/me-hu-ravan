@@ -128,7 +128,20 @@ export function isUnitActionable(unit: Partial<CourseSectionUnit>): boolean {
   return false;
 }
 
+let cachedAllCourses: CourseMeta[] | null = null;
+let cachedAllCoursesTimestamp = 0;
+
+export function invalidateAllCoursesCache() {
+  cachedAllCourses = null;
+  cachedAllCoursesTimestamp = 0;
+}
+
 export function getAllCourses(): CourseMeta[] {
+  const now = Date.now();
+  if (cachedAllCourses && now - cachedAllCoursesTimestamp < 60000) {
+    return cachedAllCourses;
+  }
+
   const dir = getCoursesDirectory();
   if (!fs.existsSync(dir)) return [];
 
@@ -233,6 +246,8 @@ export function getAllCourses(): CourseMeta[] {
     }
   }
 
+  cachedAllCourses = results;
+  cachedAllCoursesTimestamp = now;
   return results;
 }
 

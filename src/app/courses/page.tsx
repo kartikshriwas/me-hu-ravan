@@ -2,7 +2,7 @@ import { getAllCourses } from '@/lib/coursesData';
 import { cookies } from 'next/headers';
 import { notFound } from 'next/navigation';
 import { auth } from '@/auth';
-import { hasCoursesAccess, isCourseSlugUnlocked } from '@/lib/coursesAuth';
+import { hasCoursesAccess, getUnlockedCourseSlugsMap } from '@/lib/coursesAuth';
 import { CoursesCatalogGrid } from '@/components/CoursesCatalogGrid';
 
 export const revalidate = 0;
@@ -17,13 +17,12 @@ export default async function CoursesCatalogPage() {
   }
 
   const allCourses = getAllCourses();
+  const isSlugUnlocked = await getUnlockedCourseSlugsMap(sessionUser);
 
-  const courses = await Promise.all(
-    allCourses.map(async (course) => {
-      const isUnlocked = await isCourseSlugUnlocked(sessionUser, course.slug);
-      return { ...course, isUnlocked };
-    })
-  );
+  const courses = allCourses.map((course) => ({
+    ...course,
+    isUnlocked: isSlugUnlocked(course.slug),
+  }));
 
   return (
     <main className="w-full px-4 sm:px-8 lg:px-12 py-6 space-y-8">

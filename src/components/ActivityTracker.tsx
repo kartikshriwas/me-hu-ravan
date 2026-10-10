@@ -67,18 +67,16 @@ export function ActivityTracker() {
   useEffect(() => {
     const handleUserInteraction = () => {
       const now = Date.now();
-      if (now - lastActivityTimeRef.current > 1000) {
+      if (now - lastActivityTimeRef.current > 2500) {
         lastActivityTimeRef.current = now;
       }
     };
 
     const interactionEvents = [
-      'mousemove',
       'keydown',
       'click',
       'scroll',
       'touchstart',
-      'pointermove',
       'wheel',
       'focus',
     ];
@@ -86,8 +84,8 @@ export function ActivityTracker() {
       window.addEventListener(evt, handleUserInteraction, { passive: true })
     );
 
-    // Media playback events (keep active timestamp updated continuously when playing media)
-    const mediaEvents = ['timeupdate', 'playing', 'play'];
+    // Media playback events (heartbeat loop already updates active timestamp via checkIsMediaPlaying)
+    const mediaEvents = ['playing', 'play'];
     mediaEvents.forEach((evt) =>
       window.addEventListener(evt, handleUserInteraction, { capture: true, passive: true })
     );
