@@ -44,9 +44,12 @@ import {
   Sparkles,
   CalendarDays,
   Flame,
+  Pause,
+  Settings,
 } from 'lucide-react';
 import { useDownloads } from '@/lib/downloadContext';
 import { DownloadLessonModal, SingleLessonDownloadTarget } from '@/components/DownloadLessonModal';
+import { getRememberedQuality, saveRememberedQuality } from '@/lib/qualityMatcher';
 import { CourseCalendarView } from '@/components/CourseCalendarView';
 import { recordVideoCompletionToDb, syncLocalProgressToDb } from '@/lib/userProgressClient';
 
@@ -303,6 +306,8 @@ export function CourseDetailClient({ course, availableTests, isUnlocked = true }
   const {
     isDownloaded,
     isDownloading,
+    isQueued,
+    isPaused,
     getDownloadProgress,
     startDownload,
     downloadSection,
@@ -315,6 +320,9 @@ export function CourseDetailClient({ course, availableTests, isUnlocked = true }
     getSectionDownloadedCount,
     deleteCourseDownloads,
     deleteSectionDownloads,
+    deleteDownload,
+    pauseDownload,
+    resumeDownload,
     batchProgress,
     cancelBatchDownload,
   } = useDownloads();
@@ -455,6 +463,15 @@ export function CourseDetailClient({ course, availableTests, isUnlocked = true }
     section?: { title: string; id: string; units: CourseSectionUnit[] };
   } | null>(null);
   const [selectedQuality, setSelectedQuality] = useState<string>('720p');
+  const [rememberPreference, setRememberPreference] = useState<boolean>(false);
+
+  useEffect(() => {
+    setSelectedQuality(getRememberedQuality('720p'));
+    if (typeof window !== 'undefined') {
+      setRememberPreference(localStorage.getItem('preptea_remember_download_quality') === 'true');
+    }
+  }, []);
+
   const [singleDownloadModal, setSingleDownloadModal] = useState<SingleLessonDownloadTarget | null>(null);
 
   // Downloadable video units in the entire course
@@ -519,8 +536,72 @@ export function CourseDetailClient({ course, availableTests, isUnlocked = true }
     []
   );
 
-  const handleDownloadCourse = () => {
+  // Batch total duration in seconds for currently opened bundleQualityModal
+  const modalBatchSecs = useMemo(() => {
+    if (!bundleQualityModal) return 0;
+    if (bundleQualityModal.type === 'course') {
+      return courseVideoUnits.reduce((acc, u) => acc + (u.duration || 0), 0);
+    }
+    if (bundleQualityModal.section) {
+      return getSectionVideoUnits(bundleQualityModal.section).reduce((acc, u) => acc + (u.duration || 0), 0);
+    }
+    return 0;
+  }, [bundleQualityModal, courseVideoUnits, getSectionVideoUnits]);
+
+  const formatBatchEstimatedSize = (quality: string) => {
+    if (!bundleQualityModal) return '';
+    const kbpsMap: Record<string, number> = {
+      '1080p': 924,
+      '720p': 552,
+      '540p': 393,
+      '360p': 267,
+    };
+    const kbps = kbpsMap[quality] || 552;
+    const numVideos = bundleQualityModal.totalVideos || 1;
+
+    if (modalBatchSecs > 0) {
+      const totalBytes = modalBatchSecs * (kbps * 1000 / 8);
+      const totalMb = totalBytes / (1024 * 1024);
+      const avgMb = totalMb / numVideos;
+
+      if (numVideos === 1) {
+        return totalMb >= 1024 ? `~${(totalMb / 1024).toFixed(1)} GB` : `~${totalMb.toFixed(1)} MB`;
+      }
+
+      const totalStr = totalMb >= 1024 ? `${(totalMb / 1024).toFixed(1)} GB` : `${Math.round(totalMb)} MB`;
+      const avgStr = avgMb >= 1024 ? `${(avgMb / 1024).toFixed(1)} GB/lesson` : `${Math.round(avgMb)} MB/lesson`;
+      return `${totalStr} • ~${avgStr}`;
+    }
+
+    const fallbackSecs = numVideos * 600;
+    const totalBytes = fallbackSecs * (kbps * 1000 / 8);
+    const totalMb = totalBytes / (1024 * 1024);
+    const avgMb = totalMb / numVideos;
+    if (numVideos === 1) {
+      return `~${Math.round(totalMb)} MB`;
+    }
+    return `${totalMb >= 1024 ? (totalMb / 1024).toFixed(1) + ' GB' : Math.round(totalMb) + ' MB'} • ~${Math.round(avgMb)} MB/lesson`;
+  };
+
+  const handleDownloadCourse = async () => {
     if (!isUnlocked) return;
+    const rem = typeof window !== 'undefined' && localStorage.getItem('preptea_remember_download_quality') === 'true';
+    if (rem) {
+      const pref = getRememberedQuality('720p');
+      const sectionsPayload = course.sections.map((sec) => ({
+        sectionTitle: sec.title,
+        sectionId: sec.id,
+        units: getSectionVideoUnits(sec),
+      }));
+      await downloadCourse({
+        courseSlug: course.slug,
+        courseTitle: course.title,
+        preferredQuality: pref,
+        sections: sectionsPayload,
+      });
+      return;
+    }
+    setSelectedQuality(getRememberedQuality('720p'));
     setBundleQualityModal({
       type: 'course',
       title: course.title,
@@ -528,13 +609,27 @@ export function CourseDetailClient({ course, availableTests, isUnlocked = true }
     });
   };
 
-  const handleDownloadSection = (
+  const handleDownloadSection = async (
     e: React.MouseEvent,
     section: { title: string; id: string; units: CourseSectionUnit[] }
   ) => {
     e.stopPropagation();
     if (!isUnlocked) return;
     const units = getSectionVideoUnits(section);
+    const rem = typeof window !== 'undefined' && localStorage.getItem('preptea_remember_download_quality') === 'true';
+    if (rem) {
+      const pref = getRememberedQuality('720p');
+      await downloadSection({
+        courseSlug: course.slug,
+        courseTitle: course.title,
+        sectionTitle: section.title,
+        sectionId: section.id,
+        preferredQuality: pref,
+        units,
+      });
+      return;
+    }
+    setSelectedQuality(getRememberedQuality('720p'));
     setBundleQualityModal({
       type: 'section',
       title: section.title,
@@ -553,6 +648,23 @@ export function CourseDetailClient({ course, availableTests, isUnlocked = true }
     if (!isUnlocked) return;
     const videoId = unit.sourceid || unit.id;
     if (!videoId) return;
+
+    if (typeof window !== 'undefined' && localStorage.getItem('preptea_remember_download_quality') === 'true') {
+      const prefQuality = localStorage.getItem('preptea_preferred_quality') || '720';
+      const cleanQuality = `${prefQuality.replace(/\D/g, '') || '720'}p`;
+      startDownload({
+        videoId,
+        courseSlug: course.slug,
+        courseTitle: course.title,
+        sectionTitle,
+        sectionId,
+        unitTitle: (unit.unitTitle && unit.unitTitle !== 'Untitled') ? unit.unitTitle : 'Video Lesson',
+        thumbnailUrl: '',
+        durationSeconds: unit.duration || 0,
+        quality: cleanQuality,
+      });
+      return;
+    }
 
     setSingleDownloadModal({
       videoId,
@@ -725,21 +837,21 @@ export function CourseDetailClient({ course, availableTests, isUnlocked = true }
       )}
 
       {/* Course Banner Header */}
-      <header className="glass-panel rounded-3xl p-6 sm:p-10 border border-card-border space-y-6 relative overflow-hidden">
+      <header className="glass-panel rounded-2xl sm:rounded-3xl p-5 sm:p-8 md:p-10 border border-card-border space-y-5 sm:space-y-6 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-80 h-80 bg-primary-600/10 rounded-full blur-3xl pointer-events-none" />
 
         <div className="flex items-center gap-3 flex-wrap">
-          <h1 className="text-3xl sm:text-4xl font-black text-foreground">{course.title}</h1>
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-foreground tracking-tight leading-tight">{course.title}</h1>
           {course.isOngoing && (
-            <span className="inline-flex items-center gap-1.5 text-xs font-extrabold uppercase px-3 py-1 rounded-lg bg-cyan-500/20 text-cyan-600 dark:text-cyan-300 border border-cyan-500/40 shadow-sm shadow-cyan-500/10">
-              <span className="w-2 h-2 rounded-full bg-cyan-400 animate-ping" />
+            <span className="inline-flex items-center gap-1.5 text-[11px] sm:text-xs font-extrabold uppercase px-2.5 sm:px-3 py-1 rounded-lg bg-cyan-500/20 text-cyan-600 dark:text-cyan-300 border border-cyan-500/40 shadow-sm shadow-cyan-500/10">
+              <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-cyan-400 animate-ping" />
               Ongoing Course
             </span>
           )}
         </div>
 
         {course.keywords && (
-          <p className="text-sm text-foreground/80 max-w-3xl leading-relaxed">
+          <p className="text-xs sm:text-sm text-foreground/80 max-w-3xl leading-relaxed">
             {course.keywords}
           </p>
         )}
@@ -748,12 +860,12 @@ export function CourseDetailClient({ course, availableTests, isUnlocked = true }
           <div className="pt-1">
             <Link
               href={`/courses/${course.slug}/video/${lastVideoInfo.videoId}`}
-              className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-xl bg-primary-600 hover:bg-primary-500 text-white font-bold text-xs shadow-lg shadow-primary-600/30 transition-all active:scale-95 group max-w-full"
+              className="w-full sm:w-auto inline-flex items-center justify-center sm:justify-start gap-2.5 px-4 sm:px-5 py-2.5 rounded-xl bg-primary-600 hover:bg-primary-500 text-white font-bold text-xs shadow-lg shadow-primary-600/30 transition-all active:scale-95 group max-w-full"
             >
               <Play className="w-4 h-4 fill-white shrink-0 group-hover:scale-110 transition-transform" />
-              <div className="flex items-center gap-1.5 min-w-0 flex-wrap">
+              <div className="flex items-center gap-1.5 min-w-0 truncate">
                 <span className="font-extrabold shrink-0">Resume Learning:</span>
-                <span className="text-[11px] font-medium text-primary-200 truncate max-w-[240px] sm:max-w-[360px]">
+                <span className="text-[11px] font-medium text-primary-200 truncate">
                   {lastVideoInfo.title || 'Video Lesson'} ({Math.floor((lastVideoInfo.timestamp || 0) / 60)}:{(Math.floor((lastVideoInfo.timestamp || 0) % 60) < 10 ? '0' : '') + Math.floor((lastVideoInfo.timestamp || 0) % 60)})
                 </span>
               </div>
@@ -762,81 +874,81 @@ export function CourseDetailClient({ course, availableTests, isUnlocked = true }
         )}
 
         {/* Course Breakdown Header Stats Bar */}
-        <div className="flex items-center gap-6 pt-4 border-t border-card-border/80 text-xs text-muted-foreground flex-wrap">
+        <div className="grid grid-cols-2 xs:grid-cols-3 sm:flex sm:flex-wrap items-center gap-2.5 sm:gap-6 pt-4 border-t border-card-border/80 text-xs text-muted-foreground">
           {course.sectionsCount > 0 && (
-            <div className="flex items-center gap-2">
-              <Layers className="w-4 h-4 text-primary-600 dark:text-primary-400" />
-              <strong className="text-foreground">{course.sectionsCount}</strong> Sections
+            <div className="flex items-center gap-2 p-2 sm:p-0 rounded-xl bg-card-border/20 sm:bg-transparent min-w-0">
+              <Layers className="w-4 h-4 text-primary-600 dark:text-primary-400 shrink-0" />
+              <span className="truncate"><strong className="text-foreground">{course.sectionsCount}</strong> Sections</span>
             </div>
           )}
 
           {contentCounts.video > 0 && (
-            <div className="flex items-center gap-2">
-              <Video className="w-4 h-4 text-blue-600 dark:text-blue-400" />
-              <strong className="text-foreground">{contentCounts.video}</strong> Videos
+            <div className="flex items-center gap-2 p-2 sm:p-0 rounded-xl bg-card-border/20 sm:bg-transparent min-w-0">
+              <Video className="w-4 h-4 text-blue-600 dark:text-blue-400 shrink-0" />
+              <span className="truncate"><strong className="text-foreground">{contentCounts.video}</strong> Videos</span>
             </div>
           )}
 
           {contentCounts.quiz > 0 && (
-            <div className="flex items-center gap-2">
-              <FileCheck2 className="w-4 h-4 text-primary-600 dark:text-primary-400" />
-              <strong className="text-foreground">{contentCounts.quiz}</strong> Quizzes
+            <div className="flex items-center gap-2 p-2 sm:p-0 rounded-xl bg-card-border/20 sm:bg-transparent min-w-0">
+              <FileCheck2 className="w-4 h-4 text-primary-600 dark:text-primary-400 shrink-0" />
+              <span className="truncate"><strong className="text-foreground">{contentCounts.quiz}</strong> Quizzes</span>
             </div>
           )}
 
           {contentCounts.pdf > 0 && (
-            <div className="flex items-center gap-2">
-              <FileText className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
-              <strong className="text-foreground">{contentCounts.pdf}</strong> PDFs
+            <div className="flex items-center gap-2 p-2 sm:p-0 rounded-xl bg-card-border/20 sm:bg-transparent min-w-0">
+              <FileText className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0" />
+              <span className="truncate"><strong className="text-foreground">{contentCounts.pdf}</strong> PDFs</span>
             </div>
           )}
 
           {contentCounts.ebook > 0 && (
-            <div className="flex items-center gap-2">
-              <BookOpen className="w-4 h-4 text-teal-400" />
-              <strong className="text-foreground">{contentCounts.ebook}</strong> {contentCounts.ebook === 1 ? 'eBook' : 'eBooks'}
+            <div className="flex items-center gap-2 p-2 sm:p-0 rounded-xl bg-card-border/20 sm:bg-transparent min-w-0">
+              <BookOpen className="w-4 h-4 text-teal-400 shrink-0" />
+              <span className="truncate"><strong className="text-foreground">{contentCounts.ebook}</strong> {contentCounts.ebook === 1 ? 'eBook' : 'eBooks'}</span>
             </div>
           )}
 
           {contentCounts.cert > 0 && (
-            <div className="flex items-center gap-2">
-              <Award className="w-4 h-4 text-amber-600 dark:text-amber-400" />
-              <strong className="text-foreground">{contentCounts.cert}</strong> {contentCounts.cert === 1 ? 'Certificate' : 'Certificates'}
+            <div className="flex items-center gap-2 p-2 sm:p-0 rounded-xl bg-card-border/20 sm:bg-transparent min-w-0">
+              <Award className="w-4 h-4 text-amber-600 dark:text-amber-400 shrink-0" />
+              <span className="truncate"><strong className="text-foreground">{contentCounts.cert}</strong> {contentCounts.cert === 1 ? 'Certificate' : 'Certificates'}</span>
             </div>
           )}
 
           {contentCounts.audio > 0 && (
-            <div className="flex items-center gap-2">
-              <Headphones className="w-4 h-4 text-rose-600 dark:text-rose-400" />
-              <strong className="text-foreground">{contentCounts.audio}</strong> Audio
+            <div className="flex items-center gap-2 p-2 sm:p-0 rounded-xl bg-card-border/20 sm:bg-transparent min-w-0">
+              <Headphones className="w-4 h-4 text-rose-600 dark:text-rose-400 shrink-0" />
+              <span className="truncate"><strong className="text-foreground">{contentCounts.audio}</strong> Audio</span>
             </div>
           )}
 
           {contentCounts.live > 0 && (
-            <div className="flex items-center gap-2">
-              <Tv className="w-4 h-4 text-sky-400" />
-              <strong className="text-foreground">{contentCounts.live}</strong> Live Sessions
+            <div className="flex items-center gap-2 p-2 sm:p-0 rounded-xl bg-card-border/20 sm:bg-transparent min-w-0">
+              <Tv className="w-4 h-4 text-sky-400 shrink-0" />
+              <span className="truncate"><strong className="text-foreground">{contentCounts.live}</strong> Live Sessions</span>
             </div>
           )}
 
           {contentCounts.interactive > 0 && (
-            <div className="flex items-center gap-2">
-              <Package className="w-4 h-4 text-lime-400" />
-              <strong className="text-foreground">{contentCounts.interactive}</strong> Interactive
+            <div className="flex items-center gap-2 p-2 sm:p-0 rounded-xl bg-card-border/20 sm:bg-transparent min-w-0">
+              <Package className="w-4 h-4 text-lime-400 shrink-0" />
+              <span className="truncate"><strong className="text-foreground">{contentCounts.interactive}</strong> Interactive</span>
             </div>
           )}
 
           {contentCounts.other > 0 && (
-            <div className="flex items-center gap-2">
-              <BookOpen className="w-4 h-4 text-muted-foreground" />
-              <strong className="text-foreground">{contentCounts.other}</strong> Other
+            <div className="flex items-center gap-2 p-2 sm:p-0 rounded-xl bg-card-border/20 sm:bg-transparent min-w-0">
+              <BookOpen className="w-4 h-4 text-muted-foreground shrink-0" />
+              <span className="truncate"><strong className="text-foreground">{contentCounts.other}</strong> Other</span>
             </div>
           )}
 
           {formatCourseDuration(course.totalDurationSeconds) && (
-            <div className="flex items-center gap-2">
-              <Clock className="w-4 h-4 text-violet-400" />
-              <strong className="text-foreground">{formatCourseDuration(course.totalDurationSeconds)}</strong> Total
+            <div className="flex items-center gap-2 p-2 sm:p-0 rounded-xl bg-card-border/20 sm:bg-transparent min-w-0">
+              <Clock className="w-4 h-4 text-violet-400 shrink-0" />
+              <span className="truncate"><strong className="text-foreground">{formatCourseDuration(course.totalDurationSeconds)}</strong> Total</span>
             </div>
           )}
         </div>
@@ -846,13 +958,13 @@ export function CourseDetailClient({ course, availableTests, isUnlocked = true }
       {isUnlocked && totalCourseVideos > 0 && (
         <section
           aria-label="Course Offline Downloads"
-          className="glass-panel rounded-2xl p-4 sm:p-5 border border-primary-500/25 bg-gradient-to-r from-primary-950/20 via-card to-card flex flex-col md:flex-row items-start md:items-center justify-between gap-4 shadow-lg"
+          className="glass-panel rounded-2xl p-4 sm:p-5 border border-primary-500/25 bg-gradient-to-r from-primary-950/20 via-card to-card flex flex-col md:flex-row items-stretch md:items-center justify-between gap-4 shadow-lg"
         >
-          <div className="flex items-center gap-3.5 min-w-0">
+          <div className="flex items-center gap-3 sm:gap-3.5 min-w-0">
             <div className="w-10 h-10 rounded-xl bg-primary-500/15 border border-primary-500/25 flex items-center justify-center text-primary-500 shrink-0">
               <ArrowDownToLine className="w-5 h-5" />
             </div>
-            <div>
+            <div className="min-w-0">
               <div className="flex items-center gap-2 flex-wrap">
                 <h3 className="text-sm font-bold text-foreground">
                   Offline Course Downloads
@@ -864,7 +976,7 @@ export function CourseDetailClient({ course, availableTests, isUnlocked = true }
                   </span>
                 )}
               </div>
-              <p className="text-xs text-muted-foreground mt-0.5">
+              <p className="text-xs text-muted-foreground mt-0.5 truncate sm:whitespace-normal">
                 {isCourseActiveDownloading && batchProgress
                   ? `Downloading (${batchProgress.quality || selectedQuality}): ${batchProgress.currentVideoTitle || 'Lesson'} (${batchProgress.completedItems}/${batchProgress.totalItems})`
                   : isCourseFullyDownloaded
@@ -874,26 +986,26 @@ export function CourseDetailClient({ course, availableTests, isUnlocked = true }
             </div>
           </div>
 
-          <div className="flex items-center gap-2.5 w-full md:w-auto shrink-0 justify-end flex-wrap">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 w-full md:w-auto shrink-0 justify-end">
             {isCourseActiveDownloading ? (
-              <div className="flex items-center gap-2">
-                <div className="px-4 py-2 rounded-xl bg-primary-600/20 border border-primary-500/30 text-primary-400 text-xs font-bold flex items-center gap-2 animate-pulse">
+              <div className="flex items-center gap-2 w-full sm:w-auto">
+                <div className="flex-1 sm:flex-initial px-4 py-2.5 rounded-xl bg-primary-600/20 border border-primary-500/30 text-primary-400 text-xs font-bold flex items-center justify-center gap-2 animate-pulse">
                   <Loader2 className="w-3.5 h-3.5 animate-spin" />
                   <span>Downloading ({batchProgress?.quality || selectedQuality})...</span>
                 </div>
                 <button
                   type="button"
                   onClick={cancelBatchDownload}
-                  className="px-3 py-2 rounded-xl bg-rose-500/10 hover:bg-rose-500/20 text-rose-400 text-xs font-semibold border border-rose-500/20 transition-all cursor-pointer"
+                  className="px-3.5 py-2.5 rounded-xl bg-rose-500/10 hover:bg-rose-500/20 text-rose-400 text-xs font-semibold border border-rose-500/20 transition-all cursor-pointer"
                 >
                   Cancel
                 </button>
               </div>
             ) : isCourseFullyDownloaded ? (
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2 w-full sm:w-auto">
                 <Link
                   href="/downloads"
-                  className="px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold shadow-md shadow-emerald-600/20 transition-all flex items-center gap-1.5"
+                  className="flex-1 sm:flex-initial px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold shadow-md shadow-emerald-600/20 transition-all flex items-center justify-center gap-1.5"
                 >
                   <ArrowDownToLine className="w-3.5 h-3.5" />
                   <span>View in Downloads</span>
@@ -901,18 +1013,18 @@ export function CourseDetailClient({ course, availableTests, isUnlocked = true }
                 <button
                   type="button"
                   onClick={() => deleteCourseDownloads(course.slug)}
-                  className="p-2 rounded-xl bg-slate-800/80 hover:bg-rose-500/10 text-muted-foreground hover:text-rose-400 border border-slate-700/60 transition-all cursor-pointer"
+                  className="p-2.5 rounded-xl bg-slate-800/80 hover:bg-rose-500/10 text-muted-foreground hover:text-rose-400 border border-slate-700/60 transition-all cursor-pointer"
                   title="Remove all course downloads"
                 >
                   <Trash2 className="w-4 h-4" />
                 </button>
               </div>
             ) : (
-              <div className="flex items-center gap-2">
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 w-full sm:w-auto">
                 <button
                   type="button"
                   onClick={handleDownloadCourse}
-                  className="px-4 py-2 rounded-xl bg-primary-600 hover:bg-primary-500 text-white text-xs font-bold shadow-md shadow-primary-600/25 transition-all flex items-center gap-1.5 hover:scale-105 active:scale-95 cursor-pointer"
+                  className="w-full sm:w-auto px-4 py-2.5 rounded-xl bg-primary-600 hover:bg-primary-500 text-white text-xs font-bold shadow-md shadow-primary-600/25 transition-all flex items-center justify-center gap-1.5 hover:scale-[1.02] active:scale-95 cursor-pointer"
                 >
                   <ArrowDownToLine className="w-3.5 h-3.5" />
                   <span>
@@ -923,7 +1035,7 @@ export function CourseDetailClient({ course, availableTests, isUnlocked = true }
                 {courseDownloadedCount > 0 && (
                   <Link
                     href="/downloads"
-                    className="px-3 py-2 rounded-xl bg-card hover:bg-card-border/60 text-muted-foreground hover:text-foreground text-xs font-semibold border border-card-border transition-all"
+                    className="w-full sm:w-auto text-center px-3.5 py-2.5 rounded-xl bg-card hover:bg-card-border/60 text-muted-foreground hover:text-foreground text-xs font-semibold border border-card-border transition-all"
                   >
                     Downloads ({courseDownloadedCount})
                   </Link>
@@ -960,11 +1072,11 @@ export function CourseDetailClient({ course, availableTests, isUnlocked = true }
           </div>
 
           {/* Mode Switcher Segmented Control */}
-          <div className="inline-flex items-center p-1 rounded-2xl bg-card border border-card-border shadow-sm shrink-0 self-start sm:self-auto">
+          <div className="grid grid-cols-2 sm:inline-flex w-full sm:w-auto p-1 rounded-2xl bg-card border border-card-border shadow-sm shrink-0">
             <button
               type="button"
               onClick={() => handleSetViewMode('default')}
-              className={`px-3.5 sm:px-4 py-2 rounded-xl text-xs font-bold transition-all flex items-center gap-2 cursor-pointer ${
+              className={`justify-center px-3.5 sm:px-4 py-2.5 sm:py-2 rounded-xl text-xs font-bold transition-all flex items-center gap-2 cursor-pointer ${
                 viewMode === 'default'
                   ? 'bg-primary-600 text-white shadow-md shadow-primary-600/20'
                   : 'text-muted-foreground hover:text-foreground hover:bg-card-border/40'
@@ -977,7 +1089,7 @@ export function CourseDetailClient({ course, availableTests, isUnlocked = true }
             <button
               type="button"
               onClick={() => handleSetViewMode('calendar')}
-              className={`px-3.5 sm:px-4 py-2 rounded-xl text-xs font-bold transition-all flex items-center gap-2 cursor-pointer ${
+              className={`justify-center px-3.5 sm:px-4 py-2.5 sm:py-2 rounded-xl text-xs font-bold transition-all flex items-center gap-2 cursor-pointer ${
                 viewMode === 'calendar'
                   ? 'bg-primary-600 text-white shadow-md shadow-primary-600/20'
                   : 'text-muted-foreground hover:text-foreground hover:bg-card-border/40'
@@ -987,7 +1099,7 @@ export function CourseDetailClient({ course, availableTests, isUnlocked = true }
               <span>Calendar Mode</span>
               <span className="flex items-center gap-0.5 px-1.5 py-0.5 rounded-full bg-amber-500/20 text-amber-400 text-[10px] font-black">
                 <Flame className="w-3 h-3 fill-amber-400" />
-                <span>Streak</span>
+                <span className="hidden xs:inline">Streak</span>
               </span>
             </button>
           </div>
@@ -1006,7 +1118,7 @@ export function CourseDetailClient({ course, availableTests, isUnlocked = true }
           />
         ) : (
           <div className="space-y-6">
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4">
               <div className="text-sm font-bold text-foreground">
                 <span>Sections Overview</span>
                 {searchQuery.trim() !== '' && (
@@ -1016,52 +1128,52 @@ export function CourseDetailClient({ course, availableTests, isUnlocked = true }
                 )}
               </div>
 
-          <div className="flex items-center gap-3 w-full sm:w-auto">
-            {/* Search Input Bar */}
-            <div className="relative flex-1 sm:w-72">
-              <Search className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-muted-foreground pointer-events-none" />
-              <input
-                ref={searchInputRef}
-                type="text"
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                placeholder="Search section or lesson content..."
-                className="w-full pl-9 pr-12 py-2 rounded-xl bg-card border border-card-border text-xs text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary-500 transition-colors"
-              />
-              {searchQuery ? (
-                <button
-                  type="button"
-                  onClick={() => setSearchQuery('')}
-                  className="absolute right-2.5 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground p-0.5 rounded-full hover:bg-slate-800 transition-colors cursor-pointer"
-                  title="Clear search"
-                >
-                  <X className="w-3.5 h-3.5" />
-                </button>
-              ) : (
-                <kbd className="absolute right-2.5 top-1/2 -translate-y-1/2 text-[10px] font-mono text-muted-foreground/70 border border-card-border/80 px-1.5 py-0.5 rounded bg-card/80 pointer-events-none hidden xs:inline-block">
-                  ⌘K
-                </kbd>
-              )}
-            </div>
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 w-full sm:w-auto">
+                {/* Search Input Bar */}
+                <div className="relative w-full sm:w-72">
+                  <Search className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-muted-foreground pointer-events-none" />
+                  <input
+                    ref={searchInputRef}
+                    type="text"
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    placeholder="Search section or lesson content..."
+                    className="w-full pl-9 pr-12 py-2.5 sm:py-2 rounded-xl bg-card border border-card-border text-xs text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary-500 transition-colors"
+                  />
+                  {searchQuery ? (
+                    <button
+                      type="button"
+                      onClick={() => setSearchQuery('')}
+                      className="absolute right-2.5 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground p-0.5 rounded-full hover:bg-slate-800 transition-colors cursor-pointer"
+                      title="Clear search"
+                    >
+                      <X className="w-3.5 h-3.5" />
+                    </button>
+                  ) : (
+                    <kbd className="absolute right-2.5 top-1/2 -translate-y-1/2 text-[10px] font-mono text-muted-foreground/70 border border-card-border/80 px-1.5 py-0.5 rounded bg-card/80 pointer-events-none hidden xs:inline-block">
+                      ⌘K
+                    </kbd>
+                  )}
+                </div>
 
-            <div className="flex items-center gap-1.5 text-xs shrink-0">
-              <button
-                type="button"
-                onClick={expandAllSections}
-                className="px-3 py-2 rounded-xl bg-card border border-card-border hover:bg-card/80 text-muted-foreground hover:text-foreground font-semibold transition-colors cursor-pointer"
-              >
-                Expand All
-              </button>
-              <button
-                type="button"
-                onClick={collapseAllSections}
-                className="px-3 py-2 rounded-xl bg-card border border-card-border hover:bg-card/80 text-muted-foreground hover:text-foreground font-semibold transition-colors cursor-pointer"
-              >
-                Collapse All
-              </button>
+                <div className="flex items-center gap-2 text-xs w-full sm:w-auto">
+                  <button
+                    type="button"
+                    onClick={expandAllSections}
+                    className="flex-1 sm:flex-initial text-center px-3 py-2.5 sm:py-2 rounded-xl bg-card border border-card-border hover:bg-card/80 text-muted-foreground hover:text-foreground font-semibold transition-colors cursor-pointer"
+                  >
+                    Expand All
+                  </button>
+                  <button
+                    type="button"
+                    onClick={collapseAllSections}
+                    className="flex-1 sm:flex-initial text-center px-3 py-2.5 sm:py-2 rounded-xl bg-card border border-card-border hover:bg-card/80 text-muted-foreground hover:text-foreground font-semibold transition-colors cursor-pointer"
+                  >
+                    Collapse All
+                  </button>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
 
         {filteredSections.length === 0 ? (
           <div className="p-8 text-center glass-panel rounded-2xl border border-card-border space-y-3">
@@ -1387,28 +1499,70 @@ export function CourseDetailClient({ course, availableTests, isUnlocked = true }
                               );
                             }
 
-                            const isDownloadedUnit = isUnlocked && isDownloaded(unit.sourceid || unit.id);
-                            const isDownloadingUnit = isUnlocked && isDownloading(unit.sourceid || unit.id);
-                            const unitProgress = isUnlocked ? getDownloadProgress(unit.sourceid || unit.id) : undefined;
+                            const uId = unit.sourceid || unit.id;
+                            const isDownloadedUnit = isUnlocked && (isDownloaded(uId) || isDownloaded(unit.sourceid || '') || isDownloaded(unit.id || ''));
+                            const isQueuedUnit = isUnlocked && (isQueued(uId) || isQueued(unit.sourceid || '') || isQueued(unit.id || ''));
+                            const isPausedUnit = isUnlocked && (isPaused(uId) || isPaused(unit.sourceid || '') || isPaused(unit.id || ''));
+                            const isDownloadingUnit = isUnlocked && (isDownloading(uId) || isDownloading(unit.sourceid || '') || isDownloading(unit.id || ''));
+                            const unitProgress = isUnlocked ? (getDownloadProgress(uId) ?? getDownloadProgress(unit.sourceid || '') ?? getDownloadProgress(unit.id || '')) : undefined;
 
                             return isUnlocked ? (
                               <div className="flex items-center gap-1.5 shrink-0">
                                 {isDownloadedUnit ? (
-                                  <span
-                                    title="Downloaded to this device for offline playback"
-                                    className="px-2 py-1 rounded-lg bg-emerald-950/70 border border-emerald-500/40 text-emerald-400 text-[10px] font-bold flex items-center gap-1"
+                                  <button
+                                    type="button"
+                                    onClick={async (e) => {
+                                      e.stopPropagation();
+                                      await deleteDownload(uId);
+                                      if (unit.sourceid && unit.sourceid !== uId) await deleteDownload(unit.sourceid);
+                                      if (unit.id && unit.id !== uId) await deleteDownload(unit.id);
+                                    }}
+                                    className="px-2 py-1 rounded-lg bg-rose-500/10 hover:bg-rose-500/25 border border-rose-500/30 hover:border-rose-500/50 text-rose-400 hover:text-rose-300 text-[10px] font-bold flex items-center gap-1.5 shrink-0 transition-colors cursor-pointer"
+                                    title="Delete downloaded video from this device"
                                   >
-                                    <CheckCircle2 className="w-3 h-3" />
-                                    <span>Saved</span>
-                                  </span>
+                                    <Trash2 className="w-3 h-3 text-rose-400" />
+                                  </button>
+                                ) : isQueuedUnit ? (
+                                  <button
+                                    type="button"
+                                    onClick={(e) => {
+                                      e.stopPropagation();
+                                      pauseDownload(uId);
+                                    }}
+                                    title="Queued in sequence. Click to pause."
+                                    className="px-2 py-1 rounded-lg bg-slate-800/80 hover:bg-slate-700/80 border border-slate-600/40 text-slate-300 text-[10px] font-bold flex items-center gap-1.5 cursor-pointer"
+                                  >
+                                    <Clock className="w-3 h-3 text-slate-400" />
+                                    <span>Queued</span>
+                                  </button>
+                                ) : isPausedUnit ? (
+                                  <button
+                                    type="button"
+                                    onClick={(e) => {
+                                      e.stopPropagation();
+                                      resumeDownload(uId);
+                                    }}
+                                    title="Download paused. Click to resume."
+                                    className="px-2 py-1 rounded-lg bg-amber-500/15 hover:bg-amber-500/25 border border-amber-500/40 text-amber-300 hover:text-amber-200 text-[10px] font-bold flex items-center gap-1.5 cursor-pointer group transition-colors"
+                                  >
+                                    <Play className="w-3 h-3 fill-amber-400 text-amber-400 group-hover:scale-110 transition-transform" />
+                                    <span>Resume {unitProgress !== undefined ? `${unitProgress}%` : ''}</span>
+                                  </button>
                                 ) : isDownloadingUnit ? (
-                                  <div
-                                    title="Downloading offline..."
-                                    className="px-2 py-1 rounded-lg bg-primary-500/15 border border-primary-500/30 text-primary-400 text-[10px] font-bold flex items-center gap-1.5 animate-pulse"
+                                  <button
+                                    type="button"
+                                    onClick={(e) => {
+                                      e.stopPropagation();
+                                      pauseDownload(uId);
+                                    }}
+                                    title="Downloading offline... Click to pause."
+                                    className="px-2 py-1 rounded-lg bg-primary-500/15 hover:bg-amber-500/20 border border-primary-500/30 hover:border-amber-500/40 text-primary-400 hover:text-amber-300 text-[10px] font-bold flex items-center gap-1.5 cursor-pointer group transition-all"
                                   >
-                                    <Loader2 className="w-3 h-3 animate-spin" />
-                                    <span>{unitProgress !== undefined ? `${unitProgress}%` : 'Saving'}</span>
-                                  </div>
+                                    <Loader2 className="w-3 h-3 animate-spin group-hover:hidden" />
+                                    <Pause className="w-3 h-3 hidden group-hover:inline text-amber-400" />
+                                    <span className="group-hover:hidden">{unitProgress !== undefined ? `${unitProgress}%` : 'Saving'}</span>
+                                    <span className="hidden group-hover:inline">Pause</span>
+                                  </button>
                                 ) : !isYouTube ? (
                                   <button
                                     type="button"
@@ -1475,7 +1629,7 @@ export function CourseDetailClient({ course, availableTests, isUnlocked = true }
         >
           <div
             onClick={(e) => e.stopPropagation()}
-            className="w-full max-w-md p-6 rounded-3xl bg-card border border-card-border shadow-2xl space-y-5 animate-in zoom-in-95 duration-200"
+            className="w-full max-w-md max-h-[92vh] overflow-y-auto custom-scrollbar p-5 sm:p-6 rounded-3xl bg-card border border-card-border shadow-2xl space-y-4 sm:space-y-5 animate-in zoom-in-95 duration-200"
           >
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-primary-400">
@@ -1491,7 +1645,7 @@ export function CourseDetailClient({ course, availableTests, isUnlocked = true }
             </div>
 
             <div>
-              <h3 className="text-lg font-bold text-foreground">
+              <h3 className="text-base sm:text-lg font-bold text-foreground">
                 {bundleQualityModal.type === 'course'
                   ? 'Download Entire Course'
                   : `Download Section: ${bundleQualityModal.title}`}
@@ -1507,83 +1661,124 @@ export function CourseDetailClient({ course, availableTests, isUnlocked = true }
                 {
                   id: '1080p',
                   name: 'Full HD (1080p)',
-                  desc: 'Maximum sharpness & detail • ~15-25 MB / lesson',
-                  badge: 'Best Quality',
+                  desc: 'Maximum sharpness & detail',
+                  badge: 'Crisp',
                 },
                 {
                   id: '720p',
-                  name: 'High Quality (720p HD)',
-                  desc: 'Crisp & clear video • ~10-15 MB / lesson',
+                  name: 'High (720p)',
+                  desc: 'Crisp & clear video',
                   badge: 'Recommended',
                 },
                 {
                   id: '540p',
-                  name: 'Medium Definition (540p)',
-                  desc: 'Great balance for mobile • ~7-10 MB / lesson',
+                  name: 'Medium (540p)',
+                  desc: 'Balanced data & quality',
                   badge: 'Balanced',
                 },
                 {
                   id: '360p',
-                  name: 'Data Saver (360p)',
-                  desc: 'Fastest download • ~5-8 MB / lesson',
-                  badge: 'Compact',
+                  name: 'Standard (360p)',
+                  desc: 'Fast download & low storage',
+                  badge: 'Standard',
                 },
-                {
-                  id: '224p',
-                  name: 'Ultra Compact (224p)',
-                  desc: 'Minimal storage usage • ~3-5 MB / lesson',
-                  badge: 'Lightweight',
-                },
-              ].map((opt) => (
-                <button
-                  key={opt.id}
-                  onClick={() => setSelectedQuality(opt.id)}
-                  className={`w-full p-3.5 rounded-2xl border text-left flex items-center justify-between gap-3 transition-all cursor-pointer ${
-                    selectedQuality === opt.id
-                      ? 'bg-primary-950/40 border-primary-500/60 ring-1 ring-primary-500/30'
-                      : 'bg-card hover:bg-slate-800/40 border-card-border/80'
-                  }`}
-                >
-                  <div className="space-y-0.5">
-                    <div className="flex items-center gap-2">
-                      <span className="text-xs font-bold text-foreground">{opt.name}</span>
-                      <span
-                        className={`text-[9px] font-bold px-1.5 py-0.5 rounded ${
-                          selectedQuality === opt.id
-                            ? 'bg-primary-500/20 text-primary-300 border border-primary-500/30'
-                            : 'bg-slate-800 text-slate-400'
-                        }`}
-                      >
-                        {opt.badge}
-                      </span>
-                    </div>
-                    <p className="text-[11px] text-muted-foreground">{opt.desc}</p>
-                  </div>
-                  <div
-                    className={`w-4 h-4 rounded-full border flex items-center justify-center shrink-0 ${
-                      selectedQuality === opt.id
-                        ? 'border-primary-500 bg-primary-500 text-white'
-                        : 'border-slate-600'
+              ].map((opt) => {
+                const estSize = formatBatchEstimatedSize(opt.id);
+                const isSelected = selectedQuality === opt.id;
+                return (
+                  <button
+                    key={opt.id}
+                    type="button"
+                    onClick={() => setSelectedQuality(opt.id)}
+                    className={`w-full p-3 sm:p-3.5 rounded-2xl border text-left flex items-center justify-between gap-3 transition-all cursor-pointer ${
+                      isSelected
+                        ? 'bg-primary-950/40 border-primary-500/60 ring-1 ring-primary-500/30'
+                        : 'bg-card hover:bg-slate-800/40 border-card-border/80'
                     }`}
                   >
-                    {selectedQuality === opt.id && <div className="w-1.5 h-1.5 rounded-full bg-white" />}
-                  </div>
-                </button>
-              ))}
+                    <div className="space-y-0.5 min-w-0 flex-1">
+                      <div className="flex items-center gap-2">
+                        <span className="text-xs sm:text-sm font-bold text-foreground">{opt.name}</span>
+                        <span
+                          className={`text-[9px] font-bold px-1.5 py-0.5 rounded ${
+                            isSelected
+                              ? 'bg-primary-500/20 text-primary-300 border border-primary-500/30'
+                              : 'bg-slate-800 text-slate-400'
+                          }`}
+                        >
+                          {opt.badge}
+                        </span>
+                      </div>
+                      <p className="text-[11px] text-muted-foreground truncate">{opt.desc}</p>
+                    </div>
+
+                    <div className="flex items-center gap-2.5 shrink-0">
+                      {estSize && (
+                        <span className="text-[11px] sm:text-xs font-mono font-medium text-slate-300 bg-slate-900/80 px-2 py-0.5 rounded-lg border border-slate-700/60">
+                          {estSize}
+                        </span>
+                      )}
+                      <div
+                        className={`w-4 h-4 rounded-full border flex items-center justify-center shrink-0 ${
+                          isSelected
+                            ? 'border-primary-500 bg-primary-500 text-white'
+                            : 'border-slate-600'
+                        }`}
+                      >
+                        {isSelected && <div className="w-1.5 h-1.5 rounded-full bg-white" />}
+                      </div>
+                    </div>
+                  </button>
+                );
+              })}
+            </div>
+
+            {/* Remember quality preference (YouTube style) */}
+            <div className="pt-2 border-t border-card-border/60 space-y-1.5">
+              <label className="flex items-center justify-between gap-2.5 px-1 cursor-pointer select-none group">
+                <div className="flex items-center gap-2">
+                  <input
+                    type="checkbox"
+                    checked={rememberPreference}
+                    onChange={(e) => setRememberPreference(e.target.checked)}
+                    className="w-4 h-4 rounded border-slate-700 text-primary-600 focus:ring-primary-500 bg-slate-900 cursor-pointer accent-primary-500"
+                  />
+                  <span className="text-xs font-semibold text-foreground group-hover:text-primary-300 transition-colors">
+                    Remember my download settings
+                  </span>
+                </div>
+                <Link
+                  href="/downloads#download-settings"
+                  onClick={() => setBundleQualityModal(null)}
+                  className="text-[11px] text-muted-foreground hover:text-primary-400 flex items-center gap-1 transition-colors"
+                  title="Manage download preferences"
+                >
+                  <Settings className="w-3 h-3" />
+                  <span>Settings</span>
+                </Link>
+              </label>
+              <p className="text-[10px] text-muted-foreground px-1 leading-relaxed">
+                {rememberPreference
+                  ? 'Future downloads will start automatically in this resolution. You can switch back to "Ask each time" anytime in Downloads settings.'
+                  : 'Unchecked: PrepTea will ask you to choose resolution every time.'}
+              </p>
             </div>
 
             {/* Confirm Actions */}
             <div className="flex items-center justify-end gap-2 pt-2 border-t border-card-border/60">
               <button
+                type="button"
                 onClick={() => setBundleQualityModal(null)}
                 className="px-4 py-2 rounded-xl text-xs font-semibold text-muted-foreground hover:text-foreground hover:bg-slate-800 transition-colors cursor-pointer"
               >
                 Cancel
               </button>
               <button
+                type="button"
                 onClick={async () => {
                   const modal = bundleQualityModal;
                   setBundleQualityModal(null);
+                  saveRememberedQuality(selectedQuality, rememberPreference);
                   if (modal.type === 'course') {
                     const sectionsPayload = course.sections.map((sec) => ({
                       sectionTitle: sec.title,

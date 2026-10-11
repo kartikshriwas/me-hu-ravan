@@ -1,16 +1,37 @@
 'use client';
 
-import React from 'react';
-import { signIn } from 'next-auth/react';
+import React, { useTransition } from 'react';
+import { loginWithGoogle } from '@/app/actions/auth';
 
-export function GoogleLoginButton({ label = 'Sign in with Google', size = 'medium' }: { label?: string; size?: 'small' | 'medium' | 'large' }) {
-  const paddingClass = size === 'small' ? 'px-2.5 py-1.5 text-xs' : size === 'large' ? 'px-5 py-2.5 text-sm' : 'px-3.5 py-2 text-xs sm:text-sm';
+export function GoogleLoginButton({
+  label = 'Sign in with Google',
+  size = 'medium',
+  redirectTo = '/',
+}: {
+  label?: string;
+  size?: 'small' | 'medium' | 'large';
+  redirectTo?: string;
+}) {
+  const [isPending, startTransition] = useTransition();
+  const paddingClass =
+    size === 'small'
+      ? 'px-2.5 py-1.5 text-xs'
+      : size === 'large'
+      ? 'px-5 py-2.5 text-sm'
+      : 'px-3.5 py-2 text-xs sm:text-sm';
+
+  const handleSignIn = () => {
+    startTransition(async () => {
+      await loginWithGoogle(redirectTo);
+    });
+  };
 
   return (
     <button
-      onClick={() => signIn('google')}
+      onClick={handleSignIn}
+      disabled={isPending}
       type="button"
-      className={`relative group overflow-hidden rounded-xl bg-card hover:bg-slate-800 border border-slate-700 hover:border-primary-500/50 text-foreground font-bold transition-all shadow-md hover:shadow-primary-500/20 flex items-center justify-center gap-2 shrink-0 ${paddingClass}`}
+      className={`relative group overflow-hidden rounded-xl bg-card hover:bg-slate-800 border border-slate-700 hover:border-primary-500/50 text-foreground font-bold transition-all shadow-md hover:shadow-primary-500/20 flex items-center justify-center gap-2 shrink-0 ${paddingClass} ${isPending ? 'opacity-70 cursor-wait' : ''}`}
     >
       {/* Official Google G Logo SVG */}
       <svg className="w-4 h-4 shrink-0" viewBox="0 0 24 24">
@@ -31,7 +52,7 @@ export function GoogleLoginButton({ label = 'Sign in with Google', size = 'mediu
           d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"
         />
       </svg>
-      <span className="whitespace-nowrap">{label}</span>
+      <span className="whitespace-nowrap">{isPending ? 'Connecting...' : label}</span>
     </button>
   );
 }

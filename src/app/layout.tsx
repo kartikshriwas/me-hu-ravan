@@ -64,6 +64,7 @@ import { DownloadProvider } from '@/lib/downloadContext';
 import { OfflineBanner } from '@/components/OfflineBanner';
 import { ServiceWorkerRegistration } from '@/components/ServiceWorkerRegistration';
 import { GlobalOfflineWrapper } from '@/components/GlobalOfflineWrapper';
+import { GlobalDownloadTracker } from '@/components/GlobalDownloadTracker';
 
 export default function RootLayout({
   children,
@@ -85,6 +86,7 @@ export default function RootLayout({
                 </GlobalOfflineWrapper>
               </main>
               <MobileBottomNav />
+              <GlobalDownloadTracker />
               <OfflineBanner />
               <ServiceWorkerRegistration />
             </DownloadProvider>

@@ -13,7 +13,7 @@ import { useDownloads } from '@/lib/downloadContext';
 export function Navbar() {
   const pathname = usePathname();
   const { user, logout } = useAuth();
-  const { downloads } = useDownloads();
+  const { downloads, downloadingMap } = useDownloads();
   const [showMenu, setShowMenu] = useState(false);
   const [mounted, setMounted] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
@@ -24,6 +24,11 @@ export function Navbar() {
 
   const currentUser = mounted ? user : null;
   const currentDownloads = mounted ? downloads : [];
+  const activeDownloadsCount = mounted
+    ? Object.values(downloadingMap).filter(
+        (s) => s.status === 'downloading' || s.status === 'queued' || s.status === 'paused'
+      ).length
+    : 0;
   const isAdmin = currentUser?.role === 'superadmin' || currentUser?.role === 'admin';
   const hasCourseAccess = Boolean(mounted && checkUserCourseAccess(user));
 
@@ -152,24 +157,36 @@ export function Navbar() {
                   <span>History</span>
                 </Link>
 
-                {/* Downloads Link — visible only if user has downloaded videos */}
-                {currentDownloads.length > 0 && (
+                {/* Downloads Link — visible if user has downloaded videos or active background downloads */}
+                {(currentDownloads.length > 0 || activeDownloadsCount > 0) && (
                   <Link
                     href="/downloads"
-                    title="Downloads (Offline Ready)"
+                    title={activeDownloadsCount > 0 ? `${activeDownloadsCount} downloading • View Downloads` : "Downloads (Offline Ready)"}
                     className={`hidden mxl:flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl text-sm font-semibold transition-all duration-200 shrink-0 ${
                       pathname === '/downloads'
                         ? 'bg-primary-600 text-white font-bold shadow-md shadow-primary-600/30 border border-primary-500/40'
+                        : activeDownloadsCount > 0
+                        ? 'text-primary-400 bg-primary-950/50 border border-primary-500/40 shadow-sm'
                         : 'text-muted-foreground hover:text-primary-600 dark:hover:text-primary-300 hover:bg-primary-950/40'
                     }`}
                   >
-                    <ArrowDownToLine className={`w-4 h-4 shrink-0 ${pathname === '/downloads' ? 'text-foreground' : 'text-primary-600 dark:text-primary-400'}`} />
+                    <ArrowDownToLine className={`w-4 h-4 shrink-0 ${
+                      activeDownloadsCount > 0
+                        ? 'text-primary-400 animate-pulse'
+                        : pathname === '/downloads'
+                        ? 'text-foreground'
+                        : 'text-primary-600 dark:text-primary-400'
+                    }`} />
                     <span>Downloads</span>
-                    {currentDownloads.length > 0 && (
+                    {activeDownloadsCount > 0 ? (
+                      <span className="text-[10px] px-1.5 py-0.5 rounded-full font-bold bg-primary-500 text-white animate-pulse">
+                        {activeDownloadsCount}
+                      </span>
+                    ) : currentDownloads.length > 0 ? (
                       <span className="text-[10px] px-1.5 py-0.5 rounded-full font-bold bg-primary-500/20 text-primary-400 border border-primary-500/30">
                         {currentDownloads.length}
                       </span>
-                    )}
+                    ) : null}
                   </Link>
                 )}
 
@@ -328,22 +345,28 @@ export function Navbar() {
                     <span>History</span>
                   </Link>
 
-                  {/* Downloads — visible in dropdown only if user has downloaded videos */}
-                  {currentDownloads.length > 0 && (
+                  {/* Downloads — visible in dropdown if user has downloaded videos or active background downloads */}
+                  {(currentDownloads.length > 0 || activeDownloadsCount > 0) && (
                     <Link
                       href="/downloads"
                       onClick={() => setShowMenu(false)}
                       className="flex w-full items-center justify-between px-3 py-2 rounded-xl text-xs font-semibold text-foreground/80 hover:text-foreground hover:bg-slate-800/60 transition-all duration-150 group"
                     >
                       <div className="flex items-center gap-2.5">
-                        <ArrowDownToLine className="w-4 h-4 text-primary-600 dark:text-primary-400 group-hover:scale-110 transition-transform" />
+                        <ArrowDownToLine className={`w-4 h-4 ${
+                          activeDownloadsCount > 0 ? 'text-primary-400 animate-pulse' : 'text-primary-600 dark:text-primary-400'
+                        } group-hover:scale-110 transition-transform`} />
                         <span>Downloads</span>
                       </div>
-                      {currentDownloads.length > 0 && (
+                      {activeDownloadsCount > 0 ? (
+                        <span className="text-[10px] px-1.5 py-0.5 rounded-full font-bold bg-primary-500 text-white animate-pulse">
+                          {activeDownloadsCount}
+                        </span>
+                      ) : currentDownloads.length > 0 ? (
                         <span className="text-[10px] px-1.5 py-0.5 rounded-full font-bold bg-primary-500/20 text-primary-400 border border-primary-500/30">
                           {currentDownloads.length}
                         </span>
-                      )}
+                      ) : null}
                     </Link>
                   )}
 

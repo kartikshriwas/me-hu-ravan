@@ -19,9 +19,16 @@ import {
   TrendingUp,
   Award,
   Navigation,
+  Loader2,
+  Pause,
+  Trash2,
+  Sparkles,
+  Settings,
 } from 'lucide-react';
 import { CourseDetail, CourseSectionUnit } from '@/lib/types';
 import { fetchUserProgressFromDb } from '@/lib/userProgressClient';
+import { useDownloads } from '@/lib/downloadContext';
+import { getRememberedQuality, saveRememberedQuality } from '@/lib/qualityMatcher';
 
 interface CalendarUnitItem {
   unit: CourseSectionUnit;
@@ -137,6 +144,101 @@ export function CourseCalendarView({
   formatUnitDuration,
   getUnitMetaConfig,
 }: CourseCalendarViewProps) {
+  const {
+    isDownloaded,
+    isDownloading,
+    isQueued,
+    isPaused,
+    getDownloadProgress,
+    downloadSection,
+    deleteDownload,
+    pauseDownload,
+    resumeDownload,
+  } = useDownloads();
+
+  const [dayQualityModal, setDayQualityModal] = useState<{
+    dayNumber: number;
+    title: string;
+    units: { videoId: string; unitTitle: string; duration?: number }[];
+  } | null>(null);
+  const [selectedDayQuality, setSelectedDayQuality] = useState<string>('720p');
+  const [rememberPreference, setRememberPreference] = useState<boolean>(false);
+
+  useEffect(() => {
+    setSelectedDayQuality(getRememberedQuality('720p'));
+    if (typeof window !== 'undefined') {
+      setRememberPreference(localStorage.getItem('preptea_remember_download_quality') === 'true');
+    }
+  }, []);
+
+  const formatDayEstimatedSize = (quality: string) => {
+    if (!dayQualityModal) return '';
+    const kbpsMap: Record<string, number> = {
+      '1080p': 924,
+      '720p': 552,
+      '540p': 393,
+      '360p': 267,
+    };
+    const kbps = kbpsMap[quality] || 552;
+    const numVideos = dayQualityModal.units.length || 1;
+    const totalSecs = dayQualityModal.units.reduce((acc, u) => acc + (u.duration || 0), 0);
+
+    if (totalSecs > 0) {
+      const totalBytes = totalSecs * (kbps * 1000 / 8);
+      const totalMb = totalBytes / (1024 * 1024);
+      const avgMb = totalMb / numVideos;
+
+      if (numVideos === 1) {
+        return totalMb >= 1024 ? `~${(totalMb / 1024).toFixed(1)} GB` : `~${totalMb.toFixed(1)} MB`;
+      }
+
+      const totalStr = totalMb >= 1024 ? `${(totalMb / 1024).toFixed(1)} GB` : `${Math.round(totalMb)} MB`;
+      const avgStr = avgMb >= 1024 ? `${(avgMb / 1024).toFixed(1)} GB/lesson` : `${Math.round(avgMb)} MB/lesson`;
+      return `${totalStr} • ~${avgStr}`;
+    }
+
+    const fallbackSecs = numVideos * 600;
+    const totalBytes = fallbackSecs * (kbps * 1000 / 8);
+    const totalMb = totalBytes / (1024 * 1024);
+    const avgMb = totalMb / numVideos;
+    if (numVideos === 1) {
+      return `~${Math.round(totalMb)} MB`;
+    }
+    return `${totalMb >= 1024 ? (totalMb / 1024).toFixed(1) + ' GB' : Math.round(totalMb) + ' MB'} • ~${Math.round(avgMb)} MB/lesson`;
+  };
+
+  const handleDownloadDay = (day: CalendarDayGroup) => {
+    if (!isUnlocked) return;
+    const units = day.items
+      .filter((it) => it.videoId && it.isActionableVideo)
+      .map((it) => ({
+        videoId: it.videoId,
+        unitTitle: it.unit.unitTitle || it.unit.title || 'Lesson',
+        duration: it.durationSeconds,
+      }));
+
+    if (units.length === 0) return;
+
+    if (typeof window !== 'undefined' && localStorage.getItem('preptea_remember_download_quality') === 'true') {
+      const cleanQuality = getRememberedQuality('720p');
+      downloadSection({
+        courseSlug: course.slug,
+        courseTitle: course.title,
+        sectionTitle: `Day ${day.dayNumber}: ${day.targetTitle}`,
+        preferredQuality: cleanQuality,
+        units,
+      });
+      return;
+    }
+
+    setSelectedDayQuality(getRememberedQuality('720p'));
+    setDayQualityModal({
+      dayNumber: day.dayNumber,
+      title: `Day ${day.dayNumber}: ${day.targetTitle}`,
+      units,
+    });
+  };
+
   // Paced targets (~1.5h - 2h per day across 4-6 months) vs Raw bulk upload drop batches
   const [scheduleMode, setScheduleMode] = useState<'paced' | 'raw_batches'>('paced');
   const [filterMode, setFilterMode] = useState<'all' | 'pending' | 'completed'>('all');
@@ -693,7 +795,21 @@ export function CourseCalendarView({
   const totalDays = calendarDays.length;
   const completedDaysCount = calendarDays.filter((d) => d.isCompleted).length;
   const nextTargetDay = calendarDays.find((d) => d.isNextTarget) || null;
-  const overallCompletedUnits = completedVideos.length;
+  const courseVideoIdSet = useMemo(() => {
+    const ids = new Set<string>();
+    course.sections.forEach((s) =>
+      s.units.forEach((u) => {
+        const vid = u.sourceid || u.id;
+        if (vid) ids.add(vid);
+      })
+    );
+    return ids;
+  }, [course]);
+
+  const overallCompletedUnits = useMemo(
+    () => completedVideos.filter((id) => courseVideoIdSet.has(id)).length,
+    [completedVideos, courseVideoIdSet]
+  );
   const overallTotalUnits = calendarDays.reduce((acc, d) => acc + d.totalLectures, 0);
   const totalCourseSeconds = useMemo(
     () => calendarDays.reduce((acc, d) => acc + d.totalSeconds, 0),
@@ -1241,7 +1357,7 @@ export function CourseCalendarView({
 
                   {/* Right: Metrics + Chevron */}
                   <div className="flex items-center justify-between sm:justify-end gap-2.5 w-full sm:w-auto pt-2 sm:pt-0 border-t sm:border-t-0 border-white/[0.06]">
-                    <div className="flex items-center gap-2 text-xs">
+                    <div className="flex items-center gap-2 text-xs flex-wrap">
                       <span className="text-muted-foreground font-medium flex items-center gap-1.5 px-2.5 py-1 rounded-xl bg-card/60 border border-white/[0.06]">
                         <span>{day.totalLectures} {day.totalLectures === 1 ? 'lecture' : 'lectures'}</span>
                         <span className="text-white/20">•</span>
@@ -1251,6 +1367,84 @@ export function CourseCalendarView({
                       <span className="font-mono text-xs font-bold text-muted-foreground px-2 py-1 rounded-xl bg-card/60 border border-white/[0.06] hidden xs:inline-block">
                         {day.completedCount}/{day.totalLectures}
                       </span>
+
+                      {/* Download Section / Day Button */}
+                      {(() => {
+                        const dayVideoUnits = day.items
+                          .filter((it) => it.videoId && it.isActionableVideo)
+                          .map((it) => ({
+                            videoId: it.videoId,
+                            unitTitle: it.unit.unitTitle || it.unit.title || 'Lesson',
+                            duration: it.durationSeconds,
+                          }));
+
+                        if (dayVideoUnits.length === 0 || !isUnlocked) return null;
+
+                        const dayDownloadedCount = dayVideoUnits.filter(
+                          (it) => isDownloaded(it.videoId) || isDownloaded(it.videoId)
+                        ).length;
+                        const isAllDayDownloaded = dayDownloadedCount === dayVideoUnits.length;
+                        const isDayDownloading = dayVideoUnits.some((it) => isDownloading(it.videoId));
+
+                        if (isAllDayDownloaded) {
+                          return (
+                            <button
+                              type="button"
+                              onClick={async (e) => {
+                                e.preventDefault();
+                                e.stopPropagation();
+                                for (const u of dayVideoUnits) {
+                                  await deleteDownload(u.videoId);
+                                }
+                              }}
+                              className="px-2.5 py-1 rounded-xl bg-rose-500/15 hover:bg-rose-500/25 text-rose-400 border border-rose-500/30 text-xs font-bold flex items-center gap-1.5 transition-colors cursor-pointer shrink-0"
+                              title={`Delete all ${dayVideoUnits.length} downloaded lessons from this section`}
+                            >
+                              <Trash2 className="w-3.5 h-3.5 text-rose-400" />
+                              <span className="hidden xs:inline">Delete All</span>
+                            </button>
+                          );
+                        }
+
+                        if (isDayDownloading) {
+                          return (
+                            <button
+                              type="button"
+                              onClick={async (e) => {
+                                e.preventDefault();
+                                e.stopPropagation();
+                                for (const u of dayVideoUnits) {
+                                  pauseDownload(u.videoId);
+                                }
+                              }}
+                              className="px-2.5 py-1 rounded-xl bg-primary-500/15 hover:bg-amber-500/20 border border-primary-500/30 hover:border-amber-500/40 text-primary-400 hover:text-amber-300 text-xs font-bold flex items-center gap-1.5 shrink-0 transition-all cursor-pointer group"
+                              title="Section downloading. Click to pause."
+                            >
+                              <Loader2 className="w-3.5 h-3.5 animate-spin group-hover:hidden" />
+                              <Pause className="w-3.5 h-3.5 hidden group-hover:inline text-amber-400" />
+                              <span className="group-hover:hidden">{dayDownloadedCount}/{dayVideoUnits.length}</span>
+                              <span className="hidden group-hover:inline">Pause All</span>
+                            </button>
+                          );
+                        }
+
+                        return (
+                          <button
+                            type="button"
+                            onClick={(e) => {
+                              e.preventDefault();
+                              e.stopPropagation();
+                              handleDownloadDay(day);
+                            }}
+                            className="px-2.5 py-1 rounded-xl bg-primary-600/20 hover:bg-primary-600 text-primary-400 hover:text-white border border-primary-500/30 hover:border-transparent text-xs font-bold flex items-center gap-1.5 transition-all cursor-pointer shrink-0 shadow-sm"
+                            title={`Download all ${dayVideoUnits.length} lessons in Day ${day.dayNumber}`}
+                          >
+                            <ArrowDownToLine className="w-3.5 h-3.5" />
+                            <span className="hidden xs:inline">Download All</span>
+                            <span className="text-[10px] opacity-75 font-mono">({dayVideoUnits.length})</span>
+                          </button>
+                        );
+                      })()}
                     </div>
 
                     <div className="text-muted-foreground group-hover:text-foreground transition-colors shrink-0 p-1">
@@ -1335,18 +1529,105 @@ export function CourseCalendarView({
                               </span>
                             )}
 
-                            {isUnlocked && onDownloadUnit && item.videoId && (
-                              <button
-                                type="button"
-                                onClick={(e) =>
-                                  onDownloadUnit(e, item.unit, item.sectionTitle, item.sectionId)
-                                }
-                                className="p-1.5 rounded-lg text-muted-foreground hover:text-foreground hover:bg-white/[0.06] transition-colors cursor-pointer"
-                                title="Download for offline study"
-                              >
-                                <ArrowDownToLine className="w-3.5 h-3.5" />
-                              </button>
-                            )}
+                            {(() => {
+                              const uId = item.videoId || item.unit.sourceid || item.unit.id;
+                              const isDl = isDownloaded(uId) || isDownloaded(item.unit.sourceid || '') || isDownloaded(item.unit.id || '');
+                              const isQ = isQueued(uId) || isQueued(item.unit.sourceid || '') || isQueued(item.unit.id || '');
+                              const isP = isPaused(uId) || isPaused(item.unit.sourceid || '') || isPaused(item.unit.id || '');
+                              const isDlIng = isDownloading(uId) || isDownloading(item.unit.sourceid || '') || isDownloading(item.unit.id || '');
+                              const prog = getDownloadProgress(uId) ?? getDownloadProgress(item.unit.sourceid || '') ?? getDownloadProgress(item.unit.id || '');
+
+                              if (isDl) {
+                                return (
+                                  <button
+                                    type="button"
+                                    onClick={async (e) => {
+                                      e.preventDefault();
+                                      e.stopPropagation();
+                                      await deleteDownload(uId);
+                                      if (item.unit.sourceid && item.unit.sourceid !== uId) await deleteDownload(item.unit.sourceid);
+                                      if (item.unit.id && item.unit.id !== uId) await deleteDownload(item.unit.id);
+                                    }}
+                                    className="px-2 py-1 rounded-lg bg-rose-500/10 hover:bg-rose-500/25 border border-rose-500/30 hover:border-rose-500/50 text-rose-400 hover:text-rose-300 text-[10px] font-bold flex items-center gap-1.5 shrink-0 transition-colors cursor-pointer"
+                                    title="Delete downloaded video from this device"
+                                  >
+                                    <Trash2 className="w-3 h-3 text-rose-400" />
+                                  </button>
+                                );
+                              }
+                              if (isQ) {
+                                return (
+                                  <button
+                                    type="button"
+                                    onClick={(e) => {
+                                      e.preventDefault();
+                                      e.stopPropagation();
+                                      pauseDownload(uId);
+                                    }}
+                                    title="Queued in download sequence. Click to pause."
+                                    className="px-2 py-1 rounded-lg bg-slate-800/80 hover:bg-slate-700/80 border border-slate-600/40 text-slate-300 text-[10px] font-bold flex items-center gap-1.5 shrink-0 cursor-pointer"
+                                  >
+                                    <Clock className="w-3 h-3 text-slate-400" />
+                                    <span>Queued</span>
+                                  </button>
+                                );
+                              }
+                              if (isP) {
+                                return (
+                                  <button
+                                    type="button"
+                                    onClick={(e) => {
+                                      e.preventDefault();
+                                      e.stopPropagation();
+                                      resumeDownload(uId);
+                                      if (item.unit.sourceid && item.unit.sourceid !== uId) resumeDownload(item.unit.sourceid);
+                                      if (item.unit.id && item.unit.id !== uId) resumeDownload(item.unit.id);
+                                    }}
+                                    title="Download paused. Click to resume."
+                                    className="px-2 py-1 rounded-lg bg-amber-500/15 hover:bg-amber-500/25 border border-amber-500/40 text-amber-300 hover:text-amber-200 text-[10px] font-bold flex items-center gap-1.5 shrink-0 transition-colors cursor-pointer group"
+                                  >
+                                    <Play className="w-3 h-3 fill-amber-400 text-amber-400 group-hover:scale-110 transition-transform" />
+                                    <span>Resume {prog !== undefined ? `${prog}%` : ''}</span>
+                                  </button>
+                                );
+                              }
+                              if (isDlIng) {
+                                return (
+                                  <button
+                                    type="button"
+                                    onClick={(e) => {
+                                      e.preventDefault();
+                                      e.stopPropagation();
+                                      pauseDownload(uId);
+                                      if (item.unit.sourceid && item.unit.sourceid !== uId) pauseDownload(item.unit.sourceid);
+                                      if (item.unit.id && item.unit.id !== uId) pauseDownload(item.unit.id);
+                                    }}
+                                    title="Downloading offline... Click to pause."
+                                    className="px-2 py-1 rounded-lg bg-primary-500/15 hover:bg-amber-500/20 border border-primary-500/30 hover:border-amber-500/40 text-primary-400 hover:text-amber-300 text-[10px] font-bold flex items-center gap-1.5 shrink-0 transition-all cursor-pointer group"
+                                  >
+                                    <Loader2 className="w-3 h-3 animate-spin group-hover:hidden" />
+                                    <Pause className="w-3 h-3 hidden group-hover:inline text-amber-400" />
+                                    <span className="group-hover:hidden">{prog !== undefined ? `${prog}%` : 'Saving'}</span>
+                                    <span className="hidden group-hover:inline">Pause</span>
+                                  </button>
+                                );
+                              }
+                              if (isUnlocked && onDownloadUnit && item.videoId) {
+                                return (
+                                  <button
+                                    type="button"
+                                    onClick={(e) =>
+                                      onDownloadUnit(e, item.unit, item.sectionTitle, item.sectionId)
+                                    }
+                                    className="p-1.5 rounded-lg text-muted-foreground hover:text-primary-400 hover:bg-white/[0.06] transition-colors cursor-pointer shrink-0"
+                                    title="Download for offline study"
+                                  >
+                                    <ArrowDownToLine className="w-3.5 h-3.5" />
+                                  </button>
+                                );
+                              }
+                              return null;
+                            })()}
 
                             {item.videoId ? (
                               <Link
@@ -1393,6 +1674,176 @@ export function CourseCalendarView({
           <span>Jump to Day {nextTargetDay.dayNumber}</span>
           <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
         </button>
+      )}
+
+      {/* Day Section Download Quality Selector Modal */}
+      {dayQualityModal && (
+        <div
+          onClick={() => setDayQualityModal(null)}
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm animate-in fade-in"
+        >
+          <div
+            onClick={(e) => e.stopPropagation()}
+            className="w-full max-w-md p-6 rounded-3xl bg-card border border-card-border shadow-2xl space-y-5 animate-in zoom-in-95 duration-200"
+          >
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-primary-400">
+                <Sparkles className="w-4 h-4" />
+                <span>Select Download Quality</span>
+              </div>
+              <button
+                onClick={() => setDayQualityModal(null)}
+                className="p-1 rounded-xl hover:bg-white/10 text-muted-foreground hover:text-foreground cursor-pointer"
+              >
+                <X className="w-4 h-4" />
+              </button>
+            </div>
+
+            <div>
+              <h3 className="text-base sm:text-lg font-bold text-foreground">
+                Download {dayQualityModal.title}
+              </h3>
+              <p className="text-xs text-muted-foreground mt-1">
+                Choose video resolution for {dayQualityModal.units.length} lesson{dayQualityModal.units.length === 1 ? '' : 's'}. Lessons will be saved into local browser storage for offline viewing.
+              </p>
+            </div>
+
+            <div className="space-y-2.5">
+              {[
+                {
+                  id: '1080p',
+                  name: 'Full HD (1080p)',
+                  desc: 'Maximum sharpness & detail',
+                  badge: 'Best Quality',
+                },
+                {
+                  id: '720p',
+                  name: 'High Quality (720p HD)',
+                  desc: 'Crisp & clear video',
+                  badge: 'Recommended',
+                },
+                {
+                  id: '540p',
+                  name: 'Medium Definition (540p)',
+                  desc: 'Great balance of data & clarity',
+                },
+                {
+                  id: '360p',
+                  name: 'Standard (360p)',
+                  desc: 'Low data usage',
+                },
+              ].map((opt) => {
+                const isSelected = selectedDayQuality === opt.id;
+                const estSize = formatDayEstimatedSize(opt.id);
+                return (
+                  <button
+                    key={opt.id}
+                    type="button"
+                    onClick={() => setSelectedDayQuality(opt.id)}
+                    className={`w-full p-3 sm:p-3.5 rounded-2xl border text-left flex items-center justify-between gap-3 transition-all cursor-pointer ${
+                      isSelected
+                        ? 'bg-primary-950/40 border-primary-500/70 ring-1 ring-primary-500/30'
+                        : 'bg-card/70 hover:bg-slate-800/40 border-card-border/80'
+                    }`}
+                  >
+                    <div className="flex items-center gap-3 min-w-0 flex-1">
+                      <div
+                        className={`w-4 h-4 rounded-full border flex items-center justify-center shrink-0 transition-colors ${
+                          isSelected
+                            ? 'border-primary-400 bg-primary-500 text-white'
+                            : 'border-slate-600'
+                        }`}
+                      >
+                        {isSelected && <div className="w-1.5 h-1.5 rounded-full bg-white" />}
+                      </div>
+                      <div className="min-w-0 flex-1">
+                        <div className="flex items-center gap-2">
+                          <span className="text-xs sm:text-sm font-bold text-foreground">
+                            {opt.name}
+                          </span>
+                          {opt.badge && (
+                            <span className="px-1.5 py-0.2 rounded-full text-[9px] font-bold bg-primary-500/20 text-primary-300 border border-primary-500/40">
+                              {opt.badge}
+                            </span>
+                          )}
+                        </div>
+                        <p className="text-[11px] text-muted-foreground mt-0.5 truncate">
+                          {opt.desc}
+                        </p>
+                      </div>
+                    </div>
+
+                    {estSize && (
+                      <span className="text-[11px] sm:text-xs font-mono font-medium text-slate-300 bg-slate-900/80 px-2 py-0.5 rounded-lg border border-slate-700/60 shrink-0">
+                        {estSize}
+                      </span>
+                    )}
+                  </button>
+                );
+              })}
+            </div>
+
+            {/* Remember quality preference (YouTube style) */}
+            <div className="pt-2 border-t border-card-border/60 space-y-1.5">
+              <label className="flex items-center justify-between gap-2.5 px-1 cursor-pointer select-none group">
+                <div className="flex items-center gap-2">
+                  <input
+                    type="checkbox"
+                    checked={rememberPreference}
+                    onChange={(e) => setRememberPreference(e.target.checked)}
+                    className="w-4 h-4 rounded border-slate-700 text-primary-600 focus:ring-primary-500 bg-slate-900 cursor-pointer accent-primary-500"
+                  />
+                  <span className="text-xs font-semibold text-foreground group-hover:text-primary-300 transition-colors">
+                    Remember my download settings
+                  </span>
+                </div>
+                <Link
+                  href="/downloads#download-settings"
+                  onClick={() => setDayQualityModal(null)}
+                  className="text-[11px] text-muted-foreground hover:text-primary-400 flex items-center gap-1 transition-colors"
+                  title="Manage download preferences"
+                >
+                  <Settings className="w-3 h-3" />
+                  <span>Settings</span>
+                </Link>
+              </label>
+              <p className="text-[10px] text-muted-foreground px-1 leading-relaxed">
+                {rememberPreference
+                  ? 'Future downloads will start automatically in this resolution. You can switch back to "Ask each time" anytime in Downloads settings.'
+                  : 'Unchecked: PrepTea will ask you to choose resolution every time.'}
+              </p>
+            </div>
+
+            <div className="flex items-center justify-end gap-2.5 pt-2 border-t border-card-border/60">
+              <button
+                type="button"
+                onClick={() => setDayQualityModal(null)}
+                className="px-4 py-2 rounded-xl text-xs font-semibold text-muted-foreground hover:text-foreground hover:bg-slate-800 transition-colors cursor-pointer"
+              >
+                Cancel
+              </button>
+              <button
+                type="button"
+                onClick={async () => {
+                  if (!dayQualityModal) return;
+                  saveRememberedQuality(selectedDayQuality, rememberPreference);
+                  await downloadSection({
+                    courseSlug: course.slug,
+                    courseTitle: course.title,
+                    sectionTitle: dayQualityModal.title,
+                    preferredQuality: selectedDayQuality,
+                    units: dayQualityModal.units,
+                  });
+                  setDayQualityModal(null);
+                }}
+                className="px-5 py-2.5 rounded-xl text-xs font-bold bg-primary-600 hover:bg-primary-500 text-white shadow-md shadow-primary-600/30 transition-all flex items-center gap-1.5 cursor-pointer active:scale-95"
+              >
+                <ArrowDownToLine className="w-3.5 h-3.5" />
+                <span>Start Download ({selectedDayQuality})</span>
+              </button>
+            </div>
+          </div>
+        </div>
       )}
     </div>
   );

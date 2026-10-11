@@ -37,6 +37,7 @@ import { useAuth } from '@/lib/authContext';
 import { checkUserCourseAccess, checkUserIsPremium } from '@/lib/batchAccess';
 import { OfflineState } from '@/components/OfflineState';
 import { recordVideoCompletionToDb, recordPlaybackProgressToDb, getResumeTimestamp } from '@/lib/userProgressClient';
+import { YouTubeDownloadButton } from '@/components/YouTubeDownloadButton';
 
 interface VideoAsset {
   type: string;
@@ -132,9 +133,6 @@ export function CustomVideoPlayer({
   } = useDownloads();
 
   const [localBlobUrl, setLocalBlobUrl] = useState<string | null>(blobUrl || null);
-  const [showDownloadQualityModal, setShowDownloadQualityModal] = useState(false);
-  const [showDownloadedMenu, setShowDownloadedMenu] = useState(false);
-  const [downloadQualityAsset, setDownloadQualityAsset] = useState<VideoAsset | null>(null);
 
   const isCurrentDownloaded = isDownloaded(videoId);
   const currentDownload = downloads.find((d) => d.videoId === videoId);
@@ -1795,211 +1793,17 @@ export function CustomVideoPlayer({
         <div className="flex items-center gap-2 shrink-0">
           {/* YouTube-style Download Action Button — visible only if user has course access */}
           {!embedHtml && hasCourseAccess && (
-            <div className="relative">
-              {isCurrentDownloading ? (
-                /* Downloading State Button */
-                <div className="flex items-center gap-1.5 px-3 py-1.5 sm:py-2 rounded-xl bg-primary-950/80 border border-primary-500/40 text-primary-400 text-xs font-bold shadow-sm">
-                  <Loader2 className="w-3.5 h-3.5 animate-spin text-primary-400" />
-                  <span>{downloadProgress !== undefined ? `${downloadProgress}%` : 'Saving...'}</span>
-                  <button
-                    onClick={() => cancelDownload(videoId)}
-                    className="ml-1 p-0.5 rounded hover:bg-white/10 text-muted-foreground hover:text-foreground"
-                    title="Cancel download"
-                  >
-                    <X className="w-3.5 h-3.5" />
-                  </button>
-                </div>
-              ) : isCurrentDownloaded ? (
-                /* Downloaded State Button */
-                <div className="relative">
-                  <button
-                    onClick={() => setShowDownloadedMenu((prev) => !prev)}
-                    className="flex items-center gap-1.5 px-3 sm:px-3.5 py-1.5 sm:py-2 rounded-xl bg-primary-950/90 border border-primary-500/40 text-primary-400 hover:text-primary-300 text-xs font-bold shadow-sm transition-all active:scale-95"
-                    title="Downloaded to PrepTea (Saved in site)"
-                  >
-                    <CheckCircle2 className="w-4 h-4 text-primary-400" />
-                    <span>Downloaded</span>
-                  </button>
-
-                  {/* Downloaded Options Popover */}
-                  {showDownloadedMenu && (
-                    <div 
-                      onClick={(e) => e.stopPropagation()}
-                      className="absolute right-0 bottom-full mb-2 z-50 w-64 p-3 rounded-2xl bg-card/95 border border-card-border shadow-2xl backdrop-blur-xl animate-in fade-in zoom-in-95 space-y-2 text-foreground"
-                    >
-                      <div className="flex items-center justify-between pb-2 border-b border-card-border/60">
-                        <div className="flex items-center gap-1.5 text-xs font-bold text-emerald-400">
-                          <CheckCircle2 className="w-3.5 h-3.5" />
-                          <span>Saved in PrepTea</span>
-                        </div>
-                        <button
-                          onClick={() => setShowDownloadedMenu(false)}
-                          className="p-0.5 rounded text-muted-foreground hover:text-foreground"
-                        >
-                          <X className="w-3.5 h-3.5" />
-                        </button>
-                      </div>
-
-                      <p className="text-[11px] text-muted-foreground leading-relaxed">
-                        This lesson is saved in this browser for offline playback on PrepTea. Not saved to your device gallery.
-                      </p>
-
-                      <div className="flex items-center justify-between text-[11px] text-muted-foreground pt-1 pb-1">
-                        <span>Downloaded Quality:</span>
-                        <span className="font-mono font-bold text-primary-400 bg-primary-950/60 px-2 py-0.5 rounded border border-primary-500/30">
-                          {currentDownload?.quality || effectiveOfflineQuality || 'Standard'}
-                        </span>
-                      </div>
-
-                      <div className="space-y-1 pt-1">
-                        <Link
-                          href="/downloads"
-                          className="flex items-center justify-between w-full px-2.5 py-1.5 rounded-xl hover:bg-slate-800 text-xs font-semibold text-foreground transition-colors group"
-                        >
-                          <span>View all Downloads</span>
-                          <ArrowUpRight className="w-3.5 h-3.5 text-muted-foreground group-hover:text-foreground" />
-                        </Link>
-                        <button
-                          onClick={async () => {
-                            setShowDownloadedMenu(false);
-                            await deleteDownload(videoId);
-                          }}
-                          className="flex items-center gap-2 w-full px-2.5 py-1.5 rounded-xl hover:bg-rose-500/15 text-xs font-semibold text-rose-500 hover:text-rose-400 transition-colors"
-                        >
-                          <Trash2 className="w-3.5 h-3.5" />
-                          <span>Delete from Downloads</span>
-                        </button>
-                      </div>
-                    </div>
-                  )}
-                </div>
-              ) : (
-                /* Not Downloaded State Button */
-                <div className="relative">
-                  <button
-                    onClick={() => {
-                      const available = (videoData?.assets && videoData.assets.length > 0)
-                        ? videoData.assets
-                        : [
-                            { slug: '1080p', displayName: '1080p', height: 1080, sizeBytes: 17.2 * 1024 * 1024, url: '' },
-                            { slug: '720p', displayName: '720p', height: 720, sizeBytes: 10.1 * 1024 * 1024, url: '' },
-                            { slug: '540p', displayName: '540p', height: 540, sizeBytes: 7.7 * 1024 * 1024, url: '' },
-                            { slug: '360p', displayName: '360p', height: 360, sizeBytes: 5.8 * 1024 * 1024, url: '' },
-                            { slug: '224p', displayName: '224p', height: 224, sizeBytes: 4.5 * 1024 * 1024, url: '' },
-                          ];
-                      if (!downloadQualityAsset) {
-                        const defaultAsset =
-                          available.find((a: any) => a.height === 720) ||
-                          available.find((a: any) => a.height === 540) ||
-                          available[0];
-                        setDownloadQualityAsset((defaultAsset as any) || null);
-                      }
-                      setShowDownloadQualityModal(true);
-                    }}
-                    className="flex items-center gap-1.5 px-3 sm:px-3.5 py-1.5 sm:py-2 rounded-xl bg-slate-800/90 hover:bg-slate-700/90 text-foreground text-xs font-bold border border-slate-700/60 hover:border-primary-500/40 transition-all shadow-sm active:scale-95 touch-manipulation"
-                    title="Download video for offline playback inside PrepTea"
-                  >
-                    <ArrowDownToLine className="w-4 h-4 text-primary-400" />
-                    <span>Download</span>
-                  </button>
-
-                  {/* Quality Picker Popover */}
-                  {showDownloadQualityModal && (
-                    <div 
-                      onClick={(e) => e.stopPropagation()}
-                      className="absolute right-0 bottom-full mb-2 z-50 w-72 sm:w-80 p-3.5 rounded-2xl bg-card/95 border border-card-border shadow-2xl backdrop-blur-xl animate-in fade-in zoom-in-95 space-y-3 text-foreground"
-                    >
-                      <div className="flex items-center justify-between pb-2 border-b border-card-border/60">
-                        <div className="flex items-center gap-2">
-                          <ArrowDownToLine className="w-4 h-4 text-primary-400" />
-                          <span className="text-xs font-bold">Download Lesson</span>
-                        </div>
-                        <button
-                          onClick={() => setShowDownloadQualityModal(false)}
-                          className="p-1 rounded-md text-muted-foreground hover:text-foreground"
-                        >
-                          <X className="w-3.5 h-3.5" />
-                        </button>
-                      </div>
-
-                      <p className="text-[11px] text-muted-foreground leading-relaxed">
-                        Select video quality to save inside PrepTea. Watch offline without data. (Not exported to gallery).
-                      </p>
-
-                      <div className="space-y-1.5 max-h-48 overflow-y-auto custom-scrollbar">
-                        {(videoData?.assets && videoData.assets.length > 0
-                          ? videoData.assets
-                          : [
-                              { slug: '1080p', displayName: '1080p', height: 1080, sizeBytes: 17.2 * 1024 * 1024, url: '' },
-                              { slug: '720p', displayName: '720p', height: 720, sizeBytes: 10.1 * 1024 * 1024, url: '' },
-                              { slug: '540p', displayName: '540p', height: 540, sizeBytes: 7.7 * 1024 * 1024, url: '' },
-                              { slug: '360p', displayName: '360p', height: 360, sizeBytes: 5.8 * 1024 * 1024, url: '' },
-                              { slug: '224p', displayName: '224p', height: 224, sizeBytes: 4.5 * 1024 * 1024, url: '' },
-                            ]
-                        ).map((asset: any) => {
-                          const isSelected = (downloadQualityAsset?.slug || '720p') === asset.slug;
-                          const sizeMb = (asset.sizeBytes / (1024 * 1024)).toFixed(1);
-                          return (
-                            <button
-                              key={asset.slug}
-                              onClick={() => setDownloadQualityAsset(asset)}
-                              className={`w-full flex items-center justify-between p-2 rounded-xl text-xs font-semibold transition-all cursor-pointer ${
-                                isSelected
-                                  ? 'bg-primary-950/60 border border-primary-500/50 text-primary-300'
-                                  : 'hover:bg-slate-800/60 text-foreground/80'
-                              }`}
-                            >
-                              <div className="flex items-center gap-2">
-                                <div className={`w-3.5 h-3.5 rounded-full border flex items-center justify-center ${
-                                  isSelected ? 'border-primary-400 bg-primary-400' : 'border-slate-600'
-                                }`}>
-                                  {isSelected && <div className="w-1.5 h-1.5 rounded-full bg-white" />}
-                                </div>
-                                <span>{asset.displayName}</span>
-                              </div>
-                              <span className="text-[10px] font-mono text-muted-foreground">
-                                ~{sizeMb} MB
-                              </span>
-                            </button>
-                          );
-                        })}
-                      </div>
-
-                      <div className="pt-2">
-                        <button
-                          onClick={() => {
-                            const chosen =
-                              downloadQualityAsset ||
-                              videoData?.assets?.find((a) => a.height === 720) ||
-                              activeAsset ||
-                              videoData?.assets?.[0];
-                            if (!chosen) return;
-                            setShowDownloadQualityModal(false);
-                            startDownload({
-                              videoId,
-                              courseSlug: courseSlug || 'course',
-                              courseTitle: courseTitle || 'Course Batch',
-                              sectionTitle,
-                              sectionId,
-                              unitTitle: title || videoData?.name || 'Video Lesson',
-                              thumbnailUrl: videoData?.thumbnailUrl || '',
-                              durationSeconds: videoData?.durationSeconds || duration || 0,
-                              quality: chosen.displayName || `${chosen.height}p`,
-                              assetUrl: chosen.url,
-                              expectedSizeBytes: chosen.sizeBytes,
-                            });
-                          }}
-                          className="w-full py-2 rounded-xl bg-primary-600 hover:bg-primary-500 text-white text-xs font-bold shadow-md shadow-primary-600/30 transition-all text-center flex items-center justify-center gap-1.5"
-                        >
-                          <Download className="w-3.5 h-3.5" />
-                          <span>Start Download</span>
-                        </button>
-                      </div>
-                    </div>
-                  )}
-                </div>
-              )}
-            </div>
+            <YouTubeDownloadButton
+              videoId={videoId}
+              courseSlug={courseSlug || 'course'}
+              courseTitle={courseTitle || 'Course Batch'}
+              sectionTitle={sectionTitle}
+              sectionId={sectionId}
+              unitTitle={title || videoData?.name || 'Video Lesson'}
+              thumbnailUrl={videoData?.thumbnailUrl || ''}
+              durationSeconds={videoData?.durationSeconds || duration || 0}
+              availableAssets={videoData?.assets}
+            />
           )}
 
           {(prevVideoUrl || onPrev) && (

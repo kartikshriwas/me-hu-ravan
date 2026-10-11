@@ -40,13 +40,19 @@ export async function GET(request: NextRequest) {
       return NextResponse.json({ error: 'Not Found' }, { status: 404 });
     }
 
+    const clientRange = request.headers.get('range');
+    const upstreamHeaders: Record<string, string> = {
+      'User-Agent':
+        'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+      Accept: '*/*',
+    };
+    if (clientRange) {
+      upstreamHeaders['Range'] = clientRange;
+    }
+
     // 2. Fetch the video stream from remote CDN
     const upstreamRes = await fetch(targetUrl, {
-      headers: {
-        'User-Agent':
-          'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-        Accept: '*/*',
-      },
+      headers: upstreamHeaders,
     });
 
     if (!upstreamRes.ok || !upstreamRes.body) {
@@ -63,12 +69,16 @@ export async function GET(request: NextRequest) {
     if (contentLength) {
       headers.set('Content-Length', contentLength);
     }
+    const contentRange = upstreamRes.headers.get('content-range');
+    if (contentRange) {
+      headers.set('Content-Range', contentRange);
+    }
     headers.set('Accept-Ranges', 'bytes');
     headers.set('Cache-Control', 'private, no-cache, no-store, must-revalidate');
     headers.set('Content-Disposition', 'inline'); // Explicitly inline, NOT attachment
 
     return new Response(upstreamRes.body as any, {
-      status: 200,
+      status: upstreamRes.status === 206 ? 206 : 200,
       headers,
     });
   } catch (error: any) {
