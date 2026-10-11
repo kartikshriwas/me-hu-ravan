@@ -413,6 +413,7 @@ export function CourseCalendarView({
     course.sections.forEach((sec) => {
       sec.units.forEach((unit) => {
         const cfg = getUnitMetaConfig(unit);
+        if (!cfg.isActionableVideo) return;
 
         let dateKey = 'unscheduled';
         if (unit.modifiedF && typeof unit.modifiedF === 'string') {
@@ -428,7 +429,7 @@ export function CourseCalendarView({
 
         const isYouTube = (unit.objectType || unit.type || '').toLowerCase() === 'youtube';
 
-        const videoId = unit.sourceid || unit.id || '';
+        const videoId = unit.sourceid || unit.vimeoid || unit.id || '';
 
         allUnitsList.push({
           unit,
@@ -436,7 +437,7 @@ export function CourseCalendarView({
           sectionId: sec.id,
           videoId,
           durationSeconds: unit.duration || 0,
-          isActionableVideo: cfg.isActionableVideo,
+          isActionableVideo: true,
           isYouTube,
           uploadDateStr: dateKey,
         });
@@ -800,12 +801,15 @@ export function CourseCalendarView({
     const ids = new Set<string>();
     course.sections.forEach((s) =>
       s.units.forEach((u) => {
-        const vid = u.sourceid || u.id;
-        if (vid) ids.add(vid);
+        const cfg = getUnitMetaConfig(u);
+        if (cfg.isActionableVideo) {
+          const vid = u.sourceid || u.vimeoid || u.id;
+          if (vid) ids.add(vid);
+        }
       })
     );
     return ids;
-  }, [course]);
+  }, [course, getUnitMetaConfig]);
 
   const overallCompletedUnits = useMemo(
     () => completedVideos.filter((id) => courseVideoIdSet.has(id)).length,
@@ -879,6 +883,22 @@ export function CourseCalendarView({
       }, 50);
     }
   };
+
+  if (calendarDays.length === 0) {
+    return (
+      <div className="p-8 sm:p-12 text-center rounded-2xl border border-card-border bg-card/40 space-y-4">
+        <div className="w-12 h-12 rounded-xl bg-primary-500/10 text-primary-400 flex items-center justify-center mx-auto border border-primary-500/20">
+          <CalendarDays className="w-6 h-6" />
+        </div>
+        <div className="space-y-1.5 max-w-md mx-auto">
+          <h3 className="text-base font-bold text-foreground">No Video Lectures to Schedule</h3>
+          <p className="text-xs text-muted-foreground">
+            Calendar Mode generates daily targets and study streaks for video lecture curriculum. This batch consists of downloadable resources and notes which you can access in Default Mode.
+          </p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="space-y-5">
@@ -1040,8 +1060,8 @@ export function CourseCalendarView({
                   {(() => {
                     const firstUnfinished =
                       nextTargetDay.items.find(
-                        (it) => it.videoId && !completedVideos.includes(it.videoId)
-                      ) || nextTargetDay.items[0];
+                        (it) => it.isActionableVideo && it.videoId && !completedVideos.includes(it.videoId)
+                      ) || nextTargetDay.items.find((it) => it.isActionableVideo && it.videoId);
 
                     if (!firstUnfinished || !firstUnfinished.videoId) return null;
 
@@ -1663,7 +1683,7 @@ export function CourseCalendarView({
                               return null;
                             })()}
 
-                            {item.videoId ? (
+                            {item.isActionableVideo && item.videoId ? (
                               <Link
                                 href={`/courses/${course.slug}/video/${item.videoId}`}
                                 className={`px-3 py-1.5 rounded-xl text-xs font-semibold transition-all flex items-center gap-1.5 ${
