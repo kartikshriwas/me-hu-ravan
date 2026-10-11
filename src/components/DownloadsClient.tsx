@@ -593,6 +593,7 @@ export function DownloadsClient() {
                 courseSlug={activePlaybackVideo.courseSlug}
                 sectionTitle={activePlaybackVideo.sectionTitle}
                 blobUrl={activePlaybackUrl || undefined}
+                downloadedQuality={activePlaybackVideo.quality}
                 onClose={handleClosePlayer}
                 onNext={nextVideo ? handleSkipNext : undefined}
                 onPrev={prevVideo ? handleSkipPrev : undefined}

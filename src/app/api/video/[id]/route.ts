@@ -81,16 +81,22 @@ export async function GET(
         const isVideoType = asset.type?.toLowerCase().includes('video') || asset.type?.toLowerCase().includes('mp4') || asset.type === 'iphone_video';
         return hasContainer || isVideoType;
       })
-      .map((asset: any) => ({
-        type: asset.type || 'mp4_video',
-        slug: asset.slug || '',
-        displayName: asset.display_name || 'Standard',
-        width: asset.width || 0,
-        height: asset.height || 0,
-        sizeBytes: asset.size || 0,
-        bitrate: asset.bitrate || 0,
-        url: asset.url || '',
-      }))
+      .map((asset: any) => {
+        const height = asset.height || 0;
+        const rawName = (asset.display_name || '').trim();
+        const isOriginal = rawName.toLowerCase().includes('original');
+        const displayName = (!isOriginal && rawName) ? rawName : (height ? `${height}p` : 'Standard');
+        return {
+          type: asset.type || 'mp4_video',
+          slug: asset.slug || (height ? `${height}p` : 'standard'),
+          displayName,
+          width: asset.width || 0,
+          height,
+          sizeBytes: asset.size || 0,
+          bitrate: asset.bitrate || 0,
+          url: asset.url || '',
+        };
+      })
       // Sort qualities descending by height (e.g. 1080p -> 720p -> 540p -> 360p)
       .sort((a: any, b: any) => b.height - a.height);
 

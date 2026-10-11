@@ -30,6 +30,7 @@ import {
   Trash2,
   ArrowUpRight,
   Camera,
+  WifiOff,
 } from 'lucide-react';
 import { useDownloads } from '@/lib/downloadContext';
 import { useAuth } from '@/lib/authContext';
@@ -72,6 +73,7 @@ interface CustomVideoPlayerProps {
   isTheaterMode?: boolean;
   onToggleTheaterMode?: () => void;
   blobUrl?: string;
+  downloadedQuality?: string;
   onNext?: () => void;
   onPrev?: () => void;
 }
@@ -92,6 +94,7 @@ export function CustomVideoPlayer({
   isTheaterMode = false,
   onToggleTheaterMode,
   blobUrl,
+  downloadedQuality,
   onNext,
   onPrev,
 }: CustomVideoPlayerProps) {
@@ -134,6 +137,9 @@ export function CustomVideoPlayer({
   const [downloadQualityAsset, setDownloadQualityAsset] = useState<VideoAsset | null>(null);
 
   const isCurrentDownloaded = isDownloaded(videoId);
+  const currentDownload = downloads.find((d) => d.videoId === videoId);
+  const effectiveOfflineQuality = downloadedQuality || currentDownload?.quality || null;
+  const isPlayingOfflineBlob = !!(blobUrl || localBlobUrl);
   const isCurrentDownloading = isDownloading(videoId);
   const downloadProgress = getDownloadProgress(videoId);
 
@@ -192,6 +198,7 @@ export function CustomVideoPlayer({
 
   // Buffering & Auto-Play states
   const [bufferedEnd, setBufferedEnd] = useState(0);
+  const [isBuffering, setIsBuffering] = useState(false);
   const [showAutoPlayOverlay, setShowAutoPlayOverlay] = useState(false);
   const [autoPlayCountdown, setAutoPlayCountdown] = useState(10);
   const [autoPlayCancelled, setAutoPlayCancelled] = useState(false);
@@ -250,7 +257,19 @@ export function CustomVideoPlayer({
           }
 
           let defaultAsset: VideoAsset | null = null;
-          if (preferredHeight) {
+
+          // If playing an offline/downloaded video, match the downloaded resolution
+          if (effectiveOfflineQuality) {
+            const parsedOfflineHeight = parseInt(effectiveOfflineQuality.replace(/\D/g, ''), 10);
+            if (parsedOfflineHeight) {
+              defaultAsset = video.assets.find((a) => a.height === parsedOfflineHeight) || null;
+            }
+            if (!defaultAsset) {
+              defaultAsset = video.assets.find((a) => a.displayName.toLowerCase() === effectiveOfflineQuality.toLowerCase()) || null;
+            }
+          }
+
+          if (!defaultAsset && preferredHeight) {
             defaultAsset = video.assets.find((a) => a.height === preferredHeight) || null;
           }
           if (!defaultAsset && preferredName) {
@@ -262,8 +281,8 @@ export function CustomVideoPlayer({
 
           if (!defaultAsset) {
             defaultAsset =
-              video.assets.find((a) => a.height === 1080) ||
               video.assets.find((a) => a.height === 720) ||
+              video.assets.find((a) => a.height === 1080) ||
               video.assets.find((a) => a.height === 540) ||
               video.assets[0] ||
               null;
@@ -287,7 +306,7 @@ export function CustomVideoPlayer({
     return () => {
       active = false;
     };
-  }, [videoId, embedHtml, blobUrl, localBlobUrl]);
+  }, [videoId, embedHtml, blobUrl, localBlobUrl, effectiveOfflineQuality]);
 
   // Restore preferred playback speed from localStorage on initial mount
   useEffect(() => {
@@ -554,6 +573,7 @@ export function CustomVideoPlayer({
     if (!videoRef.current) return;
     const currentTimeVal = videoRef.current.currentTime;
     setCurrentTime(currentTimeVal);
+    if (isBuffering) setIsBuffering(false);
     handleProgress();
 
     // Dynamically sync playbackRate while video is playing (detects extensions like Video Speed Controller)
@@ -1162,8 +1182,13 @@ export function CustomVideoPlayer({
           onProgress={handleProgress}
           onEnded={handleVideoEnded}
           onRateChange={handleRateChange}
+          onWaiting={() => setIsBuffering(true)}
+          onPlaying={() => setIsBuffering(false)}
+          onCanPlay={() => setIsBuffering(false)}
+          onSeeked={() => setIsBuffering(false)}
           onPlay={() => {
             setIsPlaying(true);
+            setIsBuffering(false);
             if (videoRef.current?.playbackRate) {
               const cleanRate = Math.round(videoRef.current.playbackRate * 100) / 100;
               setPlaybackRate((prev) => (prev !== cleanRate ? cleanRate : prev));
@@ -1244,8 +1269,23 @@ export function CustomVideoPlayer({
           </div>
         )}
 
+        {/* Buffering Spinner & Connection Status */}
+        {isBuffering && (
+          <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none z-20 bg-black/30 backdrop-blur-[2px] transition-all animate-in fade-in">
+            <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-slate-900/85 border border-primary-500/40 backdrop-blur-md flex items-center justify-center shadow-2xl">
+              <Loader2 className="w-7 h-7 sm:w-8 sm:h-8 text-primary-400 animate-spin" />
+            </div>
+            {!isOnline && !blobUrl && !localBlobUrl && (
+              <div className="mt-3 px-3.5 py-1.5 rounded-full bg-slate-900/90 border border-amber-500/40 backdrop-blur-md flex items-center gap-2 text-xs font-semibold text-amber-300 shadow-xl animate-in fade-in slide-in-from-bottom-2">
+                <WifiOff className="w-3.5 h-3.5 text-amber-400 shrink-0" />
+                <span>Waiting for internet connection...</span>
+              </div>
+            )}
+          </div>
+        )}
+
         {/* Centered Play/Pause Toggle Button */}
-        {showControls && (
+        {showControls && !isBuffering && (
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-10">
             <button
               onClick={(e) => {
@@ -1348,8 +1388,20 @@ export function CustomVideoPlayer({
                 </div>
 
                 <div className="space-y-1 max-h-56 overflow-y-auto custom-scrollbar">
+                  {isPlayingOfflineBlob && (
+                    <div className="p-2.5 rounded-xl bg-emerald-950/40 border border-emerald-500/30 text-emerald-300 font-semibold text-xs flex items-center justify-between mb-1.5">
+                      <div className="flex items-center gap-2">
+                        <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+                        <span>Playing Offline ({effectiveOfflineQuality || 'Saved'})</span>
+                      </div>
+                      <span className="text-[10px] font-mono text-emerald-400/80 bg-emerald-950/80 px-1.5 py-0.5 rounded border border-emerald-500/20">
+                        Storage
+                      </span>
+                    </div>
+                  )}
+
                   {videoData?.assets?.map((asset) => {
-                    const isSelected = selectedAsset?.slug === asset.slug;
+                    const isSelected = !isPlayingOfflineBlob && selectedAsset?.slug === asset.slug;
                     return (
                       <button
                         key={asset.slug}
@@ -1561,53 +1613,36 @@ export function CustomVideoPlayer({
 
             <div className="flex items-center gap-1 sm:gap-2">
               {/* Quality button — clicking opens the quality menu directly */}
-              {selectedAsset ? (
-                <button
-                  type="button"
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    setShowSettings((prev) => {
-                      if (prev && settingsTab === 'quality') {
-                        return false;
-                      }
-                      setSettingsTab('quality');
-                      return true;
-                    });
-                  }}
-                  className={`text-[10px] sm:text-xs font-bold tracking-wider uppercase px-2 py-0.5 sm:py-1 rounded-md border transition-all active:scale-95 cursor-pointer ${
-                    showSettings && settingsTab === 'quality'
-                      ? 'bg-primary-600 text-white border-primary-400 shadow-sm'
-                      : 'bg-primary-950/80 border-primary-500/30 text-primary-600 dark:text-primary-300 hover:bg-primary-900/70 hover:border-primary-400/50'
-                  }`}
-                  title="Quality — Click to open quality menu"
-                  aria-label="Quality settings"
-                >
-                  {selectedAsset.displayName}
-                </button>
-              ) : videoData?.assets && videoData.assets.length > 0 ? (
-                <button
-                  type="button"
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    setShowSettings((prev) => {
-                      if (prev && settingsTab === 'quality') {
-                        return false;
-                      }
-                      setSettingsTab('quality');
-                      return true;
-                    });
-                  }}
-                  className={`text-[10px] sm:text-xs font-bold tracking-wider uppercase px-2 py-0.5 sm:py-1 rounded-md border transition-all active:scale-95 cursor-pointer ${
-                    showSettings && settingsTab === 'quality'
-                      ? 'bg-primary-600 text-white border-primary-400 shadow-sm'
-                      : 'bg-primary-950/80 border-primary-500/30 text-primary-600 dark:text-primary-300 hover:bg-primary-900/70 hover:border-primary-400/50'
-                  }`}
-                  title="Quality — Click to open quality menu"
-                  aria-label="Quality settings"
-                >
-                  HD
-                </button>
-              ) : null}
+              {(() => {
+                const label = isPlayingOfflineBlob && effectiveOfflineQuality
+                  ? effectiveOfflineQuality
+                  : (selectedAsset ? selectedAsset.displayName : (videoData?.assets && videoData.assets.length > 0 ? 'HD' : (isPlayingOfflineBlob ? 'Offline' : null)));
+                if (!label) return null;
+                return (
+                  <button
+                    type="button"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setShowSettings((prev) => {
+                        if (prev && settingsTab === 'quality') {
+                          return false;
+                        }
+                        setSettingsTab('quality');
+                        return true;
+                      });
+                    }}
+                    className={`text-[10px] sm:text-xs font-bold tracking-wider uppercase px-2 py-0.5 sm:py-1 rounded-md border transition-all active:scale-95 cursor-pointer ${
+                      showSettings && settingsTab === 'quality'
+                        ? 'bg-primary-600 text-white border-primary-400 shadow-sm'
+                        : 'bg-primary-950/80 border-primary-500/30 text-primary-600 dark:text-primary-300 hover:bg-primary-900/70 hover:border-primary-400/50'
+                    }`}
+                    title={isPlayingOfflineBlob ? `Offline Quality: ${label} — Click to open quality menu` : "Quality — Click to open quality menu"}
+                    aria-label="Quality settings"
+                  >
+                    {label}
+                  </button>
+                );
+              })()}
 
               {/* Screenshot button — right side of quality option */}
               <button
@@ -1809,6 +1844,13 @@ export function CustomVideoPlayer({
                         This lesson is saved in this browser for offline playback on PrepTea. Not saved to your device gallery.
                       </p>
 
+                      <div className="flex items-center justify-between text-[11px] text-muted-foreground pt-1 pb-1">
+                        <span>Downloaded Quality:</span>
+                        <span className="font-mono font-bold text-primary-400 bg-primary-950/60 px-2 py-0.5 rounded border border-primary-500/30">
+                          {currentDownload?.quality || effectiveOfflineQuality || 'Standard'}
+                        </span>
+                      </div>
+
                       <div className="space-y-1 pt-1">
                         <Link
                           href="/downloads"
@@ -1836,12 +1878,21 @@ export function CustomVideoPlayer({
                 <div className="relative">
                   <button
                     onClick={() => {
-                      if (!downloadQualityAsset && videoData?.assets?.length) {
+                      const available = (videoData?.assets && videoData.assets.length > 0)
+                        ? videoData.assets
+                        : [
+                            { slug: '1080p', displayName: '1080p', height: 1080, sizeBytes: 17.2 * 1024 * 1024, url: '' },
+                            { slug: '720p', displayName: '720p', height: 720, sizeBytes: 10.1 * 1024 * 1024, url: '' },
+                            { slug: '540p', displayName: '540p', height: 540, sizeBytes: 7.7 * 1024 * 1024, url: '' },
+                            { slug: '360p', displayName: '360p', height: 360, sizeBytes: 5.8 * 1024 * 1024, url: '' },
+                            { slug: '224p', displayName: '224p', height: 224, sizeBytes: 4.5 * 1024 * 1024, url: '' },
+                          ];
+                      if (!downloadQualityAsset) {
                         const defaultAsset =
-                          videoData.assets.find((a) => a.height === 720) ||
-                          videoData.assets.find((a) => a.height === 540) ||
-                          videoData.assets[0];
-                        setDownloadQualityAsset(defaultAsset || null);
+                          available.find((a: any) => a.height === 720) ||
+                          available.find((a: any) => a.height === 540) ||
+                          available[0];
+                        setDownloadQualityAsset((defaultAsset as any) || null);
                       }
                       setShowDownloadQualityModal(true);
                     }}
@@ -1886,7 +1937,7 @@ export function CustomVideoPlayer({
                               { slug: '224p', displayName: '224p', height: 224, sizeBytes: 4.5 * 1024 * 1024, url: '' },
                             ]
                         ).map((asset: any) => {
-                          const isSelected = (downloadQualityAsset?.slug || activeAsset?.slug || '720p') === asset.slug;
+                          const isSelected = (downloadQualityAsset?.slug || '720p') === asset.slug;
                           const sizeMb = (asset.sizeBytes / (1024 * 1024)).toFixed(1);
                           return (
                             <button
@@ -1917,7 +1968,11 @@ export function CustomVideoPlayer({
                       <div className="pt-2">
                         <button
                           onClick={() => {
-                            const chosen = downloadQualityAsset || activeAsset || videoData?.assets?.[0];
+                            const chosen =
+                              downloadQualityAsset ||
+                              videoData?.assets?.find((a) => a.height === 720) ||
+                              activeAsset ||
+                              videoData?.assets?.[0];
                             if (!chosen) return;
                             setShowDownloadQualityModal(false);
                             startDownload({
