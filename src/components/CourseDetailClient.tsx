@@ -899,6 +899,7 @@ export function CourseDetailClient({ course, availableTests, isUnlocked = true }
         {viewMode === 'calendar' ? (
           <CourseCalendarView
             course={course}
+            availableTests={availableTests}
             isUnlocked={isUnlocked}
             completedVideos={completedVideos}
             onToggleComplete={handleToggleComplete}
