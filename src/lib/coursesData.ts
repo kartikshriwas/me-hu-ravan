@@ -97,8 +97,7 @@ export function getAllCourses(): CourseMeta[] {
 
       const rawSections = course.sections || {};
       let sectionsCount = 0;
-      let rawUnitsCount = 0;
-      let populatedUnitsCount = 0;
+      let rawVideoCount = 0;
       let validUnitsCount = 0;
       let videosCount = 0;
       let totalDurationSeconds = 0;
@@ -108,7 +107,6 @@ export function getAllCourses(): CourseMeta[] {
         const lp = sec.learningPath;
         if (!Array.isArray(lp) || lp.length === 0) continue;
 
-        rawUnitsCount += lp.length;
         let secHasValid = false;
 
         for (let i = 0; i < lp.length; i++) {
@@ -123,6 +121,7 @@ export function getAllCourses(): CourseMeta[] {
           if (!isVideo && !isQuiz && !isEbook) continue;
 
           if (isVideo) {
+            rawVideoCount++;
             const sid = (meta?.sourceid || meta?.vimeoid || item.sourceid || item.vimeoid || '').trim();
             const hasYt = rawType === 'youtube' && (sid !== '' || meta?.data?.embed || item.data?.embed);
             if (!sid && !hasYt) continue;
@@ -132,7 +131,6 @@ export function getAllCourses(): CourseMeta[] {
             totalDurationSeconds += dur;
           }
 
-          populatedUnitsCount++;
           validUnitsCount++;
           secHasValid = true;
         }
@@ -142,7 +140,7 @@ export function getAllCourses(): CourseMeta[] {
         }
       }
 
-      const isOngoing = rawUnitsCount > 0 && (populatedUnitsCount / rawUnitsCount) < 0.95;
+      const isOngoing = rawVideoCount > 0 && (videosCount / rawVideoCount) < 0.90;
 
       results.push({
         title: course.title || path.basename(file, '.json'),
@@ -186,13 +184,11 @@ export function parseRawCourseData(data: any, fallbackSlug: string = 'course'): 
 
   const rawSections = course.sections || {};
   const parsedSections: CourseSection[] = [];
-  let rawUnitsCount = 0;
-  let populatedUnitsCount = 0;
+  let rawVideoCount = 0;
   let videosCount = 0;
 
   for (const [secId, secData] of Object.entries(rawSections) as [string, any][]) {
     const learningPath = Array.isArray(secData.learningPath) ? secData.learningPath : [];
-    rawUnitsCount += learningPath.length;
 
     const units: CourseSectionUnit[] = [];
 
@@ -213,6 +209,7 @@ export function parseRawCourseData(data: any, fallbackSlug: string = 'course'): 
       if (!isVideo && !isQuiz && !isEbook) continue;
 
       if (isVideo) {
+        rawVideoCount++;
         const sid = (unitMeta.sourceid || unitMeta.vimeoid || lpItem.sourceid || lpItem.vimeoid || '').trim();
         const hasYt = objType === 'youtube' && (sid !== '' || unitMeta.data?.embed || lpItem.data?.embed);
         if (!sid && !hasYt) {
@@ -221,8 +218,6 @@ export function parseRawCourseData(data: any, fallbackSlug: string = 'course'): 
         }
         videosCount++;
       }
-
-      populatedUnitsCount++;
 
       const unitTitle = unitMeta.title || lpItem.unitTitle || 'Lesson Unit';
 
@@ -261,7 +256,7 @@ export function parseRawCourseData(data: any, fallbackSlug: string = 'course'): 
   }
 
   const totalUnits = parsedSections.reduce((sum, s) => sum + s.units.length, 0);
-  const isOngoing = rawUnitsCount > 0 && (populatedUnitsCount / rawUnitsCount) < 0.95;
+  const isOngoing = rawVideoCount > 0 && (videosCount / rawVideoCount) < 0.90;
 
   return {
     title: course.title || fallbackSlug,
