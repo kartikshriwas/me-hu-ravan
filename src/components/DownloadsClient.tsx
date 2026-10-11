@@ -120,7 +120,7 @@ export function DownloadsClient() {
   const [viewMode, setViewMode] = useState<'courses' | 'videos'>('courses');
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCourse, setSelectedCourse] = useState<string>('all');
-  const [sortBy, setSortBy] = useState<'recent' | 'size' | 'title'>('recent');
+  const [sortBy, setSortBy] = useState<'syllabus' | 'recent' | 'size' | 'title'>('syllabus');
 
   // Expanded sections state: courseSlug -> sectionTitle -> boolean
   const [collapsedSections, setCollapsedSections] = useState<Record<string, boolean>>({});
@@ -303,6 +303,8 @@ export function DownloadsClient() {
       list = [...list].sort((a, b) => (b.sizeBytes || 0) - (a.sizeBytes || 0));
     } else if (sortBy === 'title') {
       list = [...list].sort((a, b) => a.unitTitle.localeCompare(b.unitTitle));
+    } else if (sortBy === 'syllabus') {
+      list = [...list].sort((a, b) => (a.downloadedAt || 0) - (b.downloadedAt || 0));
     } else {
       list = [...list].sort((a, b) => (b.downloadedAt || 0) - (a.downloadedAt || 0));
     }
@@ -367,12 +369,12 @@ export function DownloadsClient() {
           .filter((sec) => sec.videos && sec.videos.length > 0)
           .map((sec) => ({
             ...sec,
-            videos: sortBy === 'recent'
+            videos: (sortBy === 'recent' || sortBy === 'syllabus')
               ? [...sec.videos].sort((a, b) => (a.downloadedAt || 0) - (b.downloadedAt || 0))
               : sec.videos,
           })),
       }));
-  }, [filteredDownloads]);
+  }, [filteredDownloads, sortBy]);
 
   // Open inline offline video player
   const handlePlayOffline = async (video: OfflineVideoMetadata) => {
@@ -398,7 +400,18 @@ export function DownloadsClient() {
   };
 
   // Next / Previous navigation within player
-  const activePlaylist = filteredDownloads;
+  const activePlaylist = useMemo(() => {
+    if (viewMode === 'courses' && activePlaybackVideo) {
+      const courseGroup = groupedCourses.find(
+        (c) => c.courseSlug === activePlaybackVideo.courseSlug
+      );
+      if (courseGroup) {
+        return courseGroup.sectionList.flatMap((s) => s.videos);
+      }
+    }
+    return filteredDownloads;
+  }, [viewMode, activePlaybackVideo, groupedCourses, filteredDownloads]);
+
   const currentActiveIndex = activePlaybackVideo
     ? activePlaylist.findIndex((v) => v.videoId === activePlaybackVideo.videoId)
     : -1;
@@ -1190,6 +1203,7 @@ export function DownloadsClient() {
                   onChange={(e) => setSortBy(e.target.value as any)}
                   className="bg-transparent text-foreground font-semibold focus:outline-none cursor-pointer text-xs"
                 >
+                  <option value="syllabus" className="bg-card text-foreground">Syllabus Order</option>
                   <option value="recent" className="bg-card text-foreground">Recently Saved</option>
                   <option value="title" className="bg-card text-foreground">Title (A-Z)</option>
                   <option value="size" className="bg-card text-foreground">Largest Size</option>
@@ -1486,7 +1500,7 @@ export function DownloadsClient() {
                         {/* Section Lessons List */}
                         {!isCollapsed && (
                           <div className="p-3 sm:p-4 space-y-2 border-t border-card-border/60">
-                            {sec.videos.map((video) => {
+                            {sec.videos.map((video, vIdx) => {
                               const isCurrentlyPlaying = activePlaybackVideo?.videoId === video.videoId;
                               return (
                                 <article
@@ -1529,6 +1543,9 @@ export function DownloadsClient() {
                                     {/* Lesson Info */}
                                     <div className="min-w-0 space-y-1">
                                       <div className="flex items-center gap-2">
+                                        <span className="w-5 h-5 rounded-md bg-white/[0.05] border border-white/[0.08] text-[10px] font-mono font-bold text-muted-foreground flex items-center justify-center shrink-0">
+                                          {vIdx + 1}
+                                        </span>
                                         <h4 className="text-xs sm:text-sm font-bold text-foreground line-clamp-1 group-hover:text-primary-500 transition-colors">
                                           {video.unitTitle}
                                         </h4>
@@ -1538,10 +1555,14 @@ export function DownloadsClient() {
                                           </span>
                                         )}
                                       </div>
-                                      <div className="flex items-center gap-2 text-[10px] sm:text-[11px] text-muted-foreground font-medium">
+                                      <div className="flex items-center gap-2 text-[10px] sm:text-[11px] text-muted-foreground font-medium flex-wrap">
                                         <span className="px-1.5 py-0.5 rounded bg-primary-500/10 text-primary-400 font-semibold border border-primary-500/20">
                                           {video.quality}
                                         </span>
+                                        {video.durationSeconds > 0 && (
+                                          <span>{formatDuration(video.durationSeconds)}</span>
+                                        )}
+                                        <span>•</span>
                                         <span>{formatBytes(video.sizeBytes)}</span>
                                         <span>•</span>
                                         <span>{formatDate(video.downloadedAt)}</span>

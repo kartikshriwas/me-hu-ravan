@@ -769,6 +769,7 @@ export function VideoPlaylistSidebar({
                 <div className="space-y-1 pl-1">
                   {videoUnits.map((unit) => {
                     const uId = unit.sourceid || unit.id;
+                    const isYouTube = unit.type === 'youtube' || (unit.data && !!unit.data.embed);
                     const isActive = uId === currentVideoId;
                     const isCompleted = completedVideos.includes(uId);
                     const title =
@@ -872,7 +873,7 @@ export function VideoPlaylistSidebar({
                         </div>
 
                         <div className="flex items-center gap-1.5 shrink-0 ml-2">
-                          {hasCourseAccess && !isDownloaded(uId) && !isDownloading(uId) && !isPaused(uId) && (
+                          {hasCourseAccess && !isDownloaded(uId) && !isDownloading(uId) && !isPaused(uId) && !isYouTube && (
                             <button
                               type="button"
                               onClick={(e) => {

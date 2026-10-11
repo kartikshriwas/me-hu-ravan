@@ -24,6 +24,7 @@ import {
   Trash2,
   Sparkles,
   Settings,
+  RotateCcw,
 } from 'lucide-react';
 import { CourseDetail, CourseSectionUnit } from '@/lib/types';
 import { fetchUserProgressFromDb } from '@/lib/userProgressClient';
@@ -37,6 +38,7 @@ interface CalendarUnitItem {
   videoId: string;
   durationSeconds: number;
   isActionableVideo: boolean;
+  isYouTube: boolean;
   uploadDateStr: string; // YYYY-MM-DD
 }
 
@@ -149,6 +151,8 @@ export function CourseCalendarView({
     isDownloading,
     isQueued,
     isPaused,
+    isFailed,
+    retryDownload,
     getDownloadProgress,
     downloadSection,
     deleteDownload,
@@ -210,7 +214,7 @@ export function CourseCalendarView({
   const handleDownloadDay = (day: CalendarDayGroup) => {
     if (!isUnlocked) return;
     const units = day.items
-      .filter((it) => it.videoId && it.isActionableVideo)
+      .filter((it) => it.videoId && it.isActionableVideo && !it.isYouTube)
       .map((it) => ({
         videoId: it.videoId,
         unitTitle: it.unit.unitTitle || it.unit.title || 'Lesson',
@@ -428,7 +432,7 @@ export function CourseCalendarView({
           (unit.subtitle && unit.subtitle.toLowerCase().includes('youtube')) ||
           !!(unit.data && unit.data.embed);
 
-        const videoId = unit.sourceid || (!isYouTube && unit.id ? unit.id : '');
+        const videoId = unit.sourceid || unit.id || '';
 
         allUnitsList.push({
           unit,
@@ -437,6 +441,7 @@ export function CourseCalendarView({
           videoId,
           durationSeconds: unit.duration || 0,
           isActionableVideo: cfg.isActionableVideo,
+          isYouTube,
           uploadDateStr: dateKey,
         });
       });
@@ -897,7 +902,7 @@ export function CourseCalendarView({
               {streakData.studiedToday && (
                 <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-medium">
                   <Check className="w-3 h-3 stroke-[2.5]" />
-                  <span>Completed Today</span>
+                  <span>Daily Habit Active</span>
                 </span>
               )}
             </div>
@@ -968,6 +973,14 @@ export function CourseCalendarView({
                       <span>Day {nextTargetDay.dayNumber} of {totalDays}</span>
                       <span>•</span>
                       <span>{nextTargetDay.formattedDate}</span>
+                      {streakData.studiedToday && nextTargetDay.progressPercent === 0 && (
+                        <>
+                          <span>•</span>
+                          <span className="text-amber-400 font-medium">
+                            Pending today (studied other topics)
+                          </span>
+                        </>
+                      )}
                     </div>
                     <h4 className="text-base font-bold text-foreground leading-snug truncate mt-1">
                       {nextTargetDay.targetTitle}
@@ -1088,6 +1101,11 @@ export function CourseCalendarView({
             <p className="text-xl font-bold text-emerald-400">{completedDaysCount}</p>
             <span className="text-xs text-muted-foreground">/ {totalDays}</span>
           </div>
+          {completedDaysCount === 0 && overallCompletedUnits > 0 && (
+            <p className="text-[10px] text-muted-foreground/80 truncate">
+              {overallCompletedUnits} lectures done in upcoming days
+            </p>
+          )}
         </div>
 
         <div className="p-3.5 rounded-xl bg-card/50 border border-card-border space-y-1">
@@ -1371,7 +1389,7 @@ export function CourseCalendarView({
                       {/* Download Section / Day Button */}
                       {(() => {
                         const dayVideoUnits = day.items
-                          .filter((it) => it.videoId && it.isActionableVideo)
+                          .filter((it) => it.videoId && it.isActionableVideo && !it.isYouTube)
                           .map((it) => ({
                             videoId: it.videoId,
                             unitTitle: it.unit.unitTitle || it.unit.title || 'Lesson',
@@ -1531,10 +1549,11 @@ export function CourseCalendarView({
 
                             {(() => {
                               const uId = item.videoId || item.unit.sourceid || item.unit.id;
-                              const isDl = isDownloaded(uId) || isDownloaded(item.unit.sourceid || '') || isDownloaded(item.unit.id || '');
-                              const isQ = isQueued(uId) || isQueued(item.unit.sourceid || '') || isQueued(item.unit.id || '');
-                              const isP = isPaused(uId) || isPaused(item.unit.sourceid || '') || isPaused(item.unit.id || '');
-                              const isDlIng = isDownloading(uId) || isDownloading(item.unit.sourceid || '') || isDownloading(item.unit.id || '');
+                              const isDl = !item.isYouTube && (isDownloaded(uId) || isDownloaded(item.unit.sourceid || '') || isDownloaded(item.unit.id || ''));
+                              const isQ = !item.isYouTube && (isQueued(uId) || isQueued(item.unit.sourceid || '') || isQueued(item.unit.id || ''));
+                              const isP = !item.isYouTube && (isPaused(uId) || isPaused(item.unit.sourceid || '') || isPaused(item.unit.id || ''));
+                              const isDlIng = !item.isYouTube && (isDownloading(uId) || isDownloading(item.unit.sourceid || '') || isDownloading(item.unit.id || ''));
+                              const isFailedUnit = !item.isYouTube && (isFailed(uId) || isFailed(item.unit.sourceid || '') || isFailed(item.unit.id || ''));
                               const prog = getDownloadProgress(uId) ?? getDownloadProgress(item.unit.sourceid || '') ?? getDownloadProgress(item.unit.id || '');
 
                               if (isDl) {
@@ -1612,7 +1631,26 @@ export function CourseCalendarView({
                                   </button>
                                 );
                               }
-                              if (isUnlocked && onDownloadUnit && item.videoId) {
+                              if (isFailedUnit) {
+                                return (
+                                  <button
+                                    type="button"
+                                    onClick={async (e) => {
+                                      e.preventDefault();
+                                      e.stopPropagation();
+                                      await retryDownload(uId);
+                                      if (item.unit.sourceid && item.unit.sourceid !== uId) await retryDownload(item.unit.sourceid);
+                                      if (item.unit.id && item.unit.id !== uId) await retryDownload(item.unit.id);
+                                    }}
+                                    title="Download failed. Click to retry."
+                                    className="px-2 py-1 rounded-lg bg-rose-500/15 hover:bg-rose-500/25 border border-rose-500/30 text-rose-400 text-[10px] font-bold flex items-center gap-1 shrink-0 cursor-pointer transition-colors"
+                                  >
+                                    <RotateCcw className="w-3 h-3 text-rose-400" />
+                                    <span>Retry</span>
+                                  </button>
+                                );
+                              }
+                              if (isUnlocked && onDownloadUnit && item.videoId && !item.isYouTube) {
                                 return (
                                   <button
                                     type="button"

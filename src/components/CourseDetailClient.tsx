@@ -46,6 +46,7 @@ import {
   Flame,
   Pause,
   Settings,
+  RotateCcw,
 } from 'lucide-react';
 import { useDownloads } from '@/lib/downloadContext';
 import { DownloadLessonModal, SingleLessonDownloadTarget } from '@/components/DownloadLessonModal';
@@ -308,6 +309,8 @@ export function CourseDetailClient({ course, availableTests, isUnlocked = true }
     isDownloading,
     isQueued,
     isPaused,
+    isFailed,
+    retryDownload,
     getDownloadProgress,
     startDownload,
     downloadSection,
@@ -980,8 +983,8 @@ export function CourseDetailClient({ course, availableTests, isUnlocked = true }
                 {isCourseActiveDownloading && batchProgress
                   ? `Downloading (${batchProgress.quality || selectedQuality}): ${batchProgress.currentVideoTitle || 'Lesson'} (${batchProgress.completedItems}/${batchProgress.totalItems})`
                   : isCourseFullyDownloaded
-                  ? `All ${totalCourseVideos} video lessons saved to this browser for offline playback.`
-                  : `${courseDownloadedCount} of ${totalCourseVideos} video lessons downloaded.`}
+                  ? `All ${totalCourseVideos} offline video lessons saved to this browser for offline playback${contentCounts.video > totalCourseVideos ? ` (${contentCounts.video - totalCourseVideos} external YouTube video streamable online)` : ''}.`
+                  : `${courseDownloadedCount} of ${totalCourseVideos} offline video lessons downloaded${contentCounts.video > totalCourseVideos ? ` (${contentCounts.video - totalCourseVideos} external YouTube video streamable online)` : ''}.`}
               </p>
             </div>
           </div>
@@ -1504,6 +1507,7 @@ export function CourseDetailClient({ course, availableTests, isUnlocked = true }
                             const isQueuedUnit = isUnlocked && (isQueued(uId) || isQueued(unit.sourceid || '') || isQueued(unit.id || ''));
                             const isPausedUnit = isUnlocked && (isPaused(uId) || isPaused(unit.sourceid || '') || isPaused(unit.id || ''));
                             const isDownloadingUnit = isUnlocked && (isDownloading(uId) || isDownloading(unit.sourceid || '') || isDownloading(unit.id || ''));
+                            const isFailedUnit = isUnlocked && (isFailed(uId) || isFailed(unit.sourceid || '') || isFailed(unit.id || ''));
                             const unitProgress = isUnlocked ? (getDownloadProgress(uId) ?? getDownloadProgress(unit.sourceid || '') ?? getDownloadProgress(unit.id || '')) : undefined;
 
                             return isUnlocked ? (
@@ -1562,6 +1566,19 @@ export function CourseDetailClient({ course, availableTests, isUnlocked = true }
                                     <Pause className="w-3 h-3 hidden group-hover:inline text-amber-400" />
                                     <span className="group-hover:hidden">{unitProgress !== undefined ? `${unitProgress}%` : 'Saving'}</span>
                                     <span className="hidden group-hover:inline">Pause</span>
+                                  </button>
+                                ) : isFailedUnit ? (
+                                  <button
+                                    type="button"
+                                    onClick={(e) => {
+                                      e.stopPropagation();
+                                      retryDownload(uId);
+                                    }}
+                                    title="Download failed. Click to retry."
+                                    className="px-2 py-1 rounded-lg bg-rose-500/15 hover:bg-rose-500/25 border border-rose-500/30 text-rose-400 text-[10px] font-bold flex items-center gap-1 cursor-pointer transition-colors"
+                                  >
+                                    <RotateCcw className="w-3 h-3 text-rose-400" />
+                                    <span>Retry</span>
                                   </button>
                                 ) : !isYouTube ? (
                                   <button

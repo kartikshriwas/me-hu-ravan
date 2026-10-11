@@ -87,6 +87,8 @@ interface DownloadContextType {
   isDownloading: (videoId: string) => boolean;
   isQueued: (videoId: string) => boolean;
   isPaused: (videoId: string) => boolean;
+  isFailed: (videoId: string) => boolean;
+  retryDownload: (videoId: string) => Promise<void>;
   getDownloadProgress: (videoId: string) => number | undefined;
   getDownloadStatus: (videoId: string) => DownloadingStatus | undefined;
   isSectionDownloaded: (courseSlug: string, sectionTitle: string, totalCount?: number) => boolean;
@@ -791,6 +793,39 @@ export function DownloadProvider({ children }: { children: React.ReactNode }) {
     [downloadingMap]
   );
 
+  const isFailed = useCallback(
+    (videoId: string) => {
+      if (!videoId) return false;
+      return downloadingMap[videoId]?.status === 'failed';
+    },
+    [downloadingMap]
+  );
+
+  const retryDownload = useCallback(
+    async (videoId: string) => {
+      const params = downloadParamsRef.current.get(videoId);
+      if (params) {
+        await startDownload(params);
+        return;
+      }
+      const item = downloadingMap[videoId];
+      if (item && item.courseSlug && item.unitTitle) {
+        await startDownload({
+          videoId,
+          courseSlug: item.courseSlug,
+          courseTitle: item.courseTitle || 'Course',
+          sectionTitle: item.sectionTitle,
+          sectionId: item.sectionId,
+          unitTitle: item.unitTitle,
+          thumbnailUrl: item.thumbnailUrl,
+          durationSeconds: item.durationSeconds || 0,
+          quality: item.quality,
+        });
+      }
+    },
+    [downloadingMap, startDownload]
+  );
+
   const getDownloadProgress = useCallback(
     (videoId: string) => {
       if (!videoId) return undefined;
@@ -1177,6 +1212,8 @@ export function DownloadProvider({ children }: { children: React.ReactNode }) {
         isDownloading,
         isQueued,
         isPaused,
+        isFailed,
+        retryDownload,
         getDownloadProgress,
         getDownloadStatus,
         isSectionDownloaded,
