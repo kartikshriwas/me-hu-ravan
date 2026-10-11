@@ -67,9 +67,12 @@ export default async function VideoPlayerPage({ params }: PageProps) {
     );
   }
 
-  // Find all playable video units in curriculum order (both Wistia sourceid and YouTube embed units)
+  // Find all playable video units in curriculum order (both ivideo and youtube)
   const allVideoUnits = course.sections.flatMap(section => 
-    section.units.filter(unit => !!unit.sourceid || unit.type === 'youtube' || (unit.data && !!unit.data.embed))
+    section.units.filter(unit => {
+      const t = (unit.objectType || unit.type || '').toLowerCase();
+      return t === 'ivideo' || t === 'youtube' || !!unit.sourceid || (unit.data && !!unit.data.embed);
+    })
   );
 
   const currentIdx = allVideoUnits.findIndex(u => (u.sourceid && u.sourceid === videoId) || u.id === videoId);
@@ -108,8 +111,8 @@ export default async function VideoPlayerPage({ params }: PageProps) {
   }
 
   const embedHtml = currentUnit?.data?.embed;
-  const isYouTubeUnit = currentUnit?.type === 'youtube' || currentUnit?.icon === 'yt' || (currentUnit?.subtitle && currentUnit.subtitle.toLowerCase().includes('youtube'));
-  const hasVideoSource = !!(currentUnit?.sourceid && currentUnit.sourceid.trim() !== '') || isYouTubeUnit || !!embedHtml;
+  const isYouTubeUnit = (currentUnit?.objectType || currentUnit?.type || '').toLowerCase() === 'youtube' || !!embedHtml;
+  const hasVideoSource = !!(currentUnit?.sourceid && currentUnit.sourceid.trim() !== '') || isYouTubeUnit;
 
   if (currentUnit && !hasVideoSource) {
     return (

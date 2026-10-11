@@ -83,223 +83,64 @@ function formatUnitDuration(seconds?: number): string | null {
  * Returns metadata config (Icon, Color, Label, Category) for all 33 learning_path_type variants
  */
 function getUnitMetaConfig(unit: CourseSectionUnit) {
-  const type = (unit.type || '').toLowerCase();
-  const icon = (unit.icon || '').toLowerCase();
-  const subtitle = (unit.subtitle || '').toLowerCase();
-  const fileUrl = (unit.fileUrl || '').trim();
+  const type = (unit.objectType || unit.type || '').toLowerCase();
 
-  // 1. True Exams, Quizzes & Assessments (Actionable: Take Exam / Give Test)
-  const isTrueQuiz =
-    type === 'assessment' ||
-    type === 'assessmentv2' ||
-    type === 'quizformal' ||
-    type === 'quizinformal' ||
-    type === 'quizwritten' ||
-    type === 'quiz' ||
-    type === 'fileass' ||
-    type === 'exam' ||
-    (typeof unit.questionsCount === 'number' && unit.questionsCount > 0) ||
-    !!(unit.data && (unit.data.assessmentId || unit.data.quizId));
-
-  if (isTrueQuiz) {
-    return {
-      category: 'quiz',
-      typeLabel: subtitle && subtitle !== 'video' ? subtitle : 'Assessment & Practice Test',
-      icon: FileCheck2,
-      colorClass: 'bg-primary-600/20 text-primary-600 dark:text-primary-400 border-primary-500/30',
-      isActionableVideo: false,
-      isActionableExam: true
-    };
-  }
-
-  // 2. ivideo / video / wistia (Supported Video Action)
-  if (type === 'ivideo' || type === 'wistia' || type === 'video' || (icon === 'video' && type !== 'pdf') || subtitle === 'video') {
-    return {
-      category: 'video',
-      typeLabel: 'Interactive Video',
-      icon: Video,
-      colorClass: 'bg-blue-600/20 text-blue-600 dark:text-blue-400 border-blue-500/30',
-      isActionableVideo: true,
-      isActionableExam: false
-    };
-  }
-
-  // 3. youtube (Playable YouTube Video with embed HTML)
-  if (type === 'youtube' || icon === 'yt' || subtitle.includes('youtube')) {
+  // 1. YouTube Video
+  if (type === 'youtube') {
     return {
       category: 'video',
       typeLabel: 'YouTube Video',
       icon: PlayCircle,
       colorClass: 'bg-red-600/20 text-red-600 dark:text-red-400 border-red-500/30',
       isActionableVideo: true,
-      isActionableExam: false
+      isActionableExam: false,
     };
   }
 
-  // 4. soundcloud / audio
-  if (type === 'soundcloud') {
+  // 2. Video Lesson (ivideo)
+  if (type === 'ivideo' || type === 'video' || type === 'wistia') {
     return {
-      category: 'audio',
-      typeLabel: 'SoundCloud Audio',
-      icon: Music,
-      colorClass: 'bg-rose-600/20 text-rose-600 dark:text-rose-400 border-rose-500/30',
-      isActionableVideo: false,
-      isActionableExam: false
-    };
-  }
-  if (type === 'audio') {
-    return {
-      category: 'audio',
-      typeLabel: 'Audio Track',
-      icon: Headphones,
-      colorClass: 'bg-rose-600/20 text-rose-600 dark:text-rose-400 border-rose-500/30',
-      isActionableVideo: false,
-      isActionableExam: false
+      category: 'video',
+      typeLabel: 'Video Lesson',
+      icon: Video,
+      colorClass: 'bg-blue-600/20 text-blue-600 dark:text-blue-400 border-blue-500/30',
+      isActionableVideo: true,
+      isActionableExam: false,
     };
   }
 
-  // 5. pdf & ebooks
-  if (type === 'pdf' || type === 'document' || type === 'pdfdocument' || subtitle === 'pdf' || fileUrl.endsWith('.pdf') || fileUrl.includes('/pdf/')) {
+  // 3. Exams & Quizzes (assessmentV2)
+  if (type === 'assessmentv2' || type === 'assessment' || type === 'quiz') {
     return {
-      category: 'pdf',
-      typeLabel: 'PDF Document',
-      icon: FileText,
-      colorClass: 'bg-emerald-600/20 text-emerald-600 dark:text-emerald-400 border-emerald-500/30',
-      isActionableVideo: false,
-      isActionableExam: false
-    };
-  }
-  if (type === 'ebook' || type === 'pbebook' || subtitle === 'ebook') {
-    return {
-      category: 'ebook',
-      typeLabel: type === 'pbebook' ? 'FlipBook eBook' : 'eBook',
-      icon: BookOpen,
-      colorClass: 'bg-teal-600/20 text-teal-400 border-teal-500/30',
-      isActionableVideo: false,
-      isActionableExam: false
-    };
-  }
-
-  // 7. scorm / scormgraded
-  if (type === 'scorm' || type === 'scormgraded') {
-    return {
-      category: 'interactive',
-      typeLabel: type === 'scormgraded' ? 'Graded SCORM' : 'SCORM Package',
-      icon: Package,
-      colorClass: 'bg-amber-600/20 text-amber-600 dark:text-amber-400 border-amber-500/30',
-      isActionableVideo: false,
-      isActionableExam: false
-    };
-  }
-
-  // 8. embed / presentations / url
-  if (type === 'embed') {
-    return {
-      category: 'interactive',
-      typeLabel: 'Embed Element',
-      icon: Code,
-      colorClass: 'bg-slate-700/40 text-foreground/80 border-slate-600/50',
-      isActionableVideo: false,
-      isActionableExam: false
-    };
-  }
-  if (type === 'slideshare' || type === 'slideshow') {
-    return {
-      category: 'interactive',
-      typeLabel: type === 'slideshare' ? 'SlideShare' : 'Slide Show',
-      icon: Presentation,
-      colorClass: 'bg-lime-600/20 text-lime-400 border-lime-500/30',
-      isActionableVideo: false,
-      isActionableExam: false
-    };
-  }
-  if (type === 'url') {
-    return {
-      category: 'interactive',
-      typeLabel: 'External Link',
-      icon: ExternalLink,
-      colorClass: 'bg-cyan-600/20 text-cyan-600 dark:text-cyan-400 border-cyan-500/30',
-      isActionableVideo: false,
-      isActionableExam: false
-    };
-  }
-
-  // 9. Meetings & Live Sessions
-  if (type === 'zoommeeting' || type === 'zoomwebinar' || type === 'webexmeeting' || type === 'googlemeet') {
-    return {
-      category: 'live',
-      typeLabel: 'Live Session',
-      icon: Tv,
-      colorClass: 'bg-blue-600/20 text-blue-600 dark:text-blue-300 border-blue-500/30',
-      isActionableVideo: false,
-      isActionableExam: false
-    };
-  }
-  if (type === 'teamsmeeting' || type === 'groupsession') {
-    return {
-      category: 'live',
-      typeLabel: 'Group Session',
-      icon: Users,
+      category: 'quiz',
+      typeLabel: 'Assessment & Quiz',
+      icon: FileCheck2,
       colorClass: 'bg-primary-600/20 text-primary-600 dark:text-primary-400 border-primary-500/30',
       isActionableVideo: false,
-      isActionableExam: false
-    };
-  }
-  if (type === 'oneononesession') {
-    return {
-      category: 'live',
-      typeLabel: '1-on-1 Session',
-      icon: User,
-      colorClass: 'bg-pink-600/20 text-pink-600 dark:text-pink-400 border-pink-500/30',
-      isActionableVideo: false,
-      isActionableExam: false
+      isActionableExam: true,
     };
   }
 
-  // 10. LTI
-  if (type === 'lti' || type === 'ltigraded') {
+  // 4. Downloadable Files / eBooks (pbEbook)
+  if (type === 'pbebook' || type === 'ebook') {
     return {
-      category: 'interactive',
-      typeLabel: 'LTI External Tool',
-      icon: Link2,
-      colorClass: 'bg-zinc-700/40 text-zinc-300 border-zinc-600/50',
+      category: 'ebook',
+      typeLabel: 'Downloadable File',
+      icon: BookOpen,
+      colorClass: 'bg-teal-600/20 text-teal-600 dark:text-teal-400 border-teal-500/30',
       isActionableVideo: false,
-      isActionableExam: false
-    };
-  }
-
-  // 11. Certificates
-  if (type.includes('certificate') || subtitle.includes('certificate') || icon === 'certification2') {
-    return {
-      category: 'cert',
-      typeLabel: 'Certificate',
-      icon: Award,
-      colorClass: 'bg-amber-600/20 text-amber-600 dark:text-amber-400 border-amber-500/30',
-      isActionableVideo: false,
-      isActionableExam: false
-    };
-  }
-
-  // 12. Survey
-  if (type === 'newsurvey') {
-    return {
-      category: 'interactive',
-      typeLabel: 'Survey',
-      icon: ClipboardList,
-      colorClass: 'bg-fuchsia-600/20 text-fuchsia-400 border-fuchsia-500/30',
-      isActionableVideo: false,
-      isActionableExam: false
+      isActionableExam: false,
     };
   }
 
   // Fallback
   return {
     category: 'other',
-    typeLabel: unit.subtitle || unit.type || 'Lesson',
-    icon: BookOpen,
+    typeLabel: unit.subtitle || unit.type || 'Resource',
+    icon: FileText,
     colorClass: 'bg-slate-800 text-muted-foreground border-slate-700/50',
     isActionableVideo: false,
-    isActionableExam: false
+    isActionableExam: false,
   };
 }
 
@@ -489,15 +330,12 @@ export function CourseDetailClient({ course, availableTests, isUnlocked = true }
 
     course.sections.forEach((sec) => {
       sec.units.forEach((u, uIdx) => {
-        const isYouTube =
-          u.type === 'youtube' ||
-          u.icon === 'yt' ||
-          (u.subtitle && u.subtitle.toLowerCase().includes('youtube')) ||
-          !!(u.data && u.data.embed);
-        const videoId = u.sourceid || (!isYouTube && u.id ? u.id : '');
-        if (videoId && !isYouTube) {
+        const t = (u.objectType || u.type || '').toLowerCase();
+        const sid = (u.sourceid || u.vimeoid || '').trim();
+        // Only ivideo is downloadable offline (YouTube streams online)
+        if (t === 'ivideo' && sid) {
           list.push({
-            videoId,
+            videoId: sid,
             unitTitle: (u.unitTitle && u.unitTitle !== 'Untitled') ? u.unitTitle : `${sec.title} Lesson ${uIdx + 1}`,
             sectionTitle: sec.title,
             sectionId: sec.id,
@@ -520,15 +358,11 @@ export function CourseDetailClient({ course, availableTests, isUnlocked = true }
     (section: { title: string; id: string; units: CourseSectionUnit[] }) => {
       const list: { videoId: string; unitTitle: string; duration?: number }[] = [];
       section.units.forEach((u, uIdx) => {
-        const isYouTube =
-          u.type === 'youtube' ||
-          u.icon === 'yt' ||
-          (u.subtitle && u.subtitle.toLowerCase().includes('youtube')) ||
-          !!(u.data && u.data.embed);
-        const videoId = u.sourceid || (!isYouTube && u.id ? u.id : '');
-        if (videoId && !isYouTube) {
+        const t = (u.objectType || u.type || '').toLowerCase();
+        const sid = (u.sourceid || u.vimeoid || '').trim();
+        if (t === 'ivideo' && sid) {
           list.push({
-            videoId,
+            videoId: sid,
             unitTitle: (u.unitTitle && u.unitTitle !== 'Untitled') ? u.unitTitle : `${section.title} Lesson ${uIdx + 1}`,
             duration: u.duration,
           });
@@ -649,7 +483,7 @@ export function CourseDetailClient({ course, availableTests, isUnlocked = true }
   ) => {
     e.stopPropagation();
     if (!isUnlocked) return;
-    const videoId = unit.sourceid || unit.id;
+    const videoId = (unit.sourceid || unit.vimeoid || '').trim();
     if (!videoId) return;
 
     if (typeof window !== 'undefined' && localStorage.getItem('preptea_remember_download_quality') === 'true') {
@@ -791,26 +625,22 @@ export function CourseDetailClient({ course, availableTests, isUnlocked = true }
     };
   }, [course.slug]);
 
-  // Calculate specific content type breakdown (Videos, Quizzes, PDFs, eBooks, Certificates, Audio, Live, Interactive, Other)
+  // Calculate specific content type breakdown (Videos, Quizzes, Downloadables)
   const contentCounts = useMemo(() => {
-    return course.sections.reduce(
-      (acc, section) => {
-        section.units.forEach((unit) => {
-          const config = getUnitMetaConfig(unit);
-          if (config.category === 'video') acc.video++;
-          else if (config.category === 'quiz') acc.quiz++;
-          else if (config.category === 'pdf') acc.pdf++;
-          else if (config.category === 'ebook') acc.ebook++;
-          else if (config.category === 'cert') acc.cert++;
-          else if (config.category === 'audio') acc.audio++;
-          else if (config.category === 'live') acc.live++;
-          else if (config.category === 'interactive') acc.interactive++;
-          else acc.other++;
-        });
-        return acc;
-      },
-      { pdf: 0, ebook: 0, video: 0, quiz: 0, cert: 0, audio: 0, live: 0, interactive: 0, other: 0 }
-    );
+    let video = 0;
+    let quiz = 0;
+    let ebook = 0;
+    const secs = course.sections;
+    for (let s = 0; s < secs.length; s++) {
+      const units = secs[s].units;
+      for (let u = 0; u < units.length; u++) {
+        const t = (units[u].objectType || units[u].type || '').toLowerCase();
+        if (t === 'ivideo' || t === 'youtube') video++;
+        else if (t === 'assessmentv2' || t === 'assessment' || t === 'quiz') quiz++;
+        else if (t === 'pbebook' || t === 'ebook') ebook++;
+      }
+    }
+    return { video, quiz, ebook };
   }, [course]);
 
   return (
@@ -899,52 +729,10 @@ export function CourseDetailClient({ course, availableTests, isUnlocked = true }
             </div>
           )}
 
-          {contentCounts.pdf > 0 && (
-            <div className="flex items-center gap-2 p-2 sm:p-0 rounded-xl bg-card-border/20 sm:bg-transparent min-w-0">
-              <FileText className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0" />
-              <span className="truncate"><strong className="text-foreground">{contentCounts.pdf}</strong> PDFs</span>
-            </div>
-          )}
-
           {contentCounts.ebook > 0 && (
             <div className="flex items-center gap-2 p-2 sm:p-0 rounded-xl bg-card-border/20 sm:bg-transparent min-w-0">
               <BookOpen className="w-4 h-4 text-teal-400 shrink-0" />
-              <span className="truncate"><strong className="text-foreground">{contentCounts.ebook}</strong> {contentCounts.ebook === 1 ? 'eBook' : 'eBooks'}</span>
-            </div>
-          )}
-
-          {contentCounts.cert > 0 && (
-            <div className="flex items-center gap-2 p-2 sm:p-0 rounded-xl bg-card-border/20 sm:bg-transparent min-w-0">
-              <Award className="w-4 h-4 text-amber-600 dark:text-amber-400 shrink-0" />
-              <span className="truncate"><strong className="text-foreground">{contentCounts.cert}</strong> {contentCounts.cert === 1 ? 'Certificate' : 'Certificates'}</span>
-            </div>
-          )}
-
-          {contentCounts.audio > 0 && (
-            <div className="flex items-center gap-2 p-2 sm:p-0 rounded-xl bg-card-border/20 sm:bg-transparent min-w-0">
-              <Headphones className="w-4 h-4 text-rose-600 dark:text-rose-400 shrink-0" />
-              <span className="truncate"><strong className="text-foreground">{contentCounts.audio}</strong> Audio</span>
-            </div>
-          )}
-
-          {contentCounts.live > 0 && (
-            <div className="flex items-center gap-2 p-2 sm:p-0 rounded-xl bg-card-border/20 sm:bg-transparent min-w-0">
-              <Tv className="w-4 h-4 text-sky-400 shrink-0" />
-              <span className="truncate"><strong className="text-foreground">{contentCounts.live}</strong> Live Sessions</span>
-            </div>
-          )}
-
-          {contentCounts.interactive > 0 && (
-            <div className="flex items-center gap-2 p-2 sm:p-0 rounded-xl bg-card-border/20 sm:bg-transparent min-w-0">
-              <Package className="w-4 h-4 text-lime-400 shrink-0" />
-              <span className="truncate"><strong className="text-foreground">{contentCounts.interactive}</strong> Interactive</span>
-            </div>
-          )}
-
-          {contentCounts.other > 0 && (
-            <div className="flex items-center gap-2 p-2 sm:p-0 rounded-xl bg-card-border/20 sm:bg-transparent min-w-0">
-              <BookOpen className="w-4 h-4 text-muted-foreground shrink-0" />
-              <span className="truncate"><strong className="text-foreground">{contentCounts.other}</strong> Other</span>
+              <span className="truncate"><strong className="text-foreground">{contentCounts.ebook}</strong> {contentCounts.ebook === 1 ? 'Downloadable File' : 'Downloadable Files'}</span>
             </div>
           )}
 
@@ -1463,13 +1251,6 @@ export function CourseDetailClient({ course, availableTests, isUnlocked = true }
                             </div>
                           ) : null}
 
-                          {/* Action Button: Certificate */}
-                          {config.category === 'cert' && !downloadUrl && (
-                            <div className="px-2.5 sm:px-3.5 py-1.5 rounded-lg bg-amber-500/20 text-amber-600 dark:text-amber-300 text-xs font-bold border border-amber-500/40 flex items-center gap-1.5 shrink-0">
-                              <Award className="w-3.5 h-3.5 text-amber-600 dark:text-amber-400" />
-                              <span>Course Certificate</span>
-                            </div>
-                          )}
 
                           {/* Action Button: Take Exam / Give Test */}
                           {config.isActionableExam && !downloadUrl && (matchingTest || unit.data?.assessmentId) && (() => {
@@ -1486,22 +1267,8 @@ export function CourseDetailClient({ course, availableTests, isUnlocked = true }
                           })()}
 
                           {/* Action Button: Watch Lesson / Video Not Available / Locked Video */}
-                          {config.isActionableVideo && !downloadUrl && (() => {
-                            const isYouTube = unit.type === 'youtube' || unit.icon === 'yt' || (unit.subtitle && unit.subtitle.toLowerCase().includes('youtube')) || !!(unit.data && unit.data.embed);
-                            const hasVideoSource = !!(unit.sourceid && unit.sourceid.trim() !== '') || !!(unit.vimeoid && unit.vimeoid.trim() !== '') || isYouTube;
-
-                            if (!hasVideoSource) {
-                              return (
-                                <div
-                                  className="px-3.5 py-1.5 rounded-lg bg-slate-800/60 text-muted-foreground text-xs font-semibold border border-slate-700/50 flex items-center gap-1.5 shrink-0 cursor-not-allowed"
-                                  title="Video source is not available for this lesson"
-                                >
-                                  <VideoOff className="w-3.5 h-3.5 text-muted-foreground" />
-                                  <span>Video Not Available</span>
-                                </div>
-                              );
-                            }
-
+                          {config.isActionableVideo && (() => {
+                            const isYouTube = (unit.objectType || unit.type || '').toLowerCase() === 'youtube';
                             const uId = unit.sourceid || unit.id;
                             const isDownloadedUnit = isUnlocked && (isDownloaded(uId) || isDownloaded(unit.sourceid || '') || isDownloaded(unit.id || ''));
                             const isQueuedUnit = isUnlocked && (isQueued(uId) || isQueued(unit.sourceid || '') || isQueued(unit.id || ''));

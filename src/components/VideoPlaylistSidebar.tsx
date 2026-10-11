@@ -32,6 +32,7 @@ interface Unit {
   unitTitle?: string;
   title?: string;
   type: string;
+  objectType?: string;
   duration?: number;
   data?: {
     embed?: string;
@@ -169,9 +170,7 @@ export function VideoPlaylistSidebar({
     sections.forEach((sec, sIdx) => {
       const sTitle = sec.title || sec.sectionTitle || `Section ${sIdx + 1}`;
       sec.units.forEach((u, uIdx) => {
-        const isYouTube =
-          u.type === 'youtube' ||
-          (u.data && !!u.data.embed);
+        const isYouTube = (u.objectType || u.type || '').toLowerCase() === 'youtube' || (u.data && !!u.data.embed);
         const videoId = u.sourceid || (!isYouTube && u.id ? u.id : '');
         if (videoId && !isYouTube) {
           list.push({
@@ -237,7 +236,7 @@ export function VideoPlaylistSidebar({
         const sTitle = sec.title || sec.sectionTitle || `Section ${sIdx + 1}`;
         const validUnits = sec.units
           .filter((u) => {
-            const isYouTube = u.type === 'youtube' || (u.data && !!u.data.embed);
+            const isYouTube = (u.objectType || u.type || '').toLowerCase() === 'youtube' || (u.data && !!u.data.embed);
             return (u.sourceid || u.id) && !isYouTube;
           })
           .map((u, uIdx) => ({
@@ -311,7 +310,7 @@ export function VideoPlaylistSidebar({
         const sTitle = sec.title || sec.sectionTitle || `Section ${sIdx + 1}`;
         const validUnits = sec.units
           .filter((u) => {
-            const isYouTube = u.type === 'youtube' || (u.data && !!u.data.embed);
+            const isYouTube = (u.objectType || u.type || '').toLowerCase() === 'youtube' || (u.data && !!u.data.embed);
             return (u.sourceid || u.id) && !isYouTube;
           })
           .map((u, uIdx) => ({
@@ -448,10 +447,10 @@ export function VideoPlaylistSidebar({
   const totalVideos = sections.reduce((acc, sec) => {
     return (
       acc +
-      sec.units.filter(
-        (u) =>
-          !!u.sourceid || u.type === "youtube" || (u.data && !!u.data.embed),
-      ).length
+      sec.units.filter((u) => {
+        const t = (u.objectType || u.type || '').toLowerCase();
+        return t === 'ivideo' || t === 'youtube' || !!u.sourceid || (u.data && !!u.data.embed);
+      }).length
     );
   }, 0);
 
@@ -661,12 +660,10 @@ export function VideoPlaylistSidebar({
         className="hidden lg:block flex-1 overflow-y-auto custom-scrollbar scroll-smooth p-3"
       >
         {sections.map((section, sIdx) => {
-          const videoUnits = section.units.filter(
-            (u) =>
-              !!u.sourceid ||
-              u.type === "youtube" ||
-              (u.data && !!u.data.embed),
-          );
+          const videoUnits = section.units.filter((u) => {
+            const t = (u.objectType || u.type || '').toLowerCase();
+            return t === 'ivideo' || t === 'youtube' || !!u.sourceid || (u.data && !!u.data.embed);
+          });
           if (videoUnits.length === 0) return null;
           const isExpanded = expandedSections[sIdx] ?? false;
           const sectionName =
@@ -769,7 +766,7 @@ export function VideoPlaylistSidebar({
                 <div className="space-y-1 pl-1">
                   {videoUnits.map((unit) => {
                     const uId = unit.sourceid || unit.id;
-                    const isYouTube = unit.type === 'youtube' || (unit.data && !!unit.data.embed);
+                    const isYouTube = (unit.objectType || unit.type || '').toLowerCase() === 'youtube' || (unit.data && !!unit.data.embed);
                     const isActive = uId === currentVideoId;
                     const isCompleted = completedVideos.includes(uId);
                     const title =
@@ -917,12 +914,10 @@ export function VideoPlaylistSidebar({
         className="lg:hidden flex-1 min-h-0 overflow-y-auto custom-scrollbar divide-y divide-slate-800/50"
       >
         {sections.map((section, sIdx) => {
-          const videoUnits = section.units.filter(
-            (u) =>
-              !!u.sourceid ||
-              u.type === "youtube" ||
-              (u.data && !!u.data.embed),
-          );
+          const videoUnits = section.units.filter((u) => {
+            const t = (u.objectType || u.type || '').toLowerCase();
+            return t === 'ivideo' || t === 'youtube' || !!u.sourceid || (u.data && !!u.data.embed);
+          });
           if (videoUnits.length === 0) return null;
           const sectionName =
             section.title || section.sectionTitle || "Course Section";

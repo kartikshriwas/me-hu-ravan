@@ -426,11 +426,7 @@ export function CourseCalendarView({
           } catch (e) {}
         }
 
-        const isYouTube =
-          unit.type === 'youtube' ||
-          unit.icon === 'yt' ||
-          (unit.subtitle && unit.subtitle.toLowerCase().includes('youtube')) ||
-          !!(unit.data && unit.data.embed);
+        const isYouTube = (unit.objectType || unit.type || '').toLowerCase() === 'youtube';
 
         const videoId = unit.sourceid || unit.id || '';
 

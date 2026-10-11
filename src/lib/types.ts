@@ -20,6 +20,7 @@ export interface CourseMeta {
 export interface CourseSectionUnit {
   id: string;
   type: string;
+  objectType?: string;
   icon?: string;
   subtitle?: string;
   unitTitle?: string;
