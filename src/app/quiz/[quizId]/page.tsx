@@ -580,7 +580,6 @@ export default function QuizPlayerPage({ params }: { params: Promise<{ quizId: s
       console.error('Failed to post attempt to backend:', err);
     }
 
-    // Save final verified attempt to localStorage for instant local rendering
     saveQuizAttempt(result, user?.email);
 
     // Invalidate stale caches so leaderboard and history update immediately

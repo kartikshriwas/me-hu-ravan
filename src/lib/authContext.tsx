@@ -1,8 +1,9 @@
 'use client';
 
-import React, { createContext, useContext } from 'react';
+import React, { createContext, useContext, useEffect } from 'react';
 import { SessionProvider, useSession, signOut } from 'next-auth/react';
 import { clearUserLocalData } from '@/lib/storage';
+import { syncLocalProgressToDb } from '@/lib/userProgressClient';
 
 export interface AuthUser {
   id?: string;
@@ -47,6 +48,12 @@ function AuthProviderInner({ children }: { children: React.ReactNode }) {
 
   const user = (session?.user as AuthUser) || null;
   const loading = status === 'loading';
+
+  useEffect(() => {
+    if (user?.email) {
+      syncLocalProgressToDb();
+    }
+  }, [user?.email]);
 
   const logout = async () => {
     if (user?.email) {

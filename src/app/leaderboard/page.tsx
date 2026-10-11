@@ -53,8 +53,6 @@ export default function LeaderboardPage() {
       
       {/* Header Banner */}
       <header className="glass-panel rounded-3xl p-6 sm:p-10 border border-primary-500/30 relative overflow-hidden space-y-4">
-        <div className="absolute top-0 right-0 w-80 h-80 bg-amber-500/10 rounded-full blur-3xl pointer-events-none" />
-
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <div>
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-600 dark:text-amber-300 text-xs font-semibold">

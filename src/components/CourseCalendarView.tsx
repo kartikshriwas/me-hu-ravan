@@ -21,6 +21,7 @@ import {
   Navigation,
 } from 'lucide-react';
 import { CourseDetail, CourseSectionUnit } from '@/lib/types';
+import { fetchUserProgressFromDb } from '@/lib/userProgressClient';
 
 interface CalendarUnitItem {
   unit: CourseSectionUnit;
@@ -272,6 +273,7 @@ export function CourseCalendarView({
     };
 
     calculateStreak();
+
     window.addEventListener('storage', calculateStreak);
     window.addEventListener('focus', calculateStreak);
     window.addEventListener('preptea_study_update', calculateStreak);
@@ -282,6 +284,20 @@ export function CourseCalendarView({
       window.removeEventListener('preptea_study_update', calculateStreak);
     };
   }, [completedVideos]);
+
+  // Fetch verified streak and activity metrics from MongoDB once on mount
+  useEffect(() => {
+    fetchUserProgressFromDb().then((data) => {
+      if (data?.streak) {
+        setStreakData({
+          currentStreak: data.streak.currentStreak,
+          longestStreak: data.streak.longestStreak,
+          studiedToday: data.streak.studiedToday,
+          activeDaysThisWeek: data.streak.activeDaysThisWeek,
+        });
+      }
+    });
+  }, []);
 
   // 2. Group all units into either Sprint Paced Targets or Raw Upload Batches
   const calendarDays: CalendarDayGroup[] = useMemo(() => {

@@ -16,6 +16,8 @@ import {
   CheckCircle2
 } from 'lucide-react';
 
+import { fetchUserProgressFromDb } from '@/lib/userProgressClient';
+
 interface RecentProgressItem {
   slug: string;
   videoId: string;
@@ -35,7 +37,7 @@ export function StudentDashboard() {
 
   useEffect(() => {
     try {
-      // 1. Load recent progress from localStorage
+      // 1. Load instant cached progress from localStorage
       const items: RecentProgressItem[] = [];
       for (let i = 0; i < localStorage.length; i++) {
         const key = localStorage.key(i);
@@ -78,6 +80,32 @@ export function StudentDashboard() {
     } catch (e) {
       // ignore
     }
+
+    // 4. Fetch verified telemetry from MongoDB
+    fetchUserProgressFromDb().then((data) => {
+      if (data) {
+        if (typeof data.totalVideosCompleted === 'number') {
+          setCompletedCount(data.totalVideosCompleted);
+        }
+        if (typeof data.totalWatchTimeSeconds === 'number' && data.totalWatchTimeSeconds > 0) {
+          setWatchTimeMinutes(Math.round(data.totalWatchTimeSeconds / 60));
+        }
+        if (data.coursesProgress && Object.keys(data.coursesProgress).length > 0) {
+          const dbItems: RecentProgressItem[] = Object.values(data.coursesProgress).map((cp) => ({
+            slug: cp.courseSlug,
+            videoId: cp.lastVideoId,
+            title: cp.lastVideoTitle || 'Video Lesson',
+            courseTitle: cp.courseSlug.replace(/-/g, ' ').toUpperCase(),
+            timestamp: cp.lastPlaybackTime || 0,
+            updatedAt: new Date(cp.updatedAt).getTime(),
+          }));
+          dbItems.sort((a, b) => b.updatedAt - a.updatedAt);
+          if (dbItems.length > 0) {
+            setRecentProgress(dbItems);
+          }
+        }
+      }
+    });
   }, []);
 
   // Targets

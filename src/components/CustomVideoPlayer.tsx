@@ -28,12 +28,14 @@ import {
   CheckCircle2,
   Download,
   Trash2,
-  ArrowUpRight
+  ArrowUpRight,
+  Camera,
 } from 'lucide-react';
 import { useDownloads } from '@/lib/downloadContext';
 import { useAuth } from '@/lib/authContext';
 import { checkUserCourseAccess, checkUserIsPremium } from '@/lib/batchAccess';
 import { OfflineState } from '@/components/OfflineState';
+import { recordVideoCompletionToDb, recordPlaybackProgressToDb, getResumeTimestamp } from '@/lib/userProgressClient';
 
 interface VideoAsset {
   type: string;
@@ -184,6 +186,9 @@ export function CustomVideoPlayer({
   const [showSettings, setShowSettings] = useState(false);
   const [settingsTab, setSettingsTab] = useState<'main' | 'quality' | 'speed'>('main');
   const [isFullscreen, setIsFullscreen] = useState(false);
+  const [screenshotFlash, setScreenshotFlash] = useState(false);
+  const [screenshotNotification, setScreenshotNotification] = useState<string | null>(null);
+  const [resumeToast, setResumeToast] = useState<{ time: number; formatted: string } | null>(null);
 
   // Buffering & Auto-Play states
   const [bufferedEnd, setBufferedEnd] = useState(0);
@@ -204,6 +209,7 @@ export function CustomVideoPlayer({
   const isPreloadReadyRef = useRef<boolean>(false);
   const lastTapRef = useRef<{ time: number; x: number }>({ time: 0, x: 0 });
   const lastSaveTimeRef = useRef<number>(0);
+  const lastDbSaveTimeRef = useRef<number>(0);
   const hasRestoredTimeRef = useRef<boolean>(false);
 
   useEffect(() => {
@@ -527,6 +533,9 @@ export function CustomVideoPlayer({
     } catch (e) {
       // ignore
     }
+
+    // Persist completed video and updated streak to MongoDB
+    recordVideoCompletionToDb(vId, courseSlug, duration);
   };
 
   const handleVideoEnded = () => {
@@ -577,6 +586,19 @@ export function CustomVideoPlayer({
       }
     }
 
+    // Throttled heartbeat to MongoDB (every 10 seconds while playing)
+    if (Date.now() - lastDbSaveTimeRef.current > 10000 && videoId && currentTimeVal > 3) {
+      lastDbSaveTimeRef.current = Date.now();
+      recordPlaybackProgressToDb(
+        videoId,
+        courseSlug,
+        currentTimeVal,
+        duration,
+        title || videoData?.name || 'Video Lesson',
+        10
+      );
+    }
+
     if (pendingQualityTargetRef.current && isPreloadReadyRef.current) {
       const { asset, switchTime } = pendingQualityTargetRef.current;
       if (currentTimeVal >= switchTime - 0.5) {
@@ -619,17 +641,55 @@ export function CustomVideoPlayer({
       }
     } else if (!hasRestoredTimeRef.current) {
       hasRestoredTimeRef.current = true;
+
+      const tryApplyResume = (resumeSec: number) => {
+        const v = videoRef.current;
+        if (!v) return;
+        const vDur = v.duration || vidDuration || 0;
+        if (resumeSec > 5 && (vDur === 0 || resumeSec < vDur - 10)) {
+          if (v.currentTime < 3) {
+            v.currentTime = resumeSec;
+            setCurrentTime(resumeSec);
+            setResumeToast({
+              time: resumeSec,
+              formatted: formatTime(Math.floor(resumeSec)),
+            });
+            setTimeout(() => {
+              setResumeToast((curr) => (curr?.time === resumeSec ? null : curr));
+            }, 6000);
+          }
+        }
+      };
+
+      // 1. Check local storage first (instant synchronous)
+      let foundTime: number | null = null;
       try {
         const saved = localStorage.getItem(`preptea_video_time_${videoId}`);
         if (saved) {
-          const savedTime = parseFloat(saved);
-          if (savedTime > 5 && vidDuration > 0 && savedTime < vidDuration - 10) {
-            videoRef.current.currentTime = savedTime;
-            setCurrentTime(savedTime);
+          const val = parseFloat(saved);
+          if (!isNaN(val) && val > 5) foundTime = val;
+        } else if (courseSlug) {
+          const courseSaved = localStorage.getItem(`preptea_last_video_${courseSlug}`);
+          if (courseSaved) {
+            const parsed = JSON.parse(courseSaved);
+            if (parsed.videoId === videoId && parsed.timestamp > 5) {
+              foundTime = parsed.timestamp;
+            }
           }
         }
       } catch (e) {
         // ignore
+      }
+
+      if (foundTime !== null) {
+        tryApplyResume(foundTime);
+      } else {
+        // 2. Query cloud progress asynchronously if empty locally (e.g. fresh device login)
+        getResumeTimestamp(videoId, courseSlug).then((remoteTime) => {
+          if (remoteTime !== null) {
+            tryApplyResume(remoteTime);
+          }
+        });
       }
     }
   };
@@ -731,6 +791,59 @@ export function CustomVideoPlayer({
     }
     return `${m}:${s < 10 ? '0' : ''}${s}`;
   };
+
+  const handleTakeScreenshot = useCallback(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    try {
+      setScreenshotFlash(true);
+      setTimeout(() => setScreenshotFlash(false), 250);
+
+      const canvas = document.createElement('canvas');
+      canvas.width = video.videoWidth || 1280;
+      canvas.height = video.videoHeight || 720;
+      const ctx = canvas.getContext('2d');
+      if (!ctx) throw new Error('Canvas 2D unavailable');
+
+      ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+
+      const timestampSeconds = Math.floor(video.currentTime);
+      const timeStr = formatTime(timestampSeconds).replace(/:/g, '-');
+      const cleanTitle = (title || videoData?.name || 'lecture')
+        .replace(/[^a-zA-Z0-9_-]/g, '_')
+        .slice(0, 35);
+      const filename = `${cleanTitle}_${timeStr}.png`;
+
+      canvas.toBlob((blob) => {
+        if (!blob) {
+          const dataUrl = canvas.toDataURL('image/png');
+          const a = document.createElement('a');
+          a.href = dataUrl;
+          a.download = filename;
+          document.body.appendChild(a);
+          a.click();
+          document.body.removeChild(a);
+        } else {
+          const url = URL.createObjectURL(blob);
+          const a = document.createElement('a');
+          a.href = url;
+          a.download = filename;
+          document.body.appendChild(a);
+          a.click();
+          document.body.removeChild(a);
+          setTimeout(() => URL.revokeObjectURL(url), 2000);
+        }
+
+        setScreenshotNotification(`Captured frame at ${formatTime(timestampSeconds)}`);
+        setTimeout(() => setScreenshotNotification(null), 2500);
+      }, 'image/png');
+    } catch (err) {
+      console.warn('Screenshot capture failed:', err);
+      setScreenshotNotification('Could not capture frame');
+      setTimeout(() => setScreenshotNotification(null), 2500);
+    }
+  }, [title, videoData?.name]);
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -1040,6 +1153,7 @@ export function CustomVideoPlayer({
         <video
           ref={videoRef}
           src={blobUrl || localBlobUrl || activeAsset?.url}
+          crossOrigin="anonymous"
           controlsList="nodownload"
           onContextMenu={(e) => e.preventDefault()}
           className="w-full h-full object-contain cursor-pointer transition-all"
@@ -1062,6 +1176,55 @@ export function CustomVideoPlayer({
           autoPlay
           playsInline
         />
+
+        {/* Screenshot Flash Shutter Effect */}
+        {screenshotFlash && (
+          <div className="absolute inset-0 bg-white/40 pointer-events-none z-50 transition-opacity duration-200" />
+        )}
+
+        {/* Screenshot Notification Badge */}
+        {screenshotNotification && (
+          <div className="absolute top-4 left-1/2 -translate-x-1/2 z-50 px-3.5 py-1.5 rounded-full bg-slate-900/95 border border-primary-500/50 shadow-2xl backdrop-blur-md flex items-center gap-2 text-xs font-semibold text-white pointer-events-none animate-in fade-in zoom-in-95">
+            <Camera className="w-4 h-4 text-primary-400 shrink-0" />
+            <span>{screenshotNotification}</span>
+          </div>
+        )}
+
+        {/* Cross-Device / Auto-Resume Toast */}
+        {resumeToast && (
+          <div className="absolute top-4 left-4 z-40 bg-slate-900/95 border border-primary-500/40 text-white px-3 sm:px-3.5 py-1.5 sm:py-2 rounded-xl shadow-2xl backdrop-blur-md flex items-center gap-2 sm:gap-2.5 text-xs animate-in fade-in slide-in-from-top-2">
+            <RotateCcw className="w-3.5 h-3.5 text-primary-400 shrink-0" />
+            <span className="font-medium text-[11px] sm:text-xs">
+              Resumed at <strong className="text-primary-300 font-mono font-bold">{resumeToast.formatted}</strong>
+            </span>
+            <div className="h-3 w-px bg-white/20 mx-0.5" />
+            <button
+              type="button"
+              onClick={(e) => {
+                e.stopPropagation();
+                if (videoRef.current) {
+                  videoRef.current.currentTime = 0;
+                  setCurrentTime(0);
+                }
+                setResumeToast(null);
+              }}
+              className="text-primary-400 hover:text-primary-300 font-bold text-[11px] sm:text-xs transition-colors cursor-pointer hover:underline"
+            >
+              Start over
+            </button>
+            <button
+              type="button"
+              onClick={(e) => {
+                e.stopPropagation();
+                setResumeToast(null);
+              }}
+              className="text-slate-400 hover:text-white p-0.5 ml-0.5 transition-colors cursor-pointer"
+              aria-label="Dismiss resume notice"
+            >
+              <X className="w-3.5 h-3.5" />
+            </button>
+          </div>
+        )}
 
         {/* Double Tap Seek Feedback Ripple Overlay */}
         {seekFeedback && (
@@ -1089,7 +1252,7 @@ export function CustomVideoPlayer({
                 e.stopPropagation();
                 handlePlayPause();
               }}
-              className="pointer-events-auto w-14 h-14 sm:w-18 sm:h-18 rounded-full bg-background/80 border border-slate-700/60 text-white flex items-center justify-center backdrop-blur-md shadow-2xl hover:scale-110 hover:bg-primary-600 hover:border-primary-400 transition-all duration-200"
+              className="pointer-events-auto w-14 h-14 sm:w-18 sm:h-18 rounded-full bg-black/60 border border-white/20 text-white flex items-center justify-center backdrop-blur-md shadow-2xl hover:scale-110 hover:bg-primary-600 hover:border-primary-400 transition-all duration-200"
               aria-label={isPlaying ? 'Pause' : 'Play'}
             >
               {isPlaying ? (
@@ -1281,9 +1444,13 @@ export function CustomVideoPlayer({
         {/* Video Controls Bottom Bar */}
         <div
           onClick={(e) => e.stopPropagation()}
-          className={`absolute bottom-0 inset-x-0 p-2.5 sm:p-4 flex flex-col gap-2 transition-opacity duration-300 z-30 ${
-            showControls ? 'opacity-100' : 'opacity-0 pointer-events-none'
+          className={`absolute bottom-0 inset-x-0 pt-8 sm:pt-12 pb-2.5 sm:pb-3.5 px-2.5 sm:px-4 flex flex-col gap-1.5 sm:gap-2 transition-all duration-300 z-30 bg-gradient-to-t from-black/85 via-black/45 to-transparent backdrop-blur-[6px] ${
+            showControls ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2 pointer-events-none'
           }`}
+          style={{
+            WebkitMaskImage: 'linear-gradient(to top, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%)',
+            maskImage: 'linear-gradient(to top, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%)',
+          }}
         >
           {/* Interactive Touch Progress Bar */}
           <div 
@@ -1325,11 +1492,11 @@ export function CustomVideoPlayer({
           </div>
 
           {/* Buttons & Options Row */}
-          <div className="flex items-center justify-between text-foreground gap-2">
+          <div className="flex items-center justify-between text-white gap-2">
             <div className="flex items-center gap-1.5 sm:gap-2">
-                         <button
+              <button
                 onClick={handlePlayPause}
-                className="p-1.5 sm:p-2 rounded-xl hover:bg-white/10 active:scale-95 transition-all text-foreground touch-manipulation"
+                className="p-1.5 sm:p-2 rounded-xl hover:bg-white/15 active:scale-95 transition-all text-white touch-manipulation"
                 aria-label={isPlaying ? 'Pause' : 'Play'}
               >
                 {isPlaying ? <Pause className="w-5 h-5 sm:w-6 sm:h-6 fill-white" /> : <Play className="w-5 h-5 sm:w-6 sm:h-6 fill-white" />}
@@ -1337,7 +1504,7 @@ export function CustomVideoPlayer({
                 onPrev ? (
                   <button
                     onClick={onPrev}
-                    className="hidden sm:inline-flex p-1.5 sm:p-2 rounded-xl hover:bg-white/10 active:scale-95 transition-all text-foreground hover:text-foreground items-center justify-center cursor-pointer"
+                    className="hidden sm:inline-flex p-1.5 sm:p-2 rounded-xl hover:bg-white/15 active:scale-95 transition-all text-white hover:text-white items-center justify-center cursor-pointer"
                     title={prevTitle ? `Previous: ${prevTitle}` : "Previous Video"}
                     aria-label="Previous Video"
                   >
@@ -1346,7 +1513,7 @@ export function CustomVideoPlayer({
                 ) : (
                   <Link
                     href={prevVideoUrl!}
-                    className="hidden sm:inline-flex p-1.5 sm:p-2 rounded-xl hover:bg-white/10 active:scale-95 transition-all text-foreground hover:text-foreground items-center justify-center"
+                    className="hidden sm:inline-flex p-1.5 sm:p-2 rounded-xl hover:bg-white/15 active:scale-95 transition-all text-white hover:text-white items-center justify-center"
                     title={prevTitle ? `Previous: ${prevTitle}` : "Previous Video"}
                     aria-label="Previous Video"
                   >
@@ -1355,13 +1522,11 @@ export function CustomVideoPlayer({
                 )
               )}
 
-
-
               {(nextVideoUrl || onNext) && (
                 onNext ? (
                   <button
                     onClick={onNext}
-                    className="hidden sm:inline-flex p-1.5 sm:p-2 rounded-xl hover:bg-white/10 active:scale-95 transition-all text-foreground hover:text-foreground items-center justify-center cursor-pointer"
+                    className="hidden sm:inline-flex p-1.5 sm:p-2 rounded-xl hover:bg-white/15 active:scale-95 transition-all text-white hover:text-white items-center justify-center cursor-pointer"
                     title={nextTitle ? `Next: ${nextTitle}` : "Next Video"}
                     aria-label="Next Video"
                   >
@@ -1370,7 +1535,7 @@ export function CustomVideoPlayer({
                 ) : (
                   <Link
                     href={nextVideoUrl!}
-                    className="hidden sm:inline-flex p-1.5 sm:p-2 rounded-xl hover:bg-white/10 active:scale-95 transition-all text-foreground hover:text-foreground items-center justify-center"
+                    className="hidden sm:inline-flex p-1.5 sm:p-2 rounded-xl hover:bg-white/15 active:scale-95 transition-all text-white hover:text-white items-center justify-center"
                     title={nextTitle ? `Next (Shift + →): ${nextTitle}` : "Next Video (Shift + →)"}
                     aria-label="Next Video"
                   >
@@ -1384,24 +1549,82 @@ export function CustomVideoPlayer({
                   e.stopPropagation();
                   setShowRemainingTime((prev) => !prev);
                 }}
-                className="text-[10px] sm:text-xs font-mono text-foreground/80 hover:text-foreground tracking-tight ml-1 cursor-pointer select-none transition-colors"
+                className="text-[10px] sm:text-xs font-mono text-white/90 hover:text-white tracking-tight ml-1 cursor-pointer select-none transition-colors"
                 title={showRemainingTime ? "Click to show elapsed time" : "Click to show remaining time"}
               >
                 {showRemainingTime
                   ? `-${formatTime(Math.max(0, duration - currentTime))}`
                   : formatTime(currentTime)}{' '}
-                <span className="text-slate-500">/</span> {formatTime(duration)}
+                <span className="text-white/50">/</span> {formatTime(duration)}
               </span>
             </div>
 
             <div className="flex items-center gap-1 sm:gap-2">
-              {selectedAsset && (
-                <span className="hidden sm:inline-block text-[10px] font-bold tracking-wider uppercase px-2 py-0.5 rounded-md bg-primary-950/80 border border-primary-500/30 text-primary-600 dark:text-primary-300">
+              {/* Quality button — clicking opens the quality menu directly */}
+              {selectedAsset ? (
+                <button
+                  type="button"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setShowSettings((prev) => {
+                      if (prev && settingsTab === 'quality') {
+                        return false;
+                      }
+                      setSettingsTab('quality');
+                      return true;
+                    });
+                  }}
+                  className={`text-[10px] sm:text-xs font-bold tracking-wider uppercase px-2 py-0.5 sm:py-1 rounded-md border transition-all active:scale-95 cursor-pointer ${
+                    showSettings && settingsTab === 'quality'
+                      ? 'bg-primary-600 text-white border-primary-400 shadow-sm'
+                      : 'bg-primary-950/80 border-primary-500/30 text-primary-600 dark:text-primary-300 hover:bg-primary-900/70 hover:border-primary-400/50'
+                  }`}
+                  title="Quality — Click to open quality menu"
+                  aria-label="Quality settings"
+                >
                   {selectedAsset.displayName}
-                </span>
-              )}
+                </button>
+              ) : videoData?.assets && videoData.assets.length > 0 ? (
+                <button
+                  type="button"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setShowSettings((prev) => {
+                      if (prev && settingsTab === 'quality') {
+                        return false;
+                      }
+                      setSettingsTab('quality');
+                      return true;
+                    });
+                  }}
+                  className={`text-[10px] sm:text-xs font-bold tracking-wider uppercase px-2 py-0.5 sm:py-1 rounded-md border transition-all active:scale-95 cursor-pointer ${
+                    showSettings && settingsTab === 'quality'
+                      ? 'bg-primary-600 text-white border-primary-400 shadow-sm'
+                      : 'bg-primary-950/80 border-primary-500/30 text-primary-600 dark:text-primary-300 hover:bg-primary-900/70 hover:border-primary-400/50'
+                  }`}
+                  title="Quality — Click to open quality menu"
+                  aria-label="Quality settings"
+                >
+                  HD
+                </button>
+              ) : null}
+
+              {/* Screenshot button — right side of quality option */}
+              <button
+                type="button"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  handleTakeScreenshot();
+                }}
+                className="p-1.5 sm:p-2 rounded-xl hover:bg-white/15 active:scale-95 transition-all text-white hover:text-primary-300"
+                title="Take Screenshot"
+                aria-label="Take Screenshot"
+              >
+                <Camera className="w-4.5 h-4.5 sm:w-5 sm:h-5" />
+              </button>
 
               <button
+                type="button"
                 onClick={() => {
                   if (videoRef.current?.playbackRate) {
                     const cleanRate = Math.round(videoRef.current.playbackRate * 100) / 100;
@@ -1412,8 +1635,9 @@ export function CustomVideoPlayer({
                     return !prev;
                   });
                 }}
-                className={`p-1.5 sm:p-2 rounded-xl hover:bg-white/10 transition-all text-foreground ${showSettings ? 'bg-white/20 text-foreground' : ''}`}
+                className={`p-1.5 sm:p-2 rounded-xl hover:bg-white/15 transition-all text-white ${showSettings && settingsTab !== 'quality' ? 'bg-white/25 text-white' : ''}`}
                 aria-label="Settings"
+                title="Settings"
               >
                 <Settings className="w-4.5 h-4.5 sm:w-5 sm:h-5" />
               </button>
@@ -1421,7 +1645,7 @@ export function CustomVideoPlayer({
               {onToggleTheaterMode && (
                 <button
                   onClick={onToggleTheaterMode}
-                  className={`p-1.5 sm:p-2 rounded-xl hover:bg-white/10 transition-colors hidden sm:inline-flex items-center gap-1 ${isTheaterMode ? 'bg-primary-600/30 text-primary-600 dark:text-primary-300' : 'text-foreground'}`}
+                  className={`p-1.5 sm:p-2 rounded-xl hover:bg-white/15 transition-colors hidden sm:inline-flex items-center gap-1 ${isTheaterMode ? 'bg-primary-600/40 text-primary-300' : 'text-white'}`}
                   title="Theater Mode (T)"
                   aria-label="Theater Mode"
                 >
@@ -1432,7 +1656,7 @@ export function CustomVideoPlayer({
               {hasMounted && typeof document !== 'undefined' && document.pictureInPictureEnabled && (
                 <button
                   onClick={togglePictureInPicture}
-                  className="p-1.5 sm:p-2 rounded-xl hover:bg-white/10 text-foreground transition-colors hidden md:inline-flex"
+                  className="p-1.5 sm:p-2 rounded-xl hover:bg-white/15 text-white transition-colors hidden md:inline-flex"
                   title="Picture-in-Picture"
                 >
                   <PictureInPicture2 className="w-4.5 h-4.5 sm:w-5 sm:h-5" />
@@ -1441,7 +1665,7 @@ export function CustomVideoPlayer({
 
               <button 
                 onClick={handleToggleFullscreen} 
-                className="p-1.5 sm:p-2 rounded-xl hover:bg-white/10 text-foreground transition-colors"
+                className="p-1.5 sm:p-2 rounded-xl hover:bg-white/15 text-white transition-colors"
                 aria-label="Fullscreen"
               >
                 {isFullscreen ? <Minimize className="w-4.5 h-4.5 sm:w-5 sm:h-5" /> : <Maximize className="w-4.5 h-4.5 sm:w-5 sm:h-5" />}

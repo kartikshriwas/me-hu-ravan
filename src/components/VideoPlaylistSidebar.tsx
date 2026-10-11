@@ -94,6 +94,7 @@ export function VideoPlaylistSidebar({
     Record<number, boolean>
   >({});
   const [completedVideos, setCompletedVideos] = useState<string[]>([]);
+  const [playbackMap, setPlaybackMap] = useState<Record<string, { time: number; duration: number }>>({});
   const [bundleQualityModal, setBundleQualityModal] = useState<{
     isOpen: boolean;
     type: 'course' | 'section';
@@ -214,16 +215,41 @@ export function VideoPlaylistSidebar({
   const desktopPlaylistRef = useRef<HTMLDivElement | null>(null);
   const mobilePlaylistRef = useRef<HTMLDivElement | null>(null);
 
-  // Load completed videos from localStorage
+  // Load completed videos from localStorage & listen for updates
   useEffect(() => {
-    try {
-      const stored = localStorage.getItem("preptea_completed_videos");
-      if (stored) {
-        setCompletedVideos(JSON.parse(stored));
+    const updateCompleted = () => {
+      try {
+        const stored = localStorage.getItem("preptea_completed_videos");
+        const nextList: string[] = stored ? JSON.parse(stored) : [];
+        setCompletedVideos((prev) => {
+          if (
+            prev.length === nextList.length &&
+            prev.every((val, idx) => val === nextList[idx])
+          ) {
+            return prev;
+          }
+          return nextList;
+        });
+
+        const playbackStored = localStorage.getItem("preptea_video_playback_map");
+        if (playbackStored) {
+          const parsed = JSON.parse(playbackStored);
+          setPlaybackMap((prev) => {
+            if (JSON.stringify(prev) === playbackStored) return prev;
+            return parsed;
+          });
+        }
+      } catch (e) {
+        // ignore
       }
-    } catch (e) {
-      // ignore
-    }
+    };
+    updateCompleted();
+    window.addEventListener("preptea_study_update", updateCompleted);
+    window.addEventListener("storage", updateCompleted);
+    return () => {
+      window.removeEventListener("preptea_study_update", updateCompleted);
+      window.removeEventListener("storage", updateCompleted);
+    };
   }, [currentVideoId]);
 
   // Expand section containing the currently playing video by default
@@ -616,6 +642,12 @@ export function VideoPlaylistSidebar({
                     const title =
                       unit.unitTitle || unit.title || "Video Lesson";
 
+                    const playback = playbackMap[uId];
+                    const progressPercent =
+                      playback && playback.duration > 0 && playback.time > 5
+                        ? Math.min(100, Math.round((playback.time / playback.duration) * 100))
+                        : 0;
+
                     return (
                       <Link
                         key={unit.id}
@@ -635,26 +667,35 @@ export function VideoPlaylistSidebar({
                           ) : (
                             <PlayCircle className="w-4 h-4 text-slate-500 shrink-0" />
                           )}
-                          <span className="text-xs truncate">{title}</span>
-                          {hasCourseAccess && (
-                            isDownloaded(uId) ? (
-                              <span 
-                                title={`Downloaded offline (${downloads.find((d) => d.videoId === uId)?.quality || 'HD'})`} 
-                                className="px-1.5 py-0.5 rounded bg-emerald-500/15 text-emerald-400 text-[9px] font-bold shrink-0 flex items-center gap-1 border border-emerald-500/30"
-                              >
-                                <CheckCircle2 className="w-2.5 h-2.5" />
-                                <span>{downloads.find((d) => d.videoId === uId)?.quality || 'Saved'}</span>
-                              </span>
-                            ) : isDownloading(uId) ? (
-                              <span 
-                                title="Downloading lesson" 
-                                className="px-1.5 py-0.5 rounded bg-primary-500/15 text-primary-400 text-[9px] font-bold shrink-0 flex items-center gap-1 border border-primary-500/30"
-                              >
-                                <Loader2 className="w-2.5 h-2.5 animate-spin" />
-                                <span>{downloadingMap[uId]?.quality ? `${downloadingMap[uId].quality} • ` : ''}{getDownloadProgress(uId)}%</span>
-                              </span>
-                            ) : null
-                          )}
+                          <div className="flex flex-col min-w-0 flex-1">
+                            <div className="flex items-center gap-1.5 min-w-0">
+                              <span className="text-xs truncate">{title}</span>
+                              {hasCourseAccess && (
+                                isDownloaded(uId) ? (
+                                  <span 
+                                    title={`Downloaded offline (${downloads.find((d) => d.videoId === uId)?.quality || 'HD'})`} 
+                                    className="px-1.5 py-0.5 rounded bg-emerald-500/15 text-emerald-400 text-[9px] font-bold shrink-0 flex items-center gap-1 border border-emerald-500/30"
+                                  >
+                                    <CheckCircle2 className="w-2.5 h-2.5" />
+                                    <span>{downloads.find((d) => d.videoId === uId)?.quality || 'Saved'}</span>
+                                  </span>
+                                ) : isDownloading(uId) ? (
+                                  <span 
+                                    title="Downloading lesson" 
+                                    className="px-1.5 py-0.5 rounded bg-primary-500/15 text-primary-400 text-[9px] font-bold shrink-0 flex items-center gap-1 border border-primary-500/30"
+                                  >
+                                    <Loader2 className="w-2.5 h-2.5 animate-spin" />
+                                    <span>{downloadingMap[uId]?.quality ? `${downloadingMap[uId].quality} • ` : ''}{getDownloadProgress(uId)}%</span>
+                                  </span>
+                                ) : null
+                              )}
+                            </div>
+                            {progressPercent > 0 && !isCompleted && (
+                              <div className="w-full bg-slate-700/40 rounded-full h-1 mt-1 overflow-hidden" title={`${progressPercent}% watched`}>
+                                <div className="bg-primary-500 h-1 rounded-full transition-all" style={{ width: `${progressPercent}%` }} />
+                              </div>
+                            )}
+                          </div>
                         </div>
 
                         <div className="flex items-center gap-1.5 shrink-0 ml-2">
@@ -806,6 +847,12 @@ export function VideoPlaylistSidebar({
                 const isCompleted = completedVideos.includes(uId);
                 const title = unit.unitTitle || unit.title || "Video Lesson";
 
+                const playback = playbackMap[uId];
+                const progressPercent =
+                  playback && playback.duration > 0 && playback.time > 5
+                    ? Math.min(100, Math.round((playback.time / playback.duration) * 100))
+                    : 0;
+
                 return (
                   <Link
                     key={unit.id}
@@ -819,7 +866,7 @@ export function VideoPlaylistSidebar({
                   >
                     {/* Thumbnail placeholder / indicator */}
                     <div
-                      className={`w-12 h-8 rounded-lg shrink-0 flex items-center justify-center ${
+                      className={`relative w-12 h-8 rounded-lg shrink-0 flex items-center justify-center overflow-hidden ${
                         isActive
                           ? "bg-primary-500/20"
                           : isCompleted
@@ -833,6 +880,11 @@ export function VideoPlaylistSidebar({
                         <CheckCircle2 className="w-4.5 h-4.5 text-emerald-600 dark:text-emerald-400" />
                       ) : (
                         <PlayCircle className="w-4 h-4 text-slate-500" />
+                      )}
+                      {progressPercent > 0 && !isCompleted && (
+                        <div className="absolute bottom-0 left-0 right-0 h-1 bg-slate-700/60">
+                          <div className="bg-primary-500 h-full" style={{ width: `${progressPercent}%` }} />
+                        </div>
                       )}
                     </div>
 
@@ -854,6 +906,10 @@ export function VideoPlaylistSidebar({
                       ) : isCompleted ? (
                         <span className="text-[9px] font-bold text-emerald-600 dark:text-emerald-400 mt-0.5 block flex items-center gap-1">
                           Completed
+                        </span>
+                      ) : progressPercent > 0 ? (
+                        <span className="text-[9px] font-medium text-primary-400 mt-0.5 block">
+                          {progressPercent}% watched
                         </span>
                       ) : (
                         <div className="flex items-center gap-2 mt-0.5">

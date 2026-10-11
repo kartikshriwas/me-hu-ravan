@@ -48,6 +48,7 @@ import {
 import { useDownloads } from '@/lib/downloadContext';
 import { DownloadLessonModal, SingleLessonDownloadTarget } from '@/components/DownloadLessonModal';
 import { CourseCalendarView } from '@/components/CourseCalendarView';
+import { recordVideoCompletionToDb, syncLocalProgressToDb } from '@/lib/userProgressClient';
 
 interface CourseDetailClientProps {
   course: CourseDetail;
@@ -335,15 +336,21 @@ export function CourseDetailClient({ course, availableTests, isUnlocked = true }
     const syncCompleted = () => {
       try {
         const savedCompleted = localStorage.getItem('preptea_completed_videos');
-        if (savedCompleted) {
-          setCompletedVideos(JSON.parse(savedCompleted));
-        } else {
-          setCompletedVideos([]);
-        }
+        const nextList: string[] = savedCompleted ? JSON.parse(savedCompleted) : [];
+        setCompletedVideos((prev) => {
+          if (
+            prev.length === nextList.length &&
+            prev.every((val, idx) => val === nextList[idx])
+          ) {
+            return prev;
+          }
+          return nextList;
+        });
       } catch (e) {}
     };
 
     syncCompleted();
+    syncLocalProgressToDb();
     window.addEventListener('storage', syncCompleted);
     window.addEventListener('focus', syncCompleted);
     window.addEventListener('preptea_study_update', syncCompleted);
@@ -389,6 +396,11 @@ export function CourseDetailClient({ course, availableTests, isUnlocked = true }
           }
         }
       } catch (e) {}
+
+      if (!exists) {
+        recordVideoCompletionToDb(videoId, course.slug);
+      }
+
       return updated;
     });
   };
@@ -426,6 +438,13 @@ export function CourseDetailClient({ course, availableTests, isUnlocked = true }
       try {
         localStorage.setItem('preptea_completed_videos', JSON.stringify(updated));
       } catch (e) {}
+
+      if (markComplete) {
+        videoIds.forEach((vId) => {
+          recordVideoCompletionToDb(vId, course.slug);
+        });
+      }
+
       return updated;
     });
   };
@@ -630,14 +649,31 @@ export function CourseDetailClient({ course, availableTests, isUnlocked = true }
   }, [course.sections, searchQuery]);
 
   useEffect(() => {
-    try {
-      const stored = localStorage.getItem(`preptea_last_video_${course.slug}`);
-      if (stored) {
-        setLastVideoInfo(JSON.parse(stored));
+    const updateLastVideo = () => {
+      try {
+        const stored = localStorage.getItem(`preptea_last_video_${course.slug}`);
+        if (stored) {
+          const parsed = JSON.parse(stored);
+          setLastVideoInfo((prev) => {
+            if (prev?.videoId === parsed.videoId && prev?.timestamp === parsed.timestamp) {
+              return prev;
+            }
+            return parsed;
+          });
+        }
+      } catch (e) {
+        // ignore
       }
-    } catch (e) {
-      // ignore
-    }
+    };
+
+    updateLastVideo();
+    window.addEventListener('preptea_study_update', updateLastVideo);
+    window.addEventListener('storage', updateLastVideo);
+
+    return () => {
+      window.removeEventListener('preptea_study_update', updateLastVideo);
+      window.removeEventListener('storage', updateLastVideo);
+    };
   }, [course.slug]);
 
   // Calculate specific content type breakdown (Videos, Quizzes, PDFs, eBooks, Certificates, Audio, Live, Interactive, Other)
