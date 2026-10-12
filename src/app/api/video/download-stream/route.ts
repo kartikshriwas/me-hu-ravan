@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { auth } from '@/auth';
 import { hasCoursesAccess } from '@/lib/coursesAuth';
+import { createStreamTicket } from '@/lib/videoStreamToken';
 
 export const dynamic = 'force-dynamic';
 
@@ -40,61 +41,16 @@ export async function GET(request: NextRequest) {
       return NextResponse.json({ error: 'Not Found' }, { status: 404 });
     }
 
-    // Direct 307 redirect to remote CDN eliminates hours of Vercel Serverless Function Fluid Active CPU duration
-    // Browser fetch will stream bytes directly from Wistia Cloudfront CDN
-    if (searchParams.get('proxy') !== 'true') {
-      return NextResponse.redirect(targetUrl, {
-        status: 307,
-        headers: {
-          'Access-Control-Allow-Origin': '*',
-          'Cache-Control': 'private, max-age=86400',
-        },
-      });
-    }
-
-    const clientRange = request.headers.get('range');
-    const upstreamHeaders: Record<string, string> = {
-      'User-Agent':
-        'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-      Accept: '*/*',
-    };
-    if (clientRange) {
-      upstreamHeaders['Range'] = clientRange;
-    }
-
-    // 2. Fallback: Fetch the video stream from remote CDN only if explicitly proxied
-    const upstreamRes = await fetch(targetUrl, {
-      headers: upstreamHeaders,
-    });
-
-    if (!upstreamRes.ok || !upstreamRes.body) {
-      return NextResponse.json(
-        { error: `Upstream error: HTTP ${upstreamRes.status}` },
-        { status: upstreamRes.status || 502 }
-      );
-    }
-
-    // 3. Forward stream to client
-    const headers = new Headers();
-    headers.set('Content-Type', upstreamRes.headers.get('content-type') || 'video/mp4');
-    const contentLength = upstreamRes.headers.get('content-length');
-    if (contentLength) {
-      headers.set('Content-Length', contentLength);
-    }
-    const contentRange = upstreamRes.headers.get('content-range');
-    if (contentRange) {
-      headers.set('Content-Range', contentRange);
-    }
-    headers.set('Accept-Ranges', 'bytes');
-    headers.set('Cache-Control', 'private, no-cache, no-store, must-revalidate');
-    headers.set('Content-Disposition', 'inline'); // Explicitly inline, NOT attachment
-
-    return new Response(upstreamRes.body as any, {
-      status: upstreamRes.status === 206 ? 206 : 200,
-      headers,
+    // Direct 307 redirect to origin CDN (execution duration ~5ms, zero Vercel video bytes)
+    return NextResponse.redirect(targetUrl, {
+      status: 307,
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+        'Cache-Control': 'private, no-cache',
+      },
     });
   } catch (error: any) {
-    console.error('Error proxying video download stream:', error);
+    console.error('Error in download stream redirect:', error);
     return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 });
   }
 }

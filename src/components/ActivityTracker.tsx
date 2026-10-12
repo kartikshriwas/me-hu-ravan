@@ -21,6 +21,7 @@ export function ActivityTracker() {
   const prevStateRef = useRef<string>('active');
   const eventBufferRef = useRef<SessionEvent[]>([]);
   const lastHeartbeatTimeRef = useRef<number>(Date.now());
+  const lastHeartbeatSendTimeRef = useRef<number>(0);
 
   // Helper to check if video or audio is actively playing on the page
   const checkIsMediaPlaying = () => {
@@ -108,6 +109,12 @@ export function ActivityTracker() {
       if (!sessionIdRef.current) return;
 
       const now = Date.now();
+      // Throttle non-final heartbeats to at least 15 seconds apart to eliminate redundant rapid bursts
+      if (!isFinal && now - lastHeartbeatSendTimeRef.current < 15000) {
+        return;
+      }
+      lastHeartbeatSendTimeRef.current = now;
+
       const isMedia = checkIsMediaPlaying();
 
       // If media is actively playing, continuously refresh last activity timestamp

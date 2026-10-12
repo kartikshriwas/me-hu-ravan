@@ -167,6 +167,7 @@ export function CustomVideoPlayer({
       active = false;
     };
   }, [videoId, isCurrentDownloaded, getBlobUrl, blobUrl]);
+
   const [videoData, setVideoData] = useState<WistiaVideoData | null>(null);
   const [loading, setLoading] = useState<boolean>(!embedHtml);
   const [error, setError] = useState<string | null>(null);
@@ -204,6 +205,7 @@ export function CustomVideoPlayer({
 
   const videoRef = useRef<HTMLVideoElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
+
   const controlsTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const singleTapTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const pendingSeekTimeRef = useRef<number>(0);
@@ -214,11 +216,12 @@ export function CustomVideoPlayer({
   const isPreloadReadyRef = useRef<boolean>(false);
   const lastTapRef = useRef<{ time: number; x: number }>({ time: 0, x: 0 });
   const lastSaveTimeRef = useRef<number>(0);
-  const lastDbSaveTimeRef = useRef<number>(0);
+  const lastDbSaveTimeRef = useRef<number>(Date.now());
   const hasRestoredTimeRef = useRef<boolean>(false);
 
   useEffect(() => {
     hasRestoredTimeRef.current = false;
+    lastDbSaveTimeRef.current = Date.now();
   }, [videoId]);
 
   // 1. Fetch Video Metadata from API Proxy (only if not an iframe embed)
@@ -304,7 +307,7 @@ export function CustomVideoPlayer({
     return () => {
       active = false;
     };
-  }, [videoId, embedHtml, blobUrl, localBlobUrl, effectiveOfflineQuality]);
+  }, [videoId, embedHtml, effectiveOfflineQuality]);
 
   // Restore preferred playback speed from localStorage on initial mount
   useEffect(() => {
@@ -1204,16 +1207,19 @@ export function CustomVideoPlayer({
             if (isSwitchingQualityRef.current) return;
             setIsPlaying(false);
             if (videoId && currentTime > 3) {
-              const deltaSec = Math.max(0, Math.round((Date.now() - lastDbSaveTimeRef.current) / 1000));
-              lastDbSaveTimeRef.current = Date.now();
-              recordPlaybackProgressToDb(
-                videoId,
-                courseSlug,
-                currentTime,
-                duration,
-                title || videoData?.name || 'Video Lesson',
-                deltaSec
-              );
+              const elapsedSinceDb = Date.now() - lastDbSaveTimeRef.current;
+              if (elapsedSinceDb >= 15000) {
+                const deltaSec = Math.max(1, Math.round(elapsedSinceDb / 1000));
+                lastDbSaveTimeRef.current = Date.now();
+                recordPlaybackProgressToDb(
+                  videoId,
+                  courseSlug,
+                  currentTime,
+                  duration,
+                  title || videoData?.name || 'Video Lesson',
+                  deltaSec
+                );
+              }
             }
           }}
           autoPlay
