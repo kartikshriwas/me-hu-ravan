@@ -653,6 +653,7 @@ export function VideoPlaylistSidebar({
             </div>
             <div className="min-w-0">
               <Link
+                prefetch={false}
                 href={`/courses/${courseSlug}`}
                 className="inline-flex items-center gap-2 text-xs font-semibold text-muted-foreground hover:text-foreground transition-colors bg-card/80"
               >
@@ -821,6 +822,7 @@ export function VideoPlaylistSidebar({
             )}
             <div className="min-w-0">
               <Link
+                prefetch={false}
                 href={`/courses/${courseSlug}`}
                 className="inline-flex items-center gap-2 text-xs font-semibold text-muted-foreground hover:text-foreground transition-colors bg-card/80"
               >
@@ -1116,6 +1118,7 @@ export function VideoPlaylistSidebar({
                       return (
                         <div key={item.unit.id || uId || itIdx} className="space-y-1">
                           <Link
+                            prefetch={false}
                             ref={isActive ? desktopActiveRef : null}
                             href={`/courses/${courseSlug}/video/${uId}?mode=calendar`}
                             className={`flex items-center justify-between p-2.5 rounded-xl transition-all touch-manipulation group/card ${
@@ -1382,6 +1385,7 @@ export function VideoPlaylistSidebar({
 
                     return (
                       <Link
+                        prefetch={false}
                         key={unit.id}
                         ref={isActive ? desktopActiveRef : null}
                         href={`/courses/${courseSlug}/video/${uId}`}
@@ -1586,6 +1590,7 @@ export function VideoPlaylistSidebar({
                   return (
                     <div key={item.unit.id || uId || itIdx} className="space-y-0.5">
                       <Link
+                        prefetch={false}
                         ref={isActive ? mobileActiveRef : null}
                         href={`/courses/${courseSlug}/video/${uId}?mode=calendar`}
                         className={`flex items-center gap-3 px-3 py-3 transition-all touch-manipulation ${
@@ -1807,6 +1812,7 @@ export function VideoPlaylistSidebar({
 
                 return (
                   <Link
+                    prefetch={false}
                     key={unit.id}
                     ref={isActive ? mobileActiveRef : null}
                     href={`/courses/${courseSlug}/video/${uId}`}

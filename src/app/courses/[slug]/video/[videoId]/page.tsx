@@ -12,7 +12,6 @@ import { CourseSectionUnit } from '@/lib/types';
 
 import { VideoViewContainer } from '@/components/VideoViewContainer';
 
-export const revalidate = 0;
 
 interface PageProps {
   params: Promise<{

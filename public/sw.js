@@ -1,11 +1,10 @@
-// PrepTea Service Worker - App Shell Architecture v4
-const CACHE_NAME = 'preptea-shell-v4';
+// PrepTea Service Worker - App Shell Architecture v5 (Optimized Edge Caching)
+const CACHE_NAME = 'preptea-shell-v5';
 
 const APP_SHELL_ASSETS = [
   '/',
   '/downloads',
   '/favicon.svg',
-  '/favicon.png',
   '/manifest.json',
 ];
 
@@ -73,31 +72,50 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
-  // 2. Next.js chunks, scripts, styles and static assets - Network First with Cache Fallback
-  // Ensures users ALWAYS see latest UI without manual hard refresh (Ctrl + Shift + R)
+  // 2. Next.js fingerprinted static chunks (/_next/static/*) - Cache First
+  // Eliminates tens of thousands of duplicate CDN requests on Vercel
+  const isStaticChunk = url.pathname.startsWith('/_next/static/');
   const isStaticAsset =
-    url.pathname.startsWith('/_next/static/') ||
-    url.pathname.endsWith('.js') ||
-    url.pathname.endsWith('.css') ||
+    isStaticChunk ||
+    url.pathname.endsWith('.woff2') ||
     url.pathname.endsWith('.svg') ||
     url.pathname.endsWith('.png') ||
-    url.pathname.endsWith('.woff2');
+    url.pathname.endsWith('.jpg') ||
+    url.pathname.endsWith('.ico');
 
   if (isStaticAsset) {
     event.respondWith(
-      fetch(request)
-        .then((networkResponse) => {
-          if (networkResponse && networkResponse.status === 200) {
-            const copy = networkResponse.clone();
-            caches.open(CACHE_NAME).then((cache) => cache.put(request, copy));
+      caches.match(request).then((cachedResponse) => {
+        if (cachedResponse) {
+          // Immutable Next.js chunks return immediately from cache
+          if (isStaticChunk) {
+            return cachedResponse;
           }
-          return networkResponse;
-        })
-        .catch(async () => {
-          const cached = await caches.match(request);
-          if (cached) return cached;
-          return new Response(null, { status: 408, statusText: 'Offline' });
-        })
+          // Non-chunk static assets: return cache, refresh in background (Stale-While-Revalidate)
+          fetch(request)
+            .then((networkResponse) => {
+              if (networkResponse && networkResponse.status === 200) {
+                const copy = networkResponse.clone();
+                caches.open(CACHE_NAME).then((cache) => cache.put(request, copy));
+              }
+            })
+            .catch(() => {});
+          return cachedResponse;
+        }
+
+        // Cache miss: fetch from network and store in cache
+        return fetch(request)
+          .then((networkResponse) => {
+            if (networkResponse && networkResponse.status === 200) {
+              const copy = networkResponse.clone();
+              caches.open(CACHE_NAME).then((cache) => cache.put(request, copy));
+            }
+            return networkResponse;
+          })
+          .catch(() => {
+            return new Response(null, { status: 408, statusText: 'Offline' });
+          });
+      })
     );
     return;
   }

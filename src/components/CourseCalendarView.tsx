@@ -747,6 +747,7 @@ export function CourseCalendarView({
 
                     return (
                       <Link
+                        prefetch={false}
                         href={`/courses/${course.slug}/video/${firstUnfinished.videoId}?mode=calendar`}
                         className="w-full sm:w-auto px-4 py-2 rounded-xl bg-primary-600 hover:bg-primary-500 text-white text-xs font-bold shadow-md shadow-primary-600/30 transition-all flex items-center justify-center gap-1.5 ml-auto"
                       >
@@ -1354,6 +1355,7 @@ export function CourseCalendarView({
                                 </span>
                                 {item.videoId ? (
                                   <Link
+                                    prefetch={false}
                                     href={`/courses/${course.slug}/video/${item.videoId}?mode=calendar`}
                                     className={`text-xs sm:text-sm font-medium leading-snug truncate transition-colors hover:text-primary-300 ${
                                       isItemCompleted
@@ -1507,6 +1509,7 @@ export function CourseCalendarView({
 
                               {item.isActionableVideo && item.videoId ? (
                                 <Link
+                                  prefetch={false}
                                   href={`/courses/${course.slug}/video/${item.videoId}?mode=calendar`}
                                   className={`px-3 py-1.5 rounded-xl text-xs font-semibold transition-all flex items-center gap-1.5 ${
                                     isItemCompleted

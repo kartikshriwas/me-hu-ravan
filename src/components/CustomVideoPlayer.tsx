@@ -604,8 +604,10 @@ export function CustomVideoPlayer({
       }
     }
 
-    // Throttled heartbeat to MongoDB (every 10 seconds while playing)
-    if (Date.now() - lastDbSaveTimeRef.current > 10000 && videoId && currentTimeVal > 3) {
+    // Throttled heartbeat to MongoDB (every 60 seconds while playing)
+    // Local progress is continuously saved to localStorage above every 2 seconds.
+    if (Date.now() - lastDbSaveTimeRef.current >= 60000 && videoId && currentTimeVal > 3) {
+      const deltaSec = Math.round((Date.now() - lastDbSaveTimeRef.current) / 1000);
       lastDbSaveTimeRef.current = Date.now();
       recordPlaybackProgressToDb(
         videoId,
@@ -613,7 +615,7 @@ export function CustomVideoPlayer({
         currentTimeVal,
         duration,
         title || videoData?.name || 'Video Lesson',
-        10
+        deltaSec
       );
     }
 
@@ -966,6 +968,7 @@ export function CustomVideoPlayer({
           <div className="flex items-center gap-2 shrink-0">
             {prevVideoUrl && (
               <Link
+                prefetch={false}
                 href={prevVideoUrl}
                 className="text-xs sm:text-sm font-semibold text-foreground hover:text-foreground px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl bg-slate-800 hover:bg-slate-700/80 border border-slate-700/60 hover:border-primary-500/50 transition-all flex items-center gap-1.5 touch-manipulation"
                 title={prevTitle ? `Previous (Shift + ←): ${prevTitle}` : "Previous Video (Shift + ←)"}
@@ -976,6 +979,7 @@ export function CustomVideoPlayer({
             )}
             {nextVideoUrl && (
               <Link
+                prefetch={false}
                 href={nextVideoUrl}
                 className="text-xs sm:text-sm font-semibold text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl bg-primary-600 hover:bg-primary-500 border border-primary-400/30 transition-all flex items-center gap-1.5 shadow-md shadow-primary-950/40 touch-manipulation"
                 title={nextTitle ? `Next (Shift + →): ${nextTitle}` : "Next Video (Shift + →)"}
@@ -1033,6 +1037,7 @@ export function CustomVideoPlayer({
           <div className="flex items-center gap-2 shrink-0">
             {prevVideoUrl && (
               <Link
+                prefetch={false}
                 href={prevVideoUrl}
                 className="text-xs sm:text-sm font-semibold text-foreground hover:text-foreground px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl bg-slate-800 hover:bg-slate-700/80 border border-slate-700/60 hover:border-primary-500/50 transition-all flex items-center gap-1.5 touch-manipulation"
                 title={prevTitle ? `Previous (Shift + ←): ${prevTitle}` : "Previous Video (Shift + ←)"}
@@ -1043,6 +1048,7 @@ export function CustomVideoPlayer({
             )}
             {nextVideoUrl && (
               <Link
+                prefetch={false}
                 href={nextVideoUrl}
                 className="text-xs sm:text-sm font-semibold text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl bg-primary-600 hover:bg-primary-500 border border-primary-400/30 transition-all flex items-center gap-1.5 shadow-md shadow-primary-950/40 touch-manipulation"
                 title={nextTitle ? `Next (Shift + →): ${nextTitle}` : "Next Video (Shift + →)"}
@@ -1104,6 +1110,7 @@ export function CustomVideoPlayer({
                   </button>
                 ) : (
                   <Link
+                    prefetch={false}
                     href={prevVideoUrl!}
                     className="text-xs sm:text-sm font-semibold text-foreground hover:text-foreground px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl bg-slate-800 hover:bg-slate-700/80 border border-slate-700/60 hover:border-primary-500/50 transition-all flex items-center gap-1.5 touch-manipulation"
                   >
@@ -1123,6 +1130,7 @@ export function CustomVideoPlayer({
                   </button>
                 ) : (
                   <Link
+                    prefetch={false}
                     href={nextVideoUrl!}
                     className="text-xs sm:text-sm font-semibold text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl bg-primary-600 hover:bg-primary-500 border border-primary-400/30 transition-all flex items-center gap-1.5 shadow-md shadow-primary-950/40 touch-manipulation"
                   >
@@ -1195,6 +1203,18 @@ export function CustomVideoPlayer({
           onPause={() => {
             if (isSwitchingQualityRef.current) return;
             setIsPlaying(false);
+            if (videoId && currentTime > 3) {
+              const deltaSec = Math.max(0, Math.round((Date.now() - lastDbSaveTimeRef.current) / 1000));
+              lastDbSaveTimeRef.current = Date.now();
+              recordPlaybackProgressToDb(
+                videoId,
+                courseSlug,
+                currentTime,
+                duration,
+                title || videoData?.name || 'Video Lesson',
+                deltaSec
+              );
+            }
           }}
           autoPlay
           playsInline
@@ -1562,6 +1582,7 @@ export function CustomVideoPlayer({
                   </button>
                 ) : (
                   <Link
+                    prefetch={false}
                     href={prevVideoUrl!}
                     className="hidden sm:inline-flex p-1.5 sm:p-2 rounded-xl hover:bg-white/15 active:scale-95 transition-all text-white hover:text-white items-center justify-center"
                     title={prevTitle ? `Previous: ${prevTitle}` : "Previous Video"}
@@ -1584,6 +1605,7 @@ export function CustomVideoPlayer({
                   </button>
                 ) : (
                   <Link
+                    prefetch={false}
                     href={nextVideoUrl!}
                     className="hidden sm:inline-flex p-1.5 sm:p-2 rounded-xl hover:bg-white/15 active:scale-95 transition-all text-white hover:text-white items-center justify-center"
                     title={nextTitle ? `Next (Shift + →): ${nextTitle}` : "Next Video (Shift + →)"}
@@ -1818,6 +1840,7 @@ export function CustomVideoPlayer({
               </button>
             ) : (
               <Link
+                prefetch={false}
                 href={prevVideoUrl!}
                 className="text-xs sm:text-sm font-semibold text-foreground hover:text-foreground px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl bg-slate-800 hover:bg-slate-700/80 border border-slate-700/60 hover:border-primary-500/50 transition-all flex items-center gap-1.5 touch-manipulation shadow-sm"
                 title={prevTitle ? `Previous (Shift + ←): ${prevTitle}` : "Previous Video (Shift + ←)"}
@@ -1839,6 +1862,7 @@ export function CustomVideoPlayer({
               </button>
             ) : (
               <Link
+                prefetch={false}
                 href={nextVideoUrl!}
                 className="text-xs sm:text-sm font-semibold text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl bg-primary-600 hover:bg-primary-500 border border-primary-400/30 transition-all flex items-center gap-1.5 shadow-md shadow-primary-950/50 touch-manipulation"
                 title={nextTitle ? `Next (Shift + →): ${nextTitle}` : "Next Video (Shift + →)"}

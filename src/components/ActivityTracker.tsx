@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from 'react';
 import { usePathname } from 'next/navigation';
+import { useAuth } from '@/lib/authContext';
 
 interface SessionEvent {
   timestamp: number;
@@ -11,6 +12,7 @@ interface SessionEvent {
 
 export function ActivityTracker() {
   const pathname = usePathname();
+  const { user } = useAuth();
   const lastActivityTimeRef = useRef<number>(Date.now());
   const activeSecondsAccumRef = useRef<number>(0);
   const idleSecondsAccumRef = useRef<number>(0);
@@ -236,16 +238,24 @@ export function ActivityTracker() {
       }
     };
 
-    // Heartbeat every 30 seconds (efficient, cuts requests by 50%)
+    // For unauthenticated guests, only send initial beacon once — do not run high-frequency polling
+    if (!user) {
+      sendHeartbeat(false);
+      return;
+    }
+
+    // Heartbeat every 60 seconds for active users (cuts invocations by 50-75%)
     const interval = setInterval(() => {
       // Pause heartbeat loop when tab is hidden and not playing media
       if (typeof document !== 'undefined' && document.visibilityState === 'hidden' && !checkIsMediaPlaying()) {
         return;
       }
       sendHeartbeat(false);
-    }, 30000);
+    }, 60000);
 
     const handleVisibilityChange = () => {
+      // Throttle: avoid rapid heartbeats on quick tab switching (minimum 30s between heartbeats)
+      if (Date.now() - lastHeartbeatTimeRef.current < 30000) return;
       if (document.visibilityState === 'hidden' && !checkIsMediaPlaying()) {
         sendHeartbeat(true);
       } else if (document.visibilityState === 'visible') {
@@ -266,7 +276,7 @@ export function ActivityTracker() {
       window.removeEventListener('visibilitychange', handleVisibilityChange);
       window.removeEventListener('beforeunload', handleBeforeUnload);
     };
-  }, [pathname]);
+  }, [pathname, user]);
 
   return null;
 }

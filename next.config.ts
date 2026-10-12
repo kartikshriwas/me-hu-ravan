@@ -9,10 +9,13 @@ const nextConfig: NextConfig = {
     optimizePackageImports: ['lucide-react'],
   },
 
+  compress: true,
+  poweredByHeader: false,
+
   // L-5: Only expose internal dev origins in development
   ...(process.env.NODE_ENV === 'development' ? { allowedDevOrigins: ['10.16.65.83', "10.139.66.83", 'localhost:3000', 'localhost:3001'] } : {}),
 
-  // M-1: Security headers for all responses
+  // Headers for Edge caching & security
   async headers() {
     return [
       {
@@ -20,6 +23,18 @@ const nextConfig: NextConfig = {
         headers: [
           { key: 'Cache-Control', value: 'no-cache, no-store, must-revalidate' },
           { key: 'Content-Type', value: 'application/javascript; charset=utf-8' },
+        ],
+      },
+      {
+        source: '/_next/static/(.*)',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
+        ],
+      },
+      {
+        source: '/(favicon.svg|favicon.png|icon.png|icon.svg|manifest.json|og-image.png)',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=86400, stale-while-revalidate=604800' },
         ],
       },
       {

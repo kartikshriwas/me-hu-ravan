@@ -397,12 +397,14 @@ export function HomeClient({ initialTests = [] }: { initialTests?: AssessmentMet
 
           <div className="flex items-center gap-2 w-full sm:w-auto">
             <Link
+              prefetch={false}
               href={`/quiz/${recentAttempt.quizId}/results?t=${recentAttempt.timestamp}`}
               className="flex-1 sm:flex-none px-4 py-2 rounded-xl bg-primary-600/20 hover:bg-primary-600 text-primary-600 dark:text-primary-300 hover:text-white text-xs font-bold border border-primary-500/30 hover:border-transparent transition-all text-center"
             >
               View Solutions
             </Link>
             <Link
+              prefetch={false}
               href={`/quiz/${recentAttempt.quizId}`}
               className="p-2 rounded-xl bg-card hover:bg-slate-800 text-foreground/80 hover:text-foreground border border-card-border text-xs shrink-0"
               title="Retake Test"
@@ -579,6 +581,7 @@ export function HomeClient({ initialTests = [] }: { initialTests?: AssessmentMet
                     ) : isAttempted ? (
                       <div className="flex items-center gap-2">
                         <Link
+                          prefetch={false}
                           href={`/quiz/${test.quizId}/results?t=${attemptInfo.latest.timestamp}`}
                           className="flex-1 py-2.5 rounded-xl bg-card hover:bg-slate-800 text-foreground/80 hover:text-foreground text-xs font-bold border border-card-border text-center transition-all"
                         >
@@ -586,6 +589,7 @@ export function HomeClient({ initialTests = [] }: { initialTests?: AssessmentMet
                         </Link>
                         {user ? (
                           <Link
+                            prefetch={false}
                             href={`/quiz/${test.quizId}`}
                             className="flex-1 py-2.5 rounded-xl bg-primary-600 hover:bg-primary-500 text-white font-bold text-xs shadow-lg shadow-primary-600/20 transition-all flex items-center justify-center gap-1.5"
                           >
@@ -604,6 +608,7 @@ export function HomeClient({ initialTests = [] }: { initialTests?: AssessmentMet
                       </div>
                     ) : user ? (
                       <Link
+                        prefetch={false}
                         href={`/quiz/${test.quizId}`}
                         className="w-full py-3 rounded-xl bg-primary-600 hover:bg-primary-500 text-white font-bold text-xs shadow-lg shadow-primary-600/20 transition-all flex items-center justify-center gap-2 group-hover:scale-[1.02]"
                       >

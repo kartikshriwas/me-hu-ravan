@@ -404,7 +404,7 @@ export function CoursesCatalogGrid({ courses }: { courses: CourseItem[] }) {
               const lastVideo = lastVideos[course.slug];
 
               return (
-                <Link key={course.slug} href={`/courses/${course.slug}`}>
+                <Link prefetch={false} key={course.slug} href={`/courses/${course.slug}`}>
                   <div
                     className={`glass-card rounded-2xl p-6 h-full flex flex-col justify-between group transition-all relative overflow-hidden ${
                       course.isUnlocked
@@ -499,7 +499,7 @@ export function CoursesCatalogGrid({ courses }: { courses: CourseItem[] }) {
               const lastVideo = lastVideos[course.slug];
 
               return (
-                <Link key={course.slug} href={`/courses/${course.slug}`}>
+                <Link prefetch={false} key={course.slug} href={`/courses/${course.slug}`}>
                   <div
                     className={`glass-card rounded-2xl p-6 h-full flex flex-col justify-between group transition-all relative overflow-hidden ${
                       course.isUnlocked

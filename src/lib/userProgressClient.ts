@@ -49,7 +49,7 @@ function getLocalDateString(d: Date = new Date()): string {
 let inflightFetchProgressPromise: Promise<UserProgressData | null> | null = null;
 let lastProgressFetchTime = 0;
 let cachedProgressData: UserProgressData | null = null;
-const CACHE_TTL_MS = 10000; // 10 seconds
+const CACHE_TTL_MS = 60000; // 60 seconds (prevents rapid DB re-fetching on routine page navigations)
 
 /**
  * Fetch fresh learning telemetry from MongoDB via /api/user/progress

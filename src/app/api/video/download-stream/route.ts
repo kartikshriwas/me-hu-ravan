@@ -40,6 +40,18 @@ export async function GET(request: NextRequest) {
       return NextResponse.json({ error: 'Not Found' }, { status: 404 });
     }
 
+    // Direct 307 redirect to remote CDN eliminates hours of Vercel Serverless Function Fluid Active CPU duration
+    // Browser fetch will stream bytes directly from Wistia Cloudfront CDN
+    if (searchParams.get('proxy') !== 'true') {
+      return NextResponse.redirect(targetUrl, {
+        status: 307,
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+          'Cache-Control': 'private, max-age=86400',
+        },
+      });
+    }
+
     const clientRange = request.headers.get('range');
     const upstreamHeaders: Record<string, string> = {
       'User-Agent':
@@ -50,7 +62,7 @@ export async function GET(request: NextRequest) {
       upstreamHeaders['Range'] = clientRange;
     }
 
-    // 2. Fetch the video stream from remote CDN
+    // 2. Fallback: Fetch the video stream from remote CDN only if explicitly proxied
     const upstreamRes = await fetch(targetUrl, {
       headers: upstreamHeaders,
     });

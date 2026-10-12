@@ -5,7 +5,6 @@ import { auth } from '@/auth';
 import { hasCoursesAccess, getUnlockedCourseSlugsMap } from '@/lib/coursesAuth';
 import { CoursesCatalogGrid } from '@/components/CoursesCatalogGrid';
 
-export const revalidate = 0;
 
 export default async function CoursesCatalogPage() {
   const session = await auth();

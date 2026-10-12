@@ -458,7 +458,7 @@ export default function AdminDashboardPage() {
       } finally {
         setTimeout(() => setRefreshingSessions(false), 500);
       }
-    }, 15000);
+    }, 45000);
 
     return () => clearInterval(interval);
   }, [activeTab, authUser, isAdmin]);

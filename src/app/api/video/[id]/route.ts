@@ -29,7 +29,7 @@ export async function GET(
         success: true,
         video: cached.data,
       }, {
-        headers: { 'Cache-Control': 'private, max-age=300, stale-while-revalidate=600' }
+        headers: { 'Cache-Control': 'public, s-maxage=86400, stale-while-revalidate=604800, max-age=3600' }
       });
     }
 
@@ -121,7 +121,7 @@ export async function GET(
       success: true,
       video: videoPayload,
     }, {
-      headers: { 'Cache-Control': 'private, max-age=300, stale-while-revalidate=600' }
+      headers: { 'Cache-Control': 'public, s-maxage=86400, stale-while-revalidate=604800, max-age=3600' }
     });
   } catch (error) {
     console.error('Error fetching wistia video metadata:', error);
