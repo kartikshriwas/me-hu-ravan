@@ -34,47 +34,14 @@ import { useDownloads } from '@/lib/downloadContext';
 import { getRememberedQuality, saveRememberedQuality } from '@/lib/qualityMatcher';
 import { useAuth } from '@/lib/authContext';
 import { getQuizHistory, isQuizMatch } from '@/lib/storage';
+import {
+  CalendarDayGroup,
+  CalendarUnitItem,
+  CalendarUnitTestItem,
+  computeCourseCalendarDays,
+} from '@/lib/courseCalendarHelper';
 
-export interface CalendarUnitTestItem {
-  id: string;
-  unit: CourseSectionUnit;
-  quizId: string;
-  title: string;
-  difficulty?: 'Easy' | 'Medium' | 'Hard' | 'Practice';
-  questionsCount?: number;
-  timeLimitMinutes?: number;
-  totalScore?: number;
-}
-
-export interface CalendarUnitItem {
-  unit: CourseSectionUnit;
-  sectionTitle: string;
-  sectionId: string;
-  videoId: string;
-  durationSeconds: number;
-  isActionableVideo: boolean;
-  isActionableExam?: boolean;
-  isYouTube: boolean;
-  uploadDateStr: string; // YYYY-MM-DD
-  associatedTests?: CalendarUnitTestItem[];
-}
-
-export interface CalendarDayGroup {
-  dayNumber: number;
-  dateKey: string; // Scheduled calendar date YYYY-MM-DD
-  formattedDate: string; // e.g. "9 Feb 2026"
-  dayOfWeek: string; // e.g. "Monday"
-  targetTitle: string; // e.g. "Variables & Data Types"
-  originalUploadDate?: string; // e.g. "7 Feb 2026"
-  items: CalendarUnitItem[];
-  totalSeconds: number;
-  totalLectures: number;
-  totalTests?: number;
-  completedCount: number;
-  isCompleted: boolean;
-  isNextTarget: boolean;
-  progressPercent: number;
-}
+export type { CalendarDayGroup, CalendarUnitItem, CalendarUnitTestItem };
 
 interface CourseCalendarViewProps {
   course: CourseDetail;
@@ -282,6 +249,22 @@ export function CourseCalendarView({
 
   // Paced targets (~1.5h - 2h per day across 4-6 months) vs Raw bulk upload drop batches
   const [scheduleMode, setScheduleMode] = useState<'paced' | 'raw_batches'>('paced');
+
+  useEffect(() => {
+    try {
+      const stored = localStorage.getItem(`preptea_schedule_mode_${course.slug}`);
+      if (stored === 'paced' || stored === 'raw_batches') {
+        setScheduleMode(stored);
+      }
+    } catch (e) {}
+  }, [course.slug]);
+
+  const handleSetScheduleMode = (mode: 'paced' | 'raw_batches') => {
+    setScheduleMode(mode);
+    try {
+      localStorage.setItem(`preptea_schedule_mode_${course.slug}`, mode);
+    } catch (e) {}
+  };
   const [filterMode, setFilterMode] = useState<'all' | 'pending' | 'completed'>('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [expandedDays, setExpandedDays] = useState<Record<number, boolean>>({});
@@ -444,511 +427,14 @@ export function CourseCalendarView({
 
   // 2. Group all units into either Sprint Paced Targets or Raw Upload Batches
   const calendarDays: CalendarDayGroup[] = useMemo(() => {
-    // Collect all valid unit items
-    const allUnitsList: CalendarUnitItem[] = [];
-
-    course.sections.forEach((sec) => {
-      const secHasVideos = sec.units.some((u) => getUnitMetaConfig(u).isActionableVideo);
-
-      if (secHasVideos) {
-        for (let i = 0; i < sec.units.length; i++) {
-          const unit = sec.units[i];
-          const cfg = getUnitMetaConfig(unit);
-          if (!cfg.isActionableVideo) continue;
-
-          let dateKey = 'unscheduled';
-          if (unit.modifiedF && typeof unit.modifiedF === 'string') {
-            const part = unit.modifiedF.split(' ')[0]?.trim();
-            if (/^\d{4}-\d{2}-\d{2}$/.test(part)) {
-              dateKey = part;
-            }
-          } else if (typeof unit.created === 'number' && unit.created > 0) {
-            try {
-              dateKey = new Date(unit.created * 1000).toISOString().split('T')[0];
-            } catch (e) {}
-          }
-
-          const isYouTube = (unit.objectType || unit.type || '').toLowerCase() === 'youtube';
-          const videoId = unit.sourceid || unit.vimeoid || unit.id || '';
-
-          // Look ahead for tests following this video up to next video in the same section
-          const associatedTests: CalendarUnitTestItem[] = [];
-          for (let j = i + 1; j < sec.units.length; j++) {
-            const nextUnit = sec.units[j];
-            const nextCfg = getUnitMetaConfig(nextUnit);
-            if (nextCfg.isActionableVideo) break; // Next video begins
-
-            const nextObjType = (nextUnit.objectType || nextUnit.type || '').toLowerCase();
-            if (
-              nextCfg.isActionableExam ||
-              nextObjType === 'assessmentv2' ||
-              nextObjType === 'assessment' ||
-              nextObjType === 'quiz'
-            ) {
-              const match = availableTests.find(
-                (t) =>
-                  (nextUnit.id && (t.objectId === nextUnit.id || t.assessmentId === nextUnit.id)) ||
-                  (nextUnit.data?.assessmentId &&
-                    (t.assessmentId === nextUnit.data.assessmentId || t.objectId === nextUnit.data.assessmentId))
-              ) || availableTests.find((t) => {
-                const uTitle = (nextUnit.unitTitle || nextUnit.title || '').toLowerCase().trim();
-                const qTitle = (t.quizId || t.title || '').toLowerCase().trim();
-                return uTitle && (qTitle === uTitle || qTitle.includes(uTitle) || uTitle.includes(qTitle));
-              });
-
-              const quizId = match?.quizId || nextUnit.data?.assessmentId || nextUnit.id;
-              const titleLower = (nextUnit.title || nextUnit.unitTitle || '').toLowerCase();
-              let diff: 'Easy' | 'Medium' | 'Hard' | 'Practice' = match?.difficulty || 'Practice';
-              if (titleLower.includes('easy')) diff = 'Easy';
-              else if (titleLower.includes('medium')) diff = 'Medium';
-              else if (titleLower.includes('hard') || titleLower.includes('advanced')) diff = 'Hard';
-
-              associatedTests.push({
-                id: nextUnit.id,
-                unit: nextUnit,
-                quizId,
-                title: nextUnit.title || nextUnit.unitTitle || match?.title || 'Practice Test',
-                difficulty: diff,
-                questionsCount: match?.totalQuestions || nextUnit.questionsCount || 10,
-                timeLimitMinutes: match?.timeLimitSeconds ? Math.round(match.timeLimitSeconds / 60) : 20,
-                totalScore: match?.totalScore || match?.totalQuestions || 10,
-              });
-            }
-          }
-
-          allUnitsList.push({
-            unit,
-            sectionTitle: sec.title,
-            sectionId: sec.id,
-            videoId,
-            durationSeconds: unit.duration || 0,
-            isActionableVideo: true,
-            isYouTube,
-            uploadDateStr: dateKey,
-            associatedTests: associatedTests.length > 0 ? associatedTests : undefined,
-          });
-        }
-      } else {
-        // Pure test section with no video lectures (e.g. TCS Ninja Tests or TCS Digital Tests)
-        sec.units.forEach((testUnit) => {
-          const testCfg = getUnitMetaConfig(testUnit);
-          const tObjType = (testUnit.objectType || testUnit.type || '').toLowerCase();
-          if (!testCfg.isActionableExam && tObjType !== 'assessmentv2' && tObjType !== 'assessment' && tObjType !== 'quiz') {
-            return;
-          }
-
-          let dateKey = 'unscheduled';
-          if (testUnit.modifiedF && typeof testUnit.modifiedF === 'string') {
-            const part = testUnit.modifiedF.split(' ')[0]?.trim();
-            if (/^\d{4}-\d{2}-\d{2}$/.test(part)) dateKey = part;
-          } else if (typeof testUnit.created === 'number' && testUnit.created > 0) {
-            try {
-              dateKey = new Date(testUnit.created * 1000).toISOString().split('T')[0];
-            } catch (e) {}
-          }
-
-          const match = availableTests.find(
-            (t) =>
-              (testUnit.id && (t.objectId === testUnit.id || t.assessmentId === testUnit.id)) ||
-              (testUnit.data?.assessmentId &&
-                (t.assessmentId === testUnit.data.assessmentId || t.objectId === testUnit.data.assessmentId))
-          );
-
-          const quizId = match?.quizId || testUnit.data?.assessmentId || testUnit.id;
-          const titleLower = (testUnit.title || testUnit.unitTitle || '').toLowerCase();
-          let diff: 'Easy' | 'Medium' | 'Hard' | 'Practice' = match?.difficulty || 'Practice';
-          if (titleLower.includes('easy')) diff = 'Easy';
-          else if (titleLower.includes('medium')) diff = 'Medium';
-          else if (titleLower.includes('hard') || titleLower.includes('advanced')) diff = 'Hard';
-
-          allUnitsList.push({
-            unit: testUnit,
-            sectionTitle: sec.title,
-            sectionId: sec.id,
-            videoId: '',
-            durationSeconds: match?.timeLimitSeconds || 1200,
-            isActionableVideo: false,
-            isActionableExam: true,
-            isYouTube: false,
-            uploadDateStr: dateKey,
-            associatedTests: [
-              {
-                id: testUnit.id,
-                unit: testUnit,
-                quizId,
-                title: testUnit.title || testUnit.unitTitle || match?.title || 'Practice Test',
-                difficulty: diff,
-                questionsCount: match?.totalQuestions || testUnit.questionsCount || 20,
-                timeLimitMinutes: match?.timeLimitSeconds ? Math.round(match.timeLimitSeconds / 60) : 20,
-                totalScore: match?.totalScore || match?.totalQuestions || 20,
-              },
-            ],
-          });
-        });
-      }
+    return computeCourseCalendarDays({
+      course,
+      scheduleMode,
+      availableTests,
+      completedVideos,
+      quizHistory,
     });
-
-    const result: CalendarDayGroup[] = [];
-
-    // ─────────────────────────────────────────────────────────────
-    // MODE A: PACED DAILY TARGETS (~1.5h - 2h per day across 4-6 months)
-    // ─────────────────────────────────────────────────────────────
-    if (scheduleMode === 'paced') {
-      interface PacedBlock {
-        title: string;
-        items: CalendarUnitItem[];
-        uploadDate: string;
-      }
-
-      // Balanced pacing thresholds
-      const TARGET_MIN_MERGE = 3000; // 50 mins: accumulate micro-sections under this duration
-      const TARGET_SPLIT_THRESHOLD = 7500; // 2h 05m: split chapters exceeding this duration
-      const TARGET_IDEAL = 4800; // 1h 20m: target daily study length
-      const TARGET_MAX_DAY = 7500; // 2h 05m: maximum daily block duration
-
-      // Equal-weight split function that divides chapters into 50/50 (or 33/33/33) balanced blocks
-      const splitIntoBalancedParts = (
-        title: string,
-        items: CalendarUnitItem[],
-        uploadDate: string
-      ): PacedBlock[] => {
-        const totalSec = items.reduce((acc, it) => acc + it.durationSeconds, 0);
-        if (totalSec < TARGET_SPLIT_THRESHOLD || items.length <= 1) {
-          return [{ title, items, uploadDate }];
-        }
-
-        const numParts = Math.max(2, Math.round(totalSec / TARGET_IDEAL));
-        const targetPerPart = totalSec / numParts;
-
-        const parts: PacedBlock[] = [];
-        let currentChunk: CalendarUnitItem[] = [];
-        let currentSec = 0;
-        let partIndex = 1;
-
-        items.forEach((it) => {
-          const diffWithout = Math.abs(currentSec - targetPerPart);
-          const diffWith = Math.abs(currentSec + it.durationSeconds - targetPerPart);
-
-          if (
-            currentChunk.length > 0 &&
-            partIndex < numParts &&
-            currentSec >= 2400 && // Ensure at least 40 min in this part
-            (currentSec >= targetPerPart || diffWithout < diffWith)
-          ) {
-            parts.push({
-              title: `${title} (Part ${partIndex})`,
-              items: currentChunk,
-              uploadDate,
-            });
-            currentChunk = [];
-            currentSec = 0;
-            partIndex++;
-          }
-
-          currentChunk.push(it);
-          currentSec += it.durationSeconds;
-        });
-
-        if (currentChunk.length > 0) {
-          parts.push({
-            title: parts.length > 0 ? `${title} (Part ${partIndex})` : title,
-            items: currentChunk,
-            uploadDate,
-          });
-        }
-
-        return parts;
-      };
-
-      const topicBlocks: PacedBlock[] = [];
-
-      course.sections.forEach((sec) => {
-        const secUnits = allUnitsList.filter((it) => it.sectionId === sec.id);
-        if (secUnits.length === 0) return;
-
-        // Check if section has separate dates per lecture (e.g. Practice Sessions / Live Sessions)
-        const distinctDates = Array.from(new Set(secUnits.map((it) => it.uploadDateStr)));
-
-        if (distinctDates.length > 1) {
-          // Group by individual date inside this section (keeps live sessions on distinct dates)
-          const byDateMap = new Map<string, CalendarUnitItem[]>();
-          secUnits.forEach((it) => {
-            if (!byDateMap.has(it.uploadDateStr)) {
-              byDateMap.set(it.uploadDateStr, []);
-            }
-            byDateMap.get(it.uploadDateStr)!.push(it);
-          });
-
-          byDateMap.forEach((uList, dt) => {
-            const dtTotal = uList.reduce((acc, it) => acc + it.durationSeconds, 0);
-            if (dtTotal > 10800 && uList.length > 1) {
-              topicBlocks.push(...splitIntoBalancedParts(sec.title, uList, dt));
-            } else {
-              topicBlocks.push({
-                title: sec.title,
-                items: uList,
-                uploadDate: dt,
-              });
-            }
-          });
-        } else {
-          // Single upload date section (e.g. theory chapters): balanced equal-weight split
-          topicBlocks.push(...splitIntoBalancedParts(sec.title, secUnits, secUnits[0].uploadDateStr));
-        }
-      });
-
-      // Sort topic blocks chronologically by upload date
-      const sortedBlocks = topicBlocks.sort((a, b) => {
-        if (a.uploadDate === 'unscheduled') return 1;
-        if (b.uploadDate === 'unscheduled') return -1;
-        return a.uploadDate.localeCompare(b.uploadDate);
-      });
-
-      // Helper to cleanly format combined titles (e.g. "Course Introduction, Prerequisites & Flowcharts")
-      const formatCombinedTitle = (titles: string[]): string => {
-        const cleaned = titles
-          .map((t) =>
-            t
-              .replace(/ - Installation Resources/gi, '')
-              .replace(/ \(Recordings\)/gi, '')
-              .trim()
-          )
-          .filter(Boolean);
-
-        const unique = Array.from(new Set(cleaned));
-        if (unique.length === 0) return 'Daily Learning Target';
-        if (unique.length === 1) return unique[0];
-        if (unique.length === 2) return `${unique[0]} & ${unique[1]}`;
-        return `${unique.slice(0, -1).join(', ')} & ${unique[unique.length - 1]}`;
-      };
-
-      // PASS 1: FORWARD ACCUMULATION (accumulate until each daily target is >= TARGET_MIN_MERGE)
-      const forwardAccumulatedBlocks: {
-        titleParts: string[];
-        items: CalendarUnitItem[];
-        uploadDate: string;
-      }[] = [];
-
-      let i = 0;
-      while (i < sortedBlocks.length) {
-        let cur = {
-          titleParts: [sortedBlocks[i].title],
-          items: [...sortedBlocks[i].items],
-          uploadDate: sortedBlocks[i].uploadDate,
-        };
-        let curDur = cur.items.reduce((acc, it) => acc + it.durationSeconds, 0);
-        i++;
-
-        // Keep absorbing subsequent adjacent topics from the same release sprint while duration is under 50 mins
-        while (curDur < TARGET_MIN_MERGE && i < sortedBlocks.length) {
-          const nxt = sortedBlocks[i];
-          if (nxt.uploadDate !== cur.uploadDate && cur.uploadDate !== 'unscheduled') break;
-          const nxtDur = nxt.items.reduce((acc, it) => acc + it.durationSeconds, 0);
-          if (curDur + nxtDur > TARGET_MAX_DAY) break;
-
-          cur.titleParts.push(nxt.title);
-          cur.items.push(...nxt.items);
-          curDur += nxtDur;
-          i++;
-        }
-
-        forwardAccumulatedBlocks.push(cur);
-      }
-
-      // PASS 2: BACKWARD MERGE for any trailing topic that is still < TARGET_MIN_MERGE
-      // (e.g. Patterns Part 1 at the end of the sprint batch merges into Loops to form a complete 1h 58m day)
-      const mergedBlocks: PacedBlock[] = [];
-      for (let j = 0; j < forwardAccumulatedBlocks.length; j++) {
-        const blk = forwardAccumulatedBlocks[j];
-        const blkDur = blk.items.reduce((acc, it) => acc + it.durationSeconds, 0);
-
-        if (blkDur < TARGET_MIN_MERGE && mergedBlocks.length > 0) {
-          const prev = mergedBlocks[mergedBlocks.length - 1];
-          const prevDur = prev.items.reduce((acc, it) => acc + it.durationSeconds, 0);
-
-          if (
-            (prev.uploadDate === blk.uploadDate || blk.uploadDate === 'unscheduled') &&
-            prevDur + blkDur <= TARGET_MAX_DAY
-          ) {
-            prev.title = formatCombinedTitle([prev.title, ...blk.titleParts]);
-            prev.items.push(...blk.items);
-            continue;
-          }
-        }
-
-        mergedBlocks.push({
-          title: formatCombinedTitle(blk.titleParts),
-          items: blk.items,
-          uploadDate: blk.uploadDate,
-        });
-      }
-
-      // Distribute across actual consecutive calendar days spanning the 4-6 months!
-      let currentCalDate = '2026-02-07';
-      const firstValidDate = mergedBlocks.find((b) => b.uploadDate !== 'unscheduled')?.uploadDate;
-      if (firstValidDate) {
-        currentCalDate = firstValidDate;
-      }
-
-      let dayNum = 1;
-      mergedBlocks.forEach((block) => {
-        // If this topic was uploaded on a later date, advance our calendar date to at least that date
-        if (block.uploadDate !== 'unscheduled' && block.uploadDate > currentCalDate) {
-          currentCalDate = block.uploadDate;
-        }
-
-        const scheduledDateStr = currentCalDate;
-        const { formatted, dayOfWeek } = formatDateDisplay(scheduledDateStr);
-        const { formatted: origFormatted } = formatDateDisplay(block.uploadDate);
-
-        const totalSec = block.items.reduce((acc, it) => acc + it.durationSeconds, 0);
-        const completedCount = block.items.filter((it) => {
-          if (it.isActionableExam) {
-            const qId = it.associatedTests?.[0]?.quizId || it.unit.id;
-            return quizHistory.some((a) => isQuizMatch(a.quizId, qId));
-          }
-          return it.videoId && completedVideos.includes(it.videoId);
-        }).length;
-
-        const isCompleted = block.items.length > 0 && completedCount === block.items.length;
-        const progressPercent =
-          block.items.length > 0 ? Math.round((completedCount / block.items.length) * 100) : 0;
-
-        const totalTests = block.items.reduce((acc, it) => acc + (it.associatedTests?.length || 0), 0);
-
-        result.push({
-          dayNumber: dayNum++,
-          dateKey: scheduledDateStr,
-          formattedDate: formatted,
-          dayOfWeek,
-          targetTitle: block.title,
-          originalUploadDate: origFormatted,
-          items: block.items,
-          totalSeconds: totalSec,
-          totalLectures: block.items.length,
-          totalTests,
-          completedCount,
-          isCompleted,
-          isNextTarget: false,
-          progressPercent,
-        });
-
-        // Step forward 1 calendar day for the next topic
-        currentCalDate = addDaysToDateStr(currentCalDate, 1);
-      });
-    }
-
-    // ─────────────────────────────────────────────────────────────
-    // MODE B: RAW LMS UPLOAD BATCHES (42 Raw Drops)
-    // ─────────────────────────────────────────────────────────────
-    else {
-      const dateMap = new Map<string, CalendarUnitItem[]>();
-
-      allUnitsList.forEach((it) => {
-        if (!dateMap.has(it.uploadDateStr)) {
-          dateMap.set(it.uploadDateStr, []);
-        }
-        dateMap.get(it.uploadDateStr)!.push(it);
-      });
-
-      const validDates = Array.from(dateMap.keys())
-        .filter((k) => k !== 'unscheduled')
-        .sort((a, b) => a.localeCompare(b));
-
-      let dayNum = 1;
-
-      validDates.forEach((dateKey) => {
-        const items = dateMap.get(dateKey) || [];
-        const { formatted, dayOfWeek } = formatDateDisplay(dateKey);
-        const totalSec = items.reduce((acc, it) => acc + it.durationSeconds, 0);
-
-        const completedCount = items.filter((it) => {
-          if (it.isActionableExam) {
-            const qId = it.associatedTests?.[0]?.quizId || it.unit.id;
-            return quizHistory.some((a) => isQuizMatch(a.quizId, qId));
-          }
-          return it.videoId && completedVideos.includes(it.videoId);
-        }).length;
-
-        const isCompleted = items.length > 0 && completedCount === items.length;
-        const progressPercent =
-          items.length > 0 ? Math.round((completedCount / items.length) * 100) : 0;
-
-        const distinctSections = Array.from(new Set(items.map((it) => it.sectionTitle)));
-        const targetTitle =
-          distinctSections.length === 1
-            ? distinctSections[0]
-            : `${distinctSections.length} Topics Upload Batch`;
-
-        const totalTests = items.reduce((acc, it) => acc + (it.associatedTests?.length || 0), 0);
-
-        result.push({
-          dayNumber: dayNum++,
-          dateKey,
-          formattedDate: formatted,
-          dayOfWeek,
-          targetTitle,
-          originalUploadDate: formatted,
-          items,
-          totalSeconds: totalSec,
-          totalLectures: items.length,
-          totalTests,
-          completedCount,
-          isCompleted,
-          isNextTarget: false,
-          progressPercent,
-        });
-      });
-
-      if (dateMap.has('unscheduled')) {
-        const items = dateMap.get('unscheduled') || [];
-        if (items.length > 0) {
-          const { formatted, dayOfWeek } = formatDateDisplay('unscheduled');
-          const totalSec = items.reduce((acc, it) => acc + it.durationSeconds, 0);
-          const completedCount = items.filter((it) => {
-            if (it.isActionableExam) {
-              const qId = it.associatedTests?.[0]?.quizId || it.unit.id;
-              return quizHistory.some((a) => isQuizMatch(a.quizId, qId));
-            }
-            return it.videoId && completedVideos.includes(it.videoId);
-          }).length;
-          const isCompleted = items.length > 0 && completedCount === items.length;
-          const progressPercent =
-            items.length > 0 ? Math.round((completedCount / items.length) * 100) : 0;
-
-          const totalTests = items.reduce((acc, it) => acc + (it.associatedTests?.length || 0), 0);
-
-          result.push({
-            dayNumber: dayNum++,
-            dateKey: 'unscheduled',
-            formattedDate: formatted,
-            dayOfWeek,
-            targetTitle: 'Course Resources & Extras',
-            originalUploadDate: formatted,
-            items,
-            totalSeconds: totalSec,
-            totalLectures: items.length,
-            totalTests,
-            completedCount,
-            isCompleted,
-            isNextTarget: false,
-            progressPercent,
-          });
-        }
-      }
-    }
-
-    // Identify first incomplete day as "Next Target"
-    let foundNext = false;
-    for (const day of result) {
-      if (!day.isCompleted && !foundNext) {
-        day.isNextTarget = true;
-        foundNext = true;
-      }
-    }
-
-    return result;
-  }, [course, completedVideos, getUnitMetaConfig, scheduleMode, availableTests, quizHistory]);
+  }, [course, scheduleMode, availableTests, completedVideos, quizHistory]);
 
   // Expand "Next Target" by default on initial mount
   useEffect(() => {
@@ -1261,7 +747,7 @@ export function CourseCalendarView({
 
                     return (
                       <Link
-                        href={`/courses/${course.slug}/video/${firstUnfinished.videoId}`}
+                        href={`/courses/${course.slug}/video/${firstUnfinished.videoId}?mode=calendar`}
                         className="w-full sm:w-auto px-4 py-2 rounded-xl bg-primary-600 hover:bg-primary-500 text-white text-xs font-bold shadow-md shadow-primary-600/30 transition-all flex items-center justify-center gap-1.5 ml-auto"
                       >
                         <Play className="w-3.5 h-3.5 fill-current" />
@@ -1354,7 +840,7 @@ export function CourseCalendarView({
         <div className="inline-flex items-center p-1 rounded-2xl bg-card/85 border border-white/[0.08] shadow-sm backdrop-blur-md text-xs font-semibold self-start shrink-0">
           <button
             type="button"
-            onClick={() => setScheduleMode('paced')}
+            onClick={() => handleSetScheduleMode('paced')}
             className={`px-3.5 py-1.5 rounded-xl transition-all cursor-pointer flex items-center gap-1.5 ${
               scheduleMode === 'paced'
                 ? 'bg-primary-600 text-white shadow-md shadow-primary-600/30'
@@ -1367,7 +853,7 @@ export function CourseCalendarView({
 
           <button
             type="button"
-            onClick={() => setScheduleMode('raw_batches')}
+            onClick={() => handleSetScheduleMode('raw_batches')}
             className={`px-3.5 py-1.5 rounded-xl transition-all cursor-pointer flex items-center gap-1.5 ${
               scheduleMode === 'raw_batches'
                 ? 'bg-primary-600 text-white shadow-md shadow-primary-600/30'
@@ -1868,7 +1354,7 @@ export function CourseCalendarView({
                                 </span>
                                 {item.videoId ? (
                                   <Link
-                                    href={`/courses/${course.slug}/video/${item.videoId}`}
+                                    href={`/courses/${course.slug}/video/${item.videoId}?mode=calendar`}
                                     className={`text-xs sm:text-sm font-medium leading-snug truncate transition-colors hover:text-primary-300 ${
                                       isItemCompleted
                                         ? 'line-through text-muted-foreground'
@@ -2021,7 +1507,7 @@ export function CourseCalendarView({
 
                               {item.isActionableVideo && item.videoId ? (
                                 <Link
-                                  href={`/courses/${course.slug}/video/${item.videoId}`}
+                                  href={`/courses/${course.slug}/video/${item.videoId}?mode=calendar`}
                                   className={`px-3 py-1.5 rounded-xl text-xs font-semibold transition-all flex items-center gap-1.5 ${
                                     isItemCompleted
                                       ? 'bg-card/90 hover:bg-white/[0.08] text-muted-foreground hover:text-foreground border border-white/[0.08]'

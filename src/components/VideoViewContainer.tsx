@@ -1,11 +1,21 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
 import { ArrowLeft, RectangleHorizontal, Tv } from 'lucide-react';
 import { CustomVideoPlayer } from '@/components/CustomVideoPlayer';
 import { CourseDetail } from '@/lib/types';
+import {
+  computeCourseCalendarDays,
+  getCalendarVideoSequence,
+  getCalendarVideoNavigation,
+  getDefaultVideoSequence,
+  getDefaultVideoNavigation,
+  CalendarDayGroup,
+} from '@/lib/courseCalendarHelper';
+import { getQuizHistory } from '@/lib/storage';
+import { useAuth } from '@/lib/authContext';
 
 const VideoPlaylistSidebar = dynamic(
   () => import('@/components/VideoPlaylistSidebar').then((m) => m.VideoPlaylistSidebar),
@@ -35,6 +45,8 @@ interface VideoViewContainerProps {
   nextVideoUrl?: string;
   prevTitle?: string;
   nextTitle?: string;
+  availableTests?: any[];
+  initialMode?: 'default' | 'calendar';
 }
 
 export function VideoViewContainer({
@@ -47,28 +59,81 @@ export function VideoViewContainer({
   nextVideoUrl,
   prevTitle,
   nextTitle,
+  availableTests = [],
+  initialMode,
 }: VideoViewContainerProps) {
+  const { user } = useAuth();
   const [isTheaterMode, setIsTheaterMode] = useState<boolean>(false);
+  const [viewMode, setViewMode] = useState<'default' | 'calendar'>(() => {
+    if (initialMode === 'calendar' || initialMode === 'default') return initialMode;
+    return 'default';
+  });
+  const [scheduleMode, setScheduleMode] = useState<'paced' | 'raw_batches'>('paced');
+  const [completedVideos, setCompletedVideos] = useState<string[]>([]);
+  const [quizHistory, setQuizHistory] = useState<any[]>([]);
 
+  // Load preferences from localStorage & sync completed videos
   useEffect(() => {
     try {
-      const stored = localStorage.getItem('preptea_theater_mode');
-      if (stored === 'true') {
+      const storedTheater = localStorage.getItem('preptea_theater_mode');
+      if (storedTheater === 'true') {
         setIsTheaterMode(true);
       }
+
+      if (initialMode) {
+        setViewMode(initialMode);
+      } else {
+        const storedMode = localStorage.getItem(`preptea_view_mode_${slug}`);
+        if (storedMode === 'calendar' || storedMode === 'default') {
+          setViewMode(storedMode);
+        }
+      }
+
+      const storedSched = localStorage.getItem(`preptea_schedule_mode_${slug}`);
+      if (storedSched === 'paced' || storedSched === 'raw_batches') {
+        setScheduleMode(storedSched);
+      }
+
+      const syncCompleted = () => {
+        try {
+          const rawComp = localStorage.getItem('preptea_completed_videos');
+          if (rawComp) setCompletedVideos(JSON.parse(rawComp));
+          setQuizHistory(getQuizHistory(user?.email));
+        } catch (e) {}
+      };
+
+      syncCompleted();
+      window.addEventListener('storage', syncCompleted);
+      window.addEventListener('focus', syncCompleted);
+      return () => {
+        window.removeEventListener('storage', syncCompleted);
+        window.removeEventListener('focus', syncCompleted);
+      };
     } catch (e) {
       // ignore
     }
-  }, []);
+  }, [slug, initialMode, user?.email]);
+
+  const handleSetViewMode = (mode: 'default' | 'calendar') => {
+    setViewMode(mode);
+    try {
+      localStorage.setItem(`preptea_view_mode_${slug}`, mode);
+    } catch (e) {}
+  };
+
+  const handleSetScheduleMode = (mode: 'paced' | 'raw_batches') => {
+    setScheduleMode(mode);
+    try {
+      localStorage.setItem(`preptea_schedule_mode_${slug}`, mode);
+    } catch (e) {}
+  };
 
   const toggleTheaterMode = () => {
     setIsTheaterMode((prev) => {
       const nextState = !prev;
       try {
         localStorage.setItem('preptea_theater_mode', String(nextState));
-      } catch (e) {
-        // ignore
-      }
+      } catch (e) {}
       return nextState;
     });
   };
@@ -94,7 +159,61 @@ export function VideoViewContainer({
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, []);
 
-  // Find the section that contains the currently playing video
+  // Compute Calendar Days
+  const calendarDays: CalendarDayGroup[] = useMemo(() => {
+    return computeCourseCalendarDays({
+      course,
+      scheduleMode,
+      availableTests,
+      completedVideos,
+      quizHistory,
+    });
+  }, [course, scheduleMode, availableTests, completedVideos, quizHistory]);
+
+  // Compute Calendar sequence & navigation
+  const calendarVideoSequence = useMemo(() => {
+    return getCalendarVideoSequence(calendarDays, slug);
+  }, [calendarDays, slug]);
+
+  const calendarNav = useMemo(() => {
+    return getCalendarVideoNavigation(calendarVideoSequence, videoId);
+  }, [calendarVideoSequence, videoId]);
+
+  // Compute Default sequence & navigation
+  const defaultVideoSequence = useMemo(() => {
+    return getDefaultVideoSequence(course.sections, slug);
+  }, [course.sections, slug]);
+
+  const defaultNav = useMemo(() => {
+    return getDefaultVideoNavigation(defaultVideoSequence, videoId);
+  }, [defaultVideoSequence, videoId]);
+
+  // Effective navigation links based on active view mode
+  const effectivePrevUrl =
+    viewMode === 'calendar'
+      ? calendarNav.prevVideo?.url || undefined
+      : defaultNav.prevVideo?.url || prevVideoUrl || undefined;
+
+  const effectiveNextUrl =
+    viewMode === 'calendar'
+      ? calendarNav.nextVideo?.url || undefined
+      : defaultNav.nextVideo?.url || nextVideoUrl || undefined;
+
+  const effectivePrevTitle =
+    viewMode === 'calendar'
+      ? calendarNav.prevVideo
+        ? `Day ${calendarNav.prevVideo.dayNumber}: ${calendarNav.prevVideo.unitTitle}`
+        : undefined
+      : defaultNav.prevVideo?.unitTitle || prevTitle || undefined;
+
+  const effectiveNextTitle =
+    viewMode === 'calendar'
+      ? calendarNav.nextVideo
+        ? `Day ${calendarNav.nextVideo.dayNumber}: ${calendarNav.nextVideo.unitTitle}`
+        : undefined
+      : defaultNav.nextVideo?.unitTitle || nextTitle || undefined;
+
+  // Find current section
   const currentSection = course.sections?.find((sec) =>
     sec.units?.some((u) => (u.sourceid || u.id) === videoId)
   );
@@ -104,7 +223,9 @@ export function VideoViewContainer({
   return (
     <main
       role="main"
-      className={`w-full flex flex-col min-h-0 h-[calc(100dvh-3.5rem)] sm:h-[calc(100dvh-4rem)] lg:h-[calc(100vh-4rem)] overflow-hidden ${isTheaterMode ? 'bg-black' : 'bg-transparent'}`}
+      className={`w-full flex flex-col min-h-0 h-[calc(100dvh-3.5rem)] sm:h-[calc(100dvh-4rem)] lg:h-[calc(100vh-4rem)] overflow-hidden ${
+        isTheaterMode ? 'bg-black' : 'bg-transparent'
+      }`}
     >
       {/* Main Layout Container */}
       <div
@@ -128,14 +249,18 @@ export function VideoViewContainer({
               videoId={videoId}
               courseSlug={slug}
               courseTitle={course.title}
-              sectionTitle={currentSectionTitle}
+              sectionTitle={
+                viewMode === 'calendar' && calendarNav.currentVideo
+                  ? `Day ${calendarNav.currentVideo.dayNumber}: ${calendarNav.currentVideo.targetTitle}`
+                  : currentSectionTitle
+              }
               sectionId={currentSectionId}
               title={unitTitle}
               embedHtml={embedHtml}
-              prevVideoUrl={prevVideoUrl || undefined}
-              nextVideoUrl={nextVideoUrl || undefined}
-              prevTitle={prevTitle || undefined}
-              nextTitle={nextTitle || undefined}
+              prevVideoUrl={effectivePrevUrl}
+              nextVideoUrl={effectiveNextUrl}
+              prevTitle={effectivePrevTitle}
+              nextTitle={effectiveNextTitle}
               isTheaterMode={isTheaterMode}
               onToggleTheaterMode={toggleTheaterMode}
             />
@@ -156,6 +281,12 @@ export function VideoViewContainer({
             courseSlug={slug}
             currentVideoId={videoId}
             sections={course.sections}
+            calendarDays={calendarDays}
+            viewMode={viewMode}
+            onToggleViewMode={handleSetViewMode}
+            scheduleMode={scheduleMode}
+            onToggleScheduleMode={handleSetScheduleMode}
+            availableTests={availableTests}
           />
         </aside>
       </div>

@@ -19,12 +19,19 @@ import {
   Play,
   Settings,
   Sliders,
+  CalendarDays,
+  FileCheck2,
+  RotateCcw,
+  Check,
+  ArrowRight,
 } from "lucide-react";
 import { useDownloads } from "@/lib/downloadContext";
 import { useAuth } from "@/lib/authContext";
 import { checkUserCourseAccess } from "@/lib/batchAccess";
 import { DownloadLessonModal, SingleLessonDownloadTarget } from "@/components/DownloadLessonModal";
 import { getRememberedQuality, saveRememberedQuality } from "@/lib/qualityMatcher";
+import { CalendarDayGroup, CalendarUnitItem, formatDurationHms } from "@/lib/courseCalendarHelper";
+import { getQuizHistory, isQuizMatch } from "@/lib/storage";
 
 interface Unit {
   id: string;
@@ -51,6 +58,12 @@ interface VideoPlaylistSidebarProps {
   courseSlug: string;
   currentVideoId: string;
   sections: Section[];
+  calendarDays?: CalendarDayGroup[];
+  viewMode?: 'default' | 'calendar';
+  onToggleViewMode?: (mode: 'default' | 'calendar') => void;
+  scheduleMode?: 'paced' | 'raw_batches';
+  onToggleScheduleMode?: (mode: 'paced' | 'raw_batches') => void;
+  availableTests?: any[];
 }
 
 function formatUnitDuration(seconds?: number): string | null {
@@ -77,6 +90,12 @@ export function VideoPlaylistSidebar({
   courseSlug,
   currentVideoId,
   sections,
+  calendarDays,
+  viewMode = 'default',
+  onToggleViewMode,
+  scheduleMode = 'paced',
+  onToggleScheduleMode,
+  availableTests = [],
 }: VideoPlaylistSidebarProps) {
   const { user } = useAuth();
   const hasCourseAccess = checkUserCourseAccess(user);
@@ -106,6 +125,8 @@ export function VideoPlaylistSidebar({
   const [expandedSections, setExpandedSections] = useState<
     Record<number, boolean>
   >({});
+  const [expandedDays, setExpandedDays] = useState<Record<number, boolean>>({});
+  const [quizHistory, setQuizHistory] = useState<any[]>([]);
   const [completedVideos, setCompletedVideos] = useState<string[]>([]);
   const [playbackMap, setPlaybackMap] = useState<Record<string, { time: number; duration: number }>>({});
   const [bundleQualityModal, setBundleQualityModal] = useState<{
@@ -118,6 +139,33 @@ export function VideoPlaylistSidebar({
   } | null>(null);
   const [selectedQuality, setSelectedQuality] = useState<'1080p' | '720p' | '540p' | '360p' | string>('720p');
   const [rememberPreference, setRememberPreference] = useState<boolean>(false);
+
+  useEffect(() => {
+    try {
+      setQuizHistory(getQuizHistory(user?.email));
+    } catch (e) {}
+  }, [user?.email]);
+
+  // Expand calendar day containing the currently playing video by default
+  useEffect(() => {
+    if (calendarDays && calendarDays.length > 0) {
+      const activeDay = calendarDays.find((day) =>
+        day.items.some((item) => item.videoId === currentVideoId)
+      );
+      if (activeDay) {
+        setExpandedDays((prev) => ({ ...prev, [activeDay.dayNumber]: true }));
+      } else {
+        setExpandedDays((prev) => ({ ...prev, 1: true }));
+      }
+    }
+  }, [currentVideoId, calendarDays]);
+
+  const toggleDay = (dayNum: number) => {
+    setExpandedDays((prev) => ({
+      ...prev,
+      [dayNum]: !prev[dayNum],
+    }));
+  };
 
   useEffect(() => {
     setSelectedQuality(getRememberedQuality('720p'));
@@ -434,7 +482,7 @@ export function VideoPlaylistSidebar({
       }
     }, 300);
     return () => clearTimeout(timer);
-  }, [currentVideoId, expandedSections]);
+  }, [currentVideoId, expandedSections, expandedDays, viewMode]);
 
   const toggleSection = (idx: number) => {
     setExpandedSections((prev) => ({
@@ -472,141 +520,448 @@ export function VideoPlaylistSidebar({
   const activeSectionTitle =
     activeSection?.title || activeSection?.sectionTitle;
 
+  // Calendar stats & active calendar day
+  const activeCalendarDay = React.useMemo(() => {
+    if (!calendarDays || calendarDays.length === 0) return null;
+    return (
+      calendarDays.find((day) =>
+        day.items.some((item) => item.videoId === currentVideoId)
+      ) || null
+    );
+  }, [calendarDays, currentVideoId]);
+
+  const totalCalendarLectures = React.useMemo(() => {
+    if (!calendarDays) return 0;
+    return calendarDays.reduce((acc, d) => acc + d.totalLectures, 0);
+  }, [calendarDays]);
+
+  const calendarCompletedCount = React.useMemo(() => {
+    if (!calendarDays) return 0;
+    return calendarDays.reduce((acc, d) => acc + d.completedCount, 0);
+  }, [calendarDays]);
+
+  const calendarProgressPercent =
+    totalCalendarLectures > 0
+      ? Math.round((calendarCompletedCount / totalCalendarLectures) * 100)
+      : 0;
+
+  const renderUnitDownloadControl = (
+    uId: string,
+    title: string,
+    sectionTitle: string,
+    duration?: number,
+    isYouTube?: boolean
+  ) => {
+    if (!hasCourseAccess || isYouTube || !uId) return null;
+    if (isDownloaded(uId)) {
+      return (
+        <button
+          type="button"
+          onClick={async (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            await deleteDownload(uId);
+          }}
+          className="px-1.5 py-0.5 rounded bg-rose-500/15 hover:bg-rose-500/25 text-rose-400 text-[9px] font-bold shrink-0 flex items-center gap-1 border border-rose-500/30 transition-colors cursor-pointer"
+          title="Delete downloaded video from this device"
+        >
+          <Trash2 className="w-2.5 h-2.5 text-rose-400" />
+        </button>
+      );
+    }
+    if (isQueued(uId)) {
+      return (
+        <button
+          type="button"
+          onClick={(e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            pauseDownload(uId);
+          }}
+          title="Queued for download. Click to pause."
+          className="px-1.5 py-0.5 rounded bg-slate-500/20 hover:bg-slate-500/30 text-slate-400 text-[9px] font-bold shrink-0 flex items-center gap-1 border border-slate-500/30 cursor-pointer"
+        >
+          <Clock className="w-2.5 h-2.5" />
+          <span>Queued</span>
+        </button>
+      );
+    }
+    if (isPaused(uId)) {
+      return (
+        <button
+          type="button"
+          onClick={(e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            resumeDownload(uId);
+          }}
+          title="Download paused. Click to resume."
+          className="px-1.5 py-0.5 rounded bg-amber-500/15 hover:bg-amber-500/25 text-amber-400 text-[9px] font-bold shrink-0 flex items-center gap-1 border border-amber-500/30 cursor-pointer transition-colors"
+        >
+          <Play className="w-2.5 h-2.5 fill-amber-400 text-amber-400" />
+          <span>Resume {getDownloadProgress(uId) || 0}%</span>
+        </button>
+      );
+    }
+    if (isDownloading(uId)) {
+      return (
+        <button
+          type="button"
+          onClick={(e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            pauseDownload(uId);
+          }}
+          title="Downloading lesson. Click to pause."
+          className="px-1.5 py-0.5 rounded bg-primary-500/15 hover:bg-amber-500/20 text-primary-400 hover:text-amber-300 text-[9px] font-bold shrink-0 flex items-center gap-1 border border-primary-500/30 hover:border-amber-500/40 cursor-pointer group transition-all"
+        >
+          <Loader2 className="w-2.5 h-2.5 animate-spin group-hover:hidden" />
+          <Pause className="w-2.5 h-2.5 hidden group-hover:inline text-amber-400" />
+          <span className="group-hover:hidden">{downloadingMap[uId]?.quality ? `${downloadingMap[uId].quality} • ` : ''}{getDownloadProgress(uId)}%</span>
+          <span className="hidden group-hover:inline">Pause</span>
+        </button>
+      );
+    }
+    return (
+      <button
+        type="button"
+        onClick={(e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          handleInitiateSingleDownload(uId, title, sectionTitle, duration);
+        }}
+        className="p-1 rounded-md hover:bg-slate-700/60 text-slate-500 hover:text-primary-400 transition-colors cursor-pointer"
+        title="Download lesson offline"
+      >
+        <ArrowDownToLine className="w-3.5 h-3.5" />
+      </button>
+    );
+  };
+
   return (
     <div className="w-full h-full flex flex-col overflow-hidden">
       {/* ── Desktop Playlist Header ── */}
-      <div className="hidden lg:flex items-center justify-between p-3.5 sm:p-4 bg-card/90 border-b border-card-border/80 shrink-0">
-        <div className="flex items-center gap-2.5 min-w-0 flex-1 mr-2">
-          <div className="w-8 h-8 rounded-xl bg-primary-500/10 border border-primary-500/20 text-primary-600 dark:text-primary-400 flex items-center justify-center shrink-0">
-            <ListVideo className="w-4.5 h-4.5 text-primary-600 dark:text-primary-400" />
-          </div>
-          <div className="min-w-0">
-            <Link
-              href={`/courses/${courseSlug}`}
-              className="inline-flex items-center gap-2 text-xs font-semibold text-muted-foreground hover:text-foreground transition-colors bg-card/80"
-            >
-              <h4
-                className="text-xs font-bold text-foreground truncate"
-                title={courseTitle}
+      <div className="hidden lg:flex flex-col gap-2.5 p-3.5 sm:p-4 bg-card/90 border-b border-card-border/80 shrink-0">
+        <div className="flex items-center justify-between gap-2">
+          <div className="flex items-center gap-2.5 min-w-0 flex-1 mr-2">
+            <div className="w-8 h-8 rounded-xl bg-primary-500/10 border border-primary-500/20 text-primary-600 dark:text-primary-400 flex items-center justify-center shrink-0">
+              {viewMode === 'calendar' ? (
+                <CalendarDays className="w-4.5 h-4.5 text-primary-600 dark:text-primary-400" />
+              ) : (
+                <ListVideo className="w-4.5 h-4.5 text-primary-600 dark:text-primary-400" />
+              )}
+            </div>
+            <div className="min-w-0">
+              <Link
+                href={`/courses/${courseSlug}`}
+                className="inline-flex items-center gap-2 text-xs font-semibold text-muted-foreground hover:text-foreground transition-colors bg-card/80"
               >
-                {courseTitle}
-              </h4>
-            </Link>
-            {completedCount > 0 ? (
-              <p className="text-[10px] text-emerald-600 dark:text-emerald-400 font-semibold truncate">
-                {completedCount}/{totalVideos} Completed ({progressPercent}%)
-              </p>
-            ) : activeSectionTitle ? (
-              <p
-                className="text-[10px] text-primary-600 dark:text-primary-300 font-medium truncate"
-                title={activeSectionTitle}
-              >
-                {activeSectionTitle} • {totalVideos} Videos
-              </p>
-            ) : (
-              <p className="text-[10px] text-muted-foreground font-medium">
-                {totalVideos} Video Lessons
-              </p>
-            )}
+                <h4
+                  className="text-xs font-bold text-foreground truncate"
+                  title={courseTitle}
+                >
+                  {courseTitle}
+                </h4>
+              </Link>
+              {viewMode === 'calendar' ? (
+                activeCalendarDay ? (
+                  <p
+                    className="text-[10px] text-primary-600 dark:text-primary-300 font-medium truncate"
+                    title={`Day ${activeCalendarDay.dayNumber}: ${activeCalendarDay.targetTitle}`}
+                  >
+                    Day {activeCalendarDay.dayNumber}: {activeCalendarDay.targetTitle}
+                  </p>
+                ) : (
+                  <p className="text-[10px] text-emerald-600 dark:text-emerald-400 font-semibold truncate">
+                    {calendarCompletedCount}/{totalCalendarLectures} Done ({calendarProgressPercent}%)
+                  </p>
+                )
+              ) : completedCount > 0 ? (
+                <p className="text-[10px] text-emerald-600 dark:text-emerald-400 font-semibold truncate">
+                  {completedCount}/{totalVideos} Completed ({progressPercent}%)
+                </p>
+              ) : activeSectionTitle ? (
+                <p
+                  className="text-[10px] text-primary-600 dark:text-primary-300 font-medium truncate"
+                  title={activeSectionTitle}
+                >
+                  {activeSectionTitle} • {totalVideos} Videos
+                </p>
+              ) : (
+                <p className="text-[10px] text-muted-foreground font-medium">
+                  {totalVideos} Video Lessons
+                </p>
+              )}
+            </div>
           </div>
+
+          {/* Download Entire Course Action */}
+          {hasCourseAccess && totalCourseVideos > 0 && (
+            <div className="shrink-0">
+              {isCourseSaving ? (
+                <div className="px-2.5 py-1.5 rounded-xl bg-primary-500/15 border border-primary-500/30 text-primary-400 text-[11px] font-bold flex items-center gap-1.5 shadow-sm">
+                  <Loader2 className="w-3 h-3 animate-spin" />
+                  <span>Downloading {batchProgress?.quality ? `(${batchProgress.quality})` : ''}...</span>
+                </div>
+              ) : isCourseFullySaved ? (
+                <button
+                  type="button"
+                  onClick={() => deleteCourseDownloads(courseSlug)}
+                  className="px-2.5 py-1.5 rounded-xl bg-emerald-500/10 hover:bg-rose-500/10 border border-emerald-500/30 hover:border-rose-500/30 text-emerald-400 hover:text-rose-400 text-[11px] font-bold flex items-center gap-1.5 transition-all cursor-pointer group/btn"
+                  title="All course lessons downloaded offline. Click to remove."
+                >
+                  <CheckCircle2 className="w-3 h-3 group-hover/btn:hidden" />
+                  <span className="group-hover/btn:hidden">Saved</span>
+                  <span className="hidden group-hover/btn:inline">Remove</span>
+                </button>
+              ) : (
+                <button
+                  type="button"
+                  onClick={handleDownloadEntireCourse}
+                  className="px-2.5 py-1.5 rounded-xl bg-primary-600/15 hover:bg-primary-600/25 border border-primary-500/30 hover:border-primary-500/50 text-primary-400 hover:text-white text-[11px] font-bold flex items-center gap-1.5 transition-all cursor-pointer"
+                  title={`Download entire course (${totalCourseVideos} lessons) for offline watching`}
+                >
+                  <ArrowDownToLine className="w-3 h-3" />
+                  <span>Save Course</span>
+                </button>
+              )}
+            </div>
+          )}
         </div>
 
-        {/* Download Entire Course Action */}
-        {hasCourseAccess && totalCourseVideos > 0 && (
-          <div className="shrink-0">
-            {isCourseSaving ? (
-              <div className="px-2.5 py-1.5 rounded-xl bg-primary-500/15 border border-primary-500/30 text-primary-400 text-[11px] font-bold flex items-center gap-1.5 shadow-sm">
-                <Loader2 className="w-3 h-3 animate-spin" />
-                <span>Downloading {batchProgress?.quality ? `(${batchProgress.quality})` : ''}...</span>
+        {/* View Mode Toggle Bar (Desktop) */}
+        {calendarDays && calendarDays.length > 0 && (
+          <div className="space-y-1.5 pt-1 border-t border-card-border/50">
+            <div className="flex items-center justify-between">
+              <div className="inline-flex items-center bg-slate-900/80 p-0.5 rounded-xl border border-card-border/80">
+                <button
+                  type="button"
+                  onClick={() => onToggleViewMode?.('default')}
+                  className={`px-2.5 py-1 rounded-lg text-xs font-bold transition-all cursor-pointer ${
+                    viewMode === 'default'
+                      ? 'bg-primary-600 text-white shadow-sm'
+                      : 'text-muted-foreground hover:text-foreground hover:bg-slate-800/60'
+                  }`}
+                >
+                  Default Mode
+                </button>
+                <button
+                  type="button"
+                  onClick={() => onToggleViewMode?.('calendar')}
+                  className={`px-2.5 py-1 rounded-lg text-xs font-bold transition-all flex items-center gap-1.5 cursor-pointer ${
+                    viewMode === 'calendar'
+                      ? 'bg-primary-600 text-white shadow-sm'
+                      : 'text-muted-foreground hover:text-foreground hover:bg-slate-800/60'
+                  }`}
+                >
+                  <CalendarDays className="w-3.5 h-3.5" />
+                  <span>Calendar Mode</span>
+                </button>
               </div>
-            ) : isCourseFullySaved ? (
-              <button
-                type="button"
-                onClick={() => deleteCourseDownloads(courseSlug)}
-                className="px-2.5 py-1.5 rounded-xl bg-emerald-500/10 hover:bg-rose-500/10 border border-emerald-500/30 hover:border-rose-500/30 text-emerald-400 hover:text-rose-400 text-[11px] font-bold flex items-center gap-1.5 transition-all cursor-pointer group/btn"
-                title="All course lessons downloaded offline. Click to remove."
-              >
-                <CheckCircle2 className="w-3 h-3 group-hover/btn:hidden" />
-                <span className="group-hover/btn:hidden">Saved</span>
-                <span className="hidden group-hover/btn:inline">Remove</span>
-              </button>
-            ) : (
-              <button
-                type="button"
-                onClick={handleDownloadEntireCourse}
-                className="px-2.5 py-1.5 rounded-xl bg-primary-600/15 hover:bg-primary-600/25 border border-primary-500/30 hover:border-primary-500/50 text-primary-400 hover:text-white text-[11px] font-bold flex items-center gap-1.5 transition-all cursor-pointer"
-                title={`Download entire course (${totalCourseVideos} lessons) for offline watching`}
-              >
-                <ArrowDownToLine className="w-3 h-3" />
-                <span>Save Course</span>
-              </button>
+
+              <div className="text-[10px] font-medium text-muted-foreground">
+                {viewMode === 'calendar' ? (
+                  <span className="px-2 py-0.5 rounded-md bg-white/[0.04] border border-white/[0.06] text-primary-400 font-semibold">
+                    {calendarDays.length} Days
+                  </span>
+                ) : (
+                  <span className="px-2 py-0.5 rounded-md bg-white/[0.04] border border-white/[0.06]">
+                    {sections.length} Sections
+                  </span>
+                )}
+              </div>
+            </div>
+
+            {/* Sub-Mode Selector when in Calendar Mode */}
+            {viewMode === 'calendar' && (
+              <div className="flex items-center justify-between pt-0.5 px-0.5">
+                <div className="inline-flex items-center bg-slate-950/70 p-0.5 rounded-lg border border-white/[0.07]">
+                  <button
+                    type="button"
+                    onClick={() => onToggleScheduleMode?.('paced')}
+                    title="Paced Targets: splits lengthy chapters into balanced daily ~1.5h sessions"
+                    className={`px-2.5 py-1 rounded-md text-[11px] font-medium transition-all cursor-pointer ${
+                      scheduleMode === 'paced'
+                        ? 'bg-primary-600 text-white font-semibold shadow-sm'
+                        : 'text-muted-foreground hover:text-foreground hover:bg-white/[0.04]'
+                    }`}
+                  >
+                    Paced Targets
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => onToggleScheduleMode?.('raw_batches')}
+                    title="Upload Batches: groups lectures strictly by upload date"
+                    className={`px-2.5 py-1 rounded-md text-[11px] font-medium transition-all cursor-pointer ${
+                      scheduleMode === 'raw_batches'
+                        ? 'bg-primary-600 text-white font-semibold shadow-sm'
+                        : 'text-muted-foreground hover:text-foreground hover:bg-white/[0.04]'
+                    }`}
+                  >
+                    Upload Batches
+                  </button>
+                </div>
+                <span className="text-[10px] text-muted-foreground font-mono">
+                  {scheduleMode === 'paced' ? 'Daily Targets' : 'Raw Releases'}
+                </span>
+              </div>
             )}
           </div>
         )}
       </div>
 
       {/* ── Mobile Playlist Header ── */}
-      <div className="lg:hidden flex items-center justify-between px-3 py-2.5 bg-card/90 border-b border-card-border/80 shrink-0">
-        <div className="flex items-center gap-2 min-w-0 flex-1 mr-2">
-          <ListVideo className="w-4 h-4 text-primary-600 dark:text-primary-400 shrink-0" />
-          <div className="min-w-0">
-            <Link
-              href={`/courses/${courseSlug}`}
-              className="inline-flex items-center gap-2 text-xs font-semibold text-muted-foreground hover:text-foreground transition-colors bg-card/80"
-            >
-              <h4
-                className="text-xs font-bold text-foreground truncate"
-                title={courseTitle}
+      <div className="lg:hidden flex flex-col gap-2 px-3 py-2.5 bg-card/90 border-b border-card-border/80 shrink-0">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-2 min-w-0 flex-1 mr-2">
+            {viewMode === 'calendar' ? (
+              <CalendarDays className="w-4 h-4 text-primary-600 dark:text-primary-400 shrink-0" />
+            ) : (
+              <ListVideo className="w-4 h-4 text-primary-600 dark:text-primary-400 shrink-0" />
+            )}
+            <div className="min-w-0">
+              <Link
+                href={`/courses/${courseSlug}`}
+                className="inline-flex items-center gap-2 text-xs font-semibold text-muted-foreground hover:text-foreground transition-colors bg-card/80"
               >
-                {courseTitle}
-              </h4>
-            </Link>
-            {completedCount > 0 ? (
-              <p className="text-[10px] text-emerald-600 dark:text-emerald-400 font-semibold truncate">
-                {completedCount}/{totalVideos} Completed ({progressPercent}%)
-              </p>
-            ) : activeSectionTitle ? (
-              <p
-                className="text-[10px] text-primary-600 dark:text-primary-300 font-medium truncate"
-                title={activeSectionTitle}
-              >
-                {activeSectionTitle}
-              </p>
-            ) : null}
+                <h4
+                  className="text-xs font-bold text-foreground truncate"
+                  title={courseTitle}
+                >
+                  {courseTitle}
+                </h4>
+              </Link>
+              {viewMode === 'calendar' ? (
+                activeCalendarDay ? (
+                  <p
+                    className="text-[10px] text-primary-600 dark:text-primary-300 font-medium truncate"
+                    title={`Day ${activeCalendarDay.dayNumber}: ${activeCalendarDay.targetTitle}`}
+                  >
+                    Day {activeCalendarDay.dayNumber}: {activeCalendarDay.targetTitle}
+                  </p>
+                ) : (
+                  <p className="text-[10px] text-emerald-600 dark:text-emerald-400 font-semibold truncate">
+                    {calendarCompletedCount}/{totalCalendarLectures} Done ({calendarProgressPercent}%)
+                  </p>
+                )
+              ) : completedCount > 0 ? (
+                <p className="text-[10px] text-emerald-600 dark:text-emerald-400 font-semibold truncate">
+                  {completedCount}/{totalVideos} Completed ({progressPercent}%)
+                </p>
+              ) : activeSectionTitle ? (
+                <p
+                  className="text-[10px] text-primary-600 dark:text-primary-300 font-medium truncate"
+                  title={activeSectionTitle}
+                >
+                  {activeSectionTitle}
+                </p>
+              ) : null}
+            </div>
+          </div>
+
+          <div className="flex items-center gap-1.5 shrink-0">
+            {hasCourseAccess && totalCourseVideos > 0 && (
+              isCourseSaving ? (
+                <span className="px-2 py-1 rounded-lg bg-primary-500/10 border border-primary-500/20 text-primary-400 flex items-center gap-1 text-[10px] font-semibold">
+                  <Loader2 className="w-3.5 h-3.5 animate-spin" />
+                  <span>{batchProgress?.quality || 'Saving'}</span>
+                </span>
+              ) : isCourseFullySaved ? (
+                <button
+                  type="button"
+                  onClick={() => deleteCourseDownloads(courseSlug)}
+                  className="p-1.5 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 hover:text-rose-400"
+                  title="Course saved offline. Tap to remove."
+                >
+                  <CheckCircle2 className="w-3.5 h-3.5" />
+                </button>
+              ) : (
+                <button
+                  type="button"
+                  onClick={handleDownloadEntireCourse}
+                  className="p-1.5 rounded-lg hover:bg-slate-700/60 text-muted-foreground hover:text-primary-400 border border-transparent hover:border-slate-700/60 transition-colors"
+                  title="Download entire course offline"
+                >
+                  <ArrowDownToLine className="w-3.5 h-3.5" />
+                </button>
+              )
+            )}
+            <span className="text-[10px] font-mono text-muted-foreground bg-slate-800/80 px-2 py-0.5 rounded-full border border-slate-700/60 shrink-0">
+              {viewMode === 'calendar' ? `${totalCalendarLectures} vids` : `${totalVideos} vids`}
+            </span>
           </div>
         </div>
 
-        <div className="flex items-center gap-1.5 shrink-0">
-          {hasCourseAccess && totalCourseVideos > 0 && (
-            isCourseSaving ? (
-              <span className="px-2 py-1 rounded-lg bg-primary-500/10 border border-primary-500/20 text-primary-400 flex items-center gap-1 text-[10px] font-semibold">
-                <Loader2 className="w-3.5 h-3.5 animate-spin" />
-                <span>{batchProgress?.quality || 'Saving'}</span>
-              </span>
-            ) : isCourseFullySaved ? (
-              <button
-                type="button"
-                onClick={() => deleteCourseDownloads(courseSlug)}
-                className="p-1.5 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 hover:text-rose-400"
-                title="Course saved offline. Tap to remove."
-              >
-                <CheckCircle2 className="w-3.5 h-3.5" />
-              </button>
-            ) : (
-              <button
-                type="button"
-                onClick={handleDownloadEntireCourse}
-                className="p-1.5 rounded-lg hover:bg-slate-700/60 text-muted-foreground hover:text-primary-400 border border-transparent hover:border-slate-700/60 transition-colors"
-                title="Download entire course offline"
-              >
-                <ArrowDownToLine className="w-3.5 h-3.5" />
-              </button>
-            )
-          )}
-          <span className="text-[10px] font-mono text-muted-foreground bg-slate-800/80 px-2 py-0.5 rounded-full border border-slate-700/60 shrink-0">
-            {totalVideos} vids
-          </span>
-        </div>
+        {/* Mobile View Mode Switcher */}
+        {calendarDays && calendarDays.length > 0 && (
+          <div className="space-y-1.5 pt-1 border-t border-card-border/50">
+            <div className="flex items-center justify-between">
+              <div className="inline-flex items-center bg-slate-900/80 p-0.5 rounded-lg border border-card-border/80">
+                <button
+                  type="button"
+                  onClick={() => onToggleViewMode?.('default')}
+                  className={`px-2 py-0.5 rounded-md text-[10px] font-bold transition-all ${
+                    viewMode === 'default'
+                      ? 'bg-primary-600 text-white shadow-sm'
+                      : 'text-muted-foreground hover:text-foreground'
+                  }`}
+                >
+                  Default
+                </button>
+                <button
+                  type="button"
+                  onClick={() => onToggleViewMode?.('calendar')}
+                  className={`px-2 py-0.5 rounded-md text-[10px] font-bold transition-all flex items-center gap-1 ${
+                    viewMode === 'calendar'
+                      ? 'bg-primary-600 text-white shadow-sm'
+                      : 'text-muted-foreground hover:text-foreground'
+                  }`}
+                >
+                  <CalendarDays className="w-3 h-3" />
+                  <span>Calendar</span>
+                </button>
+              </div>
+              {viewMode === 'calendar' && activeCalendarDay && (
+                <span className="text-[10px] text-primary-400 font-semibold truncate max-w-[150px]">
+                  Day {activeCalendarDay.dayNumber} of {calendarDays.length}
+                </span>
+              )}
+            </div>
+
+            {/* Mobile Sub-Mode Selector */}
+            {viewMode === 'calendar' && (
+              <div className="flex items-center justify-between pt-0.5">
+                <div className="inline-flex items-center bg-slate-950/70 p-0.5 rounded-md border border-white/[0.07]">
+                  <button
+                    type="button"
+                    onClick={() => onToggleScheduleMode?.('paced')}
+                    className={`px-2 py-0.5 rounded text-[10px] font-medium transition-all ${
+                      scheduleMode === 'paced'
+                        ? 'bg-primary-600 text-white font-semibold'
+                        : 'text-muted-foreground hover:text-foreground'
+                    }`}
+                  >
+                    Paced
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => onToggleScheduleMode?.('raw_batches')}
+                    className={`px-2 py-0.5 rounded text-[10px] font-medium transition-all ${
+                      scheduleMode === 'raw_batches'
+                        ? 'bg-primary-600 text-white font-semibold'
+                        : 'text-muted-foreground hover:text-foreground'
+                    }`}
+                  >
+                    Batches
+                  </button>
+                </div>
+                <span className="text-[10px] text-muted-foreground">
+                  {calendarDays.length} Days total
+                </span>
+              </div>
+            )}
+          </div>
+        )}
       </div>
 
       {/* ── Active Batch Progress Banner ── */}
@@ -659,7 +1014,254 @@ export function VideoPlaylistSidebar({
         ref={desktopPlaylistRef}
         className="hidden lg:block flex-1 overflow-y-auto custom-scrollbar scroll-smooth p-3"
       >
-        {sections.map((section, sIdx) => {
+        {viewMode === 'calendar' && calendarDays && calendarDays.length > 0 ? (
+          calendarDays.map((day) => {
+            const isExpanded = expandedDays[day.dayNumber] ?? false;
+            const hasActiveVideo = day.items.some(
+              (it) => it.videoId === currentVideoId
+            );
+
+            return (
+              <div key={day.dayNumber} className="space-y-1 mb-3">
+                <div
+                  role="button"
+                  tabIndex={0}
+                  onClick={() => toggleDay(day.dayNumber)}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      toggleDay(day.dayNumber);
+                    }
+                  }}
+                  className={`w-full flex items-center justify-between p-2.5 rounded-xl text-left transition-all group touch-manipulation cursor-pointer select-none ${
+                    hasActiveVideo
+                      ? "bg-primary-950/40 border border-primary-500/40 shadow-sm shadow-primary-500/10 ring-1 ring-primary-500/20"
+                      : "bg-background/60 border border-card-border/60 hover:bg-background"
+                  }`}
+                >
+                  <div className="flex items-center gap-2 min-w-0">
+                    <span
+                      className={`text-[10px] font-black px-1.5 py-0.5 rounded-md border shrink-0 ${
+                        hasActiveVideo
+                          ? "bg-primary-500/20 border-primary-500/40 text-primary-300"
+                          : day.isCompleted
+                            ? "bg-emerald-500/15 border-emerald-500/30 text-emerald-400"
+                            : "bg-slate-800 border-slate-700 text-slate-400"
+                      }`}
+                    >
+                      D{day.dayNumber}
+                    </span>
+                    <div className="min-w-0">
+                      <span
+                        className={`text-xs font-bold truncate transition-colors block ${
+                          hasActiveVideo
+                            ? "text-foreground"
+                            : "text-foreground group-hover:text-foreground"
+                        }`}
+                      >
+                        Day {day.dayNumber}: {day.targetTitle}
+                      </span>
+                      <p className="text-[10px] text-muted-foreground truncate">
+                        {day.formattedDate} • {day.totalLectures} {day.totalLectures === 1 ? 'lecture' : 'lectures'} • {formatDurationHms(day.totalSeconds)}
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-1.5 shrink-0 ml-2">
+                    {day.isCompleted ? (
+                      <span className="inline-flex items-center gap-1 text-[10px] font-bold text-emerald-400 bg-emerald-500/10 border border-emerald-500/30 px-1.5 py-0.5 rounded-md">
+                        <Check className="w-3 h-3 stroke-[2.5]" />
+                        <span>Done</span>
+                      </span>
+                    ) : day.completedCount > 0 ? (
+                      <span className="text-[10px] font-semibold text-emerald-500 dark:text-emerald-400">
+                        {day.completedCount}/{day.totalLectures}
+                      </span>
+                    ) : null}
+                    {isExpanded ? (
+                      <ChevronUp className="w-3.5 h-3.5 text-slate-500" />
+                    ) : (
+                      <ChevronDown className="w-3.5 h-3.5 text-slate-500" />
+                    )}
+                  </div>
+                </div>
+
+                {isExpanded && (
+                  <div className="space-y-1 pl-1">
+                    {day.items.map((item, itIdx) => {
+                      if (!item.isActionableVideo && item.unit.fileUrl) {
+                        return (
+                          <a
+                            key={item.unit.id || itIdx}
+                            href={item.unit.fileUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center justify-between p-2 rounded-xl bg-card/40 border border-card-border/40 hover:bg-card/70 text-xs text-muted-foreground hover:text-foreground transition-all"
+                          >
+                            <span className="truncate">{item.unit.title || item.unit.unitTitle || 'Resource'}</span>
+                            <span className="text-[10px] uppercase font-bold text-slate-500">File</span>
+                          </a>
+                        );
+                      }
+
+                      const uId = item.videoId || item.unit.sourceid || item.unit.id;
+                      const isActive = uId === currentVideoId;
+                      const isCompleted = completedVideos.includes(uId);
+                      const title = item.unit.unitTitle || item.unit.title || "Lesson";
+                      const playback = playbackMap[uId];
+                      const progressPct =
+                        playback && playback.duration > 0 && playback.time > 5
+                          ? Math.min(100, Math.round((playback.time / playback.duration) * 100))
+                          : 0;
+
+                      return (
+                        <div key={item.unit.id || uId || itIdx} className="space-y-1">
+                          <Link
+                            ref={isActive ? desktopActiveRef : null}
+                            href={`/courses/${courseSlug}/video/${uId}?mode=calendar`}
+                            className={`flex items-center justify-between p-2.5 rounded-xl transition-all touch-manipulation group/card ${
+                              isActive
+                                ? "bg-primary-600/25 border border-primary-500/50 text-white font-bold shadow-md shadow-primary-600/10 ring-1 ring-primary-500/30"
+                                : "hover:bg-slate-800/60 border border-transparent text-muted-foreground hover:text-foreground"
+                            }`}
+                          >
+                            <div className="flex items-center gap-2.5 min-w-0 flex-1">
+                              {isActive ? (
+                                <div className="w-2.5 h-2.5 rounded-full bg-primary-400 animate-pulse shrink-0" />
+                              ) : isCompleted ? (
+                                <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0" />
+                              ) : (
+                                <PlayCircle className="w-4 h-4 text-slate-500 shrink-0" />
+                              )}
+                              <div className="flex flex-col min-w-0 flex-1">
+                                <div className="flex items-center gap-1.5 flex-wrap">
+                                  <span className="text-[10px] font-mono text-muted-foreground/80">
+                                    #{itIdx + 1 < 10 ? `0${itIdx + 1}` : itIdx + 1}
+                                  </span>
+                                  <span
+                                    className={`text-xs truncate ${
+                                      isActive ? "text-white" : isCompleted ? "text-foreground line-through opacity-80" : "text-foreground"
+                                    }`}
+                                    title={title}
+                                  >
+                                    {title}
+                                  </span>
+                                </div>
+                                <div className="flex items-center gap-1.5 mt-0.5">
+                                  <span className="text-[9px] text-muted-foreground/70 truncate max-w-[150px]">
+                                    {item.sectionTitle}
+                                  </span>
+                                  {isActive ? (
+                                    <span className="text-[9px] text-primary-400 font-bold uppercase tracking-wider">
+                                      • Now Playing
+                                    </span>
+                                  ) : isCompleted ? (
+                                    <span className="text-[9px] text-emerald-400 font-semibold">
+                                      • Watched
+                                    </span>
+                                  ) : null}
+                                </div>
+                                {progressPct > 0 && !isCompleted && (
+                                  <div className="w-full bg-slate-700/40 rounded-full h-1 mt-1 overflow-hidden" title={`${progressPct}% watched`}>
+                                    <div className="bg-primary-500 h-1 rounded-full transition-all" style={{ width: `${progressPct}%` }} />
+                                  </div>
+                                )}
+                              </div>
+                            </div>
+
+                            <div className="flex items-center gap-1.5 shrink-0 ml-2">
+                              {renderUnitDownloadControl(uId, title, item.sectionTitle, item.durationSeconds, item.isYouTube)}
+                              {formatUnitDuration(item.durationSeconds) && (
+                                <span className="text-[10px] font-mono text-slate-500">
+                                  {formatUnitDuration(item.durationSeconds)}
+                                </span>
+                              )}
+                            </div>
+                          </Link>
+
+                          {/* Associated Practice Tests */}
+                          {item.associatedTests && item.associatedTests.length > 0 && (
+                            <div className="pl-6 pr-1 pb-1 space-y-1">
+                              {item.associatedTests.map((test, tIdx) => {
+                                const testAttempt = quizHistory.find(
+                                  (a) =>
+                                    isQuizMatch(a.quizId, test.quizId) ||
+                                    (a.quizTitle &&
+                                      a.quizTitle.toLowerCase().trim() === test.title.toLowerCase().trim())
+                                );
+                                const isTestAttempted = !!testAttempt;
+                                const scorePct =
+                                  testAttempt && (testAttempt.maxScore || testAttempt.totalQuestions)
+                                    ? Math.round(
+                                        (testAttempt.score /
+                                          (testAttempt.maxScore || testAttempt.totalQuestions)) *
+                                          100
+                                      )
+                                    : 0;
+
+                                return (
+                                  <div
+                                    key={test.id || test.quizId || tIdx}
+                                    className={`p-2 rounded-xl border flex items-center justify-between gap-2 transition-all ${
+                                      isTestAttempted
+                                        ? "bg-emerald-950/20 border-emerald-500/30"
+                                        : "bg-slate-900/60 border-primary-500/25"
+                                    }`}
+                                  >
+                                    <div className="flex items-center gap-2 min-w-0 flex-1">
+                                      <FileCheck2
+                                        className={`w-3.5 h-3.5 shrink-0 ${
+                                          isTestAttempted ? "text-emerald-400" : "text-primary-400"
+                                        }`}
+                                      />
+                                      <div className="min-w-0">
+                                        <p className="text-[11px] font-semibold text-foreground truncate">
+                                          {test.title}
+                                        </p>
+                                        <div className="flex items-center gap-1.5 text-[9px] text-muted-foreground">
+                                          <span>{test.questionsCount || 10} Qs</span>
+                                          {isTestAttempted && (
+                                            <span className="text-emerald-400 font-bold">
+                                              • {scorePct}%
+                                            </span>
+                                          )}
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <Link
+                                      href={`/quiz/${encodeURIComponent(test.quizId)}`}
+                                      className={`px-2 py-1 rounded-lg text-[10px] font-bold flex items-center gap-1 shrink-0 transition-all ${
+                                        isTestAttempted
+                                          ? "bg-emerald-500/15 hover:bg-emerald-500/25 text-emerald-300 border border-emerald-500/30"
+                                          : "bg-primary-600 hover:bg-primary-500 text-white shadow-sm"
+                                      }`}
+                                    >
+                                      {isTestAttempted ? (
+                                        <>
+                                          <RotateCcw className="w-2.5 h-2.5 text-emerald-400" />
+                                          <span>Retake</span>
+                                        </>
+                                      ) : (
+                                        <>
+                                          <span>Test</span>
+                                          <ArrowRight className="w-2.5 h-2.5" />
+                                        </>
+                                      )}
+                                    </Link>
+                                  </div>
+                                );
+                              })}
+                            </div>
+                          )}
+                        </div>
+                      );
+                    })}
+                  </div>
+                )}
+              </div>
+            );
+          })
+        ) : (
+          sections.map((section, sIdx) => {
           const videoUnits = section.units.filter((u) => {
             const t = (u.objectType || u.type || '').toLowerCase();
             return t === 'ivideo' || t === 'youtube' || !!u.sourceid || (u.data && !!u.data.embed);
@@ -905,7 +1507,8 @@ export function VideoPlaylistSidebar({
               )}
             </div>
           );
-        })}
+        })
+      )}
       </div>
 
       {/* Mobile: flat YouTube-style list — scrollable within its container */}
@@ -913,7 +1516,194 @@ export function VideoPlaylistSidebar({
         ref={mobilePlaylistRef}
         className="lg:hidden flex-1 min-h-0 overflow-y-auto custom-scrollbar divide-y divide-slate-800/50"
       >
-        {sections.map((section, sIdx) => {
+        {viewMode === 'calendar' && calendarDays && calendarDays.length > 0 ? (
+          calendarDays.map((day) => {
+            const hasActiveVideo = day.items.some(
+              (it) => it.videoId === currentVideoId
+            );
+
+            return (
+              <div key={day.dayNumber}>
+                {/* Day Header (Mobile) */}
+                <div
+                  className={`flex items-center justify-between px-3 py-2 sticky top-0 z-10 backdrop-blur-md border-y transition-colors ${
+                    hasActiveVideo
+                      ? "bg-primary-950/90 border-primary-500/40 shadow-sm shadow-primary-500/20"
+                      : "bg-background/90 border-card-border/60"
+                  }`}
+                >
+                  <div className="flex items-center gap-2 min-w-0">
+                    <span
+                      className={`text-[9px] font-black px-1.5 py-0.5 rounded border shrink-0 ${
+                        hasActiveVideo
+                          ? "bg-primary-500/20 border-primary-500/40 text-primary-300"
+                          : day.isCompleted
+                            ? "bg-emerald-500/15 border-emerald-500/30 text-emerald-400"
+                            : "bg-slate-800 border-slate-700 text-slate-400"
+                      }`}
+                    >
+                      D{day.dayNumber}
+                    </span>
+                    <span
+                      className={`text-[11px] font-bold uppercase tracking-wider truncate ${
+                        hasActiveVideo
+                          ? "text-primary-200 font-extrabold"
+                          : "text-foreground/80"
+                      }`}
+                    >
+                      Day {day.dayNumber}: {day.targetTitle}
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-1.5 shrink-0 ml-2">
+                    {day.isCompleted ? (
+                      <span className="text-[10px] font-bold text-emerald-400 flex items-center gap-0.5">
+                        <Check className="w-3 h-3 stroke-[2.5]" />
+                        <span>Done</span>
+                      </span>
+                    ) : day.completedCount > 0 ? (
+                      <span className="text-[10px] font-mono text-emerald-400">
+                        {day.completedCount}/{day.totalLectures}
+                      </span>
+                    ) : null}
+                    <span className="text-[10px] font-mono text-muted-foreground bg-card px-1.5 py-0.5 rounded border border-card-border shrink-0">
+                      {day.items.length} vids
+                    </span>
+                  </div>
+                </div>
+
+                {/* Day Video items */}
+                {day.items.map((item, itIdx) => {
+                  const uId = item.videoId || item.unit.sourceid || item.unit.id;
+                  const isActive = uId === currentVideoId;
+                  const isCompleted = completedVideos.includes(uId);
+                  const title = item.unit.unitTitle || item.unit.title || "Lesson";
+                  const playback = playbackMap[uId];
+                  const progressPct =
+                    playback && playback.duration > 0 && playback.time > 5
+                      ? Math.min(100, Math.round((playback.time / playback.duration) * 100))
+                      : 0;
+
+                  return (
+                    <div key={item.unit.id || uId || itIdx} className="space-y-0.5">
+                      <Link
+                        ref={isActive ? mobileActiveRef : null}
+                        href={`/courses/${courseSlug}/video/${uId}?mode=calendar`}
+                        className={`flex items-center gap-3 px-3 py-3 transition-all touch-manipulation ${
+                          isActive
+                            ? "bg-primary-600/15 border-l-2 border-primary-500"
+                            : "border-l-2 border-transparent hover:bg-slate-800/40"
+                        }`}
+                      >
+                        {/* Thumbnail indicator */}
+                        <div
+                          className={`relative w-12 h-8 rounded-lg shrink-0 flex items-center justify-center overflow-hidden ${
+                            isActive
+                              ? "bg-primary-500/20"
+                              : isCompleted
+                                ? "bg-emerald-950/40 border border-emerald-500/30"
+                                : "bg-slate-800"
+                          }`}
+                        >
+                          {isActive ? (
+                            <div className="w-2 h-2 rounded-full bg-primary-400 animate-pulse" />
+                          ) : isCompleted ? (
+                            <CheckCircle2 className="w-4.5 h-4.5 text-emerald-600 dark:text-emerald-400" />
+                          ) : (
+                            <PlayCircle className="w-4 h-4 text-slate-500" />
+                          )}
+                          {progressPct > 0 && !isCompleted && (
+                            <div className="absolute bottom-0 left-0 right-0 h-1 bg-slate-700/60">
+                              <div className="bg-primary-500 h-full" style={{ width: `${progressPct}%` }} />
+                            </div>
+                          )}
+                        </div>
+
+                        {/* Title and details */}
+                        <div className="flex-1 min-w-0">
+                          <p
+                            className={`text-xs leading-snug line-clamp-2 ${
+                              isActive
+                                ? "text-foreground font-semibold"
+                                : "text-foreground/80"
+                            }`}
+                          >
+                            <span className="text-muted-foreground/70 font-mono mr-1">
+                              #{itIdx + 1 < 10 ? `0${itIdx + 1}` : itIdx + 1}
+                            </span>
+                            {title}
+                          </p>
+                          <div className="flex items-center gap-2 mt-0.5">
+                            {isActive ? (
+                              <span className="text-[9px] font-bold text-primary-600 dark:text-primary-400">
+                                Now Playing
+                              </span>
+                            ) : isCompleted ? (
+                              <span className="text-[9px] font-bold text-emerald-600 dark:text-emerald-400">
+                                Completed
+                              </span>
+                            ) : progressPct > 0 ? (
+                              <span className="text-[9px] font-medium text-primary-400">
+                                {progressPct}% watched
+                              </span>
+                            ) : null}
+                            <span className="text-[9px] text-muted-foreground/60 truncate max-w-[120px]">
+                              {item.sectionTitle}
+                            </span>
+                            {renderUnitDownloadControl(uId, title, item.sectionTitle, item.durationSeconds, item.isYouTube)}
+                            {formatUnitDuration(item.durationSeconds) && (
+                              <span className="text-[9px] font-mono text-slate-500 ml-auto">
+                                {formatUnitDuration(item.durationSeconds)}
+                              </span>
+                            )}
+                          </div>
+                        </div>
+                      </Link>
+
+                      {/* Associated tests on mobile */}
+                      {item.associatedTests && item.associatedTests.length > 0 && (
+                        <div className="px-3 pb-2 pt-0.5 space-y-1">
+                          {item.associatedTests.map((test, tIdx) => {
+                            const testAttempt = quizHistory.find(
+                              (a) =>
+                                isQuizMatch(a.quizId, test.quizId) ||
+                                (a.quizTitle &&
+                                  a.quizTitle.toLowerCase().trim() === test.title.toLowerCase().trim())
+                            );
+                            const isTestAttempted = !!testAttempt;
+                            return (
+                              <div
+                                key={test.id || test.quizId || tIdx}
+                                className={`p-2 rounded-xl border flex items-center justify-between gap-2 ${
+                                  isTestAttempted
+                                    ? "bg-emerald-950/20 border-emerald-500/30"
+                                    : "bg-slate-900/60 border-primary-500/25"
+                                }`}
+                              >
+                                <div className="flex items-center gap-1.5 min-w-0 flex-1">
+                                  <FileCheck2 className={`w-3 h-3 shrink-0 ${isTestAttempted ? "text-emerald-400" : "text-primary-400"}`} />
+                                  <span className="text-[11px] font-semibold text-foreground truncate">
+                                    {test.title}
+                                  </span>
+                                </div>
+                                <Link
+                                  href={`/quiz/${encodeURIComponent(test.quizId)}`}
+                                  className="px-2 py-0.5 rounded text-[9px] font-bold bg-primary-600 text-white shrink-0"
+                                >
+                                  {isTestAttempted ? "Retake" : "Test"}
+                                </Link>
+                              </div>
+                            );
+                          })}
+                        </div>
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
+            );
+          })
+        ) : (
+          sections.map((section, sIdx) => {
           const videoUnits = section.units.filter((u) => {
             const t = (u.objectType || u.type || '').toLowerCase();
             return t === 'ivideo' || t === 'youtube' || !!u.sourceid || (u.data && !!u.data.embed);
@@ -1159,7 +1949,8 @@ export function VideoPlaylistSidebar({
               })}
             </div>
           );
-        })}
+        })
+      )}
         {/* bottom spacer */}
         <div className="h-6" />
       </div>

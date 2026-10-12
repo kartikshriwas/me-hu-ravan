@@ -7,6 +7,7 @@ import { hasCoursesAccess, isCourseSlugUnlocked } from '@/lib/coursesAuth';
 import { CustomVideoPlayer } from '@/components/CustomVideoPlayer';
 import { VideoPlaylistSidebar } from '@/components/VideoPlaylistSidebar';
 import { ArrowLeft, Lock, VideoOff } from 'lucide-react';
+import { getAllAssessments } from '@/lib/questionsData';
 import { CourseSectionUnit } from '@/lib/types';
 
 import { VideoViewContainer } from '@/components/VideoViewContainer';
@@ -18,10 +19,20 @@ interface PageProps {
     slug: string;
     videoId: string;
   }>;
+  searchParams?: Promise<{
+    mode?: string;
+  }>;
 }
 
-export default async function VideoPlayerPage({ params }: PageProps) {
+export default async function VideoPlayerPage({ params, searchParams }: PageProps) {
   const { slug, videoId } = await params;
+  const resolvedSearchParams = searchParams ? await searchParams : undefined;
+  const initialMode =
+    resolvedSearchParams?.mode === 'calendar'
+      ? 'calendar'
+      : resolvedSearchParams?.mode === 'default'
+      ? 'default'
+      : undefined;
 
   // 1. Session verification & Course catalog access check
   const session = await auth();
@@ -140,6 +151,7 @@ export default async function VideoPlayerPage({ params }: PageProps) {
       </div>
     );
   }
+  const availableTests = getAllAssessments();
 
   return (
     <VideoViewContainer
@@ -152,6 +164,8 @@ export default async function VideoPlayerPage({ params }: PageProps) {
       nextVideoUrl={nextVideoUrl || undefined}
       prevTitle={prevTitle || undefined}
       nextTitle={nextTitle || undefined}
+      availableTests={availableTests}
+      initialMode={initialMode}
     />
   );
 }
