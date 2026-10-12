@@ -293,59 +293,55 @@ export function computeCourseCalendarDays({
       uploadDate: string;
     }
 
-    // Balanced pacing thresholds
-    const TARGET_MIN_MERGE = 3000; // 50 mins: accumulate micro-sections under this duration
-    const TARGET_SPLIT_THRESHOLD = 7500; // 2h 05m: split chapters exceeding this duration
-    const TARGET_IDEAL = 4800; // 1h 20m: target daily study length
-    const TARGET_MAX_DAY = 7500; // 2h 05m: maximum daily block duration
+    const TARGET_MIN_MERGE = 50 * 60; // 50 mins: merge smaller adjacent modules
+    const TARGET_MAX_DAY = 2 * 60 * 60 + 15 * 60; // 2h 15m: maximum day cap
 
-    // Equal-weight split function that divides chapters into 50/50 (or 33/33/33) balanced blocks
     const splitIntoBalancedParts = (
-      title: string,
-      items: CalendarUnitItem[],
+      baseTitle: string,
+      units: CalendarUnitItem[],
       uploadDate: string
     ): PacedBlock[] => {
-      const totalSec = items.reduce((acc, it) => acc + it.durationSeconds, 0);
-      if (totalSec < TARGET_SPLIT_THRESHOLD || items.length <= 1) {
-        return [{ title, items, uploadDate }];
+      const totalDur = units.reduce((acc, it) => acc + it.durationSeconds, 0);
+      if (totalDur <= 10800 || units.length <= 1) {
+        return [{ title: baseTitle, items: units, uploadDate }];
       }
 
-      const numParts = Math.max(2, Math.round(totalSec / TARGET_IDEAL));
-      const targetPerPart = totalSec / numParts;
-
+      const numParts = Math.min(units.length, Math.ceil(totalDur / 7200));
+      const targetPerPart = totalDur / numParts;
       const parts: PacedBlock[] = [];
-      let currentChunk: CalendarUnitItem[] = [];
-      let currentSec = 0;
-      let partIndex = 1;
 
-      items.forEach((it) => {
-        const diffWithout = Math.abs(currentSec - targetPerPart);
-        const diffWith = Math.abs(currentSec + it.durationSeconds - targetPerPart);
+      let currentUnits: CalendarUnitItem[] = [];
+      let currentDur = 0;
+      let partIdx = 1;
+
+      units.forEach((u, idx) => {
+        const remainingUnits = units.length - idx;
+        const remainingPartsNeeded = numParts - parts.length;
 
         if (
-          currentChunk.length > 0 &&
-          partIndex < numParts &&
-          currentSec >= 2400 && // Ensure at least 40 min in this part
-          (currentSec >= targetPerPart || diffWithout < diffWith)
+          currentUnits.length > 0 &&
+          remainingUnits >= remainingPartsNeeded &&
+          currentDur + u.durationSeconds > targetPerPart * 1.15 &&
+          parts.length < numParts - 1
         ) {
           parts.push({
-            title: `${title} (Part ${partIndex})`,
-            items: currentChunk,
+            title: `${baseTitle} (Part ${partIdx})`,
+            items: currentUnits,
             uploadDate,
           });
-          currentChunk = [];
-          currentSec = 0;
-          partIndex++;
+          partIdx++;
+          currentUnits = [u];
+          currentDur = u.durationSeconds;
+        } else {
+          currentUnits.push(u);
+          currentDur += u.durationSeconds;
         }
-
-        currentChunk.push(it);
-        currentSec += it.durationSeconds;
       });
 
-      if (currentChunk.length > 0) {
+      if (currentUnits.length > 0) {
         parts.push({
-          title: parts.length > 0 ? `${title} (Part ${partIndex})` : title,
-          items: currentChunk,
+          title: parts.length > 0 ? `${baseTitle} (Part ${partIdx})` : baseTitle,
+          items: currentUnits,
           uploadDate,
         });
       }
@@ -354,22 +350,17 @@ export function computeCourseCalendarDays({
     };
 
     const topicBlocks: PacedBlock[] = [];
-
     course.sections.forEach((sec) => {
       const secUnits = allUnitsList.filter((it) => it.sectionId === sec.id);
       if (secUnits.length === 0) return;
 
-      // Check if section has separate dates per lecture (e.g. Practice Sessions / Live Sessions)
-      const distinctDates = Array.from(new Set(secUnits.map((it) => it.uploadDateStr)));
+      const dateSet = new Set(secUnits.map((u) => u.uploadDateStr));
 
-      if (distinctDates.length > 1) {
-        // Group by individual date inside this section (keeps live sessions on distinct dates)
+      if (dateSet.size > 1 && !dateSet.has('unscheduled')) {
         const byDateMap = new Map<string, CalendarUnitItem[]>();
-        secUnits.forEach((it) => {
-          if (!byDateMap.has(it.uploadDateStr)) {
-            byDateMap.set(it.uploadDateStr, []);
-          }
-          byDateMap.get(it.uploadDateStr)!.push(it);
+        secUnits.forEach((u) => {
+          if (!byDateMap.has(u.uploadDateStr)) byDateMap.set(u.uploadDateStr, []);
+          byDateMap.get(u.uploadDateStr)!.push(u);
         });
 
         byDateMap.forEach((uList, dt) => {
@@ -385,7 +376,6 @@ export function computeCourseCalendarDays({
           }
         });
       } else {
-        // Single upload date section (e.g. theory chapters): balanced equal-weight split
         topicBlocks.push(...splitIntoBalancedParts(sec.title, secUnits, secUnits[0].uploadDateStr));
       }
     });
