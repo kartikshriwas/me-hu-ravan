@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { WifiOff, RotateCcw, ArrowDownToLine, SignalZero } from 'lucide-react';
 import { useAuth } from '@/lib/authContext';
 import { checkUserCourseAccess } from '@/lib/batchAccess';
+import { useDownloads } from '@/lib/downloadContext';
 
 interface OfflineStateProps {
   isPremium?: boolean;
@@ -19,10 +20,17 @@ export function OfflineState({
   onRetry,
   className = '',
   title = "You're offline",
-  subtitle = 'Please check your connection or watch your downloaded videos.',
+  subtitle,
 }: OfflineStateProps) {
   const { user } = useAuth();
+  const { downloads } = useDownloads();
   const [retrying, setRetrying] = useState(false);
+
+  const displaySubtitle =
+    subtitle ||
+    (downloads.length > 0
+      ? 'Please check your connection or watch your downloaded videos.'
+      : 'Please check your connection to continue using PrepTea.');
 
   const hasCourseAccess =
     isPremiumProp !== undefined
@@ -64,13 +72,13 @@ export function OfflineState({
           {title}
         </h2>
         <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
-          {subtitle}
+          {displaySubtitle}
         </p>
       </div>
 
       {/* Action Buttons */}
       <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3 w-full max-w-xs mx-auto">
-        {hasCourseAccess ? (
+        {downloads.length > 0 ? (
           <>
             <Link
               href="/downloads"

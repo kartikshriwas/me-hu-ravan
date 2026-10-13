@@ -2,6 +2,13 @@ import { NextResponse } from 'next/server';
 import { auth } from '@/auth';
 import { verifyAdminPermission, SUPERADMIN_EMAIL } from '@/lib/adminAuth';
 import { User } from '@/models/User';
+import { Attempt } from '@/models/Attempt';
+import { UserSession } from '@/models/UserSession';
+import { UserActivityLog } from '@/models/UserActivityLog';
+import { PreApprovedEmail } from '@/models/PreApprovedEmail';
+import { RedeemCode } from '@/models/RedeemCode';
+import { LaunchEvent } from '@/models/LaunchEvent';
+import { Report } from '@/models/Report';
 import { invalidateUserCourseCache } from '@/lib/coursesAuth';
 import { isCourseBatch } from '@/lib/batchAccess';
 
@@ -66,6 +73,68 @@ export async function POST(request: Request) {
       return NextResponse.json({ success: false, error: 'User not found' }, { status: 404 });
     }
 
+    if (action === 'delete_user') {
+      if (cleanTarget === SUPERADMIN_EMAIL || targetUser.role === 'superadmin') {
+        return NextResponse.json({ success: false, error: 'Cannot delete Superadmin account' }, { status: 400 });
+      }
+
+      // Deleting admin requires Superadmin privileges
+      if (targetUser.role === 'admin' && !adminAuth.isSuperadmin) {
+        return NextResponse.json({ success: false, error: 'Only Superadmin can delete Admin accounts' }, { status: 403 });
+      }
+
+      try {
+        // 1. Mark active sessions terminated immediately to kick user out and delete session documents
+        await UserSession.updateMany(
+          { userEmail: cleanTarget },
+          { $set: { terminated: true } }
+        ).catch(e => console.error('Error terminating sessions:', e));
+        await UserSession.deleteMany({ userEmail: cleanTarget }).catch(e => console.error('Error deleting sessions:', e));
+
+        // 2. Delete all test attempts and scores
+        await Attempt.deleteMany({
+          $or: [
+            { userEmail: cleanTarget },
+            { userId: targetUser._id.toString() },
+          ],
+        }).catch(e => console.error('Error deleting attempts:', e));
+
+        // 3. Delete user activity tracking logs
+        await UserActivityLog.deleteMany({ userEmail: cleanTarget }).catch(e => console.error('Error deleting activity logs:', e));
+
+        // 4. Delete preapproved email records
+        await PreApprovedEmail.deleteMany({ email: cleanTarget }).catch(e => console.error('Error deleting preapproved emails:', e));
+
+        // 5. Remove usage history from RedeemCode & LaunchEvent
+        await RedeemCode.updateMany(
+          { 'usedBy.userEmail': cleanTarget },
+          { $pull: { usedBy: { userEmail: cleanTarget } } }
+        ).catch(e => console.error('Error updating RedeemCode:', e));
+        await LaunchEvent.updateMany(
+          { 'claimedUsers.userEmail': cleanTarget },
+          { $pull: { claimedUsers: { userEmail: cleanTarget } } }
+        ).catch(e => console.error('Error updating LaunchEvent:', e));
+
+        // 6. Delete reports submitted by user
+        await Report.deleteMany({ userEmail: cleanTarget }).catch(e => console.error('Error deleting reports:', e));
+
+        // 7. Delete the user document completely
+        await User.findOneAndDelete({ email: cleanTarget });
+
+        // 8. Invalidate courses cache
+        invalidateUserCourseCache(cleanTarget);
+
+        return NextResponse.json({
+          success: true,
+          message: `User ${targetUser.email} and all associated data (tests, scores, sessions, premium) have been permanently deleted!`,
+          deletedEmail: cleanTarget,
+        });
+      } catch (err) {
+        console.error('Error in delete_user process:', err);
+        return NextResponse.json({ success: false, error: 'Failed to completely delete user data' }, { status: 500 });
+      }
+    }
+
     if (action === 'grant_demo') {
       const minutes = parseInt(demoDurationMinutes) || 15;
       const now = new Date();
@@ -79,6 +148,7 @@ export async function POST(request: Request) {
         targetUser.premiumPlan = `${minutes}m_demo`;
         targetUser.allowedBatches = Array.from(new Set([...(targetUser.allowedBatches || []), 'SigmaX']));
         targetUser.hasCourseAccess = true;
+        targetUser.hasHadDemoOrPremium = true;
         targetUser.grantedBy = sessionUser!.email.toLowerCase().trim();
         await targetUser.save();
         invalidateUserCourseCache(cleanTarget);
@@ -102,6 +172,7 @@ export async function POST(request: Request) {
         targetUser.isPremium = false;
         targetUser.premiumExpiresAt = null;
         targetUser.premiumPlan = `pending_demo:${minutes}m`;
+        targetUser.hasHadDemoOrPremium = true;
         targetUser.grantedBy = sessionUser!.email.toLowerCase().trim();
         await targetUser.save();
 

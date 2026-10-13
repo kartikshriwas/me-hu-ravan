@@ -23,7 +23,10 @@ export async function GET(request: Request) {
     }
 
     const courses = getAllCourses();
-    return NextResponse.json({ success: true, data: courses });
+    return NextResponse.json(
+      { success: true, data: courses },
+      { headers: { 'Cache-Control': 'private, max-age=300, stale-while-revalidate=3600' } }
+    );
   } catch (error) {
     return NextResponse.json({ success: false, error: 'Failed to fetch courses' }, { status: 500 });
   }

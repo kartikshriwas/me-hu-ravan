@@ -15,10 +15,12 @@ import {
 import { useAuth } from '@/lib/authContext';
 import {
   checkUserCourseAccess,
-  getCachedBatchAccess,
   verifyAndGetCachedBatchAccess,
   saveCachedBatchAccess,
 } from '@/lib/batchAccess';
+import { findBestMatchingAsset, matchQualityWithFallback, getRememberedQuality } from '@/lib/qualityMatcher';
+
+export type DownloadStatusType = 'queued' | 'downloading' | 'paused' | 'completed' | 'failed';
 
 export interface StartDownloadParams {
   videoId: string;
@@ -27,7 +29,7 @@ export interface StartDownloadParams {
   sectionTitle?: string;
   sectionId?: string;
   unitTitle: string;
-  thumbnailUrl: string;
+  thumbnailUrl?: string;
   durationSeconds: number;
   quality?: string;
   assetUrl?: string;
@@ -35,14 +37,27 @@ export interface StartDownloadParams {
 }
 
 export interface DownloadingStatus {
+  status: DownloadStatusType;
   progress: number;
   quality: string;
   bytesReceived: number;
   totalBytes: number;
+  speedBytesPerSec?: number;
+  etaSeconds?: number;
   unitTitle?: string;
   courseSlug?: string;
   courseTitle?: string;
   sectionTitle?: string;
+  sectionId?: string;
+  thumbnailUrl?: string;
+  durationSeconds?: number;
+  assetUrl?: string;
+  error?: string;
+  qualityFallbackNotice?: {
+    requestedQuality: string;
+    actualQuality: string;
+    availableQualities: string[];
+  };
 }
 
 export interface BatchDownloadProgress {
@@ -70,7 +85,12 @@ interface DownloadContextType {
   // Status queries
   isDownloaded: (videoId: string) => boolean;
   isDownloading: (videoId: string) => boolean;
+  isQueued: (videoId: string) => boolean;
+  isPaused: (videoId: string) => boolean;
+  isFailed: (videoId: string) => boolean;
+  retryDownload: (videoId: string) => Promise<void>;
   getDownloadProgress: (videoId: string) => number | undefined;
+  getDownloadStatus: (videoId: string) => DownloadingStatus | undefined;
   isSectionDownloaded: (courseSlug: string, sectionTitle: string, totalCount?: number) => boolean;
   isSectionDownloading: (courseSlug: string, sectionTitle: string) => boolean;
   getSectionDownloadedCount: (courseSlug: string, sectionTitle: string) => number;
@@ -80,6 +100,11 @@ interface DownloadContextType {
 
   // Actions
   startDownload: (params: StartDownloadParams) => Promise<void>;
+  pauseDownload: (videoId: string) => void;
+  resumeDownload: (videoId: string) => void;
+  cancelDownload: (videoId: string) => void;
+  pauseAllDownloads: () => void;
+  resumeAllDownloads: () => void;
   downloadSection: (params: {
     courseSlug: string;
     courseTitle: string;
@@ -98,7 +123,6 @@ interface DownloadContextType {
       units: { videoId: string; unitTitle: string; duration?: number }[];
     }[];
   }) => Promise<void>;
-  cancelDownload: (videoId: string) => void;
   cancelBatchDownload: () => void;
   deleteDownload: (videoId: string) => Promise<void>;
   deleteSectionDownloads: (courseSlug: string, sectionTitle: string) => Promise<void>;
@@ -126,9 +150,21 @@ export function DownloadProvider({ children }: { children: React.ReactNode }) {
     count: 0,
   });
 
+  // Reference trackers to avoid React stale closure issues in the queue loop
+  const queueRef = useRef<string[]>([]);
+  const activeVideoIdRef = useRef<string | null>(null);
+  const downloadParamsRef = useRef<Map<string, StartDownloadParams>>(new Map());
+  const partialChunksRef = useRef<Map<string, { chunks: Uint8Array[]; bytesReceived: number; totalBytes: number }>>(new Map());
   const abortControllersRef = useRef<Map<string, AbortController>>(new Map());
+  const downloadingMapRef = useRef<Record<string, DownloadingStatus>>({});
   const activeBlobUrlsRef = useRef<Map<string, string>>(new Map());
+  const isWorkerBusyRef = useRef<boolean>(false);
   const batchCancelRef = useRef<boolean>(false);
+
+  // Keep downloadingMapRef in sync
+  useEffect(() => {
+    downloadingMapRef.current = downloadingMap;
+  }, [downloadingMap]);
 
   const { user, loading: authLoading } = useAuth();
 
@@ -157,16 +193,15 @@ export function DownloadProvider({ children }: { children: React.ReactNode }) {
       if (authLoading) return;
 
       const isOnline = typeof navigator !== 'undefined' ? navigator.onLine : true;
-      if (!isOnline) return; // Keep cached access state intact when offline
+      if (!isOnline) return;
 
       const cached = await verifyAndGetCachedBatchAccess();
 
       if (user && user.email) {
         const liveAccess = checkUserCourseAccess(user);
 
-        // Security Check: If user previously had access, but now liveAccess is revoked:
         if (cached && cached.email === user.email.toLowerCase().trim() && cached.hasAccess && !liveAccess) {
-          console.warn('PrepTea Security: Course batch access revoked. Deleting all offline downloaded lessons...');
+          console.warn('PrepTea Security: Course access revoked. Purging local downloads...');
           await clearAllDownloadedVideos();
           setDownloads([]);
           setDownloadedIds(new Set());
@@ -175,7 +210,6 @@ export function DownloadProvider({ children }: { children: React.ReactNode }) {
           return;
         }
 
-        // Keep cache updated with current access
         if (liveAccess) {
           saveCachedBatchAccess(user.email, true, user.allowedBatches || [], '');
         } else {
@@ -185,12 +219,7 @@ export function DownloadProvider({ children }: { children: React.ReactNode }) {
     };
 
     verifyAndSyncAccess();
-
-    // Whenever user comes back online, immediately re-verify permissions
-    const handleOnline = () => {
-      verifyAndSyncAccess();
-    };
-
+    const handleOnline = () => verifyAndSyncAccess();
     window.addEventListener('online', handleOnline);
     return () => window.removeEventListener('online', handleOnline);
   }, [user, authLoading]);
@@ -209,6 +238,528 @@ export function DownloadProvider({ children }: { children: React.ReactNode }) {
     };
   }, []);
 
+  // Helper to fetch video metadata if assetUrl is missing, respecting preferred quality
+  const resolveVideoAsset = useCallback(async (videoId: string, preferredQuality?: string) => {
+    try {
+      const res = await fetch(`/api/video/${videoId}`);
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const json = await res.json();
+      if (!json?.success || !json.video) throw new Error('Video data not found');
+      const { video } = json;
+      const assets = video.assets || [];
+
+      const targetQuality = preferredQuality || getRememberedQuality('720p');
+      // Find the best quality matching the user's preference, prioritizing higher resolution if requested is missing
+      const matchResult = matchQualityWithFallback(assets, targetQuality);
+      const chosen: any = matchResult?.asset;
+
+      if (!chosen?.url) throw new Error('No downloadable MP4 asset found');
+
+      const rawLabel = (chosen.displayName || '').trim();
+      const isOriginal = rawLabel.toLowerCase().includes('original');
+      const qualityLabel = (!isOriginal && rawLabel) ? rawLabel : (chosen.height ? `${chosen.height}p` : (targetQuality || '720p'));
+
+      const fallbackNotice = (!matchResult?.isExact && matchResult && matchResult.requestedQuality !== qualityLabel) ? {
+        requestedQuality: matchResult.requestedQuality,
+        actualQuality: qualityLabel,
+        availableQualities: matchResult.availableQualities,
+      } : undefined;
+
+      return {
+        assetUrl: chosen.url as string,
+        quality: qualityLabel,
+        expectedSizeBytes: chosen.sizeBytes,
+        thumbnailUrl: video.thumbnailUrl || '',
+        durationSeconds: video.durationSeconds || 0,
+        unitTitle: video.name || '',
+        fallbackNotice,
+      };
+    } catch (err: any) {
+      console.error(`Failed to resolve asset for video ${videoId}:`, err);
+      return null;
+    }
+  }, []);
+
+  // =========================================================================
+  // CENTRAL YOUTUBE-STYLE DOWNLOAD QUEUE WORKER
+  // Concurrency: 1 (Sequential background worker with HTTP Range resumption)
+  // =========================================================================
+  const processQueue = useCallback(async () => {
+    if (isWorkerBusyRef.current) return;
+    if (activeVideoIdRef.current !== null) return;
+
+    // Find next pending video in queue whose status is 'queued' or 'downloading'
+    let nextVideoId: string | null = null;
+    for (const vId of queueRef.current) {
+      const current = downloadingMapRef.current[vId];
+      if (!current || current.status === 'queued' || current.status === 'downloading') {
+        nextVideoId = vId;
+        break;
+      }
+    }
+
+    if (!nextVideoId) return;
+
+    const params = downloadParamsRef.current.get(nextVideoId);
+    if (!params) {
+      queueRef.current = queueRef.current.filter((id) => id !== nextVideoId);
+      setTimeout(() => processQueue(), 50);
+      return;
+    }
+
+    isWorkerBusyRef.current = true;
+    activeVideoIdRef.current = nextVideoId;
+
+    const abortController = new AbortController();
+    abortControllersRef.current.set(nextVideoId, abortController);
+
+    // Update status to 'downloading'
+    downloadingMapRef.current = {
+      ...downloadingMapRef.current,
+      [nextVideoId]: {
+        ...(downloadingMapRef.current[nextVideoId] || {}),
+        status: 'downloading',
+        error: undefined,
+      } as DownloadingStatus,
+    };
+
+    setDownloadingMap((prev) => {
+      if (!prev[nextVideoId!]) return prev;
+      return {
+        ...prev,
+        [nextVideoId!]: {
+          ...prev[nextVideoId!],
+          status: 'downloading',
+          error: undefined,
+        },
+      };
+    });
+
+    try {
+      let assetUrl = params.assetUrl;
+      let quality = params.quality || '720p';
+      let expectedSizeBytes = params.expectedSizeBytes;
+      let thumbnailUrl = params.thumbnailUrl;
+      let durationSeconds = params.durationSeconds;
+      let unitTitle = params.unitTitle;
+
+      let qualityFallbackNotice: any = undefined;
+
+      if (!assetUrl) {
+        const resolved = await resolveVideoAsset(nextVideoId, quality);
+        if (!resolved) throw new Error('Video stream unavailable');
+        assetUrl = resolved.assetUrl;
+        quality = resolved.quality;
+        expectedSizeBytes = resolved.expectedSizeBytes;
+        qualityFallbackNotice = resolved.fallbackNotice;
+        if (!thumbnailUrl) thumbnailUrl = resolved.thumbnailUrl;
+        if (!durationSeconds) durationSeconds = resolved.durationSeconds;
+        if (!unitTitle) unitTitle = resolved.unitTitle;
+
+        if (qualityFallbackNotice) {
+          setDownloadingMap((prev) => {
+            if (!prev[nextVideoId!]) return prev;
+            return {
+              ...prev,
+              [nextVideoId!]: {
+                ...prev[nextVideoId!],
+                quality,
+                qualityFallbackNotice,
+              },
+            };
+          });
+        }
+      }
+
+      // Check for partial chunks (YouTube resumable downloads)
+      const partial = partialChunksRef.current.get(nextVideoId);
+      const existingChunks = partial?.chunks ? [...partial.chunks] : [];
+      let bytesReceived = partial ? partial.bytesReceived : 0;
+      let totalBytes = partial ? partial.totalBytes : (expectedSizeBytes || 0);
+
+      // Prepare request headers with Range if resuming
+      const requestHeaders: Record<string, string> = {};
+      if (bytesReceived > 0) {
+        requestHeaders['Range'] = `bytes=${bytesReceived}-`;
+      }
+
+      let response: Response | null = null;
+      try {
+        response = await fetch(assetUrl, {
+          headers: requestHeaders,
+          signal: abortController.signal,
+        });
+      } catch (err: any) {
+        if (abortController.signal.aborted) throw err;
+        console.warn('Direct fetch failed, falling back to proxy stream:', err);
+      }
+
+      if (!response || !response.ok) {
+        const proxyUrl = `/api/video/download-stream?url=${encodeURIComponent(assetUrl)}`;
+        response = await fetch(proxyUrl, {
+          headers: requestHeaders,
+          signal: abortController.signal,
+        });
+      }
+
+      if (!response.ok || !response.body) {
+        throw new Error(`Failed to download stream: HTTP ${response.status}`);
+      }
+
+      // Handle Range acceptance (206 Partial Content)
+      if (response.status === 206) {
+        const contentRange = response.headers.get('content-range');
+        if (contentRange) {
+          const match = contentRange.match(/\/(\d+)/);
+          if (match) totalBytes = parseInt(match[1], 10);
+        }
+      } else if (response.status === 200 && bytesReceived > 0) {
+        // Server did not support Range, restart buffer cleanly
+        existingChunks.length = 0;
+        bytesReceived = 0;
+        const cl = response.headers.get('content-length');
+        if (cl) totalBytes = parseInt(cl, 10);
+      } else {
+        const cl = response.headers.get('content-length');
+        if (cl) totalBytes = parseInt(cl, 10);
+      }
+
+      const reader = response.body.getReader();
+      const chunks: Uint8Array[] = existingChunks;
+      let lastReportTime = Date.now();
+      let lastBytes = bytesReceived;
+
+      while (true) {
+        const { done, value } = await reader.read();
+        if (done) break;
+
+        if (value) {
+          chunks.push(value);
+          bytesReceived += value.length;
+
+          const now = Date.now();
+          if (now - lastReportTime > 150 || bytesReceived === totalBytes) {
+            const timeDelta = (now - lastReportTime) / 1000;
+            const bytesDelta = bytesReceived - lastBytes;
+            const speed = timeDelta > 0 ? Math.round(bytesDelta / timeDelta) : 0;
+            const remainingBytes = Math.max(0, totalBytes - bytesReceived);
+            const eta = speed > 0 ? Math.round(remainingBytes / speed) : undefined;
+
+            lastReportTime = now;
+            lastBytes = bytesReceived;
+
+            const progress = totalBytes > 0 ? Math.min(99, Math.round((bytesReceived / totalBytes) * 100)) : 50;
+
+            // Preserve chunks for pause / disconnect recovery
+            partialChunksRef.current.set(nextVideoId, {
+              chunks,
+              bytesReceived,
+              totalBytes,
+            });
+
+            setDownloadingMap((prev) => {
+              if (!prev[nextVideoId!]) return prev;
+              return {
+                ...prev,
+                [nextVideoId!]: {
+                  ...prev[nextVideoId!],
+                  status: 'downloading',
+                  progress,
+                  bytesReceived,
+                  totalBytes,
+                  speedBytesPerSec: speed,
+                  etaSeconds: eta,
+                },
+              };
+            });
+          }
+        }
+      }
+
+      // Finalize complete video file
+      const blob = new Blob(chunks as BlobPart[], { type: 'video/mp4' });
+
+      // Save into IndexedDB
+      await saveDownloadedVideo({
+        videoId: nextVideoId,
+        courseSlug: params.courseSlug,
+        courseTitle: params.courseTitle || 'Course',
+        sectionTitle: params.sectionTitle || 'General',
+        sectionId: params.sectionId || '',
+        unitTitle: unitTitle || 'Video Lesson',
+        thumbnailUrl: thumbnailUrl || '',
+        durationSeconds: durationSeconds || 0,
+        quality: quality || 'Standard',
+        sizeBytes: blob.size,
+        downloadedAt: Date.now(),
+        blob,
+        mimeType: 'video/mp4',
+      });
+
+      // Cleanup finished item
+      partialChunksRef.current.delete(nextVideoId);
+      downloadParamsRef.current.delete(nextVideoId);
+      queueRef.current = queueRef.current.filter((id) => id !== nextVideoId);
+      abortControllersRef.current.delete(nextVideoId);
+
+      const nextMap = { ...downloadingMapRef.current };
+      delete nextMap[nextVideoId];
+      downloadingMapRef.current = nextMap;
+
+      setDownloadingMap((prev) => {
+        const next = { ...prev };
+        delete next[nextVideoId!];
+        return next;
+      });
+
+      // Synchronously mark as downloaded for instant UI update across site
+      setDownloadedIds((prev) => new Set([...prev, nextVideoId]));
+
+      // Advance batch progress if present
+      setBatchProgress((prev) => {
+        if (!prev) return null;
+        const nextCompleted = prev.completedItems + 1;
+        return {
+          ...prev,
+          completedItems: nextCompleted,
+          isDownloading: nextCompleted < prev.totalItems,
+        };
+      });
+
+      await refreshDownloads();
+    } catch (err: any) {
+      if (abortController.signal.aborted) {
+        console.log(`Download for video ${nextVideoId} paused or cancelled`);
+      } else {
+        console.error(`Download failed for video ${nextVideoId}:`, err);
+        const isOffline = typeof navigator !== 'undefined' && !navigator.onLine;
+
+        if (isOffline) {
+          // YouTube auto-pause on network drop
+          setDownloadingMap((prev) => {
+            if (!prev[nextVideoId!]) return prev;
+            return {
+              ...prev,
+              [nextVideoId!]: {
+                ...prev[nextVideoId!],
+                status: 'paused',
+                error: 'Waiting for connection...',
+              },
+            };
+          });
+        } else {
+          setDownloadingMap((prev) => {
+            if (!prev[nextVideoId!]) return prev;
+            return {
+              ...prev,
+              [nextVideoId!]: {
+                ...prev[nextVideoId!],
+                status: 'failed',
+                error: err.message || 'Download failed',
+              },
+            };
+          });
+        }
+      }
+    } finally {
+      activeVideoIdRef.current = null;
+      isWorkerBusyRef.current = false;
+      // Immediately pull next item from queue
+      setTimeout(() => {
+        processQueue();
+      }, 50);
+    }
+  }, [refreshDownloads, resolveVideoAsset]);
+
+  // Public startDownload for a single video
+  const startDownload = useCallback(
+    async (params: StartDownloadParams) => {
+      const { videoId } = params;
+      if (!videoId) return;
+
+      // Check if already downloaded
+      if (downloadedIds.has(videoId)) return;
+
+      // Store params
+      downloadParamsRef.current.set(videoId, params);
+
+      // Add to queue if not present
+      if (!queueRef.current.includes(videoId)) {
+        queueRef.current.push(videoId);
+      }
+
+      const quality = params.quality || '720p';
+
+      const queuedStatus: DownloadingStatus = {
+        status: 'queued',
+        progress: 0,
+        quality,
+        bytesReceived: 0,
+        totalBytes: params.expectedSizeBytes || 0,
+        unitTitle: params.unitTitle,
+        courseSlug: params.courseSlug,
+        courseTitle: params.courseTitle,
+        sectionTitle: params.sectionTitle,
+        sectionId: params.sectionId,
+        thumbnailUrl: params.thumbnailUrl,
+        durationSeconds: params.durationSeconds,
+        assetUrl: params.assetUrl,
+      };
+
+      downloadingMapRef.current = {
+        ...downloadingMapRef.current,
+        [videoId]: queuedStatus,
+      };
+
+      setDownloadingMap((prev) => ({
+        ...prev,
+        [videoId]: queuedStatus,
+      }));
+
+      // Trigger queue worker
+      setTimeout(() => {
+        processQueue();
+      }, 10);
+    },
+    [downloadedIds, processQueue]
+  );
+
+  // Pause a specific download (YouTube style)
+  const pauseDownload = useCallback(
+    (videoId: string) => {
+      if (activeVideoIdRef.current === videoId) {
+        const controller = abortControllersRef.current.get(videoId);
+        if (controller) controller.abort();
+      }
+
+      downloadingMapRef.current = {
+        ...downloadingMapRef.current,
+        [videoId]: {
+          ...(downloadingMapRef.current[videoId] || {}),
+          status: 'paused',
+        } as DownloadingStatus,
+      };
+
+      setDownloadingMap((prev) => {
+        if (!prev[videoId]) return prev;
+        return {
+          ...prev,
+          [videoId]: {
+            ...prev[videoId],
+            status: 'paused',
+          },
+        };
+      });
+
+      setTimeout(() => {
+        processQueue();
+      }, 100);
+    },
+    [processQueue]
+  );
+
+  // Resume a paused download (YouTube style with Range header)
+  const resumeDownload = useCallback(
+    (videoId: string) => {
+      // Prioritize resumed item to head of queue
+      queueRef.current = [videoId, ...queueRef.current.filter((id) => id !== videoId)];
+
+      downloadingMapRef.current = {
+        ...downloadingMapRef.current,
+        [videoId]: {
+          ...(downloadingMapRef.current[videoId] || {}),
+          status: 'queued',
+          error: undefined,
+        } as DownloadingStatus,
+      };
+
+      setDownloadingMap((prev) => {
+        if (!prev[videoId]) return prev;
+        return {
+          ...prev,
+          [videoId]: {
+            ...prev[videoId],
+            status: 'queued',
+            error: undefined,
+          },
+        };
+      });
+
+      setTimeout(() => {
+        processQueue();
+      }, 50);
+    },
+    [processQueue]
+  );
+
+  // Cancel an active or queued download
+  const cancelDownload = useCallback(
+    (videoId: string) => {
+      if (activeVideoIdRef.current === videoId) {
+        const controller = abortControllersRef.current.get(videoId);
+        if (controller) controller.abort();
+      }
+
+      partialChunksRef.current.delete(videoId);
+      downloadParamsRef.current.delete(videoId);
+      queueRef.current = queueRef.current.filter((id) => id !== videoId);
+      abortControllersRef.current.delete(videoId);
+
+      setDownloadingMap((prev) => {
+        const next = { ...prev };
+        delete next[videoId];
+        return next;
+      });
+
+      setTimeout(() => {
+        processQueue();
+      }, 100);
+    },
+    [processQueue]
+  );
+
+  // Pause all downloads
+  const pauseAllDownloads = useCallback(() => {
+    Object.keys(downloadingMapRef.current).forEach((vId) => {
+      pauseDownload(vId);
+    });
+  }, [pauseDownload]);
+
+  // Resume all downloads
+  const resumeAllDownloads = useCallback(() => {
+    Object.keys(downloadingMapRef.current).forEach((vId) => {
+      resumeDownload(vId);
+    });
+  }, [resumeDownload]);
+
+  // Auto-pause when offline, auto-resume when online (YouTube algorithm)
+  useEffect(() => {
+    const handleOffline = () => {
+      if (activeVideoIdRef.current) {
+        pauseDownload(activeVideoIdRef.current);
+      }
+    };
+
+    const handleOnline = () => {
+      // Find any paused items with 'Waiting for connection...' and resume
+      const pausedIds = Object.entries(downloadingMapRef.current)
+        .filter(([, s]) => s.status === 'paused')
+        .map(([id]) => id);
+
+      if (pausedIds.length > 0) {
+        resumeAllDownloads();
+      }
+    };
+
+    window.addEventListener('offline', handleOffline);
+    window.addEventListener('online', handleOnline);
+    return () => {
+      window.removeEventListener('offline', handleOffline);
+      window.removeEventListener('online', handleOnline);
+    };
+  }, [pauseDownload, resumeAllDownloads]);
+
+  // Status queries
   const isDownloaded = useCallback(
     (videoId: string) => {
       if (!videoId) return false;
@@ -220,15 +771,73 @@ export function DownloadProvider({ children }: { children: React.ReactNode }) {
   const isDownloading = useCallback(
     (videoId: string) => {
       if (!videoId) return false;
-      return !!downloadingMap[videoId];
+      const status = downloadingMap[videoId]?.status;
+      return status === 'downloading' || status === 'queued';
     },
     [downloadingMap]
+  );
+
+  const isQueued = useCallback(
+    (videoId: string) => {
+      if (!videoId) return false;
+      return downloadingMap[videoId]?.status === 'queued';
+    },
+    [downloadingMap]
+  );
+
+  const isPaused = useCallback(
+    (videoId: string) => {
+      if (!videoId) return false;
+      return downloadingMap[videoId]?.status === 'paused';
+    },
+    [downloadingMap]
+  );
+
+  const isFailed = useCallback(
+    (videoId: string) => {
+      if (!videoId) return false;
+      return downloadingMap[videoId]?.status === 'failed';
+    },
+    [downloadingMap]
+  );
+
+  const retryDownload = useCallback(
+    async (videoId: string) => {
+      const params = downloadParamsRef.current.get(videoId);
+      if (params) {
+        await startDownload(params);
+        return;
+      }
+      const item = downloadingMap[videoId];
+      if (item && item.courseSlug && item.unitTitle) {
+        await startDownload({
+          videoId,
+          courseSlug: item.courseSlug,
+          courseTitle: item.courseTitle || 'Course',
+          sectionTitle: item.sectionTitle,
+          sectionId: item.sectionId,
+          unitTitle: item.unitTitle,
+          thumbnailUrl: item.thumbnailUrl,
+          durationSeconds: item.durationSeconds || 0,
+          quality: item.quality,
+        });
+      }
+    },
+    [downloadingMap, startDownload]
   );
 
   const getDownloadProgress = useCallback(
     (videoId: string) => {
       if (!videoId) return undefined;
       return downloadingMap[videoId]?.progress;
+    },
+    [downloadingMap]
+  );
+
+  const getDownloadStatus = useCallback(
+    (videoId: string) => {
+      if (!videoId) return undefined;
+      return downloadingMap[videoId];
     },
     [downloadingMap]
   );
@@ -265,7 +874,7 @@ export function DownloadProvider({ children }: { children: React.ReactNode }) {
         return true;
       }
       return Object.values(downloadingMap).some(
-        (s) => s.courseSlug === courseSlug && s.sectionTitle === sectionTitle
+        (s) => s.courseSlug === courseSlug && s.sectionTitle === sectionTitle && (s.status === 'downloading' || s.status === 'queued')
       );
     },
     [batchProgress, downloadingMap]
@@ -296,23 +905,151 @@ export function DownloadProvider({ children }: { children: React.ReactNode }) {
       if (batchProgress?.isDownloading && batchProgress.courseSlug === courseSlug) {
         return true;
       }
-      return Object.values(downloadingMap).some((s) => s.courseSlug === courseSlug);
+      return Object.values(downloadingMap).some(
+        (s) => s.courseSlug === courseSlug && (s.status === 'downloading' || s.status === 'queued')
+      );
     },
     [batchProgress, downloadingMap]
   );
 
-  const cancelDownload = useCallback((videoId: string) => {
-    const controller = abortControllersRef.current.get(videoId);
-    if (controller) {
-      controller.abort();
-      abortControllersRef.current.delete(videoId);
-    }
-    setDownloadingMap((prev) => {
-      const next = { ...prev };
-      delete next[videoId];
-      return next;
-    });
-  }, []);
+  // Batch download an entire section (Queues lessons sequentially)
+  const downloadSection = useCallback(
+    async ({
+      courseSlug,
+      courseTitle,
+      sectionTitle,
+      sectionId,
+      preferredQuality,
+      units,
+    }: {
+      courseSlug: string;
+      courseTitle: string;
+      sectionTitle: string;
+      sectionId?: string;
+      preferredQuality?: string;
+      units: { videoId: string; unitTitle: string; duration?: number }[];
+    }) => {
+      const pendingUnits = units.filter(
+        (u) => u.videoId && !downloadedIds.has(u.videoId) && !downloadingMap[u.videoId]
+      );
+      if (pendingUnits.length === 0) return;
+
+      const chosenQuality = preferredQuality || getRememberedQuality('720p');
+      const batchId = `sec_${courseSlug}_${sectionTitle}_${Date.now()}`;
+      batchCancelRef.current = false;
+
+      setBatchProgress({
+        batchId,
+        type: 'section',
+        title: sectionTitle,
+        courseSlug,
+        courseTitle,
+        sectionTitle,
+        totalItems: pendingUnits.length,
+        completedItems: 0,
+        failedItems: 0,
+        isDownloading: true,
+        currentVideoTitle: pendingUnits[0].unitTitle,
+        quality: chosenQuality,
+      });
+
+      for (const u of pendingUnits) {
+        if (batchCancelRef.current) break;
+        await startDownload({
+          videoId: u.videoId,
+          courseSlug,
+          courseTitle,
+          sectionTitle,
+          sectionId,
+          unitTitle: u.unitTitle,
+          thumbnailUrl: '',
+          durationSeconds: u.duration || 0,
+          quality: chosenQuality,
+        });
+      }
+    },
+    [downloadedIds, downloadingMap, startDownload]
+  );
+
+  // Batch download an entire course
+  const downloadCourse = useCallback(
+    async ({
+      courseSlug,
+      courseTitle,
+      preferredQuality,
+      sections,
+    }: {
+      courseSlug: string;
+      courseTitle: string;
+      preferredQuality?: string;
+      sections: {
+        sectionTitle: string;
+        sectionId?: string;
+        units: { videoId: string; unitTitle: string; duration?: number }[];
+      }[];
+    }) => {
+      const allUnits: {
+        videoId: string;
+        unitTitle: string;
+        sectionTitle: string;
+        sectionId?: string;
+        duration?: number;
+      }[] = [];
+
+      sections.forEach((sec) => {
+        sec.units.forEach((u) => {
+          if (u.videoId) {
+            allUnits.push({
+              videoId: u.videoId,
+              unitTitle: u.unitTitle,
+              sectionTitle: sec.sectionTitle,
+              sectionId: sec.sectionId,
+              duration: u.duration,
+            });
+          }
+        });
+      });
+
+      const pendingUnits = allUnits.filter(
+        (u) => !downloadedIds.has(u.videoId) && !downloadingMap[u.videoId]
+      );
+      if (pendingUnits.length === 0) return;
+
+      const chosenQuality = preferredQuality || getRememberedQuality('720p');
+      const batchId = `crs_${courseSlug}_${Date.now()}`;
+      batchCancelRef.current = false;
+
+      setBatchProgress({
+        batchId,
+        type: 'course',
+        title: courseTitle,
+        courseSlug,
+        courseTitle,
+        totalItems: pendingUnits.length,
+        completedItems: 0,
+        failedItems: 0,
+        isDownloading: true,
+        currentVideoTitle: pendingUnits[0].unitTitle,
+        quality: chosenQuality,
+      });
+
+      for (const u of pendingUnits) {
+        if (batchCancelRef.current) break;
+        await startDownload({
+          videoId: u.videoId,
+          courseSlug,
+          courseTitle,
+          sectionTitle: u.sectionTitle,
+          sectionId: u.sectionId,
+          unitTitle: u.unitTitle,
+          thumbnailUrl: '',
+          durationSeconds: u.duration || 0,
+          quality: chosenQuality,
+        });
+      }
+    },
+    [downloadedIds, downloadingMap, startDownload]
+  );
 
   const cancelBatchDownload = useCallback(() => {
     batchCancelRef.current = true;
@@ -324,6 +1061,10 @@ export function DownloadProvider({ children }: { children: React.ReactNode }) {
       }
     });
     abortControllersRef.current.clear();
+    partialChunksRef.current.clear();
+    downloadParamsRef.current.clear();
+    queueRef.current = [];
+    activeVideoIdRef.current = null;
     setDownloadingMap({});
     setBatchProgress(null);
   }, []);
@@ -342,6 +1083,11 @@ export function DownloadProvider({ children }: { children: React.ReactNode }) {
         }
 
         await deleteDownloadedVideo(videoId);
+        setDownloadedIds((prev) => {
+          const next = new Set(prev);
+          next.delete(videoId);
+          return next;
+        });
         await refreshDownloads();
       } catch (err) {
         console.error('Failed to delete download:', err);
@@ -353,7 +1099,6 @@ export function DownloadProvider({ children }: { children: React.ReactNode }) {
   const deleteSectionDownloads = useCallback(
     async (courseSlug: string, sectionTitle: string) => {
       try {
-        // Revoke any active blob urls for videos in this section
         const sectionVideos = downloads.filter(
           (d) => d.courseSlug === courseSlug && d.sectionTitle === sectionTitle
         );
@@ -455,501 +1200,6 @@ export function DownloadProvider({ children }: { children: React.ReactNode }) {
     }
   }, []);
 
-  // Internal helper to download a single video stream
-  const executeDownload = useCallback(
-    async ({
-      videoId,
-      courseSlug,
-      courseTitle,
-      sectionTitle,
-      sectionId,
-      unitTitle,
-      thumbnailUrl,
-      durationSeconds,
-      quality,
-      assetUrl,
-      expectedSizeBytes,
-      signal,
-    }: StartDownloadParams & { signal: AbortSignal }) => {
-      // Attempt direct fetch first (Wistia supports CORS with Origin header)
-      let response: Response | null = null;
-      try {
-        response = await fetch(assetUrl!, {
-          signal,
-        });
-      } catch (fetchErr: any) {
-        if (signal.aborted) throw fetchErr;
-        console.warn('Direct fetch failed, falling back to server stream proxy:', fetchErr);
-      }
-
-      // If direct fetch fails or is not ok, use our same-origin stream proxy
-      if (!response || !response.ok) {
-        const proxyUrl = `/api/video/download-stream?url=${encodeURIComponent(assetUrl!)}`;
-        response = await fetch(proxyUrl, {
-          signal,
-        });
-      }
-
-      if (!response.ok || !response.body) {
-        throw new Error(`Failed to download stream: HTTP ${response.status}`);
-      }
-
-      const contentLengthHeader = response.headers.get('content-length');
-      const totalBytes = contentLengthHeader
-        ? parseInt(contentLengthHeader, 10)
-        : expectedSizeBytes || 0;
-
-      const reader = response.body.getReader();
-      const chunks: Uint8Array[] = [];
-      let bytesReceived = 0;
-      let lastReportTime = 0;
-
-      while (true) {
-        const { done, value } = await reader.read();
-        if (done) break;
-
-        if (value) {
-          chunks.push(value);
-          bytesReceived += value.length;
-
-          const now = Date.now();
-          if (now - lastReportTime > 120 || bytesReceived === totalBytes) {
-            lastReportTime = now;
-            const progress = totalBytes > 0 ? Math.min(99, Math.round((bytesReceived / totalBytes) * 100)) : 50;
-
-            setDownloadingMap((prev) => {
-              if (!prev[videoId]) return prev;
-              return {
-                ...prev,
-                [videoId]: {
-                  ...prev[videoId],
-                  progress,
-                  bytesReceived,
-                  totalBytes,
-                },
-              };
-            });
-          }
-        }
-      }
-
-      // Assemble binary blob
-      const blob = new Blob(chunks as BlobPart[], { type: 'video/mp4' });
-
-      // Save into IndexedDB
-      await saveDownloadedVideo({
-        videoId,
-        courseSlug,
-        courseTitle: courseTitle || 'Course',
-        sectionTitle: sectionTitle || 'General',
-        sectionId: sectionId || '',
-        unitTitle: unitTitle || 'Video Lesson',
-        thumbnailUrl: thumbnailUrl || '',
-        durationSeconds: durationSeconds || 0,
-        quality: quality || 'Standard',
-        sizeBytes: blob.size,
-        downloadedAt: Date.now(),
-        blob,
-        mimeType: 'video/mp4',
-      });
-    },
-    []
-  );
-
-  // Helper to fetch video metadata if assetUrl is missing, respecting preferred quality
-  const resolveVideoAsset = useCallback(async (videoId: string, preferredQuality?: string) => {
-    try {
-      const res = await fetch(`/api/video/${videoId}`);
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
-      const json = await res.json();
-      if (!json?.success || !json.video) throw new Error('Video data not found');
-      const { video } = json;
-      const assets = video.assets || [];
-
-      let chosen: any = null;
-      if (preferredQuality) {
-        const heightMatch = parseInt(preferredQuality.replace(/\D/g, ''), 10);
-        if (heightMatch) {
-          chosen = assets.find((a: any) => a.height === heightMatch);
-          if (!chosen) {
-            // Find closest available asset by height difference
-            const sortedByDiff = [...assets].sort((a: any, b: any) => 
-              Math.abs((a.height || 0) - heightMatch) - Math.abs((b.height || 0) - heightMatch)
-            );
-            chosen = sortedByDiff[0];
-          }
-        }
-      }
-
-      if (!chosen) {
-        chosen =
-          assets.find((a: any) => a.height === 720) ||
-          assets.find((a: any) => a.height === 1080) ||
-          assets.find((a: any) => a.height <= 720 && a.height >= 480) ||
-          assets[0];
-      }
-
-      if (!chosen?.url) throw new Error('No downloadable MP4 asset found');
-
-      const qualityLabel = chosen.displayName || (chosen.height ? `${chosen.height}p` : (preferredQuality || '720p'));
-
-      return {
-        assetUrl: chosen.url as string,
-        quality: qualityLabel,
-        expectedSizeBytes: chosen.sizeBytes,
-        thumbnailUrl: video.thumbnailUrl || '',
-        durationSeconds: video.durationSeconds || 0,
-        unitTitle: video.name || '',
-      };
-    } catch (err: any) {
-      console.error(`Failed to resolve asset for video ${videoId}:`, err);
-      return null;
-    }
-  }, []);
-
-  // Public startDownload for a single video
-  const startDownload = useCallback(
-    async (params: StartDownloadParams) => {
-      const { videoId } = params;
-      if (!videoId) return;
-
-      const abortController = new AbortController();
-      abortControllersRef.current.set(videoId, abortController);
-
-      setDownloadingMap((prev) => ({
-        ...prev,
-        [videoId]: {
-          progress: 0,
-          quality: params.quality || '720p',
-          bytesReceived: 0,
-          totalBytes: params.expectedSizeBytes || 0,
-          unitTitle: params.unitTitle,
-          courseSlug: params.courseSlug,
-          courseTitle: params.courseTitle,
-          sectionTitle: params.sectionTitle,
-        },
-      }));
-
-      try {
-        let assetUrl = params.assetUrl;
-        let quality = params.quality || '720p';
-        let expectedSizeBytes = params.expectedSizeBytes;
-        let thumbnailUrl = params.thumbnailUrl;
-        let durationSeconds = params.durationSeconds;
-        let unitTitle = params.unitTitle;
-
-        if (!assetUrl) {
-          const resolved = await resolveVideoAsset(videoId, quality);
-          if (!resolved) throw new Error('Could not find video stream');
-          assetUrl = resolved.assetUrl;
-          quality = resolved.quality;
-          expectedSizeBytes = resolved.expectedSizeBytes;
-          if (!thumbnailUrl) thumbnailUrl = resolved.thumbnailUrl;
-          if (!durationSeconds) durationSeconds = resolved.durationSeconds;
-          if (!unitTitle) unitTitle = resolved.unitTitle;
-        }
-
-        await executeDownload({
-          ...params,
-          assetUrl,
-          quality,
-          expectedSizeBytes,
-          thumbnailUrl,
-          durationSeconds,
-          unitTitle,
-          signal: abortController.signal,
-        });
-
-        setDownloadingMap((prev) => {
-          const next = { ...prev };
-          delete next[videoId];
-          return next;
-        });
-        abortControllersRef.current.delete(videoId);
-        await refreshDownloads();
-      } catch (err: any) {
-        if (abortController.signal.aborted) {
-          console.log(`Download for video ${videoId} was cancelled.`);
-        } else {
-          console.error(`Download error for video ${videoId}:`, err);
-          alert(`Download failed: ${err.message || 'Unknown network error'}`);
-        }
-
-        setDownloadingMap((prev) => {
-          const next = { ...prev };
-          delete next[videoId];
-          return next;
-        });
-        abortControllersRef.current.delete(videoId);
-      }
-    },
-    [executeDownload, refreshDownloads, resolveVideoAsset]
-  );
-
-  // Batch download an entire section
-  const downloadSection = useCallback(
-    async ({
-      courseSlug,
-      courseTitle,
-      sectionTitle,
-      sectionId,
-      preferredQuality,
-      units,
-    }: {
-      courseSlug: string;
-      courseTitle: string;
-      sectionTitle: string;
-      sectionId?: string;
-      preferredQuality?: string;
-      units: { videoId: string; unitTitle: string; duration?: number }[];
-    }) => {
-      const pendingUnits = units.filter(
-        (u) => u.videoId && !downloadedIds.has(u.videoId) && !downloadingMap[u.videoId]
-      );
-      if (pendingUnits.length === 0) return;
-
-      const chosenQuality = preferredQuality || '720p';
-      const batchId = `sec_${courseSlug}_${sectionTitle}_${Date.now()}`;
-      batchCancelRef.current = false;
-
-      setBatchProgress({
-        batchId,
-        type: 'section',
-        title: sectionTitle,
-        courseSlug,
-        courseTitle,
-        sectionTitle,
-        totalItems: pendingUnits.length,
-        completedItems: 0,
-        failedItems: 0,
-        isDownloading: true,
-        currentVideoTitle: pendingUnits[0].unitTitle,
-        quality: chosenQuality,
-      });
-
-      for (let i = 0; i < pendingUnits.length; i++) {
-        if (batchCancelRef.current) break;
-        const u = pendingUnits[i];
-
-        setBatchProgress((prev) =>
-          prev ? { ...prev, currentVideoTitle: u.unitTitle, quality: chosenQuality } : null
-        );
-
-        try {
-          const resolved = await resolveVideoAsset(u.videoId, chosenQuality);
-          if (!resolved) throw new Error('Video stream unavailable');
-
-          const abortController = new AbortController();
-          abortControllersRef.current.set(u.videoId, abortController);
-
-          setDownloadingMap((prev) => ({
-            ...prev,
-            [u.videoId]: {
-              progress: 0,
-              quality: resolved.quality || chosenQuality,
-              bytesReceived: 0,
-              totalBytes: resolved.expectedSizeBytes || 0,
-              unitTitle: u.unitTitle,
-              courseSlug,
-              courseTitle,
-              sectionTitle,
-            },
-          }));
-
-          await executeDownload({
-            videoId: u.videoId,
-            courseSlug,
-            courseTitle,
-            sectionTitle,
-            sectionId,
-            unitTitle: u.unitTitle,
-            thumbnailUrl: resolved.thumbnailUrl,
-            durationSeconds: u.duration || resolved.durationSeconds,
-            quality: resolved.quality || chosenQuality,
-            assetUrl: resolved.assetUrl,
-            expectedSizeBytes: resolved.expectedSizeBytes,
-            signal: abortController.signal,
-          });
-
-          setDownloadingMap((prev) => {
-            const next = { ...prev };
-            delete next[u.videoId];
-            return next;
-          });
-          abortControllersRef.current.delete(u.videoId);
-          await refreshDownloads();
-
-          setBatchProgress((prev) =>
-            prev ? { ...prev, completedItems: prev.completedItems + 1 } : null
-          );
-        } catch (err: any) {
-          console.warn(`Section download item failed (${u.unitTitle}):`, err);
-          setDownloadingMap((prev) => {
-            const next = { ...prev };
-            delete next[u.videoId];
-            return next;
-          });
-          abortControllersRef.current.delete(u.videoId);
-          setBatchProgress((prev) =>
-            prev ? { ...prev, failedItems: prev.failedItems + 1 } : null
-          );
-        }
-      }
-
-      setBatchProgress((prev) => (prev ? { ...prev, isDownloading: false } : null));
-      setTimeout(() => {
-        setBatchProgress(null);
-      }, 3000);
-    },
-    [downloadedIds, downloadingMap, executeDownload, refreshDownloads, resolveVideoAsset]
-  );
-
-  // Batch download an entire course
-  const downloadCourse = useCallback(
-    async ({
-      courseSlug,
-      courseTitle,
-      preferredQuality,
-      sections,
-    }: {
-      courseSlug: string;
-      courseTitle: string;
-      preferredQuality?: string;
-      sections: {
-        sectionTitle: string;
-        sectionId?: string;
-        units: { videoId: string; unitTitle: string; duration?: number }[];
-      }[];
-    }) => {
-      const allUnits: {
-        videoId: string;
-        unitTitle: string;
-        sectionTitle: string;
-        sectionId?: string;
-        duration?: number;
-      }[] = [];
-
-      sections.forEach((sec) => {
-        sec.units.forEach((u) => {
-          if (u.videoId) {
-            allUnits.push({
-              videoId: u.videoId,
-              unitTitle: u.unitTitle,
-              sectionTitle: sec.sectionTitle,
-              sectionId: sec.sectionId,
-              duration: u.duration,
-            });
-          }
-        });
-      });
-
-      const pendingUnits = allUnits.filter(
-        (u) => !downloadedIds.has(u.videoId) && !downloadingMap[u.videoId]
-      );
-      if (pendingUnits.length === 0) return;
-
-      const chosenQuality = preferredQuality || '720p';
-      const batchId = `crs_${courseSlug}_${Date.now()}`;
-      batchCancelRef.current = false;
-
-      setBatchProgress({
-        batchId,
-        type: 'course',
-        title: courseTitle,
-        courseSlug,
-        courseTitle,
-        totalItems: pendingUnits.length,
-        completedItems: 0,
-        failedItems: 0,
-        isDownloading: true,
-        currentVideoTitle: pendingUnits[0].unitTitle,
-        quality: chosenQuality,
-      });
-
-      for (let i = 0; i < pendingUnits.length; i++) {
-        if (batchCancelRef.current) break;
-        const u = pendingUnits[i];
-
-        setBatchProgress((prev) =>
-          prev
-            ? {
-                ...prev,
-                currentVideoTitle: u.unitTitle,
-                sectionTitle: u.sectionTitle,
-                quality: chosenQuality,
-              }
-            : null
-        );
-
-        try {
-          const resolved = await resolveVideoAsset(u.videoId, chosenQuality);
-          if (!resolved) throw new Error('Video stream unavailable');
-
-          const abortController = new AbortController();
-          abortControllersRef.current.set(u.videoId, abortController);
-
-          setDownloadingMap((prev) => ({
-            ...prev,
-            [u.videoId]: {
-              progress: 0,
-              quality: resolved.quality || chosenQuality,
-              bytesReceived: 0,
-              totalBytes: resolved.expectedSizeBytes || 0,
-              unitTitle: u.unitTitle,
-              courseSlug,
-              courseTitle,
-              sectionTitle: u.sectionTitle,
-            },
-          }));
-
-          await executeDownload({
-            videoId: u.videoId,
-            courseSlug,
-            courseTitle,
-            sectionTitle: u.sectionTitle,
-            sectionId: u.sectionId,
-            unitTitle: u.unitTitle,
-            thumbnailUrl: resolved.thumbnailUrl,
-            durationSeconds: u.duration || resolved.durationSeconds,
-            quality: resolved.quality || chosenQuality,
-            assetUrl: resolved.assetUrl,
-            expectedSizeBytes: resolved.expectedSizeBytes,
-            signal: abortController.signal,
-          });
-
-          setDownloadingMap((prev) => {
-            const next = { ...prev };
-            delete next[u.videoId];
-            return next;
-          });
-          abortControllersRef.current.delete(u.videoId);
-          await refreshDownloads();
-
-          setBatchProgress((prev) =>
-            prev ? { ...prev, completedItems: prev.completedItems + 1 } : null
-          );
-        } catch (err: any) {
-          console.warn(`Course download item failed (${u.unitTitle}):`, err);
-          setDownloadingMap((prev) => {
-            const next = { ...prev };
-            delete next[u.videoId];
-            return next;
-          });
-          abortControllersRef.current.delete(u.videoId);
-          setBatchProgress((prev) =>
-            prev ? { ...prev, failedItems: prev.failedItems + 1 } : null
-          );
-        }
-      }
-
-      setBatchProgress((prev) => (prev ? { ...prev, isDownloading: false } : null));
-      setTimeout(() => {
-        setBatchProgress(null);
-      }, 3000);
-    },
-    [downloadedIds, downloadingMap, executeDownload, refreshDownloads, resolveVideoAsset]
-  );
-
   return (
     <DownloadContext.Provider
       value={{
@@ -960,7 +1210,12 @@ export function DownloadProvider({ children }: { children: React.ReactNode }) {
         batchProgress,
         isDownloaded,
         isDownloading,
+        isQueued,
+        isPaused,
+        isFailed,
+        retryDownload,
         getDownloadProgress,
+        getDownloadStatus,
         isSectionDownloaded,
         isSectionDownloading,
         getSectionDownloadedCount,
@@ -968,9 +1223,13 @@ export function DownloadProvider({ children }: { children: React.ReactNode }) {
         isCourseDownloading,
         getCourseDownloadedCount,
         startDownload,
+        pauseDownload,
+        resumeDownload,
+        cancelDownload,
+        pauseAllDownloads,
+        resumeAllDownloads,
         downloadSection,
         downloadCourse,
-        cancelDownload,
         cancelBatchDownload,
         deleteDownload,
         deleteSectionDownloads,

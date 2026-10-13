@@ -63,6 +63,8 @@ import { TopLoader } from '@/components/TopLoader';
 import { DownloadProvider } from '@/lib/downloadContext';
 import { OfflineBanner } from '@/components/OfflineBanner';
 import { ServiceWorkerRegistration } from '@/components/ServiceWorkerRegistration';
+import { GlobalOfflineWrapper } from '@/components/GlobalOfflineWrapper';
+import { GlobalDownloadTracker } from '@/components/GlobalDownloadTracker';
 
 export default function RootLayout({
   children,
@@ -71,13 +73,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark" suppressHydrationWarning>
-      <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(function(){try{var t=localStorage.getItem('theme');if(t==='light'){document.documentElement.classList.remove('dark');document.documentElement.classList.add('light');}else{document.documentElement.classList.add('dark');}var a=localStorage.getItem('preptea_accent_theme');if(a&&a!=='default'){document.documentElement.setAttribute('data-accent',a);}}catch(e){}})();`,
-          }}
-        />
-      </head>
       <body suppressHydrationWarning className="antialiased bg-[#0b0f19] bg-background text-foreground flex flex-col min-h-screen">
         <TopLoader />
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
@@ -86,9 +81,12 @@ export default function RootLayout({
               <ActivityTracker />
               <Navbar />
               <main className="flex-1 w-full flex flex-col min-h-0 pt-14 sm:pt-16 pb-16 md:pb-0">
-                {children}
+                <GlobalOfflineWrapper>
+                  {children}
+                </GlobalOfflineWrapper>
               </main>
               <MobileBottomNav />
+              <GlobalDownloadTracker />
               <OfflineBanner />
               <ServiceWorkerRegistration />
             </DownloadProvider>

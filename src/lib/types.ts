@@ -20,6 +20,7 @@ export interface CourseMeta {
 export interface CourseSectionUnit {
   id: string;
   type: string;
+  objectType?: string;
   icon?: string;
   subtitle?: string;
   unitTitle?: string;
@@ -39,6 +40,8 @@ export interface CourseSectionUnit {
   fileUrl?: string;
   duration?: number;
   modifiedF?: string;
+  created?: number;
+  modified?: number;
 }
 
 export interface CourseSection {
@@ -78,6 +81,7 @@ export interface AssessmentMeta {
   quizId: string;
   assessmentId?: string;
   objectId?: string;
+  quizType?: string;
   description: string;
   timeLimitSeconds: number;
   questionTimeLimitSeconds: number;

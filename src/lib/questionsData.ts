@@ -3,6 +3,7 @@ import path from 'path';
 import { getQuestionsDirectory } from './pathHelper';
 import { AssessmentDetail, AssessmentMeta, QuestionBlock, QuestionOption } from './types';
 import { cleanQuizId } from './storage';
+import { resolveQuizType } from './quizTypeHelper';
 
 const parsedAssessmentCache = new Map<string, { data: AssessmentDetail; mtime: number }>();
 let cachedAllAssessments: AssessmentMeta[] | null = null;
@@ -218,6 +219,7 @@ export function getAllAssessments(): AssessmentMeta[] {
           quizId: parsed.quizId,
           assessmentId: parsed.assessmentId,
           objectId: parsed.objectId,
+          quizType: parsed.quizType,
           description: parsed.description,
           timeLimitSeconds: parsed.timeLimitSeconds,
           questionTimeLimitSeconds: parsed.questionTimeLimitSeconds,
@@ -328,12 +330,14 @@ function parseAssessmentFile(filePath: string, quizId: string): AssessmentDetail
 
     const objectId = data.submission?.object_id || data.object_id || data.objectId || assessment.unitId || assessment.objectId;
     const assessmentId = data.submission?.assessmentId || data.assessmentId || assessment.id || quizId;
+    const quizType = resolveQuizType(data);
 
     const resultData: AssessmentDetail = {
       id: quizId,
       quizId,
       assessmentId,
       objectId,
+      quizType,
       title,
       description: assessment.description || 'Test paper assessment for practice and learning.',
       timeLimitSeconds: assessment.timeLimitSeconds || (questions.length * 60),

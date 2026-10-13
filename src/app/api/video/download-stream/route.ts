@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { auth } from '@/auth';
 import { hasCoursesAccess } from '@/lib/coursesAuth';
+import { createStreamTicket } from '@/lib/videoStreamToken';
 
 export const dynamic = 'force-dynamic';
 
@@ -40,39 +41,16 @@ export async function GET(request: NextRequest) {
       return NextResponse.json({ error: 'Not Found' }, { status: 404 });
     }
 
-    // 2. Fetch the video stream from remote CDN
-    const upstreamRes = await fetch(targetUrl, {
+    // Direct 307 redirect to origin CDN (execution duration ~5ms, zero Vercel video bytes)
+    return NextResponse.redirect(targetUrl, {
+      status: 307,
       headers: {
-        'User-Agent':
-          'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-        Accept: '*/*',
+        'Access-Control-Allow-Origin': '*',
+        'Cache-Control': 'private, no-cache',
       },
     });
-
-    if (!upstreamRes.ok || !upstreamRes.body) {
-      return NextResponse.json(
-        { error: `Upstream error: HTTP ${upstreamRes.status}` },
-        { status: upstreamRes.status || 502 }
-      );
-    }
-
-    // 3. Forward stream to client
-    const headers = new Headers();
-    headers.set('Content-Type', upstreamRes.headers.get('content-type') || 'video/mp4');
-    const contentLength = upstreamRes.headers.get('content-length');
-    if (contentLength) {
-      headers.set('Content-Length', contentLength);
-    }
-    headers.set('Accept-Ranges', 'bytes');
-    headers.set('Cache-Control', 'private, no-cache, no-store, must-revalidate');
-    headers.set('Content-Disposition', 'inline'); // Explicitly inline, NOT attachment
-
-    return new Response(upstreamRes.body as any, {
-      status: 200,
-      headers,
-    });
   } catch (error: any) {
-    console.error('Error proxying video download stream:', error);
+    console.error('Error in download stream redirect:', error);
     return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 });
   }
 }

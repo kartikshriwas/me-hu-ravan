@@ -1,6 +1,7 @@
 'use client';
 
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect, useMemo, useRef } from 'react';
+import { createPortal } from 'react-dom';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import {
@@ -30,12 +31,22 @@ import {
   LayoutGrid,
   Loader2,
   RotateCcw,
+  Pause,
+  Settings,
+  Sliders,
+  SlidersHorizontal,
+  HelpCircle,
+  Info,
+  Check,
+  Tv,
 } from 'lucide-react';
 import { useDownloads } from '@/lib/downloadContext';
 import { OfflineVideoMetadata } from '@/lib/videoStorage';
 import { useAuth } from '@/lib/authContext';
+import { getRememberedQuality, saveRememberedQuality } from '@/lib/qualityMatcher';
 import { checkUserCourseAccess, verifyAndGetCachedBatchAccess, CachedBatchAccess } from '@/lib/batchAccess';
 import { CustomVideoPlayer } from '@/components/CustomVideoPlayer';
+import NotFound from '@/app/not-found';
 
 function formatBytes(bytes: number): string {
   if (!bytes || bytes <= 0) return '0 B';
@@ -86,10 +97,11 @@ interface GroupedCourse {
 
 export function DownloadsClient() {
   const { user, loading: authLoading } = useAuth();
-  const [isOnline, setIsOnline] = useState(typeof navigator !== 'undefined' ? navigator.onLine : true);
+  const [isOnline, setIsOnline] = useState(true);
 
   const {
     downloads,
+    downloadingMap,
     storageUsage,
     batchProgress,
     deleteDownload,
@@ -97,6 +109,11 @@ export function DownloadsClient() {
     deleteCourseDownloads,
     clearAllDownloads,
     cancelBatchDownload,
+    pauseDownload,
+    resumeDownload,
+    cancelDownload,
+    pauseAllDownloads,
+    resumeAllDownloads,
     getBlobUrl,
     revokeBlobUrl,
   } = useDownloads();
@@ -104,7 +121,7 @@ export function DownloadsClient() {
   const [viewMode, setViewMode] = useState<'courses' | 'videos'>('courses');
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCourse, setSelectedCourse] = useState<string>('all');
-  const [sortBy, setSortBy] = useState<'recent' | 'size' | 'title'>('recent');
+  const [sortBy, setSortBy] = useState<'syllabus' | 'recent' | 'size' | 'title'>('syllabus');
 
   // Expanded sections state: courseSlug -> sectionTitle -> boolean
   const [collapsedSections, setCollapsedSections] = useState<Record<string, boolean>>({});
@@ -129,6 +146,95 @@ export function DownloadsClient() {
   const [activePlaybackUrl, setActivePlaybackUrl] = useState<string | null>(null);
   const [playbackLoading, setPlaybackLoading] = useState(false);
 
+  // Download Quality Preferences (YouTube Style)
+  const [rememberQuality, setRememberQuality] = useState<boolean>(false);
+  const [preferredQuality, setPreferredQuality] = useState<string>('720p');
+  const [qualityToast, setQualityToast] = useState<string | null>(null);
+  const [showQualityDropdown, setShowQualityDropdown] = useState<boolean>(false);
+  const [mounted, setMounted] = useState<boolean>(false);
+  const [dropdownCoords, setDropdownCoords] = useState<{ top: number; right: number } | null>(null);
+  const qualityButtonRef = useRef<HTMLButtonElement>(null);
+  const qualityMenuRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const updateDropdownCoords = () => {
+    if (qualityButtonRef.current) {
+      const rect = qualityButtonRef.current.getBoundingClientRect();
+      setDropdownCoords({
+        top: rect.bottom + 8,
+        right: Math.max(16, window.innerWidth - rect.right),
+      });
+    }
+  };
+
+  const handleToggleQualityDropdown = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    if (!showQualityDropdown) {
+      updateDropdownCoords();
+      setShowQualityDropdown(true);
+    } else {
+      setShowQualityDropdown(false);
+    }
+  };
+
+  useEffect(() => {
+    if (!showQualityDropdown) return;
+
+    function handleClickOutside(event: MouseEvent) {
+      const target = event.target as Node;
+      if (qualityButtonRef.current && qualityButtonRef.current.contains(target)) {
+        return;
+      }
+      if (qualityMenuRef.current && qualityMenuRef.current.contains(target)) {
+        return;
+      }
+      setShowQualityDropdown(false);
+    }
+
+    function handleScrollOrResize() {
+      if (window.innerWidth >= 640) {
+        updateDropdownCoords();
+      }
+    }
+
+    document.addEventListener('mousedown', handleClickOutside);
+    window.addEventListener('resize', handleScrollOrResize);
+    window.addEventListener('scroll', handleScrollOrResize, { passive: true });
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+      window.removeEventListener('resize', handleScrollOrResize);
+      window.removeEventListener('scroll', handleScrollOrResize);
+    };
+  }, [showQualityDropdown]);
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const rem = localStorage.getItem('preptea_remember_download_quality') === 'true';
+      const pref = getRememberedQuality('720p');
+      setRememberQuality(rem);
+      setPreferredQuality(pref);
+    }
+  }, []);
+
+  const handleUpdateQualitySetting = (choice: 'ask_each_time' | '1080p' | '720p' | '540p' | '360p' | string) => {
+    if (typeof window === 'undefined') return;
+    if (choice === 'ask_each_time') {
+      localStorage.removeItem('preptea_remember_download_quality');
+      setRememberQuality(false);
+      setQualityToast('Settings updated: PrepTea will now ask you to choose quality before each download.');
+    } else {
+      saveRememberedQuality(choice);
+      setRememberQuality(true);
+      setPreferredQuality(choice);
+      setQualityToast(`Settings updated: Future downloads will automatically download in ${choice}.`);
+    }
+    setTimeout(() => setQualityToast(null), 4000);
+  };
+
   // Monitor online / offline network status
   useEffect(() => {
     setIsOnline(typeof navigator !== 'undefined' ? navigator.onLine : true);
@@ -146,16 +252,20 @@ export function DownloadsClient() {
   }, []);
 
   const [cachedAccess, setCachedAccess] = useState<CachedBatchAccess | null>(null);
-  const [isVerifyingOfflineAccess, setIsVerifyingOfflineAccess] = useState(true);
+  const [isVerifyingOfflineAccess, setIsVerifyingOfflineAccess] = useState(!isOnline);
 
   useEffect(() => {
+    if (isOnline) {
+      setIsVerifyingOfflineAccess(false);
+      return;
+    }
     async function verify() {
       const access = await verifyAndGetCachedBatchAccess();
       setCachedAccess(access);
       setIsVerifyingOfflineAccess(false);
     }
     verify();
-  }, []);
+  }, [isOnline]);
 
   // Keyboard shortcut listener: Escape to close cinema player
   useEffect(() => {
@@ -194,6 +304,8 @@ export function DownloadsClient() {
       list = [...list].sort((a, b) => (b.sizeBytes || 0) - (a.sizeBytes || 0));
     } else if (sortBy === 'title') {
       list = [...list].sort((a, b) => a.unitTitle.localeCompare(b.unitTitle));
+    } else if (sortBy === 'syllabus') {
+      list = [...list].sort((a, b) => (a.downloadedAt || 0) - (b.downloadedAt || 0));
     } else {
       list = [...list].sort((a, b) => (b.downloadedAt || 0) - (a.downloadedAt || 0));
     }
@@ -254,9 +366,16 @@ export function DownloadsClient() {
         totalVideos: course.totalVideos,
         totalBytes: course.totalBytes,
         totalDurationSeconds: course.totalDurationSeconds,
-        sectionList: Object.values(course.sections).filter((sec) => sec.videos && sec.videos.length > 0),
+        sectionList: Object.values(course.sections)
+          .filter((sec) => sec.videos && sec.videos.length > 0)
+          .map((sec) => ({
+            ...sec,
+            videos: (sortBy === 'recent' || sortBy === 'syllabus')
+              ? [...sec.videos].sort((a, b) => (a.downloadedAt || 0) - (b.downloadedAt || 0))
+              : sec.videos,
+          })),
       }));
-  }, [filteredDownloads]);
+  }, [filteredDownloads, sortBy]);
 
   // Open inline offline video player
   const handlePlayOffline = async (video: OfflineVideoMetadata) => {
@@ -282,7 +401,18 @@ export function DownloadsClient() {
   };
 
   // Next / Previous navigation within player
-  const activePlaylist = filteredDownloads;
+  const activePlaylist = useMemo(() => {
+    if (viewMode === 'courses' && activePlaybackVideo) {
+      const courseGroup = groupedCourses.find(
+        (c) => c.courseSlug === activePlaybackVideo.courseSlug
+      );
+      if (courseGroup) {
+        return courseGroup.sectionList.flatMap((s) => s.videos);
+      }
+    }
+    return filteredDownloads;
+  }, [viewMode, activePlaybackVideo, groupedCourses, filteredDownloads]);
+
   const currentActiveIndex = activePlaybackVideo
     ? activePlaylist.findIndex((v) => v.videoId === activePlaybackVideo.videoId)
     : -1;
@@ -326,16 +456,24 @@ export function DownloadsClient() {
   const liveAccess = checkUserCourseAccess(user);
   const effectiveAccess = isOnline ? liveAccess : (cachedAccess?.hasAccess ?? liveAccess);
 
-  // effectiveAccess is calculated but we no longer throw 404 if it's missing. 
-  // If access was revoked, downloadContext will automatically purge the downloads when online.
-
-  if (isVerifyingOfflineAccess) {
+  if (isVerifyingOfflineAccess || authLoading || !mounted) {
     return (
       <div className="w-full h-[50vh] flex flex-col items-center justify-center">
         <Loader2 className="w-8 h-8 text-primary-500 animate-spin" />
         <p className="text-xs text-muted-foreground mt-4">Verifying secure offline access...</p>
       </div>
     );
+  }
+
+  // 1. If user is not logged in OR does not have access to courses, show 404
+  if (!effectiveAccess) {
+    return <NotFound />;
+  }
+
+  // 2. If user has 0 downloads, 0 active/queued downloads, AND has no customized download setting reminder, show 404
+  const activeCount = Object.keys(downloadingMap).length;
+  if (downloads.length === 0 && activeCount === 0 && !rememberQuality) {
+    return <NotFound />;
   }
 
   return (
@@ -406,11 +544,139 @@ export function DownloadsClient() {
         </div>
       )}
 
+      {/* Active Downloads Queue (YouTube Style) */}
+      {Object.keys(downloadingMap).length > 0 && (
+        <section aria-labelledby="active-downloads-heading" className="glass-panel rounded-3xl p-5 sm:p-6 border border-primary-500/30 shadow-2xl space-y-4 animate-in fade-in">
+          <div className="flex items-center justify-between gap-3 flex-wrap">
+            <div className="flex items-center gap-2.5">
+              <div className="w-8 h-8 rounded-xl bg-primary-500/20 text-primary-400 flex items-center justify-center font-bold">
+                <Loader2 className="w-4 h-4 animate-spin" />
+              </div>
+              <div>
+                <h2 id="active-downloads-heading" className="text-sm font-bold text-foreground">
+                  Downloads in Progress ({Object.keys(downloadingMap).length})
+                </h2>
+                <p className="text-[11px] text-muted-foreground">
+                  Downloads run sequentially to preserve bandwidth and stability
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-2">
+              <button
+                type="button"
+                onClick={pauseAllDownloads}
+                className="px-3 py-1 rounded-xl bg-slate-800 hover:bg-slate-700 text-xs font-semibold text-muted-foreground hover:text-foreground transition-all cursor-pointer"
+              >
+                Pause all
+              </button>
+              <button
+                type="button"
+                onClick={resumeAllDownloads}
+                className="px-3 py-1 rounded-xl bg-primary-600/30 hover:bg-primary-600/50 text-primary-300 text-xs font-semibold border border-primary-500/30 transition-all cursor-pointer"
+              >
+                Resume all
+              </button>
+            </div>
+          </div>
+
+          <div className="space-y-2.5 max-h-72 overflow-y-auto custom-scrollbar">
+            {Object.entries(downloadingMap).map(([vId, item]) => (
+              <div
+                key={vId}
+                className="p-3 rounded-2xl bg-slate-900/60 border border-card-border/80 flex items-center justify-between gap-3 hover:border-primary-500/30 transition-all"
+              >
+                <div className="min-w-0 flex-1 space-y-1">
+                  <div className="flex items-center gap-2">
+                    <h3 className="text-xs sm:text-sm font-bold text-foreground truncate">
+                      {item.unitTitle || 'Video Lesson'}
+                    </h3>
+                    <span className="text-[10px] font-mono font-bold text-primary-400 bg-primary-950/80 px-1.5 py-0.2 rounded border border-primary-500/30 shrink-0">
+                      {item.quality}
+                    </span>
+                    <span className={`text-[10px] font-semibold uppercase px-1.5 py-0.2 rounded shrink-0 ${
+                      item.status === 'downloading'
+                        ? 'bg-primary-500/20 text-primary-300 border border-primary-500/30'
+                        : item.status === 'queued'
+                        ? 'bg-amber-500/20 text-amber-300 border border-amber-500/30'
+                        : 'bg-slate-800 text-slate-400'
+                    }`}>
+                      {item.status === 'downloading' ? `${item.progress}%` : item.status}
+                    </span>
+                  </div>
+
+                  <div className="w-full bg-slate-800 rounded-full h-1.5 overflow-hidden">
+                    <div
+                      className="bg-primary-500 h-full rounded-full transition-all duration-300"
+                      style={{ width: `${item.progress}%` }}
+                    />
+                  </div>
+
+                  <div className="flex items-center justify-between text-[10px] text-muted-foreground font-mono">
+                    <span>
+                      {formatBytes(item.bytesReceived)} / {formatBytes(item.totalBytes)}
+                    </span>
+                    {item.speedBytesPerSec !== undefined && item.speedBytesPerSec > 0 && (
+                      <span>
+                        {formatBytes(item.speedBytesPerSec)}/s • ~{item.etaSeconds || 0}s left
+                      </span>
+                    )}
+                  </div>
+
+                  {item.qualityFallbackNotice && (
+                    <div className="text-[10px] text-amber-400 bg-amber-500/10 px-2 py-0.5 rounded border border-amber-500/20 flex items-center justify-between gap-1 flex-wrap">
+                      <span>
+                        ⚠️ {item.qualityFallbackNotice.requestedQuality} unavailable • Using {item.qualityFallbackNotice.actualQuality}
+                      </span>
+                      {item.qualityFallbackNotice.availableQualities && item.qualityFallbackNotice.availableQualities.length > 1 && (
+                        <span className="text-[9px] text-amber-300 font-mono">
+                          (Options: {item.qualityFallbackNotice.availableQualities.join(', ')})
+                        </span>
+                      )}
+                    </div>
+                  )}
+                </div>
+
+                <div className="flex items-center gap-1.5 shrink-0">
+                  {item.status === 'paused' ? (
+                    <button
+                      type="button"
+                      onClick={() => resumeDownload(vId)}
+                      className="p-1.5 rounded-xl bg-primary-600 hover:bg-primary-500 text-white transition-all cursor-pointer"
+                      title="Resume download"
+                    >
+                      <Play className="w-3.5 h-3.5 fill-current" />
+                    </button>
+                  ) : (
+                    <button
+                      type="button"
+                      onClick={() => pauseDownload(vId)}
+                      className="p-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-muted-foreground hover:text-foreground transition-all cursor-pointer"
+                      title="Pause download"
+                    >
+                      <Pause className="w-3.5 h-3.5 fill-current" />
+                    </button>
+                  )}
+                  <button
+                    type="button"
+                    onClick={() => cancelDownload(vId)}
+                    className="p-1.5 rounded-xl hover:bg-rose-500/20 text-muted-foreground hover:text-rose-400 transition-all cursor-pointer"
+                    title="Cancel download"
+                  >
+                    <X className="w-3.5 h-3.5" />
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
       {/* Page Header */}
-      <header className="glass-panel rounded-3xl p-6 sm:p-8 border border-card-border shadow-2xl flex flex-col md:flex-row md:items-center justify-between gap-6 relative overflow-hidden group hover:border-primary-500/30 transition-all duration-500">
+      <header className="glass-panel rounded-3xl p-6 sm:p-8 border border-card-border shadow-2xl flex flex-col md:flex-row md:items-center justify-between gap-6 relative group hover:border-primary-500/30 transition-all duration-500">
         {/* Subtle decorative glowing blob */}
-        <div className="absolute -top-24 -right-24 w-64 h-64 bg-primary-500/15 rounded-full blur-3xl pointer-events-none group-hover:bg-primary-500/25 transition-all duration-700" />
-        <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none group-hover:bg-emerald-500/20 transition-all duration-700" />
+        <div className="absolute -top-24 -right-24 w-64 h-64 bg-primary-500/15 rounded-full blur-3xl pointer-events-none group-hover:bg-primary-500/25 transition-all duration-700 overflow-hidden" />
+        <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none group-hover:bg-emerald-500/20 transition-all duration-700 overflow-hidden" />
 
         <div className="space-y-2 relative z-10">
           <div className="flex items-center gap-2 text-primary-600 dark:text-primary-400 font-extrabold text-xs tracking-widest uppercase">
@@ -425,37 +691,347 @@ export function DownloadsClient() {
           </p>
         </div>
 
-        {/* Storage Summary Pill */}
-        <div className="flex flex-col sm:flex-row md:flex-col items-start md:items-end gap-3 shrink-0 relative z-10">
-          <div className="p-3.5 sm:p-4 rounded-2xl bg-card/80 border border-card-border/80 backdrop-blur-md shadow-sm flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-primary-500/15 border border-primary-500/25 flex items-center justify-center text-primary-600 dark:text-primary-400 shrink-0">
-              <HardDrive className="w-5 h-5" />
-            </div>
-            <div>
-              <div className="flex items-center gap-1.5 text-xs text-muted-foreground font-medium">
-                <span>Storage Used</span>
-                <span className="text-slate-500">•</span>
-                <span className="font-bold text-foreground">
-                  {downloads.length} {downloads.length === 1 ? 'lesson' : 'lessons'}
+        {/* Header Actions: Minimal Quality Dropdown & Storage */}
+        <div className="flex flex-wrap items-center gap-2.5 shrink-0 relative z-30">
+          {/* Minimal Quality Preference Dropdown (YouTube style) */}
+          <div className="relative">
+            <button
+              ref={qualityButtonRef}
+              type="button"
+              onClick={handleToggleQualityDropdown}
+              className={`group relative flex items-center gap-2.5 px-3.5 py-2 rounded-2xl border transition-all duration-300 cursor-pointer select-none backdrop-blur-xl shadow-xs ${
+                showQualityDropdown
+                  ? 'bg-primary-500/15 border-primary-500/50 ring-2 ring-primary-500/20 text-foreground shadow-md'
+                  : 'bg-card/85 hover:bg-card border-card-border/80 hover:border-primary-500/40 text-foreground/90 hover:text-foreground'
+              }`}
+              title="Change download quality or switch to Ask each time"
+              aria-expanded={showQualityDropdown}
+              aria-haspopup="true"
+            >
+              <div className="w-5 h-5 rounded-lg bg-primary-500/15 border border-primary-500/25 flex items-center justify-center text-primary-400 group-hover:scale-105 transition-transform">
+                <SlidersHorizontal className="w-3 h-3" />
+              </div>
+              <div className="flex items-center gap-1.5 text-xs">
+                <span className="text-muted-foreground font-medium hidden xs:inline">Quality:</span>
+                <span className={`font-mono font-bold text-[11px] px-2 py-0.5 rounded-lg border transition-colors ${
+                  rememberQuality
+                    ? 'bg-primary-500/20 text-primary-300 border border-primary-500/30'
+                    : 'bg-emerald-500/15 text-emerald-400 border border-emerald-500/25'
+                }`}>
+                  {rememberQuality ? preferredQuality : 'Ask each time'}
                 </span>
               </div>
-              <p className="text-base sm:text-lg font-black text-foreground mt-0.5">
+              <ChevronDown className={`w-3.5 h-3.5 text-muted-foreground transition-transform duration-300 ${
+                showQualityDropdown ? 'rotate-180 text-primary-400' : 'group-hover:text-foreground'
+              }`} />
+            </button>
+          </div>
+
+          {/* Storage Summary Pill */}
+          <div className="p-2 sm:p-2.5 px-3 rounded-2xl bg-card/80 border border-card-border/80 backdrop-blur-md shadow-sm flex items-center gap-2.5">
+            <div className="w-7 h-7 rounded-xl bg-primary-500/15 border border-primary-500/25 flex items-center justify-center text-primary-600 dark:text-primary-400 shrink-0">
+              <HardDrive className="w-3.5 h-3.5" />
+            </div>
+            <div className="text-xs">
+              <span className="font-bold text-foreground">
                 {formatBytes(storageUsage.usedBytes)}
-              </p>
+              </span>
+              <span className="text-muted-foreground ml-1">
+                ({downloads.length} {downloads.length === 1 ? 'lesson' : 'lessons'})
+              </span>
             </div>
           </div>
 
           {downloads.length > 0 && (
             <button
               onClick={() => setConfirmClearAll(true)}
-              className="text-xs font-semibold text-rose-500 hover:text-rose-400 hover:bg-rose-500/10 px-3 py-1.5 rounded-xl border border-rose-500/20 transition-all flex items-center gap-1.5 cursor-pointer"
+              className="text-xs font-semibold text-rose-500 hover:text-rose-400 hover:bg-rose-500/10 px-3 py-2 rounded-2xl border border-rose-500/20 transition-all flex items-center gap-1.5 cursor-pointer"
             >
               <Trash2 className="w-3.5 h-3.5" />
-              <span>Clear All Downloads</span>
+              <span>Clear</span>
             </button>
           )}
         </div>
       </header>
+
+      {/* Floating Modern Toast Notice via Portal */}
+      {mounted && qualityToast && typeof document !== 'undefined' && createPortal(
+        <div className="fixed top-5 left-1/2 -translate-x-1/2 z-[1000000] max-w-sm sm:max-w-md w-[calc(100%-2rem)] p-3.5 rounded-2xl bg-slate-900/95 border border-emerald-500/40 text-emerald-300 text-xs font-medium shadow-2xl backdrop-blur-2xl flex items-center justify-between gap-3 animate-in fade-in slide-in-from-top-4 duration-300 ring-1 ring-white/10 pointer-events-auto">
+          <div className="flex items-center gap-2.5 min-w-0">
+            <div className="w-7 h-7 rounded-xl bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 flex items-center justify-center shrink-0">
+              <CheckCircle2 className="w-4 h-4" />
+            </div>
+            <span className="leading-snug truncate sm:whitespace-normal">{qualityToast}</span>
+          </div>
+          <button
+            type="button"
+            onClick={() => setQualityToast(null)}
+            className="p-1 rounded-lg text-slate-400 hover:text-white shrink-0 cursor-pointer"
+            aria-label="Dismiss toast"
+          >
+            <X className="w-3.5 h-3.5" />
+          </button>
+        </div>,
+        document.body
+      )}
+
+      {/* Responsive Quality Dropdown Portal (Floating Popover on Desktop & Native Bottom Drawer on Mobile) */}
+      {mounted && showQualityDropdown && typeof document !== 'undefined' && createPortal(
+        <div className="fixed inset-0 z-[999999] pointer-events-none select-none">
+          {/* Mobile Backdrop Overlay */}
+          <div
+            onClick={() => setShowQualityDropdown(false)}
+            className="sm:hidden fixed inset-0 bg-black/75 backdrop-blur-md pointer-events-auto animate-in fade-in duration-200"
+          />
+
+          {/* Menu Card */}
+          <div
+            ref={qualityMenuRef}
+            onClick={(e) => e.stopPropagation()}
+            style={
+              typeof window !== 'undefined' && window.innerWidth >= 640 && dropdownCoords
+                ? {
+                    top: `${dropdownCoords.top}px`,
+                    right: `${dropdownCoords.right}px`,
+                  }
+                : undefined
+            }
+            className="pointer-events-auto fixed bottom-0 inset-x-0 sm:inset-x-auto sm:bottom-auto sm:w-84 max-h-[85vh] sm:max-h-[36rem] overflow-y-auto custom-scrollbar rounded-t-[32px] sm:rounded-2xl bg-[#090d16]/95 dark:bg-[#090d16]/95 border-t sm:border border-slate-700/80 shadow-[0_-15px_40px_rgba(0,0,0,0.85)] sm:shadow-[0_25px_60px_rgba(0,0,0,0.85)] backdrop-blur-2xl p-5 sm:p-3.5 text-foreground ring-1 ring-white/10 animate-in slide-in-from-bottom-8 sm:slide-in-from-bottom-0 sm:fade-in sm:zoom-in-95 duration-200 space-y-3"
+          >
+            {/* Mobile Drawer Pull Indicator */}
+            <div className="sm:hidden flex justify-center pb-1">
+              <div className="w-12 h-1.5 rounded-full bg-slate-600/80" />
+            </div>
+
+            {/* Header */}
+            <div className="flex items-center justify-between pb-2 border-b border-slate-800">
+              <div className="flex items-center gap-2.5">
+                <div className="w-7 h-7 rounded-lg bg-primary-500/20 text-primary-400 border border-primary-500/30 flex items-center justify-center">
+                  <SlidersHorizontal className="w-3.5 h-3.5" />
+                </div>
+                <div>
+                  <h3 className="text-xs font-bold text-white tracking-tight">Download quality</h3>
+                  <p className="text-[10px] text-slate-400">Default for lessons and course sections</p>
+                </div>
+              </div>
+              <button
+                type="button"
+                onClick={() => setShowQualityDropdown(false)}
+                className="p-1 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800/80 transition-colors cursor-pointer"
+                aria-label="Close"
+              >
+                <X className="w-4 h-4" />
+              </button>
+            </div>
+
+            {/* Dynamic Mode: Ask Each Time */}
+            <div className="space-y-1.5">
+              <button
+                type="button"
+                onClick={() => {
+                  handleUpdateQualitySetting('ask_each_time');
+                  setShowQualityDropdown(false);
+                }}
+                className={`w-full p-2.5 rounded-xl border text-left flex items-center justify-between gap-3 transition-all duration-200 cursor-pointer group ${
+                  !rememberQuality
+                    ? 'bg-primary-950/70 border-primary-500/60 ring-1 ring-primary-500/30 shadow-md text-white'
+                    : 'bg-slate-900/50 hover:bg-slate-800/60 border-slate-800 hover:border-slate-700 text-slate-300'
+                }`}
+              >
+                <div className="flex items-center gap-2.5 min-w-0">
+                  <div className={`w-8 h-8 rounded-xl flex items-center justify-center shrink-0 transition-colors ${
+                    !rememberQuality
+                      ? 'bg-primary-500/20 text-primary-300 border border-primary-500/40'
+                      : 'bg-slate-800 text-slate-400 border border-slate-700'
+                  }`}>
+                    <HelpCircle className="w-4 h-4" />
+                  </div>
+                  <div className="min-w-0">
+                    <div className="flex items-center gap-1.5">
+                      <span className="text-xs font-bold truncate">Ask each time</span>
+                      <span className="text-[9px] px-1.5 py-0.2 rounded font-semibold bg-slate-800 text-slate-400 border border-slate-700">Dynamic</span>
+                    </div>
+                    <p className="text-[10px] text-slate-400 truncate mt-0.5">Prompt for resolution on each download</p>
+                  </div>
+                </div>
+                <div className={`w-4 h-4 rounded-full border flex items-center justify-center shrink-0 ${
+                  !rememberQuality
+                    ? 'border-primary-400 bg-primary-500 text-white'
+                    : 'border-slate-700'
+                }`}>
+                  {!rememberQuality && <Check className="w-2.5 h-2.5 stroke-[3]" />}
+                </div>
+              </button>
+            </div>
+
+            {/* Preset Resolutions */}
+            <div className="space-y-1.5 pt-1 border-t border-slate-800/80">
+              <p className="text-[10px] font-bold text-slate-400 uppercase tracking-wider px-1">Preset Resolutions</p>
+
+              {/* Full HD (1080p) */}
+              <button
+                type="button"
+                onClick={() => {
+                  handleUpdateQualitySetting('1080p');
+                  setShowQualityDropdown(false);
+                }}
+                className={`w-full p-2.5 rounded-xl border text-left flex items-center justify-between gap-3 transition-all duration-200 cursor-pointer group ${
+                  rememberQuality && preferredQuality === '1080p'
+                    ? 'bg-primary-950/70 border-primary-500/60 ring-1 ring-primary-500/30 shadow-md text-white'
+                    : 'bg-slate-900/50 hover:bg-slate-800/60 border-slate-800 hover:border-slate-700 text-slate-300'
+                }`}
+              >
+                <div className="flex items-center gap-2.5 min-w-0">
+                  <div className={`w-8 h-8 rounded-xl flex items-center justify-center shrink-0 transition-colors ${
+                    rememberQuality && preferredQuality === '1080p'
+                      ? 'bg-primary-500/20 text-primary-300 border border-primary-500/40'
+                      : 'bg-slate-800 text-slate-400 border border-slate-700'
+                  }`}>
+                    <Tv className="w-4 h-4" />
+                  </div>
+                  <div className="min-w-0">
+                    <div className="flex items-center gap-1.5">
+                      <span className="text-xs font-bold truncate">Full HD (1080p)</span>
+                      <span className="text-[9px] px-1.5 py-0.2 rounded font-extrabold bg-gradient-to-r from-indigo-500/20 to-purple-500/20 text-purple-300 border border-purple-500/30">Crisp</span>
+                    </div>
+                    <p className="text-[10px] text-slate-400 truncate mt-0.5">~10–15 MB/lesson • Crisp maximum quality</p>
+                  </div>
+                </div>
+                <div className={`w-4 h-4 rounded-full border flex items-center justify-center shrink-0 ${
+                  rememberQuality && preferredQuality === '1080p'
+                    ? 'border-primary-400 bg-primary-500 text-white'
+                    : 'border-slate-700'
+                }`}>
+                  {rememberQuality && preferredQuality === '1080p' && <Check className="w-2.5 h-2.5 stroke-[3]" />}
+                </div>
+              </button>
+
+              {/* High (720p) */}
+              <button
+                type="button"
+                onClick={() => {
+                  handleUpdateQualitySetting('720p');
+                  setShowQualityDropdown(false);
+                }}
+                className={`w-full p-2.5 rounded-xl border text-left flex items-center justify-between gap-3 transition-all duration-200 cursor-pointer group ${
+                  rememberQuality && preferredQuality === '720p'
+                    ? 'bg-primary-950/70 border-primary-500/60 ring-1 ring-primary-500/30 shadow-md text-white'
+                    : 'bg-slate-900/50 hover:bg-slate-800/60 border-slate-800 hover:border-slate-700 text-slate-300'
+                }`}
+              >
+                <div className="flex items-center gap-2.5 min-w-0">
+                  <div className={`w-8 h-8 rounded-xl flex items-center justify-center shrink-0 transition-colors ${
+                    rememberQuality && preferredQuality === '720p'
+                      ? 'bg-primary-500/20 text-primary-300 border border-primary-500/40'
+                      : 'bg-slate-800 text-slate-400 border border-slate-700'
+                  }`}>
+                    <Film className="w-4 h-4" />
+                  </div>
+                  <div className="min-w-0">
+                    <div className="flex items-center gap-1.5">
+                      <span className="text-xs font-bold truncate">High (720p)</span>
+                      <span className="text-[9px] px-1.5 py-0.2 rounded font-extrabold bg-primary-500/20 text-primary-300 border border-primary-500/30">Recommended</span>
+                    </div>
+                    <p className="text-[10px] text-slate-400 truncate mt-0.5">~6–10 MB/lesson • Best speed & clarity</p>
+                  </div>
+                </div>
+                <div className={`w-4 h-4 rounded-full border flex items-center justify-center shrink-0 ${
+                  rememberQuality && preferredQuality === '720p'
+                    ? 'border-primary-400 bg-primary-500 text-white'
+                    : 'border-slate-700'
+                }`}>
+                  {rememberQuality && preferredQuality === '720p' && <Check className="w-2.5 h-2.5 stroke-[3]" />}
+                </div>
+              </button>
+
+              {/* Medium (540p) */}
+              <button
+                type="button"
+                onClick={() => {
+                  handleUpdateQualitySetting('540p');
+                  setShowQualityDropdown(false);
+                }}
+                className={`w-full p-2.5 rounded-xl border text-left flex items-center justify-between gap-3 transition-all duration-200 cursor-pointer group ${
+                  rememberQuality && preferredQuality === '540p'
+                    ? 'bg-primary-950/70 border-primary-500/60 ring-1 ring-primary-500/30 shadow-md text-white'
+                    : 'bg-slate-900/50 hover:bg-slate-800/60 border-slate-800 hover:border-slate-700 text-slate-300'
+                }`}
+              >
+                <div className="flex items-center gap-2.5 min-w-0">
+                  <div className={`w-8 h-8 rounded-xl flex items-center justify-center shrink-0 transition-colors ${
+                    rememberQuality && preferredQuality === '540p'
+                      ? 'bg-primary-500/20 text-primary-300 border border-primary-500/40'
+                      : 'bg-slate-800 text-slate-400 border border-slate-700'
+                  }`}>
+                    <Layers className="w-4 h-4" />
+                  </div>
+                  <div className="min-w-0">
+                    <div className="flex items-center gap-1.5">
+                      <span className="text-xs font-bold truncate">Medium (540p)</span>
+                      <span className="text-[9px] px-1.5 py-0.2 rounded font-semibold bg-slate-800 text-slate-300 border border-slate-700">Balanced</span>
+                    </div>
+                    <p className="text-[10px] text-slate-400 truncate mt-0.5">~6–9 MB/lesson • Balanced data & quality</p>
+                  </div>
+                </div>
+                <div className={`w-4 h-4 rounded-full border flex items-center justify-center shrink-0 ${
+                  rememberQuality && preferredQuality === '540p'
+                    ? 'border-primary-400 bg-primary-500 text-white'
+                    : 'border-slate-700'
+                }`}>
+                  {rememberQuality && preferredQuality === '540p' && <Check className="w-2.5 h-2.5 stroke-[3]" />}
+                </div>
+              </button>
+
+              {/* Standard (360p) */}
+              <button
+                type="button"
+                onClick={() => {
+                  handleUpdateQualitySetting('360p');
+                  setShowQualityDropdown(false);
+                }}
+                className={`w-full p-2.5 rounded-xl border text-left flex items-center justify-between gap-3 transition-all duration-200 cursor-pointer group ${
+                  rememberQuality && preferredQuality === '360p'
+                    ? 'bg-primary-950/70 border-primary-500/60 ring-1 ring-primary-500/30 shadow-md text-white'
+                    : 'bg-slate-900/50 hover:bg-slate-800/60 border-slate-800 hover:border-slate-700 text-slate-300'
+                }`}
+              >
+                <div className="flex items-center gap-2.5 min-w-0">
+                  <div className={`w-8 h-8 rounded-xl flex items-center justify-center shrink-0 transition-colors ${
+                    rememberQuality && preferredQuality === '360p'
+                      ? 'bg-primary-500/20 text-primary-300 border border-primary-500/40'
+                      : 'bg-slate-800 text-slate-400 border border-slate-700'
+                  }`}>
+                    <HardDrive className="w-4 h-4" />
+                  </div>
+                  <div className="min-w-0">
+                    <div className="flex items-center gap-1.5">
+                      <span className="text-xs font-bold truncate">Standard (360p)</span>
+                      <span className="text-[9px] px-1.5 py-0.2 rounded font-semibold bg-slate-800 text-slate-400 border border-slate-700">Data Saver</span>
+                    </div>
+                    <p className="text-[10px] text-slate-400 truncate mt-0.5">~3–5 MB/lesson • Fast on low bandwidth</p>
+                  </div>
+                </div>
+                <div className={`w-4 h-4 rounded-full border flex items-center justify-center shrink-0 ${
+                  rememberQuality && preferredQuality === '360p'
+                    ? 'border-primary-400 bg-primary-500 text-white'
+                    : 'border-slate-700'
+                }`}>
+                  {rememberQuality && preferredQuality === '360p' && <Check className="w-2.5 h-2.5 stroke-[3]" />}
+                </div>
+              </button>
+            </div>
+
+            {/* Footer Informational Callout */}
+            <div className="p-2.5 rounded-xl bg-slate-900/80 border border-slate-800 text-[11px] text-slate-400 flex items-start gap-2 leading-relaxed">
+              <Info className="w-3.5 h-3.5 text-primary-400 shrink-0 mt-0.5" />
+              <span>
+                If your selected resolution is not available for a specific video, PrepTea will prompt you with the available options or automatically choose the closest quality.
+              </span>
+            </div>
+          </div>
+        </div>,
+        document.body
+      )}
 
       {/* Confirmation Modal for Clear All */}
       {confirmClearAll && (
@@ -589,6 +1165,7 @@ export function DownloadsClient() {
                 courseSlug={activePlaybackVideo.courseSlug}
                 sectionTitle={activePlaybackVideo.sectionTitle}
                 blobUrl={activePlaybackUrl || undefined}
+                downloadedQuality={activePlaybackVideo.quality}
                 onClose={handleClosePlayer}
                 onNext={nextVideo ? handleSkipNext : undefined}
                 onPrev={prevVideo ? handleSkipPrev : undefined}
@@ -635,6 +1212,7 @@ export function DownloadsClient() {
                   onChange={(e) => setSortBy(e.target.value as any)}
                   className="bg-transparent text-foreground font-semibold focus:outline-none cursor-pointer text-xs"
                 >
+                  <option value="syllabus" className="bg-card text-foreground">Syllabus Order</option>
                   <option value="recent" className="bg-card text-foreground">Recently Saved</option>
                   <option value="title" className="bg-card text-foreground">Title (A-Z)</option>
                   <option value="size" className="bg-card text-foreground">Largest Size</option>
@@ -931,7 +1509,7 @@ export function DownloadsClient() {
                         {/* Section Lessons List */}
                         {!isCollapsed && (
                           <div className="p-3 sm:p-4 space-y-2 border-t border-card-border/60">
-                            {sec.videos.map((video) => {
+                            {sec.videos.map((video, vIdx) => {
                               const isCurrentlyPlaying = activePlaybackVideo?.videoId === video.videoId;
                               return (
                                 <article
@@ -974,6 +1552,9 @@ export function DownloadsClient() {
                                     {/* Lesson Info */}
                                     <div className="min-w-0 space-y-1">
                                       <div className="flex items-center gap-2">
+                                        <span className="w-5 h-5 rounded-md bg-white/[0.05] border border-white/[0.08] text-[10px] font-mono font-bold text-muted-foreground flex items-center justify-center shrink-0">
+                                          {vIdx + 1}
+                                        </span>
                                         <h4 className="text-xs sm:text-sm font-bold text-foreground line-clamp-1 group-hover:text-primary-500 transition-colors">
                                           {video.unitTitle}
                                         </h4>
@@ -983,10 +1564,14 @@ export function DownloadsClient() {
                                           </span>
                                         )}
                                       </div>
-                                      <div className="flex items-center gap-2 text-[10px] sm:text-[11px] text-muted-foreground font-medium">
+                                      <div className="flex items-center gap-2 text-[10px] sm:text-[11px] text-muted-foreground font-medium flex-wrap">
                                         <span className="px-1.5 py-0.5 rounded bg-primary-500/10 text-primary-400 font-semibold border border-primary-500/20">
                                           {video.quality}
                                         </span>
+                                        {video.durationSeconds > 0 && (
+                                          <span>{formatDuration(video.durationSeconds)}</span>
+                                        )}
+                                        <span>•</span>
                                         <span>{formatBytes(video.sizeBytes)}</span>
                                         <span>•</span>
                                         <span>{formatDate(video.downloadedAt)}</span>
@@ -1209,17 +1794,6 @@ export function DownloadsClient() {
             </article>
           );
         })}
-        </div>
-      )}
-
-      {/* Offline Banner at Bottom */}
-      {!isOnline && (
-        <div className="fixed bottom-0 left-0 right-0 z-50 p-4 bg-rose-600/95 backdrop-blur-md border-t border-rose-500/50 shadow-2xl flex items-center justify-center gap-3 animate-in slide-in-from-bottom-5">
-          <WifiOff className="w-5 h-5 text-white animate-pulse" />
-          <div>
-            <p className="text-sm font-bold text-white">You are offline</p>
-            <p className="text-[11px] font-medium text-rose-100">Enjoy your downloaded videos locally.</p>
-          </div>
         </div>
       )}
     </main>

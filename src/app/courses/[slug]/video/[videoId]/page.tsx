@@ -7,21 +7,31 @@ import { hasCoursesAccess, isCourseSlugUnlocked } from '@/lib/coursesAuth';
 import { CustomVideoPlayer } from '@/components/CustomVideoPlayer';
 import { VideoPlaylistSidebar } from '@/components/VideoPlaylistSidebar';
 import { ArrowLeft, Lock, VideoOff } from 'lucide-react';
+import { getAllAssessments } from '@/lib/questionsData';
 import { CourseSectionUnit } from '@/lib/types';
 
 import { VideoViewContainer } from '@/components/VideoViewContainer';
 
-export const revalidate = 0;
 
 interface PageProps {
   params: Promise<{
     slug: string;
     videoId: string;
   }>;
+  searchParams?: Promise<{
+    mode?: string;
+  }>;
 }
 
-export default async function VideoPlayerPage({ params }: PageProps) {
+export default async function VideoPlayerPage({ params, searchParams }: PageProps) {
   const { slug, videoId } = await params;
+  const resolvedSearchParams = searchParams ? await searchParams : undefined;
+  const initialMode =
+    resolvedSearchParams?.mode === 'calendar'
+      ? 'calendar'
+      : resolvedSearchParams?.mode === 'default'
+      ? 'default'
+      : undefined;
 
   // 1. Session verification & Course catalog access check
   const session = await auth();
@@ -67,9 +77,12 @@ export default async function VideoPlayerPage({ params }: PageProps) {
     );
   }
 
-  // Find all playable video units in curriculum order (both Wistia sourceid and YouTube embed units)
+  // Find all playable video units in curriculum order (both ivideo and youtube)
   const allVideoUnits = course.sections.flatMap(section => 
-    section.units.filter(unit => !!unit.sourceid || unit.type === 'youtube' || (unit.data && !!unit.data.embed))
+    section.units.filter(unit => {
+      const t = (unit.objectType || unit.type || '').toLowerCase();
+      return t === 'ivideo' || t === 'youtube' || !!unit.sourceid || (unit.data && !!unit.data.embed);
+    })
   );
 
   const currentIdx = allVideoUnits.findIndex(u => (u.sourceid && u.sourceid === videoId) || u.id === videoId);
@@ -108,8 +121,8 @@ export default async function VideoPlayerPage({ params }: PageProps) {
   }
 
   const embedHtml = currentUnit?.data?.embed;
-  const isYouTubeUnit = currentUnit?.type === 'youtube' || currentUnit?.icon === 'yt' || (currentUnit?.subtitle && currentUnit.subtitle.toLowerCase().includes('youtube'));
-  const hasVideoSource = !!(currentUnit?.sourceid && currentUnit.sourceid.trim() !== '') || isYouTubeUnit || !!embedHtml;
+  const isYouTubeUnit = (currentUnit?.objectType || currentUnit?.type || '').toLowerCase() === 'youtube' || !!embedHtml;
+  const hasVideoSource = !!(currentUnit?.sourceid && currentUnit.sourceid.trim() !== '') || isYouTubeUnit;
 
   if (currentUnit && !hasVideoSource) {
     return (
@@ -137,6 +150,7 @@ export default async function VideoPlayerPage({ params }: PageProps) {
       </div>
     );
   }
+  const availableTests = getAllAssessments();
 
   return (
     <VideoViewContainer
@@ -149,6 +163,8 @@ export default async function VideoPlayerPage({ params }: PageProps) {
       nextVideoUrl={nextVideoUrl || undefined}
       prevTitle={prevTitle || undefined}
       nextTitle={nextTitle || undefined}
+      availableTests={availableTests}
+      initialMode={initialMode}
     />
   );
 }

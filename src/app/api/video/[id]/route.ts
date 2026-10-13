@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import { auth } from '@/auth';
+import { createStreamTicket } from '@/lib/videoStreamToken';
 
 // In-memory cache for parsed video metadata (1 hour TTL)
 const videoCache = new Map<string, { data: any; expiry: number }>();
@@ -29,7 +30,7 @@ export async function GET(
         success: true,
         video: cached.data,
       }, {
-        headers: { 'Cache-Control': 'private, max-age=300, stale-while-revalidate=600' }
+        headers: { 'Cache-Control': 'public, s-maxage=86400, stale-while-revalidate=604800, max-age=3600' }
       });
     }
 
@@ -74,25 +75,39 @@ export async function GET(
     
     // 3. Extract and filter mp4 video assets
     const rawAssets = media.assets || [];
-    const videoAssets = rawAssets
-      .filter((asset: any) => {
-        // Find playable MP4 video streams
-        const hasContainer = asset.container === 'mp4' || asset.ext === 'mp4';
-        const isVideoType = asset.type?.toLowerCase().includes('video') || asset.type?.toLowerCase().includes('mp4') || asset.type === 'iphone_video';
-        return hasContainer || isVideoType;
-      })
-      .map((asset: any) => ({
-        type: asset.type || 'mp4_video',
-        slug: asset.slug || '',
-        displayName: asset.display_name || 'Standard',
-        width: asset.width || 0,
-        height: asset.height || 0,
-        sizeBytes: asset.size || 0,
-        bitrate: asset.bitrate || 0,
-        url: asset.url || '',
-      }))
-      // Sort qualities descending by height (e.g. 1080p -> 720p -> 540p -> 360p)
-      .sort((a: any, b: any) => b.height - a.height);
+    const playableRawAssets = rawAssets.filter((asset: any) => {
+      const hasContainer = asset.container === 'mp4' || asset.ext === 'mp4';
+      const isVideoType =
+        asset.type?.toLowerCase().includes('video') ||
+        asset.type?.toLowerCase().includes('mp4') ||
+        asset.type === 'iphone_video';
+      return hasContainer || isVideoType;
+    });
+
+    const videoAssets = (
+      await Promise.all(
+        playableRawAssets.map(async (asset: any) => {
+          const height = asset.height || 0;
+          const rawName = (asset.display_name || '').trim();
+          const isOriginal = rawName.toLowerCase().includes('original');
+          const displayName = (!isOriginal && rawName) ? rawName : (height ? `${height}p` : 'Standard');
+          const streamTicket = await createStreamTicket(asset.url || '', id, height);
+          const internalStreamUrl = `/api/video/stream?ticket=${encodeURIComponent(streamTicket)}`;
+
+          return {
+            type: asset.type || 'mp4_video',
+            slug: asset.slug || (height ? `${height}p` : 'standard'),
+            displayName,
+            width: asset.width || 0,
+            height,
+            sizeBytes: asset.size || 0,
+            bitrate: asset.bitrate || 0,
+            url: internalStreamUrl,
+            streamUrl: internalStreamUrl,
+          };
+        })
+      )
+    ).sort((a: any, b: any) => b.height - a.height);
 
     // Get thumbnail image
     const thumbnailAsset = rawAssets.find((asset: any) => asset.type === 'still_image' || asset.slug?.includes('still'));
@@ -115,7 +130,7 @@ export async function GET(
       success: true,
       video: videoPayload,
     }, {
-      headers: { 'Cache-Control': 'private, max-age=300, stale-while-revalidate=600' }
+      headers: { 'Cache-Control': 'public, s-maxage=86400, stale-while-revalidate=604800, max-age=3600' }
     });
   } catch (error) {
     console.error('Error fetching wistia video metadata:', error);

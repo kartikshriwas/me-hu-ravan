@@ -201,7 +201,7 @@ interface AdminUserItem {
 
 export default function AdminDashboardPage() {
   const { user: authUser, loading: authLoading } = useAuth();
-  const [activeTab, setActiveTab] = useState<'overview' | 'codes' | 'events' | 'emails' | 'users' | 'active-sessions' | 'all-sessions' | 'reports'>('overview');
+  const [activeTab, setActiveTab] = useState<'overview' | 'codes' | 'emails' | 'users' | 'active-sessions' | 'all-sessions' | 'reports'>('overview');
 
   const [stats, setStats] = useState<AdminStats | null>(null);
   const [codes, setCodes] = useState<RedeemCodeItem[]>([]);
@@ -262,6 +262,11 @@ export default function AdminDashboardPage() {
   const [globalFreeUntilDate, setGlobalFreeUntilDate] = useState<string | null>(null);
   const [updatingGlobalFree, setUpdatingGlobalFree] = useState<boolean>(false);
 
+  // Auto Demo Settings
+  const [autoDemoEnabled, setAutoDemoEnabled] = useState<boolean>(false);
+  const [autoDemoDuration, setAutoDemoDuration] = useState<number>(15);
+  const [updatingAutoDemo, setUpdatingAutoDemo] = useState<boolean>(false);
+
   // User Search & Code Copy
   const [userQuery, setUserQuery] = useState('');
   const [copiedCodeId, setCopiedCodeId] = useState('');
@@ -315,14 +320,21 @@ export default function AdminDashboardPage() {
             setIsGlobalFreeActive(!!freeJson.isGlobalFree);
             setGlobalFreeUntilDate(freeJson.freeUntil ? new Date(freeJson.freeUntil).toLocaleString() : null);
           }
+
+          const autoDemoRes = await fetch('/api/admin/auto-demo');
+          const autoDemoJson = await autoDemoRes.json();
+          if (autoDemoJson.success) {
+            setAutoDemoEnabled(!!autoDemoJson.autoDemoEnabled);
+            setAutoDemoDuration(autoDemoJson.autoDemoDurationMinutes || 15);
+          }
+
+          const eventRes = await fetch('/api/admin/events');
+          const eventJson = await eventRes.json();
+          if (eventJson.success) setEvents(eventJson.events);
         } else if (activeTab === 'codes') {
           const res = await fetch('/api/admin/codes');
           const json = await res.json();
           if (json.success) setCodes(json.codes);
-        } else if (activeTab === 'events') {
-          const res = await fetch('/api/admin/events');
-          const json = await res.json();
-          if (json.success) setEvents(json.events);
         } else if (activeTab === 'emails') {
           const res = await fetch('/api/admin/emails');
           const json = await res.json();
@@ -446,7 +458,7 @@ export default function AdminDashboardPage() {
       } finally {
         setTimeout(() => setRefreshingSessions(false), 500);
       }
-    }, 15000);
+    }, 45000);
 
     return () => clearInterval(interval);
   }, [activeTab, authUser, isAdmin]);
@@ -593,6 +605,34 @@ export default function AdminDashboardPage() {
       setErrorMsg('Error setting platform global free status');
     } finally {
       setUpdatingGlobalFree(false);
+    }
+  };
+
+  // Update Auto Demo Settings for New Users
+  const handleSaveAutoDemo = async (enabled: boolean, minutesToSet: number) => {
+    try {
+      setUpdatingAutoDemo(true);
+      setErrorMsg('');
+      setFeedbackMsg('');
+
+      const res = await fetch('/api/admin/auto-demo', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ autoDemoEnabled: enabled, autoDemoDurationMinutes: minutesToSet }),
+      });
+
+      const json = await res.json();
+      if (json.success) {
+        setFeedbackMsg(json.message);
+        setAutoDemoEnabled(!!json.autoDemoEnabled);
+        setAutoDemoDuration(json.autoDemoDurationMinutes || 15);
+      } else {
+        setErrorMsg(json.error || 'Failed to update auto-demo settings');
+      }
+    } catch {
+      setErrorMsg('Error updating auto-demo settings');
+    } finally {
+      setUpdatingAutoDemo(false);
     }
   };
 
@@ -812,6 +852,45 @@ export default function AdminDashboardPage() {
     }
   };
 
+  const handleDeleteUser = async (targetEmail: string) => {
+    if (!targetEmail) return;
+    const confirmed = window.confirm(
+      `⚠️ PERMANENT USER PURGE & DELETION\n\nAre you sure you want to permanently delete "${targetEmail}"?\n\nThis will completely delete:\n• All user profile & account data\n• All practice tests, answers & leaderboard scores\n• All active sessions & daily activity logs\n• All preapproved & premium access rights\n\nIf the user logs in again, they will start as a brand new account from scratch.`
+    );
+    if (!confirmed) return;
+
+    try {
+      setErrorMsg('');
+      setFeedbackMsg('');
+
+      const res = await fetch('/api/admin/users', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          action: 'delete_user',
+          targetEmail,
+        }),
+      });
+
+      const json = await res.json();
+      if (json.success) {
+        setFeedbackMsg(json.message);
+        const userRes = await fetch('/api/admin/users');
+        const userJson = await userRes.json();
+        if (userJson.success) setUsers(userJson.users);
+
+        if (inspectingUserEmail?.toLowerCase() === targetEmail.toLowerCase()) {
+          setInspectingUserEmail(null);
+          setInspectData(null);
+        }
+      } else {
+        setErrorMsg(json.error || 'Failed to delete user');
+      }
+    } catch {
+      setErrorMsg('Error deleting user');
+    }
+  };
+
   const openPermissionModal = (u: AdminUserItem) => {
     setEditingUserForPerms(u);
     setSelectedPerms(u.adminPermissions && u.adminPermissions.length > 0
@@ -929,7 +1008,6 @@ export default function AdminDashboardPage() {
           { id: 'active-sessions', label: 'Live Monitor 🟢', icon: Activity, allowed: canManageUsers },
           { id: 'all-sessions', label: 'All Sessions Log 🌐', icon: Globe, allowed: canManageUsers },
           { id: 'codes', label: 'Redeem Codes', icon: Key, allowed: canManageCodes },
-          { id: 'events', label: 'Launch Events', icon: Rocket, allowed: canManageEvents },
           { id: 'emails', label: 'Bulk CSV / Emails', icon: Mail, allowed: canManageEmails },
           { id: 'users', label: 'User Roles & Perms', icon: Users, allowed: canManageUsers },
           { id: 'reports', label: 'Reports', icon: ShieldAlert, allowed: canManageUsers },
@@ -1083,6 +1161,222 @@ export default function AdminDashboardPage() {
               </div>
             </div>
           </div>
+
+          {/* Auto-Grant Demo Access to New Users Feature Card */}
+          <div className="glass-panel rounded-3xl p-6 border border-violet-500/30 space-y-4 bg-card shadow-xl">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-card-border">
+              <div className="space-y-1">
+                <div className="flex items-center gap-2">
+                  <BookOpen className="w-5 h-5 text-violet-500 animate-pulse" />
+                  <h3 className="text-base font-bold text-foreground">Auto-Grant Demo to New Emails</h3>
+                </div>
+                <p className="text-xs text-foreground/80">
+                  Automatically give demo access & unlock course options for candidate emails who have never had premium/demo in the past when they log in or come online.
+                </p>
+              </div>
+
+              {/* Status Badge */}
+              <div className="shrink-0">
+                {autoDemoEnabled ? (
+                  <div className="px-3.5 py-1.5 rounded-xl bg-violet-500/20 border border-violet-500/40 text-violet-600 dark:text-violet-300 text-xs font-bold flex items-center gap-1.5 shadow-lg shadow-violet-950/50">
+                    <span className="w-2 h-2 rounded-full bg-violet-400 animate-ping" />
+                    <span>Auto Demo ACTIVE ({autoDemoDuration} mins)</span>
+                  </div>
+                ) : (
+                  <div className="px-3.5 py-1.5 rounded-xl bg-slate-800/80 border border-slate-700 text-muted-foreground text-xs font-semibold flex items-center gap-1.5">
+                    <Lock className="w-3.5 h-3.5 text-muted-foreground" />
+                    <span>Auto Demo Disabled</span>
+                  </div>
+                )}
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-end pt-1">
+              <div className="space-y-2 md:col-span-2">
+                <label className="text-xs font-semibold text-foreground/80 flex items-center gap-1.5">
+                  <Clock className="w-3.5 h-3.5 text-violet-500" />
+                  <span>Choose Demo Duration (Minutes)</span>
+                </label>
+
+                <div className="flex flex-wrap items-center gap-2">
+                  {[15, 30, 60, 120, 1440].map((m) => (
+                    <button
+                      key={m}
+                      type="button"
+                      onClick={() => setAutoDemoDuration(m)}
+                      className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all border ${
+                        autoDemoDuration === m
+                          ? 'bg-violet-600 text-white border-violet-400 shadow-md shadow-violet-950/50'
+                          : 'bg-card/90 text-foreground/80 border-card-border hover:bg-slate-800'
+                      }`}
+                    >
+                      {m >= 1440 ? `${Math.floor(m / 1440)} Day` : m >= 60 ? `${Math.floor(m / 60)} hr` : `${m} mins`}
+                    </button>
+                  ))}
+
+                  <div className="flex items-center gap-1.5 bg-card border border-card-border rounded-xl px-2.5 py-1 text-xs">
+                    <span className="text-muted-foreground font-semibold">Custom:</span>
+                    <input
+                      type="number"
+                      min="1"
+                      max="525600"
+                      value={autoDemoDuration}
+                      onChange={(e) => setAutoDemoDuration(Math.max(1, parseInt(e.target.value) || 1))}
+                      className="w-16 bg-transparent text-foreground font-bold outline-none text-center no-spin"
+                    />
+                    <span className="text-muted-foreground font-semibold">Mins</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-2">
+                <button
+                  type="button"
+                  disabled={updatingAutoDemo || !canManageGlobalFree}
+                  onClick={() => handleSaveAutoDemo(true, autoDemoDuration)}
+                  className="flex-1 px-4 py-2.5 rounded-xl bg-violet-600 hover:bg-violet-500 text-white font-bold text-xs shadow-lg shadow-violet-950/40 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-1.5"
+                  title={!canManageGlobalFree ? 'Permission required: manage_global_free' : ''}
+                >
+                  <BookOpen className="w-4 h-4 text-violet-200" />
+                  <span>{updatingAutoDemo ? 'Updating...' : `Enable Auto Demo (${autoDemoDuration} Mins)`}</span>
+                </button>
+
+                {autoDemoEnabled && (
+                  <button
+                    type="button"
+                    disabled={updatingAutoDemo || !canManageGlobalFree}
+                    onClick={() => handleSaveAutoDemo(false, autoDemoDuration)}
+                    className="px-3 py-2.5 rounded-xl bg-rose-500/20 hover:bg-rose-500/30 border border-rose-500/30 text-rose-600 dark:text-rose-300 font-bold text-xs transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                    title={!canManageGlobalFree ? 'Permission required: manage_global_free' : 'Disable auto-grant demo for new users'}
+                  >
+                    Deactivate
+                  </button>
+                )}
+              </div>
+            </div>
+          </div>
+
+          {/* Launch Event Campaigns Section (Merged into Overview) */}
+          {canManageEvents && (
+            <div className="space-y-6 pt-2 border-t border-card-border/60">
+              {/* Create Launch Event Form */}
+              <div className="glass-panel rounded-3xl p-6 sm:p-8 border border-card-border space-y-4">
+                <h2 className="text-base sm:text-lg font-bold text-foreground flex items-center gap-2">
+                  <Rocket className="w-5 h-5 text-amber-600 dark:text-amber-400" />
+                  <span>Launch Event Creator (&quot;First N Members Get Free Premium&quot;)</span>
+                </h2>
+
+                <form onSubmit={handleCreateEvent} className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+                  <div className="sm:col-span-2">
+                    <label className="block text-[11px] font-semibold text-muted-foreground mb-1">Event Title</label>
+                    <input
+                      type="text"
+                      value={eventTitle}
+                      onChange={(e) => setEventTitle(e.target.value)}
+                      className="w-full px-3 py-2 rounded-xl bg-card border border-card-border text-xs font-bold text-foreground"
+                      placeholder="e.g. Next 100 New Users Get Yearly Pro"
+                      required
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-[11px] font-semibold text-muted-foreground mb-1">Max Users Claim</label>
+                    <input
+                      type="number"
+                      min="1"
+                      value={eventMaxClaims}
+                      onChange={(e) => setEventMaxClaims(parseInt(e.target.value) || 100)}
+                      className="w-full px-3 py-2 rounded-xl bg-card border border-card-border text-xs font-bold text-foreground"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-[11px] font-semibold text-muted-foreground mb-1">Duration (Days)</label>
+                    <select
+                      value={eventDuration}
+                      onChange={(e) => setEventDuration(parseInt(e.target.value))}
+                      className="w-full px-3 py-2 rounded-xl bg-card border border-card-border text-xs font-bold text-foreground"
+                    >
+                      <option value={30}>30 Days</option>
+                      <option value={90}>90 Days</option>
+                      <option value={365}>365 Days (1 Year)</option>
+                      <option value={3650}>Lifetime</option>
+                    </select>
+                  </div>
+
+                  <div className="sm:col-span-2 md:col-span-4 flex justify-end">
+                    <button
+                      type="submit"
+                      disabled={creatingEvent || !eventTitle.trim()}
+                      className="px-6 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-black font-bold text-xs shadow-lg shadow-amber-500/20 transition-all flex items-center gap-1.5"
+                    >
+                      <Rocket className="w-4 h-4" />
+                      <span>{creatingEvent ? 'Creating Event...' : 'Launch Event'}</span>
+                    </button>
+                  </div>
+                </form>
+              </div>
+
+              {/* Active Launch Events Grid */}
+              <div className="space-y-4">
+                <h3 className="text-base font-bold text-foreground">Active Launch Campaigns ({events.length})</h3>
+
+                {events.length === 0 ? (
+                  <div className="p-8 text-center glass-panel rounded-3xl space-y-2">
+                    <p className="text-xs text-muted-foreground">No active launch campaigns created yet.</p>
+                  </div>
+                ) : (
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    {events.map((ev) => {
+                      const percent = Math.min(Math.round((ev.claimedCount / ev.maxClaimCount) * 100), 100);
+                      return (
+                        <div key={ev.id} className="glass-card rounded-3xl p-6 border border-card-border space-y-4 relative overflow-hidden">
+                          <div className="flex items-start justify-between gap-2">
+                            <div>
+                              <h4 className="text-base font-bold text-foreground">{ev.title}</h4>
+                              <p className="text-xs text-muted-foreground">
+                                Duration: {ev.durationDays >= 3650 ? 'Lifetime' : `${ev.durationDays} Days`}
+                              </p>
+                            </div>
+
+                            <button
+                              onClick={() => handleToggleEvent(ev.id)}
+                              className={`px-3 py-1 rounded-full text-xs font-bold border transition-colors ${
+                                ev.isActive
+                                  ? 'bg-emerald-500/20 text-emerald-600 dark:text-emerald-300 border-emerald-500/40 hover:bg-emerald-500/30'
+                                  : 'bg-slate-800 text-muted-foreground border-slate-700 hover:bg-slate-700'
+                              }`}
+                            >
+                              {ev.isActive ? 'Active' : 'Paused'}
+                            </button>
+                          </div>
+
+                          {/* Progress Bar */}
+                          <div className="space-y-1.5">
+                            <div className="flex justify-between text-xs font-semibold">
+                              <span className="text-foreground/80">Claims Progress</span>
+                              <span className="text-amber-600 dark:text-amber-400">{ev.claimedCount} / {ev.maxClaimCount} ({percent}%)</span>
+                            </div>
+                            <div className="w-full h-3 rounded-full bg-card overflow-hidden border border-card-border">
+                              <div
+                                className="h-full bg-amber-500 transition-all duration-500"
+                                style={{ width: `${percent}%` }}
+                              />
+                            </div>
+                          </div>
+
+                          <div className="text-[11px] text-slate-500 pt-2 border-t border-card-border/80 flex items-center justify-between">
+                            <span>Created by: {ev.createdBy}</span>
+                            <span>{ev.claimedUsers.length} Users Claimed</span>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                )}
+              </div>
+            </div>
+          )}
         </div>
       )}
 
@@ -2157,129 +2451,7 @@ export default function AdminDashboardPage() {
         </div>
       )}
 
-      {/* TAB 3: LAUNCH EVENTS */}
-      {activeTab === 'events' && (
-        <div className="space-y-6">
-          {/* Create Launch Event Form */}
-          <div className="glass-panel rounded-3xl p-6 sm:p-8 border border-card-border space-y-4">
-            <h2 className="text-base sm:text-lg font-bold text-foreground flex items-center gap-2">
-              <Rocket className="w-5 h-5 text-amber-600 dark:text-amber-400" />
-              <span>Launch Event Creator (&quot;First N Members Get Free Premium&quot;)</span>
-            </h2>
-
-            <form onSubmit={handleCreateEvent} className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
-              <div className="sm:col-span-2">
-                <label className="block text-[11px] font-semibold text-muted-foreground mb-1">Event Title</label>
-                <input
-                  type="text"
-                  value={eventTitle}
-                  onChange={(e) => setEventTitle(e.target.value)}
-                  className="w-full px-3 py-2 rounded-xl bg-card border border-card-border text-xs font-bold text-foreground"
-                  placeholder="e.g. Next 100 New Users Get Yearly Pro"
-                  required
-                />
-              </div>
-
-              <div>
-                <label className="block text-[11px] font-semibold text-muted-foreground mb-1">Max Users Claim</label>
-                <input
-                  type="number"
-                  min="1"
-                  value={eventMaxClaims}
-                  onChange={(e) => setEventMaxClaims(parseInt(e.target.value) || 100)}
-                  className="w-full px-3 py-2 rounded-xl bg-card border border-card-border text-xs font-bold text-foreground"
-                />
-              </div>
-
-              <div>
-                <label className="block text-[11px] font-semibold text-muted-foreground mb-1">Duration (Days)</label>
-                <select
-                  value={eventDuration}
-                  onChange={(e) => setEventDuration(parseInt(e.target.value))}
-                  className="w-full px-3 py-2 rounded-xl bg-card border border-card-border text-xs font-bold text-foreground"
-                >
-                  <option value={30}>30 Days</option>
-                  <option value={90}>90 Days</option>
-                  <option value={365}>365 Days (1 Year)</option>
-                  <option value={3650}>Lifetime</option>
-                </select>
-              </div>
-
-              <div className="sm:col-span-2 md:col-span-4 flex justify-end">
-                <button
-                  type="submit"
-                  disabled={creatingEvent || !eventTitle.trim()}
-                  className="px-6 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-black font-bold text-xs shadow-lg shadow-amber-500/20 transition-all flex items-center gap-1.5"
-                >
-                  <Rocket className="w-4 h-4" />
-                  <span>{creatingEvent ? 'Creating Event...' : 'Launch Event'}</span>
-                </button>
-              </div>
-            </form>
-          </div>
-
-          {/* Active Launch Events Grid */}
-          <div className="space-y-4">
-            <h3 className="text-base font-bold text-foreground">Active Launch Campaigns ({events.length})</h3>
-
-            {events.length === 0 ? (
-              <div className="p-8 text-center glass-panel rounded-3xl space-y-2">
-                <p className="text-xs text-muted-foreground">No active launch campaigns created yet.</p>
-              </div>
-            ) : (
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {events.map((ev) => {
-                  const percent = Math.min(Math.round((ev.claimedCount / ev.maxClaimCount) * 100), 100);
-                  return (
-                    <div key={ev.id} className="glass-card rounded-3xl p-6 border border-card-border space-y-4 relative overflow-hidden">
-                      <div className="flex items-start justify-between gap-2">
-                        <div>
-                          <h4 className="text-base font-bold text-foreground">{ev.title}</h4>
-                          <p className="text-xs text-muted-foreground">
-                            Duration: {ev.durationDays >= 3650 ? 'Lifetime' : `${ev.durationDays} Days`}
-                          </p>
-                        </div>
-
-                        <button
-                          onClick={() => handleToggleEvent(ev.id)}
-                          className={`px-3 py-1 rounded-full text-xs font-bold border transition-colors ${
-                            ev.isActive
-                              ? 'bg-emerald-500/20 text-emerald-600 dark:text-emerald-300 border-emerald-500/40 hover:bg-emerald-500/30'
-                              : 'bg-slate-800 text-muted-foreground border-slate-700 hover:bg-slate-700'
-                          }`}
-                        >
-                          {ev.isActive ? 'Active' : 'Paused'}
-                        </button>
-                      </div>
-
-                      {/* Progress Bar */}
-                      <div className="space-y-1.5">
-                        <div className="flex justify-between text-xs font-semibold">
-                          <span className="text-foreground/80">Claims Progress</span>
-                          <span className="text-amber-600 dark:text-amber-400">{ev.claimedCount} / {ev.maxClaimCount} ({percent}%)</span>
-                        </div>
-                        <div className="w-full h-3 rounded-full bg-card overflow-hidden border border-card-border">
-                          <div
-                            className="h-full bg-amber-500 transition-all duration-500"
-                            style={{ width: `${percent}%` }}
-                          />
-                        </div>
-                      </div>
-
-                      <div className="text-[11px] text-slate-500 pt-2 border-t border-card-border/80 flex items-center justify-between">
-                        <span>Created by: {ev.createdBy}</span>
-                        <span>{ev.claimedUsers.length} Users Claimed</span>
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-            )}
-          </div>
-        </div>
-      )}
-
-      {/* TAB 4: BULK CSV / EMAILS */}
+      {/* TAB 3: BULK CSV / EMAILS */}
       {activeTab === 'emails' && (
         <div className="space-y-6">
           {/* CSV File Upload & Textarea Panel */}
@@ -2561,6 +2733,14 @@ export default function AdminDashboardPage() {
                                 >
                                   {u.isPremium ? 'Revoke Premium' : 'Grant Premium'}
                                 </button>
+                                <button
+                                  onClick={() => handleDeleteUser(u.email)}
+                                  title="Permanently Delete User & All Data"
+                                  className="px-2.5 py-1.5 rounded-xl bg-rose-500/15 hover:bg-rose-500/30 border border-rose-500/30 text-rose-500 hover:text-rose-400 font-bold text-[11px] transition-all flex items-center gap-1 shrink-0"
+                                >
+                                  <Trash2 className="w-3.5 h-3.5" />
+                                  <span className="hidden sm:inline">Delete</span>
+                                </button>
                               </>
                             )}
                           </div>
@@ -2801,15 +2981,27 @@ export default function AdminDashboardPage() {
                   </p>
                 </div>
               </div>
-              <button
-                onClick={() => {
-                  setInspectingUserEmail(null);
-                  setInspectData(null);
-                }}
-                className="p-2 rounded-xl text-muted-foreground hover:text-foreground hover:bg-slate-800 transition-all"
-              >
-                <X className="w-5 h-5" />
-              </button>
+              <div className="flex items-center gap-2">
+                {inspectData?.user?.role !== 'superadmin' && authUser?.email?.toLowerCase() !== inspectingUserEmail.toLowerCase() && (
+                  <button
+                    onClick={() => handleDeleteUser(inspectingUserEmail)}
+                    className="px-3 py-1.5 rounded-xl bg-rose-500/15 hover:bg-rose-500/30 border border-rose-500/30 text-rose-500 hover:text-rose-400 font-bold text-xs flex items-center gap-1.5 transition-all shadow-sm"
+                    title="Permanently Delete User & All Data"
+                  >
+                    <Trash2 className="w-3.5 h-3.5" />
+                    <span>Delete User</span>
+                  </button>
+                )}
+                <button
+                  onClick={() => {
+                    setInspectingUserEmail(null);
+                    setInspectData(null);
+                  }}
+                  className="p-2 rounded-xl text-muted-foreground hover:text-foreground hover:bg-slate-800 transition-all"
+                >
+                  <X className="w-5 h-5" />
+                </button>
+              </div>
             </div>
 
             {loadingInspectData ? (

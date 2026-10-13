@@ -34,108 +34,49 @@ function getParsedCourseFile(fullPath: string): any {
   }
 }
 
+/**
+ * Actionable units rule:
+ * - Videos: "objectType" === "ivideo" or "youtube"
+ * - Exams/Quizzes: "objectType" === "assessmentV2"
+ * - Downloadable Files: "objectType" === "pbEbook"
+ * - Ignore PDFs, certificates, and non-actionable placeholders
+ */
 export function isUnitActionable(unit: Partial<CourseSectionUnit>): boolean {
   if (!unit) return false;
-
-  const type = (unit.type || '').toLowerCase();
-  const icon = (unit.icon || '').toLowerCase();
-  const subtitle = (unit.subtitle || '').toLowerCase();
-  const fileUrl = (unit.fileUrl || '').trim();
-
-  // 1. Filter out Certificates & Non-actionable placeholders
-  if (
-    type.includes('certificate') ||
-    subtitle.includes('certificate') ||
-    icon === 'certification2' ||
-    icon.includes('cert')
-  ) {
-    return false;
+  const t = (unit.objectType || unit.type || '').toLowerCase();
+  if (t === 'ivideo') {
+    const sid = (unit.sourceid || unit.vimeoid || '').trim();
+    return sid !== '';
   }
-
-  // 2. Real Interactive Exams / Quizzes / Assessments (ALWAYS actionable)
-  const isQuizType =
-    type === 'assessment' ||
-    type === 'assessmentv2' ||
-    type === 'quizformal' ||
-    type === 'quizinformal' ||
-    type === 'quizwritten' ||
-    type === 'quiz' ||
-    type === 'fileass' ||
-    type === 'exam' ||
-    (typeof unit.questionsCount === 'number' && unit.questionsCount > 0) ||
-    !!(unit.data && (unit.data.assessmentId || unit.data.quizId));
-
-  if (isQuizType) {
-    return true;
+  if (t === 'youtube') {
+    const sid = (unit.sourceid || unit.vimeoid || '').trim();
+    return sid !== '' || !!unit.data?.embed;
   }
+  return t === 'assessmentv2' || t === 'assessment' || t === 'pbebook' || t === 'ebook';
+}
 
-  // 3. Explicitly filter out PDFs / eBooks / Documents / Notes if there is NO download fileUrl!
-  const isPdfOrEbookOrDoc =
-    type === 'pdf' ||
-    type === 'document' ||
-    type === 'pdfdocument' ||
-    type === 'pbebook' ||
-    type === 'ebook' ||
-    subtitle === 'pdf' ||
-    subtitle === 'ebook' ||
-    fileUrl.endsWith('.pdf') ||
-    fileUrl.includes('/pdf/');
+let cachedAllCourses: CourseMeta[] | null = null;
+let cachedAllCoursesTimestamp = 0;
 
-  if (isPdfOrEbookOrDoc) {
-    // ONLY show if a valid non-empty fileUrl exists so user can actually download it!
-    return !!(unit.fileUrl && unit.fileUrl.trim() !== '');
-  }
-
-  // 4. Videos (Only show if they have a playable source)
-  const isVideo = type === 'ivideo' ||
-    type === 'wistia' ||
-    type === 'video' ||
-    type === 'youtube' ||
-    icon === 'video' ||
-    icon === 'yt' ||
-    subtitle.includes('video') ||
-    subtitle.includes('youtube') ||
-    !!unit.sourceid ||
-    !!unit.vimeoid ||
-    !!(unit.data && unit.data.embed);
-
-  if (isVideo) {
-    const hasSource = !!(unit.sourceid && unit.sourceid.trim() !== '') || 
-                      !!(unit.vimeoid && unit.vimeoid.trim() !== '') || 
-                      type === 'youtube' || icon === 'yt' || subtitle.includes('youtube') ||
-                      !!(unit.data && unit.data.embed);
-    return hasSource;
-  }
-
-  // 5. Downloadable Files / Code Attachments
-  if (unit.fileUrl && unit.fileUrl.trim() !== '') {
-    return true;
-  }
-
-  // 6. Meetings / Live Sessions / URLs
-  if (
-    type === 'zoommeeting' ||
-    type === 'zoomwebinar' ||
-    type === 'webexmeeting' ||
-    type === 'googlemeet' ||
-    type === 'teamsmeeting' ||
-    type === 'url'
-  ) {
-    return true;
-  }
-
-  // Otherwise, no stream to watch, no file to download, no exam to take -> hide
-  return false;
+export function invalidateAllCoursesCache() {
+  cachedAllCourses = null;
+  cachedAllCoursesTimestamp = 0;
 }
 
 export function getAllCourses(): CourseMeta[] {
+  const now = Date.now();
+  if (cachedAllCourses && now - cachedAllCoursesTimestamp < 60000) {
+    return cachedAllCourses;
+  }
+
   const dir = getCoursesDirectory();
   if (!fs.existsSync(dir)) return [];
 
   const files = fs.readdirSync(dir).filter(f => f.toLowerCase().endsWith('.json'));
   const results: CourseMeta[] = [];
 
-  for (const file of files) {
+  for (let fIdx = 0; fIdx < files.length; fIdx++) {
+    const file = files[fIdx];
     try {
       const fullPath = path.join(dir, file);
       const data = getParsedCourseFile(fullPath);
@@ -144,74 +85,62 @@ export function getAllCourses(): CourseMeta[] {
       const course = data.course || data;
       const slug = course.identifiers?.slug || course.titleId || path.basename(file, '.json').toLowerCase();
 
+      // Direct dictionary references without expensive object cloning
+      const objects = course.objects || {};
+      const unitsDict = course.units || {};
+      const videosDict = course.videos || {};
+      const assessmentsDict = course.assessments || {};
+      const ebooksDict = course.ebooks || {};
+
+      const getUnitMeta = (id: string) =>
+        objects[id] || unitsDict[id] || videosDict[id] || assessmentsDict[id] || ebooksDict[id] || null;
+
       const rawSections = course.sections || {};
       let sectionsCount = 0;
-
-      const unitsMap = {
-        ...(course.units || {}),
-        ...(course.videos || {}),
-        ...(course.assessments || {}),
-        ...(course.objects || {}),
-        ...(course.ebooks || {})
-      };
-
-      let rawUnitsCount = 0;
-      let populatedUnitsCount = 0;
+      let rawVideoCount = 0;
       let validUnitsCount = 0;
       let videosCount = 0;
       let totalDurationSeconds = 0;
 
-      Object.values(rawSections).forEach((sec: any) => {
-        if (Array.isArray(sec.learningPath)) {
-          let sectionHasValidUnits = false;
-          rawUnitsCount += sec.learningPath.length;
+      for (const secKey of Object.keys(rawSections)) {
+        const sec = rawSections[secKey];
+        const lp = sec.learningPath;
+        if (!Array.isArray(lp) || lp.length === 0) continue;
 
-          sec.learningPath.forEach((lpItem: any) => {
-            const unitMeta = unitsMap[lpItem.id] || {};
-            const unitObj: Partial<CourseSectionUnit> = {
-              id: lpItem.id,
-              type: lpItem.type || unitMeta.objectType || 'lesson',
-              icon: lpItem.icon || 'video',
-              subtitle: lpItem.subtitle || '',
-              unitTitle: unitMeta.title || lpItem.unitTitle || 'Lesson Unit',
-              sourceid: unitMeta.sourceid || undefined,
-              vimeoid: unitMeta.vimeoid || undefined,
-              fileUrl: unitMeta.fileUrl || lpItem.fileUrl || undefined,
-              data: unitMeta.data || lpItem.data || undefined,
-              duration: typeof unitMeta.duration === 'number' ? unitMeta.duration : undefined,
-              modifiedF: unitMeta.modifiedF || undefined
-            };
+        let secHasValid = false;
 
-            const hasContent = unitMeta.hasData || !!unitMeta.sourceid || !!unitMeta.vimeoid || !!unitMeta.fileUrl || (typeof unitMeta.duration === 'number' && unitMeta.duration > 0);
-            if (hasContent) {
-              populatedUnitsCount++;
-            }
+        for (let i = 0; i < lp.length; i++) {
+          const item = lp[i];
+          const meta = getUnitMeta(item.id);
+          const rawType = (meta?.objectType || item.type || '').toLowerCase();
 
-            if (isUnitActionable(unitObj)) {
-              validUnitsCount++;
-              sectionHasValidUnits = true;
-              
-              const type = (unitObj.type || '').toLowerCase();
-              const icon = (unitObj.icon || '').toLowerCase();
-              const isVideo = type === 'ivideo' || type === 'wistia' || type === 'video' || type === 'youtube' || icon === 'video' || icon === 'yt' || !!unitObj.sourceid || !!unitObj.vimeoid;
-              if (isVideo) {
-                videosCount++;
-              }
+          const isVideo = rawType === 'ivideo' || rawType === 'youtube';
+          const isQuiz = rawType === 'assessmentv2' || rawType === 'assessment';
+          const isEbook = rawType === 'pbebook' || rawType === 'ebook';
 
-              if (typeof unitMeta.duration === 'number' && unitMeta.duration > 0) {
-                totalDurationSeconds += unitMeta.duration;
-              }
-            }
-          });
+          if (!isVideo && !isQuiz && !isEbook) continue;
 
-          if (sectionHasValidUnits) {
-            sectionsCount++;
+          if (isVideo) {
+            rawVideoCount++;
+            const sid = (meta?.sourceid || meta?.vimeoid || item.sourceid || item.vimeoid || '').trim();
+            const hasYt = rawType === 'youtube' && (sid !== '' || meta?.data?.embed || item.data?.embed);
+            if (!sid && !hasYt) continue;
+
+            videosCount++;
+            const dur = (meta && typeof meta.duration === 'number') ? meta.duration : (typeof item.duration === 'number' ? item.duration : 0);
+            totalDurationSeconds += dur;
           }
-        }
-      });
 
-      // Algorithmic check: Course is ongoing if curriculum contains items, but populated playable units are under 95%
-      const isOngoing = rawUnitsCount > 0 && (populatedUnitsCount / rawUnitsCount) < 0.95;
+          validUnitsCount++;
+          secHasValid = true;
+        }
+
+        if (secHasValid) {
+          sectionsCount++;
+        }
+      }
+
+      const isOngoing = rawVideoCount > 0 && (videosCount / rawVideoCount) < 0.90;
 
       results.push({
         title: course.title || path.basename(file, '.json'),
@@ -233,6 +162,8 @@ export function getAllCourses(): CourseMeta[] {
     }
   }
 
+  cachedAllCourses = results;
+  cachedAllCoursesTimestamp = now;
   return results;
 }
 
@@ -241,72 +172,91 @@ export function parseRawCourseData(data: any, fallbackSlug: string = 'course'): 
   const course = data.course || data;
   const slug = course.identifiers?.slug || course.titleId || fallbackSlug;
 
-  const unitsMap = {
-    ...(course.units || {}),
-    ...(course.videos || {}),
-    ...(course.assessments || {}),
-    ...(course.objects || {}),
-    ...(course.ebooks || {})
-  };
+  // Direct dictionary references without expensive object cloning
+  const objects = course.objects || {};
+  const unitsDict = course.units || {};
+  const videosDict = course.videos || {};
+  const assessmentsDict = course.assessments || {};
+  const ebooksDict = course.ebooks || {};
+
+  const getUnitMeta = (id: string) =>
+    objects[id] || unitsDict[id] || videosDict[id] || assessmentsDict[id] || ebooksDict[id] || null;
+
   const rawSections = course.sections || {};
   const parsedSections: CourseSection[] = [];
-  let rawUnitsCount = 0;
-  let populatedUnitsCount = 0;
+  let rawVideoCount = 0;
   let videosCount = 0;
 
-  Object.entries(rawSections).forEach(([secId, secData]: [string, any]) => {
+  for (const [secId, secData] of Object.entries(rawSections) as [string, any][]) {
     const learningPath = Array.isArray(secData.learningPath) ? secData.learningPath : [];
-    rawUnitsCount += learningPath.length;
 
-    const units: CourseSectionUnit[] = learningPath
-      .map((lpItem: any) => {
-        const unitMeta = unitsMap[lpItem.id] || {};
-        const hasContent = unitMeta.hasData || !!unitMeta.sourceid || !!unitMeta.vimeoid || !!unitMeta.fileUrl || (typeof unitMeta.duration === 'number' && unitMeta.duration > 0);
-        if (hasContent) {
-          populatedUnitsCount++;
+    const units: CourseSectionUnit[] = [];
+
+    // Single linear pass over learningPath
+    for (let i = 0; i < learningPath.length; i++) {
+      const lpItem = learningPath[i];
+      const unitMeta = getUnitMeta(lpItem.id) || {};
+      const objType = (unitMeta.objectType || lpItem.type || '').toLowerCase();
+
+      // Videos are strictly ivideo or youtube
+      const isVideo = objType === 'ivideo' || objType === 'youtube';
+      // assessmentV2 are exams/quizzes
+      const isQuiz = objType === 'assessmentv2' || objType === 'assessment';
+      // pbEbook are downloadable files/notes
+      const isEbook = objType === 'pbebook' || objType === 'ebook';
+
+      // Ignore pdf, certificates, and non-actionable placeholders
+      if (!isVideo && !isQuiz && !isEbook) continue;
+
+      if (isVideo) {
+        rawVideoCount++;
+        const sid = (unitMeta.sourceid || unitMeta.vimeoid || lpItem.sourceid || lpItem.vimeoid || '').trim();
+        const hasYt = objType === 'youtube' && (sid !== '' || unitMeta.data?.embed || lpItem.data?.embed);
+        if (!sid && !hasYt) {
+          // Ignore videos whose sourceid/vimeoid are not available, null, or empty string ""
+          continue;
         }
+        videosCount++;
+      }
 
-        return {
-          id: lpItem.id,
-          type: lpItem.type || unitMeta.objectType || 'lesson',
-          icon: lpItem.icon || 'video',
-          subtitle: lpItem.subtitle || '',
-          unitTitle: unitMeta.title || lpItem.unitTitle || 'Lesson Unit',
-          title: unitMeta.title || lpItem.unitTitle || 'Lesson Unit',
-          description: unitMeta.description || '',
-          access: unitMeta.access || lpItem.access || 'public',
-          data: unitMeta.data || lpItem.data || undefined,
-          questionsCount: unitMeta.questionsCount || undefined,
-          hasData: unitMeta.hasData || false,
-          sourceid: unitMeta.sourceid || lpItem.sourceid || undefined,
-          vimeoid: unitMeta.vimeoid || lpItem.vimeoid || undefined,
-          fileUrl: unitMeta.fileUrl || lpItem.fileUrl || undefined,
-          duration: typeof unitMeta.duration === 'number' ? unitMeta.duration : (typeof lpItem.duration === 'number' ? lpItem.duration : undefined),
-          modifiedF: unitMeta.modifiedF || undefined
-        };
-      })
-      .filter((unit: CourseSectionUnit) => isUnitActionable(unit));
+      const unitTitle = unitMeta.title || lpItem.unitTitle || 'Lesson Unit';
+
+      units.push({
+        id: lpItem.id,
+        type: objType,
+        objectType: objType,
+        icon: isVideo ? (objType === 'youtube' ? 'yt' : 'video') : isQuiz ? 'quiz' : 'file',
+        subtitle: isVideo ? (objType === 'youtube' ? 'youtube' : 'video') : isQuiz ? 'exam' : 'file',
+        unitTitle,
+        title: unitTitle,
+        description: unitMeta.description || '',
+        access: unitMeta.access || lpItem.access || 'public',
+        data: unitMeta.data || lpItem.data || undefined,
+        questionsCount: unitMeta.questionsCount || undefined,
+        hasData: unitMeta.hasData || false,
+        sourceid: unitMeta.sourceid || lpItem.sourceid || undefined,
+        vimeoid: unitMeta.vimeoid || lpItem.vimeoid || undefined,
+        fileUrl: unitMeta.fileUrl || lpItem.fileUrl || undefined,
+        duration: typeof unitMeta.duration === 'number' ? unitMeta.duration : (typeof lpItem.duration === 'number' ? lpItem.duration : undefined),
+        modifiedF: unitMeta.modifiedF || (typeof unitMeta.created === 'number' ? new Date(unitMeta.created * 1000).toISOString().replace('T', ' ').substring(0, 19) : undefined),
+        created: typeof unitMeta.created === 'number' ? unitMeta.created : (typeof lpItem.created === 'number' ? lpItem.created : undefined),
+        modified: typeof unitMeta.modified === 'number' ? unitMeta.modified : (typeof lpItem.modified === 'number' ? lpItem.modified : undefined),
+      });
+    }
 
     if (units.length > 0) {
-      units.forEach(u => {
-        const type = (u.type || '').toLowerCase();
-        const icon = (u.icon || '').toLowerCase();
-        const isVideo = type === 'ivideo' || type === 'wistia' || type === 'video' || type === 'youtube' || icon === 'video' || icon === 'yt' || !!u.sourceid || !!u.vimeoid;
-        if (isVideo) videosCount++;
-      });
-
       parsedSections.push({
         id: secId,
         title: secData.title || 'Course Section',
         description: secData.description || '',
         access: secData.access || 'public',
-        units
+        units,
       });
     }
-  });
+  }
 
   const totalUnits = parsedSections.reduce((sum, s) => sum + s.units.length, 0);
-  const isOngoing = rawUnitsCount > 0 && (populatedUnitsCount / rawUnitsCount) < 0.95;
+  const isOngoing = rawVideoCount > 0 && (videosCount / rawVideoCount) < 0.90;
 
   return {
     title: course.title || fallbackSlug,
@@ -321,12 +271,14 @@ export function parseRawCourseData(data: any, fallbackSlug: string = 'course'): 
     unitsCount: totalUnits,
     videosCount,
     totalDurationSeconds: (() => {
-      const total = parsedSections.reduce((sum, s) =>
-        sum + s.units.reduce((uSum, u) => uSum + (u.duration || 0), 0), 0);
+      const total = parsedSections.reduce(
+        (sum, s) => sum + s.units.reduce((uSum, u) => uSum + (u.duration || 0), 0),
+        0
+      );
       return total > 0 ? total : undefined;
     })(),
     isOngoing,
-    sections: parsedSections
+    sections: parsedSections,
   };
 }
 
@@ -334,22 +286,29 @@ export function getCourseBySlug(slug: string): CourseDetail | null {
   const dir = getCoursesDirectory();
   if (!fs.existsSync(dir)) return null;
 
-  // SECURITY: Sanitize path separators and traversal patterns
   const safeSlug = slug.replace(/[\/\\]/g, '').replace(/\.\./g, '');
   if (!safeSlug || safeSlug.length === 0 || safeSlug.length > 100) return null;
 
+  // FAST PATH: Direct file check in O(1)
+  const directPath = path.join(dir, `${safeSlug}.json`);
+  if (fs.existsSync(directPath)) {
+    const data = getParsedCourseFile(directPath);
+    if (data) {
+      const parsed = parseRawCourseData(data, safeSlug);
+      if (parsed) {
+        parsed.filename = `${safeSlug}.json`;
+        return parsed;
+      }
+    }
+  }
+
+  // FALLBACK: Search directory for custom slugs or titleIds
   const files = fs.readdirSync(dir).filter(f => f.toLowerCase().endsWith('.json'));
 
-  for (const file of files) {
+  for (let i = 0; i < files.length; i++) {
+    const file = files[i];
     try {
       const fullPath = path.join(dir, file);
-      // SECURITY: Verify resolved path remains within the expected courses directory
-      const resolvedPath = path.resolve(fullPath);
-      const resolvedDir = path.resolve(dir);
-      if (!resolvedPath.startsWith(resolvedDir + path.sep) && resolvedPath !== resolvedDir) {
-        continue;
-      }
-
       const data = getParsedCourseFile(fullPath);
       if (!data) continue;
 

@@ -31,7 +31,10 @@ export async function GET(
       return NextResponse.json({ success: false, error: 'Course not found' }, { status: 404 });
     }
 
-    return NextResponse.json({ success: true, data: course });
+    return NextResponse.json(
+      { success: true, data: course },
+      { headers: { 'Cache-Control': 'private, max-age=300, stale-while-revalidate=3600' } }
+    );
   } catch (error) {
     return NextResponse.json({ success: false, error: 'Failed to load course' }, { status: 500 });
   }

@@ -18,6 +18,7 @@ export interface IUser extends Document {
   lastActiveAt: Date;
   createdAt: Date;
   hasCourseAccess?: boolean;
+  hasHadDemoOrPremium?: boolean;
 }
 
 const UserSchema: Schema<IUser> = new Schema(
@@ -38,6 +39,7 @@ const UserSchema: Schema<IUser> = new Schema(
     averageAccuracy: { type: Number, default: 0 },
     lastActiveAt: { type: Date, default: Date.now },
     hasCourseAccess: { type: Boolean, default: false },
+    hasHadDemoOrPremium: { type: Boolean, default: false },
   },
   { timestamps: true }
 );

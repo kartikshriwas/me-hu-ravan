@@ -5,7 +5,6 @@ import { auth } from '@/auth';
 import { hasCoursesAccess, isCourseSlugUnlocked } from '@/lib/coursesAuth';
 import { CourseDetailClient } from '@/components/CourseDetailClient';
 
-export const revalidate = 0;
 
 export default async function CourseDetailPage({ params }: { params: Promise<{ slug: string }> }) {
   const session = await auth();

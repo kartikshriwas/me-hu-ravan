@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from 'react';
 import { usePathname } from 'next/navigation';
+import { useAuth } from '@/lib/authContext';
 
 interface SessionEvent {
   timestamp: number;
@@ -11,6 +12,7 @@ interface SessionEvent {
 
 export function ActivityTracker() {
   const pathname = usePathname();
+  const { user } = useAuth();
   const lastActivityTimeRef = useRef<number>(Date.now());
   const activeSecondsAccumRef = useRef<number>(0);
   const idleSecondsAccumRef = useRef<number>(0);
@@ -19,6 +21,7 @@ export function ActivityTracker() {
   const prevStateRef = useRef<string>('active');
   const eventBufferRef = useRef<SessionEvent[]>([]);
   const lastHeartbeatTimeRef = useRef<number>(Date.now());
+  const lastHeartbeatSendTimeRef = useRef<number>(0);
 
   // Helper to check if video or audio is actively playing on the page
   const checkIsMediaPlaying = () => {
@@ -67,18 +70,16 @@ export function ActivityTracker() {
   useEffect(() => {
     const handleUserInteraction = () => {
       const now = Date.now();
-      if (now - lastActivityTimeRef.current > 1000) {
+      if (now - lastActivityTimeRef.current > 2500) {
         lastActivityTimeRef.current = now;
       }
     };
 
     const interactionEvents = [
-      'mousemove',
       'keydown',
       'click',
       'scroll',
       'touchstart',
-      'pointermove',
       'wheel',
       'focus',
     ];
@@ -86,8 +87,8 @@ export function ActivityTracker() {
       window.addEventListener(evt, handleUserInteraction, { passive: true })
     );
 
-    // Media playback events (keep active timestamp updated continuously when playing media)
-    const mediaEvents = ['timeupdate', 'playing', 'play'];
+    // Media playback events (heartbeat loop already updates active timestamp via checkIsMediaPlaying)
+    const mediaEvents = ['playing', 'play'];
     mediaEvents.forEach((evt) =>
       window.addEventListener(evt, handleUserInteraction, { capture: true, passive: true })
     );
@@ -108,6 +109,12 @@ export function ActivityTracker() {
       if (!sessionIdRef.current) return;
 
       const now = Date.now();
+      // Throttle non-final heartbeats to at least 15 seconds apart to eliminate redundant rapid bursts
+      if (!isFinal && now - lastHeartbeatSendTimeRef.current < 15000) {
+        return;
+      }
+      lastHeartbeatSendTimeRef.current = now;
+
       const isMedia = checkIsMediaPlaying();
 
       // If media is actively playing, continuously refresh last activity timestamp
@@ -226,6 +233,11 @@ export function ActivityTracker() {
             // Complete NextAuth logout to revoke user session cookie
             const { signOut } = await import('next-auth/react');
             await signOut({ callbackUrl: '/?error=SessionTerminated' });
+          } else if (data.demoGranted) {
+            // Demo granted automatically — notify components silently without interrupting active users
+            if (typeof window !== 'undefined') {
+              window.dispatchEvent(new CustomEvent('preptea:demo-granted', { detail: data }));
+            }
           }
         }
       } catch (err) {
@@ -233,16 +245,24 @@ export function ActivityTracker() {
       }
     };
 
-    // Heartbeat every 30 seconds (efficient, cuts requests by 50%)
+    // For unauthenticated guests, only send initial beacon once — do not run high-frequency polling
+    if (!user) {
+      sendHeartbeat(false);
+      return;
+    }
+
+    // Heartbeat every 60 seconds for active users (cuts invocations by 50-75%)
     const interval = setInterval(() => {
       // Pause heartbeat loop when tab is hidden and not playing media
       if (typeof document !== 'undefined' && document.visibilityState === 'hidden' && !checkIsMediaPlaying()) {
         return;
       }
       sendHeartbeat(false);
-    }, 30000);
+    }, 60000);
 
     const handleVisibilityChange = () => {
+      // Throttle: avoid rapid heartbeats on quick tab switching (minimum 30s between heartbeats)
+      if (Date.now() - lastHeartbeatTimeRef.current < 30000) return;
       if (document.visibilityState === 'hidden' && !checkIsMediaPlaying()) {
         sendHeartbeat(true);
       } else if (document.visibilityState === 'visible') {
@@ -263,7 +283,7 @@ export function ActivityTracker() {
       window.removeEventListener('visibilitychange', handleVisibilityChange);
       window.removeEventListener('beforeunload', handleBeforeUnload);
     };
-  }, [pathname]);
+  }, [pathname, user]);
 
   return null;
 }

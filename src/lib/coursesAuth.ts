@@ -67,6 +67,8 @@ export async function hasCoursesAccess(sessionUser: SessionUser | null): Promise
   // Check fast session props first
   if (sessionUser.role === 'superadmin' || sessionUser.role === 'admin') return true;
   if (sessionUser.adminPermissions?.includes('access_courses') || sessionUser.adminPermissions?.includes('*')) return true;
+  if ((sessionUser as any).hasCourseAccess === true) return true;
+  if (Array.isArray(sessionUser.allowedBatches) && sessionUser.allowedBatches.some(isCourseBatch)) return true;
 
   let userBatches: string[] = [];
   let isSuper = false;
@@ -141,4 +143,43 @@ export async function isCourseSlugUnlocked(sessionUser: SessionUser | null, cour
   }
 
   return isCourseSlugAllowed(validCourseBatches, courseSlug);
+}
+
+export async function getUnlockedCourseSlugsMap(sessionUser: SessionUser | null): Promise<(slug: string) => boolean> {
+  if (!sessionUser) return () => false;
+
+  const email = sessionUser.email.toLowerCase().trim();
+  if (email === SUPERADMIN_EMAIL) return () => true;
+
+  // Fast check from session
+  if ((sessionUser as any)?.role === 'superadmin' || (sessionUser as any)?.role === 'admin') return () => true;
+  if (sessionUser.adminPermissions?.includes('access_courses') || sessionUser.adminPermissions?.includes('*')) return () => true;
+
+  let userBatches: string[] = [];
+
+  try {
+    const userDoc = await getCachedUserDoc(email);
+    if (userDoc) {
+      if (userDoc.role === 'superadmin' || userDoc.role === 'admin') return () => true;
+      if (userDoc.adminPermissions?.includes('access_courses') || userDoc.adminPermissions?.includes('*')) return () => true;
+
+      userBatches = Array.isArray(userDoc.allowedBatches) ? [...userDoc.allowedBatches] : [];
+      if (userDoc.premiumPlan && isCourseBatch(userDoc.premiumPlan)) {
+        userBatches.push(userDoc.premiumPlan);
+      }
+    } else {
+      userBatches = sessionUser.allowedBatches || [];
+    }
+  } catch (error) {
+    console.error('Error fetching unlocked courses map:', error);
+    userBatches = sessionUser.allowedBatches || [];
+  }
+
+  const validCourseBatches = userBatches.filter(isCourseBatch);
+
+  if (validCourseBatches.some((b) => b.toLowerCase().includes('sigmax') || b === '*')) {
+    return () => true;
+  }
+
+  return (slug: string) => isCourseSlugAllowed(validCourseBatches, slug);
 }

@@ -77,7 +77,7 @@ export function saveQuizAttempt(attempt: QuizAttemptResult, userEmail?: string |
 }
 
 export function getQuizHistory(userEmail?: string | null): QuizAttemptResult[] {
-  if (typeof window === 'undefined' || !userEmail) return [];
+  if (typeof window === 'undefined') return [];
   try {
     const key = getHistoryKey(userEmail);
     const raw = localStorage.getItem(key);
@@ -89,7 +89,7 @@ export function getQuizHistory(userEmail?: string | null): QuizAttemptResult[] {
 }
 
 export function getBookmarks(userEmail?: string | null): BookmarkedQuestion[] {
-  if (typeof window === 'undefined' || !userEmail) return [];
+  if (typeof window === 'undefined') return [];
   try {
     const key = getBookmarksKey(userEmail);
     const raw = localStorage.getItem(key);

@@ -25,6 +25,7 @@ import {
 } from 'lucide-react';
 import { QuizPlaySkeleton } from '@/components/skeletons/QuizPlaySkeleton';
 import { clientCache } from '@/lib/clientCache';
+import { getQuizTypeBadgeClass, getQuizTypeDotClass } from '@/lib/quizTypeStyle';
 
 export default function QuizPlayerPage({ params }: { params: Promise<{ quizId: string }> }) {
   const { quizId: rawQuizId } = use(params);
@@ -415,9 +416,17 @@ export default function QuizPlayerPage({ params }: { params: Promise<{ quizId: s
           <h2 className="text-xl sm:text-2xl font-extrabold text-foreground tracking-tight mt-2">
             First Attempt & Leaderboard Score
           </h2>
-          <p className="text-xs sm:text-sm text-muted-foreground font-medium uppercase tracking-wider text-primary-600 dark:text-primary-400">
-            {assessment.title}
-          </p>
+          <div className="flex items-center gap-2 flex-wrap justify-center mt-1">
+            <span className="text-xs sm:text-sm text-muted-foreground font-medium uppercase tracking-wider text-primary-600 dark:text-primary-400">
+              {assessment.title}
+            </span>
+            {assessment.quizType && (
+              <span className={`inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-bold border ${getQuizTypeBadgeClass(assessment.quizType)}`}>
+                <span className={`w-1.5 h-1.5 rounded-full ${getQuizTypeDotClass(assessment.quizType)}`} />
+                <span>{assessment.quizType}</span>
+              </span>
+            )}
+          </div>
         </div>
 
         <div className="space-y-4 text-foreground/80 text-sm sm:text-base leading-relaxed text-left bg-background/40 p-4 sm:p-6 rounded-2xl border border-slate-900">
@@ -571,7 +580,6 @@ export default function QuizPlayerPage({ params }: { params: Promise<{ quizId: s
       console.error('Failed to post attempt to backend:', err);
     }
 
-    // Save final verified attempt to localStorage for instant local rendering
     saveQuizAttempt(result, user?.email);
 
     // Invalidate stale caches so leaderboard and history update immediately
@@ -606,9 +614,23 @@ export default function QuizPlayerPage({ params }: { params: Promise<{ quizId: s
             <span className="hidden sm:inline">Exit</span>
           </button>
           <div className="min-w-0 flex-1">
-            <h1 className="text-xs sm:text-lg font-bold text-foreground truncate">{assessment.title}</h1>
-            <p className="text-[10px] sm:text-xs text-muted-foreground truncate">
-              Q {currentIndex + 1} of {assessment.questions.length} • {answeredTotal} Done
+            <div className="flex items-center gap-2">
+              <h1 className="text-xs sm:text-lg font-bold text-foreground truncate">{assessment.title}</h1>
+              {assessment.quizType && (
+                <span className={`hidden sm:inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-lg text-[10px] font-bold border shrink-0 ${getQuizTypeBadgeClass(assessment.quizType)}`}>
+                  <span className={`w-1.5 h-1.5 rounded-full ${getQuizTypeDotClass(assessment.quizType)}`} />
+                  <span>{assessment.quizType}</span>
+                </span>
+              )}
+            </div>
+            <p className="text-[10px] sm:text-xs text-muted-foreground truncate flex items-center gap-2">
+              <span>Q {currentIndex + 1} of {assessment.questions.length} • {answeredTotal} Done</span>
+              {assessment.quizType && (
+                <span className={`sm:hidden inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[9px] font-bold border ${getQuizTypeBadgeClass(assessment.quizType)}`}>
+                  <span className={`w-1 h-1 rounded-full ${getQuizTypeDotClass(assessment.quizType)}`} />
+                  <span>{assessment.quizType}</span>
+                </span>
+              )}
             </p>
           </div>
         </div>
@@ -824,7 +846,7 @@ export default function QuizPlayerPage({ params }: { params: Promise<{ quizId: s
                 <strong>{formatTime(timeLeft)}</strong>
               </div>
             </div>
-
+{/* 
             <div className={`p-3.5 rounded-xl border text-xs leading-relaxed ${
               isFirstAttempt
                 ? 'bg-emerald-950/40 border-emerald-500/30 text-emerald-200'
@@ -845,7 +867,7 @@ export default function QuizPlayerPage({ params }: { params: Promise<{ quizId: s
                   </p>
                 </div>
               )}
-            </div>
+            </div> */}
 
             <div className="flex items-center justify-end gap-3 pt-2">
               <button

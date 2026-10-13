@@ -5,12 +5,38 @@ const nextConfig: NextConfig = {
     '/**': ['./Courses/**/*'],
   },
 
-  // L-5: Only expose internal dev origins in development
-  ...(process.env.NODE_ENV === 'development' ? { allowedDevOrigins: ['10.16.65.83', "10.139.66.83", 'localhost:3000'] } : {}),
+  experimental: {
+    optimizePackageImports: ['lucide-react'],
+  },
 
-  // M-1: Security headers for all responses
+  compress: true,
+  poweredByHeader: false,
+
+  // L-5: Only expose internal dev origins in development
+  ...(process.env.NODE_ENV === 'development' ? { allowedDevOrigins: ['10.16.65.83', "10.139.66.83", 'localhost:3000', 'localhost:3001'] } : {}),
+
+  // Headers for Edge caching & security
   async headers() {
     return [
+      {
+        source: '/sw.js',
+        headers: [
+          { key: 'Cache-Control', value: 'no-cache, no-store, must-revalidate' },
+          { key: 'Content-Type', value: 'application/javascript; charset=utf-8' },
+        ],
+      },
+      {
+        source: '/_next/static/(.*)',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
+        ],
+      },
+      {
+        source: '/(favicon.svg|favicon.png|icon.png|icon.svg|manifest.json|og-image.png)',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=86400, stale-while-revalidate=604800' },
+        ],
+      },
       {
         source: '/(.*)',
         headers: [

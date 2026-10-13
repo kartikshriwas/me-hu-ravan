@@ -1,19 +1,19 @@
-// PrepTea Service Worker - App Shell Architecture v2
-const CACHE_NAME = 'preptea-shell-v3';
+// PrepTea Service Worker - App Shell Architecture v5 (Optimized Edge Caching)
+const CACHE_NAME = 'preptea-shell-v5';
 
 const APP_SHELL_ASSETS = [
   '/',
   '/downloads',
   '/favicon.svg',
-  '/favicon.png',
   '/manifest.json',
 ];
 
 self.addEventListener('install', (event) => {
+  self.skipWaiting();
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
-      return cache.addAll(APP_SHELL_ASSETS);
-    }).then(() => self.skipWaiting())
+      return cache.addAll(APP_SHELL_ASSETS).catch(() => {});
+    })
   );
 });
 
@@ -46,7 +46,7 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
-  // 1. Navigation requests (Page loading and refreshes) - Network First
+  // 1. Navigation requests (Page loading and refreshes) - Network First with Cache Fallback
   if (request.mode === 'navigate') {
     event.respondWith(
       fetch(request)
@@ -72,22 +72,38 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
-  // 2. Next.js chunks and static assets
+  // 2. Next.js fingerprinted static chunks (/_next/static/*) - Cache First
+  // Eliminates tens of thousands of duplicate CDN requests on Vercel
+  const isStaticChunk = url.pathname.startsWith('/_next/static/');
   const isStaticAsset =
-    url.pathname.startsWith('/_next/static/') ||
-    url.pathname.endsWith('.js') ||
-    url.pathname.endsWith('.css') ||
+    isStaticChunk ||
+    url.pathname.endsWith('.woff2') ||
     url.pathname.endsWith('.svg') ||
     url.pathname.endsWith('.png') ||
-    url.pathname.endsWith('.woff2');
+    url.pathname.endsWith('.jpg') ||
+    url.pathname.endsWith('.ico');
 
   if (isStaticAsset) {
     event.respondWith(
       caches.match(request).then((cachedResponse) => {
         if (cachedResponse) {
+          // Immutable Next.js chunks return immediately from cache
+          if (isStaticChunk) {
+            return cachedResponse;
+          }
+          // Non-chunk static assets: return cache, refresh in background (Stale-While-Revalidate)
+          fetch(request)
+            .then((networkResponse) => {
+              if (networkResponse && networkResponse.status === 200) {
+                const copy = networkResponse.clone();
+                caches.open(CACHE_NAME).then((cache) => cache.put(request, copy));
+              }
+            })
+            .catch(() => {});
           return cachedResponse;
         }
 
+        // Cache miss: fetch from network and store in cache
         return fetch(request)
           .then((networkResponse) => {
             if (networkResponse && networkResponse.status === 200) {
@@ -97,8 +113,7 @@ self.addEventListener('fetch', (event) => {
             return networkResponse;
           })
           .catch(() => {
-            // Return empty response or let caller handle chunk failure cleanly without crashing SW
-            return new Response(null, { status: 408, statusText: 'Request timed out or offline' });
+            return new Response(null, { status: 408, statusText: 'Offline' });
           });
       })
     );

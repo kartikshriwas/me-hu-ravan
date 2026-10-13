@@ -1,8 +1,11 @@
 import { NextAuthConfig } from 'next-auth';
 import GoogleProvider from 'next-auth/providers/google';
+import { skipCSRFCheck } from '@auth/core';
 
 export const authConfig = {
   secret: process.env.AUTH_SECRET,
+  trustHost: true,
+  skipCSRFCheck,
   providers: [
     GoogleProvider({
       clientId: process.env.AUTH_GOOGLE_ID || process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID || process.env.GOOGLE_CLIENT_ID,
@@ -14,4 +17,5 @@ export const authConfig = {
     maxAge: 7 * 24 * 60 * 60, // 7 days
   },
   callbacks: {},
-} satisfies NextAuthConfig;
+} as any satisfies NextAuthConfig;
+
