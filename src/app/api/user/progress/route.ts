@@ -7,6 +7,42 @@ import {
   mergeLocalProgressInDb,
 } from '@/lib/learningProgressHelper';
 
+function serializeLearningProgress(progress: any, streakCalc: any, extraFields: Record<string, any> = {}) {
+  const coursesProgressObj: Record<string, any> = {};
+  if (progress.coursesProgress) {
+    progress.coursesProgress.forEach((val: any, key: string) => {
+      coursesProgressObj[key] = val;
+    });
+  }
+
+  const videoPlaybackObj: Record<string, any> = {};
+  if (progress.videoPlayback) {
+    progress.videoPlayback.forEach((val: any, key: string) => {
+      videoPlaybackObj[key] = val;
+    });
+  }
+
+  return {
+    success: true,
+    completedVideos: progress.completedVideos || [],
+    totalVideosCompleted: progress.totalVideosCompleted || (progress.completedVideos || []).length,
+    streak: {
+      currentStreak: streakCalc.currentStreak,
+      longestStreak: streakCalc.longestStreak,
+      studiedToday: streakCalc.studiedToday,
+      activeDaysThisWeek: streakCalc.activeDaysThisWeek,
+      lastStudiedDate: streakCalc.lastStudiedDate,
+      totalActiveDays: streakCalc.totalActiveDays,
+      studyDays: streakCalc.sortedStudyDays,
+    },
+    coursesProgress: coursesProgressObj,
+    videoPlayback: videoPlaybackObj,
+    totalWatchTimeSeconds: progress.totalWatchTimeSeconds || 0,
+    updatedAt: progress.updatedAt,
+    ...extraFields,
+  };
+}
+
 export async function GET(request: Request) {
   try {
     const session = await auth();
@@ -23,40 +59,7 @@ export async function GET(request: Request) {
     const clientDate = searchParams.get('clientDate') || undefined;
 
     const { progress, streakCalc } = await getOrCreateUserLearningProgress(userEmail, clientDate);
-
-    // Convert Maps to plain JavaScript objects for JSON serialization
-    const coursesProgressObj: Record<string, any> = {};
-    if (progress.coursesProgress) {
-      progress.coursesProgress.forEach((val, key) => {
-        coursesProgressObj[key] = val;
-      });
-    }
-
-    const videoPlaybackObj: Record<string, any> = {};
-    if (progress.videoPlayback) {
-      progress.videoPlayback.forEach((val, key) => {
-        videoPlaybackObj[key] = val;
-      });
-    }
-
-    return NextResponse.json({
-      success: true,
-      completedVideos: progress.completedVideos || [],
-      totalVideosCompleted: progress.totalVideosCompleted || (progress.completedVideos || []).length,
-      streak: {
-        currentStreak: streakCalc.currentStreak,
-        longestStreak: streakCalc.longestStreak,
-        studiedToday: streakCalc.studiedToday,
-        activeDaysThisWeek: streakCalc.activeDaysThisWeek,
-        lastStudiedDate: streakCalc.lastStudiedDate,
-        totalActiveDays: streakCalc.totalActiveDays,
-        studyDays: streakCalc.sortedStudyDays,
-      },
-      coursesProgress: coursesProgressObj,
-      videoPlayback: videoPlaybackObj,
-      totalWatchTimeSeconds: progress.totalWatchTimeSeconds || 0,
-      updatedAt: progress.updatedAt,
-    });
+    return NextResponse.json(serializeLearningProgress(progress, streakCalc));
   } catch (error: any) {
     console.error('Error fetching user learning progress from MongoDB:', error);
     return NextResponse.json(
@@ -97,18 +100,11 @@ export async function POST(request: Request) {
         clientDate,
       });
 
-      return NextResponse.json({
-        success: true,
-        isNewlyCompleted: result.isNewlyCompleted,
-        completedVideos: result.progress.completedVideos,
-        streak: {
-          currentStreak: result.streakCalc.currentStreak,
-          longestStreak: result.streakCalc.longestStreak,
-          studiedToday: result.streakCalc.studiedToday,
-          activeDaysThisWeek: result.streakCalc.activeDaysThisWeek,
-          studyDays: result.streakCalc.sortedStudyDays,
-        },
-      });
+      return NextResponse.json(
+        serializeLearningProgress(result.progress, result.streakCalc, {
+          isNewlyCompleted: result.isNewlyCompleted,
+        })
+      );
     }
 
     if (action === 'playback_progress') {
@@ -136,27 +132,20 @@ export async function POST(request: Request) {
     }
 
     if (action === 'sync_local') {
-      const { completedVideos, studyDays, maxStreak, clientDate } = body;
+      const { completedVideos, studyDays, maxStreak, clientDate, coursesProgress, videoPlayback } = body;
 
       const result = await mergeLocalProgressInDb(userEmail, {
         completedVideos: Array.isArray(completedVideos) ? completedVideos : [],
         studyDays: Array.isArray(studyDays) ? studyDays : [],
         maxStreak: typeof maxStreak === 'number' ? maxStreak : 0,
         clientDate,
+        coursesProgress,
+        videoPlayback,
       });
 
-      return NextResponse.json({
-        success: true,
-        completedVideos: result.progress.completedVideos,
-        totalVideosCompleted: result.progress.totalVideosCompleted,
-        streak: {
-          currentStreak: result.streakCalc.currentStreak,
-          longestStreak: result.streakCalc.longestStreak,
-          studiedToday: result.streakCalc.studiedToday,
-          activeDaysThisWeek: result.streakCalc.activeDaysThisWeek,
-          studyDays: result.streakCalc.sortedStudyDays,
-        },
-      });
+      return NextResponse.json(
+        serializeLearningProgress(result.progress, result.streakCalc)
+      );
     }
 
     return NextResponse.json(

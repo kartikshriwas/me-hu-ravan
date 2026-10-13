@@ -1,8 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { verifyStreamTicket } from '@/lib/videoStreamToken';
 
-export const runtime = 'edge';
-
 export async function GET(request: NextRequest) {
   try {
     const { searchParams } = new URL(request.url);
@@ -38,6 +36,21 @@ export async function GET(request: NextRequest) {
         status: 403,
         headers: { 'Content-Type': 'application/json' },
       });
+    }
+
+    // Host validation: ensure target belongs to allowed CDN origin
+    try {
+      const parsedHost = new URL(verified.targetUrl).hostname.toLowerCase();
+      const isAllowed =
+        parsedHost.endsWith('wistia.com') ||
+        parsedHost.endsWith('wistia.net') ||
+        parsedHost.includes('wistia') ||
+        parsedHost.endsWith('cloudfront.net');
+      if (!isAllowed) {
+        return new Response('Invalid stream target host', { status: 403 });
+      }
+    } catch {
+      return new Response('Invalid stream URL', { status: 400 });
     }
 
     // Option 2: Instant HTTP 307 Temporary Redirect directly to Wistia's Cloudfront CDN

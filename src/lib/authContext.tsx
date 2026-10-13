@@ -50,9 +50,24 @@ function AuthProviderInner({ children }: { children: React.ReactNode }) {
   const loading = status === 'loading';
 
   useEffect(() => {
-    if (user?.email) {
-      syncLocalProgressToDb();
-    }
+    if (!user?.email) return;
+
+    // Initial sync
+    syncLocalProgressToDb(true);
+
+    // Global multi-device synchronization when tab is focused or became visible
+    const handleReconcile = () => {
+      if (typeof document !== 'undefined' && document.visibilityState === 'hidden') return;
+      syncLocalProgressToDb(true);
+    };
+
+    window.addEventListener('focus', handleReconcile);
+    document.addEventListener('visibilitychange', handleReconcile);
+
+    return () => {
+      window.removeEventListener('focus', handleReconcile);
+      document.removeEventListener('visibilitychange', handleReconcile);
+    };
   }, [user?.email]);
 
   const logout = async () => {

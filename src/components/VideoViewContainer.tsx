@@ -105,9 +105,11 @@ export function VideoViewContainer({
       syncCompleted();
       window.addEventListener('storage', syncCompleted);
       window.addEventListener('focus', syncCompleted);
+      window.addEventListener('preptea_study_update', syncCompleted);
       return () => {
         window.removeEventListener('storage', syncCompleted);
         window.removeEventListener('focus', syncCompleted);
+        window.removeEventListener('preptea_study_update', syncCompleted);
       };
     } catch (e) {
       // ignore

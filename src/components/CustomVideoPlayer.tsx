@@ -350,14 +350,37 @@ export function CustomVideoPlayer({
     };
   }, [blobUrl, localBlobUrl, activeAsset?.url]);
 
-  // Fullscreen change listener
+  // Flush latest playback position to MongoDB on page unload, tab switch, or unmount
   useEffect(() => {
-    const handleFsChange = () => {
-      setIsFullscreen(!!document.fullscreenElement);
+    const handleFlushProgress = () => {
+      const v = videoRef.current;
+      if (!v || !videoId) return;
+      const curTime = v.currentTime;
+      if (curTime > 3) {
+        const elapsedSinceDb = Date.now() - lastDbSaveTimeRef.current;
+        if (elapsedSinceDb >= 2000) {
+          const deltaSec = Math.max(1, Math.round(elapsedSinceDb / 1000));
+          lastDbSaveTimeRef.current = Date.now();
+          recordPlaybackProgressToDb(
+            videoId,
+            courseSlug,
+            curTime,
+            v.duration || 0,
+            title || videoData?.name || 'Video Lesson',
+            deltaSec
+          );
+        }
+      }
     };
-    document.addEventListener('fullscreenchange', handleFsChange);
-    return () => document.removeEventListener('fullscreenchange', handleFsChange);
-  }, []);
+
+    window.addEventListener('pagehide', handleFlushProgress);
+    window.addEventListener('beforeunload', handleFlushProgress);
+    return () => {
+      handleFlushProgress();
+      window.removeEventListener('pagehide', handleFlushProgress);
+      window.removeEventListener('beforeunload', handleFlushProgress);
+    };
+  }, [videoId, courseSlug, title, videoData?.name]);
 
   // Sync global media playing status for ActivityTracker telemetry
   useEffect(() => {
@@ -607,9 +630,9 @@ export function CustomVideoPlayer({
       }
     }
 
-    // Throttled heartbeat to MongoDB (every 60 seconds while playing)
+    // Throttled heartbeat to MongoDB (every 25 seconds while playing)
     // Local progress is continuously saved to localStorage above every 2 seconds.
-    if (Date.now() - lastDbSaveTimeRef.current >= 60000 && videoId && currentTimeVal > 3) {
+    if (Date.now() - lastDbSaveTimeRef.current >= 25000 && videoId && currentTimeVal > 3) {
       const deltaSec = Math.round((Date.now() - lastDbSaveTimeRef.current) / 1000);
       lastDbSaveTimeRef.current = Date.now();
       recordPlaybackProgressToDb(
@@ -665,12 +688,13 @@ export function CustomVideoPlayer({
     } else if (!hasRestoredTimeRef.current) {
       hasRestoredTimeRef.current = true;
 
-      const tryApplyResume = (resumeSec: number) => {
+      const tryApplyResume = (resumeSec: number, isRemote = false) => {
         const v = videoRef.current;
         if (!v) return;
         const vDur = v.duration || vidDuration || 0;
         if (resumeSec > 5 && (vDur === 0 || resumeSec < vDur - 10)) {
-          if (v.currentTime < 3) {
+          // Allow seeking if at beginning (< 3s) OR remote progress from Device A is further ahead
+          if (v.currentTime < 3 || (isRemote && resumeSec > v.currentTime + 3)) {
             v.currentTime = resumeSec;
             setCurrentTime(resumeSec);
             setResumeToast({
@@ -706,14 +730,14 @@ export function CustomVideoPlayer({
 
       if (foundTime !== null) {
         tryApplyResume(foundTime);
-      } else {
-        // 2. Query cloud progress asynchronously if empty locally (e.g. fresh device login)
-        getResumeTimestamp(videoId, courseSlug).then((remoteTime) => {
-          if (remoteTime !== null) {
-            tryApplyResume(remoteTime);
-          }
-        });
       }
+
+      // 2. Reconcile cloud progress asynchronously for multi-device sync
+      getResumeTimestamp(videoId, courseSlug).then((remoteTime) => {
+        if (remoteTime !== null && remoteTime > (foundTime || 0)) {
+          tryApplyResume(remoteTime, true);
+        }
+      });
     }
   };
 
@@ -1208,7 +1232,7 @@ export function CustomVideoPlayer({
             setIsPlaying(false);
             if (videoId && currentTime > 3) {
               const elapsedSinceDb = Date.now() - lastDbSaveTimeRef.current;
-              if (elapsedSinceDb >= 15000) {
+              if (elapsedSinceDb >= 3000) {
                 const deltaSec = Math.max(1, Math.round(elapsedSinceDb / 1000));
                 lastDbSaveTimeRef.current = Date.now();
                 recordPlaybackProgressToDb(

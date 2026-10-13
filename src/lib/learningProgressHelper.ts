@@ -304,11 +304,20 @@ export async function mergeLocalProgressInDb(
     studyDays?: string[];
     maxStreak?: number;
     clientDate?: string;
+    coursesProgress?: Record<string, any>;
+    videoPlayback?: Record<string, any>;
   }
 ) {
   await connectToDatabase();
   const email = userEmail.toLowerCase().trim();
-  const { completedVideos = [], studyDays = [], maxStreak = 0, clientDate } = params;
+  const {
+    completedVideos = [],
+    studyDays = [],
+    maxStreak = 0,
+    clientDate,
+    coursesProgress,
+    videoPlayback,
+  } = params;
 
   const { progress } = await getOrCreateUserLearningProgress(email, clientDate);
 
@@ -326,6 +335,53 @@ export async function mergeLocalProgressInDb(
   progress.studyDays = allStudyDays;
   progress.currentStreak = streakCalc.currentStreak;
   progress.longestStreak = Math.max(progress.longestStreak, maxStreak, streakCalc.longestStreak);
+
+  // Merge incoming coursesProgress (Last-Write-Wins based on updatedAt)
+  if (coursesProgress && typeof coursesProgress === 'object') {
+    if (!progress.coursesProgress) {
+      progress.coursesProgress = new Map();
+    }
+    Object.entries(coursesProgress).forEach(([slug, val]: [string, any]) => {
+      if (val?.lastVideoId) {
+        const existing = progress.coursesProgress.get(slug);
+        const incomingTime = val.updatedAt ? new Date(val.updatedAt).getTime() : 0;
+        const existingTime = existing?.updatedAt ? new Date(existing.updatedAt).getTime() : 0;
+        if (!existing || incomingTime >= existingTime) {
+          progress.coursesProgress.set(slug, {
+            courseSlug: slug,
+            lastVideoId: val.lastVideoId,
+            lastVideoTitle: val.lastVideoTitle || val.title || 'Lesson',
+            lastPlaybackTime: val.lastPlaybackTime || val.timestamp || 0,
+            lastDuration: val.lastDuration || 0,
+            updatedAt: incomingTime > 0 ? new Date(incomingTime) : new Date(),
+          });
+        }
+      }
+    });
+  }
+
+  // Merge incoming videoPlayback (Last-Write-Wins / highest playback progress)
+  if (videoPlayback && typeof videoPlayback === 'object') {
+    if (!progress.videoPlayback) {
+      progress.videoPlayback = new Map();
+    }
+    Object.entries(videoPlayback).forEach(([vId, val]: [string, any]) => {
+      const existing = progress.videoPlayback.get(vId);
+      const incomingTime = typeof val.time === 'number' ? val.time : 0;
+      const existingTime = existing?.time || 0;
+      const incomingUpdatedAt = val.updatedAt ? new Date(val.updatedAt).getTime() : 0;
+      const existingUpdatedAt = existing?.updatedAt ? new Date(existing.updatedAt).getTime() : 0;
+
+      if (!existing || incomingUpdatedAt >= existingUpdatedAt || incomingTime > existingTime) {
+        progress.videoPlayback.set(vId, {
+          time: incomingTime,
+          duration: val.duration || 0,
+          completed: val.completed || existing?.completed || false,
+          updatedAt: incomingUpdatedAt > 0 ? new Date(incomingUpdatedAt) : new Date(),
+        });
+      }
+    });
+  }
 
   await progress.save();
   return { progress, streakCalc };

@@ -18,8 +18,13 @@ export function Navbar() {
   const [mounted, setMounted] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
 
+  const [rememberQuality, setRememberQuality] = useState(false);
+
   useEffect(() => {
     setMounted(true);
+    if (typeof window !== 'undefined') {
+      setRememberQuality(localStorage.getItem('preptea_remember_download_quality') === 'true');
+    }
   }, []);
 
   const currentUser = mounted ? user : null;
@@ -31,6 +36,7 @@ export function Navbar() {
     : 0;
   const isAdmin = currentUser?.role === 'superadmin' || currentUser?.role === 'admin';
   const hasCourseAccess = Boolean(mounted && checkUserCourseAccess(user));
+  const hasDownloadsTabAccess = hasCourseAccess && (currentDownloads.length > 0 || activeDownloadsCount > 0 || rememberQuality);
 
   // Close menu on click outside
   useEffect(() => {
@@ -157,8 +163,8 @@ export function Navbar() {
                   <span>History</span>
                 </Link>
 
-                {/* Downloads Link — visible if user has downloaded videos or active background downloads */}
-                {(currentDownloads.length > 0 || activeDownloadsCount > 0) && (
+                {/* Downloads Link — visible if user has course access and has downloaded videos, active downloads, or quality reminder */}
+                {hasDownloadsTabAccess && (
                   <Link
                     href="/downloads"
                     title={activeDownloadsCount > 0 ? `${activeDownloadsCount} downloading • View Downloads` : "Downloads (Offline Ready)"}
@@ -345,8 +351,8 @@ export function Navbar() {
                     <span>History</span>
                   </Link>
 
-                  {/* Downloads — visible in dropdown if user has downloaded videos or active background downloads */}
-                  {(currentDownloads.length > 0 || activeDownloadsCount > 0) && (
+                  {/* Downloads — visible in dropdown if user has course access and has downloaded videos, active downloads, or quality reminder */}
+                  {hasDownloadsTabAccess && (
                     <Link
                       href="/downloads"
                       onClick={() => setShowMenu(false)}

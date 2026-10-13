@@ -167,20 +167,30 @@ export function CoursesCatalogGrid({ courses }: { courses: CourseItem[] }) {
   }, []);
 
   useEffect(() => {
-    try {
-      const map: Record<string, LastVideoInfo> = {};
-      courses.forEach((course) => {
-        const stored = localStorage.getItem(
-          `preptea_last_video_${course.slug}`,
-        );
-        if (stored) {
-          map[course.slug] = JSON.parse(stored);
-        }
-      });
-      setLastVideos(map);
-    } catch (e) {
-      // ignore
-    }
+    const updateLastVideos = () => {
+      try {
+        const map: Record<string, LastVideoInfo> = {};
+        courses.forEach((course) => {
+          const stored = localStorage.getItem(
+            `preptea_last_video_${course.slug}`,
+          );
+          if (stored) {
+            map[course.slug] = JSON.parse(stored);
+          }
+        });
+        setLastVideos(map);
+      } catch (e) {
+        // ignore
+      }
+    };
+
+    updateLastVideos();
+    window.addEventListener("preptea_study_update", updateLastVideos);
+    window.addEventListener("storage", updateLastVideos);
+    return () => {
+      window.removeEventListener("preptea_study_update", updateLastVideos);
+      window.removeEventListener("storage", updateLastVideos);
+    };
   }, [courses]);
 
   // Section X Courses: Filtered and mapped with custom titles and descriptions

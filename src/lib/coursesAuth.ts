@@ -67,6 +67,8 @@ export async function hasCoursesAccess(sessionUser: SessionUser | null): Promise
   // Check fast session props first
   if (sessionUser.role === 'superadmin' || sessionUser.role === 'admin') return true;
   if (sessionUser.adminPermissions?.includes('access_courses') || sessionUser.adminPermissions?.includes('*')) return true;
+  if ((sessionUser as any).hasCourseAccess === true) return true;
+  if (Array.isArray(sessionUser.allowedBatches) && sessionUser.allowedBatches.some(isCourseBatch)) return true;
 
   let userBatches: string[] = [];
   let isSuper = false;

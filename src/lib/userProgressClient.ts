@@ -57,7 +57,8 @@ const CACHE_TTL_MS = 60000; // 60 seconds (prevents rapid DB re-fetching on rout
  */
 export async function fetchUserProgressFromDb(forceFresh = false): Promise<UserProgressData | null> {
   const now = Date.now();
-  if (!forceFresh && cachedProgressData && now - lastProgressFetchTime < CACHE_TTL_MS) {
+  const effectiveTtl = forceFresh ? 3000 : CACHE_TTL_MS;
+  if (cachedProgressData && now - lastProgressFetchTime < effectiveTtl) {
     return cachedProgressData;
   }
 
@@ -88,61 +89,7 @@ export async function fetchUserProgressFromDb(forceFresh = false): Promise<UserP
       if (data.success) {
         cachedProgressData = data;
         lastProgressFetchTime = Date.now();
-
-        // Sync DB state to localStorage as instant offline cache
-        if (typeof window !== 'undefined') {
-          try {
-            let changed = false;
-            if (Array.isArray(data.completedVideos)) {
-              const prev = localStorage.getItem(LOCAL_COMPLETED_KEY);
-              const serialized = JSON.stringify(data.completedVideos);
-              if (prev !== serialized) {
-                localStorage.setItem(LOCAL_COMPLETED_KEY, serialized);
-                changed = true;
-              }
-            }
-            if (data.streak?.studyDays) {
-              const prev = localStorage.getItem(LOCAL_STREAK_KEY);
-              const serialized = JSON.stringify({
-                studyDays: data.streak.studyDays,
-                lastUpdated: Date.now(),
-              });
-              if (prev !== serialized) {
-                localStorage.setItem(LOCAL_STREAK_KEY, serialized);
-                changed = true;
-              }
-            }
-            if (data.coursesProgress) {
-              Object.entries(data.coursesProgress).forEach(([slug, val]: [string, any]) => {
-                if (val?.lastVideoId) {
-                  localStorage.setItem(
-                    `preptea_last_video_${slug}`,
-                    JSON.stringify({
-                      videoId: val.lastVideoId,
-                      title: val.lastVideoTitle,
-                      timestamp: val.lastPlaybackTime,
-                      updatedAt: new Date(val.updatedAt).getTime(),
-                    })
-                  );
-                }
-              });
-            }
-            if (data.videoPlayback && typeof data.videoPlayback === 'object') {
-              localStorage.setItem('preptea_video_playback_map', JSON.stringify(data.videoPlayback));
-              Object.entries(data.videoPlayback).forEach(([vId, val]: [string, any]) => {
-                if (val?.time && typeof val.time === 'number' && val.time > 0) {
-                  localStorage.setItem(`preptea_video_time_${vId}`, String(val.time));
-                }
-              });
-            }
-            // Only fire event if content actually changed to avoid event bouncing loops
-            if (changed) {
-              window.dispatchEvent(new Event(SYNC_EVENT_NAME));
-            }
-          } catch (e) {
-            // ignore localStorage errors
-          }
-        }
+        applyServerProgressToLocalStorage(data);
         return data;
       }
     } catch (err) {
@@ -154,6 +101,149 @@ export async function fetchUserProgressFromDb(forceFresh = false): Promise<UserP
   })();
 
   return inflightFetchProgressPromise;
+}
+
+/**
+ * Reconciles server progress with client localStorage using Set union and Last-Write-Wins.
+ * Updates all course resume points, video playback timestamps, and completed units.
+ * Returns true if local state changed and dispatches preptea_study_update event.
+ */
+export function applyServerProgressToLocalStorage(data: UserProgressData): boolean {
+  if (typeof window === 'undefined' || !data) return false;
+  let changed = false;
+
+  try {
+    // 1. Merge completed videos via Set union so progress made on other devices is never lost
+    if (Array.isArray(data.completedVideos)) {
+      const prevRaw = localStorage.getItem(LOCAL_COMPLETED_KEY);
+      const prevList: string[] = prevRaw ? JSON.parse(prevRaw) : [];
+      const mergedSet = new Set([...prevList, ...data.completedVideos]);
+      const mergedList = Array.from(mergedSet);
+      if (mergedList.length !== prevList.length || !prevList.every((v) => mergedSet.has(v))) {
+        localStorage.setItem(LOCAL_COMPLETED_KEY, JSON.stringify(mergedList));
+        changed = true;
+      }
+    }
+
+    // 2. Merge study streak days via Set union
+    if (data.streak?.studyDays && Array.isArray(data.streak.studyDays)) {
+      const prevRaw = localStorage.getItem(LOCAL_STREAK_KEY);
+      let prevDays: string[] = [];
+      if (prevRaw) {
+        try {
+          const parsed = JSON.parse(prevRaw);
+          if (Array.isArray(parsed.studyDays)) prevDays = parsed.studyDays;
+        } catch (e) {}
+      }
+      const mergedSet = new Set([...prevDays, ...data.streak.studyDays]);
+      const mergedDays = Array.from(mergedSet).sort();
+      if (mergedDays.length !== prevDays.length || !prevDays.every((d) => mergedSet.has(d))) {
+        localStorage.setItem(
+          LOCAL_STREAK_KEY,
+          JSON.stringify({
+            studyDays: mergedDays,
+            lastUpdated: Date.now(),
+          })
+        );
+        changed = true;
+      }
+    }
+
+    // 3. Reconcile course resume states with Last-Write-Wins (LWW)
+    if (data.coursesProgress && typeof data.coursesProgress === 'object') {
+      Object.entries(data.coursesProgress).forEach(([slug, val]: [string, any]) => {
+        if (val?.lastVideoId) {
+          const key = `preptea_last_video_${slug}`;
+          const localRaw = localStorage.getItem(key);
+          let shouldUseServer = true;
+          if (localRaw) {
+            try {
+              const localParsed = JSON.parse(localRaw);
+              const serverTime = val.updatedAt ? new Date(val.updatedAt).getTime() : 0;
+              const localTime = localParsed.updatedAt ? new Date(localParsed.updatedAt).getTime() : 0;
+              if (localTime > serverTime) {
+                shouldUseServer = false;
+              }
+            } catch (e) {}
+          }
+          if (shouldUseServer) {
+            let isIdentical = false;
+            if (localRaw) {
+              try {
+                const localParsed = JSON.parse(localRaw);
+                if (
+                  localParsed.videoId === val.lastVideoId &&
+                  Math.abs((localParsed.timestamp || 0) - (val.lastPlaybackTime || 0)) < 1
+                ) {
+                  isIdentical = true;
+                }
+              } catch (e) {}
+            }
+            if (!isIdentical) {
+              const nextPayload = JSON.stringify({
+                videoId: val.lastVideoId,
+                title: val.lastVideoTitle || 'Lesson',
+                timestamp: val.lastPlaybackTime || 0,
+                updatedAt: val.updatedAt ? new Date(val.updatedAt).getTime() : Date.now(),
+              });
+              localStorage.setItem(key, nextPayload);
+              changed = true;
+            }
+          }
+        }
+      });
+    }
+
+    // 4. Reconcile video playback positions (LWW / highest playback progress)
+    if (data.videoPlayback && typeof data.videoPlayback === 'object') {
+      const prevPbRaw = localStorage.getItem('preptea_video_playback_map');
+      const prevPbMap: Record<string, VideoPlaybackState> = prevPbRaw ? JSON.parse(prevPbRaw) : {};
+      let pbChanged = false;
+
+      Object.entries(data.videoPlayback).forEach(([vId, val]: [string, any]) => {
+        const localPb = prevPbMap[vId];
+        const serverTime = typeof val.time === 'number' ? val.time : 0;
+        const localTime = localPb?.time || 0;
+        const serverUpdatedAt = val.updatedAt ? new Date(val.updatedAt).getTime() : 0;
+        const localUpdatedAt = localPb?.updatedAt ? new Date(localPb.updatedAt).getTime() : 0;
+
+        const isDifferent =
+          !localPb ||
+          Math.abs(localTime - serverTime) > 1 ||
+          Boolean(localPb.completed) !== Boolean(val.completed);
+
+        if (isDifferent && (serverUpdatedAt >= localUpdatedAt || serverTime > localTime)) {
+          prevPbMap[vId] = {
+            time: serverTime,
+            duration: val.duration || 0,
+            completed: val.completed || false,
+            updatedAt: val.updatedAt || new Date().toISOString(),
+          };
+          if (serverTime > 0) {
+            const localSaved = localStorage.getItem(`preptea_video_time_${vId}`);
+            if (localSaved !== String(serverTime)) {
+              localStorage.setItem(`preptea_video_time_${vId}`, String(serverTime));
+              changed = true;
+            }
+          }
+          pbChanged = true;
+          changed = true;
+        }
+      });
+
+      if (pbChanged) {
+        localStorage.setItem('preptea_video_playback_map', JSON.stringify(prevPbMap));
+      }
+    }
+
+    if (changed) {
+      window.dispatchEvent(new Event(SYNC_EVENT_NAME));
+    }
+  } catch (e) {
+    console.warn('Error applying server progress to localStorage:', e);
+  }
+
+  return changed;
 }
 
 /**
@@ -272,7 +362,8 @@ export async function recordPlaybackProgressToDb(
 
 /**
  * Resolves the resume timestamp for a video, checking local storage first,
- * falling back to DB if needed.
+ * falling back to DB if needed. If server has a newer timestamp or further progress,
+ * prioritizes server to enable seamless multi-device resume.
  */
 export async function getResumeTimestamp(
   videoId: string,
@@ -280,39 +371,55 @@ export async function getResumeTimestamp(
 ): Promise<number | null> {
   if (typeof window === 'undefined' || !videoId) return null;
 
-  // 1. Check local storage first
+  let localTime: number | null = null;
+  let localUpdatedAt = 0;
   try {
     const local = localStorage.getItem(`preptea_video_time_${videoId}`);
     if (local) {
       const parsed = parseFloat(local);
-      if (!isNaN(parsed) && parsed > 5) return parsed;
+      if (!isNaN(parsed) && parsed > 5) localTime = parsed;
     }
-
-    if (courseSlug) {
-      const courseLocal = localStorage.getItem(`preptea_last_video_${courseSlug}`);
-      if (courseLocal) {
-        const parsed = JSON.parse(courseLocal);
-        if (parsed.videoId === videoId && parsed.timestamp > 5) {
-          return parsed.timestamp;
-        }
+    const playbackMapRaw = localStorage.getItem('preptea_video_playback_map');
+    if (playbackMapRaw) {
+      const pbMap = JSON.parse(playbackMapRaw);
+      if (pbMap[videoId]?.updatedAt) {
+        localUpdatedAt = new Date(pbMap[videoId].updatedAt).getTime();
       }
     }
   } catch (e) {}
 
-  // 2. Fetch from DB if local storage was empty (e.g. user on another device)
+  // Fetch cloud progress (fresh to prioritize other devices)
   try {
-    const data = await fetchUserProgressFromDb();
-    if (data?.videoPlayback?.[videoId]?.time) {
-      const dbTime = data.videoPlayback[videoId].time;
-      if (dbTime > 5) return dbTime;
-    }
+    const data = await fetchUserProgressFromDb(true);
+    const serverVideo = data?.videoPlayback?.[videoId];
+    const serverTime = serverVideo?.time && serverVideo.time > 5 ? serverVideo.time : null;
+    const serverUpdatedAt = serverVideo?.updatedAt ? new Date(serverVideo.updatedAt).getTime() : 0;
+
+    let serverCourseTime: number | null = null;
+    let serverCourseUpdatedAt = 0;
     if (courseSlug && data?.coursesProgress?.[courseSlug]?.lastVideoId === videoId) {
-      const dbCourseTime = data.coursesProgress[courseSlug].lastPlaybackTime;
-      if (dbCourseTime > 5) return dbCourseTime;
+      const cp = data.coursesProgress[courseSlug];
+      if (cp.lastPlaybackTime > 5) {
+        serverCourseTime = cp.lastPlaybackTime;
+        serverCourseUpdatedAt = cp.updatedAt ? new Date(cp.updatedAt).getTime() : 0;
+      }
+    }
+
+    const effectiveServerTime = serverTime || serverCourseTime;
+    const effectiveServerUpdatedAt = Math.max(serverUpdatedAt, serverCourseUpdatedAt);
+
+    // If server has a newer timestamp or higher progress, prioritize server!
+    if (effectiveServerTime !== null) {
+      if (localTime === null || effectiveServerUpdatedAt >= localUpdatedAt || effectiveServerTime > localTime) {
+        try {
+          localStorage.setItem(`preptea_video_time_${videoId}`, String(effectiveServerTime));
+        } catch (e) {}
+        return effectiveServerTime;
+      }
     }
   } catch (e) {}
 
-  return null;
+  return localTime;
 }
 
 /**
@@ -328,66 +435,111 @@ export function getVideoPlaybackMap(): Record<string, VideoPlaybackState> {
   }
 }
 
+let lastSyncedSnapshot = '';
+let lastSyncTimestamp = 0;
+let inflightSyncPromise: Promise<void> | null = null;
+
 /**
  * Auto-merge local offline data into MongoDB upon user session initialization
  */
-export async function syncLocalProgressToDb(): Promise<void> {
+export async function syncLocalProgressToDb(force = false): Promise<void> {
   if (typeof window === 'undefined') return;
 
-  try {
-    let completedVideos: string[] = [];
-    let studyDays: string[] = [];
-
-    const rawCompleted = localStorage.getItem(LOCAL_COMPLETED_KEY);
-    if (rawCompleted) {
-      try {
-        const parsed = JSON.parse(rawCompleted);
-        if (Array.isArray(parsed)) completedVideos = parsed;
-      } catch (e) {}
-    }
-
-    const rawStreak = localStorage.getItem(LOCAL_STREAK_KEY);
-    if (rawStreak) {
-      try {
-        const parsed = JSON.parse(rawStreak);
-        if (Array.isArray(parsed.studyDays)) studyDays = parsed.studyDays;
-      } catch (e) {}
-    }
-
-    if (completedVideos.length === 0 && studyDays.length === 0) {
-      // Nothing offline to merge, just fetch from DB to populate local cache
-      await fetchUserProgressFromDb();
-      return;
-    }
-
-    const res = await fetch('/api/user/progress', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        action: 'sync_local',
-        completedVideos,
-        studyDays,
-        clientDate: getLocalDateString(),
-      }),
-    });
-
-    if (res.ok) {
-      const data = await res.json();
-      if (data.success && data.completedVideos) {
-        localStorage.setItem(LOCAL_COMPLETED_KEY, JSON.stringify(data.completedVideos));
-        if (data.streak?.studyDays) {
-          localStorage.setItem(
-            LOCAL_STREAK_KEY,
-            JSON.stringify({
-              studyDays: data.streak.studyDays,
-              lastUpdated: Date.now(),
-            })
-          );
-        }
-        window.dispatchEvent(new Event(SYNC_EVENT_NAME));
-      }
-    }
-  } catch (e) {
-    console.warn('Syncing local progress to DB failed:', e);
+  const now = Date.now();
+  // Don't spam DB within 4 seconds even if forced
+  if (now - lastSyncTimestamp < 4000) {
+    return;
   }
+
+  if (inflightSyncPromise) {
+    return inflightSyncPromise;
+  }
+
+  inflightSyncPromise = (async () => {
+    try {
+      let completedVideos: string[] = [];
+      let studyDays: string[] = [];
+
+      const rawCompleted = localStorage.getItem(LOCAL_COMPLETED_KEY);
+      if (rawCompleted) {
+        try {
+          const parsed = JSON.parse(rawCompleted);
+          if (Array.isArray(parsed)) completedVideos = parsed;
+        } catch (e) {}
+      }
+
+      const rawStreak = localStorage.getItem(LOCAL_STREAK_KEY);
+      if (rawStreak) {
+        try {
+          const parsed = JSON.parse(rawStreak);
+          if (Array.isArray(parsed.studyDays)) studyDays = parsed.studyDays;
+        } catch (e) {}
+      }
+
+      // Gather local course resume points
+      const coursesProgress: Record<string, any> = {};
+      try {
+        for (let i = 0; i < localStorage.length; i++) {
+          const key = localStorage.key(i);
+          if (key && key.startsWith('preptea_last_video_')) {
+            const slug = key.replace('preptea_last_video_', '');
+            const val = localStorage.getItem(key);
+            if (val) {
+              const parsed = JSON.parse(val);
+              if (parsed.videoId) {
+                coursesProgress[slug] = {
+                  lastVideoId: parsed.videoId,
+                  lastVideoTitle: parsed.title,
+                  lastPlaybackTime: parsed.timestamp || 0,
+                  updatedAt: parsed.updatedAt ? new Date(parsed.updatedAt).toISOString() : new Date().toISOString(),
+                };
+              }
+            }
+          }
+        }
+      } catch (e) {}
+
+      // Gather local video playback points
+      let videoPlayback: Record<string, any> = {};
+      try {
+        const rawPb = localStorage.getItem('preptea_video_playback_map');
+        if (rawPb) videoPlayback = JSON.parse(rawPb);
+      } catch (e) {}
+
+      const currentSnapshot = `${completedVideos.join(',')}|${studyDays.join(',')}|${Object.keys(coursesProgress).length}`;
+      if (!force && currentSnapshot === lastSyncedSnapshot && Date.now() - lastSyncTimestamp < 30000) {
+        return;
+      }
+
+      const res = await fetch('/api/user/progress', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          action: 'sync_local',
+          completedVideos,
+          studyDays,
+          coursesProgress,
+          videoPlayback,
+          clientDate: getLocalDateString(),
+        }),
+      });
+
+      if (res.ok) {
+        const data = await res.json();
+        if (data.success) {
+          lastSyncedSnapshot = currentSnapshot;
+          lastSyncTimestamp = Date.now();
+          cachedProgressData = data;
+          lastProgressFetchTime = Date.now();
+          applyServerProgressToLocalStorage(data);
+        }
+      }
+    } catch (e) {
+      console.warn('Syncing local progress to DB failed:', e);
+    } finally {
+      inflightSyncPromise = null;
+    }
+  })();
+
+  return inflightSyncPromise;
 }

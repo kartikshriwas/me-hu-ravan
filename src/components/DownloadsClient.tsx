@@ -46,6 +46,7 @@ import { useAuth } from '@/lib/authContext';
 import { getRememberedQuality, saveRememberedQuality } from '@/lib/qualityMatcher';
 import { checkUserCourseAccess, verifyAndGetCachedBatchAccess, CachedBatchAccess } from '@/lib/batchAccess';
 import { CustomVideoPlayer } from '@/components/CustomVideoPlayer';
+import NotFound from '@/app/not-found';
 
 function formatBytes(bytes: number): string {
   if (!bytes || bytes <= 0) return '0 B';
@@ -455,16 +456,24 @@ export function DownloadsClient() {
   const liveAccess = checkUserCourseAccess(user);
   const effectiveAccess = isOnline ? liveAccess : (cachedAccess?.hasAccess ?? liveAccess);
 
-  // effectiveAccess is calculated but we no longer throw 404 if it's missing. 
-  // If access was revoked, downloadContext will automatically purge the downloads when online.
-
-  if (isVerifyingOfflineAccess) {
+  if (isVerifyingOfflineAccess || authLoading || !mounted) {
     return (
       <div className="w-full h-[50vh] flex flex-col items-center justify-center">
         <Loader2 className="w-8 h-8 text-primary-500 animate-spin" />
         <p className="text-xs text-muted-foreground mt-4">Verifying secure offline access...</p>
       </div>
     );
+  }
+
+  // 1. If user is not logged in OR does not have access to courses, show 404
+  if (!effectiveAccess) {
+    return <NotFound />;
+  }
+
+  // 2. If user has 0 downloads, 0 active/queued downloads, AND has no customized download setting reminder, show 404
+  const activeCount = Object.keys(downloadingMap).length;
+  if (downloads.length === 0 && activeCount === 0 && !rememberQuality) {
+    return <NotFound />;
   }
 
   return (

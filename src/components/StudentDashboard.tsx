@@ -36,76 +36,89 @@ export function StudentDashboard() {
   const [watchTimeMinutes, setWatchTimeMinutes] = useState<number>(0);
 
   useEffect(() => {
-    try {
-      // 1. Load instant cached progress from localStorage
-      const items: RecentProgressItem[] = [];
-      for (let i = 0; i < localStorage.length; i++) {
-        const key = localStorage.key(i);
-        if (key && key.startsWith('preptea_last_video_')) {
-          const slug = key.replace('preptea_last_video_', '');
-          const val = localStorage.getItem(key);
-          if (val) {
-            const parsed = JSON.parse(val);
-            items.push({
-              slug,
-              videoId: parsed.videoId,
-              title: parsed.title || 'Video Lesson',
-              courseTitle: slug.replace(/-/g, ' ').toUpperCase(),
-              timestamp: parsed.timestamp || 0,
-              updatedAt: parsed.updatedAt || 0,
-            });
+    const loadDashboardData = () => {
+      try {
+        // 1. Load instant cached progress from localStorage
+        const items: RecentProgressItem[] = [];
+        for (let i = 0; i < localStorage.length; i++) {
+          const key = localStorage.key(i);
+          if (key && key.startsWith('preptea_last_video_')) {
+            const slug = key.replace('preptea_last_video_', '');
+            const val = localStorage.getItem(key);
+            if (val) {
+              const parsed = JSON.parse(val);
+              items.push({
+                slug,
+                videoId: parsed.videoId,
+                title: parsed.title || 'Video Lesson',
+                courseTitle: slug.replace(/-/g, ' ').toUpperCase(),
+                timestamp: parsed.timestamp || 0,
+                updatedAt: parsed.updatedAt || 0,
+              });
+            }
           }
         }
-      }
-      items.sort((a, b) => b.updatedAt - a.updatedAt);
-      setRecentProgress(items);
+        items.sort((a, b) => b.updatedAt - a.updatedAt);
+        setRecentProgress(items);
 
-      // 2. Load completed videos count
-      const completedStored = localStorage.getItem('preptea_completed_videos');
-      if (completedStored) {
-        const list = JSON.parse(completedStored);
-        setCompletedCount(Array.isArray(list) ? list.length : 0);
-      }
+        // 2. Load completed videos count
+        const completedStored = localStorage.getItem('preptea_completed_videos');
+        if (completedStored) {
+          const list = JSON.parse(completedStored);
+          setCompletedCount(Array.isArray(list) ? list.length : 0);
+        }
 
-      // 3. Estimate watch time from saved timestamps
-      let totalSeconds = 0;
-      for (let i = 0; i < localStorage.length; i++) {
-        const key = localStorage.key(i);
-        if (key && key.startsWith('preptea_video_time_')) {
-          const time = parseFloat(localStorage.getItem(key) || '0');
-          if (!isNaN(time)) totalSeconds += time;
-        }
-      }
-      setWatchTimeMinutes(Math.round(totalSeconds / 60));
-    } catch (e) {
-      // ignore
-    }
-
-    // 4. Fetch verified telemetry from MongoDB
-    fetchUserProgressFromDb().then((data) => {
-      if (data) {
-        if (typeof data.totalVideosCompleted === 'number') {
-          setCompletedCount(data.totalVideosCompleted);
-        }
-        if (typeof data.totalWatchTimeSeconds === 'number' && data.totalWatchTimeSeconds > 0) {
-          setWatchTimeMinutes(Math.round(data.totalWatchTimeSeconds / 60));
-        }
-        if (data.coursesProgress && Object.keys(data.coursesProgress).length > 0) {
-          const dbItems: RecentProgressItem[] = Object.values(data.coursesProgress).map((cp) => ({
-            slug: cp.courseSlug,
-            videoId: cp.lastVideoId,
-            title: cp.lastVideoTitle || 'Video Lesson',
-            courseTitle: cp.courseSlug.replace(/-/g, ' ').toUpperCase(),
-            timestamp: cp.lastPlaybackTime || 0,
-            updatedAt: new Date(cp.updatedAt).getTime(),
-          }));
-          dbItems.sort((a, b) => b.updatedAt - a.updatedAt);
-          if (dbItems.length > 0) {
-            setRecentProgress(dbItems);
+        // 3. Estimate watch time from saved timestamps
+        let totalSeconds = 0;
+        for (let i = 0; i < localStorage.length; i++) {
+          const key = localStorage.key(i);
+          if (key && key.startsWith('preptea_video_time_')) {
+            const time = parseFloat(localStorage.getItem(key) || '0');
+            if (!isNaN(time)) totalSeconds += time;
           }
         }
+        setWatchTimeMinutes(Math.round(totalSeconds / 60));
+      } catch (e) {
+        // ignore
       }
-    });
+
+      // 4. Fetch verified telemetry from MongoDB
+      fetchUserProgressFromDb(true).then((data) => {
+        if (data) {
+          if (typeof data.totalVideosCompleted === 'number') {
+            setCompletedCount(data.totalVideosCompleted);
+          }
+          if (typeof data.totalWatchTimeSeconds === 'number' && data.totalWatchTimeSeconds > 0) {
+            setWatchTimeMinutes(Math.round(data.totalWatchTimeSeconds / 60));
+          }
+          if (data.coursesProgress && Object.keys(data.coursesProgress).length > 0) {
+            const dbItems: RecentProgressItem[] = Object.values(data.coursesProgress).map((cp) => ({
+              slug: cp.courseSlug,
+              videoId: cp.lastVideoId,
+              title: cp.lastVideoTitle || 'Video Lesson',
+              courseTitle: cp.courseSlug.replace(/-/g, ' ').toUpperCase(),
+              timestamp: cp.lastPlaybackTime || 0,
+              updatedAt: new Date(cp.updatedAt).getTime(),
+            }));
+            dbItems.sort((a, b) => b.updatedAt - a.updatedAt);
+            if (dbItems.length > 0) {
+              setRecentProgress(dbItems);
+            }
+          }
+        }
+      });
+    };
+
+    loadDashboardData();
+    window.addEventListener('preptea_study_update', loadDashboardData);
+    window.addEventListener('storage', loadDashboardData);
+    window.addEventListener('focus', loadDashboardData);
+
+    return () => {
+      window.removeEventListener('preptea_study_update', loadDashboardData);
+      window.removeEventListener('storage', loadDashboardData);
+      window.removeEventListener('focus', loadDashboardData);
+    };
   }, []);
 
   // Targets

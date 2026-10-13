@@ -52,7 +52,7 @@ import { useDownloads } from '@/lib/downloadContext';
 import { DownloadLessonModal, SingleLessonDownloadTarget } from '@/components/DownloadLessonModal';
 import { getRememberedQuality, saveRememberedQuality } from '@/lib/qualityMatcher';
 import { CourseCalendarView } from '@/components/CourseCalendarView';
-import { recordVideoCompletionToDb, syncLocalProgressToDb } from '@/lib/userProgressClient';
+import { recordVideoCompletionToDb, syncLocalProgressToDb, fetchUserProgressFromDb } from '@/lib/userProgressClient';
 
 interface CourseDetailClientProps {
   course: CourseDetail;
@@ -292,9 +292,7 @@ export function CourseDetailClient({ course, availableTests, isUnlocked = true }
       } catch (e) {}
 
       if (markComplete) {
-        videoIds.forEach((vId) => {
-          recordVideoCompletionToDb(vId, course.slug);
-        });
+        syncLocalProgressToDb(true);
       }
 
       return updated;
@@ -619,9 +617,37 @@ export function CourseDetailClient({ course, availableTests, isUnlocked = true }
     window.addEventListener('preptea_study_update', updateLastVideo);
     window.addEventListener('storage', updateLastVideo);
 
+    // Reconcile multi-device resume state on mount and window focus
+    const reconcileFromCloud = () => {
+      fetchUserProgressFromDb(true).then((data) => {
+        if (data?.coursesProgress?.[course.slug]) {
+          const cp = data.coursesProgress[course.slug];
+          if (cp.lastVideoId) {
+            setLastVideoInfo((prev) => {
+              const serverTime = cp.updatedAt ? new Date(cp.updatedAt).getTime() : 0;
+              const localTime = prev && (prev as any).updatedAt ? new Date((prev as any).updatedAt).getTime() : 0;
+              if (serverTime >= localTime) {
+                return {
+                  videoId: cp.lastVideoId,
+                  title: cp.lastVideoTitle || 'Lesson',
+                  timestamp: cp.lastPlaybackTime || 0,
+                  updatedAt: cp.updatedAt,
+                } as any;
+              }
+              return prev;
+            });
+          }
+        }
+      });
+    };
+
+    reconcileFromCloud();
+    window.addEventListener('focus', reconcileFromCloud);
+
     return () => {
       window.removeEventListener('preptea_study_update', updateLastVideo);
       window.removeEventListener('storage', updateLastVideo);
+      window.removeEventListener('focus', reconcileFromCloud);
     };
   }, [course.slug]);
 
