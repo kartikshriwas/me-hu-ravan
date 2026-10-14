@@ -65,8 +65,39 @@ export function Navbar() {
           
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 sm:gap-2.5 group shrink-0">
-            <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-card border border-card-border flex items-center justify-center shadow-md group-hover:border-primary-500/50 transition-all duration-300">
-              <Coffee className="w-4 h-4 sm:w-5 sm:h-5 text-primary-600 dark:text-primary-400 group-hover:scale-110 transition-transform duration-300" />
+            <div className="relative w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-card border border-card-border flex items-center justify-center shadow-md group-hover:border-primary-500/50 group-hover:shadow-[0_0_12px_rgba(99,102,241,0.25)] transition-all duration-300">
+              {/* Exact Lucide Coffee Icon with waving steam paths */}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="w-4 h-4 sm:w-5 sm:h-5 text-primary-600 dark:text-primary-400 group-hover:scale-110 transition-transform duration-300 overflow-visible"
+              >
+                {/* Natural continuous steam 1 (left) */}
+                <path
+                  d="M6 0.5 C 5 2, 7 3.5, 6 6"
+                  strokeWidth="1.6"
+                  className="steam-stroke-wisp animate-[continuousSteamRise_2.8s_linear_infinite] group-hover:animate-[continuousSteamRiseHover_1.4s_linear_infinite]"
+                />
+                {/* Natural continuous steam 2 (middle) */}
+                <path
+                  d="M10 0 C 11.2 1.8, 8.8 3.6, 10 6"
+                  strokeWidth="1.75"
+                  className="steam-stroke-wisp animate-[continuousSteamRiseCenter_2.4s_linear_0.8s_infinite] group-hover:animate-[continuousSteamRiseCenterHover_1.2s_linear_0.3s_infinite]"
+                />
+                {/* Natural continuous steam 3 (right) */}
+                <path
+                  d="M14 0.5 C 13 2, 15 3.5, 14 6"
+                  strokeWidth="1.6"
+                  className="steam-stroke-wisp animate-[continuousSteamRise_3.1s_linear_1.6s_infinite] group-hover:animate-[continuousSteamRiseHover_1.5s_linear_0.6s_infinite]"
+                />
+                {/* Cup Body, Handle, Rim */}
+                <path d="M16 8a1 1 0 0 1 1 1v8a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1h14a4 4 0 1 1 0 8h-1" />
+              </svg>
             </div>
             <span className="text-base sm:text-xl font-extrabold text-foreground tracking-tight">
               Prep<span className="text-primary-600 dark:text-primary-400">Tea</span>
