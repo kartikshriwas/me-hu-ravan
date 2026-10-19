@@ -201,6 +201,64 @@ export function CustomVideoPlayer({
   const [showAutoPlayOverlay, setShowAutoPlayOverlay] = useState(false);
   const [autoPlayCountdown, setAutoPlayCountdown] = useState(10);
   const [autoPlayCancelled, setAutoPlayCancelled] = useState(false);
+
+  // Ambient Mode (Glowing dynamic background around player)
+  const [ambientMode, setAmbientMode] = useState<boolean>(true);
+  const ambientCanvasRef = useRef<HTMLCanvasElement | null>(null);
+
+  useEffect(() => {
+    try {
+      const savedAmbient = localStorage.getItem('preptea_ambient_mode');
+      if (savedAmbient !== null) {
+        setAmbientMode(savedAmbient === 'true');
+      }
+    } catch {
+      // ignore
+    }
+  }, []);
+
+  const toggleAmbientMode = () => {
+    setAmbientMode((prev) => {
+      const next = !prev;
+      try {
+        localStorage.setItem('preptea_ambient_mode', String(next));
+      } catch {}
+      return next;
+    });
+  };
+
+  // Continuous low-overhead canvas render for Ambient Glow
+  useEffect(() => {
+    if (!ambientMode || isFullscreen) return;
+
+    let animId: number;
+    let lastRenderTime = 0;
+
+    const renderGlow = (timestamp: number) => {
+      // Limit to ~20 FPS for silky glow without consuming CPU/GPU
+      if (timestamp - lastRenderTime > 50) {
+        lastRenderTime = timestamp;
+        const video = videoRef.current;
+        const canvas = ambientCanvasRef.current;
+        if (video && canvas && !video.paused && !video.ended && video.readyState >= 2) {
+          const ctx = canvas.getContext('2d', { alpha: false, willReadFrequently: false });
+          if (ctx) {
+            try {
+              ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+            } catch {
+              // cross-origin protection if any
+            }
+          }
+        }
+      }
+      animId = requestAnimationFrame(renderGlow);
+    };
+
+    animId = requestAnimationFrame(renderGlow);
+    return () => {
+      cancelAnimationFrame(animId);
+    };
+  }, [ambientMode, isFullscreen]);
   const [preloadingAsset, setPreloadingAsset] = useState<VideoAsset | null>(null);
 
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -400,12 +458,16 @@ export function CustomVideoPlayer({
     if (controlsTimeoutRef.current) clearTimeout(controlsTimeoutRef.current);
 
     controlsTimeoutRef.current = setTimeout(() => {
-      if (isPlaying) {
-        setShowControls(false);
-        setShowSettings(false);
-      }
-    }, 3500);
-  }, [isPlaying]);
+      setShowControls(false);
+      setShowSettings(false);
+    }, 2500);
+  }, []);
+
+  const handleContainerMouseLeave = useCallback(() => {
+    if (controlsTimeoutRef.current) clearTimeout(controlsTimeoutRef.current);
+    setShowControls(false);
+    setShowSettings(false);
+  }, []);
 
   useEffect(() => {
     return () => {
@@ -1192,16 +1254,34 @@ export function CustomVideoPlayer({
   }
 
   return (
-    <div className="w-full flex flex-col">
+    <div className="w-full flex flex-col relative">
       {/* Video first on mobile (order-first), title below. On desktop title is on top. */}
+
+      {/* Ambient Mode dynamic glowing background — seamlessly covers video and nav header */}
+      {ambientMode && !isFullscreen && (
+        <div
+          aria-hidden="true"
+          className="absolute -inset-4 sm:-inset-6 lg:-inset-8 pointer-events-none overflow-hidden blur-3xl opacity-45 dark:opacity-55 transition-opacity duration-700 -z-10 select-none"
+        >
+          <canvas
+            ref={ambientCanvasRef}
+            width={80}
+            height={45}
+            className="w-full h-full object-cover scale-110 saturate-150 transform-gpu"
+          />
+        </div>
+      )}
 
       {/* Main Video Container — full bleed */}
       <div
         ref={containerRef}
         onMouseMove={resetControlsTimeout}
-        onMouseLeave={() => isPlaying && setShowControls(false)}
+        onMouseEnter={resetControlsTimeout}
+        onMouseLeave={handleContainerMouseLeave}
         onClick={handleContainerTap}
-        className="relative w-full aspect-video min-h-[200px] sm:min-h-0 bg-black overflow-hidden shadow-2xl group select-none touch-none order-1"
+        className={`relative w-full aspect-video min-h-[200px] sm:min-h-0 bg-black overflow-hidden shadow-2xl group select-none touch-none order-1 ${
+          !showControls && isPlaying ? 'cursor-none' : ''
+        }`}
       >
         <video
           ref={videoRef}
@@ -1332,7 +1412,7 @@ export function CustomVideoPlayer({
           </div>
         )}
 
-        {/* Centered Play/Pause Toggle Button */}
+        {/* Centered Play/Pause Toggle Button — Modern ultra-clean low opacity glass */}
         {showControls && !isBuffering && (
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-10">
             <button
@@ -1340,13 +1420,13 @@ export function CustomVideoPlayer({
                 e.stopPropagation();
                 handlePlayPause();
               }}
-              className="pointer-events-auto w-14 h-14 sm:w-18 sm:h-18 rounded-full bg-black/60 border border-white/20 text-white flex items-center justify-center backdrop-blur-md shadow-2xl hover:scale-110 hover:bg-primary-600 hover:border-primary-400 transition-all duration-200"
+              className="pointer-events-auto w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-black/10 hover:bg-black/25 border border-white/10 text-white/90 hover:text-white flex items-center justify-center backdrop-blur-[2px] shadow-sm hover:scale-110 active:scale-95 transition-all duration-200 group/centerbtn cursor-pointer"
               aria-label={isPlaying ? 'Pause' : 'Play'}
             >
               {isPlaying ? (
-                <Pause className="w-6 h-6 sm:w-8 sm:h-8 fill-white ml-0" />
+                <Pause className="w-6 h-6 sm:w-7 sm:h-7 fill-current stroke-none drop-shadow-md group-hover/centerbtn:scale-105 transition-transform" />
               ) : (
-                <Play className="w-6 h-6 sm:w-8 sm:h-8 fill-white ml-1" />
+                <Play className="w-6 h-6 sm:w-7 sm:h-7 fill-current stroke-none ml-1 drop-shadow-md group-hover/centerbtn:scale-105 transition-transform" />
               )}
             </button>
           </div>
@@ -1418,7 +1498,25 @@ export function CustomVideoPlayer({
                   </div>
                 </button>
 
-
+                {/* Ambient Mode Toggle */}
+                <button
+                  onClick={toggleAmbientMode}
+                  className="w-full flex items-center justify-between p-2.5 rounded-xl hover:bg-card/90 active:bg-slate-800 transition-all text-xs font-semibold text-foreground touch-manipulation group"
+                >
+                  <div className="flex items-center gap-2.5">
+                    <Sparkles className="w-4 h-4 text-primary-600 dark:text-primary-400" />
+                    <span>Ambient Lighting</span>
+                  </div>
+                  <div className="flex items-center gap-1.5">
+                    <div
+                      className={`w-8 h-4.5 rounded-full p-0.5 transition-colors duration-200 flex items-center ${
+                        ambientMode ? 'bg-primary-600 justify-end' : 'bg-slate-700 justify-start'
+                      }`}
+                    >
+                      <div className="w-3.5 h-3.5 rounded-full bg-white shadow-sm" />
+                    </div>
+                  </div>
+                </button>
               </div>
             )}
 
@@ -1730,7 +1828,7 @@ export function CustomVideoPlayer({
               {onToggleTheaterMode && (
                 <button
                   onClick={onToggleTheaterMode}
-                  className={`p-1.5 sm:p-2 rounded-xl hover:bg-white/15 transition-colors hidden sm:inline-flex items-center gap-1 ${isTheaterMode ? 'bg-primary-600/40 text-primary-300' : 'text-white'}`}
+                  className={`p-1.5 sm:p-2 rounded-xl transition-colors hidden sm:inline-flex items-center gap-1 bg-transparent ${isTheaterMode ? 'text-primary-400 hover:text-primary-300' : 'text-white/90 hover:text-white hover:bg-white/15'}`}
                   title="Theater Mode (T)"
                   aria-label="Theater Mode"
                 >
@@ -1823,7 +1921,11 @@ export function CustomVideoPlayer({
       </div>
 
       {/* Player Info/Nav Header — rendered under the video player on mobile and desktop */}
-      <div className="flex flex-wrap sm:flex-nowrap items-center justify-between gap-3 px-4 sm:px-6 py-3 order-2 border-t border-card-border/60 bg-background/90 relative">
+      <div className={`flex flex-wrap sm:flex-nowrap items-center justify-between gap-3 px-4 sm:px-6 py-3 order-2 border-t transition-colors duration-500 relative ${
+        ambientMode && !isFullscreen
+          ? 'bg-background/60 dark:bg-black/5 backdrop-blur-xl border-white/10 dark:border-white/5'
+          : 'bg-background/90 border-card-border/60'
+      }`}>
         <div className="min-w-0 flex-1 space-y-0.5">
           <div className="flex items-center gap-2 flex-wrap">
             <h3 className="text-sm sm:text-base font-bold text-foreground truncate">
