@@ -7,17 +7,55 @@ import { invalidateUserCourseCache } from '@/lib/coursesAuth';
  * who have NEVER had premium or demo in the past.
  * Returns boolean indicating whether a demo was granted in this operation.
  */
-export async function processAutoDemoGrant(dbUser: any): Promise<boolean> {
+export async function processAutoDemoGrant(dbUser: any, currentIp?: string): Promise<boolean> {
   if (!dbUser || !dbUser.email) return false;
 
   // Admins & superadmins already have full permissions
   if (dbUser.role === 'superadmin' || dbUser.role === 'admin') return false;
 
-  // 1. Check if auto-demo feature is enabled by admin
+  // 1. If user is already identified as alt account, NEVER grant demo!
+  if (dbUser.isAlt) {
+    if (!dbUser.hasHadDemoOrPremium) {
+      await User.updateOne({ _id: dbUser._id }, { $set: { hasHadDemoOrPremium: true } }).catch(() => {});
+    }
+    return false;
+  }
+
+  // 2. IP collision check: If IP of this login already exists for a different email,
+  // mark this user as alt, deny demo silently, and store IP in history
+  const ipToCheck = currentIp || dbUser.lastIp;
+  if (ipToCheck && ipToCheck !== '127.0.0.1' && ipToCheck !== 'localhost') {
+    const existingOtherUser = await User.findOne({
+      email: { $ne: dbUser.email.toLowerCase().trim() },
+      $or: [
+        { pastIps: ipToCheck },
+        { lastIp: ipToCheck },
+      ]
+    }).select('_id email').lean();
+
+    if (existingOtherUser) {
+      // Mark as alt account silently without alerting the user
+      await User.updateOne(
+        { _id: dbUser._id },
+        {
+          $set: {
+            isAlt: true,
+            altOfEmail: existingOtherUser.email,
+            hasHadDemoOrPremium: true,
+            lastIp: ipToCheck,
+          },
+          $addToSet: { pastIps: ipToCheck },
+        }
+      ).catch(() => {});
+      return false;
+    }
+  }
+
+  // 3. Check if auto-demo feature is enabled by admin
   const { autoDemoEnabled, autoDemoDurationMinutes } = await getAutoDemoConfig();
   if (!autoDemoEnabled) return false;
 
-  // 2. Check if user has EVER had premium or demo in the past
+  // 4. Check if user has EVER had premium or demo in the past
   const hasHadHistory =
     Boolean(dbUser.hasHadDemoOrPremium) ||
     Boolean(dbUser.isPremium) ||

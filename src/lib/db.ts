@@ -1,16 +1,13 @@
 import mongoose from 'mongoose';
 import dns from 'dns';
 
-// Fix Linux querySrv ETIMEOUT by forcing reliable public DNS resolvers and IPv4 order
+// Force IPv4 lookup order to avoid IPv6 timeouts
 try {
   if (typeof dns.setDefaultResultOrder === 'function') {
     dns.setDefaultResultOrder('ipv4first');
   }
-  if (typeof dns.setServers === 'function') {
-    dns.setServers(['8.8.8.8', '1.1.1.1', '8.8.4.4', '1.0.0.1']);
-  }
 } catch (e) {
-  // Ignore in environments where custom DNS servers cannot be set
+  // Ignore in environments where custom DNS order cannot be set
 }
 
 const MONGODB_URI = process.env.MONGODB_URI;
@@ -29,6 +26,47 @@ let cached: MongooseCache = global.mongooseCache || { conn: null, promise: null 
 
 if (!global.mongooseCache) {
   global.mongooseCache = cached;
+}
+
+export async function resetDatabaseConnection(): Promise<void> {
+  cached.conn = null;
+  cached.promise = null;
+  if (global.mongooseCache) {
+    global.mongooseCache.conn = null;
+    global.mongooseCache.promise = null;
+  }
+  try {
+    if (mongoose.connection.readyState !== 0) {
+      await mongoose.disconnect();
+    }
+  } catch (_) {
+    // Ignore disconnect errors
+  }
+}
+
+// Attach lifecycle listeners once to automatically invalidate cache on network drops
+if (!(global as any).mongooseListenersAttached) {
+  mongoose.connection.on('error', (err) => {
+    console.warn('[MongoDB] Connection error detected, invalidating cache:', err.message);
+    cached.conn = null;
+    cached.promise = null;
+    if (global.mongooseCache) {
+      global.mongooseCache.conn = null;
+      global.mongooseCache.promise = null;
+    }
+  });
+
+  mongoose.connection.on('disconnected', () => {
+    console.warn('[MongoDB] Disconnected from database, invalidating cache');
+    cached.conn = null;
+    cached.promise = null;
+    if (global.mongooseCache) {
+      global.mongooseCache.conn = null;
+      global.mongooseCache.promise = null;
+    }
+  });
+
+  (global as any).mongooseListenersAttached = true;
 }
 
 export async function connectToDatabase(): Promise<typeof mongoose> {
@@ -53,19 +91,20 @@ export async function connectToDatabase(): Promise<typeof mongoose> {
     const opts: mongoose.ConnectOptions = {
       bufferCommands: false,
       maxPoolSize: 10,
-      minPoolSize: 2,
-      serverSelectionTimeoutMS: 5000,
-      connectTimeoutMS: 5000,
-      socketTimeoutMS: 15000,
-      family: 4, // Force IPv4 DNS lookup to prevent IPv6 timeout delays
+      minPoolSize: 1,
+      serverSelectionTimeoutMS: 15000,
+      connectTimeoutMS: 15000,
+      socketTimeoutMS: 45000,
+      heartbeatFrequencyMS: 10000,
+      retryWrites: true,
+      retryReads: true,
     };
 
     cached.promise = mongoose.connect(MONGODB_URI, opts).then((m) => {
       cached.conn = m;
       return m;
-    }).catch((err) => {
-      cached.promise = null;
-      cached.conn = null;
+    }).catch(async (err) => {
+      await resetDatabaseConnection();
       throw err;
     });
   }
@@ -73,8 +112,7 @@ export async function connectToDatabase(): Promise<typeof mongoose> {
   try {
     cached.conn = await cached.promise;
   } catch (e) {
-    cached.promise = null;
-    cached.conn = null;
+    await resetDatabaseConnection();
     throw e;
   }
 
@@ -92,8 +130,7 @@ export async function connectToDatabase(): Promise<typeof mongoose> {
 
     const state = cached.conn ? cached.conn.connection.readyState : 0;
     if (state !== 1) {
-      cached.promise = null;
-      cached.conn = null;
+      await resetDatabaseConnection();
       throw new Error(`MongoDB connection failed (readyState: ${state})`);
     }
   }

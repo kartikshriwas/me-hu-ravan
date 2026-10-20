@@ -18,8 +18,11 @@ import {
   ChevronDown,
   Sliders,
   Check,
+  Crown,
 } from 'lucide-react';
 import { useDownloads, StartDownloadParams } from '@/lib/downloadContext';
+import { useAuth } from '@/lib/authContext';
+import { checkCanDownload } from '@/lib/batchAccess';
 import { findBestMatchingAsset, getRememberedQuality, saveRememberedQuality } from '@/lib/qualityMatcher';
 
 interface VideoAssetOption {
@@ -79,6 +82,8 @@ export function YouTubeDownloadButton({
     deleteDownload,
     downloads,
   } = useDownloads();
+  const { user } = useAuth();
+  const canDownload = checkCanDownload(user);
 
   const [showQualityModal, setShowQualityModal] = useState(false);
   const [showActiveMenu, setShowActiveMenu] = useState(false);
@@ -133,6 +138,13 @@ export function YouTubeDownloadButton({
   }, []);
 
   const handleButtonClick = () => {
+    if (!canDownload) {
+      if (typeof window !== 'undefined') {
+        window.dispatchEvent(new CustomEvent('preptea:premium-download-required'));
+      }
+      return;
+    }
+
     if (downloaded) {
       setShowDownloadedMenu((prev) => !prev);
       return;
@@ -208,6 +220,7 @@ export function YouTubeDownloadButton({
   const circumference = 2 * Math.PI * radius;
   const strokeDashoffset = circumference - (progressPercent / 100) * circumference;
 
+
   return (
     <div ref={containerRef} className={`relative inline-block ${className}`}>
       {/* =========================================================================
@@ -282,16 +295,22 @@ export function YouTubeDownloadButton({
         </button>
       ) : (
         /* State 5: NOT DOWNLOADED (PROFESSIONAL YOUTUBE SPLIT BUTTON) */
-        <div className="inline-flex items-center rounded-xl bg-slate-800/90 border border-slate-700/60 hover:border-primary-500/40 transition-all shadow-sm group">
+        <div className={`inline-flex items-center rounded-xl bg-slate-800/90 border ${!canDownload ? 'border-amber-500/40 hover:border-amber-400/70' : 'border-slate-700/60 hover:border-primary-500/40'} transition-all shadow-sm group`}>
           <button
             type="button"
             onClick={handleButtonClick}
-            className="flex items-center gap-1.5 px-3 py-1.5 sm:py-2 text-foreground text-xs font-bold transition-all active:scale-95 touch-manipulation cursor-pointer hover:text-primary-300"
-            title={rememberPreference ? `Download in ${selectedSlug} (Click to download)` : "Download lesson"}
+            className={`flex items-center gap-1.5 px-3 py-1.5 sm:py-2 text-foreground text-xs font-bold transition-all active:scale-95 touch-manipulation cursor-pointer ${!canDownload ? 'hover:text-amber-300' : 'hover:text-primary-300'}`}
+            title={canDownload ? (rememberPreference ? `Download in ${selectedSlug} (Click to download)` : "Download lesson") : "Offline Download (Premium Feature — Click to unlock)"}
           >
-            <ArrowDownToLine className="w-4 h-4 text-primary-400 group-hover:-translate-y-0.5 transition-transform" />
+            <ArrowDownToLine className={`w-4 h-4 ${!canDownload ? 'text-amber-400' : 'text-primary-400'} group-hover:-translate-y-0.5 transition-transform`} />
             <span>Download</span>
-            {rememberPreference && (
+            {!canDownload && (
+              <span className="text-[9px] font-black uppercase tracking-wider px-1.5 py-0.5 rounded-full bg-gradient-to-r from-amber-500/20 to-amber-600/20 text-amber-300 border border-amber-500/30 flex items-center gap-1 shadow-sm">
+                <Crown className="w-2.5 h-2.5 text-amber-400" />
+                <span>Premium</span>
+              </span>
+            )}
+            {canDownload && rememberPreference && (
               <span className="text-[10px] font-mono font-normal text-muted-foreground bg-slate-900/80 px-1.5 py-0.5 rounded border border-slate-700/60">
                 {selectedSlug}
               </span>

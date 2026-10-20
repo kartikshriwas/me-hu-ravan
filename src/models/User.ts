@@ -19,6 +19,10 @@ export interface IUser extends Document {
   createdAt: Date;
   hasCourseAccess?: boolean;
   hasHadDemoOrPremium?: boolean;
+  isAlt?: boolean;
+  altOfEmail?: string;
+  lastIp?: string;
+  pastIps?: string[];
 }
 
 const UserSchema: Schema<IUser> = new Schema(
@@ -40,9 +44,17 @@ const UserSchema: Schema<IUser> = new Schema(
     lastActiveAt: { type: Date, default: Date.now },
     hasCourseAccess: { type: Boolean, default: false },
     hasHadDemoOrPremium: { type: Boolean, default: false },
+    isAlt: { type: Boolean, default: false },
+    altOfEmail: { type: String, default: '' },
+    lastIp: { type: String, default: '' },
+    pastIps: { type: [String], default: [] },
   },
   { timestamps: true }
 );
+
+UserSchema.index({ pastIps: 1 });
+UserSchema.index({ lastIp: 1 });
+UserSchema.index({ isAlt: 1 });
 
 export const User: Model<IUser> =
   mongoose.models.User || mongoose.model<IUser>('User', UserSchema);

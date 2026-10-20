@@ -1,8 +1,8 @@
 import { getAllCourses } from '@/lib/coursesData';
 import { cookies } from 'next/headers';
-import { notFound } from 'next/navigation';
+import { notFound, redirect } from 'next/navigation';
 import { auth } from '@/auth';
-import { hasCoursesAccess, getUnlockedCourseSlugsMap } from '@/lib/coursesAuth';
+import { hasCoursesAccess, getUnlockedCourseSlugsMap, checkIsDemoExpired } from '@/lib/coursesAuth';
 import { CoursesCatalogGrid } from '@/components/CoursesCatalogGrid';
 
 
@@ -12,6 +12,10 @@ export default async function CoursesCatalogPage() {
 
   const allowed = await hasCoursesAccess(sessionUser);
   if (!allowed) {
+    const demoStatus = checkIsDemoExpired(sessionUser);
+    if (demoStatus.isExpired) {
+      redirect(`/?demo_expired=true&mins=${demoStatus.minutes}`);
+    }
     notFound();
   }
 

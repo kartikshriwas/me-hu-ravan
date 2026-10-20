@@ -252,8 +252,21 @@ export function checkUserCourseAccess(user: any): boolean {
     }
     return false;
   }
-  if (user.role === 'superadmin' || user.role === 'admin') return true;
+
+  // If user's demo or temporary access has expired, immediately revoke course access
+  if (user.premiumExpiresAt && new Date(user.premiumExpiresAt).getTime() <= Date.now()) {
+    return false;
+  }
+  if (typeof user.premiumPlan === 'string' && (user.premiumPlan.startsWith('expired') || user.premiumPlan === 'free')) {
+    // If not holding a permanent course batch
+    const batches: string[] = Array.isArray(user.allowedBatches) ? user.allowedBatches : [];
+    if (!batches.some(isCourseBatch)) {
+      return false;
+    }
+  }
+
   if (user.adminPermissions?.includes('access_courses') || user.adminPermissions?.includes('*')) return true;
+  if (user.isPremium) return true;
   if (user.hasCourseAccess) return true;
   const batches: string[] = Array.isArray(user.allowedBatches) ? user.allowedBatches : [];
   if (user.premiumPlan && isCourseBatch(user.premiumPlan)) return true;
@@ -265,8 +278,37 @@ export function checkUserCourseAccess(user: any): boolean {
  */
 export function checkUserIsPremium(user: any): boolean {
   if (!user) return false;
-  if (user.role === 'superadmin' || user.role === 'admin') return true;
+
+  // Check expiration
+  if (user.premiumExpiresAt && new Date(user.premiumExpiresAt).getTime() <= Date.now()) {
+    return false;
+  }
+  if (typeof user.premiumPlan === 'string' && user.premiumPlan.startsWith('expired')) {
+    return false;
+  }
+
   if (user.isPremium) return true;
-  if (user.premiumPlan && user.premiumPlan.trim() !== '') return true;
+  if (user.premiumPlan && user.premiumPlan.trim() !== '' && user.premiumPlan !== 'free') return true;
   return false;
 }
+
+/**
+ * Checks if a user is eligible to download videos.
+ * Download is a PREMIUM-ONLY option. It is strictly NOT available for demo or free users.
+ */
+export function checkCanDownload(user: any): boolean {
+  if (!user) return false;
+
+  // Expired users cannot download
+  if (user.premiumExpiresAt && new Date(user.premiumExpiresAt).getTime() <= Date.now()) {
+    return false;
+  }
+
+  const plan = typeof user.premiumPlan === 'string' ? user.premiumPlan : '';
+  if (plan.includes('demo') || plan.startsWith('expired') || plan === 'free') {
+    return false;
+  }
+
+  return Boolean(user.isPremium);
+}
+

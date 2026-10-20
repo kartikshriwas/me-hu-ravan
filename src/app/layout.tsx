@@ -65,6 +65,9 @@ import { OfflineBanner } from '@/components/OfflineBanner';
 import { ServiceWorkerRegistration } from '@/components/ServiceWorkerRegistration';
 import { GlobalOfflineWrapper } from '@/components/GlobalOfflineWrapper';
 import { GlobalDownloadTracker } from '@/components/GlobalDownloadTracker';
+import { DemoExpiredModal } from '@/components/DemoExpiredModal';
+import { PremiumDownloadModal } from '@/components/PremiumDownloadModal';
+import { Suspense } from 'react';
 
 export default function RootLayout({
   children,
@@ -79,6 +82,10 @@ export default function RootLayout({
           <AuthProvider>
             <DownloadProvider>
               <ActivityTracker />
+              <Suspense fallback={null}>
+                <DemoExpiredModal />
+                <PremiumDownloadModal />
+              </Suspense>
               <Navbar />
               <main className="flex-1 w-full flex flex-col min-h-0 pt-14 sm:pt-16 pb-16 md:pb-0">
                 <GlobalOfflineWrapper>

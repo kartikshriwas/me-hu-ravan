@@ -233,6 +233,11 @@ export function ActivityTracker() {
             // Complete NextAuth logout to revoke user session cookie
             const { signOut } = await import('next-auth/react');
             await signOut({ callbackUrl: '/?error=SessionTerminated' });
+          } else if (data.demoExpired) {
+            // Demo expired — trigger modal and notify components
+            if (typeof window !== 'undefined') {
+              window.dispatchEvent(new CustomEvent('preptea:demo-expired', { detail: { minutes: data.demoMinutes || 15 } }));
+            }
           } else if (data.demoGranted) {
             // Demo granted automatically — notify components silently without interrupting active users
             if (typeof window !== 'undefined') {

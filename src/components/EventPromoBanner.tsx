@@ -43,7 +43,7 @@ export function EventPromoBanner() {
   if (!isGlobalFree && !launchEvent) return null;
 
   // 3. Hide if logged in user is ALREADY a permanent/individual premium user
-  const isIndividualPremiumUser = user?.role === 'superadmin' || (user?.isPremium && user?.premiumPlan !== 'free' && user?.premiumPlan !== 'Global Free Access');
+  const isIndividualPremiumUser = Boolean(user?.isPremium && user?.premiumPlan !== 'free' && user?.premiumPlan !== 'Global Free Access');
   if (user && isIndividualPremiumUser) {
     return null;
   }

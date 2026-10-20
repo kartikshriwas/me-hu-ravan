@@ -15,6 +15,7 @@ import {
 import { useAuth } from '@/lib/authContext';
 import {
   checkUserCourseAccess,
+  checkCanDownload,
   verifyAndGetCachedBatchAccess,
   saveCachedBatchAccess,
 } from '@/lib/batchAccess';
@@ -199,6 +200,28 @@ export function DownloadProvider({ children }: { children: React.ReactNode }) {
 
       if (user && user.email) {
         const liveAccess = checkUserCourseAccess(user);
+        const canDownload = checkCanDownload(user);
+
+        // Requirement: If user premium ended and they have anything in downloads, clean everything from downloads
+        const isExpired = user.premiumExpiresAt && new Date(user.premiumExpiresAt).getTime() <= Date.now();
+        const isNonPremium = !canDownload || isExpired || !user.isPremium;
+
+        if (isNonPremium) {
+          try {
+            const currentOffline = await getAllDownloadedVideos();
+            if (currentOffline && currentOffline.length > 0) {
+              console.warn('PrepTea Security: Premium ended or not active. Purging all offline downloads...');
+              await clearAllDownloadedVideos();
+              setDownloads([]);
+              setDownloadedIds(new Set());
+              setStorageUsage({ usedBytes: 0, count: 0 });
+              saveCachedBatchAccess(user.email, false, []);
+              return;
+            }
+          } catch {
+            // ignore
+          }
+        }
 
         if (cached && cached.email === user.email.toLowerCase().trim() && cached.hasAccess && !liveAccess) {
           console.warn('PrepTea Security: Course access revoked. Purging local downloads...');
@@ -210,7 +233,7 @@ export function DownloadProvider({ children }: { children: React.ReactNode }) {
           return;
         }
 
-        if (liveAccess) {
+        if (liveAccess && canDownload) {
           saveCachedBatchAccess(user.email, true, user.allowedBatches || [], '');
         } else {
           saveCachedBatchAccess(user.email, false, [], '');
@@ -221,7 +244,28 @@ export function DownloadProvider({ children }: { children: React.ReactNode }) {
     verifyAndSyncAccess();
     const handleOnline = () => verifyAndSyncAccess();
     window.addEventListener('online', handleOnline);
-    return () => window.removeEventListener('online', handleOnline);
+
+    // Also listen for demo-expired event to immediately clean downloads
+    const handleDemoExpired = async () => {
+      try {
+        console.warn('PrepTea Security: Demo expired. Purging all downloaded videos...');
+        await clearAllDownloadedVideos();
+        setDownloads([]);
+        setDownloadedIds(new Set());
+        setStorageUsage({ usedBytes: 0, count: 0 });
+        if (user?.email) {
+          saveCachedBatchAccess(user.email, false, []);
+        }
+      } catch (err) {
+        console.error('Failed to clear downloads on demo expiration:', err);
+      }
+    };
+    window.addEventListener('preptea:demo-expired', handleDemoExpired);
+
+    return () => {
+      window.removeEventListener('online', handleOnline);
+      window.removeEventListener('preptea:demo-expired', handleDemoExpired);
+    };
   }, [user, authLoading]);
 
   // Clean up object URLs on window unload
@@ -577,6 +621,14 @@ export function DownloadProvider({ children }: { children: React.ReactNode }) {
       const { videoId } = params;
       if (!videoId) return;
 
+      // Requirement: Download should not be available for demo, download is premium only option
+      if (!checkCanDownload(user)) {
+        if (typeof window !== 'undefined') {
+          window.dispatchEvent(new CustomEvent('preptea:premium-download-required'));
+        }
+        return;
+      }
+
       // Check if already downloaded
       if (downloadedIds.has(videoId)) return;
 
@@ -621,7 +673,7 @@ export function DownloadProvider({ children }: { children: React.ReactNode }) {
         processQueue();
       }, 10);
     },
-    [downloadedIds, processQueue]
+    [downloadedIds, processQueue, user]
   );
 
   // Pause a specific download (YouTube style)
@@ -929,6 +981,13 @@ export function DownloadProvider({ children }: { children: React.ReactNode }) {
       preferredQuality?: string;
       units: { videoId: string; unitTitle: string; duration?: number }[];
     }) => {
+      if (!checkCanDownload(user)) {
+        if (typeof window !== 'undefined') {
+          window.dispatchEvent(new CustomEvent('preptea:premium-download-required'));
+        }
+        return;
+      }
+
       const pendingUnits = units.filter(
         (u) => u.videoId && !downloadedIds.has(u.videoId) && !downloadingMap[u.videoId]
       );
@@ -988,6 +1047,13 @@ export function DownloadProvider({ children }: { children: React.ReactNode }) {
         units: { videoId: string; unitTitle: string; duration?: number }[];
       }[];
     }) => {
+      if (!checkCanDownload(user)) {
+        if (typeof window !== 'undefined') {
+          window.dispatchEvent(new CustomEvent('preptea:premium-download-required'));
+        }
+        return;
+      }
+
       const allUnits: {
         videoId: string;
         unitTitle: string;

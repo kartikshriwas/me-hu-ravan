@@ -2685,63 +2685,57 @@ export default function AdminDashboardPage() {
                         </td>
 
                         <td className="py-3 px-4 text-center">
-                          {isSuper ? (
-                            <span className="text-[11px] font-bold text-emerald-600 dark:text-emerald-400">All Batches</span>
-                          ) : (
-                            <button
-                              onClick={() => openBatchesModal(u)}
-                              className="px-2.5 py-1 rounded-xl bg-primary-500/20 text-primary-600 dark:text-primary-300 hover:bg-primary-500/30 border border-primary-500/30 text-[11px] font-bold transition-all flex items-center gap-1.5 mx-auto"
-                            >
-                              <BookOpen className="w-3.5 h-3.5 text-primary-600 dark:text-primary-400" />
-                              <span>{batchCount > 0 ? `${batchCount} batch(es)` : 'Grant Access'}</span>
-                            </button>
-                          )}
+                          <button
+                            onClick={() => openBatchesModal(u)}
+                            className="px-2.5 py-1 rounded-xl bg-primary-500/20 text-primary-600 dark:text-primary-300 hover:bg-primary-500/30 border border-primary-500/30 text-[11px] font-bold transition-all flex items-center gap-1.5 mx-auto"
+                          >
+                            <BookOpen className="w-3.5 h-3.5 text-primary-600 dark:text-primary-400" />
+                            <span>{batchCount > 0 ? `${batchCount} batch(es)` : 'Grant Access'}</span>
+                          </button>
                         </td>
 
                         <td className="py-3 px-4 text-right">
                           <div className="flex items-center justify-end gap-2">
+                            <select 
+                              onChange={(e) => {
+                                if (e.target.value) {
+                                  handleGrantDemo(u.email, parseInt(e.target.value));
+                                  e.target.value = ""; // Reset after selection
+                                }
+                              }}
+                              className="px-2 py-1.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white shadow-md border-none text-[11px] font-bold outline-none cursor-pointer text-center appearance-none"
+                              defaultValue=""
+                            >
+                              <option value="" disabled>Grant Demo</option>
+                              <option value="15">15 mins</option>
+                              <option value="60">1 Hour</option>
+                              <option value="720">12 Hours</option>
+                              <option value="1440">24 Hours</option>
+                              <option value="4320">3 Days</option>
+                            </select>
+                            <button
+                              onClick={() => {
+                                const nextPrem = !u.isPremium;
+                                const nextBatches = nextPrem ? (u.allowedBatches && u.allowedBatches.length > 0 ? u.allowedBatches : ['SigmaX']) : [];
+                                handleUpdateUser(u.email, u.role, nextPrem, u.adminPermissions, nextBatches);
+                              }}
+                              className={`px-3 py-1.5 rounded-xl text-[11px] font-bold transition-all ${
+                                u.isPremium
+                                  ? 'bg-rose-950/40 text-rose-600 dark:text-rose-300 border border-rose-500/30 hover:bg-rose-900/60'
+                                  : 'bg-emerald-600 hover:bg-emerald-500 text-white shadow-md'
+                              }`}
+                            >
+                              {u.isPremium ? 'Revoke Premium' : 'Grant Premium'}
+                            </button>
                             {!isSuper && (
-                              <>
-                                <select 
-                                  onChange={(e) => {
-                                    if (e.target.value) {
-                                      handleGrantDemo(u.email, parseInt(e.target.value));
-                                      e.target.value = ""; // Reset after selection
-                                    }
-                                  }}
-                                  className="px-2 py-1.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white shadow-md border-none text-[11px] font-bold outline-none cursor-pointer text-center appearance-none"
-                                  defaultValue=""
-                                >
-                                  <option value="" disabled>Grant Demo</option>
-                                  <option value="15">15 mins</option>
-                                  <option value="60">1 Hour</option>
-                                  <option value="720">12 Hours</option>
-                                  <option value="1440">24 Hours</option>
-                                  <option value="4320">3 Days</option>
-                                </select>
-                                <button
-                                  onClick={() => {
-                                    const nextPrem = !u.isPremium;
-                                    const nextBatches = nextPrem ? (u.allowedBatches || []) : [];
-                                    handleUpdateUser(u.email, u.role, nextPrem, u.adminPermissions, nextBatches);
-                                  }}
-                                  className={`px-3 py-1.5 rounded-xl text-[11px] font-bold transition-all ${
-                                    u.isPremium
-                                      ? 'bg-rose-950/40 text-rose-600 dark:text-rose-300 border border-rose-500/30 hover:bg-rose-900/60'
-                                      : 'bg-emerald-600 hover:bg-emerald-500 text-white shadow-md'
-                                  }`}
-                                >
-                                  {u.isPremium ? 'Revoke Premium' : 'Grant Premium'}
-                                </button>
-                                <button
-                                  onClick={() => handleDeleteUser(u.email)}
-                                  title="Permanently Delete User & All Data"
-                                  className="px-2.5 py-1.5 rounded-xl bg-rose-500/15 hover:bg-rose-500/30 border border-rose-500/30 text-rose-500 hover:text-rose-400 font-bold text-[11px] transition-all flex items-center gap-1 shrink-0"
-                                >
-                                  <Trash2 className="w-3.5 h-3.5" />
-                                  <span className="hidden sm:inline">Delete</span>
-                                </button>
-                              </>
+                              <button
+                                onClick={() => handleDeleteUser(u.email)}
+                                title="Permanently Delete User & All Data"
+                                className="px-2.5 py-1.5 rounded-xl bg-rose-500/15 hover:bg-rose-500/30 border border-rose-500/30 text-rose-500 hover:text-rose-400 font-bold text-[11px] transition-all flex items-center gap-1 shrink-0"
+                              >
+                                <Trash2 className="w-3.5 h-3.5" />
+                                <span className="hidden sm:inline">Delete</span>
+                              </button>
                             )}
                           </div>
                         </td>

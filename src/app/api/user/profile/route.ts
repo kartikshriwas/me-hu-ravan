@@ -59,11 +59,11 @@ export async function GET(request: Request) {
 
     const isGlobalFree = globalFreeConfig.isGlobalFree;
     const globalFreeUntil = globalFreeConfig.freeUntil;
-    let isPremium = dbUser?.isPremium || isSuperadmin || isGlobalFree;
+    let isPremium = Boolean(dbUser?.isPremium) || isGlobalFree;
     let premiumExpiresAt = dbUser?.premiumExpiresAt || null;
-    let premiumPlan = dbUser?.premiumPlan || (isSuperadmin ? 'superadmin' : 'free');
+    let premiumPlan = dbUser?.premiumPlan || 'free';
 
-    if (!dbUser?.isPremium && !isSuperadmin && isGlobalFree) {
+    if (!dbUser?.isPremium && isGlobalFree) {
       if (globalFreeUntil) {
         premiumExpiresAt = globalFreeUntil;
       }
@@ -76,19 +76,22 @@ export async function GET(request: Request) {
     let userPerms: string[] = dbUser?.adminPermissions || [];
     let userBatches: string[] = dbUser?.allowedBatches || [];
 
-    if (isPremium && !isSuperadmin && !isGlobalFree && premiumExpiresAt && new Date(premiumExpiresAt) < new Date()) {
+    if (isPremium && !isGlobalFree && premiumExpiresAt && new Date(premiumExpiresAt) < new Date()) {
       isPremium = false;
       userBatches = []; // Expire batches too
       
-      // We don't need to await this, let it run in background to sync DB
+      const isDemo = typeof premiumPlan === 'string' && (premiumPlan.includes('demo') || premiumPlan.includes('m_demo'));
+      const demoMins = premiumPlan.match(/(\d+)m/)?.[1] || '15';
+      const expiredPlanName = isDemo ? `expired_demo:${demoMins}m` : 'expired';
+
       User.updateOne(
         { email: cleanEmail },
-        { $set: { isPremium: false, premiumPlan: 'expired', allowedBatches: [] } }
+        { $set: { isPremium: false, premiumPlan: expiredPlanName, allowedBatches: [] } }
       ).exec();
     }
 
     const courseBatches = userBatches.filter(isCourseBatch);
-    const hasCourseAccess = isSuperadmin || userRole === 'superadmin' || userRole === 'admin' || userPerms.includes('access_courses') || userPerms.includes('*') || courseBatches.length > 0;
+    const hasCourseAccess = isPremium || userPerms.includes('access_courses') || userPerms.includes('*') || courseBatches.length > 0;
 
     const OFFLINE_SECRET = process.env.OFFLINE_ACCESS_SECRET || 'fallback-secret-for-preptea-offline';
     const payload = `${cleanEmail}:${hasCourseAccess}:${userBatches.join(',')}`;

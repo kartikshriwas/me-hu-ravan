@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import { getAllAssessments } from '@/lib/questionsData';
-import { connectToDatabase } from '@/lib/db';
+import { connectToDatabase, resetDatabaseConnection } from '@/lib/db';
 import { Attempt } from '@/models/Attempt';
 import { cleanQuizId } from '@/lib/storage';
 import { auth } from '@/auth';
@@ -29,32 +29,38 @@ export async function GET() {
     }
 
     const assessments = getAllAssessments();
-    const conn = await connectToDatabase();
-
     const attemptsMap: Record<string, { count: number; avgAccuracy: number }> = {};
 
-    if (conn) {
-      const stats = await Attempt.aggregate([
-        { $match: { isFirstAttempt: { $ne: false } } },
-        {
-          $group: {
-            _id: "$quizId",
-            count: { $sum: 1 },
-            avgAccuracy: { $avg: "$accuracy" }
+    try {
+      const conn = await connectToDatabase();
+      if (conn) {
+        const stats = await Attempt.aggregate([
+          { $match: { isFirstAttempt: { $ne: false } } },
+          {
+            $group: {
+              _id: "$quizId",
+              count: { $sum: 1 },
+              avgAccuracy: { $avg: "$accuracy" }
+            }
           }
-        }
-      ]);
+        ]).option({ maxTimeMS: 5000 });
 
-      stats.forEach((s) => {
-        if (s._id) {
-          const cleanKey = cleanQuizId(s._id);
-          attemptsMap[cleanKey] = {
-            count: s.count || 0,
-            avgAccuracy: Math.round(s.avgAccuracy || 0)
-          };
-          attemptsMap[s._id] = attemptsMap[cleanKey];
-        }
-      });
+        stats.forEach((s) => {
+          if (s._id) {
+            const cleanKey = cleanQuizId(s._id);
+            attemptsMap[cleanKey] = {
+              count: s.count || 0,
+              avgAccuracy: Math.round(s.avgAccuracy || 0)
+            };
+            attemptsMap[s._id] = attemptsMap[cleanKey];
+          }
+        });
+      }
+    } catch (dbErr: any) {
+      if (dbErr?.name === 'MongooseServerSelectionError') {
+        await resetDatabaseConnection().catch(() => {});
+      }
+      console.warn('[Questions API] Could not aggregate attempt stats, using static assessments catalog:', dbErr?.message || dbErr);
     }
 
     const enriched = assessments.map((t) => {

@@ -1,6 +1,6 @@
 import NextAuth from 'next-auth';
 import { authConfig } from './auth.config';
-import { connectToDatabase } from '@/lib/db';
+import { connectToDatabase, resetDatabaseConnection } from '@/lib/db';
 import { User } from '@/models/User';
 import { PreApprovedEmail } from '@/models/PreApprovedEmail';
 import { LaunchEvent } from '@/models/LaunchEvent';
@@ -8,6 +8,8 @@ import { SUPERADMIN_EMAIL } from '@/lib/adminAuth';
 import { isCourseBatch } from '@/lib/batchAccess';
 import { processPendingDemoActivation } from '@/lib/pendingDemoHelper';
 import { processAutoDemoGrant } from '@/lib/autoDemoHelper';
+import { invalidateUserCourseCache } from '@/lib/coursesAuth';
+import { headers } from 'next/headers';
 
 export const { handlers, auth, signIn, signOut } = NextAuth({
   ...authConfig,
@@ -19,27 +21,57 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
         const email = user.email.toLowerCase().trim();
         const isSuperadmin = email === SUPERADMIN_EMAIL;
 
+        let clientIp = '';
+        try {
+          const reqHeaders = await headers();
+          const rawIp = reqHeaders.get('x-forwarded-for')?.split(',')[0]?.trim() || reqHeaders.get('x-real-ip') || '';
+          clientIp = rawIp.replace(/^::ffff:/i, '');
+        } catch {
+          // ignore if headers() not accessible in this context
+        }
+
         const conn = await connectToDatabase();
 
         if (conn) {
           let dbUser = await User.findOne({ email });
           const isNewUser = !dbUser;
 
-          let isPremium = isSuperadmin;
+          let isAlt = dbUser?.isAlt || false;
+          let altOfEmail = dbUser?.altOfEmail || '';
+
+          // IP collision check for alt account detection:
+          // If IP of new login already exists for a different email, mark new mail as alt
+          if (clientIp && clientIp !== '127.0.0.1' && clientIp !== 'localhost') {
+            const existingWithIp = await User.findOne({
+              email: { $ne: email },
+              $or: [{ pastIps: clientIp }, { lastIp: clientIp }]
+            }).select('_id email').lean();
+
+            if (existingWithIp) {
+              isAlt = true;
+              altOfEmail = existingWithIp.email;
+            }
+          }
+
+          let isPremium = false;
           let premiumExpiresAt: Date | null = null;
-          let premiumPlan = isSuperadmin ? 'superadmin' : 'free';
-          let grantedBy = isSuperadmin ? 'system' : '';
+          let premiumPlan = 'free';
+          let grantedBy = '';
 
           if (dbUser) {
-            isPremium = dbUser.isPremium || isSuperadmin;
+            isPremium = Boolean(dbUser.isPremium);
             premiumExpiresAt = dbUser.premiumExpiresAt || null;
-            premiumPlan = dbUser.premiumPlan || (isSuperadmin ? 'superadmin' : 'free');
+            premiumPlan = dbUser.premiumPlan || 'free';
             grantedBy = dbUser.grantedBy || '';
 
-            // Check if premium expired
-            if (isPremium && !isSuperadmin && premiumExpiresAt && new Date(premiumExpiresAt) < new Date()) {
+            // Check if premium/demo expired for any user (including admin / superadmin)
+            if (isPremium && premiumExpiresAt && new Date(premiumExpiresAt) < new Date()) {
               isPremium = false;
-              premiumPlan = 'expired';
+              const isDemo = typeof premiumPlan === 'string' && (premiumPlan.includes('demo') || premiumPlan.includes('m_demo'));
+              let demoMins = 15;
+              const match = typeof premiumPlan === 'string' ? premiumPlan.match(/(\d+)m/) : null;
+              if (match) demoMins = parseInt(match[1]);
+              premiumPlan = isDemo ? `expired_demo:${demoMins}m` : 'expired';
               
               // Actively clear DB fields so they lose access everywhere
               await User.updateOne(
@@ -47,11 +79,13 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
                 {
                   $set: {
                     isPremium: false,
-                    premiumPlan: 'expired',
-                    allowedBatches: []
+                    premiumPlan,
+                    allowedBatches: [],
+                    hasCourseAccess: false,
                   }
                 }
               );
+              invalidateUserCourseCache(email);
             }
           }
 
@@ -74,8 +108,8 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
             }
           }
 
-          // Check LaunchEvent if new user and still not premium
-          if (isNewUser && !isPremium) {
+          // Check LaunchEvent if new user and still not premium (and not an alt)
+          if (isNewUser && !isPremium && !isAlt) {
             // SECURITY: Atomic claim to prevent race condition double-spending
             const claimedEvent = await LaunchEvent.findOneAndUpdate(
               {
@@ -112,10 +146,17 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
             premiumExpiresAt,
             premiumPlan,
             grantedBy,
+            lastIp: clientIp || dbUser?.lastIp || '',
           };
 
           if (isPremium) {
             updateData.hasHadDemoOrPremium = true;
+          }
+
+          if (isAlt) {
+            updateData.isAlt = true;
+            updateData.altOfEmail = altOfEmail;
+            updateData.hasHadDemoOrPremium = true; // Never grant demo to alt
           }
 
           if (isSuperadmin) {
@@ -125,12 +166,15 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
 
           const savedUser = await User.findOneAndUpdate(
             { email },
-            { $set: updateData },
+            { 
+              $set: updateData,
+              ...(clientIp ? { $addToSet: { pastIps: clientIp } } : {}),
+            },
             { upsert: true, returnDocument: 'after' }
           );
 
-          if (savedUser && !savedUser.isPremium) {
-            await processAutoDemoGrant(savedUser);
+          if (savedUser && !savedUser.isPremium && !savedUser.isAlt) {
+            await processAutoDemoGrant(savedUser, clientIp);
           }
         }
         return true;
@@ -147,17 +191,17 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
 
       if (shouldSync && token.email) {
         try {
-          // Implement a 3-second timeout for the DB query so it doesn't freeze the API response if MongoDB is hanging
+          // Implement a 6-second timeout for DB sync so cold starts can complete without blocking requests indefinitely
           const dbSyncPromise = (async () => {
             const conn = await connectToDatabase();
             if (conn) {
-              let dbUser = await User.findOne({ email: token.email }).lean();
+              let dbUser = await User.findOne({ email: token.email }).lean().maxTimeMS(5000);
               if (dbUser) {
                 // Check if user came online with a queued pending demo ('pending_demo:Xm') or eligible for auto-demo
                 const wasActivated = await processPendingDemoActivation(dbUser);
-                const wasAutoGranted = await processAutoDemoGrant(dbUser);
+                const wasAutoGranted = await processAutoDemoGrant(dbUser, dbUser.lastIp);
                 if (wasActivated || wasAutoGranted) {
-                  const updatedUser = await User.findOne({ email: token.email }).lean();
+                  const updatedUser = await User.findOne({ email: token.email }).lean().maxTimeMS(5000);
                   if (updatedUser) dbUser = updatedUser;
                 }
                 const userRole = dbUser.role || (token.email === SUPERADMIN_EMAIL ? 'superadmin' : 'user');
@@ -166,12 +210,12 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
                 const allowedBatches = dbUser.allowedBatches || [];
 
                 let isPremium = !!dbUser.isPremium;
-                if (isPremium && !isSuperOrAdmin && dbUser.premiumExpiresAt && new Date(dbUser.premiumExpiresAt) < new Date()) {
+                if (isPremium && dbUser.premiumExpiresAt && new Date(dbUser.premiumExpiresAt) < new Date()) {
                   isPremium = false;
                 }
 
                 const hasCourseBatches = allowedBatches.some((b: string) => isCourseBatch(b));
-                const hasCourseAccess = Boolean(isSuperOrAdmin || adminPermissions.includes('access_courses') || adminPermissions.includes('*') || hasCourseBatches);
+                const hasCourseAccess = Boolean(isPremium || adminPermissions.includes('access_courses') || adminPermissions.includes('*') || hasCourseBatches);
 
                 token.id = dbUser._id.toString();
                 token.role = userRole;
@@ -189,13 +233,16 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
           })();
 
           const timeoutPromise = new Promise((_, reject) => 
-            setTimeout(() => reject(new Error('MongoDB Sync Timeout')), 3000)
+            setTimeout(() => reject(new Error('MongoDB Sync Timeout')), 6000)
           );
 
           await Promise.race([dbSyncPromise, timeoutPromise]);
-        } catch (error) {
+        } catch (error: any) {
+          if (error?.name === 'MongooseServerSelectionError' || error?.message?.includes('timed out')) {
+            await resetDatabaseConnection().catch(() => {});
+          }
           // Soft warn for fallback so dev server doesn't treat intentional timeout fallback as an uncaught error
-          console.warn('[Auth] DB user sync fallback to cached token:', (error as Error).message);
+          console.warn('[Auth] DB user sync fallback to cached token:', error?.message || error);
         }
       }
       return token;

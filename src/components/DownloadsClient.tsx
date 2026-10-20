@@ -39,12 +39,15 @@ import {
   Info,
   Check,
   Tv,
+  Crown,
+  ExternalLink,
+  LogIn,
 } from 'lucide-react';
 import { useDownloads } from '@/lib/downloadContext';
 import { OfflineVideoMetadata } from '@/lib/videoStorage';
 import { useAuth } from '@/lib/authContext';
 import { getRememberedQuality, saveRememberedQuality } from '@/lib/qualityMatcher';
-import { checkUserCourseAccess, verifyAndGetCachedBatchAccess, CachedBatchAccess } from '@/lib/batchAccess';
+import { checkUserCourseAccess, checkCanDownload, verifyAndGetCachedBatchAccess, CachedBatchAccess } from '@/lib/batchAccess';
 import { CustomVideoPlayer } from '@/components/CustomVideoPlayer';
 import NotFound from '@/app/not-found';
 
@@ -252,7 +255,7 @@ export function DownloadsClient() {
   }, []);
 
   const [cachedAccess, setCachedAccess] = useState<CachedBatchAccess | null>(null);
-  const [isVerifyingOfflineAccess, setIsVerifyingOfflineAccess] = useState(!isOnline);
+  const [isVerifyingOfflineAccess, setIsVerifyingOfflineAccess] = useState(false);
 
   useEffect(() => {
     if (isOnline) {
@@ -455,8 +458,20 @@ export function DownloadsClient() {
   // When offline: check cached batch access status
   const liveAccess = checkUserCourseAccess(user);
   const effectiveAccess = isOnline ? liveAccess : (cachedAccess?.hasAccess ?? liveAccess);
+  const canDownload = checkCanDownload(user);
 
-  if (isVerifyingOfflineAccess || authLoading || !mounted) {
+  // Fast loading skeleton during SSR and initial hydration to guarantee zero hydration mismatches
+  if (!mounted) {
+    return (
+      <div className="w-full h-[50vh] flex flex-col items-center justify-center">
+        <Loader2 className="w-8 h-8 text-primary-500 animate-spin" />
+        <p className="text-xs text-muted-foreground mt-4">Loading downloads...</p>
+      </div>
+    );
+  }
+
+  // Only show offline verification after mount if the browser is actually offline and actively checking cryptographic cache
+  if (!isOnline && isVerifyingOfflineAccess) {
     return (
       <div className="w-full h-[50vh] flex flex-col items-center justify-center">
         <Loader2 className="w-8 h-8 text-primary-500 animate-spin" />
@@ -465,19 +480,60 @@ export function DownloadsClient() {
     );
   }
 
-  // 1. If user is not logged in OR does not have access to courses, show 404
-  if (!effectiveAccess) {
-    return <NotFound />;
-  }
-
-  // 2. If user has 0 downloads, 0 active/queued downloads, AND has no customized download setting reminder, show 404
-  const activeCount = Object.keys(downloadingMap).length;
-  if (downloads.length === 0 && activeCount === 0 && !rememberQuality) {
-    return <NotFound />;
-  }
-
   return (
     <main className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 space-y-6 sm:space-y-8" role="main">
+      {/* Logged Out Visitor Notice */}
+      {!user && !authLoading && (
+        <div className="rounded-2xl p-4 sm:p-5 bg-card/90 border border-card-border shadow-md flex items-center justify-between gap-4 flex-wrap animate-in fade-in">
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 rounded-xl bg-primary-500/15 text-primary-400 flex items-center justify-center font-bold shrink-0">
+              <LogIn className="w-5 h-5" />
+            </div>
+            <div>
+              <h3 className="text-sm font-bold text-foreground">Sign in to sync your downloads</h3>
+              <p className="text-xs text-muted-foreground mt-0.5">
+                Log in to unlock your enrolled course batches and watch offline video lessons.
+              </p>
+            </div>
+          </div>
+          <Link
+            href="/courses"
+            className="px-4 py-2 rounded-xl bg-primary-600 hover:bg-primary-500 text-white text-xs font-bold transition-all shadow-md shrink-0"
+          >
+            Explore Courses
+          </Link>
+        </div>
+      )}
+
+      {/* Free / Demo User Upgrade Banner */}
+      {user && !canDownload && !authLoading && (
+        <div className="rounded-2xl p-4 sm:p-5 bg-gradient-to-r from-amber-500/15 via-amber-500/5 to-transparent border border-amber-500/30 flex items-center justify-between gap-4 flex-wrap animate-in fade-in">
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center font-bold shrink-0">
+              <Crown className="w-5 h-5" />
+            </div>
+            <div>
+              <h3 className="text-sm font-bold text-foreground">Offline Downloads is a Premium Feature</h3>
+              <p className="text-xs text-muted-foreground mt-0.5">
+                Upgrade to Premium or purchase a course batch to save video lessons for high-speed offline playback.
+              </p>
+            </div>
+          </div>
+          <div className="flex items-center gap-2">
+            <button
+              type="button"
+              onClick={() => {
+                if (typeof window !== 'undefined') {
+                  window.dispatchEvent(new CustomEvent('preptea:premium-download-required'));
+                }
+              }}
+              className="px-4 py-2 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-black text-xs font-bold transition-all shadow-md shrink-0 cursor-pointer"
+            >
+              Upgrade to Premium
+            </button>
+          </div>
+        </div>
+      )}
       
       {/* Offline Status Reassurance Banner */}
       {!isOnline && (

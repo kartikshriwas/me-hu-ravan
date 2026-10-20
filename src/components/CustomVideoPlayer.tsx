@@ -34,7 +34,7 @@ import {
 } from 'lucide-react';
 import { useDownloads } from '@/lib/downloadContext';
 import { useAuth } from '@/lib/authContext';
-import { checkUserCourseAccess, checkUserIsPremium } from '@/lib/batchAccess';
+import { checkUserCourseAccess, checkUserIsPremium, checkCanDownload } from '@/lib/batchAccess';
 import { OfflineState } from '@/components/OfflineState';
 import { recordVideoCompletionToDb, recordPlaybackProgressToDb, getResumeTimestamp } from '@/lib/userProgressClient';
 import { YouTubeDownloadButton } from '@/components/YouTubeDownloadButton';
@@ -103,8 +103,10 @@ export function CustomVideoPlayer({
   const { user } = useAuth();
   const hasCourseAccess = checkUserCourseAccess(user);
   const isPremium = checkUserIsPremium(user);
+  const canDownload = checkCanDownload(user);
   const [hasMounted, setHasMounted] = useState<boolean>(false);
   const [isOnline, setIsOnline] = useState<boolean>(true);
+
 
   useEffect(() => {
     setHasMounted(true);
@@ -202,9 +204,10 @@ export function CustomVideoPlayer({
   const [autoPlayCountdown, setAutoPlayCountdown] = useState(10);
   const [autoPlayCancelled, setAutoPlayCancelled] = useState(false);
 
-  // Ambient Mode (Glowing dynamic background around player)
+  // Ambient Mode (Glowing dynamic background around player and nav header)
   const [ambientMode, setAmbientMode] = useState<boolean>(true);
   const ambientCanvasRef = useRef<HTMLCanvasElement | null>(null);
+  const ambientNavCanvasRef = useRef<HTMLCanvasElement | null>(null);
 
   useEffect(() => {
     try {
@@ -217,12 +220,44 @@ export function CustomVideoPlayer({
     }
   }, []);
 
+  const drawAmbientFrame = useCallback(() => {
+    const video = videoRef.current;
+    if (!video || video.ended || video.readyState < 2) return;
+
+    const canvas = ambientCanvasRef.current;
+    if (canvas) {
+      const ctx = canvas.getContext('2d', { alpha: false, willReadFrequently: false });
+      if (ctx) {
+        try {
+          ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+        } catch {
+          // cross-origin protection if any
+        }
+      }
+    }
+
+    const navCanvas = ambientNavCanvasRef.current;
+    if (navCanvas) {
+      const navCtx = navCanvas.getContext('2d', { alpha: false, willReadFrequently: false });
+      if (navCtx) {
+        try {
+          navCtx.drawImage(video, 0, 0, navCanvas.width, navCanvas.height);
+        } catch {
+          // cross-origin protection if any
+        }
+      }
+    }
+  }, []);
+
   const toggleAmbientMode = () => {
     setAmbientMode((prev) => {
       const next = !prev;
       try {
         localStorage.setItem('preptea_ambient_mode', String(next));
       } catch {}
+      if (next) {
+        setTimeout(drawAmbientFrame, 50);
+      }
       return next;
     });
   };
@@ -238,18 +273,7 @@ export function CustomVideoPlayer({
       // Limit to ~20 FPS for silky glow without consuming CPU/GPU
       if (timestamp - lastRenderTime > 50) {
         lastRenderTime = timestamp;
-        const video = videoRef.current;
-        const canvas = ambientCanvasRef.current;
-        if (video && canvas && !video.paused && !video.ended && video.readyState >= 2) {
-          const ctx = canvas.getContext('2d', { alpha: false, willReadFrequently: false });
-          if (ctx) {
-            try {
-              ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
-            } catch {
-              // cross-origin protection if any
-            }
-          }
-        }
+        drawAmbientFrame();
       }
       animId = requestAnimationFrame(renderGlow);
     };
@@ -258,7 +282,7 @@ export function CustomVideoPlayer({
     return () => {
       cancelAnimationFrame(animId);
     };
-  }, [ambientMode, isFullscreen]);
+  }, [ambientMode, isFullscreen, drawAmbientFrame]);
   const [preloadingAsset, setPreloadingAsset] = useState<VideoAsset | null>(null);
 
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -276,6 +300,26 @@ export function CustomVideoPlayer({
   const lastSaveTimeRef = useRef<number>(0);
   const lastDbSaveTimeRef = useRef<number>(Date.now());
   const hasRestoredTimeRef = useRef<boolean>(false);
+
+  // Stop video and redirect to normal home page when demo expires
+  useEffect(() => {
+    const handleDemoExpired = (e: Event) => {
+      try {
+        if (videoRef.current) {
+          videoRef.current.pause();
+        }
+        if (typeof document !== 'undefined' && document.fullscreenElement) {
+          document.exitFullscreen().catch(() => {});
+        }
+      } catch {}
+      const customEvent = e as CustomEvent;
+      const mins = customEvent?.detail?.minutes || 15;
+      router.push(`/?demo_expired=true&mins=${mins}`);
+    };
+
+    window.addEventListener('preptea:demo-expired', handleDemoExpired);
+    return () => window.removeEventListener('preptea:demo-expired', handleDemoExpired);
+  }, [router]);
 
   useEffect(() => {
     hasRestoredTimeRef.current = false;
@@ -1254,14 +1298,14 @@ export function CustomVideoPlayer({
   }
 
   return (
-    <div className="w-full flex flex-col relative">
+    <div className="w-full flex flex-col relative isolate">
       {/* Video first on mobile (order-first), title below. On desktop title is on top. */}
 
       {/* Ambient Mode dynamic glowing background — seamlessly covers video and nav header */}
       {ambientMode && !isFullscreen && (
         <div
           aria-hidden="true"
-          className="absolute -inset-4 sm:-inset-6 lg:-inset-8 pointer-events-none overflow-hidden blur-3xl opacity-45 dark:opacity-55 transition-opacity duration-700 -z-10 select-none"
+          className="absolute -inset-4 sm:-inset-6 lg:-inset-8 pointer-events-none blur-3xl opacity-50 dark:opacity-65 transition-opacity duration-700 -z-10 select-none"
         >
           <canvas
             ref={ambientCanvasRef}
@@ -1291,17 +1335,30 @@ export function CustomVideoPlayer({
           onContextMenu={(e) => e.preventDefault()}
           className="w-full h-full object-contain cursor-pointer transition-all"
           onTimeUpdate={handleTimeUpdate}
-          onLoadedMetadata={handleLoadedMetadata}
+          onLoadedMetadata={() => {
+            handleLoadedMetadata();
+            drawAmbientFrame();
+          }}
           onProgress={handleProgress}
           onEnded={handleVideoEnded}
           onRateChange={handleRateChange}
           onWaiting={() => setIsBuffering(true)}
-          onPlaying={() => setIsBuffering(false)}
-          onCanPlay={() => setIsBuffering(false)}
-          onSeeked={() => setIsBuffering(false)}
+          onPlaying={() => {
+            setIsBuffering(false);
+            drawAmbientFrame();
+          }}
+          onCanPlay={() => {
+            setIsBuffering(false);
+            drawAmbientFrame();
+          }}
+          onSeeked={() => {
+            setIsBuffering(false);
+            drawAmbientFrame();
+          }}
           onPlay={() => {
             setIsPlaying(true);
             setIsBuffering(false);
+            drawAmbientFrame();
             if (videoRef.current?.playbackRate) {
               const cleanRate = Math.round(videoRef.current.playbackRate * 100) / 100;
               setPlaybackRate((prev) => (prev !== cleanRate ? cleanRate : prev));
@@ -1310,6 +1367,7 @@ export function CustomVideoPlayer({
           onPause={() => {
             if (isSwitchingQualityRef.current) return;
             setIsPlaying(false);
+            drawAmbientFrame();
             if (videoId && currentTime > 3) {
               const elapsedSinceDb = Date.now() - lastDbSaveTimeRef.current;
               if (elapsedSinceDb >= 3000) {
@@ -1921,14 +1979,31 @@ export function CustomVideoPlayer({
       </div>
 
       {/* Player Info/Nav Header — rendered under the video player on mobile and desktop */}
-      <div className={`flex flex-wrap sm:flex-nowrap items-center justify-between gap-3 px-4 sm:px-6 py-3 order-2 border-t transition-colors duration-500 relative ${
+      <div className={`relative overflow-hidden flex flex-wrap sm:flex-nowrap items-center justify-between gap-3 px-4 sm:px-6 py-3.5 order-2 border-t transition-all duration-500 ${
         ambientMode && !isFullscreen
-          ? 'bg-background/60 dark:bg-black/5 backdrop-blur-xl border-white/10 dark:border-white/5'
-          : 'bg-background/90 border-card-border/60'
+          ? 'border-white/10 dark:border-white/5 shadow-lg'
+          : 'bg-card/95 border-card-border/60'
       }`}>
-        <div className="min-w-0 flex-1 space-y-0.5">
+        {/* Dedicated Ambient Glow Layer for Nav Header */}
+        {ambientMode && !isFullscreen && (
+          <div aria-hidden="true" className="absolute inset-0 pointer-events-none overflow-hidden -z-10 select-none">
+            {/* Ambient Canvas matching current video frame */}
+            <canvas
+              ref={ambientNavCanvasRef}
+              width={80}
+              height={45}
+              className="absolute -inset-4 w-[calc(100%+2rem)] h-[calc(100%+2rem)] object-cover blur-2xl opacity-70 dark:opacity-85 saturate-200 transform-gpu"
+            />
+            {/* Glassmorphic dark tint overlay for high contrast & crisp text readability */}
+            <div className="absolute inset-0 bg-slate-950/70 dark:bg-black/65 backdrop-blur-xl" />
+            {/* Top ambient highlight line bridging player to nav header */}
+            <div className="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-white/25 dark:via-white/15 to-transparent" />
+          </div>
+        )}
+
+        <div className="min-w-0 flex-1 space-y-0.5 relative z-10">
           <div className="flex items-center gap-2 flex-wrap">
-            <h3 className="text-sm sm:text-base font-bold text-foreground truncate">
+            <h3 className="text-sm sm:text-base font-bold text-foreground truncate drop-shadow-sm">
               {title || videoData?.name || 'Video Lesson'}
             </h3>
             {localBlobUrl && (
@@ -1944,9 +2019,9 @@ export function CustomVideoPlayer({
         </div>
 
         {/* Action Buttons Row */}
-        <div className="flex items-center gap-2 shrink-0">
-          {/* YouTube-style Download Action Button — visible only if user has course access */}
-          {!embedHtml && hasCourseAccess && (
+        <div className="flex items-center gap-2 shrink-0 relative z-10">
+          {/* YouTube-style Download Action Button — visible to all users (shows Premium badge for demo/free) */}
+          {!embedHtml && (
             <YouTubeDownloadButton
               videoId={videoId}
               courseSlug={courseSlug || 'course'}
@@ -1964,20 +2039,28 @@ export function CustomVideoPlayer({
             onPrev ? (
               <button
                 onClick={onPrev}
-                className="text-xs sm:text-sm font-semibold text-foreground hover:text-foreground px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl bg-slate-800 hover:bg-slate-700/80 border border-slate-700/60 hover:border-primary-500/50 transition-all flex items-center gap-1.5 touch-manipulation shadow-sm cursor-pointer"
+                className={`text-xs sm:text-sm font-semibold px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl transition-all flex items-center gap-1.5 touch-manipulation shadow-sm cursor-pointer ${
+                  ambientMode && !isFullscreen
+                    ? 'text-white bg-white/10 hover:bg-white/20 border border-white/15 backdrop-blur-sm'
+                    : 'text-foreground hover:text-foreground bg-slate-800 hover:bg-slate-700/80 border border-slate-700/60 hover:border-primary-500/50'
+                }`}
                 title={prevTitle ? `Previous: ${prevTitle}` : "Previous Video"}
               >
-                <ChevronLeft className="w-4 h-4 text-muted-foreground" />
+                <ChevronLeft className="w-4 h-4 text-white/70" />
                 <span>Previous</span>
               </button>
             ) : (
               <Link
                 prefetch={false}
                 href={prevVideoUrl!}
-                className="text-xs sm:text-sm font-semibold text-foreground hover:text-foreground px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl bg-slate-800 hover:bg-slate-700/80 border border-slate-700/60 hover:border-primary-500/50 transition-all flex items-center gap-1.5 touch-manipulation shadow-sm"
+                className={`text-xs sm:text-sm font-semibold px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl transition-all flex items-center gap-1.5 touch-manipulation shadow-sm ${
+                  ambientMode && !isFullscreen
+                    ? 'text-white bg-white/10 hover:bg-white/20 border border-white/15 backdrop-blur-sm'
+                    : 'text-foreground hover:text-foreground bg-slate-800 hover:bg-slate-700/80 border border-slate-700/60 hover:border-primary-500/50'
+                }`}
                 title={prevTitle ? `Previous (Shift + ←): ${prevTitle}` : "Previous Video (Shift + ←)"}
               >
-                <ChevronLeft className="w-4 h-4 text-muted-foreground" />
+                <ChevronLeft className="w-4 h-4 text-white/70" />
                 <span>Previous</span>
               </Link>
             )
@@ -2007,7 +2090,11 @@ export function CustomVideoPlayer({
           {onClose && (
             <button
               onClick={onClose}
-              className="text-xs sm:text-sm font-semibold text-muted-foreground hover:text-foreground px-3 py-1.5 sm:py-2 rounded-xl bg-slate-800/80 border border-slate-700/60 transition-all cursor-pointer"
+              className={`text-xs sm:text-sm font-semibold px-3 py-1.5 sm:py-2 rounded-xl transition-all cursor-pointer ${
+                ambientMode && !isFullscreen
+                  ? 'text-white/80 hover:text-white bg-white/10 hover:bg-white/20 border border-white/15 backdrop-blur-sm'
+                  : 'text-muted-foreground hover:text-foreground bg-slate-800/80 border border-slate-700/60'
+              }`}
             >
               Close
             </button>

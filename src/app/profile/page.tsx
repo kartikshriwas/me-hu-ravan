@@ -169,8 +169,6 @@ export default function ProfilePage() {
     adminPermissions: authUser.adminPermissions || [],
     isPremium: !!authUser.isPremium,
     hasCourseAccess:
-      authUser.role === "admin" ||
-      authUser.role === "superadmin" ||
       authUser.adminPermissions?.includes("access_courses") ||
       authUser.adminPermissions?.includes("*") ||
       (authUser.allowedBatches || []).some(isCourseBatch),
@@ -182,8 +180,6 @@ export default function ProfilePage() {
     createdAt: new Date().toISOString(),
     rank: 0,
   };
-
-  const isAdmin = u.role === "superadmin" || u.role === "admin";
 
   return (
     <main className="w-full px-4 sm:px-8 lg:px-12 py-6 space-y-8" role="main">

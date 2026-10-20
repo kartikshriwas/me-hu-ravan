@@ -49,6 +49,8 @@ import {
   RotateCcw,
 } from 'lucide-react';
 import { useDownloads } from '@/lib/downloadContext';
+import { useAuth } from '@/lib/authContext';
+import { checkCanDownload } from '@/lib/batchAccess';
 import { DownloadLessonModal, SingleLessonDownloadTarget } from '@/components/DownloadLessonModal';
 import { getRememberedQuality, saveRememberedQuality } from '@/lib/qualityMatcher';
 import { CourseCalendarView } from '@/components/CourseCalendarView';
@@ -170,6 +172,9 @@ export function CourseDetailClient({ course, availableTests, isUnlocked = true }
     batchProgress,
     cancelBatchDownload,
   } = useDownloads();
+
+  const { user } = useAuth();
+  const canDownload = checkCanDownload(user);
 
   const [lastVideoInfo, setLastVideoInfo] = useState<{ videoId: string; title?: string; timestamp?: number } | null>(null);
   const [expandedSections, setExpandedSections] = useState<Record<string, boolean>>({});
@@ -419,6 +424,12 @@ export function CourseDetailClient({ course, availableTests, isUnlocked = true }
   };
 
   const handleDownloadCourse = async () => {
+    if (!canDownload) {
+      if (typeof window !== 'undefined') {
+        window.dispatchEvent(new CustomEvent('preptea:premium-download-required'));
+      }
+      return;
+    }
     if (!isUnlocked) return;
     const rem = typeof window !== 'undefined' && localStorage.getItem('preptea_remember_download_quality') === 'true';
     if (rem) {
@@ -449,6 +460,12 @@ export function CourseDetailClient({ course, availableTests, isUnlocked = true }
     section: { title: string; id: string; units: CourseSectionUnit[] }
   ) => {
     e.stopPropagation();
+    if (!canDownload) {
+      if (typeof window !== 'undefined') {
+        window.dispatchEvent(new CustomEvent('preptea:premium-download-required'));
+      }
+      return;
+    }
     if (!isUnlocked) return;
     const units = getSectionVideoUnits(section);
     const rem = typeof window !== 'undefined' && localStorage.getItem('preptea_remember_download_quality') === 'true';
@@ -480,6 +497,12 @@ export function CourseDetailClient({ course, availableTests, isUnlocked = true }
     sectionId: string
   ) => {
     e.stopPropagation();
+    if (!canDownload) {
+      if (typeof window !== 'undefined') {
+        window.dispatchEvent(new CustomEvent('preptea:premium-download-required'));
+      }
+      return;
+    }
     if (!isUnlocked) return;
     const videoId = (unit.sourceid || unit.vimeoid || '').trim();
     if (!videoId) return;

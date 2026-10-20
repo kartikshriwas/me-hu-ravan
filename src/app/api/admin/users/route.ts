@@ -138,7 +138,8 @@ export async function POST(request: Request) {
     if (action === 'grant_demo') {
       const minutes = parseInt(demoDurationMinutes) || 15;
       const now = new Date();
-      const isCurrentlyOnline = targetUser.lastActiveAt && (now.getTime() - new Date(targetUser.lastActiveAt).getTime() < 2 * 60 * 1000);
+      const isSelf = cleanTarget === sessionUser?.email?.toLowerCase().trim();
+      const isCurrentlyOnline = isSelf || (targetUser.lastActiveAt && (now.getTime() - new Date(targetUser.lastActiveAt).getTime() < 5 * 60 * 1000));
 
       if (isCurrentlyOnline) {
         // User is online right now — activate demo timer immediately
@@ -228,22 +229,21 @@ export async function POST(request: Request) {
         targetUser.premiumExpiresAt = null;
         targetUser.premiumPlan = 'free';
         targetUser.grantedBy = '';
-        // When explicitly revoking premium, also empty allowedBatches if not admin and not explicitly given
-        if (targetUser.role !== 'admin' && targetUser.role !== 'superadmin' && !Array.isArray(allowedBatches)) {
+        // When explicitly revoking premium, also empty allowedBatches if not explicitly given
+        if (!Array.isArray(allowedBatches)) {
           targetUser.allowedBatches = [];
         }
       }
     }
 
-    const isSuperOrAdmin = targetUser.role === 'admin' || targetUser.role === 'superadmin' || cleanTarget === SUPERADMIN_EMAIL;
     const hasAdminCoursePerm = targetUser.adminPermissions?.includes('access_courses') || targetUser.adminPermissions?.includes('*');
     const hasCourseBatches = Array.isArray(targetUser.allowedBatches) && targetUser.allowedBatches.some((b: string) => isCourseBatch(b));
 
-    // Ensure hasCourseAccess in DB is strictly derived
-    targetUser.hasCourseAccess = Boolean(isSuperOrAdmin || hasAdminCoursePerm || hasCourseBatches);
+    // Ensure hasCourseAccess in DB is strictly derived without default lifetime bypass
+    targetUser.hasCourseAccess = Boolean(targetUser.isPremium || hasAdminCoursePerm || hasCourseBatches);
 
-    // If regular user has no course batches, no admin role, and their plan was admin grant or demo or batch grant:
-    if (!isSuperOrAdmin && !hasAdminCoursePerm && !hasCourseBatches && (!targetUser.allowedBatches || targetUser.allowedBatches.length === 0)) {
+    // If regular user or admin has revoked premium and has no course batches and no course perms:
+    if (!targetUser.isPremium && !hasAdminCoursePerm && !hasCourseBatches && (!targetUser.allowedBatches || targetUser.allowedBatches.length === 0)) {
       if (targetUser.premiumPlan === 'admin_role_grant' || targetUser.premiumPlan?.includes('demo') || targetUser.premiumPlan?.startsWith('code:')) {
         targetUser.isPremium = false;
         targetUser.premiumExpiresAt = null;

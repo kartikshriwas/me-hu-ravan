@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { auth } from '@/auth';
 import { hasCoursesAccess } from '@/lib/coursesAuth';
+import { checkCanDownload } from '@/lib/batchAccess';
 import { createStreamTicket } from '@/lib/videoStreamToken';
 
 export const dynamic = 'force-dynamic';
@@ -28,8 +29,14 @@ export async function GET(request: NextRequest) {
       return NextResponse.json({ error: 'Not Found' }, { status: 404 });
     }
 
-    // 2. Course access verification
-    const hasAccess = await hasCoursesAccess(session.user as any);
+    // 2. Permission check: Download is premium-only, NOT available for demo or free
+    const sessionUser = session.user as any;
+    if (!checkCanDownload(sessionUser)) {
+      return NextResponse.json({ error: 'Downloads are reserved for premium batch members' }, { status: 403 });
+    }
+
+    // 3. Course access verification
+    const hasAccess = await hasCoursesAccess(sessionUser);
     if (!hasAccess) {
       return NextResponse.json({ error: 'Not Found' }, { status: 404 });
     }

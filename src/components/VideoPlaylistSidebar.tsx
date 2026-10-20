@@ -24,10 +24,11 @@ import {
   RotateCcw,
   Check,
   ArrowRight,
+  Crown,
 } from "lucide-react";
 import { useDownloads } from "@/lib/downloadContext";
 import { useAuth } from "@/lib/authContext";
-import { checkUserCourseAccess } from "@/lib/batchAccess";
+import { checkUserCourseAccess, checkCanDownload } from "@/lib/batchAccess";
 import { DownloadLessonModal, SingleLessonDownloadTarget } from "@/components/DownloadLessonModal";
 import { getRememberedQuality, saveRememberedQuality } from "@/lib/qualityMatcher";
 import { CalendarDayGroup, CalendarUnitItem, formatDurationHms } from "@/lib/courseCalendarHelper";
@@ -99,6 +100,7 @@ export function VideoPlaylistSidebar({
 }: VideoPlaylistSidebarProps) {
   const { user } = useAuth();
   const hasCourseAccess = checkUserCourseAccess(user);
+  const canDownload = checkCanDownload(user);
   const {
     downloads,
     downloadingMap,
@@ -182,6 +184,12 @@ export function VideoPlaylistSidebar({
     sectionName: string,
     duration?: number
   ) => {
+    if (!canDownload) {
+      if (typeof window !== 'undefined') {
+        window.dispatchEvent(new CustomEvent('preptea:premium-download-required'));
+      }
+      return;
+    }
     if (typeof window !== 'undefined' && localStorage.getItem('preptea_remember_download_quality') === 'true') {
       const prefQuality = getRememberedQuality('720p');
       startDownload({
@@ -276,7 +284,13 @@ export function VideoPlaylistSidebar({
   };
 
   const handleDownloadEntireCourse = async () => {
-    if (!hasCourseAccess || totalCourseVideos === 0) return;
+    if (!canDownload) {
+      if (typeof window !== 'undefined') {
+        window.dispatchEvent(new CustomEvent('preptea:premium-download-required'));
+      }
+      return;
+    }
+    if (totalCourseVideos === 0) return;
     const rem = typeof window !== 'undefined' && localStorage.getItem('preptea_remember_download_quality') === 'true';
     if (rem) {
       const pref = getRememberedQuality('720p');
@@ -317,7 +331,13 @@ export function VideoPlaylistSidebar({
   };
 
   const handleDownloadSection = async (sectionName: string, videoUnits: any[]) => {
-    if (!hasCourseAccess || videoUnits.length === 0) return;
+    if (!canDownload) {
+      if (typeof window !== 'undefined') {
+        window.dispatchEvent(new CustomEvent('preptea:premium-download-required'));
+      }
+      return;
+    }
+    if (videoUnits.length === 0) return;
     const unitsToDownload = videoUnits.map((u, uIdx) => ({
       videoId: (u.sourceid || u.id)!,
       unitTitle: u.unitTitle || u.title || `${sectionName} Lesson ${uIdx + 1}`,
@@ -348,6 +368,12 @@ export function VideoPlaylistSidebar({
   };
 
   const confirmBundleDownload = async () => {
+    if (!canDownload) {
+      if (typeof window !== 'undefined') {
+        window.dispatchEvent(new CustomEvent('preptea:premium-download-required'));
+      }
+      return;
+    }
     if (!bundleQualityModal) return;
     const modal = bundleQualityModal;
     setBundleQualityModal(null);
@@ -630,8 +656,8 @@ export function VideoPlaylistSidebar({
           e.stopPropagation();
           handleInitiateSingleDownload(uId, title, sectionTitle, duration);
         }}
-        className="p-1 rounded-md hover:bg-slate-700/60 text-slate-500 hover:text-primary-400 transition-colors cursor-pointer"
-        title="Download lesson offline"
+        className={`p-1 rounded-md hover:bg-slate-700/60 transition-colors cursor-pointer ${!canDownload ? 'text-amber-400/80 hover:text-amber-300' : 'text-slate-500 hover:text-primary-400'}`}
+        title={!canDownload ? "Download lesson offline (Premium feature)" : "Download lesson offline"}
       >
         <ArrowDownToLine className="w-3.5 h-3.5" />
       </button>
@@ -719,11 +745,18 @@ export function VideoPlaylistSidebar({
                 <button
                   type="button"
                   onClick={handleDownloadEntireCourse}
-                  className="px-2.5 py-1.5 rounded-xl bg-primary-600/15 hover:bg-primary-600/25 border border-primary-500/30 hover:border-primary-500/50 text-primary-400 hover:text-white text-[11px] font-bold flex items-center gap-1.5 transition-all cursor-pointer"
-                  title={`Download entire course (${totalCourseVideos} lessons) for offline watching`}
+                  className={`px-2.5 py-1.5 rounded-xl border text-[11px] font-bold flex items-center gap-1.5 transition-all cursor-pointer ${
+                    !canDownload
+                      ? 'bg-amber-500/10 hover:bg-amber-500/20 border-amber-500/30 text-amber-300 shadow-sm'
+                      : 'bg-primary-600/15 hover:bg-primary-600/25 border-primary-500/30 hover:border-primary-500/50 text-primary-400 hover:text-white'
+                  }`}
+                  title={!canDownload ? 'Save entire course offline (Premium Feature — Click to unlock)' : `Download entire course (${totalCourseVideos} lessons) for offline watching`}
                 >
                   <ArrowDownToLine className="w-3 h-3" />
                   <span>Save Course</span>
+                  {!canDownload && (
+                    <Crown className="w-2.5 h-2.5 text-amber-400" />
+                  )}
                 </button>
               )}
             </div>

@@ -1,5 +1,5 @@
 import { AuthUser as SessionUser } from '@/lib/authContext';
-import { connectToDatabase } from '@/lib/db';
+import { connectToDatabase, resetDatabaseConnection } from '@/lib/db';
 import { User } from '@/models/User';
 import { isCourseSlugAllowed, isCourseBatch } from '@/lib/batchAccess';
 import { SUPERADMIN_EMAIL } from '@/lib/adminAuth';
@@ -24,7 +24,11 @@ export async function getCachedUserDoc(email: string): Promise<CachedCourseUser 
   try {
     const conn = await connectToDatabase();
     if (conn) {
-      const doc = await User.findOne({ email }).select('role adminPermissions allowedBatches premiumPlan isPremium premiumExpiresAt').lean();
+      const doc = await User.findOne({ email })
+        .select('role adminPermissions allowedBatches premiumPlan isPremium premiumExpiresAt')
+        .lean()
+        .maxTimeMS(5000);
+
       if (doc) {
         const entry: CachedCourseUser = {
           role: doc.role,
@@ -39,8 +43,11 @@ export async function getCachedUserDoc(email: string): Promise<CachedCourseUser 
         return entry;
       }
     }
-  } catch (err) {
-    console.error('Error fetching cached user for course auth:', err);
+  } catch (err: any) {
+    if (err?.name === 'MongooseServerSelectionError') {
+      await resetDatabaseConnection().catch(() => {});
+    }
+    console.warn('[CoursesAuth] DB lookup fallback to session user:', err?.message || err);
   }
   return null;
 }
@@ -53,33 +60,59 @@ export function invalidateUserCourseCache(email?: string) {
   }
 }
 
-/**
- * Checks if a user has access to the Course section at all.
- * Returns true ONLY if user is superadmin/admin, has access_courses permission, or has >= 1 course batch.
- * If this returns false, accessing any /courses route throws 404.
- */
+export function checkIsDemoExpired(user: any): { isExpired: boolean; minutes: number } {
+  if (!user) return { isExpired: false, minutes: 15 };
+  const plan = typeof user.premiumPlan === 'string' ? user.premiumPlan : '';
+  let minutes = 15;
+  const match = plan.match(/(\d+)m/);
+  if (match) minutes = parseInt(match[1]);
+
+  if (plan.startsWith('expired_demo:')) {
+    return { isExpired: true, minutes };
+  }
+
+  const isDemo = plan.includes('demo') || plan.includes('m_demo');
+  if (isDemo && user.premiumExpiresAt && new Date(user.premiumExpiresAt).getTime() <= Date.now()) {
+    return { isExpired: true, minutes };
+  }
+
+  return { isExpired: false, minutes };
+}
+
 export async function hasCoursesAccess(sessionUser: SessionUser | null): Promise<boolean> {
   if (!sessionUser) return false;
 
   const email = sessionUser.email.toLowerCase().trim();
-  if (email === SUPERADMIN_EMAIL) return true;
 
-  // Check fast session props first
-  if (sessionUser.role === 'superadmin' || sessionUser.role === 'admin') return true;
+  // If user's temporary pass/demo has expired, immediately revoke courses access
+  if (sessionUser.premiumExpiresAt && new Date(sessionUser.premiumExpiresAt) < new Date()) {
+    return false;
+  }
+
+  const demoStatus = checkIsDemoExpired(sessionUser);
+  if (demoStatus.isExpired) {
+    return false;
+  }
+
+  // Active premium grant
+  if (sessionUser.isPremium) return true;
+
+  // Granular admin rights or batch permissions
   if (sessionUser.adminPermissions?.includes('access_courses') || sessionUser.adminPermissions?.includes('*')) return true;
   if ((sessionUser as any).hasCourseAccess === true) return true;
   if (Array.isArray(sessionUser.allowedBatches) && sessionUser.allowedBatches.some(isCourseBatch)) return true;
 
   let userBatches: string[] = [];
-  let isSuper = false;
-  let isAdmin = false;
+  let isPrem = false;
   let hasPerm = false;
 
   try {
     const userDoc = await getCachedUserDoc(email);
     if (userDoc) {
-      isSuper = userDoc.role === 'superadmin';
-      isAdmin = userDoc.role === 'admin';
+      if (userDoc.premiumExpiresAt && new Date(userDoc.premiumExpiresAt) < new Date()) {
+        return false;
+      }
+      isPrem = Boolean(userDoc.isPremium);
       hasPerm = userDoc.adminPermissions?.includes('access_courses') || userDoc.adminPermissions?.includes('*') || false;
 
       userBatches = Array.isArray(userDoc.allowedBatches) ? [...userDoc.allowedBatches] : [];
@@ -87,20 +120,18 @@ export async function hasCoursesAccess(sessionUser: SessionUser | null): Promise
         userBatches.push(userDoc.premiumPlan);
       }
     } else {
-      isSuper = (sessionUser as any)?.role === 'superadmin';
-      isAdmin = (sessionUser as any)?.role === 'admin';
+      isPrem = Boolean(sessionUser.isPremium);
       hasPerm = sessionUser.adminPermissions?.includes('access_courses') || sessionUser.adminPermissions?.includes('*') || false;
       userBatches = sessionUser.allowedBatches || [];
     }
   } catch (error) {
     console.error('Error verifying courses access:', error);
-    isSuper = (sessionUser as any)?.role === 'superadmin';
-    isAdmin = (sessionUser as any)?.role === 'admin';
+    isPrem = Boolean(sessionUser.isPremium);
     hasPerm = sessionUser.adminPermissions?.includes('access_courses') || sessionUser.adminPermissions?.includes('*') || false;
     userBatches = sessionUser.allowedBatches || [];
   }
 
-  if (isSuper || isAdmin || hasPerm) return true;
+  if (isPrem || hasPerm) return true;
 
   const validCourseBatches = userBatches.filter(isCourseBatch);
   return validCourseBatches.length > 0;
@@ -110,20 +141,32 @@ export async function isCourseSlugUnlocked(sessionUser: SessionUser | null, cour
   if (!sessionUser || !courseSlug) return false;
 
   const email = sessionUser.email.toLowerCase().trim();
-  if (email === SUPERADMIN_EMAIL) return true;
 
-  // Fast check from session
-  if ((sessionUser as any)?.role === 'superadmin' || (sessionUser as any)?.role === 'admin') return true;
+  // If user's demo or temporary access has expired, block unlock
+  if (sessionUser.premiumExpiresAt && new Date(sessionUser.premiumExpiresAt) < new Date()) {
+    return false;
+  }
+  if (checkIsDemoExpired(sessionUser).isExpired) {
+    return false;
+  }
+
   if (sessionUser.adminPermissions?.includes('access_courses') || sessionUser.adminPermissions?.includes('*')) return true;
 
   let userBatches: string[] = [];
+  let isPrem = Boolean(sessionUser.isPremium);
 
   try {
     const userDoc = await getCachedUserDoc(email);
     if (userDoc) {
-      if (userDoc.role === 'superadmin' || userDoc.role === 'admin') return true;
+      if (userDoc.premiumExpiresAt && new Date(userDoc.premiumExpiresAt) < new Date()) {
+        return false;
+      }
+      if (checkIsDemoExpired(userDoc).isExpired) {
+        return false;
+      }
       if (userDoc.adminPermissions?.includes('access_courses') || userDoc.adminPermissions?.includes('*')) return true;
 
+      isPrem = Boolean(userDoc.isPremium);
       userBatches = Array.isArray(userDoc.allowedBatches) ? [...userDoc.allowedBatches] : [];
       if (userDoc.premiumPlan && isCourseBatch(userDoc.premiumPlan)) {
         userBatches.push(userDoc.premiumPlan);
@@ -134,6 +177,11 @@ export async function isCourseSlugUnlocked(sessionUser: SessionUser | null, cour
   } catch (error) {
     console.error('Error checking course slug unlock:', error);
     userBatches = sessionUser.allowedBatches || [];
+  }
+
+  // Active premium with no batch restrictions or all-batch access unlocks everything
+  if (isPrem && (userBatches.length === 0 || userBatches.includes('*'))) {
+    return true;
   }
 
   const validCourseBatches = userBatches.filter(isCourseBatch);
@@ -149,20 +197,32 @@ export async function getUnlockedCourseSlugsMap(sessionUser: SessionUser | null)
   if (!sessionUser) return () => false;
 
   const email = sessionUser.email.toLowerCase().trim();
-  if (email === SUPERADMIN_EMAIL) return () => true;
 
-  // Fast check from session
-  if ((sessionUser as any)?.role === 'superadmin' || (sessionUser as any)?.role === 'admin') return () => true;
+  // If user's demo or temporary access has expired, block unlock
+  if (sessionUser.premiumExpiresAt && new Date(sessionUser.premiumExpiresAt) < new Date()) {
+    return () => false;
+  }
+  if (checkIsDemoExpired(sessionUser).isExpired) {
+    return () => false;
+  }
+
   if (sessionUser.adminPermissions?.includes('access_courses') || sessionUser.adminPermissions?.includes('*')) return () => true;
 
   let userBatches: string[] = [];
+  let isPrem = Boolean(sessionUser.isPremium);
 
   try {
     const userDoc = await getCachedUserDoc(email);
     if (userDoc) {
-      if (userDoc.role === 'superadmin' || userDoc.role === 'admin') return () => true;
+      if (userDoc.premiumExpiresAt && new Date(userDoc.premiumExpiresAt) < new Date()) {
+        return () => false;
+      }
+      if (checkIsDemoExpired(userDoc).isExpired) {
+        return () => false;
+      }
       if (userDoc.adminPermissions?.includes('access_courses') || userDoc.adminPermissions?.includes('*')) return () => true;
 
+      isPrem = Boolean(userDoc.isPremium);
       userBatches = Array.isArray(userDoc.allowedBatches) ? [...userDoc.allowedBatches] : [];
       if (userDoc.premiumPlan && isCourseBatch(userDoc.premiumPlan)) {
         userBatches.push(userDoc.premiumPlan);
@@ -173,6 +233,11 @@ export async function getUnlockedCourseSlugsMap(sessionUser: SessionUser | null)
   } catch (error) {
     console.error('Error fetching unlocked courses map:', error);
     userBatches = sessionUser.allowedBatches || [];
+  }
+
+  // Active premium with no batch restrictions or all-batch access unlocks everything
+  if (isPrem && (userBatches.length === 0 || userBatches.includes('*'))) {
+    return () => true;
   }
 
   const validCourseBatches = userBatches.filter(isCourseBatch);

@@ -1,8 +1,8 @@
-import { notFound } from 'next/navigation';
+import { notFound, redirect } from 'next/navigation';
 import { getCourseBySlug } from '@/lib/coursesData';
 import { getAllAssessments } from '@/lib/questionsData';
 import { auth } from '@/auth';
-import { hasCoursesAccess, isCourseSlugUnlocked } from '@/lib/coursesAuth';
+import { hasCoursesAccess, isCourseSlugUnlocked, checkIsDemoExpired } from '@/lib/coursesAuth';
 import { CourseDetailClient } from '@/components/CourseDetailClient';
 
 
@@ -12,6 +12,10 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ s
 
   const allowed = await hasCoursesAccess(sessionUser);
   if (!allowed) {
+    const demoStatus = checkIsDemoExpired(sessionUser);
+    if (demoStatus.isExpired) {
+      redirect(`/?demo_expired=true&mins=${demoStatus.minutes}`);
+    }
     notFound();
   }
 
