@@ -57,15 +57,13 @@ export function DemoExpiredModal() {
     return match ? parseInt(match[1]) : fallback;
   }, []);
 
-  // Trigger modal & redirect if on restricted course pages
+  // Trigger modal
   const triggerExpired = useCallback((minutes?: number, force = false) => {
     if (isExempt) return;
 
     if (!force && typeof window !== 'undefined') {
       const isDismissed = sessionStorage.getItem('preptea_demo_expired_dismissed') === 'true';
-      const curPath = window.location.pathname;
-      // If already dismissed in this session and NOT currently accessing restricted courses, do not show
-      if (isDismissed && !curPath.startsWith('/courses')) {
+      if (isDismissed) {
         return;
       }
     }
@@ -73,15 +71,7 @@ export function DemoExpiredModal() {
     const mins = minutes || extractMinutes(user?.premiumPlan, 15);
     setDemoMinutes(mins);
     setIsOpen(true);
-
-    // If currently on a course or video player page, redirect to normal page (home '/')
-    if (typeof window !== 'undefined') {
-      const curPath = window.location.pathname;
-      if (curPath.startsWith('/courses')) {
-        router.push('/');
-      }
-    }
-  }, [isExempt, extractMinutes, user?.premiumPlan, router]);
+  }, [isExempt, extractMinutes, user?.premiumPlan]);
 
   // 1. Listen for global custom event dispatched from ActivityTracker or CustomVideoPlayer
   useEffect(() => {
@@ -129,11 +119,7 @@ export function DemoExpiredModal() {
 
     // Case A: User's plan is already flagged as expired demo
     if (plan.startsWith('expired_demo:') || plan === 'expired') {
-      const mins = extractMinutes(plan, 15);
-      // If user visits a restricted route, show modal
-      if (pathname.startsWith('/courses')) {
-        triggerExpired(mins, true);
-      }
+      // Demo is already expired in past — do not popup; restricted routes render 404
       return;
     }
 
@@ -145,25 +131,21 @@ export function DemoExpiredModal() {
       const mins = extractMinutes(plan, 15);
 
       if (remainingMs <= 0) {
-        // Already expired
-        if (pathname.startsWith('/courses')) {
-          triggerExpired(mins, true);
-        } else {
-          triggerExpired(mins, false);
-        }
-      } else {
-        // Schedule countdown trigger to fire the exact moment the demo ends
-        const timer = setTimeout(() => {
-          if (typeof window !== 'undefined') {
-            sessionStorage.removeItem('preptea_demo_expired_dismissed');
-          }
-          triggerExpired(mins, true);
-        }, remainingMs);
-
-        return () => clearTimeout(timer);
+        // Already expired in past — do not popup; restricted routes render 404
+        return;
       }
+
+      // Schedule countdown trigger to fire ONLY the exact moment the demo ends in real-time
+      const timer = setTimeout(() => {
+        if (typeof window !== 'undefined') {
+          sessionStorage.removeItem('preptea_demo_expired_dismissed');
+        }
+        triggerExpired(mins, true);
+      }, remainingMs);
+
+      return () => clearTimeout(timer);
     }
-  }, [user, isExempt, pathname, extractMinutes, triggerExpired]);
+  }, [user, isExempt, extractMinutes, triggerExpired]);
 
   // Handle Code Redemption inside modal
   const handleRedeem = async (e: React.FormEvent) => {
@@ -211,10 +193,6 @@ export function DemoExpiredModal() {
       sessionStorage.setItem('preptea_demo_expired_dismissed', 'true');
     }
     setIsOpen(false);
-    // If closing while on courses page, redirect to home
-    if (pathname.startsWith('/courses')) {
-      router.push('/');
-    }
   };
 
   if (!isOpen) return null;
