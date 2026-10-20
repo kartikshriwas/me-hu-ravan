@@ -2712,6 +2712,7 @@ export default function AdminDashboardPage() {
                               defaultValue=""
                             >
                               <option value="" disabled>Grant Demo</option>
+                              <option value="5">5 mins</option>
                               <option value="15">15 mins</option>
                               <option value="60">1 Hour</option>
                               <option value="720">12 Hours</option>
