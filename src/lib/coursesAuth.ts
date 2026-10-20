@@ -62,6 +62,20 @@ export function invalidateUserCourseCache(email?: string) {
 
 export function checkIsDemoExpired(user: any): { isExpired: boolean; minutes: number } {
   if (!user) return { isExpired: false, minutes: 15 };
+
+  // Superadmins, admins, and users with explicit course access permissions are never demo-restricted
+  if (user.role === 'admin' || user.role === 'superadmin') {
+    return { isExpired: false, minutes: 15 };
+  }
+  if (user.adminPermissions?.includes('access_courses') || user.adminPermissions?.includes('*')) {
+    return { isExpired: false, minutes: 15 };
+  }
+
+  // Users with assigned valid course batches own those courses and are not on a demo
+  if (Array.isArray(user.allowedBatches) && user.allowedBatches.some((b: string) => isCourseBatch(b))) {
+    return { isExpired: false, minutes: 15 };
+  }
+
   const plan = typeof user.premiumPlan === 'string' ? user.premiumPlan : '';
   let minutes = 15;
   const match = plan.match(/(\d+)m/);
@@ -82,12 +96,12 @@ export function checkIsDemoExpired(user: any): { isExpired: boolean; minutes: nu
 export async function hasCoursesAccess(sessionUser: SessionUser | null): Promise<boolean> {
   if (!sessionUser) return false;
 
-  const email = sessionUser.email.toLowerCase().trim();
-
-  // If user's temporary pass/demo has expired, immediately revoke courses access
-  if (sessionUser.premiumExpiresAt && new Date(sessionUser.premiumExpiresAt) < new Date()) {
-    return false;
+  // Superadmins and admins always have full courses access
+  if (sessionUser.role === 'admin' || sessionUser.role === 'superadmin') {
+    return true;
   }
+
+  const email = sessionUser.email.toLowerCase().trim();
 
   const demoStatus = checkIsDemoExpired(sessionUser);
   if (demoStatus.isExpired) {
@@ -105,7 +119,8 @@ export async function hasCoursesAccess(sessionUser: SessionUser | null): Promise
   try {
     const userDoc = await getCachedUserDoc(email);
     if (userDoc) {
-      if (userDoc.premiumExpiresAt && new Date(userDoc.premiumExpiresAt) < new Date()) {
+      if (userDoc.role === 'admin' || userDoc.role === 'superadmin') return true;
+      if (checkIsDemoExpired(userDoc).isExpired) {
         return false;
       }
       hasPerm = userDoc.adminPermissions?.includes('access_courses') || userDoc.adminPermissions?.includes('*') || false;
@@ -133,27 +148,22 @@ export async function hasCoursesAccess(sessionUser: SessionUser | null): Promise
 export async function isCourseSlugUnlocked(sessionUser: SessionUser | null, courseSlug: string): Promise<boolean> {
   if (!sessionUser || !courseSlug) return false;
 
-  const email = sessionUser.email.toLowerCase().trim();
+  // Superadmins and admins have access to all courses
+  if (sessionUser.role === 'admin' || sessionUser.role === 'superadmin') return true;
+  if (sessionUser.adminPermissions?.includes('access_courses') || sessionUser.adminPermissions?.includes('*')) return true;
 
-  // If user's demo or temporary access has expired, block unlock
-  if (sessionUser.premiumExpiresAt && new Date(sessionUser.premiumExpiresAt) < new Date()) {
-    return false;
-  }
   if (checkIsDemoExpired(sessionUser).isExpired) {
     return false;
   }
 
-  if (sessionUser.adminPermissions?.includes('access_courses') || sessionUser.adminPermissions?.includes('*')) return true;
-
+  const email = sessionUser.email.toLowerCase().trim();
   let userBatches: string[] = [];
   let hasPerm = false;
 
   try {
     const userDoc = await getCachedUserDoc(email);
     if (userDoc) {
-      if (userDoc.premiumExpiresAt && new Date(userDoc.premiumExpiresAt) < new Date()) {
-        return false;
-      }
+      if (userDoc.role === 'admin' || userDoc.role === 'superadmin') return true;
       if (checkIsDemoExpired(userDoc).isExpired) {
         return false;
       }
@@ -187,27 +197,22 @@ export async function isCourseSlugUnlocked(sessionUser: SessionUser | null, cour
 export async function getUnlockedCourseSlugsMap(sessionUser: SessionUser | null): Promise<(slug: string) => boolean> {
   if (!sessionUser) return () => false;
 
-  const email = sessionUser.email.toLowerCase().trim();
+  // Superadmins and admins have access to all courses
+  if (sessionUser.role === 'admin' || sessionUser.role === 'superadmin') return () => true;
+  if (sessionUser.adminPermissions?.includes('access_courses') || sessionUser.adminPermissions?.includes('*')) return () => true;
 
-  // If user's demo or temporary access has expired, block unlock
-  if (sessionUser.premiumExpiresAt && new Date(sessionUser.premiumExpiresAt) < new Date()) {
-    return () => false;
-  }
   if (checkIsDemoExpired(sessionUser).isExpired) {
     return () => false;
   }
 
-  if (sessionUser.adminPermissions?.includes('access_courses') || sessionUser.adminPermissions?.includes('*')) return () => true;
-
+  const email = sessionUser.email.toLowerCase().trim();
   let userBatches: string[] = [];
   let hasPerm = false;
 
   try {
     const userDoc = await getCachedUserDoc(email);
     if (userDoc) {
-      if (userDoc.premiumExpiresAt && new Date(userDoc.premiumExpiresAt) < new Date()) {
-        return () => false;
-      }
+      if (userDoc.role === 'admin' || userDoc.role === 'superadmin') return () => true;
       if (checkIsDemoExpired(userDoc).isExpired) {
         return () => false;
       }

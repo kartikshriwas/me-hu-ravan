@@ -234,10 +234,10 @@ export async function POST(request: Request) {
       if (hasAssignedCourseBatches) {
         // Any course batch grant automatically awards Quiz Premium (isPremium: true)
         targetUser.isPremium = true;
-        if (!targetUser.premiumExpiresAt) {
+        if (!targetUser.premiumExpiresAt || targetUser.premiumPlan?.includes('demo') || (targetUser.premiumExpiresAt && new Date(targetUser.premiumExpiresAt).getTime() <= Date.now())) {
           targetUser.premiumExpiresAt = new Date(Date.now() + 365 * 24 * 60 * 60 * 1000);
         }
-        if (!targetUser.premiumPlan || targetUser.premiumPlan === 'free') {
+        if (!targetUser.premiumPlan || targetUser.premiumPlan === 'free' || targetUser.premiumPlan?.includes('demo')) {
           targetUser.premiumPlan = 'course_bundle_premium';
         }
       }

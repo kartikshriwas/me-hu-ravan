@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect, useCallback, useTransition } from 'react';
+import React, { useState, useEffect, useCallback, useMemo, useTransition } from 'react';
 import { useRouter, usePathname, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { 
@@ -36,6 +36,15 @@ export function DemoExpiredModal() {
   const [redeemError, setRedeemError] = useState('');
   const [redeemSuccess, setRedeemSuccess] = useState('');
 
+  // Superadmins, admins, and users with active batches are exempt from demo expiration
+  const isExempt = useMemo(() => {
+    if (!user) return false;
+    if (user.role === 'admin' || user.role === 'superadmin') return true;
+    if (user.adminPermissions?.includes('access_courses') || user.adminPermissions?.includes('*')) return true;
+    if (Array.isArray(user.allowedBatches) && user.allowedBatches.some((b: string) => b && b !== 'none')) return true;
+    return false;
+  }, [user]);
+
   // Extract demo minutes from user plan or param
   const extractMinutes = useCallback((planStr?: string | null, fallback = 15): number => {
     if (!planStr) return fallback;
@@ -45,6 +54,7 @@ export function DemoExpiredModal() {
 
   // Trigger modal & redirect if on restricted course pages
   const triggerExpired = useCallback((minutes?: number) => {
+    if (isExempt) return;
     const mins = minutes || extractMinutes(user?.premiumPlan, 15);
     setDemoMinutes(mins);
     setIsOpen(true);
@@ -56,10 +66,11 @@ export function DemoExpiredModal() {
         router.push('/');
       }
     }
-  }, [extractMinutes, user?.premiumPlan, router]);
+  }, [isExempt, extractMinutes, user?.premiumPlan, router]);
 
   // 1. Listen for global custom event dispatched from ActivityTracker or CustomVideoPlayer
   useEffect(() => {
+    if (isExempt) return;
     const handleExpiredEvent = (e: Event) => {
       const customEvent = e as CustomEvent;
       const mins = customEvent?.detail?.minutes || 15;
@@ -68,17 +79,12 @@ export function DemoExpiredModal() {
 
     window.addEventListener('preptea:demo-expired', handleExpiredEvent);
     return () => window.removeEventListener('preptea:demo-expired', handleExpiredEvent);
-  }, [triggerExpired]);
+  }, [isExempt, triggerExpired]);
 
   // 2. Check URL search param (?demo_expired=true&mins=15)
   useEffect(() => {
     const isExpiredParam = searchParams.get('demo_expired');
     if (isExpiredParam === 'true') {
-      const minsParam = searchParams.get('mins');
-      const mins = minsParam ? parseInt(minsParam) : 15;
-      setDemoMinutes(mins);
-      setIsOpen(true);
-
       // Clean the query param from URL without refreshing
       if (typeof window !== 'undefined') {
         const url = new URL(window.location.href);
@@ -86,12 +92,22 @@ export function DemoExpiredModal() {
         url.searchParams.delete('mins');
         window.history.replaceState({}, '', url.pathname + (url.search ? url.search : ''));
       }
+
+      if (isExempt) {
+        setIsOpen(false);
+        return;
+      }
+
+      const minsParam = searchParams.get('mins');
+      const mins = minsParam ? parseInt(minsParam) : 15;
+      setDemoMinutes(mins);
+      setIsOpen(true);
     }
-  }, [searchParams]);
+  }, [isExempt, searchParams]);
 
   // 3. Real-time timer watcher for users on active demo
   useEffect(() => {
-    if (!user) return;
+    if (!user || isExempt) return;
 
     const plan = user.premiumPlan || '';
     const isDemo = plan.includes('demo') || plan.includes('m_demo');
@@ -125,7 +141,7 @@ export function DemoExpiredModal() {
         return () => clearTimeout(timer);
       }
     }
-  }, [user, pathname, extractMinutes, triggerExpired]);
+  }, [user, isExempt, pathname, extractMinutes, triggerExpired]);
 
   // Handle Code Redemption inside modal
   const handleRedeem = async (e: React.FormEvent) => {
