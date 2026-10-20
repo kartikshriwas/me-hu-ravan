@@ -1,6 +1,7 @@
 import { User } from '@/models/User';
 import { getAutoDemoConfig } from '@/lib/globalSetting';
 import { invalidateUserCourseCache } from '@/lib/coursesAuth';
+import { checkIsAltAccount } from '@/lib/altDetection';
 
 /**
  * Checks if auto-demo feature is enabled and grants demo access to new emails / users
@@ -39,33 +40,28 @@ export async function processAutoDemoGrant(dbUser: any, currentIp?: string): Pro
   const { autoDemoEnabled, autoDemoDurationMinutes } = await getAutoDemoConfig();
   if (!autoDemoEnabled) return false;
 
-  // 4. IP collision check: ONLY runs for genuinely new users seeking a first-time demo
-  const ipToCheck = currentIp || dbUser.lastIp;
-  if (ipToCheck && ipToCheck !== '127.0.0.1' && ipToCheck !== 'localhost') {
-    const existingOtherUser = await User.findOne({
-      email: { $ne: dbUser.email.toLowerCase().trim() },
-      $or: [
-        { pastIps: ipToCheck },
-        { lastIp: ipToCheck },
-      ]
-    }).select('_id email').lean();
+  // 4. Multi-factor alt account check: Email alias, Device ID, IP collision
+  const altResult = await checkIsAltAccount({
+    email: dbUser.email,
+    clientIp: currentIp || dbUser.lastIp,
+  });
 
-    if (existingOtherUser) {
-      // Mark as alt account silently without alerting the user
-      await User.updateOne(
-        { _id: dbUser._id },
-        {
-          $set: {
-            isAlt: true,
-            altOfEmail: existingOtherUser.email,
-            hasHadDemoOrPremium: true,
-            lastIp: ipToCheck,
-          },
-          $addToSet: { pastIps: ipToCheck },
-        }
-      ).catch(() => {});
-      return false;
-    }
+  if (altResult.isAlt) {
+    // Mark as alt account silently without alerting the user
+    await User.updateOne(
+      { _id: dbUser._id },
+      {
+        $set: {
+          isAlt: true,
+          altOfEmail: altResult.altOfEmail,
+          altReason: altResult.reason,
+          hasHadDemoOrPremium: true,
+          ...(currentIp ? { lastIp: currentIp } : {}),
+        },
+        ...(currentIp ? { $addToSet: { pastIps: currentIp } } : {}),
+      }
+    ).catch(() => {});
+    return false;
   }
 
   // 3. Eligible! Grant demo now with duration set by admin

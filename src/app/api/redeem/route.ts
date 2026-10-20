@@ -4,6 +4,7 @@ import { connectToDatabase } from '@/lib/db';
 import { User } from '@/models/User';
 import { RedeemCode } from '@/models/RedeemCode';
 import { rateLimit, getClientIp } from '@/lib/rateLimit';
+import { invalidateUserCourseCache } from '@/lib/coursesAuth';
 
 export async function POST(request: Request) {
   try {
@@ -111,6 +112,9 @@ export async function POST(request: Request) {
     if (!updatedUser) {
       return NextResponse.json({ success: false, error: 'User record not found' }, { status: 404 });
     }
+
+    // Instantly invalidate in-memory course permissions cache so unlocked courses work immediately
+    invalidateUserCourseCache(userEmail);
 
     const freshUserData = {
       id: updatedUser._id.toString(),

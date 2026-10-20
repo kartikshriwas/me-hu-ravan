@@ -21,6 +21,9 @@ export interface IUser extends Document {
   hasHadDemoOrPremium?: boolean;
   isAlt?: boolean;
   altOfEmail?: string;
+  altReason?: string;
+  normalizedEmail?: string;
+  deviceIds?: string[];
   lastIp?: string;
   pastIps?: string[];
 }
@@ -46,6 +49,9 @@ const UserSchema: Schema<IUser> = new Schema(
     hasHadDemoOrPremium: { type: Boolean, default: false },
     isAlt: { type: Boolean, default: false },
     altOfEmail: { type: String, default: '' },
+    altReason: { type: String, default: '' },
+    normalizedEmail: { type: String, default: '', index: true },
+    deviceIds: { type: [String], default: [] },
     lastIp: { type: String, default: '' },
     pastIps: { type: [String], default: [] },
   },
@@ -55,6 +61,8 @@ const UserSchema: Schema<IUser> = new Schema(
 UserSchema.index({ pastIps: 1 });
 UserSchema.index({ lastIp: 1 });
 UserSchema.index({ isAlt: 1 });
+UserSchema.index({ normalizedEmail: 1 });
+UserSchema.index({ deviceIds: 1 });
 
 export const User: Model<IUser> =
   mongoose.models.User || mongoose.model<IUser>('User', UserSchema);

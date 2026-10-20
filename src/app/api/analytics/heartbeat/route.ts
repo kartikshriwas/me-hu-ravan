@@ -9,6 +9,7 @@ import { processAutoDemoGrant } from '@/lib/autoDemoHelper';
 import { invalidateUserCourseCache } from '@/lib/coursesAuth';
 import { createHash } from 'crypto';
 import { rateLimit, getClientIp } from '@/lib/rateLimit';
+import { SUPERADMIN_EMAIL } from '@/lib/adminAuth';
 
 function parseUserAgent(ua: string) {
   let deviceType: 'desktop' | 'mobile' | 'tablet' = 'desktop';
@@ -48,6 +49,7 @@ export async function POST(request: Request) {
 
     const {
       sessionId,
+      deviceId,
       currentPath,
       pageTitle,
       state,
@@ -139,8 +141,45 @@ export async function POST(request: Request) {
 
     // Check demo status & pending demo grants for all users equally
     if (sessionUser?.email) {
+      const isSuperOrAdmin = userEmail === SUPERADMIN_EMAIL || sessionUser.role === 'superadmin' || sessionUser.role === 'admin';
+
+      // 1. Hardware-level Device ID collision check
+      if (deviceId && typeof deviceId === 'string' && deviceId.length > 5) {
+        if (!isSuperOrAdmin) {
+          const existingDeviceUser = await User.findOne({
+            email: { $ne: userEmail },
+            deviceIds: deviceId,
+          }).select('_id email').lean();
+
+          if (existingDeviceUser) {
+            await User.updateOne(
+              { email: userEmail, isAlt: { $ne: true } },
+              {
+                $set: {
+                  isAlt: true,
+                  altOfEmail: existingDeviceUser.email,
+                  altReason: 'device_collision',
+                  hasHadDemoOrPremium: true,
+                },
+                $addToSet: { deviceIds: deviceId },
+              }
+            ).catch(() => {});
+          } else {
+            await User.updateOne(
+              { email: userEmail },
+              { $addToSet: { deviceIds: deviceId } }
+            ).catch(() => {});
+          }
+        } else {
+          await User.updateOne(
+            { email: userEmail },
+            { $addToSet: { deviceIds: deviceId } }
+          ).catch(() => {});
+        }
+      }
+
       const dbUser = await User.findOne({ email: userEmail })
-        .select('_id email role isPremium premiumPlan allowedBatches hasHadDemoOrPremium premiumExpiresAt isAlt lastIp')
+        .select('_id email role isPremium premiumPlan allowedBatches hasHadDemoOrPremium premiumExpiresAt isAlt altOfEmail lastIp')
         .lean();
 
       const plan = typeof (dbUser?.premiumPlan || sessionUser.premiumPlan) === 'string' 

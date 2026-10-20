@@ -23,6 +23,7 @@ export function ActivityTracker() {
   const eventBufferRef = useRef<SessionEvent[]>([]);
   const lastHeartbeatTimeRef = useRef<number>(Date.now());
   const lastHeartbeatSendTimeRef = useRef<number>(0);
+  const deviceIdRef = useRef<string>('');
 
   // Keep pathname ref synchronized without re-running intervals
   useEffect(() => {
@@ -47,8 +48,8 @@ export function ActivityTracker() {
     return false;
   };
 
-  // 1. Initialize or restore browser-wide device session ID
-  // Uses localStorage so all tabs in the same browser share 1 device session
+  // 1. Initialize or restore browser-wide device session ID & persistent device fingerprint ID
+  // Uses localStorage so all tabs and accounts in the same browser share the hardware identifier
   useEffect(() => {
     let sid = localStorage.getItem('preptea_device_session_id');
     if (!sid) {
@@ -56,6 +57,13 @@ export function ActivityTracker() {
       localStorage.setItem('preptea_device_session_id', sid);
     }
     sessionIdRef.current = sid;
+
+    let did = localStorage.getItem('preptea_device_uuid');
+    if (!did) {
+      did = `dev_${Math.random().toString(36).substring(2, 12)}_${Date.now()}`;
+      localStorage.setItem('preptea_device_uuid', did);
+    }
+    deviceIdRef.current = did;
   }, []);
 
   // 2. Track route navigation event in buffer
@@ -200,6 +208,7 @@ export function ActivityTracker() {
 
       const payload = {
         sessionId: sessionIdRef.current,
+        deviceId: deviceIdRef.current,
         currentPath: pathnameRef.current,
         pageTitle: (typeof document !== 'undefined' && document.title) || 'PrepTea',
         state: currentState,

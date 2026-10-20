@@ -10,6 +10,7 @@ import { isCourseBatch } from '@/lib/batchAccess';
 import { processPendingDemoActivation } from '@/lib/pendingDemoHelper';
 import { processAutoDemoGrant } from '@/lib/autoDemoHelper';
 import { invalidateUserCourseCache } from '@/lib/coursesAuth';
+import { normalizeEmail, checkIsAltAccount } from '@/lib/altDetection';
 import { headers } from 'next/headers';
 
 const nextAuthResult = NextAuth({
@@ -39,18 +40,18 @@ const nextAuthResult = NextAuth({
 
           let isAlt = dbUser?.isAlt || false;
           let altOfEmail = dbUser?.altOfEmail || '';
+          let altReason = dbUser?.altReason || '';
 
-          // IP collision check for alt account detection:
-          // If IP of new login already exists for a different email, mark new mail as alt
-          if (clientIp && clientIp !== '127.0.0.1' && clientIp !== 'localhost') {
-            const existingWithIp = await User.findOne({
-              email: { $ne: email },
-              $or: [{ pastIps: clientIp }, { lastIp: clientIp }]
-            }).select('_id email').lean();
-
-            if (existingWithIp) {
+          // Multi-technique alt account detection (normalized email, device collision, IP collision):
+          if (!isSuperadmin && !isAlt && dbUser?.role !== 'admin' && dbUser?.role !== 'superadmin') {
+            const altResult = await checkIsAltAccount({
+              email,
+              clientIp,
+            });
+            if (altResult.isAlt) {
               isAlt = true;
-              altOfEmail = existingWithIp.email;
+              altOfEmail = altResult.altOfEmail || '';
+              altReason = altResult.reason || '';
             }
           }
 
@@ -139,6 +140,7 @@ const nextAuthResult = NextAuth({
 
           const updateData: any = {
             email,
+            normalizedEmail: normalizeEmail(email),
             name: user.name || 'Candidate',
             image: user.image || '',
             googleId: account.providerAccountId || '',
@@ -157,6 +159,7 @@ const nextAuthResult = NextAuth({
           if (isAlt) {
             updateData.isAlt = true;
             updateData.altOfEmail = altOfEmail;
+            updateData.altReason = altReason;
             updateData.hasHadDemoOrPremium = true; // Never grant demo to alt
           }
 

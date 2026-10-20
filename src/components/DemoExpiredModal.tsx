@@ -193,6 +193,11 @@ export function DemoExpiredModal() {
       sessionStorage.setItem('preptea_demo_expired_dismissed', 'true');
     }
     setIsOpen(false);
+    // On closing demo popup, if current page is /courses (or /course or any of its slugs), redirect user to home page
+    const curPath = pathname || (typeof window !== 'undefined' ? window.location.pathname : '');
+    if (curPath.startsWith('/courses') || curPath.startsWith('/course')) {
+      router.push('/');
+    }
   };
 
   if (!isOpen) return null;
@@ -280,7 +285,10 @@ export function DemoExpiredModal() {
 
           <button
             type="button"
-            onClick={handleClose}
+            onClick={() => {
+              handleClose();
+              router.push('/');
+            }}
             className="w-full py-2.5 px-4 rounded-xl bg-slate-800/80 hover:bg-slate-700/80 border border-slate-700 text-foreground font-bold text-xs sm:text-sm transition-all flex items-center justify-center gap-2 cursor-pointer"
           >
             <span>Back to Home Page</span>

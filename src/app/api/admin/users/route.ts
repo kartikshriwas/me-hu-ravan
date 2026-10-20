@@ -22,7 +22,7 @@ export async function GET(request: Request) {
     }
 
     const users = await User.find()
-      .select('_id name email image role adminPermissions allowedBatches isPremium premiumExpiresAt premiumPlan totalScore testsCompleted createdAt')
+      .select('_id name email image role adminPermissions allowedBatches isPremium premiumExpiresAt premiumPlan totalScore testsCompleted createdAt isAlt altOfEmail altReason')
       .sort({ createdAt: -1 })
       .limit(200)
       .lean();
@@ -42,6 +42,9 @@ export async function GET(request: Request) {
         totalScore: u.totalScore || 0,
         testsCompleted: u.testsCompleted || 0,
         createdAt: new Date(u.createdAt).toISOString(),
+        isAlt: !!u.isAlt,
+        altOfEmail: u.altOfEmail || '',
+        altReason: u.altReason || '',
       })),
     });
   } catch (error) {

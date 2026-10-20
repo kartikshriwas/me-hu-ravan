@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 import { auth } from '@/auth';
 import { createStreamTicket } from '@/lib/videoStreamToken';
+import { hasCoursesAccess } from '@/lib/coursesAuth';
 
 // In-memory cache for parsed video metadata (1 hour TTL)
 const videoCache = new Map<string, { data: any; expiry: number }>();
@@ -16,6 +17,12 @@ export async function GET(
     const session = sessionAuth?.user as any;
     if (!session) {
       return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 });
+    }
+
+    // 2. Course access & demo expiration verification
+    const hasAccess = await hasCoursesAccess(session);
+    if (!hasAccess) {
+      return NextResponse.json({ success: false, error: 'Not Found' }, { status: 404 });
     }
 
     const { id } = await params;
