@@ -13,6 +13,7 @@ interface SessionEvent {
 export function ActivityTracker() {
   const pathname = usePathname();
   const { user } = useAuth();
+  const pathnameRef = useRef<string>(pathname || '/');
   const lastActivityTimeRef = useRef<number>(Date.now());
   const activeSecondsAccumRef = useRef<number>(0);
   const idleSecondsAccumRef = useRef<number>(0);
@@ -22,6 +23,11 @@ export function ActivityTracker() {
   const eventBufferRef = useRef<SessionEvent[]>([]);
   const lastHeartbeatTimeRef = useRef<number>(Date.now());
   const lastHeartbeatSendTimeRef = useRef<number>(0);
+
+  // Keep pathname ref synchronized without re-running intervals
+  useEffect(() => {
+    pathnameRef.current = pathname || '/';
+  }, [pathname]);
 
   // Helper to check if video or audio is actively playing on the page
   const checkIsMediaPlaying = () => {
@@ -52,7 +58,7 @@ export function ActivityTracker() {
     sessionIdRef.current = sid;
   }, []);
 
-  // 2. Track route navigation event
+  // 2. Track route navigation event in buffer
   useEffect(() => {
     if (pathname) {
       eventBufferRef.current.push({
@@ -194,7 +200,7 @@ export function ActivityTracker() {
 
       const payload = {
         sessionId: sessionIdRef.current,
-        currentPath: pathname || '/',
+        currentPath: pathnameRef.current,
         pageTitle: (typeof document !== 'undefined' && document.title) || 'PrepTea',
         state: currentState,
         activeDeltaSeconds: activeSecondsAccumRef.current,
@@ -288,7 +294,7 @@ export function ActivityTracker() {
       window.removeEventListener('visibilitychange', handleVisibilityChange);
       window.removeEventListener('beforeunload', handleBeforeUnload);
     };
-  }, [pathname, user]);
+  }, [user]);
 
   return null;
 }

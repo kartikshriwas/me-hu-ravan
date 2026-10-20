@@ -958,13 +958,17 @@ export default function AdminDashboardPage() {
   };
 
 
-  if (authLoading || (loading && !stats)) {
-    return <AdminSkeleton />;
+  if (authLoading) {
+    return null;
   }
 
   // 404 Authorization Guard: Unauthorized access throws 404 Not Found
   if (!authUser || !isAdmin) {
     notFound();
+  }
+
+  if (loading && !stats) {
+    return <AdminSkeleton />;
   }
 
   const filteredUsers = users.filter(

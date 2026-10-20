@@ -137,67 +137,41 @@ export async function POST(request: Request) {
     let demoExpired = false;
     let demoMinutes = 15;
 
-    // Activate pending demo or grant auto demo if user came online, and check for demo expiration
+    // Check demo status & pending demo grants for non-admin users
     if (sessionUser?.email) {
-      // Save IP to pastIps history and check for alt collision
-      if (ipAddress && ipAddress !== '127.0.0.1' && ipAddress !== 'localhost') {
-        const existingOther = await User.findOne({
-          email: { $ne: userEmail },
-          $or: [{ pastIps: ipAddress }, { lastIp: ipAddress }]
-        }).select('_id email').lean();
+      const isSuperOrAdmin = sessionUser.role === 'superadmin' || sessionUser.role === 'admin';
 
-        if (existingOther) {
+      if (!isSuperOrAdmin) {
+        const plan = typeof sessionUser.premiumPlan === 'string' ? sessionUser.premiumPlan : '';
+        const match = plan.match(/(\d+)m/);
+        if (match) demoMinutes = parseInt(match[1]);
+
+        const isDemoActive = plan.includes('demo') || plan.includes('m_demo');
+        if (isDemoActive && sessionUser.premiumExpiresAt && new Date(sessionUser.premiumExpiresAt) <= now) {
+          demoExpired = true;
           await User.updateOne(
             { email: userEmail },
             {
-              $set: { isAlt: true, altOfEmail: existingOther.email, hasHadDemoOrPremium: true, lastIp: ipAddress },
-              $addToSet: { pastIps: ipAddress }
-            }
-          ).catch(() => {});
-        } else {
-          await User.updateOne(
-            { email: userEmail },
-            {
-              $set: { lastIp: ipAddress },
-              $addToSet: { pastIps: ipAddress }
-            }
-          ).catch(() => {});
-        }
-      }
-
-      const dbUser = await User.findOne({ email: userEmail }).select('_id email role isPremium premiumPlan allowedBatches hasHadDemoOrPremium premiumExpiresAt isAlt').lean();
-      if (dbUser) {
-        if (!dbUser.isAlt) {
-          const wasPendingActivated = await processPendingDemoActivation(dbUser);
-          const wasAutoGranted = await processAutoDemoGrant(dbUser, ipAddress);
-          if (wasPendingActivated || wasAutoGranted) {
-            demoGranted = true;
-          }
-        }
-
-        // Check if demo has expired for non-admin users
-        if (dbUser.role !== 'superadmin' && dbUser.role !== 'admin') {
-          const plan = typeof dbUser.premiumPlan === 'string' ? dbUser.premiumPlan : '';
-          const match = plan.match(/(\d+)m/);
-          if (match) demoMinutes = parseInt(match[1]);
-
-          const isDemoActive = plan.includes('demo') || plan.includes('m_demo');
-          if (isDemoActive && dbUser.premiumExpiresAt && new Date(dbUser.premiumExpiresAt) <= now) {
-            demoExpired = true;
-            await User.updateOne(
-              { _id: dbUser._id },
-              {
-                $set: {
-                  isPremium: false,
-                  premiumPlan: `expired_demo:${demoMinutes}m`,
-                  allowedBatches: [],
-                  hasCourseAccess: false,
-                }
+              $set: {
+                isPremium: false,
+                premiumPlan: `expired_demo:${demoMinutes}m`,
+                allowedBatches: [],
+                hasCourseAccess: false,
               }
-            );
-            invalidateUserCourseCache(dbUser.email);
-          } else if (plan.startsWith('expired_demo:')) {
-            demoExpired = true;
+            }
+          ).catch(() => {});
+          invalidateUserCourseCache(userEmail);
+        } else if (plan.startsWith('expired_demo:')) {
+          demoExpired = true;
+        } else if (!sessionUser.isPremium && !sessionUser.hasHadDemoOrPremium) {
+          // Only query for auto-demo for genuine first-time users
+          const dbUser = await User.findOne({ email: userEmail }).select('_id email role isPremium premiumPlan allowedBatches hasHadDemoOrPremium premiumExpiresAt isAlt lastIp').lean();
+          if (dbUser && !dbUser.isAlt) {
+            const wasPendingActivated = await processPendingDemoActivation(dbUser);
+            const wasAutoGranted = await processAutoDemoGrant(dbUser, ipAddress);
+            if (wasPendingActivated || wasAutoGranted) {
+              demoGranted = true;
+            }
           }
         }
       }

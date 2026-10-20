@@ -1,4 +1,5 @@
 import NextAuth from 'next-auth';
+import { cache } from 'react';
 import { authConfig } from './auth.config';
 import { connectToDatabase, resetDatabaseConnection } from '@/lib/db';
 import { User } from '@/models/User';
@@ -11,7 +12,7 @@ import { processAutoDemoGrant } from '@/lib/autoDemoHelper';
 import { invalidateUserCourseCache } from '@/lib/coursesAuth';
 import { headers } from 'next/headers';
 
-export const { handlers, auth, signIn, signOut } = NextAuth({
+const nextAuthResult = NextAuth({
   ...authConfig,
   callbacks: {
     async signIn({ user, account }) {
@@ -197,12 +198,15 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
             if (conn) {
               let dbUser = await User.findOne({ email: token.email }).lean().maxTimeMS(5000);
               if (dbUser) {
-                // Check if user came online with a queued pending demo ('pending_demo:Xm') or eligible for auto-demo
-                const wasActivated = await processPendingDemoActivation(dbUser);
-                const wasAutoGranted = await processAutoDemoGrant(dbUser, dbUser.lastIp);
-                if (wasActivated || wasAutoGranted) {
-                  const updatedUser = await User.findOne({ email: token.email }).lean().maxTimeMS(5000);
-                  if (updatedUser) dbUser = updatedUser;
+                // Only check pending/auto demo for users with no prior demo/premium history
+                const isSuperOrAdminUser = dbUser.role === 'superadmin' || dbUser.role === 'admin' || token.email === SUPERADMIN_EMAIL;
+                if (!isSuperOrAdminUser && !dbUser.isPremium && !dbUser.hasHadDemoOrPremium && !dbUser.isAlt) {
+                  const wasActivated = await processPendingDemoActivation(dbUser);
+                  const wasAutoGranted = await processAutoDemoGrant(dbUser, dbUser.lastIp);
+                  if (wasActivated || wasAutoGranted) {
+                    const updatedUser = await User.findOne({ email: token.email }).lean().maxTimeMS(5000);
+                    if (updatedUser) dbUser = updatedUser;
+                  }
                 }
                 const userRole = dbUser.role || (token.email === SUPERADMIN_EMAIL ? 'superadmin' : 'user');
                 const isSuperOrAdmin = userRole === 'superadmin' || userRole === 'admin' || token.email === SUPERADMIN_EMAIL;
@@ -264,3 +268,8 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
     },
   },
 });
+
+export const handlers = nextAuthResult.handlers;
+export const signIn = nextAuthResult.signIn;
+export const signOut = nextAuthResult.signOut;
+export const auth = cache(nextAuthResult.auth);

@@ -21,8 +21,25 @@ export async function processAutoDemoGrant(dbUser: any, currentIp?: string): Pro
     return false;
   }
 
-  // 2. IP collision check: If IP of this login already exists for a different email,
-  // mark this user as alt, deny demo silently, and store IP in history
+  // 2. Fast check: If user has EVER had premium or demo in the past, return immediately (zero DB queries)
+  const hasHadHistory =
+    Boolean(dbUser.hasHadDemoOrPremium) ||
+    Boolean(dbUser.isPremium) ||
+    (typeof dbUser.premiumPlan === 'string' && dbUser.premiumPlan !== 'free' && dbUser.premiumPlan.trim() !== '') ||
+    (Array.isArray(dbUser.allowedBatches) && dbUser.allowedBatches.length > 0);
+
+  if (hasHadHistory) {
+    if (!dbUser.hasHadDemoOrPremium) {
+      await User.updateOne({ _id: dbUser._id }, { $set: { hasHadDemoOrPremium: true } }).catch(() => {});
+    }
+    return false;
+  }
+
+  // 3. Check if auto-demo feature is enabled by admin
+  const { autoDemoEnabled, autoDemoDurationMinutes } = await getAutoDemoConfig();
+  if (!autoDemoEnabled) return false;
+
+  // 4. IP collision check: ONLY runs for genuinely new users seeking a first-time demo
   const ipToCheck = currentIp || dbUser.lastIp;
   if (ipToCheck && ipToCheck !== '127.0.0.1' && ipToCheck !== 'localhost') {
     const existingOtherUser = await User.findOne({
@@ -49,25 +66,6 @@ export async function processAutoDemoGrant(dbUser: any, currentIp?: string): Pro
       ).catch(() => {});
       return false;
     }
-  }
-
-  // 3. Check if auto-demo feature is enabled by admin
-  const { autoDemoEnabled, autoDemoDurationMinutes } = await getAutoDemoConfig();
-  if (!autoDemoEnabled) return false;
-
-  // 4. Check if user has EVER had premium or demo in the past
-  const hasHadHistory =
-    Boolean(dbUser.hasHadDemoOrPremium) ||
-    Boolean(dbUser.isPremium) ||
-    (typeof dbUser.premiumPlan === 'string' && dbUser.premiumPlan !== 'free' && dbUser.premiumPlan.trim() !== '') ||
-    (Array.isArray(dbUser.allowedBatches) && dbUser.allowedBatches.length > 0);
-
-  if (hasHadHistory) {
-    // If they had history but hasHadDemoOrPremium wasn't flagged yet, flag it now for clean state
-    if (!dbUser.hasHadDemoOrPremium) {
-      await User.updateOne({ _id: dbUser._id }, { $set: { hasHadDemoOrPremium: true } }).catch(() => {});
-    }
-    return false;
   }
 
   // 3. Eligible! Grant demo now with duration set by admin

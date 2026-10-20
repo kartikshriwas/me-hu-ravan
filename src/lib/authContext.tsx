@@ -55,10 +55,10 @@ function AuthProviderInner({ children }: { children: React.ReactNode }) {
     // Initial sync
     syncLocalProgressToDb(true);
 
-    // Global multi-device synchronization when tab is focused or became visible
+    // Global multi-device synchronization when tab is focused or became visible (only syncs if local data changed)
     const handleReconcile = () => {
       if (typeof document !== 'undefined' && document.visibilityState === 'hidden') return;
-      syncLocalProgressToDb(true);
+      syncLocalProgressToDb(false);
     };
 
     window.addEventListener('focus', handleReconcile);
@@ -87,7 +87,7 @@ function AuthProviderInner({ children }: { children: React.ReactNode }) {
 
 export function AuthProvider({ children }: { children: React.ReactNode }) {
   return (
-    <SessionProvider refetchOnWindowFocus={true} refetchWhenOffline={false} refetchInterval={60}>
+    <SessionProvider refetchOnWindowFocus={false} refetchWhenOffline={false} refetchInterval={120}>
       <AuthProviderInner>{children}</AuthProviderInner>
     </SessionProvider>
   );
