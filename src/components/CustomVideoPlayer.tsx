@@ -312,9 +312,7 @@ export function CustomVideoPlayer({
           document.exitFullscreen().catch(() => {});
         }
       } catch {}
-      const customEvent = e as CustomEvent;
-      const mins = customEvent?.detail?.minutes || 15;
-      router.push(`/?demo_expired=true&mins=${mins}`);
+      router.push('/');
     };
 
     window.addEventListener('preptea:demo-expired', handleDemoExpired);
@@ -1344,9 +1342,11 @@ export function CustomVideoPlayer({
           ref={videoRef}
           src={blobUrl || localBlobUrl || activeAsset?.url}
           crossOrigin="anonymous"
-          controlsList="nodownload"
+          controlsList="nodownload noplaybackrate"
+          disablePictureInPicture
+          disableRemotePlayback
           onContextMenu={(e) => e.preventDefault()}
-          className="w-full h-full object-contain cursor-pointer transition-all"
+          className="w-full h-full object-contain cursor-pointer transition-all select-none"
           onTimeUpdate={handleTimeUpdate}
           onLoadedMetadata={() => {
             handleLoadedMetadata();

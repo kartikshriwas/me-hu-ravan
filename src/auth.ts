@@ -66,7 +66,7 @@ const nextAuthResult = NextAuth({
             grantedBy = dbUser.grantedBy || '';
 
             // Check if premium/demo expired for any user (including admin / superadmin)
-            if (isPremium && premiumExpiresAt && new Date(premiumExpiresAt) < new Date()) {
+            if ((isPremium || (typeof premiumPlan === 'string' && premiumPlan.includes('demo'))) && premiumExpiresAt && new Date(premiumExpiresAt) < new Date()) {
               isPremium = false;
               const isDemo = typeof premiumPlan === 'string' && (premiumPlan.includes('demo') || premiumPlan.includes('m_demo'));
               let demoMins = 15;
@@ -214,21 +214,43 @@ const nextAuthResult = NextAuth({
                 const allowedBatches = dbUser.allowedBatches || [];
 
                 let isPremium = !!dbUser.isPremium;
-                if (isPremium && dbUser.premiumExpiresAt && new Date(dbUser.premiumExpiresAt) < new Date()) {
+                let userPlan = dbUser.premiumPlan || 'free';
+                let userAllowedBatches = Array.isArray(dbUser.allowedBatches) ? [...dbUser.allowedBatches] : [];
+                const isDemo = typeof userPlan === 'string' && (userPlan.includes('demo') || userPlan.includes('m_demo'));
+
+                if ((isPremium || isDemo) && dbUser.premiumExpiresAt && new Date(dbUser.premiumExpiresAt) < new Date()) {
                   isPremium = false;
+                  let demoMins = 15;
+                  const match = typeof userPlan === 'string' ? userPlan.match(/(\d+)m/) : null;
+                  if (match) demoMins = parseInt(match[1]);
+                  userPlan = isDemo ? `expired_demo:${demoMins}m` : 'expired';
+                  userAllowedBatches = [];
+
+                  User.updateOne(
+                    { _id: dbUser._id },
+                    {
+                      $set: {
+                        isPremium: false,
+                        premiumPlan: userPlan,
+                        allowedBatches: [],
+                        hasCourseAccess: false,
+                      }
+                    }
+                  ).catch(() => {});
+                  invalidateUserCourseCache(token.email as string);
                 }
 
-                const hasCourseBatches = allowedBatches.some((b: string) => isCourseBatch(b));
+                const hasCourseBatches = !userPlan.startsWith('expired') && userAllowedBatches.some((b: string) => isCourseBatch(b));
                 const hasAdminCoursePerm = adminPermissions.includes('access_courses') || adminPermissions.includes('*');
                 const hasCourseAccess = Boolean(hasAdminCoursePerm || hasCourseBatches);
 
                 token.id = dbUser._id.toString();
                 token.role = userRole;
                 token.adminPermissions = adminPermissions;
-                token.allowedBatches = allowedBatches;
+                token.allowedBatches = userAllowedBatches;
                 token.isPremium = isPremium;
                 token.premiumExpiresAt = dbUser.premiumExpiresAt ? new Date(dbUser.premiumExpiresAt).toISOString() : null;
-                token.premiumPlan = isPremium ? (dbUser.premiumPlan || 'free') : 'free';
+                token.premiumPlan = userPlan;
                 token.totalScore = dbUser.totalScore || 0;
                 token.testsCompleted = dbUser.testsCompleted || 0;
                 token.hasCourseAccess = hasCourseAccess;

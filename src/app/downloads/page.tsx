@@ -9,10 +9,6 @@ export default async function DownloadsPage() {
 
   const allowed = await hasCoursesAccess(sessionUser);
   if (!allowed) {
-    const demoStatus = checkIsDemoExpired(sessionUser);
-    if (demoStatus.isExpired) {
-      redirect(`/?demo_expired=true&mins=${demoStatus.minutes}`);
-    }
     notFound();
   }
 

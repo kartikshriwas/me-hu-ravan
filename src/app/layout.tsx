@@ -67,6 +67,7 @@ import { GlobalOfflineWrapper } from '@/components/GlobalOfflineWrapper';
 import { GlobalDownloadTracker } from '@/components/GlobalDownloadTracker';
 import { DemoExpiredModal } from '@/components/DemoExpiredModal';
 import { PremiumDownloadModal } from '@/components/PremiumDownloadModal';
+import { SecurityGuard } from '@/components/SecurityGuard';
 import { Suspense } from 'react';
 
 export default function RootLayout({
@@ -77,6 +78,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark" suppressHydrationWarning>
       <body suppressHydrationWarning className="antialiased bg-[#0b0f19] bg-background text-foreground flex flex-col min-h-screen">
+        <SecurityGuard />
         <TopLoader />
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
           <AuthProvider>

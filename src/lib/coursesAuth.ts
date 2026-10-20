@@ -63,29 +63,35 @@ export function invalidateUserCourseCache(email?: string) {
 export function checkIsDemoExpired(user: any): { isExpired: boolean; minutes: number } {
   if (!user) return { isExpired: false, minutes: 15 };
 
-  // Explicit course access permissions or active assigned course batches mean user owns/has course access, not demo
-  if (user.adminPermissions?.includes('access_courses') || user.adminPermissions?.includes('*')) {
-    return { isExpired: false, minutes: 15 };
-  }
-  if (Array.isArray(user.allowedBatches) && user.allowedBatches.some((b: string) => isCourseBatch(b))) {
-    return { isExpired: false, minutes: 15 };
-  }
-  if (user.premiumPlan && isCourseBatch(user.premiumPlan)) {
-    return { isExpired: false, minutes: 15 };
-  }
-
   const plan = typeof user.premiumPlan === 'string' ? user.premiumPlan : '';
   let minutes = 15;
   const match = plan.match(/(\d+)m/);
   if (match) minutes = parseInt(match[1]);
 
-  if (plan.startsWith('expired_demo:')) {
+  // 1. Explicitly flagged as expired demo
+  if (plan.startsWith('expired_demo:') || plan === 'expired') {
     return { isExpired: true, minutes };
   }
 
+  // 2. User has a demo plan and the expiration timestamp has passed
   const isDemo = plan.includes('demo') || plan.includes('m_demo');
   if (isDemo && user.premiumExpiresAt && new Date(user.premiumExpiresAt).getTime() <= Date.now()) {
     return { isExpired: true, minutes };
+  }
+
+  // 3. Admin permissions (explicit course access)
+  if (user.adminPermissions?.includes('access_courses') || user.adminPermissions?.includes('*')) {
+    return { isExpired: false, minutes };
+  }
+
+  // 4. Permanent course batch holders (only if NOT on an active demo or expired plan)
+  if (!isDemo && !plan.startsWith('expired')) {
+    if (Array.isArray(user.allowedBatches) && user.allowedBatches.some((b: string) => isCourseBatch(b))) {
+      return { isExpired: false, minutes };
+    }
+    if (user.premiumPlan && isCourseBatch(user.premiumPlan)) {
+      return { isExpired: false, minutes };
+    }
   }
 
   return { isExpired: false, minutes };
@@ -96,59 +102,56 @@ export async function hasCoursesAccess(sessionUser: SessionUser | null): Promise
 
   const email = sessionUser.email.toLowerCase().trim();
 
-  // 1. Check if user has explicit permission or active course batch
-  if (sessionUser.adminPermissions?.includes('access_courses') || sessionUser.adminPermissions?.includes('*')) return true;
-  if (Array.isArray(sessionUser.allowedBatches) && sessionUser.allowedBatches.some(isCourseBatch)) return true;
-  if (sessionUser.premiumPlan && isCourseBatch(sessionUser.premiumPlan)) return true;
-
-  // 2. Check demo expiration
+  // 1. Check demo expiration first
   const demoStatus = checkIsDemoExpired(sessionUser);
   if (demoStatus.isExpired) {
     return false;
   }
 
-  // 3. Check DB doc in case session is slightly behind
+  // 2. Check DB doc to verify real-time status
   let userBatches: string[] = [];
   let hasPerm = false;
+  let isDemoActive = false;
 
   try {
     const userDoc = await getCachedUserDoc(email);
     if (userDoc) {
-      if (userDoc.adminPermissions?.includes('access_courses') || userDoc.adminPermissions?.includes('*')) return true;
-      if (Array.isArray(userDoc.allowedBatches) && userDoc.allowedBatches.some(isCourseBatch)) return true;
-      if (userDoc.premiumPlan && isCourseBatch(userDoc.premiumPlan)) return true;
-
       if (checkIsDemoExpired(userDoc).isExpired) {
         return false;
       }
       hasPerm = userDoc.adminPermissions?.includes('access_courses') || userDoc.adminPermissions?.includes('*') || false;
+      const plan = typeof userDoc.premiumPlan === 'string' ? userDoc.premiumPlan : '';
+      const isDemo = plan.includes('demo') || plan.includes('m_demo');
 
-      userBatches = Array.isArray(userDoc.allowedBatches) ? [...userDoc.allowedBatches] : [];
-      if (userDoc.premiumPlan && isCourseBatch(userDoc.premiumPlan)) {
-        userBatches.push(userDoc.premiumPlan);
+      if (isDemo && userDoc.premiumExpiresAt && new Date(userDoc.premiumExpiresAt).getTime() > Date.now()) {
+        isDemoActive = true;
+      }
+
+      if (!isDemo && !plan.startsWith('expired')) {
+        userBatches = Array.isArray(userDoc.allowedBatches) ? [...userDoc.allowedBatches] : [];
+        if (userDoc.premiumPlan && isCourseBatch(userDoc.premiumPlan)) {
+          userBatches.push(userDoc.premiumPlan);
+        }
       }
     } else {
       hasPerm = sessionUser.adminPermissions?.includes('access_courses') || sessionUser.adminPermissions?.includes('*') || false;
-      userBatches = sessionUser.allowedBatches || [];
+      const plan = typeof sessionUser.premiumPlan === 'string' ? sessionUser.premiumPlan : '';
+      const isDemo = plan.includes('demo') || plan.includes('m_demo');
+      if (isDemo && sessionUser.premiumExpiresAt && new Date(sessionUser.premiumExpiresAt).getTime() > Date.now()) {
+        isDemoActive = true;
+      }
+      if (!isDemo && !plan.startsWith('expired')) {
+        userBatches = sessionUser.allowedBatches || [];
+      }
     }
   } catch (error) {
     console.error('Error verifying courses access:', error);
-    hasPerm = sessionUser.adminPermissions?.includes('access_courses') || sessionUser.adminPermissions?.includes('*') || false;
-    userBatches = sessionUser.allowedBatches || [];
   }
 
-  if (hasPerm) return true;
+  if (hasPerm || isDemoActive) return true;
 
   const validCourseBatches = userBatches.filter(isCourseBatch);
-  if (validCourseBatches.length > 0) return true;
-
-  // 4. Check active demo
-  const sPlan = typeof sessionUser.premiumPlan === 'string' ? sessionUser.premiumPlan : '';
-  if ((sPlan.includes('demo') || sPlan.includes('m_demo')) && sessionUser.premiumExpiresAt && new Date(sessionUser.premiumExpiresAt).getTime() > Date.now()) {
-    return true;
-  }
-
-  return false;
+  return validCourseBatches.length > 0;
 }
 
 export async function isCourseSlugUnlocked(sessionUser: SessionUser | null, courseSlug: string): Promise<boolean> {

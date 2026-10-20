@@ -44,8 +44,8 @@ export async function GET(
       isPlatformGlobalFree(),
     ]);
 
-    let isPremium = !!(cachedUser?.isPremium || isSuperadmin || globalFreeConfig.isGlobalFree);
-    if (isPremium && !isSuperadmin && !globalFreeConfig.isGlobalFree && cachedUser?.premiumExpiresAt && new Date(cachedUser.premiumExpiresAt) < new Date()) {
+    let isPremium = !!(cachedUser?.isPremium || globalFreeConfig.isGlobalFree);
+    if (isPremium && !globalFreeConfig.isGlobalFree && cachedUser?.premiumExpiresAt && new Date(cachedUser.premiumExpiresAt) < new Date()) {
       isPremium = false;
     }
 

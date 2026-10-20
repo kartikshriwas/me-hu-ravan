@@ -137,41 +137,37 @@ export async function POST(request: Request) {
     let demoExpired = false;
     let demoMinutes = 15;
 
-    // Check demo status & pending demo grants for non-admin users
+    // Check demo status & pending demo grants for all users equally
     if (sessionUser?.email) {
-      const isSuperOrAdmin = sessionUser.role === 'superadmin' || sessionUser.role === 'admin';
+      const plan = typeof sessionUser.premiumPlan === 'string' ? sessionUser.premiumPlan : '';
+      const match = plan.match(/(\d+)m/);
+      if (match) demoMinutes = parseInt(match[1]);
 
-      if (!isSuperOrAdmin) {
-        const plan = typeof sessionUser.premiumPlan === 'string' ? sessionUser.premiumPlan : '';
-        const match = plan.match(/(\d+)m/);
-        if (match) demoMinutes = parseInt(match[1]);
-
-        const isDemoActive = plan.includes('demo') || plan.includes('m_demo');
-        if (isDemoActive && sessionUser.premiumExpiresAt && new Date(sessionUser.premiumExpiresAt) <= now) {
-          demoExpired = true;
-          await User.updateOne(
-            { email: userEmail },
-            {
-              $set: {
-                isPremium: false,
-                premiumPlan: `expired_demo:${demoMinutes}m`,
-                allowedBatches: [],
-                hasCourseAccess: false,
-              }
+      const isDemoActive = plan.includes('demo') || plan.includes('m_demo');
+      if (isDemoActive && sessionUser.premiumExpiresAt && new Date(sessionUser.premiumExpiresAt) <= now) {
+        demoExpired = true;
+        await User.updateOne(
+          { email: userEmail },
+          {
+            $set: {
+              isPremium: false,
+              premiumPlan: `expired_demo:${demoMinutes}m`,
+              allowedBatches: [],
+              hasCourseAccess: false,
             }
-          ).catch(() => {});
-          invalidateUserCourseCache(userEmail);
-        } else if (plan.startsWith('expired_demo:')) {
-          demoExpired = true;
-        } else if (!sessionUser.isPremium && !sessionUser.hasHadDemoOrPremium) {
-          // Only query for auto-demo for genuine first-time users
-          const dbUser = await User.findOne({ email: userEmail }).select('_id email role isPremium premiumPlan allowedBatches hasHadDemoOrPremium premiumExpiresAt isAlt lastIp').lean();
-          if (dbUser && !dbUser.isAlt) {
-            const wasPendingActivated = await processPendingDemoActivation(dbUser);
-            const wasAutoGranted = await processAutoDemoGrant(dbUser, ipAddress);
-            if (wasPendingActivated || wasAutoGranted) {
-              demoGranted = true;
-            }
+          }
+        ).catch(() => {});
+        invalidateUserCourseCache(userEmail);
+      } else if (plan.startsWith('expired_demo:')) {
+        demoExpired = true;
+      } else if (!sessionUser.isPremium && !sessionUser.hasHadDemoOrPremium && sessionUser.role !== 'admin' && sessionUser.role !== 'superadmin') {
+        // Only query for auto-demo for genuine first-time normal users
+        const dbUser = await User.findOne({ email: userEmail }).select('_id email role isPremium premiumPlan allowedBatches hasHadDemoOrPremium premiumExpiresAt isAlt lastIp').lean();
+        if (dbUser && !dbUser.isAlt) {
+          const wasPendingActivated = await processPendingDemoActivation(dbUser);
+          const wasAutoGranted = await processAutoDemoGrant(dbUser, ipAddress);
+          if (wasPendingActivated || wasAutoGranted) {
+            demoGranted = true;
           }
         }
       }

@@ -37,9 +37,13 @@ export function DemoExpiredModal() {
   const [redeemError, setRedeemError] = useState('');
   const [redeemSuccess, setRedeemSuccess] = useState('');
 
-  // Users with course batches or explicit course permissions are exempt from demo expiration
+  // Users with permanent course batches or explicit course permissions (who are NOT on a demo) are exempt
   const isExempt = useMemo(() => {
     if (!user) return false;
+    const plan = typeof user.premiumPlan === 'string' ? user.premiumPlan : '';
+    const isDemo = plan.includes('demo') || plan.includes('m_demo') || plan.startsWith('expired');
+    if (isDemo) return false;
+
     if (user.adminPermissions?.includes('access_courses') || user.adminPermissions?.includes('*')) return true;
     if (Array.isArray(user.allowedBatches) && user.allowedBatches.some((b: string) => isCourseBatch(b))) return true;
     if (user.premiumPlan && isCourseBatch(user.premiumPlan)) return true;

@@ -253,17 +253,27 @@ export function checkUserCourseAccess(user: any): boolean {
     return false;
   }
 
-  // 1. If user has explicit course batches or permissions, they have course access
-  if (user.adminPermissions?.includes('access_courses') || user.adminPermissions?.includes('*')) return true;
-  const batches: string[] = Array.isArray(user.allowedBatches) ? user.allowedBatches : [];
-  if (batches.some(isCourseBatch)) return true;
-  if (user.premiumPlan && isCourseBatch(user.premiumPlan)) return true;
-
-  // 2. Otherwise check if user has an active, unexpired demo
   const plan = typeof user.premiumPlan === 'string' ? user.premiumPlan : '';
   const isDemo = plan.includes('demo') || plan.includes('m_demo');
+
+  // If user has an expired demo, revoke access immediately
+  if (plan.startsWith('expired_demo:') || (isDemo && user.premiumExpiresAt && new Date(user.premiumExpiresAt).getTime() <= Date.now())) {
+    return false;
+  }
+
+  // 1. Explicit course permissions
+  if (user.adminPermissions?.includes('access_courses') || user.adminPermissions?.includes('*')) return true;
+
+  // 2. Active, unexpired demo
   if (isDemo && user.premiumExpiresAt && new Date(user.premiumExpiresAt).getTime() > Date.now()) {
     return true;
+  }
+
+  // 3. Permanent course batches (only if NOT on an active demo or expired plan)
+  if (!isDemo && !plan.startsWith('expired')) {
+    const batches: string[] = Array.isArray(user.allowedBatches) ? user.allowedBatches : [];
+    if (batches.some(isCourseBatch)) return true;
+    if (user.premiumPlan && isCourseBatch(user.premiumPlan)) return true;
   }
 
   return false;
