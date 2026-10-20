@@ -139,12 +139,19 @@ export async function POST(request: Request) {
 
     // Check demo status & pending demo grants for all users equally
     if (sessionUser?.email) {
-      const plan = typeof sessionUser.premiumPlan === 'string' ? sessionUser.premiumPlan : '';
+      const dbUser = await User.findOne({ email: userEmail })
+        .select('_id email role isPremium premiumPlan allowedBatches hasHadDemoOrPremium premiumExpiresAt isAlt lastIp')
+        .lean();
+
+      const plan = typeof (dbUser?.premiumPlan || sessionUser.premiumPlan) === 'string' 
+        ? (dbUser?.premiumPlan || sessionUser.premiumPlan) 
+        : '';
       const match = plan.match(/(\d+)m/);
       if (match) demoMinutes = parseInt(match[1]);
 
-      const isDemoActive = plan.includes('demo') || plan.includes('m_demo');
-      if (isDemoActive && sessionUser.premiumExpiresAt && new Date(sessionUser.premiumExpiresAt) <= now) {
+      const expiresAt = dbUser?.premiumExpiresAt || sessionUser.premiumExpiresAt;
+      const isDemoActive = (plan.includes('demo') || plan.includes('m_demo')) && !plan.startsWith('expired');
+      if (isDemoActive && expiresAt && new Date(expiresAt) <= now) {
         demoExpired = true;
         await User.updateOne(
           { email: userEmail },
@@ -158,11 +165,8 @@ export async function POST(request: Request) {
           }
         ).catch(() => {});
         invalidateUserCourseCache(userEmail);
-      } else if (plan.startsWith('expired_demo:')) {
-        demoExpired = true;
       } else if (!sessionUser.isPremium && !sessionUser.hasHadDemoOrPremium && sessionUser.role !== 'admin' && sessionUser.role !== 'superadmin') {
         // Only query for auto-demo for genuine first-time normal users
-        const dbUser = await User.findOne({ email: userEmail }).select('_id email role isPremium premiumPlan allowedBatches hasHadDemoOrPremium premiumExpiresAt isAlt lastIp').lean();
         if (dbUser && !dbUser.isAlt) {
           const wasPendingActivated = await processPendingDemoActivation(dbUser);
           const wasAutoGranted = await processAutoDemoGrant(dbUser, ipAddress);

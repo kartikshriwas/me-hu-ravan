@@ -58,8 +58,18 @@ export function DemoExpiredModal() {
   }, []);
 
   // Trigger modal & redirect if on restricted course pages
-  const triggerExpired = useCallback((minutes?: number) => {
+  const triggerExpired = useCallback((minutes?: number, force = false) => {
     if (isExempt) return;
+
+    if (!force && typeof window !== 'undefined') {
+      const isDismissed = sessionStorage.getItem('preptea_demo_expired_dismissed') === 'true';
+      const curPath = window.location.pathname;
+      // If already dismissed in this session and NOT currently accessing restricted courses, do not show
+      if (isDismissed && !curPath.startsWith('/courses')) {
+        return;
+      }
+    }
+
     const mins = minutes || extractMinutes(user?.premiumPlan, 15);
     setDemoMinutes(mins);
     setIsOpen(true);
@@ -79,7 +89,7 @@ export function DemoExpiredModal() {
     const handleExpiredEvent = (e: Event) => {
       const customEvent = e as CustomEvent;
       const mins = customEvent?.detail?.minutes || 15;
-      triggerExpired(mins);
+      triggerExpired(mins, true);
     };
 
     window.addEventListener('preptea:demo-expired', handleExpiredEvent);
@@ -92,6 +102,7 @@ export function DemoExpiredModal() {
     if (isExpiredParam === 'true') {
       // Clean the query param from URL without refreshing
       if (typeof window !== 'undefined') {
+        sessionStorage.removeItem('preptea_demo_expired_dismissed');
         const url = new URL(window.location.href);
         url.searchParams.delete('demo_expired');
         url.searchParams.delete('mins');
@@ -105,24 +116,23 @@ export function DemoExpiredModal() {
 
       const minsParam = searchParams.get('mins');
       const mins = minsParam ? parseInt(minsParam) : 15;
-      setDemoMinutes(mins);
-      setIsOpen(true);
+      triggerExpired(mins, true);
     }
-  }, [isExempt, searchParams]);
+  }, [isExempt, searchParams, triggerExpired]);
 
   // 3. Real-time timer watcher for users on active demo
   useEffect(() => {
     if (!user || isExempt) return;
 
     const plan = user.premiumPlan || '';
-    const isDemo = plan.includes('demo') || plan.includes('m_demo');
+    const isDemo = (plan.includes('demo') || plan.includes('m_demo')) && !plan.startsWith('expired');
 
     // Case A: User's plan is already flagged as expired demo
-    if (plan.startsWith('expired_demo:')) {
+    if (plan.startsWith('expired_demo:') || plan === 'expired') {
       const mins = extractMinutes(plan, 15);
-      // If user visits a restricted route or hasn't dismissed in session, show modal
+      // If user visits a restricted route, show modal
       if (pathname.startsWith('/courses')) {
-        triggerExpired(mins);
+        triggerExpired(mins, true);
       }
       return;
     }
@@ -136,11 +146,18 @@ export function DemoExpiredModal() {
 
       if (remainingMs <= 0) {
         // Already expired
-        triggerExpired(mins);
+        if (pathname.startsWith('/courses')) {
+          triggerExpired(mins, true);
+        } else {
+          triggerExpired(mins, false);
+        }
       } else {
         // Schedule countdown trigger to fire the exact moment the demo ends
         const timer = setTimeout(() => {
-          triggerExpired(mins);
+          if (typeof window !== 'undefined') {
+            sessionStorage.removeItem('preptea_demo_expired_dismissed');
+          }
+          triggerExpired(mins, true);
         }, remainingMs);
 
         return () => clearTimeout(timer);
@@ -172,6 +189,9 @@ export function DemoExpiredModal() {
       if (json.success) {
         setRedeemSuccess(json.message || '🎉 Batch Access Unlocked!');
         setCode('');
+        if (typeof window !== 'undefined') {
+          sessionStorage.removeItem('preptea_demo_expired_dismissed');
+        }
         setTimeout(() => {
           setIsOpen(false);
           window.location.reload();
@@ -187,6 +207,9 @@ export function DemoExpiredModal() {
   };
 
   const handleClose = () => {
+    if (typeof window !== 'undefined') {
+      sessionStorage.setItem('preptea_demo_expired_dismissed', 'true');
+    }
     setIsOpen(false);
     // If closing while on courses page, redirect to home
     if (pathname.startsWith('/courses')) {
