@@ -219,7 +219,8 @@ const nextAuthResult = NextAuth({
                 }
 
                 const hasCourseBatches = allowedBatches.some((b: string) => isCourseBatch(b));
-                const hasCourseAccess = Boolean(isPremium || adminPermissions.includes('access_courses') || adminPermissions.includes('*') || hasCourseBatches);
+                const hasAdminCoursePerm = adminPermissions.includes('access_courses') || adminPermissions.includes('*');
+                const hasCourseAccess = Boolean(hasAdminCoursePerm || hasCourseBatches);
 
                 token.id = dbUser._id.toString();
                 token.role = userRole;

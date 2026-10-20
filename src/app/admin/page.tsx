@@ -38,10 +38,11 @@ import {
   Tablet,
   Trash2,
   History,
+  ShieldAlert,
   Loader2,
-  ShieldAlert
 } from 'lucide-react';
 import { AdminSkeleton } from '@/components/skeletons/AdminSkeleton';
+import { isCourseBatch } from '@/lib/batchAccess';
 
 interface SessionEventItem {
   timestamp: number;
@@ -911,9 +912,9 @@ export default function AdminDashboardPage() {
 
   const handleSaveUserBatches = async () => {
     if (!editingUserForBatches) return;
-    const hasBatches = selectedUserBatches.length > 0;
-    const isSuperOrAdmin = editingUserForBatches.role === 'admin' || editingUserForBatches.role === 'superadmin';
-    const nextIsPremium = hasBatches ? true : (isSuperOrAdmin ? editingUserForBatches.isPremium : false);
+    const hasCourseBatches = selectedUserBatches.some((b: string) => isCourseBatch(b));
+    // If admin grants any course batch to a user, automatically grant them premium (isPremium: true)
+    const nextIsPremium = hasCourseBatches ? true : editingUserForBatches.isPremium;
     await handleUpdateUser(
       editingUserForBatches.email,
       editingUserForBatches.role,
@@ -2720,8 +2721,7 @@ export default function AdminDashboardPage() {
                             <button
                               onClick={() => {
                                 const nextPrem = !u.isPremium;
-                                const nextBatches = nextPrem ? (u.allowedBatches && u.allowedBatches.length > 0 ? u.allowedBatches : ['SigmaX']) : [];
-                                handleUpdateUser(u.email, u.role, nextPrem, u.adminPermissions, nextBatches);
+                                handleUpdateUser(u.email, u.role, nextPrem, u.adminPermissions, u.allowedBatches || []);
                               }}
                               className={`px-3 py-1.5 rounded-xl text-[11px] font-bold transition-all ${
                                 u.isPremium

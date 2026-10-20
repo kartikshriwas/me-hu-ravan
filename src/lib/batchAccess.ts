@@ -266,11 +266,10 @@ export function checkUserCourseAccess(user: any): boolean {
   }
 
   if (user.adminPermissions?.includes('access_courses') || user.adminPermissions?.includes('*')) return true;
-  if (user.isPremium) return true;
-  if (user.hasCourseAccess) return true;
   const batches: string[] = Array.isArray(user.allowedBatches) ? user.allowedBatches : [];
+  if (batches.some(isCourseBatch)) return true;
   if (user.premiumPlan && isCourseBatch(user.premiumPlan)) return true;
-  return batches.some(isCourseBatch);
+  return false;
 }
 
 /**

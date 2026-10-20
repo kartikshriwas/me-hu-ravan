@@ -94,16 +94,12 @@ export async function hasCoursesAccess(sessionUser: SessionUser | null): Promise
     return false;
   }
 
-  // Active premium grant
-  if (sessionUser.isPremium) return true;
-
   // Granular admin rights or batch permissions
   if (sessionUser.adminPermissions?.includes('access_courses') || sessionUser.adminPermissions?.includes('*')) return true;
-  if ((sessionUser as any).hasCourseAccess === true) return true;
   if (Array.isArray(sessionUser.allowedBatches) && sessionUser.allowedBatches.some(isCourseBatch)) return true;
+  if (sessionUser.premiumPlan && isCourseBatch(sessionUser.premiumPlan)) return true;
 
   let userBatches: string[] = [];
-  let isPrem = false;
   let hasPerm = false;
 
   try {
@@ -112,7 +108,6 @@ export async function hasCoursesAccess(sessionUser: SessionUser | null): Promise
       if (userDoc.premiumExpiresAt && new Date(userDoc.premiumExpiresAt) < new Date()) {
         return false;
       }
-      isPrem = Boolean(userDoc.isPremium);
       hasPerm = userDoc.adminPermissions?.includes('access_courses') || userDoc.adminPermissions?.includes('*') || false;
 
       userBatches = Array.isArray(userDoc.allowedBatches) ? [...userDoc.allowedBatches] : [];
@@ -120,18 +115,16 @@ export async function hasCoursesAccess(sessionUser: SessionUser | null): Promise
         userBatches.push(userDoc.premiumPlan);
       }
     } else {
-      isPrem = Boolean(sessionUser.isPremium);
       hasPerm = sessionUser.adminPermissions?.includes('access_courses') || sessionUser.adminPermissions?.includes('*') || false;
       userBatches = sessionUser.allowedBatches || [];
     }
   } catch (error) {
     console.error('Error verifying courses access:', error);
-    isPrem = Boolean(sessionUser.isPremium);
     hasPerm = sessionUser.adminPermissions?.includes('access_courses') || sessionUser.adminPermissions?.includes('*') || false;
     userBatches = sessionUser.allowedBatches || [];
   }
 
-  if (isPrem || hasPerm) return true;
+  if (hasPerm) return true;
 
   const validCourseBatches = userBatches.filter(isCourseBatch);
   return validCourseBatches.length > 0;
@@ -153,7 +146,7 @@ export async function isCourseSlugUnlocked(sessionUser: SessionUser | null, cour
   if (sessionUser.adminPermissions?.includes('access_courses') || sessionUser.adminPermissions?.includes('*')) return true;
 
   let userBatches: string[] = [];
-  let isPrem = Boolean(sessionUser.isPremium);
+  let hasPerm = false;
 
   try {
     const userDoc = await getCachedUserDoc(email);
@@ -166,7 +159,7 @@ export async function isCourseSlugUnlocked(sessionUser: SessionUser | null, cour
       }
       if (userDoc.adminPermissions?.includes('access_courses') || userDoc.adminPermissions?.includes('*')) return true;
 
-      isPrem = Boolean(userDoc.isPremium);
+      hasPerm = userDoc.adminPermissions?.includes('access_courses') || userDoc.adminPermissions?.includes('*') || false;
       userBatches = Array.isArray(userDoc.allowedBatches) ? [...userDoc.allowedBatches] : [];
       if (userDoc.premiumPlan && isCourseBatch(userDoc.premiumPlan)) {
         userBatches.push(userDoc.premiumPlan);
@@ -179,14 +172,12 @@ export async function isCourseSlugUnlocked(sessionUser: SessionUser | null, cour
     userBatches = sessionUser.allowedBatches || [];
   }
 
-  // Active premium with no batch restrictions or all-batch access unlocks everything
-  if (isPrem && (userBatches.length === 0 || userBatches.includes('*'))) {
-    return true;
+  const validCourseBatches = userBatches.filter(isCourseBatch);
+  if (validCourseBatches.length === 0 && !hasPerm) {
+    return false;
   }
 
-  const validCourseBatches = userBatches.filter(isCourseBatch);
-
-  if (validCourseBatches.some(b => b.toLowerCase().includes('sigmax') || b === '*')) {
+  if (hasPerm || validCourseBatches.some(b => b.toLowerCase().includes('sigmax') || b === '*')) {
     return true;
   }
 
@@ -209,7 +200,7 @@ export async function getUnlockedCourseSlugsMap(sessionUser: SessionUser | null)
   if (sessionUser.adminPermissions?.includes('access_courses') || sessionUser.adminPermissions?.includes('*')) return () => true;
 
   let userBatches: string[] = [];
-  let isPrem = Boolean(sessionUser.isPremium);
+  let hasPerm = false;
 
   try {
     const userDoc = await getCachedUserDoc(email);
@@ -222,7 +213,7 @@ export async function getUnlockedCourseSlugsMap(sessionUser: SessionUser | null)
       }
       if (userDoc.adminPermissions?.includes('access_courses') || userDoc.adminPermissions?.includes('*')) return () => true;
 
-      isPrem = Boolean(userDoc.isPremium);
+      hasPerm = userDoc.adminPermissions?.includes('access_courses') || userDoc.adminPermissions?.includes('*') || false;
       userBatches = Array.isArray(userDoc.allowedBatches) ? [...userDoc.allowedBatches] : [];
       if (userDoc.premiumPlan && isCourseBatch(userDoc.premiumPlan)) {
         userBatches.push(userDoc.premiumPlan);
@@ -235,14 +226,12 @@ export async function getUnlockedCourseSlugsMap(sessionUser: SessionUser | null)
     userBatches = sessionUser.allowedBatches || [];
   }
 
-  // Active premium with no batch restrictions or all-batch access unlocks everything
-  if (isPrem && (userBatches.length === 0 || userBatches.includes('*'))) {
-    return () => true;
+  const validCourseBatches = userBatches.filter(isCourseBatch);
+  if (validCourseBatches.length === 0 && !hasPerm) {
+    return () => false;
   }
 
-  const validCourseBatches = userBatches.filter(isCourseBatch);
-
-  if (validCourseBatches.some((b) => b.toLowerCase().includes('sigmax') || b === '*')) {
+  if (hasPerm || validCourseBatches.some((b) => b.toLowerCase().includes('sigmax') || b === '*')) {
     return () => true;
   }
 

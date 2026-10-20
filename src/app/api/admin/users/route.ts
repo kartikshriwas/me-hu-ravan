@@ -144,14 +144,22 @@ export async function POST(request: Request) {
       if (isCurrentlyOnline) {
         // User is online right now — activate demo timer immediately
         const expiresAt = new Date(now.getTime() + minutes * 60 * 1000);
-        targetUser.isPremium = true;
-        targetUser.premiumExpiresAt = expiresAt;
-        targetUser.premiumPlan = `${minutes}m_demo`;
-        targetUser.allowedBatches = Array.from(new Set([...(targetUser.allowedBatches || []), 'SigmaX']));
-        targetUser.hasCourseAccess = true;
-        targetUser.hasHadDemoOrPremium = true;
-        targetUser.grantedBy = sessionUser!.email.toLowerCase().trim();
-        await targetUser.save();
+        const demoBatches = Array.from(new Set([...(targetUser.allowedBatches || []), 'SigmaX']));
+
+        await User.findOneAndUpdate(
+          { _id: targetUser._id },
+          {
+            $set: {
+              isPremium: true,
+              premiumExpiresAt: expiresAt,
+              premiumPlan: `${minutes}m_demo`,
+              allowedBatches: demoBatches,
+              hasCourseAccess: true,
+              hasHadDemoOrPremium: true,
+              grantedBy: sessionUser!.email.toLowerCase().trim(),
+            }
+          }
+        );
         invalidateUserCourseCache(cleanTarget);
 
         return NextResponse.json({
@@ -163,19 +171,25 @@ export async function POST(request: Request) {
             email: targetUser.email,
             role: targetUser.role,
             adminPermissions: targetUser.adminPermissions,
-            allowedBatches: targetUser.allowedBatches,
-            isPremium: targetUser.isPremium,
-            premiumExpiresAt: targetUser.premiumExpiresAt.toISOString(),
+            allowedBatches: demoBatches,
+            isPremium: true,
+            premiumExpiresAt: expiresAt.toISOString(),
           }
         });
       } else {
         // User is offline — queue pending demo so timer only starts when they come online
-        targetUser.isPremium = false;
-        targetUser.premiumExpiresAt = null;
-        targetUser.premiumPlan = `pending_demo:${minutes}m`;
-        targetUser.hasHadDemoOrPremium = true;
-        targetUser.grantedBy = sessionUser!.email.toLowerCase().trim();
-        await targetUser.save();
+        await User.findOneAndUpdate(
+          { _id: targetUser._id },
+          {
+            $set: {
+              isPremium: false,
+              premiumExpiresAt: null,
+              premiumPlan: `pending_demo:${minutes}m`,
+              hasHadDemoOrPremium: true,
+              grantedBy: sessionUser!.email.toLowerCase().trim(),
+            }
+          }
+        );
 
         return NextResponse.json({
           success: true,
@@ -216,6 +230,17 @@ export async function POST(request: Request) {
 
     if (Array.isArray(allowedBatches)) {
       targetUser.allowedBatches = allowedBatches;
+      const hasAssignedCourseBatches = allowedBatches.some((b: string) => isCourseBatch(b));
+      if (hasAssignedCourseBatches) {
+        // Any course batch grant automatically awards Quiz Premium (isPremium: true)
+        targetUser.isPremium = true;
+        if (!targetUser.premiumExpiresAt) {
+          targetUser.premiumExpiresAt = new Date(Date.now() + 365 * 24 * 60 * 60 * 1000);
+        }
+        if (!targetUser.premiumPlan || targetUser.premiumPlan === 'free') {
+          targetUser.premiumPlan = 'course_bundle_premium';
+        }
+      }
     }
 
     if (typeof isPremium === 'boolean') {
@@ -229,18 +254,14 @@ export async function POST(request: Request) {
         targetUser.premiumExpiresAt = null;
         targetUser.premiumPlan = 'free';
         targetUser.grantedBy = '';
-        // When explicitly revoking premium, also empty allowedBatches if not explicitly given
-        if (!Array.isArray(allowedBatches)) {
-          targetUser.allowedBatches = [];
-        }
       }
     }
 
     const hasAdminCoursePerm = targetUser.adminPermissions?.includes('access_courses') || targetUser.adminPermissions?.includes('*');
     const hasCourseBatches = Array.isArray(targetUser.allowedBatches) && targetUser.allowedBatches.some((b: string) => isCourseBatch(b));
 
-    // Ensure hasCourseAccess in DB is strictly derived without default lifetime bypass
-    targetUser.hasCourseAccess = Boolean(targetUser.isPremium || hasAdminCoursePerm || hasCourseBatches);
+    // Ensure hasCourseAccess in DB is strictly derived from course batches or admin permissions (decoupled from isPremium)
+    targetUser.hasCourseAccess = Boolean(hasAdminCoursePerm || hasCourseBatches);
 
     // If regular user or admin has revoked premium and has no course batches and no course perms:
     if (!targetUser.isPremium && !hasAdminCoursePerm && !hasCourseBatches && (!targetUser.allowedBatches || targetUser.allowedBatches.length === 0)) {
@@ -251,20 +272,36 @@ export async function POST(request: Request) {
       }
     }
 
-    await targetUser.save();
+    const finalUpdatedUser = await User.findOneAndUpdate(
+      { _id: targetUser._id },
+      {
+        $set: {
+          role: targetUser.role,
+          adminPermissions: targetUser.adminPermissions,
+          allowedBatches: targetUser.allowedBatches,
+          isPremium: targetUser.isPremium,
+          premiumExpiresAt: targetUser.premiumExpiresAt,
+          premiumPlan: targetUser.premiumPlan,
+          grantedBy: targetUser.grantedBy,
+          hasCourseAccess: targetUser.hasCourseAccess,
+        }
+      },
+      { returnDocument: 'after' }
+    ).lean();
+
     invalidateUserCourseCache(cleanTarget);
 
     return NextResponse.json({
       success: true,
       message: `User ${targetUser.email} permissions updated successfully!`,
       user: {
-        id: targetUser._id.toString(),
-        name: targetUser.name,
-        email: targetUser.email,
-        role: targetUser.role,
-        adminPermissions: targetUser.adminPermissions,
-        allowedBatches: targetUser.allowedBatches,
-        isPremium: targetUser.isPremium,
+        id: (finalUpdatedUser?._id || targetUser._id).toString(),
+        name: finalUpdatedUser?.name || targetUser.name,
+        email: finalUpdatedUser?.email || targetUser.email,
+        role: finalUpdatedUser?.role || targetUser.role,
+        adminPermissions: finalUpdatedUser?.adminPermissions || targetUser.adminPermissions,
+        allowedBatches: finalUpdatedUser?.allowedBatches || targetUser.allowedBatches,
+        isPremium: finalUpdatedUser?.isPremium ?? targetUser.isPremium,
       },
     });
   } catch (error) {

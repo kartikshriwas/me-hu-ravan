@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 import { AssessmentMeta, QuizAttemptResult } from '@/lib/types';
 import { getQuizHistory, isQuizMatch } from '@/lib/storage';
 import { useAuth } from '@/lib/authContext';
@@ -86,7 +86,19 @@ export function HomeClient({ initialTests = [] }: { initialTests?: AssessmentMet
   );
   const [history, setHistory] = useState<QuizAttemptResult[]>([]);
   const [loading, setLoading] = useState(initialTests.length === 0 && !cachedInitialTests?.data?.length);
-  const [searchQuery, setSearchQuery] = useState('');
+  const searchParams = useSearchParams();
+  const [searchQuery, setSearchQuery] = useState(() => {
+    return searchParams.get('search') || searchParams.get('q') || '';
+  });
+
+  // Sync state when redirected or navigated to /?search=xyz
+  useEffect(() => {
+    const q = searchParams.get('search') || searchParams.get('q') || '';
+    if (q) {
+      setSearchQuery(q);
+    }
+  }, [searchParams]);
+
   const [selectedDifficulty, setSelectedDifficulty] = useState<string>('All');
   const [selectedQuizType, setSelectedQuizType] = useState<string>('All');
   const [recentAttempt, setRecentAttempt] = useState<QuizAttemptResult | null>(null);
@@ -260,8 +272,18 @@ export function HomeClient({ initialTests = [] }: { initialTests?: AssessmentMet
               placeholder="Search test (e.g. Verbal, Logical, TCS Ninja, Easy, SET 1)..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-card/90 border border-card-border text-sm text-foreground placeholder-slate-500 focus:outline-none focus:border-primary-500 transition-colors"
+              className="w-full pl-10 pr-9 py-2.5 rounded-xl bg-card/90 border border-card-border text-sm text-foreground placeholder-slate-500 focus:outline-none focus:border-primary-500 transition-colors"
             />
+            {searchQuery && (
+              <button
+                type="button"
+                onClick={() => setSearchQuery('')}
+                className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground p-0.5 rounded-full"
+                title="Clear search"
+              >
+                <X className="w-3.5 h-3.5" />
+              </button>
+            )}
           </div>
 
           {/* Difficulty Pills & Test Counter */}

@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 import { getAllAssessments } from '@/lib/questionsData';
 import { HomeClient } from '@/components/HomeClient';
 
@@ -6,5 +7,9 @@ export const revalidate = 60;
 
 export default function HomePage() {
   const initialTests = getAllAssessments();
-  return <HomeClient initialTests={initialTests} />;
+  return (
+    <Suspense fallback={null}>
+      <HomeClient initialTests={initialTests} />
+    </Suspense>
+  );
 }

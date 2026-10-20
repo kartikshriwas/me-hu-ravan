@@ -91,7 +91,7 @@ export async function GET(request: Request) {
     }
 
     const courseBatches = userBatches.filter(isCourseBatch);
-    const hasCourseAccess = isPremium || userPerms.includes('access_courses') || userPerms.includes('*') || courseBatches.length > 0;
+    const hasCourseAccess = userPerms.includes('access_courses') || userPerms.includes('*') || courseBatches.length > 0;
 
     const OFFLINE_SECRET = process.env.OFFLINE_ACCESS_SECRET || 'fallback-secret-for-preptea-offline';
     const payload = `${cleanEmail}:${hasCourseAccess}:${userBatches.join(',')}`;
