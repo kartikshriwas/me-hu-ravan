@@ -344,7 +344,20 @@ export function CustomVideoPlayer({
         if (!active) return;
 
         if (json.success && json.video) {
-          const video: WistiaVideoData = json.video;
+          const rawAssets: VideoAsset[] = Array.isArray(json.video.assets) ? json.video.assets : [];
+          // Filter out placeholder/zero-dimension assets and deduplicate by resolution
+          const seen = new Set<string>();
+          const validAssets = rawAssets.filter((a) => {
+            if (!a || (a.height === 0 && a.width === 0) || a.displayName === '?') return false;
+            const key = a.height ? `${a.height}p` : a.slug;
+            if (seen.has(key)) return false;
+            seen.add(key);
+            return true;
+          });
+          const video: WistiaVideoData = {
+            ...json.video,
+            assets: validAssets.length > 0 ? validAssets : rawAssets,
+          };
           setVideoData(video);
           
           let preferredHeight: number | null = null;
@@ -1604,11 +1617,11 @@ export function CustomVideoPlayer({
                     </div>
                   )}
 
-                  {videoData?.assets?.map((asset) => {
+                  {videoData?.assets?.map((asset, idx) => {
                     const isSelected = !isPlayingOfflineBlob && selectedAsset?.slug === asset.slug;
                     return (
                       <button
-                        key={asset.slug}
+                        key={`${asset.slug || asset.height || 'res'}_${idx}`}
                         onClick={() => {
                           handleQualityChange(asset);
                           setShowSettings(false);

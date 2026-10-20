@@ -218,7 +218,7 @@ export function DownloadLessonModal({
 
         {/* Quality Options List with Modern Cards */}
         <div className="space-y-2 max-h-60 overflow-y-auto custom-scrollbar pr-0.5">
-          {assets.map((asset) => {
+          {assets.map((asset, idx) => {
             const isSelected = selectedSlug === asset.slug;
             const sizeMb = (asset.sizeBytes / (1024 * 1024)).toFixed(1);
             const isHD = asset.height >= 720;
@@ -226,7 +226,7 @@ export function DownloadLessonModal({
 
             return (
               <button
-                key={asset.slug}
+                key={`${asset.slug || asset.height || 'res'}_${idx}`}
                 type="button"
                 onClick={() => setSelectedSlug(asset.slug)}
                 className={`w-full p-3 rounded-2xl border text-left flex items-center justify-between gap-3 transition-all duration-200 cursor-pointer ${

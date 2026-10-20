@@ -41,7 +41,6 @@ import {
   Tv,
   Crown,
   ExternalLink,
-  LogIn,
 } from 'lucide-react';
 import { useDownloads } from '@/lib/downloadContext';
 import { OfflineVideoMetadata } from '@/lib/videoStorage';
@@ -49,7 +48,6 @@ import { useAuth } from '@/lib/authContext';
 import { getRememberedQuality, saveRememberedQuality } from '@/lib/qualityMatcher';
 import { checkUserCourseAccess, checkCanDownload, verifyAndGetCachedBatchAccess, CachedBatchAccess } from '@/lib/batchAccess';
 import { CustomVideoPlayer } from '@/components/CustomVideoPlayer';
-import NotFound from '@/app/not-found';
 
 function formatBytes(bytes: number): string {
   if (!bytes || bytes <= 0) return '0 B';
@@ -460,50 +458,22 @@ export function DownloadsClient() {
   const effectiveAccess = isOnline ? liveAccess : (cachedAccess?.hasAccess ?? liveAccess);
   const canDownload = checkCanDownload(user);
 
-  // Fast loading skeleton during SSR and initial hydration to guarantee zero hydration mismatches
-  if (!mounted) {
+  // Loading skeleton while mounting or awaiting auth/offline access verification
+  if (!mounted || authLoading || (!isOnline && isVerifyingOfflineAccess)) {
     return (
       <div className="w-full h-[50vh] flex flex-col items-center justify-center">
         <Loader2 className="w-8 h-8 text-primary-500 animate-spin" />
-        <p className="text-xs text-muted-foreground mt-4">Loading downloads...</p>
       </div>
     );
   }
 
-  // Only show offline verification after mount if the browser is actually offline and actively checking cryptographic cache
-  if (!isOnline && isVerifyingOfflineAccess) {
-    return (
-      <div className="w-full h-[50vh] flex flex-col items-center justify-center">
-        <Loader2 className="w-8 h-8 text-primary-500 animate-spin" />
-        <p className="text-xs text-muted-foreground mt-4">Verifying secure offline access...</p>
-      </div>
-    );
+  // 404 Authorization Guard: Unauthorized access throws 404 Not Found (matching /courses and /admin)
+  if (!effectiveAccess) {
+    notFound();
   }
 
   return (
     <main className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 space-y-6 sm:space-y-8" role="main">
-      {/* Logged Out Visitor Notice */}
-      {!user && !authLoading && (
-        <div className="rounded-2xl p-4 sm:p-5 bg-card/90 border border-card-border shadow-md flex items-center justify-between gap-4 flex-wrap animate-in fade-in">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-primary-500/15 text-primary-400 flex items-center justify-center font-bold shrink-0">
-              <LogIn className="w-5 h-5" />
-            </div>
-            <div>
-              <h3 className="text-sm font-bold text-foreground">Sign in to sync your downloads</h3>
-              <p className="text-xs text-muted-foreground mt-0.5">
-                Log in to unlock your enrolled course batches and watch offline video lessons.
-              </p>
-            </div>
-          </div>
-          <Link
-            href="/courses"
-            className="px-4 py-2 rounded-xl bg-primary-600 hover:bg-primary-500 text-white text-xs font-bold transition-all shadow-md shrink-0"
-          >
-            Explore Courses
-          </Link>
-        </div>
-      )}
 
       {/* Free / Demo User Upgrade Banner */}
       {user && !canDownload && !authLoading && (

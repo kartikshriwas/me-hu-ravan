@@ -1622,6 +1622,12 @@ export function CourseDetailClient({ course, availableTests, isUnlocked = true }
                 onClick={async () => {
                   const modal = bundleQualityModal;
                   setBundleQualityModal(null);
+                  if (!canDownload) {
+                    if (typeof window !== 'undefined') {
+                      window.dispatchEvent(new CustomEvent('preptea:premium-download-required'));
+                    }
+                    return;
+                  }
                   saveRememberedQuality(selectedQuality, rememberPreference);
                   if (modal.type === 'course') {
                     const sectionsPayload = course.sections.map((sec) => ({

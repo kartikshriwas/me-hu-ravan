@@ -73,30 +73,49 @@ export async function GET(
     const data = await res.json();
     const media = data?.media || {};
     
-    // 3. Extract and filter mp4 video assets
+    // 3. Extract, sanitize, and filter mp4 video assets
     const rawAssets = media.assets || [];
     const playableRawAssets = rawAssets.filter((asset: any) => {
+      if (!asset || !asset.url) return false;
       const hasContainer = asset.container === 'mp4' || asset.ext === 'mp4';
       const isVideoType =
         asset.type?.toLowerCase().includes('video') ||
         asset.type?.toLowerCase().includes('mp4') ||
         asset.type === 'iphone_video';
-      return hasContainer || isVideoType;
+      // Exclude placeholder/zero-dimension assets (e.g. mp4_h264_0k with width=0, height=0, display_name="?")
+      const isPlaceholder = (asset.height === 0 && asset.width === 0) || asset.display_name === '?';
+      return (hasContainer || isVideoType) && !isPlaceholder;
     });
+
+    const candidates = playableRawAssets.length > 0
+      ? playableRawAssets
+      : rawAssets.filter((a: any) => a && a.url && (a.container === 'mp4' || a.ext === 'mp4' || a.type?.includes('mp4')));
+
+    // Deduplicate candidates by resolution/height, retaining the highest quality/bitrate asset
+    const deduplicatedMap = new Map<string, any>();
+    for (const asset of candidates) {
+      const heightKey = asset.height ? `${asset.height}p` : (asset.slug || 'standard');
+      const existing = deduplicatedMap.get(heightKey);
+      if (!existing || (asset.bitrate || 0) > (existing.bitrate || 0) || (asset.size || 0) > (existing.size || 0)) {
+        deduplicatedMap.set(heightKey, asset);
+      }
+    }
+    const finalRawAssets = Array.from(deduplicatedMap.values());
 
     const videoAssets = (
       await Promise.all(
-        playableRawAssets.map(async (asset: any) => {
+        finalRawAssets.map(async (asset: any, idx: number) => {
           const height = asset.height || 0;
           const rawName = (asset.display_name || '').trim();
           const isOriginal = rawName.toLowerCase().includes('original');
-          const displayName = (!isOriginal && rawName) ? rawName : (height ? `${height}p` : 'Standard');
+          const displayName = (!isOriginal && rawName && rawName !== '?') ? rawName : (height ? `${height}p` : 'Standard');
           const streamTicket = await createStreamTicket(asset.url || '', id, height);
           const internalStreamUrl = `/api/video/stream?ticket=${encodeURIComponent(streamTicket)}`;
+          const slug = asset.slug && asset.slug !== 'mp4_h264_0k' ? asset.slug : (height ? `${height}p` : `asset_${idx}`);
 
           return {
             type: asset.type || 'mp4_video',
-            slug: asset.slug || (height ? `${height}p` : 'standard'),
+            slug,
             displayName,
             width: asset.width || 0,
             height,

@@ -33,6 +33,7 @@ import { fetchUserProgressFromDb } from '@/lib/userProgressClient';
 import { useDownloads } from '@/lib/downloadContext';
 import { getRememberedQuality, saveRememberedQuality } from '@/lib/qualityMatcher';
 import { useAuth } from '@/lib/authContext';
+import { checkCanDownload } from '@/lib/batchAccess';
 import { getQuizHistory, isQuizMatch } from '@/lib/storage';
 import {
   CalendarDayGroup,
@@ -217,6 +218,13 @@ export function CourseCalendarView({
 
   const handleDownloadDay = (day: CalendarDayGroup) => {
     if (!isUnlocked) return;
+    const canDownload = checkCanDownload(user);
+    if (!canDownload) {
+      if (typeof window !== 'undefined') {
+        window.dispatchEvent(new CustomEvent('preptea:premium-download-required'));
+      }
+      return;
+    }
     const units = day.items
       .filter((it) => it.videoId && it.isActionableVideo && !it.isYouTube)
       .map((it) => ({
@@ -1494,9 +1502,18 @@ export function CourseCalendarView({
                                   return (
                                     <button
                                       type="button"
-                                      onClick={(e) =>
-                                        onDownloadUnit(e, item.unit, item.sectionTitle, item.sectionId)
-                                      }
+                                      onClick={(e) => {
+                                        const canDownload = checkCanDownload(user);
+                                        if (!canDownload) {
+                                          e.preventDefault();
+                                          e.stopPropagation();
+                                          if (typeof window !== 'undefined') {
+                                            window.dispatchEvent(new CustomEvent('preptea:premium-download-required'));
+                                          }
+                                          return;
+                                        }
+                                        onDownloadUnit(e, item.unit, item.sectionTitle, item.sectionId);
+                                      }}
                                       className="p-1.5 rounded-lg text-muted-foreground hover:text-primary-400 hover:bg-white/[0.06] transition-colors cursor-pointer shrink-0"
                                       title="Download for offline study"
                                     >
@@ -1840,6 +1857,14 @@ export function CourseCalendarView({
                 type="button"
                 onClick={async () => {
                   if (!dayQualityModal) return;
+                  const canDownload = checkCanDownload(user);
+                  if (!canDownload) {
+                    setDayQualityModal(null);
+                    if (typeof window !== 'undefined') {
+                      window.dispatchEvent(new CustomEvent('preptea:premium-download-required'));
+                    }
+                    return;
+                  }
                   saveRememberedQuality(selectedDayQuality, rememberPreference);
                   await downloadSection({
                     courseSlug: course.slug,

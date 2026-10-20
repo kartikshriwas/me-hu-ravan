@@ -316,11 +316,17 @@ export function YouTubeDownloadButton({
               </span>
             )}
           </button>
-          {rememberPreference && (
+          {canDownload && rememberPreference && (
             <button
               type="button"
               onClick={(e) => {
                 e.stopPropagation();
+                if (!canDownload) {
+                  if (typeof window !== 'undefined') {
+                    window.dispatchEvent(new CustomEvent('preptea:premium-download-required'));
+                  }
+                  return;
+                }
                 setShowQualityModal(true);
               }}
               className="px-1.5 py-1.5 sm:py-2 border-l border-slate-700/60 text-muted-foreground hover:text-foreground hover:bg-slate-700/50 rounded-r-xl transition-colors cursor-pointer"

@@ -1348,6 +1348,12 @@ export function VideoPlaylistSidebar({
                       type="button"
                       onClick={(e) => {
                         e.stopPropagation();
+                        if (!canDownload) {
+                          if (typeof window !== 'undefined') {
+                            window.dispatchEvent(new CustomEvent('preptea:premium-download-required'));
+                          }
+                          return;
+                        }
                         const isSecDownloaded = isSectionDownloaded(courseSlug, sectionName, videoUnits.length);
                         if (isSecDownloaded) {
                           deleteSectionDownloads(courseSlug, sectionName);
@@ -1785,6 +1791,12 @@ export function VideoPlaylistSidebar({
                     type="button"
                     onClick={(e) => {
                       e.stopPropagation();
+                      if (!canDownload) {
+                        if (typeof window !== 'undefined') {
+                          window.dispatchEvent(new CustomEvent('preptea:premium-download-required'));
+                        }
+                        return;
+                      }
                       const isSecDownloaded = isSectionDownloaded(courseSlug, sectionName, videoUnits.length);
                       if (isSecDownloaded) {
                         deleteSectionDownloads(courseSlug, sectionName);

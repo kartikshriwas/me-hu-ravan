@@ -1,21 +1,20 @@
-'use client';
+import { notFound, redirect } from 'next/navigation';
+import { auth } from '@/auth';
+import { hasCoursesAccess, checkIsDemoExpired } from '@/lib/coursesAuth';
+import { DownloadsClient } from '@/components/DownloadsClient';
 
-import dynamic from 'next/dynamic';
-import { Loader2 } from 'lucide-react';
+export default async function DownloadsPage() {
+  const session = await auth();
+  const sessionUser = session?.user as any;
 
-const DownloadsClient = dynamic(
-  () => import('@/components/DownloadsClient').then((mod) => mod.DownloadsClient),
-  {
-    ssr: false,
-    loading: () => (
-      <div className="w-full h-[50vh] flex flex-col items-center justify-center">
-        <Loader2 className="w-8 h-8 text-primary-500 animate-spin" />
-        <p className="text-xs text-muted-foreground mt-4">Loading downloads...</p>
-      </div>
-    ),
+  const allowed = await hasCoursesAccess(sessionUser);
+  if (!allowed) {
+    const demoStatus = checkIsDemoExpired(sessionUser);
+    if (demoStatus.isExpired) {
+      redirect(`/?demo_expired=true&mins=${demoStatus.minutes}`);
+    }
+    notFound();
   }
-);
 
-export default function DownloadsPage() {
   return <DownloadsClient />;
 }
