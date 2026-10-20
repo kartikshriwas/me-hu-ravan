@@ -19,6 +19,7 @@ import {
   ShoppingBag
 } from 'lucide-react';
 import { useAuth } from '@/lib/authContext';
+import { isCourseBatch } from '@/lib/batchAccess';
 
 const TELEGRAM_URL = 'https://t.me/KartikShriwas';
 
@@ -36,12 +37,12 @@ export function DemoExpiredModal() {
   const [redeemError, setRedeemError] = useState('');
   const [redeemSuccess, setRedeemSuccess] = useState('');
 
-  // Superadmins, admins, and users with active batches are exempt from demo expiration
+  // Users with course batches or explicit course permissions are exempt from demo expiration
   const isExempt = useMemo(() => {
     if (!user) return false;
-    if (user.role === 'admin' || user.role === 'superadmin') return true;
     if (user.adminPermissions?.includes('access_courses') || user.adminPermissions?.includes('*')) return true;
-    if (Array.isArray(user.allowedBatches) && user.allowedBatches.some((b: string) => b && b !== 'none')) return true;
+    if (Array.isArray(user.allowedBatches) && user.allowedBatches.some((b: string) => isCourseBatch(b))) return true;
+    if (user.premiumPlan && isCourseBatch(user.premiumPlan)) return true;
     return false;
   }, [user]);
 
