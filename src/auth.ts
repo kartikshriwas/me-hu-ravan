@@ -11,7 +11,7 @@ import { processPendingDemoActivation } from '@/lib/pendingDemoHelper';
 import { processAutoDemoGrant } from '@/lib/autoDemoHelper';
 import { invalidateUserCourseCache } from '@/lib/coursesAuth';
 import { normalizeEmail, checkIsAltAccount } from '@/lib/altDetection';
-import { headers } from 'next/headers';
+import { headers, cookies } from 'next/headers';
 
 const nextAuthResult = NextAuth({
   ...authConfig,
@@ -24,12 +24,16 @@ const nextAuthResult = NextAuth({
         const isSuperadmin = email === SUPERADMIN_EMAIL;
 
         let clientIp = '';
+        let deviceCookieId = '';
         try {
           const reqHeaders = await headers();
           const rawIp = reqHeaders.get('x-forwarded-for')?.split(',')[0]?.trim() || reqHeaders.get('x-real-ip') || '';
           clientIp = rawIp.replace(/^::ffff:/i, '');
+
+          const cookieStore = await cookies();
+          deviceCookieId = cookieStore.get('__preptea_did')?.value || '';
         } catch {
-          // ignore if headers() not accessible in this context
+          // ignore if headers/cookies not accessible in this context
         }
 
         const conn = await connectToDatabase();
@@ -42,11 +46,12 @@ const nextAuthResult = NextAuth({
           let altOfEmail = dbUser?.altOfEmail || '';
           let altReason = dbUser?.altReason || '';
 
-          // Multi-technique alt account detection (normalized email, device collision, IP collision):
+          // Multi-technique alt account detection (normalized email, device cookie, IP collision):
           if (!isSuperadmin && !isAlt && dbUser?.role !== 'admin' && dbUser?.role !== 'superadmin') {
             const altResult = await checkIsAltAccount({
               email,
               clientIp,
+              deviceId: deviceCookieId,
             });
             if (altResult.isAlt) {
               isAlt = true;
@@ -168,11 +173,15 @@ const nextAuthResult = NextAuth({
             updateData.adminPermissions = ['manage_codes', 'manage_events', 'manage_users', 'manage_content'];
           }
 
+          const addToSetObj: any = {};
+          if (clientIp) addToSetObj.pastIps = clientIp;
+          if (deviceCookieId) addToSetObj.deviceIds = deviceCookieId;
+
           const savedUser = await User.findOneAndUpdate(
             { email },
             { 
               $set: updateData,
-              ...(clientIp ? { $addToSet: { pastIps: clientIp } } : {}),
+              ...(Object.keys(addToSetObj).length > 0 ? { $addToSet: addToSetObj } : {}),
             },
             { upsert: true, returnDocument: 'after' }
           );

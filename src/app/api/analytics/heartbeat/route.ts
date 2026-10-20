@@ -50,6 +50,7 @@ export async function POST(request: Request) {
     const {
       sessionId,
       deviceId,
+      hardwareFingerprint,
       currentPath,
       pageTitle,
       state,
@@ -174,6 +175,41 @@ export async function POST(request: Request) {
           await User.updateOne(
             { email: userEmail },
             { $addToSet: { deviceIds: deviceId } }
+          ).catch(() => {});
+        }
+      }
+
+      // 2. Physical Hardware / GPU Fingerprint check (survives cache/storage wipe & incognito)
+      if (hardwareFingerprint && typeof hardwareFingerprint === 'string' && hardwareFingerprint.startsWith('hw_')) {
+        if (!isSuperOrAdmin) {
+          const existingHwUser = await User.findOne({
+            email: { $ne: userEmail },
+            hardwareFingerprint,
+          }).select('_id email').lean();
+
+          if (existingHwUser) {
+            await User.updateOne(
+              { email: userEmail, isAlt: { $ne: true } },
+              {
+                $set: {
+                  isAlt: true,
+                  altOfEmail: existingHwUser.email,
+                  altReason: 'hardware_fingerprint',
+                  hasHadDemoOrPremium: true,
+                  hardwareFingerprint,
+                },
+              }
+            ).catch(() => {});
+          } else {
+            await User.updateOne(
+              { email: userEmail },
+              { $set: { hardwareFingerprint } }
+            ).catch(() => {});
+          }
+        } else {
+          await User.updateOne(
+            { email: userEmail },
+            { $set: { hardwareFingerprint } }
           ).catch(() => {});
         }
       }

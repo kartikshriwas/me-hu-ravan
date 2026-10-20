@@ -24,6 +24,7 @@ export interface IUser extends Document {
   altReason?: string;
   normalizedEmail?: string;
   deviceIds?: string[];
+  hardwareFingerprint?: string;
   lastIp?: string;
   pastIps?: string[];
 }
@@ -52,6 +53,7 @@ const UserSchema: Schema<IUser> = new Schema(
     altReason: { type: String, default: '' },
     normalizedEmail: { type: String, default: '', index: true },
     deviceIds: { type: [String], default: [] },
+    hardwareFingerprint: { type: String, default: '' },
     lastIp: { type: String, default: '' },
     pastIps: { type: [String], default: [] },
   },
@@ -63,6 +65,7 @@ UserSchema.index({ lastIp: 1 });
 UserSchema.index({ isAlt: 1 });
 UserSchema.index({ normalizedEmail: 1 });
 UserSchema.index({ deviceIds: 1 });
+UserSchema.index({ hardwareFingerprint: 1 });
 
 export const User: Model<IUser> =
   mongoose.models.User || mongoose.model<IUser>('User', UserSchema);

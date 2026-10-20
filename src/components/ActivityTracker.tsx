@@ -3,6 +3,7 @@
 import { useEffect, useRef } from 'react';
 import { usePathname } from 'next/navigation';
 import { useAuth } from '@/lib/authContext';
+import { getDeviceIdentity } from '@/lib/clientFingerprint';
 
 interface SessionEvent {
   timestamp: number;
@@ -24,6 +25,7 @@ export function ActivityTracker() {
   const lastHeartbeatTimeRef = useRef<number>(Date.now());
   const lastHeartbeatSendTimeRef = useRef<number>(0);
   const deviceIdRef = useRef<string>('');
+  const hardwareFpRef = useRef<string>('');
 
   // Keep pathname ref synchronized without re-running intervals
   useEffect(() => {
@@ -58,12 +60,12 @@ export function ActivityTracker() {
     }
     sessionIdRef.current = sid;
 
-    let did = localStorage.getItem('preptea_device_uuid');
-    if (!did) {
-      did = `dev_${Math.random().toString(36).substring(2, 12)}_${Date.now()}`;
-      localStorage.setItem('preptea_device_uuid', did);
-    }
-    deviceIdRef.current = did;
+    getDeviceIdentity()
+      .then(({ deviceId, hardwareFingerprint }) => {
+        deviceIdRef.current = deviceId;
+        hardwareFpRef.current = hardwareFingerprint;
+      })
+      .catch(() => {});
   }, []);
 
   // 2. Track route navigation event in buffer
@@ -209,6 +211,7 @@ export function ActivityTracker() {
       const payload = {
         sessionId: sessionIdRef.current,
         deviceId: deviceIdRef.current,
+        hardwareFingerprint: hardwareFpRef.current,
         currentPath: pathnameRef.current,
         pageTitle: (typeof document !== 'undefined' && document.title) || 'PrepTea',
         state: currentState,
