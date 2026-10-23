@@ -118,7 +118,7 @@ export default function PricingPage() {
           <div className="flex flex-col items-center bg-card/80 border border-card-border p-6 rounded-2xl shadow-xl shrink-0 w-full sm:w-auto text-center space-y-4">
             <div className="space-y-1">
               <div className="flex items-baseline justify-center gap-2">
-                <span className="text-4xl sm:text-5xl font-black text-primary-600 dark:text-primary-400">₹ {isMonthly ? '99' : '599'}</span>
+                <span className="text-4xl sm:text-5xl font-black text-primary-600 dark:text-primary-400">₹ {isMonthly ? '199' : '599'}</span>
                 {!isMonthly && (
                   <span className="text-xs font-bold px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30">
                     95% OFF
@@ -202,7 +202,7 @@ export default function PricingPage() {
               </div>
               <div className="pt-2 border-t border-card-border/60">
                 <div className="flex items-baseline gap-2">
-                  <span className="text-3xl font-extrabold text-foreground">₹ {isMonthly ? '59' : '349'}</span>
+                  <span className="text-3xl font-extrabold text-foreground">₹ {isMonthly ? '159' : '349'}</span>
                   {isMonthly ? (
                     <span className="text-xs text-muted-foreground">/ month</span>
                   ) : (
@@ -244,7 +244,7 @@ export default function PricingPage() {
               </div>
               <div className="pt-2 border-t border-card-border/60">
                 <div className="flex items-baseline gap-2">
-                  <span className="text-3xl font-extrabold text-foreground">₹ {isMonthly ? '59' : '319'}</span>
+                  <span className="text-3xl font-extrabold text-foreground">₹ {isMonthly ? '159' : '319'}</span>
                   {isMonthly ? (
                     <span className="text-xs text-muted-foreground">/ month</span>
                   ) : (
@@ -285,7 +285,7 @@ export default function PricingPage() {
               </div>
               <div className="pt-2 border-t border-card-border/60">
                 <div className="flex items-baseline gap-2">
-                  <span className="text-3xl font-extrabold text-foreground">₹ {isMonthly ? '59' : '339'}</span>
+                  <span className="text-3xl font-extrabold text-foreground">₹ {isMonthly ? '159' : '339'}</span>
                   {isMonthly ? (
                     <span className="text-xs text-muted-foreground">/ month</span>
                   ) : (
@@ -333,7 +333,7 @@ export default function PricingPage() {
                 <div>
                   <span className="text-xs text-muted-foreground font-semibold">SIGMA Standard</span>
                   <div className="flex items-baseline gap-2">
-                    <span className="text-2xl font-extrabold text-foreground">₹ {isMonthly ? '79' : '449'}</span>
+                    <span className="text-2xl font-extrabold text-foreground">₹ {isMonthly ? '179' : '449'}</span>
                     {isMonthly ? (
                       <span className="text-xs text-muted-foreground">/ month</span>
                     ) : (
@@ -347,7 +347,7 @@ export default function PricingPage() {
                 <div>
                   <span className="text-xs text-muted-foreground font-semibold">SIGMAX Pro Edition</span>
                   <div className="flex items-baseline gap-2">
-                    <span className="text-2xl font-extrabold text-purple-600 dark:text-purple-400">₹ {isMonthly ? '89' : '499'}</span>
+                    <span className="text-2xl font-extrabold text-purple-600 dark:text-purple-400">₹ {isMonthly ? '189' : '499'}</span>
                     {isMonthly ? (
                       <span className="text-xs text-muted-foreground">/ month</span>
                     ) : (
