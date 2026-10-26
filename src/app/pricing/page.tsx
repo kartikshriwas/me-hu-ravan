@@ -27,7 +27,7 @@ import {
 // Removed exported metadata since this is a client component
 
 export default function PricingPage() {
-  const [isMonthly, setIsMonthly] = useState(false);
+  const [isEmi, setIsEmi] = useState(false);
   const TELEGRAM_URL = "https://t.me/KartikShriwas";
 
   return (
@@ -43,7 +43,7 @@ export default function PricingPage() {
           Invest in Your Career with <span className="text-primary-600 dark:text-primary-400">Industry-Grade Batches</span>
         </h1>
         <p className="text-muted-foreground text-base sm:text-lg">
-          Master AI & ML, Full-Stack MERN Web Development, or Data Structures & Algorithms. Get individual plans or unlock <strong className="text-foreground">Everything</strong> for a single low price.
+          Master AI & ML, Full-Stack MERN Web Development, or Data Structures & Algorithms. Pay one-time or split into <strong className="text-foreground">Easy EMI Installments</strong>.
         </p>
 
         {/* Interactive Segmented Toggle Switch */}
@@ -51,17 +51,17 @@ export default function PricingPage() {
           <div className="inline-flex items-center p-1.5 rounded-2xl bg-card/90 border border-card-border shadow-2xl backdrop-blur-xl relative gap-1.5 sm:gap-2">
             <button
               type="button"
-              onClick={() => setIsMonthly(false)}
+              onClick={() => setIsEmi(false)}
               className={`relative px-5 py-2.5 rounded-xl font-bold text-xs sm:text-sm transition-all duration-300 flex items-center gap-2 ${
-                !isMonthly
+                !isEmi
                   ? 'bg-primary-600 text-white shadow-lg shadow-primary-500/30 scale-[1.02]'
                   : 'text-muted-foreground hover:text-foreground hover:bg-card/60'
               }`}
             >
-              <Zap className={`w-4 h-4 ${!isMonthly ? 'text-amber-300 animate-pulse' : ''}`} />
+              <Zap className={`w-4 h-4 ${!isEmi ? 'text-amber-300 animate-pulse' : ''}`} />
               <span>Full Batch Pass</span>
               <span className={`text-[10px] px-2 py-0.5 rounded-full font-black uppercase tracking-wider transition-colors ${
-                !isMonthly 
+                !isEmi 
                   ? 'bg-white/20 text-white border border-white/30' 
                   : 'bg-amber-500/15 text-amber-600 dark:text-amber-400 border border-amber-500/30'
               }`}>
@@ -71,21 +71,21 @@ export default function PricingPage() {
 
             <button
               type="button"
-              onClick={() => setIsMonthly(true)}
+              onClick={() => setIsEmi(true)}
               className={`relative px-5 py-2.5 rounded-xl font-bold text-xs sm:text-sm transition-all duration-300 flex items-center gap-2 ${
-                isMonthly
+                isEmi
                   ? 'bg-emerald-600 text-white shadow-lg shadow-emerald-500/30 scale-[1.02]'
                   : 'text-muted-foreground hover:text-foreground hover:bg-card/60'
               }`}
             >
-              <Sparkles className={`w-4 h-4 ${isMonthly ? 'text-emerald-200 animate-pulse' : ''}`} />
-              <span>Monthly Access</span>
+              <Sparkles className={`w-4 h-4 ${isEmi ? 'text-emerald-200 animate-pulse' : ''}`} />
+              <span>EMI Option</span>
               <span className={`text-[10px] px-2 py-0.5 rounded-full font-black uppercase tracking-wider transition-colors ${
-                isMonthly 
+                isEmi 
                   ? 'bg-white/20 text-white border border-white/30' 
                   : 'bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30'
               }`}>
-                Flexible
+                2-3 Months
               </span>
             </button>
           </div>
@@ -118,15 +118,19 @@ export default function PricingPage() {
           <div className="flex flex-col items-center bg-card/80 border border-card-border p-6 rounded-2xl shadow-xl shrink-0 w-full sm:w-auto text-center space-y-4">
             <div className="space-y-1">
               <div className="flex items-baseline justify-center gap-2">
-                <span className="text-4xl sm:text-5xl font-black text-primary-600 dark:text-primary-400">₹ {isMonthly ? '199' : '599'}</span>
-                {!isMonthly && (
+                <span className="text-4xl sm:text-5xl font-black text-primary-600 dark:text-primary-400">₹ {isEmi ? '239' : '599'}</span>
+                {!isEmi ? (
                   <span className="text-xs font-bold px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30">
                     95% OFF
+                  </span>
+                ) : (
+                  <span className="text-xs font-bold px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30">
+                    3-Month EMI
                   </span>
                 )}
               </div>
               <p className="text-[11px] text-muted-foreground font-medium">
-                {isMonthly ? 'Billed monthly • Cancel anytime' : 'Full Batch Pass • Complete Access'}
+                {isEmi ? '3 monthly installments of ₹239 (₹239 × 3 mo)' : 'Full Batch Pass • Complete Access'}
               </p>
             </div>
 
@@ -202,9 +206,14 @@ export default function PricingPage() {
               </div>
               <div className="pt-2 border-t border-card-border/60">
                 <div className="flex items-baseline gap-2">
-                  <span className="text-3xl font-extrabold text-foreground">₹ {isMonthly ? '159' : '349'}</span>
-                  {isMonthly ? (
-                    <span className="text-xs text-muted-foreground">/ month</span>
+                  <span className="text-3xl font-extrabold text-foreground">₹ {isEmi ? '199' : '349'}</span>
+                  {isEmi ? (
+                    <>
+                      <span className="text-xs text-muted-foreground">/ month</span>
+                      <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30">
+                        2-Month EMI
+                      </span>
+                    </>
                   ) : (
                     <>
                       <span className="text-xs text-muted-foreground line-through">₹ 6860</span>
@@ -244,9 +253,14 @@ export default function PricingPage() {
               </div>
               <div className="pt-2 border-t border-card-border/60">
                 <div className="flex items-baseline gap-2">
-                  <span className="text-3xl font-extrabold text-foreground">₹ {isMonthly ? '159' : '319'}</span>
-                  {isMonthly ? (
-                    <span className="text-xs text-muted-foreground">/ month</span>
+                  <span className="text-3xl font-extrabold text-foreground">₹ {isEmi ? '179' : '319'}</span>
+                  {isEmi ? (
+                    <>
+                      <span className="text-xs text-muted-foreground">/ month</span>
+                      <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30">
+                        2-Month EMI
+                      </span>
+                    </>
                   ) : (
                     <>
                       <span className="text-xs text-muted-foreground line-through">₹ 6250</span>
@@ -285,9 +299,14 @@ export default function PricingPage() {
               </div>
               <div className="pt-2 border-t border-card-border/60">
                 <div className="flex items-baseline gap-2">
-                  <span className="text-3xl font-extrabold text-foreground">₹ {isMonthly ? '159' : '339'}</span>
-                  {isMonthly ? (
-                    <span className="text-xs text-muted-foreground">/ month</span>
+                  <span className="text-3xl font-extrabold text-foreground">₹ {isEmi ? '189' : '339'}</span>
+                  {isEmi ? (
+                    <>
+                      <span className="text-xs text-muted-foreground">/ month</span>
+                      <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30">
+                        2-Month EMI
+                      </span>
+                    </>
                   ) : (
                     <>
                       <span className="text-xs text-muted-foreground line-through">₹ 6750</span>
@@ -333,9 +352,14 @@ export default function PricingPage() {
                 <div>
                   <span className="text-xs text-muted-foreground font-semibold">SIGMA Standard</span>
                   <div className="flex items-baseline gap-2">
-                    <span className="text-2xl font-extrabold text-foreground">₹ {isMonthly ? '179' : '449'}</span>
-                    {isMonthly ? (
-                      <span className="text-xs text-muted-foreground">/ month</span>
+                    <span className="text-2xl font-extrabold text-foreground">₹ {isEmi ? '179' : '449'}</span>
+                    {isEmi ? (
+                      <>
+                        <span className="text-xs text-muted-foreground">/ month</span>
+                        <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30">
+                          3-Month EMI
+                        </span>
+                      </>
                     ) : (
                       <>
                         <span className="text-xs text-muted-foreground line-through">₹ 8999</span>
@@ -347,9 +371,14 @@ export default function PricingPage() {
                 <div>
                   <span className="text-xs text-muted-foreground font-semibold">SIGMAX Pro Edition</span>
                   <div className="flex items-baseline gap-2">
-                    <span className="text-2xl font-extrabold text-purple-600 dark:text-purple-400">₹ {isMonthly ? '189' : '499'}</span>
-                    {isMonthly ? (
-                      <span className="text-xs text-muted-foreground">/ month</span>
+                    <span className="text-2xl font-extrabold text-purple-600 dark:text-purple-400">₹ {isEmi ? '199' : '499'}</span>
+                    {isEmi ? (
+                      <>
+                        <span className="text-xs text-muted-foreground">/ month</span>
+                        <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30">
+                          3-Month EMI
+                        </span>
+                      </>
                     ) : (
                       <>
                         <span className="text-xs text-muted-foreground line-through">₹ 9650</span>
